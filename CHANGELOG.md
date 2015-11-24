@@ -96,6 +96,9 @@ Let's take the `x.β.α` version number:
 * component `rush-hours` added
 * module `block-aside-access` added
 * module `block-aside-contact`: added minimap
+* module `block-search` added
+* module `block-search-field` added
+* module `block-search-filters` added
 * module `button`: add button `small`
 * module `icon-switch` added
 * module `notice`: improved text wrapping on small screens

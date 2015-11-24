@@ -1,0 +1,39 @@
+{
+  "index": {
+    "type": "block-search-filters",
+    "description": "",
+    "cssTheme": "",
+    "bodyAttributes": {},
+    "examples": [
+      {
+        "title": "Standard",
+        "description": "",
+        "attrs": {},
+        "data": {
+          "modifiers": ["gray-background"],
+          "title": "Filtrer",
+          "top_link": {
+            "href": "#",
+            "text": "Réinitialiser"
+          },
+          "filter_items": [
+            {
+              "href": "#",
+              "icon": "swimming-pool",
+              "text": "Piscines"
+            },
+            {
+              "href": "#",
+              "icon": "museum",
+              "text": "Musées municipaux"
+            }
+          ],
+          "all_filters": {
+            "href": "#",
+            "text": "Afficher la liste complète"
+          }
+        }
+      }
+    ]
+  }
+}

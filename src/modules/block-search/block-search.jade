@@ -1,0 +1,16 @@
+mixin block-search(data)
+  .block-search(class=data.modifiers)
+    .block-search-header
+      h3.block-search-title= data.title
+      - var top_link = data.top_link || {};
+      if top_link
+        a.block-search-top-link(href=top_link.href target=top_link.target title=top_link.title)= top_link.text
+    .block-search-content
+      if block
+        block
+      else if data.block
+        != data.block
+    if data.bottom_links && data.bottom_links.length
+      ul.block-search-bottom-links
+        each link in data.bottom_links
+          li.block-search-bottom-links-item: a(href=link.href target=link.target title=link.title)= link.text
