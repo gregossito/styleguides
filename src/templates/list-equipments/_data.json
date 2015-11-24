@@ -1,0 +1,205 @@
+{
+  "index": {
+    "data": {
+      "title": "Equipements",
+      "bodyModifiers": ["fixed-nav", "list-equipments"],
+      "skip_links": {
+        "items": [
+          {"href": "#content", "text": "Aller au contenu"},
+          {"href": "#navigation", "text": "Aller à la navigation"},
+          {"href": "#search", "text": "Aller à la recherche"}
+        ]
+      },
+      "notices": {
+        "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+        "cnil": {
+          "id": "notice_cnil",
+          "modifiers": ["bottom", "transparent", "fixed", "closed"],
+          "closable": {
+            "href": "#",
+            "text": "Accepter",
+            "modifiers": ["action"],
+            "attributes": {"data-action": "close"}
+          },
+          "block": "Le site Paris.fr utilise des cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. En poursuivant votre navigation sur ce site, vous acceptez leur utilisation. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
+        }
+      },
+      "rheader": {
+        "modifiers": ["fixed"],
+        "logo": {
+          "href": "../home/",
+          "text": "Paris",
+          "title": "Retour à l’accueil – Paris"
+        },
+        "locales": [
+          {"href": "#fr", "lang": "fr", "text": "français", "current": true},
+          {"href": "#en", "lang": "en", "text": "English"},
+          {"href": "#es", "lang": "es", "text": "español"}
+        ],
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "../nav/",
+            "text": "Menu"
+          }
+        },
+        "navigation_label": "navigation principale",
+        "items": [
+          {"href": "../hub/", "text": "Services et infos pratiques"},
+          {"href": "../subhome-news/", "text": "Actualités"},
+          {"href": "#", "text": "Entreprises"},
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
+          },
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
+          }
+        ],
+        "quick_access": {
+          "search": {
+            "action": "../search",
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Valider la recherche sur le site",
+              "icon": true
+            },
+            "around": {
+              "href": "http://meslieux.paris.fr",
+              "text": "Autour de moi",
+              "target": "_blank"
+            },
+            "close_label": "Fermer le moteur de recherche"
+          },
+          "results": {
+            "button": {
+              "href": "../search",
+              "text": "Voir tous les résultats"
+            }
+          }
+        }
+      },
+      "aside": [
+
+      ],
+      "results": [
+      ],
+      "connected": {
+        "heading": {
+          "title": "Restez connecté",
+          "modifiers": ["white"]
+        },
+        "newsletter" : {
+          "title": "L’essentiel de Paris",
+          "modifiers": ["color-secondary-background"],
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "button": {
+            "href": "#",
+            "text": "Je m'abonne",
+            "target": "_blank"
+          },
+          "link": {
+            "href": "#",
+            "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
+          }
+        },
+        "jecoute": {
+          "title": "Paris j'écoute",
+          "modifiers": ["color-secondary-background"],
+          "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
+          }
+        },
+        "social": {
+          "title": "Restez connecté",
+          "modifiers": ["color-secondary-background"],
+          "items": [
+            {
+              "icon": "twitter",
+              "count": "219 000",
+              "unit": "abonnés",
+              "link": {
+                "href": "#",
+                "text": "Twitter",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": "facebook",
+              "count": "2 508 576",
+              "unit": "abonnés",
+              "link": {
+                "href": "#",
+                "text": "Facebook",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": "instagram",
+              "count": "16 449",
+              "unit": "abonnés",
+              "link": {
+                "href": "#",
+                "text": "Instagram",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": "dailymotion",
+              "count": "5 442",
+              "unit": "abonnés",
+              "link": {
+                "href": "#",
+                "text": "Dailymotion",
+                "target": "_blank"
+              }
+            }
+          ],
+          "link": {
+            "href": "#",
+            "text": "Voir tous les réseaux sociaux"
+          }
+        }
+      },
+      "button_top": {
+        "accessibility_label": "retour en haut de la page"
+      },
+      "footer": {
+        "logo": {
+          "href": "../home",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "retour à l'accueil – Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "lang": "en", "modifiers": ["strong"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
+      }
+    }
+  }
+}
