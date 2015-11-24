@@ -3,6 +3,9 @@
     "data": {
       "title": "Equipements",
       "bodyModifiers": ["fixed-nav", "list-equipments"],
+      "additionalScripts": [
+        {"src": "//maps.googleapis.com/maps/api/js"}
+      ],
       "skip_links": {
         "items": [
           {"href": "#content", "text": "Aller au contenu"},
