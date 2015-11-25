@@ -1,7 +1,7 @@
 include ../../modules/block-content/block-content
 
 mixin block-content-social(data)
-  - modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
+  - var modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
   - modifiers.push("block-content-social")
   +block-content({"title": data.title, "modifiers": modifiers})
     ul.block-content-items

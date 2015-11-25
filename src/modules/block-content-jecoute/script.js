@@ -72,6 +72,6 @@ Paris.blockContentJecoute = (function(){
 
 })();
 
-$(document).ready(function(){
+$(document).ready(function() {
   Paris.blockContentJecoute('.block-content-jecoute');
 });

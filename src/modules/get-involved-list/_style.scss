@@ -1,18 +1,18 @@
 .get-involved-list {
-  .get-involved-item:nth-child(5n+1) {
-    @extend .get-involved-item.red;
+  .get-involved-list-item:nth-child(5n+1) {
+    @extend .get-involved-list-item.red;
   }
-  .get-involved-item:nth-child(5n+2) {
-    @extend .get-involved-item.blue;
+  .get-involved-list-item:nth-child(5n+2) {
+    @extend .get-involved-list-item.blue;
   }
-  .get-involved-item:nth-child(5n+3) {
-    @extend .get-involved-item.green;
+  .get-involved-list-item:nth-child(5n+3) {
+    @extend .get-involved-list-item.green;
   }
-  .get-involved-item:nth-child(5n+4) {
-    @extend .get-involved-item.light-blue;
+  .get-involved-list-item:nth-child(5n+4) {
+    @extend .get-involved-list-item.light-blue;
   }
-  .get-involved-item:nth-child(5n) {
-    @extend .get-involved-item.yellow;
+  .get-involved-list-item:nth-child(5n) {
+    @extend .get-involved-list-item.yellow;
   }
 }
 
@@ -24,6 +24,12 @@
   padding: 0 20px;
 }
 
+.get-involved-nav-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .get-involved-nav-item {
   padding: 35px 10px 25px;
   text-align: center;
@@ -32,7 +38,7 @@
     border-top: 1px solid $red2;
   }
 
-  .get-involved-item-title {
+  .get-involved-list-item-title {
     font-size: 22px;
     font-weight: 700;
     line-height: 28px;
@@ -48,7 +54,13 @@
   }
 }
 
-.get-involved-item {
+.get-involved-list-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.get-involved-list-item {
   border-radius: 5px;
   color: $color-secondary-variant;
   display: block;
@@ -110,21 +122,21 @@
     }
   }
 
-  .get-involved-item-category {
+  .get-involved-list-item-category {
     font-size: 16px;
     font-weight: 300;
     line-height: 20px;
     margin-bottom: 5px;
   }
 
-  .get-involved-item-title {
+  .get-involved-list-item-title {
     font-size: 20px;
     font-weight: bold;
     line-height: 24px;
     max-width: 230px;
   }
 
-  .get-involved-item-button {
+  .get-involved-list-item-button {
     margin-top: 20px;
   }
 }
@@ -136,7 +148,7 @@
   }
 
   .get-involved-nav,
-  .get-involved-items {
+  .get-involved-list-items {
     @include container;
   }
 
@@ -162,17 +174,17 @@
       position: absolute;
     }
 
-    .get-involved-item-title {
+    .get-involved-list-item-title {
        font-size: 26px;
        line-height: 30px;
      }
   }
 
-  .get-involved-item {
+  .get-involved-list-item {
     @include gallery(4 of 12);
     min-height: 220px;
 
-    .get-involved-item-button {
+    .get-involved-list-item-button {
       bottom: 20px;
       margin-top: 0;
       position: absolute;

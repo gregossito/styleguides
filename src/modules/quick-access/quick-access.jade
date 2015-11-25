@@ -21,13 +21,13 @@ mixin quick-access(data)
         ul.quick-access-buttons
           each item in data.items
             li
-              - button = JSON.parse(JSON.stringify(item)) // clone the data object
+              - var button = JSON.parse(JSON.stringify(item)) // clone the data object
               - button.modifiers = button.modifiers || []
               - if (button.modifiers.indexOf("primary") === -1) button.modifiers.push("secondary") // set default modifier
               +button(button)
       .quick-access-results
         ul
-        - button = JSON.parse(JSON.stringify(data.results.button)) // clone the data object
+        - var button = JSON.parse(JSON.stringify(data.results.button)) // clone the data object
         - button.modifiers = ["action", "tertiary", "quick-access-results-more"] // overwrite the modifiers
         +button(button)
     button.quick-access-close-search(type="button")

@@ -25,7 +25,8 @@ Paris.sectionsPanel = (function(){
       $nav, $subnav, $content,
       $navItems, $navItemsLinks, $navMore,
       $subnavSections, $subnavSectionsLinks, $subnavDefault,
-      $contentWrapper, $contentBack,
+      $contentWrapper,
+      $backButtons,
       root,
       currentLevel = "nav",
       heights = {};
@@ -45,7 +46,8 @@ Paris.sectionsPanel = (function(){
 
       $content = $el.find('.sections-panel-content');
       $contentWrapper = $content.find('.sections-panel-content-wrapper');
-      $contentBack = $content.find('.sections-panel-content-back');
+
+      $backButtons = $el.find('.sections-panel-back');
 
       PubSub.subscribe('responsive.resize', setHeight);
       PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableSmall);
@@ -57,6 +59,10 @@ Paris.sectionsPanel = (function(){
       PubSub.subscribe("hub:init", function(e, data){
         root = data;
       });
+
+      // Keyboard navigation
+      $(document).keydown(onKeyDown);
+      $(document).keyup(onKeyUp);
 
       $el.data('api', api);
     }
@@ -95,11 +101,13 @@ Paris.sectionsPanel = (function(){
     function enableSmall() {
       $navItemsLinks.off('click', onClickNavLink);
       $subnavSectionsLinks.off('click', onClickSubnavLink);
+      $backButtons.off('click', onClickBack);
     }
 
     function disableSmall() {
       $navItemsLinks.on('click', onClickNavLink);
       $subnavSectionsLinks.on('click', onClickSubnavLink);
+      $backButtons.on('click', onClickBack);
     }
 
     function onClickNavLink(e) {
@@ -107,8 +115,8 @@ Paris.sectionsPanel = (function(){
       var $this = $(this);
       var subnavSection = $this.data('subnav-section');
       $nav.addClass('has-current-item');
-      $navItemsLinks.removeClass("current");
-      $this.addClass("current");
+      $navItemsLinks.removeClass("current").attr('aria-expanded', 'false');
+      $this.addClass("current").attr('aria-expanded', 'true');
       if (currentLevel === "content") {closeContent();}
       openSubnavSection(subnavSection);
     }
@@ -119,7 +127,12 @@ Paris.sectionsPanel = (function(){
       $subnavSections.hide();
       $section.velocity({
         opacity: 1
-      }, $.extend({}, options.velocity, {display: 'block'}));
+      }, $.extend({}, options.velocity, {
+        complete: function(){
+          $section.find('a').first().focus();
+        },
+        display: 'block'
+      }));
       $subnav.addClass('has-current-item');
       currentLevel = "subnav";
 
@@ -129,6 +142,8 @@ Paris.sectionsPanel = (function(){
         title: $currentNavItemsLink.text()
       });
 
+      $backButtons.filter('.sections-panel-subnav-back').find('.accessibility_label').text(Paris.i18n.t("close_nav", [$currentNavItemsLink.text()]));
+
       $('title').text($currentNavItemsLink.data('pageTitle') + " - Paris.fr");
 
       if (Modernizr.history) {
@@ -137,6 +152,7 @@ Paris.sectionsPanel = (function(){
     }
 
     function closeSubnavSection() {
+      $navItemsLinks.filter('.current').focus();
       $navItemsLinks.removeClass("current");
       if (currentLevel === "content") {closeContent();}
       $subnavDefault.show();
@@ -159,8 +175,8 @@ Paris.sectionsPanel = (function(){
       e.preventDefault();
       var $this = $(this);
       var url = $this.data('json');
-      $subnavSectionsLinks.removeClass("current");
-      $this.addClass("current");
+      $subnavSectionsLinks.removeClass("current").attr('aria-expanded', 'false');
+      $this.addClass("current").attr('aria-expanded', 'true');
       openContent(url);
     }
 
@@ -191,8 +207,8 @@ Paris.sectionsPanel = (function(){
 
       var $currentNavItemsLink = $navItemsLinks.filter('.current');
       var $currentSubnavSectionsLink = $subnavSectionsLinks.filter('.current');
-      $contentBack.attr('href', $currentNavItemsLink.attr('href'));
       var currentTitle = $currentSubnavSectionsLink.find('.sections-panel-subnav-item-title').text();
+      $backButtons.filter('.sections-panel-content-back').attr('href', $currentNavItemsLink.attr('href')).find('.accessibility_label').text(Paris.i18n.t("close_nav", [currentTitle]));
       PubSub.publish("sections-panel:change", {
         image: $currentSubnavSectionsLink.data('background'),
         title: currentTitle,
@@ -203,7 +219,6 @@ Paris.sectionsPanel = (function(){
         }
       });
 
-
       $('title').text($currentSubnavSectionsLink.data('pageTitle') + " - Paris.fr");
 
       if (Modernizr.history) {
@@ -213,6 +228,7 @@ Paris.sectionsPanel = (function(){
 
     function closeContent(){
       $nav.removeClass("closed");
+      $subnavSectionsLinks.filter('.current').focus();
       $subnavSectionsLinks.removeClass("current");
       $contentWrapper.empty();
       $subnav.velocity({
@@ -238,37 +254,80 @@ Paris.sectionsPanel = (function(){
         news: data.news
       });
 
-      data = data.content;
-
-      var content =
-        '<div class="sections-panel-intro">' + data.intro + '</div>' +
-        '<ul class="sections-panel-content-items">';
-
-      content += map(data.items, function(item){
-        var render = '<li class="sections-panel-content-item">' +
-          '<a href="'+item.href+'">' +
-          '<div class="sections-panel-content-item-title">'+item.title+'</div>';
-        if (item.text) {
-          render += '<div class="sections-panel-content-item-text">'+item.text+'</div>';
-        }
-        render += '</a></li>';
-        return render;
-      }).join('');
-      content += '</ul>';
-
-      if (data.buttons && data.buttons.items && data.buttons.items.length) {
-        content += Paris.templates["buttons"]["buttons"](data.buttons);
-      }
-      if (data.more_links && data.more_links.items && data.more_links.items.length) {
-        content += Paris.templates["links"]["links"](data.more_links);
-      }
+      var content = Paris.templates["sections-panel"]["sections-panel-content"](data.content);
 
       $contentWrapper.html(content).velocity({
         opacity: [1, 0]
       }, $.extend({}, options.velocity, {
-        complete: setHeight,
+        complete: function() {
+          setHeight();
+          $contentWrapper.find('a').first().focus();
+        },
         display: 'block'
       }));
+    }
+
+    function onClickBack(e){
+      e.preventDefault();
+      if (currentLevel === 'subnav') {
+        closeSubnavSection();
+      } else if (currentLevel === 'content') {
+        closeContent();
+      }
+    }
+
+    function onKeyDown(e) {
+      // only if the current element has the focus
+      var hasFocus = $(':focus').closest($el).length === 1;
+      if (!hasFocus) {return true;}
+
+      switch (e.which) {
+        case 27: // Esc
+        case 37: // arrow left
+        case 38: // arrow top
+        case 39: // arrow right
+        case 40: // arrow bottom
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+          break;
+      }
+    }
+
+    function onKeyUp(e){
+      // only if the current element has the focus
+      var hasFocus = $(':focus').closest($el).length === 1;
+      if (!hasFocus) {return true;}
+
+      switch (e.which) {
+        case 27: // Esc
+        case 37: // arrow left
+          if (currentLevel === "subnav") {closeSubnavSection();}
+          else if (currentLevel === "content") {closeContent();}
+          break;
+
+        case 38: // arrow top
+        case 40: // arrow bottom
+          var $currentLink = $el.find('a:focus');
+          var $currentLinkList;
+          var direction = e.keyCode === 38 ? -1 : 1;
+          if (currentLevel === "nav") {
+            $currentLinkList = $nav.find('a');
+          } else if (currentLevel === "subnav") {
+            $currentLinkList = $subnav.find('.sections-panel-subnav-section:visible').find('a').add('.sections-panel-subnav-back');
+          } else if (currentLevel === "content") {
+            $currentLinkList = $currentLink.closest('.sections-panel-content').find('a');
+          }
+          var nextIndex = $currentLinkList.index($currentLink) + direction;
+          if (nextIndex < 0 || nextIndex >= $currentLinkList.length) {break;}
+          var $nextLink = $currentLinkList.get(nextIndex);
+          if ($nextLink) {$nextLink.focus();}
+          break;
+
+        case 39: // arrow right
+          $el.find('a:focus').click();
+          break;
+      }
     }
 
 

@@ -1,11 +1,4 @@
-doctype html
-html.no-js(lang="fr")
-  head
-    meta(charset='utf-8')
-    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
-    title Base
-    link(href="../stylesheets/paris.css" type="text/css" rel="stylesheet")
-    link(href="../stylesheets/lsg.css" type="text/css" rel="stylesheet")
-  body
-    .lsg-base
-      != yield
+extends ../_paris-layout
+
+block main
+  != yield

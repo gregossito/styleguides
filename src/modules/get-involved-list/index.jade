@@ -1,18 +1,3 @@
 include get-involved-list
-include ../../helpers/code
 
-h2 Standard
-.lsg-module
-  +get-involved-list(defaults)
-+code({language: "jade"}).
-  include get-involved-list
-
-  +get-involved-list(#{JSON.stringify(defaults, null, 2)})
-
-h2 Avec les mains
-.lsg-module
-  +get-involved-list(with_hands)
-+code({language: "jade"}).
-  include get-involved-list
-
-  +get-involved-list(#{JSON.stringify(with_hands, null, 2)})
+include ../../helpers/preview

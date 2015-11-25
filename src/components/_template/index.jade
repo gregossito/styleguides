@@ -1,10 +1,19 @@
-include component
-include ../../helpers/code
+include my-component
 
-h2 Standard
-.lsg-component
-  +component(defaults)
-+code({language: "jade"}).
-  include component
+include ../../helpers/preview
 
-  +component(#{JSON.stringify(defaults, null, 2)})
+//- for examples with block
+append elements
+  h2.lsg-example-title Title
+
+  p.lsg-elem-desc Description
+
+  .lsg-elem
+    +my-component({"title": "Example"})
+      p Block
+
+  +code("jade").
+    include my-component
+
+    +my-component(#{JSON.stringify({"title": "Example"})})
+      p Block

@@ -1,34 +1,3 @@
 include news-list
-include ../../helpers/code
 
-h2 3 actualités
-.lsg-module
-  +news-list(three_news)
-+code({language: "jade"}).
-  include news-list
-
-  +news-list(#{JSON.stringify(three_news, null, 2)})
-
-h2 1 grande actualité + jusqu'à 4 petites actualités
-.lsg-module
-  +news-list(five_news)
-+code({language: "jade"}).
-  include news-list
-
-  +news-list(#{JSON.stringify(five_news, null, 2)})
-
-h2 1 grande actualité + jusqu'à 4 petites actualités (secondaire)
-.lsg-module
-  +news-list(five_news_secondary)
-+code({language: "jade"}).
-  include news-list
-
-  +news-list(#{JSON.stringify(five_news_secondary, null, 2)})
-
-h2 Liste d'actualités
-.lsg-module
-  +news-list(ten_news)
-+code({language: "jade"}).
-  include news-list
-
-  +news-list(#{JSON.stringify(ten_news, null, 2)})
+include ../../helpers/preview

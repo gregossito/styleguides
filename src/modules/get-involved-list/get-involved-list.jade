@@ -3,11 +3,12 @@ include ../../modules/heading/heading
 include ../../modules/intro-text/intro-text
 
 mixin get-involved-item(data)
-  .get-involved-item(class=data.modifiers)
-    .get-involved-item-category= data.category
-    .get-involved-item-title= data.title
-    - data.button.modifiers = ["action", "get-involved-item-button"]
-    +button(data.button)
+  li.get-involved-list-item(class=data.modifiers)
+    .get-involved-list-item-category= data.category
+    .get-involved-list-item-title= data.title
+    - var button = JSON.parse(JSON.stringify(data.button)) // clone the data object
+    - button.modifiers = ["action", "get-involved-list-item-button"]
+    +button(button)
 
 mixin get-involved-list(data)
   .get-involved-list
@@ -17,12 +18,17 @@ mixin get-involved-list(data)
       +heading(data.heading)
     if data.nav
       .get-involved-nav
-        each item in data.nav.items
-          .get-involved-nav-item
-            .get-involved-item-title!= item.title
-            - button = JSON.parse(JSON.stringify(item.button)) // clone the data object
-            - button.modifiers = ["action"] // overwrite the modifiers
-            +button(button)
-    .get-involved-items
+        if data.nav.title
+          h3.hidden-accessibly= data.nav.title
+        ul.get-involved-nav-items
+          each item in data.nav.items
+            li.get-involved-nav-item
+              .get-involved-list-item-title!= item.title
+              - var button = JSON.parse(JSON.stringify(item.button)) // clone the data object
+              - button.modifiers = ["action"] // overwrite the modifiers
+              +button(button)
+    if data.items_title
+      h3.hidden-accessibly= data.items_title
+    ul.get-involved-list-items
       each item in data.items
         +get-involved-item(item)

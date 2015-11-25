@@ -1,49 +1,61 @@
 {
   "index": {
-    "defaults": {
-      "items": [
-        {
-          "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
-          "icon": "facebook",
-          "text": "Partager sur Facebook",
-          "title": "Partager sur Facebook - nouvelle fenêtre"
-        },
-        {
-          "href": "https://twitter.com/intent/tweet?text=Texte du tweet http://www.paris.fr",
-          "icon": "twitter",
-          "text": "Partager sur Twitter",
-          "title": "Partager sur Twitter - nouvelle fenêtre"
-        },
-        {
-          "href": "mailto:?subject=Titre de la page&body=http://www.paris.fr",
-          "icon": "mail",
-          "text": "Partager par courriel",
-          "title": "Partager par courriel - nouvelle fenêtre"
-        }
-      ]
+    "type": "share",
+    "description": "<p>Ce module ouvre automatiquement les liens de partage dans des pop-ups.</p><p>Les URLs passées dans l'attribut <code>href</code> doivent être :<ul><li>pour Twitter : <code>https://twitter.com/intent/tweet?text=[TWEET]</code> <a href=\"https://dev.twitter.com/web/tweet-button/web-intent\" target=\"_blank\">(voir documentation)</a></li><li>pour Facebook : <code>https://www.facebook.com/sharer/sharer.php?u=[URL]</code><a href=\"https://developers.facebook.com/docs/plugins/share-button\" target=\"_blank\">(voir documentation)</a></li><li>pour le partage par e-mail : <code>mailto:?subject=[TITLE]&body=[URL]</code></li></ul></p>",
+    "bodyAttributes": {
+      "style": "background-color: #E6E6E6"
     },
-    "circles": {
-      "modifiers": ["circles"],
-      "items": [
-        {
-          "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
-          "icon": "facebook",
-          "text": "Partager sur Facebook",
-          "title": "Partager sur Facebook - nouvelle fenêtre"
-        },
-        {
-          "href": "https://twitter.com/intent/tweet?text=Texte du tweet http://www.paris.fr",
-          "icon": "twitter",
-          "text": "Partager sur Twitter",
-          "title": "Partager sur Twitter - nouvelle fenêtre"
-        },
-        {
-          "href": "mailto:?subject=Titre de la page&body=http://www.paris.fr",
-          "icon": "mail",
-          "text": "Partager par courriel",
-          "title": "Partager par courriel - nouvelle fenêtre"
-        }
-      ]
-    }
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "items": [
+          {
+            "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
+            "icon": "facebook",
+            "text": "Partager sur Facebook",
+            "title": "Partager sur Facebook - nouvelle fenêtre"
+          },
+          {
+            "href": "https://twitter.com/intent/tweet?text=Texte du tweet http://www.paris.fr",
+            "icon": "twitter",
+            "text": "Partager sur Twitter",
+            "title": "Partager sur Twitter - nouvelle fenêtre"
+          },
+          {
+            "href": "mailto:?subject=Titre de la page&body=http://www.paris.fr",
+            "icon": "mail",
+            "text": "Partager par courriel",
+            "title": "Partager par courriel - nouvelle fenêtre"
+          }
+        ]
+      }
+    }, {
+      "title": "Avec cercles",
+      "description": "",
+      "data": {
+        "modifiers": ["circles"],
+        "items": [
+          {
+            "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
+            "icon": "facebook",
+            "text": "Partager sur Facebook",
+            "title": "Partager sur Facebook - nouvelle fenêtre"
+          },
+          {
+            "href": "https://twitter.com/intent/tweet?text=Texte du tweet http://www.paris.fr",
+            "icon": "twitter",
+            "text": "Partager sur Twitter",
+            "title": "Partager sur Twitter - nouvelle fenêtre"
+          },
+          {
+            "href": "mailto:?subject=Titre de la page&body=http://www.paris.fr",
+            "icon": "mail",
+            "text": "Partager par courriel",
+            "title": "Partager par courriel - nouvelle fenêtre"
+          }
+        ]
+      }
+    }]
   }
 }

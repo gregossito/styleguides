@@ -177,7 +177,10 @@
         "email": {
           "placeholder": "Votre adresse e-mail"
         },
-        "button": "Valider",
+        "button": {
+          "text": "Valider",
+          "title": "Valider votre question à Paris j'écoute"
+        },
         "thanks": "Merci, votre question a bien été transmise."
       },
       "cross_content": {

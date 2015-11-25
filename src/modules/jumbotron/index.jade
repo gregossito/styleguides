@@ -1,18 +1,3 @@
 include jumbotron
-include ../../helpers/code
 
-h2 Standard
-.lsg-module
-  +jumbotron(defaults)
-+code({language: "jade"}).
-  include jumbotron
-
-  +jumbotron(#{JSON.stringify(defaults, null, 2)})
-
-h2 Test avec image claire
-.lsg-module
-  +jumbotron(with_image_white)
-+code({language: "jade"}).
-  include jumbotron
-
-  +jumbotron(#{JSON.stringify(with_image_white, null, 2)})
+include ../../helpers/preview

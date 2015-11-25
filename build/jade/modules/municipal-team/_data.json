@@ -1,20 +1,26 @@
 {
   "index": {
-    "defaults": {
-      "heading": {
-        "title": "La Maire et ses adjoints",
-        "link": {
-          "href": "#",
-          "text": "L’Hôtel de ville"
+    "type": "municipal-team",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "heading": {
+          "title": "La Maire et ses adjoints",
+          "link": {
+            "href": "#",
+            "text": "L’Hôtel de ville"
+          },
+          "modifiers": ["white"]
         },
-        "modifiers": ["white"]
-      },
-      "img": {
-        "src": "image.jpg",
-        "alt": "La Maire et ses adjoints"
-      },
-      "intro": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
-      "text": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna."
-    }
+        "img": {
+          "src": "image.jpg",
+          "alt": "La Maire et ses adjoints"
+        },
+        "intro": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
+        "text": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna."
+      }
+    }]
   }
 }

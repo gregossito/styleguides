@@ -1,20 +1,3 @@
 include html
-include ../../helpers/code
 
-p Ce composant accepte un bloc (ou un paramètre <code>block</code>) contenant un code HTML. Il adapte automatiquement la taille de ses enfants directs pour qu'ils ne dépassent pas la largeur de la colonne.
-
-h2 Standard
-.lsg-component(style="max-width: 500px")
-  +html(defaults)
-+code({language: "jade"}).
-  include html
-
-  +html(#{JSON.stringify(defaults, null, 2)})
-
-h2 Sans prendre en compte le cookie
-.lsg-component(style="max-width: 500px")
-  +html(without_cookie)
-+code({language: "jade"}).
-  include html
-
-  +html(#{JSON.stringify(without_cookie, null, 2)})
+include ../../helpers/preview

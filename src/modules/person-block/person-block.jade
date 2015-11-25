@@ -2,13 +2,13 @@ include ../../components/buttons/buttons
 
 mixin person-block(data)
   .person-block
-    .person-block-portrait
-      a(href=data.href style="background-image: url(#{data.image});")
+    .person-block-portrait: span(style="background-image: url(#{data.image});")
     .person-block-content
-      a(href=data.href).person-block-title= data.title
+      h3.person-block-title
+        a(href=data.href)= data.title
       .person-block-text= data.text
     .person-block-button
-      - button = JSON.parse(JSON.stringify(data.button)) // clone the data object
+      - var button = JSON.parse(JSON.stringify(data.button)) // clone the data object
       - button.href = data.href
       - button.icon = "arrow-right"
       - button.modifiers = ["action"] // overwrite the modifiers

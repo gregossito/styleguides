@@ -1,8 +1,13 @@
 {
   "index": {
-    "defaults": {
-      "title": "Title",
-      "modifiers": ["color-secondary-background"]
-    }
+    "type": "block-content",
+    "description": "Ce module sera généralement utilisé dans la colonne de gauche/droite d'une page.<br>Il permet de définir un titre avec un contenu dyanmique (donnée ou code <code>jade</code>).",
+    "examples": [{
+      "title": "Standard",
+      "data": {
+        "title": "Title",
+        "block": "Contenu"
+      }
+    }]
   }
 }

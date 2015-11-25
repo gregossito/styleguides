@@ -1,64 +1,30 @@
 include image
-include ../../helpers/code
 
-h2 Formats d'image
-p Chaque image doit être redimensionnée automatiquement aux formats suivants :
-ul
-  li
-    strong Petit
-    |  avec une largeur max de 400px
-  li
-    strong Moyen
-    |  avec une largeur max de 600px
-  li
-    strong Grand
-    |  avec une largeur max de 800px
+include ../../helpers/preview
 
-h2 Standard (image responsive)
-p La taille d'image moyenne est passée par défaut dans l'attribut <code>src</code>.
-p L'attribut <code>srcset</code> contient un tableau des tailles disponibles, en suivant le format de la <a href="http://responsiveimages.org/" target="_blank">spécification</a> (URL de l'image, espace, largeur en pixels avec l'unité <code>w</code> pour <em>width</em>).
-p Les valeurs de <code>title</code> et <code>credit</code> seront concaténées dans l'attribut <code>title</code> de l'élément <code>img</code>.
-.lsg-component(style="max-width: 770px")
-  +image(defaults)
-+code({language: "jade"}).
-  include image
+append elements
+  h2.lsg-example-title= more.left.title
 
-  +image(#{JSON.stringify(defaults, null, 2)})
+  p.lsg-elem-desc En ajoutant le <em>modifier</em> <code>left</code>, l'image flotte à gauche et est habillée par le texte qui la suit.
 
-h2 Image verticale
-p Les images sont limitées à 540px de haut, pour éviter que les images au format vertical prennent une hauteur trop importante.
-.lsg-component(style="max-width: 770px")
-  +image(vertical_image)
-+code({language: "jade"}).
-  include image
+  .lsg-elem
+    +image(more.left.data)
+    p Ceci est un paragraphe de remplissage. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
 
-  +image(#{JSON.stringify(vertical_image, null, 2)})
+  +code("jade").
+    include image
 
-h2 Image verticale non-contrainte
-p Il est possible de lever la limite de 540px de hauteur en ajoutant le <em>modifier</em> <code>full-height</code>. C'est notamment utile pour les infographies verticales.
-.lsg-component(style="max-width: 770px")
-  +image(full_height)
-+code({language: "jade"}).
-  include image
+    +image(#{JSON.stringify(more.left.data, null, 2)})
 
-  +image(#{JSON.stringify(full_height, null, 2)})
+  h2.lsg-example-title= more.right.title
 
-h2 Image flottant à gauche
-p En ajoutant le <em>modifier</em> <code>left</code>, l'image flotte à gauche et est habillée par le texte qui la suit.
-.lsg-component(style="max-width: 770px")
-  +image(left)
-  p Ceci est un paragraphe de remplissage. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
-+code({language: "jade"}).
-  include image
+  p.lsg-elem-desc En ajoutant le <em>modifier</em> <code>right</code>, l'image flotte à droite et est habillée par le texte qui la suit.
 
-  +image(#{JSON.stringify(left, null, 2)})
+  .lsg-elem
+    +image(more.right.data)
+    p Ceci est un paragraphe de remplissage. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
 
-h2 Image flottant à droite
-p En ajoutant le <em>modifier</em> <code>right</code>, l'image flotte à droite et est habillée par le texte qui la suit.
-.lsg-component(style="max-width: 770px")
-  +image(right)
-  p Ceci est un paragraphe de remplissage. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
-+code({language: "jade"}).
-  include image
+  +code("jade").
+    include image
 
-  +image(#{JSON.stringify(right, null, 2)})
+    +image(#{JSON.stringify(more.right.data, null, 2)})

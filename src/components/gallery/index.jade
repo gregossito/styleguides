@@ -1,18 +1,3 @@
 include gallery
-include ../../helpers/code
 
-h2 Standard
-.lsg-component(style="max-width: 770px")
-  +gallery(defaults)
-+code({language: "jade"}).
-  include component
-
-  +gallery(#{JSON.stringify(defaults, null, 2)})
-
-h2 Avec légendes et crédit
-.lsg-component(style="max-width: 770px")
-  +gallery(with_captions)
-+code({language: "jade"}).
-  include component
-
-  +gallery(#{JSON.stringify(with_captions, null, 2)})
+include ../../helpers/preview

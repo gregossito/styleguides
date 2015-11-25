@@ -1,48 +1,60 @@
 {
   "index": {
-    "defaults": {
-      "image": "./document-heading.png",
-      "text": "Demander un logement",
-      "icons" : [
-        {
-          "name": "favorites",
-          "href": "#"
-        },
-        {
-          "name": "bell",
-          "href": "#"
-        }
-      ]
-    },
-    "active_icon": {
-      "image": "./document-heading.png",
-      "text": "Demander un logement",
-      "icons" : [
-        {
-          "name": "favorites",
-          "href": "#"
-        },
-        {
-          "name": "bell",
-          "href": "#",
-          "modifiers": ["active"],
-          "title": "Vous êtes abonné(e)"
-        }
-      ]
-    },
-    "long": {
-      "image": "./document-heading.png",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat.",
-      "icons" : [
-        {
-          "name": "favorites",
-          "href": "#"
-        },
-        {
-          "name": "bell",
-          "href": "#"
-        }
-      ]
-    }
+    "type": "document-heading",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "image": "./document-heading.png",
+        "text": "Demander un logement",
+        "icons" : [
+          {
+            "name": "favorites",
+            "href": "#"
+          },
+          {
+            "name": "bell",
+            "href": "#"
+          }
+        ]
+      }
+    }, {
+      "title": "Icône active",
+      "description": "",
+      "data": {
+        "image": "./document-heading.png",
+        "text": "Demander un logement",
+        "icons" : [
+          {
+            "name": "favorites",
+            "href": "#"
+          },
+          {
+            "name": "bell",
+            "href": "#",
+            "modifiers": ["active"],
+            "title": "Vous êtes abonné(e)"
+          }
+        ]
+      }
+    }, {
+      "title": "Test avec titre long",
+      "description": "",
+      "data": {
+        "image": "./document-heading.png",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat.",
+        "icons" : [
+          {
+            "name": "favorites",
+            "href": "#"
+          },
+          {
+            "name": "bell",
+            "href": "#"
+          }
+        ]
+      }
+    }]
   }
 }

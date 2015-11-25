@@ -7,7 +7,7 @@ mixin news-list(data)
         each item, index in data.items.slice(0, 5)
           li.news-list-card-item
             if index === 0
-              - item = JSON.parse(JSON.stringify(item)) // clone the data object
+              - var item = JSON.parse(JSON.stringify(item)) // clone the data object
               - item.modifiers = ["large"] // overwrite the modifiers
               +news-card(item)
             else

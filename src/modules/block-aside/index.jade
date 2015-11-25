@@ -1,34 +1,27 @@
 include block-aside
 include ../button/button
-include ../../helpers/code
 
-h2 Standard
-.lsg-module
-  +block-aside(defaults)
-    | Content
-+code({language: "jade"}).
-  include block-aside
+extends ../../helpers/preview
 
-  +block-aside(#{JSON.stringify(defaults)})
-    | Content
+append elements
+  h2.lsg-example-title Avec du contenu sous forme de code #[code jade]
 
-h2 Texte + bouton
-.lsg-module
-  +block-aside(with_button)
-    p Sur rendez-vous à la Mairie du XIIIè arrondissement.
-    +button({
-      "href": "#",
-      "text": "Demander un rendez-vous",
-      "modifiers": ["action"]
-    })
-+code({language: "jade"}).
-  include block-aside
-  include button
+  .lsg-elem
+    +block-aside({"title": "Permanences"})
+      p Sur rendez-vous à la Mairie du XIIIè arrondissement.
+      +button({
+        "href": "#",
+        "text": "Demander un rendez-vous",
+        "modifiers": ["action"]
+      })
+  +code("jade").
+    include block-aside
+    include button
 
-  +block-aside(#{JSON.stringify(defaults)})
-    p Sur rendez-vous à la Mairie du XIIIè arrondissement.
-    +button({
-      "href": "#",
-      "text": "Demander un rendez-vous",
-      "modifiers": ["action"]
-    })
+    +block-aside(#{JSON.stringify({"title": "Permanences"})})
+      p Sur rendez-vous à la Mairie du XIIIè arrondissement.
+      +button({
+        "href": "#",
+        "text": "Demander un rendez-vous",
+        "modifiers": ["action"]
+      })

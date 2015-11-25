@@ -1,9 +1,10 @@
 mixin breadcrumbs(data)
   a.offset-header.breadcrumbs-offset-header#breadcrumbs
   ol.breadcrumbs
-    each item in data.items
+    each item, index in data.items
       li.breadcrumbs-item
         if item.href
-          a(href=item.href)= item.text
+          - var last = (index + 1 === data.items.length)
+          a(href=item.href tabindex=(last ? -1 : null))= item.text
         else
           = item.text

@@ -1,95 +1,101 @@
 {
   "index": {
-    "defaults": {
-      "title": "Hashtags de la semaine",
-      "hashtags": [
-        {
-          "id": "automneaparis",
-          "text": "#automneàparis",
-          "current": true,
-          "items": [
-            {
-              "image": "../../modules/gallery-ugc/picture1.jpg",
-              "text": "@user",
-              "href": "#",
-              "title": "Voir la photo 1 de @user – nouvelle fenêtre"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture2.jpg",
-              "text": "@user",
-              "href": "#",
-              "title": "Voir la photo 2 de @user – nouvelle fenêtre"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture3.jpg",
-              "text": "@user",
-              "href": "#",
-              "title": "Voir la photo 3 de @user – nouvelle fenêtre"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture4.jpg",
-              "text": "@user",
-              "href": "#",
-              "title": "Voir la photo 4 de @user – nouvelle fenêtre"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture5.jpg",
-              "text": "@user",
-              "href": "#",
-              "title": "Voir la photo 5 de @user – nouvelle fenêtre"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture6.jpg",
-              "text": "@user",
-              "href": "#",
-              "title": "Voir la photo 6 de @user – nouvelle fenêtre"
-            }
-          ]
-        },
-        {
-          "id": "nuit_blanche",
-          "text": "#nuit_blanche",
-          "current": false,
-          "items": [
-            {
-              "image": "../../modules/gallery-ugc/picture3.jpg",
-              "text": "@user",
-              "href": "#",
-              "title": "Voir la photo 1 de @user – nouvelle fenêtre"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture4.jpg",
-              "text": "@user",
-              "href": "#",
-              "title": "Voir la photo 2 de @user – nouvelle fenêtre"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture1.jpg",
-              "text": "@user",
-              "href": "#",
-              "title": "Voir la photo 3 de @user – nouvelle fenêtre"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture6.jpg",
-              "text": "@user",
-              "href": "#",
-              "title": "Voir la photo 4 de @user – nouvelle fenêtre"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture2.jpg",
-              "text": "@user",
-              "href": "#",
-              "title": "Voir la photo 5 de @user – nouvelle fenêtre"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture5.jpg",
-              "text": "@user",
-              "href": "#",
-              "title": "Voir la photo 6 de @user – nouvelle fenêtre"
-            }
-          ]
-        }
-      ]
-    }
+    "type": "gallery-ugc",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "title": "Hashtags de la semaine",
+        "hashtags": [
+          {
+            "id": "automneaparis",
+            "text": "#automneàparis",
+            "current": true,
+            "items": [
+              {
+                "image": "../../modules/gallery-ugc/picture1.jpg",
+                "text": "@user",
+                "href": "#",
+                "title": "Voir la photo 1 de @user – nouvelle fenêtre"
+              },
+              {
+                "image": "../../modules/gallery-ugc/picture2.jpg",
+                "text": "@user",
+                "href": "#",
+                "title": "Voir la photo 2 de @user – nouvelle fenêtre"
+              },
+              {
+                "image": "../../modules/gallery-ugc/picture3.jpg",
+                "text": "@user",
+                "href": "#",
+                "title": "Voir la photo 3 de @user – nouvelle fenêtre"
+              },
+              {
+                "image": "../../modules/gallery-ugc/picture4.jpg",
+                "text": "@user",
+                "href": "#",
+                "title": "Voir la photo 4 de @user – nouvelle fenêtre"
+              },
+              {
+                "image": "../../modules/gallery-ugc/picture5.jpg",
+                "text": "@user",
+                "href": "#",
+                "title": "Voir la photo 5 de @user – nouvelle fenêtre"
+              },
+              {
+                "image": "../../modules/gallery-ugc/picture6.jpg",
+                "text": "@user",
+                "href": "#",
+                "title": "Voir la photo 6 de @user – nouvelle fenêtre"
+              }
+            ]
+          },
+          {
+            "id": "nuit_blanche",
+            "text": "#nuit_blanche",
+            "current": false,
+            "items": [
+              {
+                "image": "../../modules/gallery-ugc/picture3.jpg",
+                "text": "@user",
+                "href": "#",
+                "title": "Voir la photo 1 de @user – nouvelle fenêtre"
+              },
+              {
+                "image": "../../modules/gallery-ugc/picture4.jpg",
+                "text": "@user",
+                "href": "#",
+                "title": "Voir la photo 2 de @user – nouvelle fenêtre"
+              },
+              {
+                "image": "../../modules/gallery-ugc/picture1.jpg",
+                "text": "@user",
+                "href": "#",
+                "title": "Voir la photo 3 de @user – nouvelle fenêtre"
+              },
+              {
+                "image": "../../modules/gallery-ugc/picture6.jpg",
+                "text": "@user",
+                "href": "#",
+                "title": "Voir la photo 4 de @user – nouvelle fenêtre"
+              },
+              {
+                "image": "../../modules/gallery-ugc/picture2.jpg",
+                "text": "@user",
+                "href": "#",
+                "title": "Voir la photo 5 de @user – nouvelle fenêtre"
+              },
+              {
+                "image": "../../modules/gallery-ugc/picture5.jpg",
+                "text": "@user",
+                "href": "#",
+                "title": "Voir la photo 6 de @user – nouvelle fenêtre"
+              }
+            ]
+          }
+        ]
+      }
+    }]
   }
 }

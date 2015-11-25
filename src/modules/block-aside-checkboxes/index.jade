@@ -1,26 +1,3 @@
 include block-aside-checkboxes
-include ../../helpers/code
 
-h2 Standard
-.lsg-module(style="max-width: 250px")
-  +block-aside-checkboxes(defaults)
-+code({language: "jade"}).
-  include block-aside-checkboxes
-
-  +block-aside-checkboxes(#{JSON.stringify(defaults, null, 2)})
-
-h2 Intitulés longs, sans nombres
-.lsg-module(style="max-width: 230px")
-  +block-aside-checkboxes(long_texts)
-+code({language: "jade"}).
-  include block-aside-checkboxes
-
-  +block-aside-checkboxes(#{JSON.stringify(long_texts, null, 2)})
-
-h2 Intitulés courts, sur deux colonnes
-.lsg-module(style="max-width: 230px")
-  +block-aside-checkboxes(two_cols)
-+code({language: "jade"}).
-  include block-aside-checkboxes
-
-  +block-aside-checkboxes(#{JSON.stringify(two_cols, null, 2)})
+extends ../../helpers/preview

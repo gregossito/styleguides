@@ -1,5 +1,6 @@
 {
   "status": "error",
+  "message": "Il y a une ou plusieurs erreurs dans le formulaire (voir ci-dessus). Merci de les corriger et de renvoyer le formulaire.",
   "errors": {
     "text1": "Ceci est un message d'aide pour résoudre l'erreur."
   }

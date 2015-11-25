@@ -7,7 +7,42 @@ Let's take the `x.β.α` version number:
 * `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
 * `x` is for major release involving a more careful integration of the styleguide
 
-## Next release
+## 1.2.2 (2015-11-24)
+
+* component `form`: added `noscript` reCaptcha
+* template `generic`: now accepts a `notice` above content
+* upgraded harp to 0.20
+
+## 1.2.1 (2015-11-19)
+
+* do not cache ajax `post-it` request
+* module `block-content-jecoute`: remove margin on `p` tag in answers
+
+## 1.2.0 (2015-11-10)
+
+* new UI for the styleguide documentation
+* module `get-involved`: removed `title` from item
+* component `video`: added `title`
+
+## 1.1.6 (2015-11-06)
+
+* accessibility improvements (mainly on `sections-panel` module)
+* upgraded harp to 0.19
+
+## 1.1.5 (2015-11-04)
+
+* module `get-involved-list`: fixed collision with get-involved
+* module `jumbotron`:
+  * added `no-overlay` modifier to remove overlay
+  * added conditional `block`
+
+## 1.1.4 (2015-11-03)
+
+* accessibility improvements
+* component `jecoute` and module `poll`: use `button` module
+* component `form` improved for release
+* template `subhome-news`: bugs fixed in `news-list` and header
+* improved Jade syntax in multiple files (always use `var`)
 
 ## 1.1.3 (2015-11-02)
 
@@ -189,44 +224,6 @@ Let's take the `x.β.α` version number:
 * harmonized tests on items length
 
 ## 0.13.4 (2015-06-19)
-
-* module `block-content-*`: changed `h2` to `h3`
-* module `block-content-social`: added `unit`
-* module `button-top`: added `aria-hidden`
-* module `field-search`:
-  * added `aria-hidden` to button icon
-* module `footer`:
-  * use `footer` element
-  * added `role`
-  * added `lang` to items
-  * changed `alt` to logo
-* module `get-involved`: use `ul` and `li`
-* module `news-card` & `news-list`:
-  * trigger hover on focus on buttons
-  * added `aria-hidden` to counters icons
-* module `pagination`:
-  * added strong in current item
-  * added `label` and `link_title` to data
-* module `que-faire`: use `ul` and `li`
-* module `quick-access`:
-  * added `role` to search
-* module `rheader`:
-  * added `role`
-  * added `title` and `lang` to locales
-  * use `strong` for current locale or item
-  * added `aria-controls` to search button
-  * added `aria-label` to double-faced items
-  * added `aria-hidden` to item icons
-  * trigger hover on focus on buttons
-* layout `stack`: added default color
-* all templates:
-  * put all contents in a `main` element
-  * updated `rheader.locales` in data
-  * changed "Rechercher" to "Valider la recherche sur le site" in `search-field` submit button
-  * added `lang` to "Visit Paris" in `footer`
-  * changed `alt` of logo in `footer`
-  * added `unit` in `connected.social.items`
-  * added `label` and `link_title` to `pagination` data
 
 * component `jecoute`: fixed input placeholder
 * module `news-card`: fixed display without image

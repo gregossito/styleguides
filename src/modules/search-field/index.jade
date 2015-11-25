@@ -1,26 +1,3 @@
 include search-field
-include ../../helpers/code
 
-h2 Standard
-.lsg-module
-  +search-field(defaults)
-+code({language: "jade"}).
-  include search-field
-
-  +search-field(#{JSON.stringify(defaults, null, 2)})
-
-h2 Sans le bouton "autour de moi"
-.lsg-module
-  +search-field(without_around)
-+code({language: "jade"}).
-  include search-field
-
-  +search-field(#{JSON.stringify(without_around, null, 2)})
-
-h2 Petit
-.lsg-module
-  +search-field(small)
-+code({language: "jade"}).
-  include search-field
-
-  +search-field(#{JSON.stringify(small, null, 2)})
+include ../../helpers/preview

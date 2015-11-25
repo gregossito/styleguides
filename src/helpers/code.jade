@@ -1,4 +1,5 @@
-mixin code(data)
+mixin code(language)
   pre.prism
-    code.language-jade
+    code(class="language-#{language}")
       block
+

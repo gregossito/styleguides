@@ -12,7 +12,7 @@ mixin error-heading(data)
         if data.trace
           p.error-heading-trace= data.trace
         if data.button
-          - button = JSON.parse(JSON.stringify(data.button || [])) // clone the data object
+          - var button = JSON.parse(JSON.stringify(data.button || [])) // clone the data object
           - button.modifiers = button.modifiers || []
           - button.modifiers.push("white")
           +button(button)

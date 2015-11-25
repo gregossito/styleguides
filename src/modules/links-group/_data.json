@@ -1,117 +1,135 @@
 {
   "index": {
-    "defaults": {
-      "href": "#",
-      "background": "background.jpg",
-      "title": "Titre",
-      "subtitle": "Sous-titre (optionnel)",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
-      "items": [
-        {
-          "href": "#",
-          "text": "Bouton"
-        },
-        {
-          "href": "#",
-          "text": "Bouton"
-        },
-        {
-          "href": "#",
-          "text": "Bouton"
-        },
-        {
-          "href": "#",
-          "text": "Bouton"
-        },
-        {
-          "href": "#",
-          "text": "Bouton"
-        },
-        {
-          "href": "#",
-          "text": "Bouton"
-        }
-      ]
-    },
-    "blue": {
-      "href": "#",
-      "background": "background.jpg",
-      "title": "Titre",
-      "subtitle": "Sous-titre",
-      "modifiers": ["blue"],
-      "items": [
-        {
-          "href": "#",
-          "text": "Bouton"
-        },
-        {
-          "href": "#",
-          "text": "Bouton"
-        },
-        {
-          "href": "#",
-          "text": "Bouton"
-        }
-      ]
-    },
-    "red": {
-      "href": "#",
-      "background": "background.jpg",
-      "title": "Titre",
-      "subtitle": "Sous-titre",
-      "modifiers": ["red"],
-      "items": [
-        {
-          "href": "#",
-          "text": "Bouton"
-        },
-        {
-          "href": "#",
-          "text": "Bouton"
-        },
-        {
-          "href": "#",
-          "text": "Bouton"
-        }
-      ]
-    },
-    "white_buttons": {
-      "href": "#",
-      "background": "background.jpg",
-      "title": "Titre",
-      "subtitle": "Sous-titre",
-      "modifiers": ["white-buttons"],
-      "items": [
-        {
-          "href": "#",
-          "text": "Bouton"
-        },
-        {
-          "href": "#",
-          "text": "Bouton"
-        },
-        {
-          "href": "#",
-          "text": "Bouton"
-        }
-      ]
-    },
-    "just_buttons": {
-      "href": "#",
-      "items": [
-        {
-          "href": "#",
-          "text": "Bouton"
-        },
-        {
-          "href": "#",
-          "text": "Bouton"
-        },
-        {
-          "href": "#",
-          "text": "Bouton"
-        }
-      ]
-    }
+    "type": "links-group",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "href": "#",
+        "background": "background.jpg",
+        "title": "Titre",
+        "subtitle": "Sous-titre (optionnel)",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+        "items": [
+          {
+            "href": "#",
+            "text": "Bouton"
+          },
+          {
+            "href": "#",
+            "text": "Bouton"
+          },
+          {
+            "href": "#",
+            "text": "Bouton"
+          },
+          {
+            "href": "#",
+            "text": "Bouton"
+          },
+          {
+            "href": "#",
+            "text": "Bouton"
+          },
+          {
+            "href": "#",
+            "text": "Bouton"
+          }
+        ]
+      }
+    }, {
+      "title": "Bleu",
+      "description": "",
+      "data": {
+        "href": "#",
+        "background": "background.jpg",
+        "title": "Titre",
+        "subtitle": "Sous-titre",
+        "modifiers": ["blue"],
+        "items": [
+          {
+            "href": "#",
+            "text": "Bouton"
+          },
+          {
+            "href": "#",
+            "text": "Bouton"
+          },
+          {
+            "href": "#",
+            "text": "Bouton"
+          }
+        ]
+      }
+    }, {
+      "title": "Rose",
+      "description": "",
+      "data": {
+        "href": "#",
+        "background": "background.jpg",
+        "title": "Titre",
+        "subtitle": "Sous-titre",
+        "modifiers": ["red"],
+        "items": [
+          {
+            "href": "#",
+            "text": "Bouton"
+          },
+          {
+            "href": "#",
+            "text": "Bouton"
+          },
+          {
+            "href": "#",
+            "text": "Bouton"
+          }
+        ]
+      }
+    }, {
+      "title": "Boutons blancs",
+      "description": "",
+      "data": {
+        "href": "#",
+        "background": "background.jpg",
+        "title": "Titre",
+        "subtitle": "Sous-titre",
+        "modifiers": ["white-buttons"],
+        "items": [
+          {
+            "href": "#",
+            "text": "Bouton"
+          },
+          {
+            "href": "#",
+            "text": "Bouton"
+          },
+          {
+            "href": "#",
+            "text": "Bouton"
+          }
+        ]
+      }
+    }, {
+      "title": "Juste les boutons",
+      "description": "",
+      "data": {
+        "href": "#",
+        "items": [
+          {
+            "href": "#",
+            "text": "Bouton"
+          },
+          {
+            "href": "#",
+            "text": "Bouton"
+          },
+          {
+            "href": "#",
+            "text": "Bouton"
+          }
+        ]
+      }
+    }]
   }
 }

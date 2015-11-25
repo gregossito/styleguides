@@ -1,25 +1,34 @@
 {
   "index": {
-    "defaults": {
-      "items": [
-        {"src": "1.jpg"},
-        {"src": "2.jpg"},
-        {"src": "3.jpg"},
-        {"src": "4.jpg"},
-        {"src": "5.jpg"},
-        {"src": "6.jpg"}
-      ]
-    },
-    "with_captions": {
-      "items": [
-        {"src": "1.jpg", "title": "Square Kriegel Valrimont <a href=\"#\">Lien</a>"},
-        {"src": "2.jpg", "title": "Parc de Bagatelle", "credit": "Mairie de Paris / DICOM"},
-        {"src": "3.jpg", "title": "Mail de Bièvre"},
-        {"src": "4.jpg", "title": "Parc Kellermann"},
-        {"src": "5.jpg", "title": "Darses du bassin de la Villette"},
-        {"src": "6.jpg", "title": "Square Georges Caïn"},
-        {"src": "7.jpg", "title": "Photo cassée", "alt": "Superbe vu que tu ne vois pas"}
-      ]
-    }
+    "type": "gallery",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "items": [
+          {"src": "1.jpg"},
+          {"src": "2.jpg"},
+          {"src": "3.jpg"},
+          {"src": "4.jpg"},
+          {"src": "5.jpg"},
+          {"src": "6.jpg"}
+        ]
+      }
+    }, {
+      "title": "Avec légende et crédit",
+      "description": "",
+      "data": {
+        "items": [
+          {"src": "1.jpg", "title": "Square Kriegel Valrimont <a href=\"#\">Lien</a>"},
+          {"src": "2.jpg", "title": "Parc de Bagatelle", "credit": "Mairie de Paris / DICOM"},
+          {"src": "3.jpg", "title": "Mail de Bièvre"},
+          {"src": "4.jpg", "title": "Parc Kellermann"},
+          {"src": "5.jpg", "title": "Darses du bassin de la Villette"},
+          {"src": "6.jpg", "title": "Square Georges Caïn"},
+          {"src": "7.jpg", "title": "Photo cassée", "alt": "Superbe vu que tu ne vois pas"}
+        ]
+      }
+    }]
   }
 }

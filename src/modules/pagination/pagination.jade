@@ -13,7 +13,7 @@ mixin pagination(data)
           - var href = prev === 1 ? data.base_url : data.url.replace("${page}", prev);
           a(href=href aria-label=data.text.prev data-page="prev" title=link_title.replace("${page}", prev))
             span(aria-hidden="true") &lt;
-        - item = current - items_before()
+        - var item = current - items_before()
         while item < current
           - var href = item === 1 ? data.base_url : data.url.replace("${page}", item);
           li.hidden-on-small: a(href=href data-page=item title=link_title.replace("${page}", item))= item
@@ -22,7 +22,7 @@ mixin pagination(data)
         - var href = current === 1 ? data.base_url : data.url.replace("${page}", current);
         a(href=href data-page=current)= current
       if current !== total && total > 1
-        - item = current
+        - var item = current
         while item < total && item < current + items_after()
          - item++
          - var href = item === 1 ? data.base_url : data.url.replace("${page}", item);

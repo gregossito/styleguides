@@ -75,7 +75,12 @@ Create the release branch, `X.X.X` being your new version number
 
 Check that all changes from previous version are documented in `CHANGELOG.md`
 
-Bump the version number in `package.json`, `bower.json` and `src/javascript/main.js`
+Bump the version number in the following files:
+
+    bower.json
+    package.json
+    src/_data.json
+    src/javascript/main.js
 
 Update the `CHANGELOG.md` to add the new version number above the last changes
 
@@ -86,7 +91,7 @@ Build the styleguide:
 Then add everything and commit (`X.X.X` being your new version number):
 
     $ git add .
-    $ git commit -m "New build, bump version number to X.X.X"
+    $ git commit -m "New build X.X.X"
 
 Merge it to master and tag it
 

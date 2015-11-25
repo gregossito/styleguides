@@ -40,6 +40,10 @@ append content
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
+append content
+  if data.notices && data.notices.content
+    +notice(data.notices.content)
+
 //- Main content (always used)
 append content
   .layout-content.layout-adjacent-before(class=mainContentModifiers)

@@ -343,18 +343,14 @@
               {
                 "href": "#",
                 "image": {
-                  "src": "../../modules/get-involved/hands.png",
-                  "title": "Titre",
-                  "credit": "Mairie de Paris / DICOM"
+                  "src": "../../modules/get-involved/hands.png"
                 },
                 "text": "Votez pour le budget participatif"
               },
               {
                 "href": "#",
                 "image": {
-                  "src": "../../modules/get-involved/cards.png",
-                  "title": "Titre",
-                  "credit": "Mairie de Paris / DICOM"
+                  "src": "../../modules/get-involved/cards.png"
                 },
                 "text": "E-pétition, prenez la main"
               }

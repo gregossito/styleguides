@@ -1,59 +1,71 @@
 {
   "index": {
-    "defaults": {
-      "title": "Liens et téléchargements",
-      "items": [
-        {
-          "href": "#",
-          "text": "Lien vers un fichier PDF",
-          "filetype": "PDF",
-          "filesize": "2,4 Mo",
-          "modifiers": ["links-item-pdf"]
-        },
-        {
-          "href": "#",
-          "text": "Lien vers un fichier",
-          "filesize": "300 Ko",
-          "modifiers": ["links-item-file"]
-        },
-        {
-          "href": "#",
-          "text": "Lien externe"
-        },
-        {
-          "href": "http://www.paris.fr",
-          "text": "Lien externe",
-          "target": "_blank",
-          "target_text": "nouvelle fenêtre"
-        }
-      ]
+    "type": "links",
+    "description": "",
+    "bodyAttributes": {
+      "style": "background-color: #E6E6E6"
     },
-    "without_title": {
-      "items": [
-        {
-          "href": "#",
-          "text": "Lien vers un fichier PDF",
-          "filetype": "PDF",
-          "filesize": "2,4 Mo",
-          "modifiers": ["links-item-pdf"]
-        },
-        {
-          "href": "#",
-          "text": "Lien vers un fichier",
-          "filesize": "300 Ko",
-          "modifiers": ["links-item-file"]
-        },
-        {
-          "href": "#",
-          "text": "Lien externe"
-        },
-        {
-          "href": "http://www.paris.fr",
-          "text": "Lien externe",
-          "target": "_blank",
-          "target_text": "nouvelle fenêtre"
-        }
-      ]
-    }
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "title": "Liens et téléchargements",
+        "items": [
+          {
+            "href": "#",
+            "text": "Lien vers un fichier PDF",
+            "filetype": "PDF",
+            "filesize": "2,4 Mo",
+            "modifiers": ["links-item-pdf"]
+          },
+          {
+            "href": "#",
+            "text": "Lien vers un fichier",
+            "filesize": "300 Ko",
+            "modifiers": ["links-item-file"]
+          },
+          {
+            "href": "#",
+            "text": "Lien externe"
+          },
+          {
+            "href": "http://www.paris.fr",
+            "text": "Lien externe",
+            "target": "_blank",
+            "target_text": "nouvelle fenêtre"
+          }
+        ]
+      }
+    }, {
+      "title": "Sans titre",
+      "description": "",
+      "data": {
+        "items": [
+          {
+            "href": "#",
+            "text": "Lien vers un fichier PDF",
+            "filetype": "PDF",
+            "filesize": "2,4 Mo",
+            "modifiers": ["links-item-pdf"]
+          },
+          {
+            "href": "#",
+            "text": "Lien vers un fichier",
+            "filesize": "300 Ko",
+            "modifiers": ["links-item-file"]
+          },
+          {
+            "href": "#",
+            "text": "Lien externe"
+          },
+          {
+            "href": "http://www.paris.fr",
+            "text": "Lien externe",
+            "target": "_blank",
+            "target_text": "nouvelle fenêtre"
+          }
+        ]
+      }
+    }]
   }
 }

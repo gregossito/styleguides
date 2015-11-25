@@ -1,16 +1,23 @@
 {
   "index": {
-    "defaults": {
-      "logo": {
-        "href": "../home/",
-        "text": "Paris"
-      },
-      "background": "./animation.gif",
-      "title": "Erreur 404 : page non trouvée",
-      "button": {
-        "text": "Retour au site",
-        "href": "#"
+    "type": "error-heading",
+    "description": "",
+    "cssTheme": "minitel",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "logo": {
+          "href": "../home/",
+          "text": "Paris"
+        },
+        "background": "./animation.gif",
+        "title": "Erreur 404 : page non trouvée",
+        "button": {
+          "text": "Retour au site",
+          "href": "#"
+        }
       }
-    }
+    }]
   }
 }

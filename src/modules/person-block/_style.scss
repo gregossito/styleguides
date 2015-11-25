@@ -14,9 +14,10 @@
   padding-right: 35px;
   width: 120px;
 
-  > a {
+  > span {
     background-position: 50% 50%;
     background-size: cover;
+    cursor: pointer;
     display: block;
     height: 160px;
     width: 120px;
@@ -34,17 +35,19 @@
   text-align: left;
 }
 
-.person-block-title,
+.person-block-title a,
 .person-block-text {
   display: block;
 }
 
 .person-block-title {
-  color: $color-primary;
-  font-size: 18px;
-  font-weight: 700;
-  padding-bottom: 5px;
-  text-decoration: none;
+  margin: 0 0 5px;
+  a {
+    color: $color-primary;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+  }
 }
 
 .person-block-text {
@@ -80,7 +83,7 @@
   }
 
   .person-block-title {
-    padding-bottom: 20px;
-    font-size: 22px;
+    margin-bottom: 20px;
+    a {font-size: 22px;}
   }
 }

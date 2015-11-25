@@ -60,6 +60,7 @@ $sections-panel-subnav-offset: 200px;
     text-decoration: none;
 
     &:hover,
+    &:focus,
     &.current {
       color: $color-secondary;
     }
@@ -94,10 +95,6 @@ $sections-panel-subnav-offset: 200px;
   .block-aside:first-child {
     margin-top: 0;
   }
-}
-
-.sections-panel-back {
-  display: none;
 }
 
 .sections-panel-subnav-default {
@@ -147,6 +144,7 @@ $sections-panel-subnav-offset: 200px;
     text-decoration: none;
 
     &:hover,
+    &:focus,
     &.current {
       color: $color-secondary;
     }
@@ -190,7 +188,8 @@ $sections-panel-subnav-offset: 200px;
 }
 
 .sections-panel-content-wrapper {
-  > * + *,
+  .sections-panel-intro + .sections-panel-content-items,
+  .component,
   .component + .component {
     @extend %sections-panel-separator;
   }
@@ -260,6 +259,9 @@ $sections-panel-subnav-offset: 200px;
       @extend %icon-arrow-left;
     }
     &:hover {color: $black;}
+    .accessibility_label {
+      @include hidden-accessibly;
+    }
   }
 
   .sections-panel-subnav.has-current-item {
@@ -318,6 +320,18 @@ $sections-panel-subnav-offset: 200px;
 
   .sections-panel-intro {
     max-width: 550px;
+  }
+
+  .sections-panel-back {
+    color: $black;
+    left: -9999px;
+    position: relative;
+    text-decoration: none;
+    top: 10px;
+
+    &:focus {
+      left: 0;
+    }
   }
 
   .sections-panel-nav {

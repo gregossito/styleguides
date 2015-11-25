@@ -1,13 +1,22 @@
 {
   "index": {
-    "defaults": {
-      "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher ce module.",
-      "block": "Contenu <strong>HTML</strong>"
-    },
-    "without_cookie": {
-      "cookie": false,
-      "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher ce module.",
-      "block": "Contenu <strong>HTML</strong>"
-    }
+    "type": "html",
+    "description": "Ce composant accepte un bloc (ou un paramètre <code>block</code>) contenant un code HTML. Il adapte automatiquement la taille de ses enfants directs pour qu'ils ne dépassent pas la largeur de la colonne.",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher ce module.",
+        "block": "Contenu <strong>HTML</strong>"
+      }
+    },{
+      "title": "Sans prendre en compte le cookie",
+      "description": "",
+      "data": {
+        "cookie": false,
+        "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher ce module.",
+        "block": "Contenu <strong>HTML</strong>"
+      }
+    }]
   }
 }

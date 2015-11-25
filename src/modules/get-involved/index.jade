@@ -1,18 +1,3 @@
 include get-involved
-include ../../helpers/code
 
-h2 Standard
-.lsg-module
-  +get-involved(defaults)
-+code({language: "jade"}).
-  include get-involved
-
-  +get-involved(#{JSON.stringify(defaults, null, 2)})
-
-h2 Avec une image de fond sombre
-.lsg-module
-  +get-involved(with_dark_image)
-+code({language: "jade"}).
-  include get-involved
-
-  +get-involved(#{JSON.stringify(with_dark_image, null, 2)})
+include ../../helpers/preview

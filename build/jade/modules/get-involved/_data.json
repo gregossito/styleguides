@@ -1,63 +1,64 @@
 {
   "index": {
-    "defaults": {
-      "heading": {
-        "title": "Participez !",
-        "link": {
-          "href": "#",
-          "text": "Accéder à l’espace participatif"
-          }
-      },
-      "items": [
-        {
-          "href": "#",
-          "image": {
-            "src": "hands.png",
-            "title": "Titre",
-            "credit": "Mairie de Paris / DICOM"
-          },
-          "text": "Votez pour le budget participatif"
+    "type": "get-involved",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "heading": {
+          "title": "Participez !",
+          "link": {
+            "href": "#",
+            "text": "Accéder à l’espace participatif"
+            }
         },
-        {
-          "href": "#",
-          "image": {
-            "src": "cards.png",
-            "title": "Titre",
-            "credit": "Mairie de Paris / DICOM"
+        "items": [
+          {
+            "href": "#",
+            "image": {
+              "src": "hands.png"
+            },
+            "text": "Votez pour le budget participatif"
           },
-          "text": "E-pétition, prenez la main"
-        }
-      ]
-    },
-    "with_dark_image": {
-      "heading": {
-        "title": "Participez !",
-        "link": {
-          "href": "#",
-          "text": "Accéder à l’espace participatif"
+          {
+            "href": "#",
+            "image": {
+              "src": "cards.png"
+            },
+            "text": "E-pétition, prenez la main"
           }
-      },
-      "items": [
-        {
-          "modifiers": ["dark"],
-          "href": "#",
-          "image": {
-            "src": "hands-dark.png",
-            "title": "Titre",
-            "credit": "Mairie de Paris / DICOM"
-          },
-          "text": "Votez pour le budget participatif"
+        ]
+      }
+    }, {
+      "title": "Avec une image de fond sombre",
+      "description": "",
+      "data": {
+        "heading": {
+          "title": "Participez !",
+          "link": {
+            "href": "#",
+            "text": "Accéder à l’espace participatif"
+            }
         },
-        {
-          "href": "#",
-          "image": {
-            "src": "cards.png",
-            "title": "Titre",
-            "credit": "Mairie de Paris / DICOM"
+        "items": [
+          {
+            "modifiers": ["dark"],
+            "href": "#",
+            "image": {
+              "src": "hands-dark.png"
+            },
+            "text": "Votez pour le budget participatif"
           },
-          "text": "E-pétition, prenez la main"
-        }
-      ]
-    }
+          {
+            "href": "#",
+            "image": {
+              "src": "cards.png"
+            },
+            "text": "E-pétition, prenez la main"
+          }
+        ]
+      }
+    }]
   }
 }

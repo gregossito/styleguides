@@ -1,67 +1,67 @@
 include table
-include ../../helpers/code
 
-h2 Standard
-.lsg-component(style="width: 770px")
-  +table(defaults)
-    tbody
-      tr
-        th.emphasis Combien de personnes à loger ?
-        th Logement A
-        th Logement B
-        th Logement C
-        th Logement D
-      tr
-        td.emphasis 1 personne
-        td 12 662 €
-        td 12 662 €
-        td 12 662 €
-        td 12 662 €
-      tr
-        td.emphasis 2 personnes sans personne à charge / jeunes ménages exclus
-        td 12 662 €
-        td 12 662 €
-        td 12 662 €
-        td 12 662 €
-      tr
-        td.emphasis 3 personnes ou 1 personne seule avec 1 personne à charge ou jeune ménage*
-        td 12 662 €
-        td 12 662 €
-        td 12 662 €
-        td 12 662 €
-      tr
-        td.emphasis 4 personnes ou 1 personne seule avec 2 personnes à charge
-        td 12 662 €
-        td 12 662 €
-        td 12 662 €
-        td 12 662 €
-      tr
-        td.emphasis 5 personnes ou 1 personne seule avec 3 personnes à charge
-        td 12 662 €
-        td 12 662 €
-        td 12 662 €
-        td 12 662 €
-      tr
-        td.emphasis 6 personnes ou 1 personne seule avec 4 personnes à charge
-        td 12 662 €
-        td 12 662 €
-        td 12 662 €
-        td 12 662 €
-      tr.info
-        td.emphasis par personne supplémentaire
-        td 12 662 €
-        td 12 662 €
-        td 12 662 €
-        td 12 662 €
-    tfoot
-      tr
-        td(colspan=5) * jeune ménage = couple marié, concubins ou pacsés, sans personne à charge, dont la somme des âges des deux conjoints est inférieure ou égale à 55 ans.
-+code({language: "jade"}).
-  include table
+include ../../helpers/preview
 
-  +table(#{JSON.stringify(defaults, null, 2)})
-    // passer en block le contenu du tableau : tbody etc.
+append elements
+  h2.lsg-example-title= more.defaults.title
 
-h2 Nombreuses colonnes
-.lsg-component(style="width: 770px")
-  +table(lots_of_cols)
+  .lsg-elem
+    +table(more.defaults.data)
+      tbody
+        tr
+          th.emphasis Combien de personnes à loger ?
+          th Logement A
+          th Logement B
+          th Logement C
+          th Logement D
+        tr
+          td.emphasis 1 personne
+          td 12 662 €
+          td 12 662 €
+          td 12 662 €
+          td 12 662 €
+        tr
+          td.emphasis 2 personnes sans personne à charge / jeunes ménages exclus
+          td 12 662 €
+          td 12 662 €
+          td 12 662 €
+          td 12 662 €
+        tr
+          td.emphasis 3 personnes ou 1 personne seule avec 1 personne à charge ou jeune ménage*
+          td 12 662 €
+          td 12 662 €
+          td 12 662 €
+          td 12 662 €
+        tr
+          td.emphasis 4 personnes ou 1 personne seule avec 2 personnes à charge
+          td 12 662 €
+          td 12 662 €
+          td 12 662 €
+          td 12 662 €
+        tr
+          td.emphasis 5 personnes ou 1 personne seule avec 3 personnes à charge
+          td 12 662 €
+          td 12 662 €
+          td 12 662 €
+          td 12 662 €
+        tr
+          td.emphasis 6 personnes ou 1 personne seule avec 4 personnes à charge
+          td 12 662 €
+          td 12 662 €
+          td 12 662 €
+          td 12 662 €
+        tr.info
+          td.emphasis par personne supplémentaire
+          td 12 662 €
+          td 12 662 €
+          td 12 662 €
+          td 12 662 €
+      tfoot
+        tr
+          td(colspan=5) * jeune ménage = couple marié, concubins ou pacsés, sans personne à charge, dont la somme des âges des deux conjoints est inférieure ou égale à 55 ans.
+
+  +code("jade").
+    include table
+
+    +table(#{JSON.stringify(more.defaults.data, null, 2)})
+      // passer en block le contenu du tableau : tbody etc.

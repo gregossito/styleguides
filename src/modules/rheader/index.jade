@@ -1,10 +1,5 @@
 include rheader
-include ../../helpers/code
 
 .spacer(style="height: 80px")
-.lsg-module
-  +rheader(defaults)
-+code({language: "jade"}).
-  include rheader
 
-  +rheader(#{JSON.stringify(defaults, null, 2)})
+include ../../helpers/preview

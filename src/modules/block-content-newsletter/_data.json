@@ -1,39 +1,48 @@
 {
   "index": {
-    "defaults": {
-      "title": "L’essentiel de Paris",
-      "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
-      "button": {
-        "href": "#",
-        "text": "Je m'abonne",
-        "target": "_blank"
-      },
-      "link": {
-        "href": "#",
-        "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
+    "type": "block-content-newsletter",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "title": "L’essentiel de Paris",
+        "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+        "button": {
+          "href": "#",
+          "text": "Je m'abonne",
+          "target": "_blank"
+        },
+        "link": {
+          "href": "#",
+          "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
+        }
       }
-    },
-    "with_form": {
-      "title": "L’essentiel de Paris",
-      "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
-      "form": {
-        "action": "#",
-        "method": "POST"
-      },
-      "input": {
-        "placeholder": "Entrez votre courriel",
-        "id": "connected-newsletter-input",
-        "name": "email"
-      },
-      "submit": {
-        "text": "Valider",
-        "title": "Valider votre inscription à la newsletter"
-      },
-      "link": {
-        "href": "#",
-        "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
-      },
-      "thanks": "Merci, vous allez recevoir un courriel de confirmation."
-    }
+    }, {
+      "title": "Avec un formulaire",
+      "description": "",
+      "data": {
+        "title": "L’essentiel de Paris",
+        "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+        "form": {
+          "action": "#",
+          "method": "POST"
+        },
+        "input": {
+          "placeholder": "Entrez votre courriel",
+          "id": "connected-newsletter-input",
+          "name": "email"
+        },
+        "submit": {
+          "text": "Valider",
+          "title": "Valider votre inscription à la newsletter"
+        },
+        "link": {
+          "href": "#",
+          "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
+        },
+        "thanks": "Merci, vous allez recevoir un courriel de confirmation."
+      }
+    }]
   }
 }

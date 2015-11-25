@@ -1,9 +1,9 @@
 include ../block-aside/block-aside
 
 mixin block-aside-checkboxes(data)
-  - modifiers = data.modifiers || []
+  - var modifiers = data.modifiers || []
   - modifiers.push("block-aside-checkboxes")
-  +block-aside({"title": data.title, "modifiers": modifiers})
+  +block-aside({"title": data.title, "title_id": "filter-#{data.name}", "modifiers": modifiers})
     ul.block-aside-items
       each item in data.items
         li.block-aside-item(class=item.modifiers)

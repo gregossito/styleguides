@@ -1,8 +1,14 @@
 {
   "index": {
-    "defaults": {
-      "image": "./hub-heading.png",
-      "text": "Services <br>et infos pratiques"
-    }
+    "type": "hub-heading",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "image": "./hub-heading.png",
+        "text": "Services <br>et infos pratiques"
+      }
+    }]
   }
 }

@@ -1,18 +1,3 @@
 include block-content-jecoute
-include ../../helpers/code
 
-h2 Standard
-.lsg-module
-  +block-content-jecoute(defaults)
-+code({language: "jade"}).
-  include block-content-jecoute
-
-  +block-content-jecoute(#{JSON.stringify(defaults, null, 2)})
-
-h2 Texte simple
-.lsg-module
-  +block-content-jecoute(simple)
-+code({language: "jade"}).
-  include block-content-jecoute
-
-  +block-content-jecoute(#{JSON.stringify(simple, null, 2)})
+include ../../helpers/preview

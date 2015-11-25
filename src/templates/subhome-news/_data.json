@@ -396,10 +396,11 @@
         }
       },
       "search_push": {
-        "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
+        "title": "Vous n’avez pas trouvé ce que vous cherchez ?",
         "button": {
           "href": "../search",
-          "text": "Rechercher"
+          "text": "Rechercher",
+          "title": "Rechercher sur le site"
         }
       },
       "get_involved": {
@@ -962,10 +963,11 @@
         }
       },
       "search_push": {
-        "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
+        "title": "Vous n’avez pas trouvé ce que vous cherchez ?",
         "button": {
           "href": "../search",
-          "text": "Rechercher"
+          "text": "Rechercher",
+          "title": "Rechercher sur le site"
         }
       },
       "get_involved": {
@@ -1331,75 +1333,16 @@
           }
         ]
       },
-      "latest": {
-        "heading": {
-          "title": "9 janvier 2015"
-        },
-        "news": {
-          "modifiers": ["news-cards", "large-first-child"],
-          "items": [
-            {
-              "href": "../single-news",
-              "image": "large-news-1.jpg",
-              "category": "Mobilité",
-              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
-              "counters": {
-                "facebook": [5, "j'aime"],
-                "twitter": [12, "retweets"]
-              }
-            },
-            {
-              "href": "../single-news",
-              "image": "../../modules/news-card/image.jpg",
-              "category": "Mobilité",
-              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
-              "counters": {
-                "facebook": [5, "j'aime"],
-                "twitter": [12, "retweets"]
-              }
-            },
-            {
-              "href": "../single-news",
-              "image": "../../modules/news-card/image.jpg",
-              "category": "Environnement",
-              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
-              "counters": {
-                "facebook": [5, "j'aime"],
-                "twitter": [12, "retweets"]
-              }
-            },
-            {
-              "href": "../single-news",
-              "image": "../../modules/news-card/image.jpg",
-              "category": "Culture et patrimoine",
-              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
-              "counters": {
-                "facebook": [5, "j'aime"],
-                "twitter": [12, "retweets"]
-              }
-            },
-            {
-              "href": "../single-news",
-              "image": "../../modules/news-card/image.jpg",
-              "category": "Environnement",
-              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
-              "counters": {
-                "facebook": [5, "j'aime"],
-                "twitter": [12, "retweets"]
-              }
-            }
-          ]
-        }
-      },
       "archive": {
         "heading": {
-          "title": "Les autres actus"
+          "title": "Toutes les actus de cette thématique"
         },
         "news": {
+          "modifiers": ["news-cards"],
           "items": [
             {
               "href": "../single-news",
-              "date": "10 janvier 2015",
+              "image": "../../modules/news-card/image.jpg",
               "category": "Logement",
               "title": "Expulsions : début de la trêve hivernale",
               "counters": {
@@ -1409,7 +1352,7 @@
             },
             {
               "href": "../single-news",
-              "date": "10 janvier 2015",
+              "image": "../../modules/news-card/image.jpg",
               "category": "Logement",
               "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue",
               "counters": {
@@ -1419,7 +1362,7 @@
             },
             {
               "href": "../single-news",
-              "date": "10 janvier 2015",
+              "image": "../../modules/news-card/image.jpg",
               "category": "Logement",
               "title": "Le point sur les nouveaux logements à Paris",
               "counters": {
@@ -1429,7 +1372,7 @@
             },
             {
               "href": "../single-news",
-              "date": "10 janvier 2015",
+              "image": "../../modules/news-card/image.jpg",
               "category": "Culture et patrimoine",
               "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
               "counters": {
@@ -1439,7 +1382,7 @@
             },
             {
               "href": "../single-news",
-              "date": "10 janvier 2015",
+              "image": "../../modules/news-card/image.jpg",
               "category": "Environnement",
               "title": "Donec sed odio dui",
               "counters": {
@@ -1449,7 +1392,7 @@
             },
             {
               "href": "../single-news",
-              "date": "10 janvier 2015",
+              "image": "../../modules/news-card/image.jpg",
               "category": "Culture et patrimoine",
               "title": "Maecenas sed diam eget risus varius blandit sit amet non magna",
               "counters": {
@@ -1459,7 +1402,7 @@
             },
             {
               "href": "../single-news",
-              "date": "10 janvier 2015",
+              "image": "../../modules/news-card/image.jpg",
               "category": "Mobilité",
               "title": "Sed posuere consectetur est at lobortis",
               "counters": {
@@ -1469,7 +1412,7 @@
             },
             {
               "href": "../single-news",
-              "date": "10 janvier 2015",
+              "image": "../../modules/news-card/image.jpg",
               "category": "International",
               "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam",
               "counters": {
@@ -1479,7 +1422,7 @@
             },
             {
               "href": "../single-news",
-              "date": "10 janvier 2015",
+              "image": "../../modules/news-card/image.jpg",
               "category": "Culture et patrimoine",
               "title": "Aenean lacinia bibendum nulla sed consectetur",
               "counters": {
@@ -1489,7 +1432,7 @@
             },
             {
               "href": "../single-news",
-              "date": "10 janvier 2015",
+              "image": "../../modules/news-card/image.jpg",
               "category": "Environnement",
               "title": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor",
               "counters": {
@@ -1530,10 +1473,11 @@
         }
       },
       "search_push": {
-        "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
+        "title": "Vous n’avez pas trouvé ce que vous cherchez ?",
         "button": {
           "href": "../search",
-          "text": "Rechercher"
+          "text": "Rechercher",
+          "title": "Rechercher sur le site"
         }
       },
       "get_involved": {

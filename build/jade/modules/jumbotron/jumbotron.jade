@@ -1,6 +1,9 @@
 mixin jumbotron(data)
-  a.jumbotron(href=data.href style="background-image: url(#{data.image});")
-    .jumbotron-wrapper
+  a.jumbotron(href=data.href style="background-image: url(#{data.image});" id=data.id)
+    .jumbotron-wrapper(class=data.modifiers)
       .layout-wrapper.jumbotron-content.layout-outside
-          h2.jumbotron-title= data.title
-          .jumbotron-text= data.text
+        h2.jumbotron-title= data.title
+        .jumbotron-text= data.text
+        if block
+          .jumbotron-block
+            block

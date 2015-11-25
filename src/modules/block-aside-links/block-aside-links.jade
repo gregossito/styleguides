@@ -1,7 +1,7 @@
 include ../block-aside/block-aside
 
 mixin block-aside-links(data)
-  - modifiers = data.modifiers || []
+  - var modifiers = data.modifiers || []
   - modifiers.push("block-aside-links")
   +block-aside({"title": data.title, "modifiers": modifiers})
     ul.block-aside-items

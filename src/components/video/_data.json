@@ -1,13 +1,24 @@
 {
   "index": {
-    "defaults": {
-      "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher cette vidéo.",
-      "block": "<iframe frameborder=\"0\" width=\"560\" height=\"315\" src=\"//www.dailymotion.com/embed/video/x2h4ajc\" allowfullscreen></iframe><br /><a href=\"http://www.dailymotion.com/video/x2h4ajc_tintin-pose-sa-valise-au-musee-en-herbe_creation\" target=\"_blank\">Tintin pose sa valise au Mus&eacute;e en Herbe</a> <i>par <a href=\"http://www.dailymotion.com/mairiedeparis\" target=\"_blank\">mairiedeparis</a></i>"
-    },
-    "without_cookie": {
-      "cookie": false,
-      "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher cette vidéo.",
-      "block": "<iframe frameborder=\"0\" width=\"560\" height=\"315\" src=\"//www.dailymotion.com/embed/video/x2h4ajc\" allowfullscreen></iframe><br /><a href=\"http://www.dailymotion.com/video/x2h4ajc_tintin-pose-sa-valise-au-musee-en-herbe_creation\" target=\"_blank\">Tintin pose sa valise au Mus&eacute;e en Herbe</a> <i>par <a href=\"http://www.dailymotion.com/mairiedeparis\" target=\"_blank\">mairiedeparis</a></i>"
-    }
+    "type": "video",
+    "description": "Ce composant accepte un bloc (ou un paramètre <code>block</code>) contenant un code HTML d'embed de vidéo. Il adapte automatiquement la taille de l'<code>iframe</code> en conservant un ratio 16/9.",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "title": "Tintin pose sa valise au Musée en Herbe",
+        "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher cette vidéo.",
+        "block": "<iframe frameborder=\"0\" width=\"560\" height=\"315\" src=\"//www.dailymotion.com/embed/video/x2h4ajc\" allowfullscreen></iframe><br /><a href=\"http://www.dailymotion.com/video/x2h4ajc_tintin-pose-sa-valise-au-musee-en-herbe_creation\" target=\"_blank\">Tintin pose sa valise au Mus&eacute;e en Herbe</a> <i>par <a href=\"http://www.dailymotion.com/mairiedeparis\" target=\"_blank\">mairiedeparis</a></i>"
+      }
+    }, {
+      "title": "Sans prendre en compte le cookie",
+      "description": "",
+      "data": {
+        "cookie": false,
+        "title": "Tintin pose sa valise au Musée en Herbe",
+        "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher cette vidéo.",
+        "block": "<iframe frameborder=\"0\" width=\"560\" height=\"315\" src=\"//www.dailymotion.com/embed/video/x2h4ajc\" allowfullscreen></iframe><br /><a href=\"http://www.dailymotion.com/video/x2h4ajc_tintin-pose-sa-valise-au-musee-en-herbe_creation\" target=\"_blank\">Tintin pose sa valise au Mus&eacute;e en Herbe</a> <i>par <a href=\"http://www.dailymotion.com/mairiedeparis\" target=\"_blank\">mairiedeparis</a></i>"
+      }
+    }]
   }
 }

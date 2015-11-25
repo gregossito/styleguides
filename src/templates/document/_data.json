@@ -511,7 +511,10 @@
         "email": {
           "placeholder": "Votre adresse e-mail"
         },
-        "button": "Valider",
+        "button": {
+          "text": "Valider",
+          "title": "Valider votre question à Paris j'écoute"
+        },
         "thanks": "Merci, votre question a bien été transmise."
       },
       "cross_content": {
@@ -537,6 +540,7 @@
         ]
       },
       "poll": {
+        "id": "poll-1",
         "heading": "À vous la parole",
         "title": "Pollution à Paris : que seriez-vous prêt(e) à sacrifier pour améliorer la qualité de l’air dans notre ville ?",
         "form": {
@@ -545,7 +549,8 @@
             "id": "poll-input"
           },
           "submit": {
-            "text": "Envoyer"
+            "text": "Envoyer",
+            "title": "Valider votre réponse à la question"
           }
         },
         "thanks": "Merci de votre participation",
@@ -1138,7 +1143,10 @@
         "email": {
           "placeholder": "Votre adresse e-mail"
         },
-        "button": "Valider",
+        "button": {
+          "text": "Valider",
+          "title": "Valider votre question à Paris j'écoute"
+        },
         "thanks": "Merci, votre question a bien été transmise."
       },
       "cross_content": {
@@ -1172,7 +1180,8 @@
             "id": "poll-input"
           },
           "submit": {
-            "text": "Envoyer"
+            "text": "Envoyer",
+            "title": "Valider votre réponse à la question"
           }
         },
         "thanks": "Merci de votre participation",

@@ -1,9 +1,3 @@
 include sections-list
-include ../../helpers/code
 
-.lsg-module
-  +sections-list(defaults)
-+code({language: "jade"}).
-  include sections-list
-
-  +sections-list(#{JSON.stringify(defaults, null, 2)})
+include ../../helpers/preview

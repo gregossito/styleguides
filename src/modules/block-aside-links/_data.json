@@ -1,82 +1,91 @@
 {
   "index": {
-    "defaults": {
-      "title": "Profil",
-      "items": [
-        {
-          "href": "#",
-          "text": "S’installer à Paris"
-        },
-        {
-          "href": "#",
-          "text": "Seniors"
-        },
-        {
-          "href": "#",
-          "text": "Handicap"
-        },
-        {
-          "href": "#",
-          "text": "Que faire avec ses enfants à Paris ?"
-        },
-        {
-          "href": "#",
-          "text": "Demandeurs d’emploi"
-        }
-      ]
-    },
-    "with_current": {
-      "title": "Profil",
-      "items": [
-        {
-          "href": "#",
-          "text": "S’installer à Paris",
-          "modifiers": ["current"]
-        },
-        {
-          "href": "#",
-          "text": "Seniors"
-        },
-        {
-          "href": "#",
-          "text": "Handicap"
-        },
-        {
-          "href": "#",
-          "text": "Que faire avec ses enfants à Paris ?"
-        },
-        {
-          "href": "#",
-          "text": "Demandeurs d’emploi"
-        }
-      ]
-    },
-    "with_emphasis_links": {
-      "title": "Suggestions",
-      "modifiers": ["emphasis-links"],
-      "items": [
-        {
-          "href": "#",
-          "text": "S’installer à Paris",
-          "modifiers": ["current"]
-        },
-        {
-          "href": "#",
-          "text": "Seniors"
-        },
-        {
-          "href": "#",
-          "text": "Handicap"
-        },
-        {
-          "href": "#",
-          "text": "Que faire avec ses enfants à Paris ?"
-        },
-        {
-          "href": "#",
-          "text": "Demandeurs d’emploi"
-        }
-      ]
-    }
+    "type": "block-aside-links",
+    "description": "Ce module sera généralement utilisé dans la colonne de gauche/droite d'une page.<br>Il permet de faire une liste de liens.",
+    "examples": [{
+      "title": "Standard",
+      "data": {
+        "title": "Profil",
+        "items": [
+          {
+            "href": "#",
+            "text": "S’installer à Paris"
+          },
+          {
+            "href": "#",
+            "text": "Seniors"
+          },
+          {
+            "href": "#",
+            "text": "Handicap"
+          },
+          {
+            "href": "#",
+            "text": "Que faire avec ses enfants à Paris ?"
+          },
+          {
+            "href": "#",
+            "text": "Demandeurs d’emploi"
+          }
+        ]
+      }
+    }, {
+      "title": "Avec un entrée sélectionnée",
+      "data": {
+        "title": "Profil",
+        "items": [
+          {
+            "href": "#",
+            "text": "S’installer à Paris",
+            "modifiers": ["current"]
+          },
+          {
+            "href": "#",
+            "text": "Seniors"
+          },
+          {
+            "href": "#",
+            "text": "Handicap"
+          },
+          {
+            "href": "#",
+            "text": "Que faire avec ses enfants à Paris ?"
+          },
+          {
+            "href": "#",
+            "text": "Demandeurs d’emploi"
+          }
+        ]
+      }
+    }, {
+      "title": "Avec les liens mis en avant",
+      "data": {
+        "title": "Suggestions",
+        "modifiers": ["emphasis-links"],
+        "items": [
+          {
+            "href": "#",
+            "text": "S’installer à Paris",
+            "modifiers": ["current"]
+          },
+          {
+            "href": "#",
+            "text": "Seniors"
+          },
+          {
+            "href": "#",
+            "text": "Handicap"
+          },
+          {
+            "href": "#",
+            "text": "Que faire avec ses enfants à Paris ?"
+          },
+          {
+            "href": "#",
+            "text": "Demandeurs d’emploi"
+          }
+        ]
+      }
+    }]
   }
 }

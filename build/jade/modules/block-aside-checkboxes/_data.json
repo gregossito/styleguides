@@ -1,81 +1,66 @@
 {
   "index": {
-    "defaults": {
-      "title": "Rubriques",
-      "name": "rubriques",
-      "items": [
-        {
-          "value": 0,
-          "text": "Services et infos pratiques",
-          "number": 95
-        },
-        {
-          "value": 1,
-          "text": "Actualités",
-          "number": 15,
-          "checked": true
-        },
-        {
-          "value": 2,
-          "text": "Municipalité",
-          "number": 3
-        },
-        {
-          "value": 3,
-          "text": "Participez",
-          "number": 4
-        }
-      ]
-    },
-    "long_texts": {
-      "title": "Groupe politique",
-      "name": "groupe_polique",
-      "items": [
-        {
-          "value": 0,
-          "text": "Groupe socialistes et apparentés"
-        },
-        {
-          "value": 1,
-          "text": "Groupe communistes et front de gauche"
-        },
-        {
-          "value": 2,
-          "text": "Groupe écologiste de Paris (G.E.P)",
-          "checked": true
-        },
-        {
-          "value": 3,
-          "text": "Groupe radical de gauche, centre et indépendants"
-        }
-      ]
-    },
-    "two_cols": {
-      "title": "Arrondissement",
-      "name": "arrondissement",
-      "modifiers": ["two-cols"],
-      "items": [
-        {"value": 1, "text": "1e"},
-        {"value": 2, "text": "2e"},
-        {"value": 3, "text": "3e"},
-        {"value": 4, "text": "4e"},
-        {"value": 5, "text": "5e"},
-        {"value": 6, "text": "6e"},
-        {"value": 7, "text": "7e"},
-        {"value": 8, "text": "8e"},
-        {"value": 9, "text": "9e"},
-        {"value": 10, "text": "10e", "checked": true},
-        {"value": 11, "text": "11e", "checked": true},
-        {"value": 12, "text": "12e"},
-        {"value": 13, "text": "13e"},
-        {"value": 14, "text": "14e"},
-        {"value": 15, "text": "15e"},
-        {"value": 16, "text": "16e"},
-        {"value": 17, "text": "17e"},
-        {"value": 18, "text": "18e"},
-        {"value": 19, "text": "19e", "checked": true},
-        {"value": 20, "text": "20e", "checked": true}
-      ]
-    }
+    "type": "block-aside-checkboxes",
+    "description": "Ce module sera généralement utilisé dans la colonne de gauche/droite d'une page.<br>Il permet de filtrer le contenu de la page.",
+    "examples": [{
+      "title": "Standard",
+      "data": {
+        "title": "Rubriques",
+        "name": "rubriques",
+        "items": [
+          {
+            "value": 0,
+            "text": "Services et infos pratiques",
+            "number": 95
+          },
+          {
+            "value": 1,
+            "text": "Actualités",
+            "number": 15,
+            "checked": true
+          },
+          {
+            "value": 2,
+            "text": "Municipalité",
+            "number": 3
+          },
+          {
+            "value": 3,
+            "text": "Participez",
+            "number": 4
+          }
+        ]
+      }
+    }, {
+      "title": "Présentation en deux colonnes",
+      "description": "Définir la largeur du module afin de rapprocher les deux colonnes.",
+      "data": {
+        "title": "Arrondissement",
+        "name": "arrondissement",
+        "modifiers": ["two-cols"],
+        "items": [
+          {"value": 1, "text": "1e"},
+          {"value": 2, "text": "2e"},
+          {"value": 3, "text": "3e"},
+          {"value": 4, "text": "4e"},
+          {"value": 5, "text": "5e"},
+          {"value": 6, "text": "6e"},
+          {"value": 7, "text": "7e"},
+          {"value": 8, "text": "8e"},
+          {"value": 9, "text": "9e"},
+          {"value": 10, "text": "10e", "checked": true},
+          {"value": 11, "text": "11e", "checked": true},
+          {"value": 12, "text": "12e"},
+          {"value": 13, "text": "13e"},
+          {"value": 14, "text": "14e"},
+          {"value": 15, "text": "15e"},
+          {"value": 16, "text": "16e"},
+          {"value": 17, "text": "17e"},
+          {"value": 18, "text": "18e"},
+          {"value": 19, "text": "19e", "checked": true},
+          {"value": 20, "text": "20e", "checked": true}
+        ]
+      }
+    }]
   }
 }

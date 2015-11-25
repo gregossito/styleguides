@@ -1,6 +1,13 @@
 {
   "index": {
-    "defaults": {
-    }
+    "type": "intro-text",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "text": "Voici un texte d'introduction avec un police plus grasse et une taille plus grande."
+      }
+    }]
   }
 }

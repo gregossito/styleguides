@@ -1,48 +1,57 @@
 {
   "index": {
-    "defaults": {
-      "items": [
-        {
-          "title": "Texte simple",
-          "content": "Ceci est un texte simple."
-        },
-        {
-          "title": "Texte mis en forme",
-          "content": "Ceci est un texte en <strong>gras</strong> et en <em>italique</em>, avec un <a href=\"#\">lien</a>."
-        },
-        {
-          "title": "Listes",
-          "content": "<ul><li>Élément de liste</li><li>Élément de liste</li><li>Élément de liste long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;<a href=\"#\">lien d'exemple</a> dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</li></ul><ol><li>Élément de liste numérotée</li><li>Élément de liste numérotée</li><li>Élément de liste numérotée long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;<a href=\"#\">lien d'exemple</a> dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</li></ol>"
-        },
-        {
-          "title": "Texte long (plusieurs paragraphes) accompagné d'un titre plutôt long lui aussi",
-          "content": "<p>Incenderat autem audaces usque ad insaniam homines ad haec, quae nefariis egere conatibus, Luscus quidam curator urbis subito visus: eosque ut heiulans baiolorum praecentor ad expediendum quod orsi sunt incitans vocibus crebris. qui haut longe postea ideo vivus exustus est.</p><p>Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum.</p>"
-        }
-      ]
-    },
-    "with_slugs": {
-      "items": [
-        {
-          "title": "Titre 1",
-          "slug": "titre1",
-          "content": "Contenu 1"
-        },
-        {
-          "title": "Titre 2",
-          "slug": "titre2",
-          "content": "Contenu 2"
-        },
-        {
-          "title": "Titre 3",
-          "slug": "titre3",
-          "content": "Contenu 3"
-        },
-        {
-          "title": "Titre 4",
-          "slug": "titre4",
-          "content": "Contenu 4"
-        }
-      ]
-    }
+    "type": "accordion",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "items": [
+          {
+            "title": "Texte simple",
+            "content": "Ceci est un texte simple."
+          },
+          {
+            "title": "Texte mis en forme",
+            "content": "Ceci est un texte en <strong>gras</strong> et en <em>italique</em>, avec un <a href=\"#\">lien</a>."
+          },
+          {
+            "title": "Listes",
+            "content": "<ul><li>Élément de liste</li><li>Élément de liste</li><li>Élément de liste long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;<a href=\"#\">lien d'exemple</a> dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</li></ul><ol><li>Élément de liste numérotée</li><li>Élément de liste numérotée</li><li>Élément de liste numérotée long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;<a href=\"#\">lien d'exemple</a> dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</li></ol>"
+          },
+          {
+            "title": "Texte long (plusieurs paragraphes) accompagné d'un titre plutôt long lui aussi",
+            "content": "<p>Incenderat autem audaces usque ad insaniam homines ad haec, quae nefariis egere conatibus, Luscus quidam curator urbis subito visus: eosque ut heiulans baiolorum praecentor ad expediendum quod orsi sunt incitans vocibus crebris. qui haut longe postea ideo vivus exustus est.</p><p>Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum.</p>"
+          }
+        ]
+      }
+    }, {
+      "title": "Définir les slugs manuellement",
+      "description": "Par défaut, le composant génère des slugs uniques pour chaque item de chaque instance. Il est en revanche possible de définir manuellement ces slugs si besoin.",
+      "data": {
+        "items": [
+          {
+            "title": "Titre 1",
+            "slug": "titre1",
+            "content": "Contenu 1"
+          },
+          {
+            "title": "Titre 2",
+            "slug": "titre2",
+            "content": "Contenu 2"
+          },
+          {
+            "title": "Titre 3",
+            "slug": "titre3",
+            "content": "Contenu 3"
+          },
+          {
+            "title": "Titre 4",
+            "slug": "titre4",
+            "content": "Contenu 4"
+          }
+        ]
+      }
+    }]
   }
 }

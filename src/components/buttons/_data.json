@@ -1,43 +1,52 @@
 {
   "index": {
-    "defaults": {
-      "title": "Les démarches",
-      "items": [
-        {
-          "href": "#",
-          "text": "Texte",
-          "title": "Titre"
-        },
-        {
-          "href": "#",
-          "text": "Texte",
-          "title": "Titre"
-        },
-        {
-          "href": "#",
-          "text": "Texte",
-          "title": "Titre"
-        },
-        {
-          "href": "#",
-          "text": "Texte",
-          "title": "Titre"
-        },
-        {
-          "href": "#",
-          "text": "Texte",
-          "title": "Titre"
-        }
-      ]
-    },
-    "single_button": {
-      "items": [
-        {
-          "href": "#",
-          "text": "Texte",
-          "title": "Titre"
-        }
-      ]
-    }
+    "type": "buttons",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "title": "Les démarches",
+        "items": [
+          {
+            "href": "#",
+            "text": "Texte",
+            "title": "Titre"
+          },
+          {
+            "href": "#",
+            "text": "Texte",
+            "title": "Titre"
+          },
+          {
+            "href": "#",
+            "text": "Texte",
+            "title": "Titre"
+          },
+          {
+            "href": "#",
+            "text": "Texte",
+            "title": "Titre"
+          },
+          {
+            "href": "#",
+            "text": "Texte",
+            "title": "Titre"
+          }
+        ]
+      }
+    }, {
+      "title": "Bouton seul",
+      "description": "Pour obtenir un bouton seul, il suffit de ne pas indiquer de titre, et de ne passer qu'un seul élément dans le tableau <code>items</code>.",
+      "data": {
+        "items": [
+          {
+            "href": "#",
+            "text": "Texte",
+            "title": "Titre"
+          }
+        ]
+      }
+    }]
   }
 }

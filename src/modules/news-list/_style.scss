@@ -123,32 +123,22 @@
   .news-list {
     @include container;
 
-    .news-list-card-item {
-      @include span(4 of 12);
-    }
-
-    .news-list-item {
-      @include span(8);
-    }
-
     // mode gallery
     &.gallery {
       .news-list-card-item {
-        &:nth-child(3n) {
-          @include last;
-        }
+        @include gallery(4 of 12);
       }
 
       .news-list-item {
-        &:nth-child(2n) {
-          @include last;
-        }
+        @include gallery(8 of 16);
       }
     }
 
     // mode large-first-child
     &.large-first-child {
       .news-list-card-item {
+        @include span(4 of 12);
+
         &:nth-child(3),
         &:nth-child(5) {
           @include last;

@@ -3,7 +3,8 @@ include ../../modules/button/button
 mixin buttons(data)
   .component.component-buttons
     if data.title
-      h2.buttons-title= data.title
+      - var title_tag = data.title_tag || 'h2'
+      #{title_tag}.buttons-title= data.title
     ul.buttons-items
       each item in data.items
         li

@@ -1,34 +1,3 @@
 include place
-include ../../helpers/code
 
-h2 Standard
-.lsg-component
-  +place(defaults)
-+code({language: "jade"}).
-  include place
-
-  +place(#{JSON.stringify(defaults, null, 2)})
-
-h2 Avec plusieurs items
-.lsg-component
-  +place(multiple_items)
-+code({language: "jade"}).
-  include place
-
-  +place(#{JSON.stringify(multiple_items, null, 2)})
-
-h2 Sans bouton
-.lsg-component
-  +place(without_button)
-+code({language: "jade"}).
-  include place
-
-  +place(#{JSON.stringify(without_button, null, 2)})
-
-h2 Adresse sur plusieurs lignes
-.lsg-component
-  +place(long_address)
-+code({language: "jade"}).
-  include place
-
-  +place(#{JSON.stringify(long_address, null, 2)})
+include ../../helpers/preview

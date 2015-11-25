@@ -1,26 +1,3 @@
 include video-cover
-include ../../helpers/code
 
-h2 Standard
-.lsg-module
-  +video-cover(defaults)
-+code({language: "jade"}).
-  include video-cover
-
-  +video-cover(#{JSON.stringify(defaults, null, 2)})
-
-h2 Avec un contenu HTML
-.lsg-module(style="width: 600px;")
-  +video-cover(with_block)
-+code({language: "jade"}).
-  include video-cover
-
-  +video-cover(#{JSON.stringify(with_block, null, 2)})
-
-h2 Sans prendre en compte le cookie
-.lsg-module(style="width: 600px;")
-  +video-cover(without_cookie)
-+code({language: "jade"}).
-  include video-cover
-
-  +video-cover(#{JSON.stringify(without_cookie, null, 2)})
+include ../../helpers/preview

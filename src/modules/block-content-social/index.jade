@@ -1,9 +1,3 @@
 include block-content-social
-include ../../helpers/code
 
-.lsg-module
-  +block-content-social(defaults)
-+code({language: "jade"}).
-  include block-content-social
-
-  +block-content-social(#{JSON.stringify(defaults, null, 2)})
+include ../../helpers/preview

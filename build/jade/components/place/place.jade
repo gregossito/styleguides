@@ -14,6 +14,6 @@ mixin place(data)
               i.icon(class="icon-#{item.icon}" aria-hidden="true")
               = item.text
     if data.button
-      - button = JSON.parse(JSON.stringify(data.button)) // clone the data object
+      - var button = JSON.parse(JSON.stringify(data.button)) // clone the data object
       - button.modifiers = ["marker"] // overwrite the modifiers
       +button(button)

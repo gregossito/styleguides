@@ -120,6 +120,7 @@
           "title": "Donnez votre avis"
         },
         "nav": {
+          "title": "Sites participatifs",
           "items": [
             {
               "title": "Madame la Maire,<br />j’ai une idée",
@@ -144,6 +145,7 @@
             }
           ]
         },
+        "items_title": "Projets participatifs",
         "items": [
           {
             "category": "Madame la Maire, j’ai une idée",

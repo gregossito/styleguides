@@ -1,90 +1,97 @@
 {
   "index": {
-    "defaults": {
-      "nav": [
-        {
-          "href": "#",
-          "text": "Services et infos pratiques"
-        },
-        {
-          "href": "#",
-          "text": "Actualités"
-        },
-        {
-          "href": "#",
-          "text": "Entreprises"
-        },
-        {
-          "href": "#",
-          "text": "Municipalité"
-        },
-        {
-          "href": "#",
-          "text": "Participez"
-        }
-      ],
-      "sections": {
-        "list": {
-          "items": [
-            {
-              "href": "../hub/subnav-open.html",
-              "text": "Aides & démarches"
-            },
-            {
-              "href": "../hub/subnav-open.html",
-              "text": "Culture & patrimoine"
-            },
-            {
-              "href": "../hub/subnav-open.html",
-              "text": "Déplacements & stationnement"
-            },
-            {
-              "href": "../hub/subnav-open.html",
-              "text": "Emploi & formations"
-            },
-            {
-              "href": "../hub/subnav-open.html",
-              "text": "Environnement & espaces verts"
-            },
-            {
-              "href": "../hub/subnav-open.html",
-              "text": "Famille & éducation"
-            },
-            {
-              "href": "../hub/subnav-open.html",
-              "text": "Innovation"
-            },
-            {
-              "href": "../hub/subnav-open.html",
-              "text": "Logement"
-            },
-            {
-              "href": "../hub/subnav-open.html",
-              "text": "Santé"
-            },
-            {
-              "href": "../hub/subnav-open.html",
-              "text": "Social & solidarités"
-            },
-            {
-              "href": "../hub/subnav-open.html",
-              "text": "Sports & loisirs"
-            },
-            {
-              "href": "../hub/subnav-open.html",
-              "text": "Urbanisme"
-            },
-            {
-              "href": "../hub/subnav-open.html",
-              "text": "Associations"
-            }
-          ]
-        },
-        "more": {
-          "href": "../faq/",
-          "text": "FAQ"
+    "type": "table-of-contents",
+    "description": "",
+    "cssTheme": "minitel",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "nav": [
+          {
+            "href": "#",
+            "text": "Services et infos pratiques"
+          },
+          {
+            "href": "#",
+            "text": "Actualités"
+          },
+          {
+            "href": "#",
+            "text": "Entreprises"
+          },
+          {
+            "href": "#",
+            "text": "Municipalité"
+          },
+          {
+            "href": "#",
+            "text": "Participez"
+          }
+        ],
+        "sections": {
+          "list": {
+            "items": [
+              {
+                "href": "../hub/subnav-open.html",
+                "text": "Aides & démarches"
+              },
+              {
+                "href": "../hub/subnav-open.html",
+                "text": "Culture & patrimoine"
+              },
+              {
+                "href": "../hub/subnav-open.html",
+                "text": "Déplacements & stationnement"
+              },
+              {
+                "href": "../hub/subnav-open.html",
+                "text": "Emploi & formations"
+              },
+              {
+                "href": "../hub/subnav-open.html",
+                "text": "Environnement & espaces verts"
+              },
+              {
+                "href": "../hub/subnav-open.html",
+                "text": "Famille & éducation"
+              },
+              {
+                "href": "../hub/subnav-open.html",
+                "text": "Innovation"
+              },
+              {
+                "href": "../hub/subnav-open.html",
+                "text": "Logement"
+              },
+              {
+                "href": "../hub/subnav-open.html",
+                "text": "Santé"
+              },
+              {
+                "href": "../hub/subnav-open.html",
+                "text": "Social & solidarités"
+              },
+              {
+                "href": "../hub/subnav-open.html",
+                "text": "Sports & loisirs"
+              },
+              {
+                "href": "../hub/subnav-open.html",
+                "text": "Urbanisme"
+              },
+              {
+                "href": "../hub/subnav-open.html",
+                "text": "Associations"
+              }
+            ]
+          },
+          "more": {
+            "href": "../faq/",
+            "text": "FAQ"
+          }
         }
       }
-    }
+    }]
   }
 }

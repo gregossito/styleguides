@@ -1,375 +1,366 @@
-(function(w){
-	var sw = document.body.clientWidth, //Viewport Width
-		minViewportWidth = 240, //Minimum Size for Viewport
-		maxViewportWidth = 2600, //Maxiumum Size for Viewport
-		viewportResizeHandleWidth = 14, //Width of the viewport drag-to-resize handle
-		$sgWrapper = $('#sg-gen-container'), //Wrapper around viewport
-		$sgViewport = $('#sg-viewport'), //Viewport element
-		$sizePx = $('.sg-size-px'), //Px size input element in toolbar
-		$sizeEms = $('.sg-size-em'), //Em size input element in toolbar
-		$bodySize = 16, //Body size of the document
-		discoID = false,
-		fullMode = true,
-		discoMode = false,
-		hayMode = false;
-
-	//URL Form Submission
-	$('#url-form').submit(function(e) {
-		var urlVal = $('#url').val();
-		var regex = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/;
-
-		if(regex.test(urlVal)) {
-			return;
-		} else {
-			var newURL = "http://"+urlVal;
-			$('#url').val(newURL);
-			return;
-		}
-
-	});
-
-	$(w).resize(function(){ //Update dimensions on resize
-		sw = document.body.clientWidth;
-
-		if(fullMode == true) {
-			sizeFull();
-		}
-	});
-
-	/* Nav Active State */
-	function changeActiveState(link) {
-		var $activeLink = link;
-		$('.sg-size-options a').removeClass('active');
-
-		if(link) {
-			$activeLink.addClass('active');
-		}
-	}
-
-	/* Pattern Lab accordion dropdown */
-	$('.sg-acc-handle').on("click", function(e){
-		var $this = $(this),
-			$panel = $this.next('.sg-acc-panel');
-		e.preventDefault();
-		$this.toggleClass('active');
-		$panel.toggleClass('active');
-	});
-
-	//Size Trigger
-	$('#sg-size-toggle').on("click", function(e){
-		e.preventDefault();
-		$(this).parents('ul').toggleClass('active');
-	});
-
-	//Size View Events
-
-	//Click Size Small Button
-	$('#sg-size-s').on("click", function(e){
-		e.preventDefault();
-		killDisco();
-		killHay();
-		fullMode = false;
-		changeActiveState($(this));
-		sizeSmall();
-	});
-
-	//Click Size Medium Button
-	$('#sg-size-m').on("click", function(e){
-		e.preventDefault();
-		killDisco();
-		killHay();
-		fullMode = false;
-		changeActiveState($(this));
-		sizeMedium();
-	});
-
-	//Click Size Large Button
-	$('#sg-size-l').on("click", function(e){
-		e.preventDefault();
-		killDisco();
-		killHay();
-		fullMode = false;
-		changeActiveState($(this));
-		sizeLarge();
-	});
-
-	//Click Full Width Button
-	$('#sg-size-full').on("click", function(e){ //Resets
-		e.preventDefault();
-		killDisco();
-		killHay();
-		changeActiveState($(this));
-		fullMode = true;
-		sizeiframe(sw);
-	});
-
-	//Click Random Size Button
-	$('#sg-size-random').on("click", function(e){
-		e.preventDefault();
-		fullMode = false;
-		sizeRandom();
-	});
-
-	//Size Small
-	function sizeSmall() {
-		sizeiframe(getRandom(minViewportWidth,500));
-	}
-
-	//Size Medium
-	function sizeMedium() {
-		sizeiframe(getRandom(500,800));
-	}
-
-	//Size Large
-	function sizeLarge() {
-		sizeiframe(getRandom(800,1200));
-	}
-
-	//Size Random Size
-	function sizeRandom() {
-		killDisco();
-		killHay();
-		fullMode = false;
-		changeActiveState($('#sg-size-random'));
-		sizeiframe(getRandom(minViewportWidth,sw));
-	}
-
-	//Size Full
-	function sizeFull() {
-		sizeiframe(sw, false);
-		updateSizeReading(sw);
-	}
-
-	//Click for Disco Mode, which resizes the viewport randomly
-	$('#sg-size-disco').on("click", function(e){
-		e.preventDefault();
-		killHay();
-		fullMode = false;
-
-		if (discoMode) {
-			killDisco();
-			changeActiveState();
-
-		} else {
-			startDisco();
-			changeActiveState($(this));
-		}
-	});
-
-	/* Disco Mode */
-	function disco() {
-		sizeiframe(getRandom(minViewportWidth,sw));
-	}
-
-	function killDisco() {
-		discoMode = false;
-		clearInterval(discoID);
-		discoID = false;
-	}
-
-	function startDisco() {
-		discoMode = true;
-		discoID = setInterval(disco, 800);
-	}
-
-	//Stephen Hay Mode - "Start with the small screen first, then expand until it looks like shit. Time for a breakpoint!"
-	$('#sg-size-hay').on("click", function(e){
-		e.preventDefault();
-		killDisco();
-
-		if (hayMode) {
-			killHay();
-			changeActiveState();
-		} else {
-			startHay();
-			changeActiveState($(this));
-		}
-	});
-
-	//Stop Hay! Mode
-	function killHay() {
-		var currentWidth = $sgViewport.width();
-		hayMode = false;
-		$sgViewport.removeClass('hay-mode');
-		$sgWrapper.removeClass('hay-mode');
-		sizeiframe(Math.floor(currentWidth));
-	}
-
-	// start Hay! mode
-	function startHay() {
-		hayMode = true;
-		$sgWrapper.removeClass("vp-animate").width(minViewportWidth+viewportResizeHandleWidth);
-		$sgViewport.removeClass("vp-animate").width(minViewportWidth);
-
-		window.setTimeout(function(){
-			$sgWrapper.addClass('hay-mode').width(maxViewportWidth+viewportResizeHandleWidth);
-			$sgViewport.addClass('hay-mode').width(maxViewportWidth);
-
-			setInterval(function(){ var vpSize = $sgViewport.width(); updateSizeReading(vpSize); },100);
-		}, 200);
-	}
-
-	//Pixel input
-	$sizePx.on('keydown', function(e){
-		var val = Math.floor($(this).val());
-
-		if(e.keyCode === 38) { //If the up arrow key is hit
-			val++;
-			sizeiframe(val,false);
-		} else if(e.keyCode === 40) { //If the down arrow key is hit
-			val--;
-			sizeiframe(val,false);
-		} else if(e.keyCode === 13) { //If the Enter key is hit
-			e.preventDefault();
-			sizeiframe(val); //Size Iframe to value of text box
-			$(this).blur();
-		}
-		changeActiveState();
-	});
-
-	$sizePx.on('keyup', function(){
-		var val = Math.floor($(this).val());
-		updateSizeReading(val,'px','updateEmInput');
-	});
-
-	//Em input
-	$sizeEms.on('keydown', function(e){
-		var val = parseFloat($(this).val());
-
-		if(e.keyCode === 38) { //If the up arrow key is hit
-			val++;
-			sizeiframe(Math.floor(val*$bodySize),false);
-		} else if(e.keyCode === 40) { //If the down arrow key is hit
-			val--;
-			sizeiframe(Math.floor(val*$bodySize),false);
-		} else if(e.keyCode === 13) { //If the Enter key is hit
-			e.preventDefault();
-			sizeiframe(Math.floor(val*$bodySize)); //Size Iframe to value of text box
-		}
-		changeActiveState();
-	});
-
-	$sizeEms.on('keyup', function(){
-		var val = parseFloat($(this).val());
-		updateSizeReading(val,'em','updatePxInput');
-	});
-
-	// handle the MQ click
-	$('#sg-mq a').on("click", function(e){
-		e.preventDefault();
-		var val = $(this).html();
-		var type = (val.indexOf("px") !== -1) ? "px" : "em";
-		val = val.replace(type,"");
-		var width = (type === "px") ? val*1 : val*$bodySize;
-		sizeiframe(width,true);
-	});
-
-	//Resize the viewport
-	//'size' is the target size of the viewport
-	//'animate' is a boolean for switching the CSS animation on or off. 'animate' is true by default, but can be set to false for things like nudging and dragging
-	function sizeiframe(size,animate) {
-		var theSize;
-
-		if(size>maxViewportWidth) { //If the entered size is larger than the max allowed viewport size, cap value at max vp size
-			theSize = maxViewportWidth;
-		} else if(size<minViewportWidth) { //If the entered size is less than the minimum allowed viewport size, cap value at min vp size
-			theSize = minViewportWidth;
-		} else {
-			theSize = size;
-		}
-
-		//Conditionally remove CSS animation class from viewport
-		if(animate===false) {
-			$sgWrapper.removeClass("vp-animate");
-			$sgViewport.removeClass("vp-animate"); //If aninate is set to false, remove animate class from viewport
-		} else {
-			$sgWrapper.addClass("vp-animate");
-			$sgViewport.addClass("vp-animate");
-		}
-
-		$sgWrapper.width(theSize+viewportResizeHandleWidth); //Resize viewport wrapper to desired size + size of drag resize handler
-		$sgViewport.width(theSize); //Resize viewport to desired size
-
-		updateSizeReading(theSize); //Update values in toolbar
-	}
-
-
-
-
-	//Update Pixel and Em inputs
-	//'size' is the input number
-	//'unit' is the type of unit: either px or em. Default is px. Accepted values are 'px' and 'em'
-	//'target' is what inputs to update. Defaults to both
-	function updateSizeReading(size,unit,target) {
-		if(unit=='em') { //If size value is in em units
-			emSize = size;
-			pxSize = Math.floor(size*$bodySize);
-		} else { //If value is px or absent
-			pxSize = size;
-			emSize = size/$bodySize;
-		}
-
-		if (target == 'updatePxInput') {
-			$sizePx.val(pxSize);
-		} else if (target == 'updateEmInput') {
-			$sizeEms.val(emSize.toFixed(2));
-		} else {
-			$sizeEms.val(emSize.toFixed(2));
-			$sizePx.val(pxSize);
-		}
-	}
-
-	/* Returns a random number between min and max */
-	function getRandom (min, max) {
-	    var num = Math.random() * (max - min) + min;
-
-	    return parseInt(num);
-	}
-
-	function updateViewportWidth(size) {
-		$sgViewport.width(size);
-		$sgWrapper.width(size*1 + 14);
-
-		updateSizeReading(size);
-	}
-
-	// handles widening the "viewport"
-	//   1. on "mousedown" store the click location
-	//   2. make a hidden div visible so that it can track mouse movements and make sure the pointer doesn't get lost in the iframe
-	//   3. on "mousemove" calculate the math, save the results to a cookie, and update the viewport
-	$('#sg-rightpull').mousedown(function(event) {
-
-		// capture default data
-		var origClientX = event.clientX;
-		var origViewportWidth = $sgViewport.width();
-
-		fullMode = false;
-
-		// show the cover
-		$("#sg-cover").css("display","block");
-
-		// add the mouse move event and capture data. also update the viewport width
-		$('#sg-cover').mousemove(function(event) {
-
-			viewportWidth = (origClientX > event.clientX) ? origViewportWidth - ((origClientX - event.clientX)*2) : origViewportWidth + ((event.clientX - origClientX)*2);
-
-			if (viewportWidth > minViewportWidth) {
-
-				sizeiframe(viewportWidth,false);
-			}
-		});
-	});
-
-	// on "mouseup" we unbind the "mousemove" event and hide the cover again
-	$('body').mouseup(function(event) {
-		$('#sg-cover').unbind('mousemove');
-		$('#sg-cover').css("display","none");
-	});
-
-	// capture the viewport width that was loaded and modify it so it fits with the pull bar
-	var origViewportWidth = $sgViewport.width();
-	$sgWrapper.width(origViewportWidth);
-	$sgViewport.width(origViewportWidth - 14);
-	updateSizeReading($sgViewport.width());
-
-})(this);
+'use strict';
+
+var lsg = window.lsg || {};
+
+lsg.ish = (function() {
+
+  var fullMode = false;
+  var discoMode;
+  var hayMode;
+  var bodySize = 16;
+  var minViewportWidth = 240;
+  var maxViewportWidth = 2600;
+  var viewportResizeHandleWidth = $('#ish-rightpull').width();
+
+  /* RESIZE */
+
+  function resizeViewport(size) {
+    var sizeInt = parseInt(size);
+    if (!isNaN(sizeInt)) {
+      toggleSizeButton();
+      sizeIframe(sizeInt, false);
+      setHashWithSize(sizeInt);
+      return;
+    }
+
+    var sw = $('#ish-vp-wrap').width() - viewportResizeHandleWidth;
+    switch (size) {
+      case "s":
+        sizeIframe(getRandom(minViewportWidth, 500));
+        break;
+      case "m":
+        sizeIframe(getRandom(500, 800));
+        break;
+      case "l":
+        sizeIframe(getRandom(800, 1200));
+        break;
+      case "random":
+        sizeIframe(getRandom(minViewportWidth, sw));
+        break;
+      case "disco":
+        discoMode = setInterval(function() {
+          sizeIframe(getRandom(minViewportWidth, sw));
+        }, 1000);
+        break;
+      case "hay":
+        var $ishWrapper = $('#ish-container');
+        var $ishViewport = $('#ish-viewport');
+
+        if (!hayMode) {
+          $ishWrapper
+            .removeClass('vp-animate')
+            .width(minViewportWidth + viewportResizeHandleWidth);
+          $ishViewport
+            .removeClass('vp-animate')
+            .width(minViewportWidth);
+
+          window.setTimeout(function(){
+            $ishWrapper
+              .addClass('hay-mode')
+              .width(sw + viewportResizeHandleWidth);
+            $ishViewport
+              .addClass('hay-mode')
+              .width(sw);
+
+            hayMode = setInterval(function() {
+              updateSizeReading($ishViewport.width());
+            }, 100);
+          }, 200);
+        }
+        else {
+          hayMode = false;
+          sizeIframe($('#ish-viewport').width(), false);
+          toggleSizeButton();
+          setHashWithSize();
+          return;
+        }
+        break;
+      // full
+      default:
+        sizeIframe(sw, !fullMode);
+        fullMode = true;
+        break;
+    }
+
+    toggleSizeButton($('.ish-size-options a[data-size="'+size+'"]'));
+    setHashWithSize(size);
+  }
+
+  function resizeWindow() {
+    if (fullMode) {
+      resizeViewport('full');
+    }
+  }
+
+  function sizeIframe(size, animate) {
+    animate = (typeof animate !== 'undefined') ? animate : true;
+
+    if (size > maxViewportWidth) {
+      size = maxViewportWidth;
+    }
+    else if (size < minViewportWidth) {
+      size = minViewportWidth;
+    }
+
+    $('#ish-container')
+      .toggleClass('vp-animate', animate)
+      .width(size + viewportResizeHandleWidth);
+    $('#ish-viewport')
+      .toggleClass('vp-animate', animate)
+      .width(size);
+
+    updateSizeReading(size);
+  }
+
+  /* SIZE INPUTS */
+
+  function updateSizeReading(size, unit) {
+    var pxSize, emSize;
+
+    if (unit === 'em') {
+      emSize = size;
+      pxSize = em2px(size);
+    }
+    else {
+      pxSize = size;
+      emSize = px2em(size);
+    }
+
+    var $sizePx = $('.ish-input[data-unit="px"]');
+    var $sizeEm = $('.ish-input[data-unit="em"]');
+
+    if (unit === 'em') {
+      $sizePx.val(pxSize);
+    }
+    else if (unit === 'px') {
+      $sizeEm.val(emSize.toFixed(2));
+    }
+    else {
+      $sizeEm.val(emSize.toFixed(2));
+      $sizePx.val(pxSize);
+    }
+  }
+
+  function keydownSizeInput(e) {
+    var $input = $(this);
+    var val = Math.floor($input.val());
+
+    if (isNaN(val)) return;
+
+    resetModes();
+
+    var isEm = ($input.data('unit') === 'em');
+
+    // up arrow
+    if (e.keyCode === 38) {
+      val++;
+      val = isEm ? em2px(val) : val;
+      resizeViewport(val);
+    }
+    // down arrow
+    else if (e.keyCode === 40) {
+      val--;
+      val = isEm ? em2px(val) : val;
+      resizeViewport(val);
+    }
+    // enter
+    else if (e.keyCode === 13) {
+      e.preventDefault();
+      val = isEm ? em2px(val) : val;
+      resizeViewport(val);
+
+      $input.blur();
+    }
+
+    toggleSizeButton();
+  }
+
+  function keyupSizeInput() {
+    var $input = $(this);
+    var val = Math.floor($input.val());
+
+    if (isNaN(val)) return;
+
+    updateSizeReading(val, $input.data('unit'));
+  }
+
+  function toggleSizeButton(link) {
+    $('.ish-size-options a').removeClass('active');
+
+    if (link) {
+      link.addClass('active');
+    }
+  }
+
+  /* SIZE BUTTONS */
+
+  function clickSizeButton(e) {
+    e.preventDefault();
+
+    var $sizeButton = $(this);
+    var size = $sizeButton.data('size');
+
+    resetModes(size);
+
+    if (discoMode && (size === 'disco')) {
+      discoMode = false;
+      toggleSizeButton();
+      setHashWithSize();
+      return;
+    }
+
+    resizeViewport(size);
+  }
+
+  /* CODE BUTTONS */
+
+  function clickCodeButton(e) {
+    e.preventDefault();
+
+    displayCode(!$(this).hasClass('active'));
+  }
+
+  function displayCode(show) {
+    var $codeButton = $('#code-toggle');
+    var $codes = $('#ish-viewport').contents().find('pre.prism');
+
+    $codeButton.toggleClass('active', show);
+    $codes.toggle(show);
+    sessionStorage.setItem('codeDisplay', show);
+  }
+
+  /* SIZE HANDLE */
+
+  function mousedownSizePullBar(e) {
+    var origClientX = e.clientX;
+    var origViewportWidth = $('#ish-viewport').width();
+
+    resetModes();
+
+    $('#ish-cover')
+      // show the cover
+      .show()
+      // add the mouse move event and capture data. also update the viewport width
+      .on('mousemove', function(event) {
+        var viewportWidth = (origClientX > event.clientX)
+                            ? origViewportWidth - ((origClientX - event.clientX)*2)
+                            : origViewportWidth + ((event.clientX - origClientX)*2);
+
+        if (viewportWidth > minViewportWidth) {
+          resizeViewport(viewportWidth);
+        }
+      });
+  }
+
+  function mouseupBody() {
+    $('#ish-cover')
+      .hide()
+      .off('mousemove');
+  }
+
+  function init(w) {
+    // window resize
+    $(w).resize(resizeWindow);
+
+    // size input
+    $('.ish-input').on({
+      keydown: keydownSizeInput,
+      keyup: keyupSizeInput
+    });
+
+    // size buttons
+    $('.ish-size-options a').on('click', clickSizeButton);
+
+    // code button
+    $('#code-toggle').on('click', clickCodeButton);
+
+    var show;
+    try { show = JSON.parse(sessionStorage.getItem('codeDisplay')); }
+    catch(e) { show = true; sessionStorage.setItem('codeDisplay', show); }
+    displayCode(show);
+
+    // handles widening the "viewport" :
+    //   1. on "mousedown" store the click location
+    //   2. make a hidden div visible so that it can track mouse movements
+    //      and make sure the pointer doesn't get lost in the iframe
+    //   3. on "mousemove" calculate the math, save the results to a cookie,
+    //      and update the viewport
+    $('#ish-rightpull').on('mousedown', mousedownSizePullBar);
+
+    // unbind mouse event on cover
+    $('body').on('mouseup', mouseupBody);
+
+    // resize viewport on hash
+    resizeViewport(getSizeFromHash());
+  }
+
+  /* UTILS */
+  function resetModes(size) {
+    fullMode = false;
+
+    if (discoMode) {
+      clearInterval(discoMode);
+      discoMode = (size === 'disco');
+    }
+
+    if (hayMode) {
+      var $ishWrapper = $('#ish-container');
+      var $ishViewport = $('#ish-viewport');
+
+      // fix width
+      $ishWrapper.width($ishWrapper.width());
+      $ishViewport.width($ishViewport.width());
+
+      clearInterval(hayMode);
+      hayMode = (size === 'hay');
+      $ishWrapper.removeClass('hay-mode');
+      $ishViewport.removeClass('hay-mode');
+    }
+  }
+
+  function getSizeFromHash() {
+    var hashes = window.location.hash.split('#');
+
+    if (hashes.length > 2) {
+      return hashes[hashes.length-1];
+    }
+
+    return "full";
+  }
+  function setHashWithSize(size) {
+    var hashes = window.location.hash.split('#');
+
+    if (hashes.length > 2) {
+      if (!size) {
+        hashes.pop();
+      }
+      else {
+        hashes[hashes.length-1] = size;
+      }
+      window.location.hash = hashes.join('#');
+    }
+    else {
+      window.location.hash += '#'+size;
+    }
+  }
+
+  function getRandom(min, max) {
+    var num = Math.random() * (max - min) + min;
+
+    return parseInt(num);
+  }
+
+  function em2px(em) {
+    return Math.floor(em * bodySize);
+  }
+  function px2em(px) {
+    return px/bodySize;
+  }
+
+  return {
+    resizeViewport: resizeViewport,
+    resizeWindow: resizeWindow,
+    displayCode: displayCode,
+    init: init
+  };
+})();

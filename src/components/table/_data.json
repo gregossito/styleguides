@@ -1,13 +1,25 @@
 {
   "index": {
-    "defaults": {
-      "summary": "Sommaire du tableau (pour l'accessibilité)",
-      "caption": "Légende du tableau (pour l'accessibilité)"
-    },
-    "lots_of_cols": {
-      "summary": "Sommaire du tableau (pour l'accessibilité)",
-      "caption": "Légende du tableau (pour l'accessibilité)",
-      "block": "<tbody><tr><th scope=\"col\"><p>Durée hebdomadaire</p></th><th scope=\"col\"><p>QF 1</p></th><th><p>QF 2</p></th><th><p>QF 3</p></th><th><p>QF 4</p></th><th><p>QF 5</p></th><th><p>QF 6</p></th><th><p>QF 7</p></th><th><p>QF 8</p></th><th><p>QF 9</p></th><th><p>QF 10</p></th></tr><tr><td scope=\"col\"><p><b>45 min</b></p></td><td><p>68,13€</p></td><td><p>73,33€</p></td><td><p>105,80€</p></td><td><p>146,55€</p></td><td><p>188,26€</p></td><td><p>209,27€</p></td><td><p>240,58€</p></td><td><p>271,98€</p></td><td><p>360€</p></td><td><p>452€</p></td></tr><tr><td scope=\"col\"><p><b>1h</b></p></td><td><p>73,86€</p></td><td><p>79,49€</p></td><td><p>114,61€</p></td><td><p>158,87€</p></td><td><p>204,07€</p></td><td><p>226,78€</p></td><td><p>260,74€</p></td><td><p>294,80€</p></td><td><p>388€</p></td><td><p>477€</p></td></tr><tr><td scope=\"col\"><p><b>1h15</b></p></td><td><p>79,49€</p></td><td><p>85,64€</p></td><td><p>123,42€</p></td><td><p>170,96€</p></td><td><p>219,78€</p></td><td><p>244,29€</p></td><td><p>280,69€</p></td><td><p>317,52€</p></td><td><p>413€</p></td><td><p>498€</p></td></tr><tr><td scope=\"col\"><p><b>1h30</b></p></td><td><p>85,21€</p></td><td><p>91,69€</p></td><td><p>132,33€</p></td><td><p>183,27€</p></td><td><p>235,59€</p></td><td><p>261,80€</p></td><td><p>300,85€</p></td><td><p>340,22€</p></td><td><p>444€</p></td><td><p>534€</p></td></tr><tr><td scope=\"col\"><p><b>2h</b></p></td><td><p>96,57€</p></td><td><p>104€</p></td><td><p>149,95€</p></td><td><p>207,68€</p></td><td><p>267€</p></td><td><p>296,61€</p></td><td><p>340,97€</p></td><td><p>385,64€<br></p></td><td><p>496€</p></td><td><p>567€</p></td></tr><tr><td scope=\"col\"><p><b>2h30</b></p></td><td><p>113,55€</p></td><td><p>122,25€</p></td><td><p>176,37€</p></td><td><p>244,29€</p></td><td><p>313,91€</p></td><td><p>348,92€</p></td><td><p>401,03€</p></td><td><p>453,56€</p></td><td><p>581€</p></td><td><p>657€</p></td></tr><tr><td scope=\"col\"><p><b>3h</b></p></td><td><p>130,63€</p></td><td><p>140,72€</p></td><td><p>202,90€</p></td><td><p>281,01€</p></td><td><p>361,13€</p></td><td><p>401,35€</p></td><td><p>461,31€</p></td><td><p>521,69€</p></td><td><p>661€</p></td><td><p>757€</p></td></tr></tbody>"
+    "type": "table",
+    "description": "",
+    "examples": [{
+      "title": "Nombreuses colonnes",
+      "description": "",
+      "data": {
+        "summary": "Sommaire du tableau (pour l'accessibilité)",
+        "caption": "Légende du tableau (pour l'accessibilité)",
+        "block": "<tbody><tr><th scope=\"col\"><p>Durée hebdomadaire</p></th><th scope=\"col\"><p>QF 1</p></th><th><p>QF 2</p></th><th><p>QF 3</p></th><th><p>QF 4</p></th><th><p>QF 5</p></th><th><p>QF 6</p></th><th><p>QF 7</p></th><th><p>QF 8</p></th><th><p>QF 9</p></th><th><p>QF 10</p></th></tr><tr><td scope=\"col\"><p><b>45 min</b></p></td><td><p>68,13€</p></td><td><p>73,33€</p></td><td><p>105,80€</p></td><td><p>146,55€</p></td><td><p>188,26€</p></td><td><p>209,27€</p></td><td><p>240,58€</p></td><td><p>271,98€</p></td><td><p>360€</p></td><td><p>452€</p></td></tr><tr><td scope=\"col\"><p><b>1h</b></p></td><td><p>73,86€</p></td><td><p>79,49€</p></td><td><p>114,61€</p></td><td><p>158,87€</p></td><td><p>204,07€</p></td><td><p>226,78€</p></td><td><p>260,74€</p></td><td><p>294,80€</p></td><td><p>388€</p></td><td><p>477€</p></td></tr><tr><td scope=\"col\"><p><b>1h15</b></p></td><td><p>79,49€</p></td><td><p>85,64€</p></td><td><p>123,42€</p></td><td><p>170,96€</p></td><td><p>219,78€</p></td><td><p>244,29€</p></td><td><p>280,69€</p></td><td><p>317,52€</p></td><td><p>413€</p></td><td><p>498€</p></td></tr><tr><td scope=\"col\"><p><b>1h30</b></p></td><td><p>85,21€</p></td><td><p>91,69€</p></td><td><p>132,33€</p></td><td><p>183,27€</p></td><td><p>235,59€</p></td><td><p>261,80€</p></td><td><p>300,85€</p></td><td><p>340,22€</p></td><td><p>444€</p></td><td><p>534€</p></td></tr><tr><td scope=\"col\"><p><b>2h</b></p></td><td><p>96,57€</p></td><td><p>104€</p></td><td><p>149,95€</p></td><td><p>207,68€</p></td><td><p>267€</p></td><td><p>296,61€</p></td><td><p>340,97€</p></td><td><p>385,64€<br></p></td><td><p>496€</p></td><td><p>567€</p></td></tr><tr><td scope=\"col\"><p><b>2h30</b></p></td><td><p>113,55€</p></td><td><p>122,25€</p></td><td><p>176,37€</p></td><td><p>244,29€</p></td><td><p>313,91€</p></td><td><p>348,92€</p></td><td><p>401,03€</p></td><td><p>453,56€</p></td><td><p>581€</p></td><td><p>657€</p></td></tr><tr><td scope=\"col\"><p><b>3h</b></p></td><td><p>130,63€</p></td><td><p>140,72€</p></td><td><p>202,90€</p></td><td><p>281,01€</p></td><td><p>361,13€</p></td><td><p>401,35€</p></td><td><p>461,31€</p></td><td><p>521,69€</p></td><td><p>661€</p></td><td><p>757€</p></td></tr></tbody>"
+      }
+    }],
+    "more": {
+      "defaults": {
+        "title": "Standard",
+        "description": "",
+        "data": {
+          "summary": "Sommaire du tableau (pour l'accessibilité)",
+          "caption": "Légende du tableau (pour l'accessibilité)"
+        }
+      }
     }
   }
 }

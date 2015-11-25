@@ -1,5 +1,3 @@
-h1= title
-
 mixin color(variable, hex, rgb)
   tr
     th
@@ -12,76 +10,104 @@ mixin color(variable, hex, rgb)
       code= rgb
 
 
-table.lsg-colors
-  thead
-    tr
-      th
-      th Variable SCSS
-      th Code hexa
-      th RGB
-  +color("$color-primary", "#DF225A", "rgb(223, 034, 090)")
-  +color("$color-primary-variant", "#AF2258", "rgb(175, 034, 088)")
-  +color("$color-secondary", "#0C518A", "rgb(012, 081, 138)")
-  +color("$color-secondary-variant", "#0A4770", "rgb(010, 071, 112)")
-  +color("$color-tertiary", "#F8E273", "rgb(248, 226, 115)")
-  +color("$light-blue", "#D1E0E5", "rgb(209, 224, 229)")
-  +color("$green1", "#43B57E", "rgb(067, 181, 126)")
-  +color("$yellow1", "#FAE46A", "rgb(250, 228, 106)")
-  +color("$orange1", "#F77F68", "rgb(247, 127, 104)")
-  +color("$red1", "#DD275C", "rgb(221, 039, 092)")
-  +color("$red2", "#A51B50", "rgb(165, 027, 080)")
-  +color("$red3", "#BF2257", "rgb(165, 027, 080)")
+h1= title
 
-h2 Nuances de gris
-table.lsg-colors
-  thead
-    tr
-      th
-      th Variable SCSS
-      th Code hexa
-      th RGB
-  +color("$black", "#000", "rgb(0, 0, 0)")
-  +color("$gray1A", "#1A1A1A", "rgb(026, 026, 026)")
-  +color("$gray33", "#333", "rgb(051, 051, 051)")
-  +color("$gray4D", "#4D4D4D", "rgb(077, 077, 077)")
-  +color("$gray66", "#666", "rgb(102, 102, 102)")
-  +color("$gray99", "#999", "rgb(153, 153, 153)")
-  +color("$grayCC", "#CCC", "rgb(204, 204, 204)")
-  +color("$grayEE", "#EEE", "rgb(238, 238, 238)")
-  +color("$grayF2", "#F2F2F2", "rgb(242, 242, 242)")
-  +color("$white", "#FFF", "rgb(255, 255, 255)")
+.lsg-colors
+  .lsg-colors-col
+    h2 Principales
+    table.lsg-colors-table
+      col
+      col
+      col
+      col(style="width: 193px;")
+      thead
+        tr
+          th
+          th Variable SCSS
+          th Code hexa
+          th RGB
+      +color("$color-primary", "#DF225A", "rgb(223, 034, 090)")
+      +color("$color-primary-variant", "#AF2258", "rgb(175, 034, 088)")
+      +color("$color-secondary", "#0C518A", "rgb(012, 081, 138)")
+      +color("$color-secondary-variant", "#0A4770", "rgb(010, 071, 112)")
+      +color("$color-tertiary", "#F8E273", "rgb(248, 226, 115)")
+      +color("$light-blue", "#D1E0E5", "rgb(209, 224, 229)")
+      +color("$green1", "#43B57E", "rgb(067, 181, 126)")
+      +color("$yellow1", "#FAE46A", "rgb(250, 228, 106)")
+      +color("$orange1", "#F77F68", "rgb(247, 127, 104)")
+      +color("$red1", "#DD275C", "rgb(221, 039, 092)")
+      +color("$red2", "#A51B50", "rgb(165, 027, 080)")
+      +color("$red3", "#BF2257", "rgb(165, 027, 080)")
 
-h2 Que Faire
-table.lsg-colors
-  thead
-    tr
-      th
-      th Variable SCSS
-      th Code hexa
-      th RGB
-  +color("$que-faire-red", "#F95053", "rgb(249, 080, 083)")
+  .lsg-colors-col
+    h2 Nuances de gris
+    table.lsg-colors-table
+      col
+      col
+      col
+      col(style="width: 193px;")
+      thead
+        tr
+          th
+          th Variable SCSS
+          th Code hexa
+          th RGB
+      +color("$black", "#000", "rgb(0, 0, 0)")
+      +color("$gray1A", "#1A1A1A", "rgb(026, 026, 026)")
+      +color("$gray33", "#333", "rgb(051, 051, 051)")
+      +color("$gray4D", "#4D4D4D", "rgb(077, 077, 077)")
+      +color("$gray66", "#666", "rgb(102, 102, 102)")
+      +color("$gray99", "#999", "rgb(153, 153, 153)")
+      +color("$grayCC", "#CCC", "rgb(204, 204, 204)")
+      +color("$grayEE", "#EEE", "rgb(238, 238, 238)")
+      +color("$grayF2", "#F2F2F2", "rgb(242, 242, 242)")
+      +color("$white", "#FFF", "rgb(255, 255, 255)")
 
-h2 Notices
-table.lsg-colors
-  thead
-    tr
-      th
-      th Variable SCSS
-      th Code hexa
-      th RGB
-  +color("$notice-blue", "#A6CCDD", "rgb(166, 204, 221)")
-  +color("$notice-orange", "#F77F68", "rgb(247, 127, 104)")
+  .lsg-colors-col
+    h2 Que Faire
+    table.lsg-colors-table
+      col
+      col
+      col
+      col(style="width: 193px;")
+      thead
+        tr
+          th
+          th Variable SCSS
+          th Code hexa
+          th RGB
+      +color("$que-faire-red", "#F95053", "rgb(249, 080, 083)")
 
-h2 Participez
-table.lsg-colors
-  thead
-    tr
-      th
-      th Variable SCSS
-      th Code hexa
-      th RGB
-  +color("$get-involved-yellow", "#F8C244", "rgb(248, 194, 068)")
-  +color("$get-involved-red", "#E95757", "rgb(233, 087, 087)")
-  +color("$get-involved-green", "#42A769", "rgb(066, 167, 105)")
-  +color("$get-involved-blue1", "#3EC2DE", "rgb(062, 194, 222)")
-  +color("$get-involved-blue2", "#D7EDF2", "rgb(215, 237, 242)")
+    h2 Notices
+    table.lsg-colors-table
+      col
+      col
+      col
+      col(style="width: 193px;")
+      thead
+        tr
+          th
+          th Variable SCSS
+          th Code hexa
+          th RGB
+      +color("$notice-blue", "#A6CCDD", "rgb(166, 204, 221)")
+      +color("$notice-orange", "#F77F68", "rgb(247, 127, 104)")
+
+  .lsg-colors-col
+    h2 Participez
+    table.lsg-colors-table
+      col
+      col
+      col
+      col(style="width: 193px;")
+      thead
+        tr
+          th
+          th Variable SCSS
+          th Code hexa
+          th RGB
+      +color("$get-involved-yellow", "#F8C244", "rgb(248, 194, 068)")
+      +color("$get-involved-red", "#E95757", "rgb(233, 087, 087)")
+      +color("$get-involved-green", "#42A769", "rgb(066, 167, 105)")
+      +color("$get-involved-blue1", "#3EC2DE", "rgb(062, 194, 222)")
+      +color("$get-involved-blue2", "#D7EDF2", "rgb(215, 237, 242)")

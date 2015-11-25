@@ -7,6 +7,6 @@ mixin sharelines(data)
       each item in data.items
         li.sharelines-item
           = item.text
-          - share = JSON.parse(JSON.stringify(item.share)) // clone the data object
+          - var share = JSON.parse(JSON.stringify(item.share)) // clone the data object
           - share.modifiers = ["circles"] // overwrite the modifiers
           +share(share)

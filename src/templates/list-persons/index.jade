@@ -44,11 +44,13 @@ append content
             +block-aside({"modifiers": "hidden-on-small"})
               +share(data.aside.share)
             +block-aside({})
+              h2.hidden-accessibly= data.aside.search.title
               +search-field(data.aside.search)
             #facets
               +block-aside-checkboxes(data.aside.politique)
               +block-aside-checkboxes(data.aside.arrondissement)
         .layout-content
+          h2.hidden-accessibly= data.results_title
           #results
             each result in data.results
               +#{result.type}(result.data)

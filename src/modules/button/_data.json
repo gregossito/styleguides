@@ -1,39 +1,60 @@
 {
   "index": {
-    "defaults": {
-      "href": "#",
-      "text": "Texte",
-      "title": "Titre"
-    },
-    "action": {
-      "href": "#",
-      "text": "Texte",
-      "title": "Titre",
-      "modifiers": ["action"]
-    },
-    "secondary": {
-      "href": "#",
-      "text": "Texte",
-      "title": "Titre",
-      "modifiers": ["secondary"]
-    },
-    "marker": {
-      "href": "#",
-      "text": "Texte",
-      "title": "Titre",
-      "modifiers": ["marker"]
-    },
-    "icon": {
-      "href": "#",
-      "icon": "play",
-      "title": "Titre",
-      "text": "Texte"
-    },
-    "wide": {
-      "href": "#",
-      "text": "Texte",
-      "title": "Titre",
-      "modifiers": ["wide"]
-    }
+    "type": "button",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "href": "#",
+        "text": "Texte",
+        "title": "Titre"
+      }
+    }, {
+      "title": "Bouton d'action",
+      "description": "",
+      "data": {
+        "href": "#",
+        "text": "Texte",
+        "title": "Titre",
+        "modifiers": ["action"]
+      }
+    }, {
+      "title": "Bouton large",
+      "description": "",
+      "data": {
+        "href": "#",
+        "text": "Texte",
+        "title": "Titre",
+        "modifiers": ["wide"]
+      }
+    }, {
+      "title": "Bouton secondaire",
+      "description": "",
+      "data": {
+        "href": "#",
+        "text": "Texte",
+        "title": "Titre",
+        "modifiers": ["secondary"]
+      }
+    }, {
+      "title": "Bouton avec icône",
+      "description": "",
+      "data": {
+        "href": "#",
+        "icon": "play",
+        "title": "Titre",
+        "text": "Texte"
+      }
+    }, {
+      "title": "Bouton avec marqueur",
+      "description": "",
+      "data": {
+        "href": "#",
+        "text": "Texte",
+        "title": "Titre",
+        "modifiers": ["marker"]
+      }
+    }]
   }
 }

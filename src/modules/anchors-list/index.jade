@@ -1,9 +1,3 @@
 include anchors-list
-include ../../helpers/code
 
-.lsg-module
-  +anchors-list(defaults)
-+code({language: "jade"}).
-  include anchors-list
-
-  +anchors-list(#{JSON.stringify(defaults, null, 2)})
+extends ../../helpers/preview

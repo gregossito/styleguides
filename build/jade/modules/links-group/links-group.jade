@@ -3,16 +3,18 @@ include ../../modules/intro-text/intro-text
 mixin links-group(data)
   .links-group(class=data.modifiers)
     if data.title
-      a.links-group-header(href=data.href style= data.background ? 'background-image: url(#{data.background});' : null)
-        .links-group-header-wrapper
-          .links-group-title= data.title
-          if data.subtitle
-            .links-group-subtitle= data.subtitle
+      h2.links-group-header
+        a(href=data.href style= data.background ? 'background-image: url(#{data.background});' : null)
+          .links-group-header-wrapper
+            .links-group-title= data.title
+            if data.subtitle
+              .links-group-subtitle= data.subtitle
     .links-group-content
       if data.text
         +intro-text({text: data.text})
-      .links-group-items
+      ul.links-group-items
         each item in data.items
-          a.links-group-item(href=item.href)
-            span.links-group-item-text= item.text
-            i.links-group-item-icon
+          li.links-group-item
+            a(href=item.href)
+              span.links-group-item-text= item.text
+              i.links-group-item-icon(aria-hidden="true")

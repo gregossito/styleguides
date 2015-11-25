@@ -1,14 +1,31 @@
 {
   "index": {
-    "defaults": {
-      "title": "Sommaire de la page",
-      "items": [
-        {"href": "#", "text": "Est-ce que j’y ai droit ?"},
-        {"href": "#", "text": "Constituer un dossier"},
-        {"href": "#", "text": "Complément : l’aide au logement"},
-        {"href": "#", "text": "Questions fréquentes"}
-      ]
-    }
+    "type": "anchors-list",
+    "description": "Une liste d'ancres, généralement associée au contenu d'un document.",
+    "examples": [{
+      "title": "Standard",
+      "data": {
+        "title": "Sommaire de la page",
+        "items": [
+          {"href": "#", "text": "Est-ce que j’y ai droit ?"},
+          {"href": "#", "text": "Constituer un dossier"},
+          {"href": "#", "text": "Complément : l’aide au logement"},
+          {"href": "#", "text": "Questions fréquentes"}
+        ]
+      }
+    }, {
+      "title": "Avec une entrée \"post-it\"",
+      "data": {
+        "title": "Sommaire de la page",
+        "items": [
+          {"href": "#", "text": "Informations supplémentaires", "modifiers": "anchor-postit"},
+          {"href": "#", "text": "Est-ce que j’y ai droit ?"},
+          {"href": "#", "text": "Constituer un dossier"},
+          {"href": "#", "text": "Complément : l’aide au logement"},
+          {"href": "#", "text": "Questions fréquentes"}
+        ]
+      }
+    }]
   }
 }
 

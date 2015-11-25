@@ -21,7 +21,7 @@ mixin search-results-list(data)
               .search-results-list-text= item.text
       if data.more
         .search-results-list-more
-          - more = JSON.parse(JSON.stringify(data.more)) // clone the data object
+          - var more = JSON.parse(JSON.stringify(data.more)) // clone the data object
           - more.modifiers = ["wide"] // overwrite the modifiers
           - more.attributes = {"data-page": more.page}
           +button(more)

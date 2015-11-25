@@ -1,19 +1,28 @@
 {
   "index": {
-    "defaults": {
-      "quote": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
-      "author": "Bruno Julliard",
-      "function": "premier adjoint à la Maire de Paris",
-      "share": {
-        "items": [
-          {
-            "href": "https://twitter.com/intent/tweet?text=Maecenas sed diam eget risus varius blandit sit amet non magna. http://www.paris.fr",
-            "icon": "twitter",
-            "text": "Partager sur Twitter",
-            "title": "Partager sur Twitter - nouvelle fenêtre"
-          }
-        ]
+    "type": "verbatim",
+    "description": "Pour plus d'information sur les URL de partage, voir le module <a href=\"../../modules/share\")>share</a>.",
+    "bodyAttributes": {
+      "style": "background-color: #E6E6E6"
+    },
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "quote": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
+        "author": "Bruno Julliard",
+        "function": "premier adjoint à la Maire de Paris",
+        "share": {
+          "items": [
+            {
+              "href": "https://twitter.com/intent/tweet?text=Maecenas sed diam eget risus varius blandit sit amet non magna. http://www.paris.fr",
+              "icon": "twitter",
+              "text": "Partager sur Twitter",
+              "title": "Partager sur Twitter - nouvelle fenêtre"
+            }
+          ]
+        }
       }
-    }
+    }]
   }
 }

@@ -1,78 +1,84 @@
 {
   "index": {
-    "defaults": {
-      "items": [
-        {
-          "href": "#",
-          "title": "Aides & démarches",
-          "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
-        },
-        {
-          "href": "#",
-          "title": "Culture & patrimoine",
-          "text": "Sed posuere consectetur est at lobortis."
-        },
-        {
-          "href": "#",
-          "title": "Déplacements & stationnement",
-          "text": "Donec id elit non mi porta gravida at eget metus."
-        },
-        {
-          "href": "#",
-          "title": "Emploi & formations",
-          "text": "Sed posuere consectetur est at lobortis."
-        },
-        {
-          "href": "#",
-          "title": "Environnement & espaces verts",
-          "text": "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
-        },
-        {
-          "href": "#",
-          "title": "Famille & éducation",
-          "text": "Donec ullamcorper nulla non metus auctor fringilla."
-        },
-        {
-          "href": "#",
-          "title": "Innovation",
-          "text": "Cras mattis consectetur purus sit amet fermentum."
-        },
-        {
-          "href": "#",
-          "title": "Logement",
-          "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
-        },
-        {
-          "href": "#",
-          "title": "Santé",
-          "text": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-        },
-        {
-          "href": "#",
-          "title": "Social & solidarités",
-          "text": "Maecenas sed diam eget risus varius blandit sit amet."
-        },
-        {
-          "href": "#",
-          "title": "Sports & loisirs",
-          "text": "Cras mattis consectetur purus sit amet fermentum."
-        },
-        {
-          "href": "#",
-          "title": "Urbanisme",
-          "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
-        },
-        {
-          "href": "#",
-          "title": "Associations",
-          "text": "Sed posuere consectetur est at lobortis."
-        },
-        {
-          "href": "#",
-          "text": "Vous cherchez autre chose&nbsp;?",
-          "modifiers": ["more"]
-        }
-      ]
-    }
+    "type": "sections-list",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "items": [
+          {
+            "href": "#",
+            "title": "Aides & démarches",
+            "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+          },
+          {
+            "href": "#",
+            "title": "Culture & patrimoine",
+            "text": "Sed posuere consectetur est at lobortis."
+          },
+          {
+            "href": "#",
+            "title": "Déplacements & stationnement",
+            "text": "Donec id elit non mi porta gravida at eget metus."
+          },
+          {
+            "href": "#",
+            "title": "Emploi & formations",
+            "text": "Sed posuere consectetur est at lobortis."
+          },
+          {
+            "href": "#",
+            "title": "Environnement & espaces verts",
+            "text": "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+          },
+          {
+            "href": "#",
+            "title": "Famille & éducation",
+            "text": "Donec ullamcorper nulla non metus auctor fringilla."
+          },
+          {
+            "href": "#",
+            "title": "Innovation",
+            "text": "Cras mattis consectetur purus sit amet fermentum."
+          },
+          {
+            "href": "#",
+            "title": "Logement",
+            "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
+          },
+          {
+            "href": "#",
+            "title": "Santé",
+            "text": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+          },
+          {
+            "href": "#",
+            "title": "Social & solidarités",
+            "text": "Maecenas sed diam eget risus varius blandit sit amet."
+          },
+          {
+            "href": "#",
+            "title": "Sports & loisirs",
+            "text": "Cras mattis consectetur purus sit amet fermentum."
+          },
+          {
+            "href": "#",
+            "title": "Urbanisme",
+            "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
+          },
+          {
+            "href": "#",
+            "title": "Associations",
+            "text": "Sed posuere consectetur est at lobortis."
+          },
+          {
+            "href": "#",
+            "text": "Vous cherchez autre chose&nbsp;?",
+            "modifiers": ["more"]
+          }
+        ]
+      }
+    }]
   }
 }

@@ -1,27 +1,33 @@
 {
   "index": {
-    "defaults": {
-      "items": [
-        {
-          "href": "#",
-          "background": "../../modules/cross-content/cross-content-img1.jpg",
-          "title": "participez !",
-          "icon": "instagram",
-          "text": "#MonHLM : photographiez la façade de votre logement social !"
-        },
-        {
-          "href": "#",
-          "background": "../../modules/cross-content/cross-content-img2.jpg",
-          "title": "dossier",
-          "text": "Se loger à Paris, le guide."
-        },
-        {
-          "href": "#",
-          "background": "../../modules/cross-content/cross-content-img3.jpg",
-          "title": "actualités",
-          "text": "Locataires HLM : votez pour vos représentants"
-        }
-      ]
-    }
+    "type": "cross-content",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "items": [
+          {
+            "href": "#",
+            "background": "../../modules/cross-content/cross-content-img1.jpg",
+            "title": "participez !",
+            "icon": "instagram",
+            "text": "#MonHLM : photographiez la façade de votre logement social !"
+          },
+          {
+            "href": "#",
+            "background": "../../modules/cross-content/cross-content-img2.jpg",
+            "title": "dossier",
+            "text": "Se loger à Paris, le guide."
+          },
+          {
+            "href": "#",
+            "background": "../../modules/cross-content/cross-content-img3.jpg",
+            "title": "actualités",
+            "text": "Locataires HLM : votez pour vos représentants"
+          }
+        ]
+      }
+    }]
   }
 }

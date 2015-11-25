@@ -1,10 +1,3 @@
 include last-update
-include ../../helpers/code
 
-h2 Standard
-.lsg-module
-  +last-update(defaults)
-+code({language: "jade"}).
-  include last-update
-
-  +last-update(#{JSON.stringify(defaults, null, 2)})
+include ../../helpers/preview

@@ -146,6 +146,7 @@
           ]
         },
         "search": {
+          "title": "Filtres de recherche",
           "action": "#",
           "modifiers": ["small"],
           "input": {
@@ -153,7 +154,8 @@
             "placeholder": "Rechercher un nom..."
           },
           "submit": {
-            "text": "Ok"
+            "text": "Ok",
+            "title": "Valider la recherche par nom"
           }
         },
         "politique": {
@@ -218,6 +220,7 @@
           ]
         }
       },
+      "results_title": "Liste des élus",
       "results": [
         {
           "type": "person-block",
@@ -581,6 +584,7 @@
           ]
         },
         "search": {
+          "title": "Filtres de recherche",
           "action": "#",
           "modifiers": ["small"],
           "input": {
@@ -588,7 +592,8 @@
             "placeholder": "Rechercher un nom..."
           },
           "submit": {
-            "text": "Ok"
+            "text": "Ok",
+            "title": "Valider la recherche par nom"
           }
         },
         "politique": {
@@ -619,6 +624,7 @@
           ]
         }
       },
+      "results_title": "Liste des adjoints",
       "results": [
         {
           "type": "person-block",

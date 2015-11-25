@@ -1,6 +1,44 @@
-#sg-vp-wrap
-  #sg-cover
-  #sg-gen-container
-    iframe#sg-viewport(src='base/index.html', sandbox='allow-same-origin allow-scripts allow-forms')
-    #sg-rightpull-container
-      #sg-rightpull
+.lsg-content-wrapper
+  .lsg-toc-summary
+    h2 Sommaire
+    .lsg-toc-col
+      h3 Base
+        small styles généraux
+      ul
+        - for file, index in public.base._data
+          if index != 'index'
+            li
+              a(href="/ish.html#base/#{index}.html")
+                = file.title
+      h3 Layouts
+        small mises en page réutilisables
+      ul
+        - for layout in public.layouts._data.layouts
+          li
+            a(href="/ish.html#layouts/#{layout}")
+              = layout
+      h3 Composants rédactionnels
+        small éléments rédactionnels réutilisables
+      ul
+        - for component in public.components._data.components
+          li
+            a(href="/ish.html#components/#{component}")
+              = component
+    .lsg-toc-col
+      h3 Modules
+        small éléments d'interface réutilisables
+      ul
+        - for module in public.modules._data.modules
+          li
+            a(href="/ish.html#modules/#{module}")
+              = module
+  .lsg-toc-examples
+    h2 Exemples
+    .lsg-toc-col
+      h3 Templates
+        small gabarits de pages finalisés
+      ul
+        - for template in public.templates._data.templates
+          li
+            a(href="/ish.html#templates/#{template}")
+              = template.replace('.html', '')

@@ -1,13 +1,27 @@
 include block-content
-include ../../helpers/code
+include ../button/button
 
-h2 Default
-.lsg-module
-  +block-content(defaults)
-    p text
+extends ../../helpers/preview
 
-+code({language: "jade"}).
-  include block-content
+append elements
+  h2.lsg-example-title Avec la couleur secondaire en fond et du contenu sous forme de code #[code jade]
 
-  +block-content(#{JSON.stringify(defaults, null, 2)})
-    p text
+  .lsg-elem
+    +block-content({"title": "Title", "modifiers": ["color-secondary-background"]})
+      p Contenu
+      +button({
+        "href": "#",
+        "text": "Action",
+        "modifiers": ["action"]
+      })
+  +code("jade").
+    include block-content
+    include button
+
+    +block-content(#{JSON.stringify({"title": "Title", "modifiers": ["color-secondary-background"]})})
+      p Contenu
+      +button({
+        "href": "#",
+        "text": "action",
+        "modifiers": ["action"]
+      })

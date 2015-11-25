@@ -72,9 +72,10 @@ append content
         +news-list(data.archive.news)
 
 append content
-  .layout-content
-    .layout-wrapper
-      +pagination(data.pagination)
+  if data.pagination
+    .layout-content
+      .layout-wrapper
+        +pagination(data.pagination)
 
 append content
   .layout-content

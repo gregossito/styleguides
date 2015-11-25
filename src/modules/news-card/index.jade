@@ -1,34 +1,3 @@
 include news-card
-include ../../helpers/code
 
-h2 Standard
-.lsg-module(style="max-width: 350px")
-  +news-card(defaults)
-+code({language: "jade"}).
-  include news-card
-
-  +news-card(#{JSON.stringify(defaults, null, 2)})
-
-h2 Test avec valeurs longues
-.lsg-module(style="max-width: 350px")
-  +news-card(long_data)
-+code({language: "jade"}).
-  include news-card
-
-  +news-card(#{JSON.stringify(long_data, null, 2)})
-
-h2 Large
-.lsg-module(style="max-width: 350px")
-  +news-card(large)
-+code({language: "jade"}).
-  include news-card
-
-  +news-card(#{JSON.stringify(large, null, 2)})
-
-h2 Pas d'image
-.lsg-module(style="max-width: 350px")
-  +news-card(no_image)
-+code({language: "jade"}).
-  include news-card
-
-  +news-card(#{JSON.stringify(no_image, null, 2)})
+include ../../helpers/preview

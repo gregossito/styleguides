@@ -1,18 +1,3 @@
 include links
-include ../../helpers/code
 
-h2 Standard
-.lsg-component
-  +links(defaults)
-+code({language: "jade"}).
-  include links
-
-  +links(#{JSON.stringify(defaults, null, 2)})
-
-h2 Sans titre
-.lsg-component
-  +links(without_title)
-+code({language: "jade"}).
-  include links
-
-  +links(#{JSON.stringify(without_title, null, 2)})
+include ../../helpers/preview

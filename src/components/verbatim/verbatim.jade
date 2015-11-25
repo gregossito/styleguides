@@ -10,6 +10,6 @@ mixin verbatim(data)
           = data.author
           | ,
         .verbatim-function= data.function
-      - share = JSON.parse(JSON.stringify(data.share)) // clone the data object
+      - var share = JSON.parse(JSON.stringify(data.share)) // clone the data object
       - share.modifiers = ["circles"] // overwrite the modifiers
       +share(share)

@@ -1,64 +1,82 @@
 {
   "index": {
-    "defaults": {
-      "text": {
-        "label": "Pagination des résultats",
-        "prev": "Page précédente",
-        "next": "Page suivante",
-        "link_title": "Aller à la page ${page}"
-      },
-      "base_url": "/",
-      "url": "/page/${page}",
-      "current": 3,
-      "total": 10
-    },
-    "first": {
-      "text": {
-        "label": "Pagination des résultats",
-        "prev": "Page précédente",
-        "next": "Page suivante",
-        "link_title": "Aller à la page ${page}"
-      },
-      "base_url": "/",
-      "url": "/page/${page}",
-      "current": 1,
-      "total": 10
-    },
-    "second": {
-      "text": {
-        "label": "Pagination des résultats",
-        "prev": "Page précédente",
-        "next": "Page suivante",
-        "link_title": "Aller à la page ${page}"
-      },
-      "base_url": "/",
-      "url": "/page/${page}",
-      "current": 2,
-      "total": 10
-    },
-    "penultimate": {
-      "text": {
-        "label": "Pagination des résultats",
-        "prev": "Page précédente",
-        "next": "Page suivante",
-        "link_title": "Aller à la page ${page}"
-      },
-      "base_url": "/",
-      "url": "/page/${page}",
-      "current": 9,
-      "total": 10
-    },
-    "last": {
-      "text": {
-        "label": "Pagination des résultats",
-        "prev": "Page précédente",
-        "next": "Page suivante",
-        "link_title": "Aller à la page ${page}"
-      },
-      "base_url": "/",
-      "url": "/page/${page}",
-      "current": 10,
-      "total": 10
-    }
+    "type": "pagination",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "text": {
+          "label": "Pagination des résultats",
+          "prev": "Page précédente",
+          "next": "Page suivante",
+          "link_title": "Aller à la page ${page}"
+        },
+        "base_url": "/",
+        "url": "/page/${page}",
+        "current": 3,
+        "total": 10
+      }
+    }, {
+      "title": "Première page",
+      "description": "",
+      "data": {
+        "text": {
+          "label": "Pagination des résultats",
+          "prev": "Page précédente",
+          "next": "Page suivante",
+          "link_title": "Aller à la page ${page}"
+        },
+        "base_url": "/",
+        "url": "/page/${page}",
+        "current": 1,
+        "total": 10
+      }
+    }, {
+      "title": "Deuxième page",
+      "description": "",
+      "data": {
+        "text": {
+          "label": "Pagination des résultats",
+          "prev": "Page précédente",
+          "next": "Page suivante",
+          "link_title": "Aller à la page ${page}"
+        },
+        "base_url": "/",
+        "url": "/page/${page}",
+        "current": 2,
+        "total": 10
+      }
+    }, {
+      "title": "Avant-dernière page",
+      "description": "",
+      "data": {
+        "text": {
+          "label": "Pagination des résultats",
+          "prev": "Page précédente",
+          "next": "Page suivante",
+          "link_title": "Aller à la page ${page}"
+        },
+        "base_url": "/",
+        "url": "/page/${page}",
+        "current": 9,
+        "total": 10
+      }
+    }, {
+      "title": "Dernière page",
+      "description": "",
+      "data": {
+        "text": {
+          "label": "Pagination des résultats",
+          "prev": "Page précédente",
+          "next": "Page suivante",
+          "link_title": "Aller à la page ${page}"
+        },
+        "base_url": "/",
+        "url": "/page/${page}",
+        "current": 10,
+        "total": 10
+      }
+    }]
   }
 }

@@ -1,40 +1,53 @@
 {
   "index": {
-    "defaults": {
-      "action": "#",
-      "input": {
-        "id": "main-search",
-        "placeholder": "Rechercher un service, une information..."
-      },
-      "submit": {
-        "text": "Valider la recherche sur le site",
-        "icon": true
-      },
-      "around": {
-        "href": "http://meslieux.paris.fr",
-        "text": "Autour de moi",
-        "target": "_blank"
+    "type": "search-field",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "action": "#",
+        "input": {
+          "id": "main-search",
+          "placeholder": "Rechercher un service, une information..."
+        },
+        "submit": {
+          "text": "Valider la recherche sur le site",
+          "icon": true
+        },
+        "around": {
+          "href": "http://meslieux.paris.fr",
+          "text": "Autour de moi",
+          "target": "_blank"
+        }
       }
-    },
-    "without_around": {
-      "action": "#",
-      "input": {
-        "placeholder": "Rechercher un service, une information..."
-      },
-      "submit": {
-        "text": "Valider la recherche sur le site",
-        "icon": true
+    }, {
+      "title": "Sans le bouton \"autour de moi\"",
+      "description": "",
+      "data": {
+        "action": "#",
+        "input": {
+          "placeholder": "Rechercher un service, une information..."
+        },
+        "submit": {
+          "text": "Valider la recherche sur le site",
+          "icon": true
+        }
       }
-    },
-    "small": {
-      "action": "#",
-      "modifiers": ["small"],
-      "input": {
-        "placeholder": "Rechercher un nom..."
-      },
-      "submit": {
-        "text": "Ok"
+    }, {
+      "title": "Petit",
+      "description": "",
+      "data": {
+        "action": "#",
+        "modifiers": ["small"],
+        "input": {
+          "placeholder": "Rechercher un nom..."
+        },
+        "submit": {
+          "text": "Ok",
+          "title": "Valider la recherche par nom"
+        }
       }
-    }
+    }]
   }
 }

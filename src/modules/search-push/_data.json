@@ -1,11 +1,18 @@
 {
   "index": {
-    "defaults": {
-      "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
-      "button": {
-        "href": "#",
-        "text": "Rechercher"
+    "type": "search-push",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "title": "Vous n’avez pas trouvé ce que vous cherchez ?",
+        "button": {
+          "href": "#",
+          "text": "Rechercher",
+          "title": "Rechercher sur le site"
+        }
       }
-    }
+    }]
   }
 }

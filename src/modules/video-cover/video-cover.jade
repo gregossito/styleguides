@@ -20,6 +20,6 @@ mixin video-cover(data)
           != data.block
     else
       if data.button
-        - button = JSON.parse(JSON.stringify(data.button)) // clone the data object
+        - var button = JSON.parse(JSON.stringify(data.button)) // clone the data object
         - button.modifiers = ["action"] // overwrite the modifiers
         +button(button)

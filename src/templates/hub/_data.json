@@ -120,51 +120,59 @@
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Culture et patrimoine",
+              "pageTitle": "Culture et patrimoine - Services et infos pratiques",
               "slug": "culture-patrimoine",
               "subnav": {
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Culture et patrimoine\".",
                 "items": [
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Musées et expos",
-                    "text": "Donec id elit non mi porta gravida at eget metus."
+                    "text": "Donec id elit non mi porta gravida at eget metus.",
+                    "pageTitle": "Musées et expos - Culture et patrimoine - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Bibliothèques",
-                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                    "pageTitle": "Bibliothèques - Culture et patrimoine - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Histoire et patrimoine",
-                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                    "pageTitle": "Histoire et patrimoine - Culture et patrimoine - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Photo et cinéma",
-                    "text": "Donec id elit non mi porta gravida at eget metus."
+                    "text": "Donec id elit non mi porta gravida at eget metus.",
+                    "pageTitle": "Photo et cinéma - Culture et patrimoine - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Pratiques artistiques",
-                    "text": "Sollicitudin nibh ultricies ornare."
+                    "text": "Sollicitudin nibh ultricies ornare.",
+                    "pageTitle": "Pratiques artistiques - Culture et patrimoine - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Spectacles",
-                    "text": "Donec ullamcorper nulla non metus auctor"
+                    "text": "Donec ullamcorper nulla non metus auctor",
+                    "pageTitle": "Spectacles - Culture et patrimoine - Services et infos pratiques"
                   }
                 ]
               }
@@ -173,23 +181,27 @@
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Déplacements et stationnement",
+              "pageTitle": "Déplacements et stationnement - Services et infos pratiques",
               "slug": "deplacements-stationnement",
               "subnav": {
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Déplacements et stationnement\".",
                 "items": [
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
-                    "text": "Donec id elit non mi porta gravida at eget metus."
+                    "text": "Donec id elit non mi porta gravida at eget metus.",
+                    "pageTitle": "Titre - Déplacements et stationnement - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
-                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                    "pageTitle": "Titre - Déplacements et stationnement - Services et infos pratiques"
                   }
                 ]
               }
@@ -198,49 +210,81 @@
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Éducation",
-              "slug": "education"
+              "pageTitle": "Éducation - Services et infos pratiques",
+              "slug": "education",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Éducation\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Emploi",
-              "slug": "emploi"
+              "pageTitle": "Emploi - Services et infos pratiques",
+              "slug": "emploi",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Emploi\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Espaces verts et environnement",
-              "slug": "espaces-verts-environnement"
+              "pageTitle": "Espaces verts et environnement - Services et infos pratiques",
+              "slug": "espaces-verts-environnement",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Espaces verts et environnement\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Logement",
-              "slug": "logement"
+              "pageTitle": "Logement - Services et infos pratiques",
+              "slug": "logement",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Logement\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Solidarités",
-              "slug": "solidarites"
+              "pageTitle": "Solidarités - Services et infos pratiques",
+              "slug": "solidarites",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Solidarités\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Sports et loisirs",
-              "slug": "sports-loisirs"
+              "pageTitle": "Sports et loisirs - Services et infos pratiques",
+              "slug": "sports-loisirs",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Sports et loisirs\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Urbanisme",
-              "slug": "urbanisme"
+              "pageTitle": "Urbanisme - Services et infos pratiques",
+              "slug": "urbanisme",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Urbanisme\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Aides, allocations et démarches",
-              "slug": "aides-allocations-demarches"
+              "pageTitle": "Aides, allocations et démarches - Services et infos pratiques",
+              "slug": "aides-allocations-demarches",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Aides, allocations et démarches\"."
+              }
             }
           ],
           "more": {
@@ -567,51 +611,59 @@
               "background": "../hub/hub-heading.png",
               "href": "../hub/subnav-open.html",
               "text": "Culture et patrimoine",
+              "pageTitle": "Culture et patrimoine - Services et infos pratiques",
               "slug": "culture-patrimoine",
               "subnav": {
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Culture et patrimoine\".",
                 "items": [
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Musées et expos",
-                    "text": "Donec id elit non mi porta gravida at eget metus."
+                    "text": "Donec id elit non mi porta gravida at eget metus.",
+                    "pageTitle": "Musées et expos - Culture et patrimoine - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Bibliothèques",
-                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                    "pageTitle": "Bibliothèques - Culture et patrimoine - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Histoire et patrimoine",
-                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                    "pageTitle": "Histoire et patrimoine - Culture et patrimoine - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Photo et cinéma",
-                    "text": "Donec id elit non mi porta gravida at eget metus."
+                    "text": "Donec id elit non mi porta gravida at eget metus.",
+                    "pageTitle": "Photo et cinéma - Culture et patrimoine - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Pratiques artistiques",
-                    "text": "Sollicitudin nibh ultricies ornare."
+                    "text": "Sollicitudin nibh ultricies ornare.",
+                    "pageTitle": "Pratiques artistiques - Culture et patrimoine - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Spectacles",
-                    "text": "Donec ullamcorper nulla non metus auctor"
+                    "text": "Donec ullamcorper nulla non metus auctor",
+                    "pageTitle": "Spectacles - Culture et patrimoine - Services et infos pratiques"
                   }
                 ]
               }
@@ -620,23 +672,27 @@
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Déplacements et stationnement",
+              "pageTitle": "Déplacements et stationnement - Services et infos pratiques",
               "slug": "deplacements-stationnement",
               "subnav": {
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Déplacements et stationnement\".",
                 "items": [
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
-                    "text": "Donec id elit non mi porta gravida at eget metus."
+                    "text": "Donec id elit non mi porta gravida at eget metus.",
+                    "pageTitle": "Titre - Déplacements et stationnement - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
-                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                    "pageTitle": "Titre - Déplacements et stationnement - Services et infos pratiques"
                   }
                 ]
               }
@@ -645,49 +701,81 @@
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Éducation",
-              "slug": "education"
+              "pageTitle": "Éducation - Services et infos pratiques",
+              "slug": "education",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Éducation\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Emploi",
-              "slug": "emploi"
+              "pageTitle": "Emploi - Services et infos pratiques",
+              "slug": "emploi",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Emploi\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Espaces verts et environnement",
-              "slug": "espaces-verts-environnement"
+              "pageTitle": "Espaces verts et environnement - Services et infos pratiques",
+              "slug": "espaces-verts-environnement",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Espaces verts et environnement\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Logement",
-              "slug": "logement"
+              "pageTitle": "Logement - Services et infos pratiques",
+              "slug": "logement",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Logement\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Solidarités",
-              "slug": "solidarites"
+              "pageTitle": "Solidarités - Services et infos pratiques",
+              "slug": "solidarites",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Solidarités\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Sports et loisirs",
-              "slug": "sports-loisirs"
+              "pageTitle": "Sports et loisirs - Services et infos pratiques",
+              "slug": "sports-loisirs",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Sports et loisirs\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Urbanisme",
-              "slug": "urbanisme"
+              "pageTitle": "Urbanisme - Services et infos pratiques",
+              "slug": "urbanisme",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Urbanisme\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Aides, allocations et démarches",
-              "slug": "aides-allocations-demarches"
+              "pageTitle": "Aides, allocations et démarches - Services et infos pratiques",
+              "slug": "aides-allocations-demarches",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Aides, allocations et démarches\"."
+              }
             }
           ],
           "more": {
@@ -1024,52 +1112,60 @@
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Culture et patrimoine",
+              "pageTitle": "Culture et patrimoine - Services et infos pratiques",
               "slug": "culture-patrimoine",
               "subnav": {
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Culture et patrimoine\".",
                 "items": [
+                  {
+                    "href": "../hub/content-open.html",
+                    "json": "../hub/content.json",
+                    "background": "../hub/hub-heading.png",
+                    "title": "Musées et expos",
+                    "text": "Donec id elit non mi porta gravida at eget metus.",
+                    "pageTitle": "Musées et expos - Culture et patrimoine - Services et infos pratiques"
+                  },
                   {
                     "current": true,
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
-                    "title": "Musées et expos",
-                    "text": "Donec id elit non mi porta gravida at eget metus."
-                  },
-                  {
-                    "href": "../hub/content-open.html",
-                    "json": "../hub/content.json",
-                    "background": "../hub/hub-heading.png",
                     "title": "Bibliothèques",
-                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                    "pageTitle": "Bibliothèques - Culture et patrimoine - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Histoire et patrimoine",
-                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                    "pageTitle": "Histoire et patrimoine - Culture et patrimoine - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Photo et cinéma",
-                    "text": "Donec id elit non mi porta gravida at eget metus."
+                    "text": "Donec id elit non mi porta gravida at eget metus.",
+                    "pageTitle": "Photo et cinéma - Culture et patrimoine - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Pratiques artistiques",
-                    "text": "Sollicitudin nibh ultricies ornare."
+                    "text": "Sollicitudin nibh ultricies ornare.",
+                    "pageTitle": "Pratiques artistiques - Culture et patrimoine - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Spectacles",
-                    "text": "Donec ullamcorper nulla non metus auctor"
+                    "text": "Donec ullamcorper nulla non metus auctor",
+                    "pageTitle": "Spectacles - Culture et patrimoine - Services et infos pratiques"
                   }
                 ]
               }
@@ -1078,23 +1174,27 @@
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Déplacements et stationnement",
+              "pageTitle": "Déplacements et stationnement - Services et infos pratiques",
               "slug": "deplacements-stationnement",
               "subnav": {
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Déplacements et stationnement\".",
                 "items": [
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
-                    "text": "Donec id elit non mi porta gravida at eget metus."
+                    "text": "Donec id elit non mi porta gravida at eget metus.",
+                    "pageTitle": "Titre - Déplacements et stationnement - Services et infos pratiques"
                   },
                   {
                     "href": "../hub/content-open.html",
                     "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
-                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                    "pageTitle": "Titre - Déplacements et stationnement - Services et infos pratiques"
                   }
                 ]
               }
@@ -1103,49 +1203,81 @@
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Éducation",
-              "slug": "education"
+              "pageTitle": "Éducation - Services et infos pratiques",
+              "slug": "education",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Éducation\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Emploi",
-              "slug": "emploi"
+              "pageTitle": "Emploi - Services et infos pratiques",
+              "slug": "emploi",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Emploi\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Espaces verts et environnement",
-              "slug": "espaces-verts-environnement"
+              "pageTitle": "Espaces verts et environnement - Services et infos pratiques",
+              "slug": "espaces-verts-environnement",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Espaces verts et environnement\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Logement",
-              "slug": "logement"
+              "pageTitle": "Logement - Services et infos pratiques",
+              "slug": "logement",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Logement\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Solidarités",
-              "slug": "solidarites"
+              "pageTitle": "Solidarités - Services et infos pratiques",
+              "slug": "solidarites",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Solidarités\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Sports et loisirs",
-              "slug": "sports-loisirs"
+              "pageTitle": "Sports et loisirs - Services et infos pratiques",
+              "slug": "sports-loisirs",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Sports et loisirs\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Urbanisme",
-              "slug": "urbanisme"
+              "pageTitle": "Urbanisme - Services et infos pratiques",
+              "slug": "urbanisme",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Urbanisme\"."
+              }
             },
             {
               "href": "../hub/subnav-open.html",
               "background": "../hub/hub-heading.png",
               "text": "Aides, allocations et démarches",
-              "slug": "aides-allocations-demarches"
+              "pageTitle": "Aides, allocations et démarches - Services et infos pratiques",
+              "slug": "aides-allocations-demarches",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Aides, allocations et démarches\"."
+              }
             }
           ],
           "more": {
@@ -1186,6 +1318,8 @@
           }
         },
         "content": {
+          "title": "Bibliothèques",
+          "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Bibliothèques\".",
           "intro": "Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna.",
           "items": [
             {

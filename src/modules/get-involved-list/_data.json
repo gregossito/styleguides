@@ -1,176 +1,189 @@
 {
   "index": {
-    "defaults": {
-      "intro": {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia."
-      },
-      "heading": {
-        "title": "Donnez votre avis"
-      },
-      "nav": {
+    "type": "get-involved-list",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "intro": {
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia."
+        },
+        "heading": {
+          "title": "Donnez votre avis"
+        },
+        "nav": {
+          "title": "Sites participatifs",
+          "items": [
+            {
+              "title": "Madame la Maire,<br />j’ai une idée",
+              "button": {
+                "href": "#",
+                "text": "Voir le site"
+              }
+            },
+            {
+              "title": "Votez pour le budget participatif",
+              "button": {
+                "href": "#",
+                "text": "Voir le site"
+              }
+            },
+            {
+              "title": "E-pétition,<br />prenez la main",
+              "button": {
+                "href": "#",
+                "text": "Voir le site"
+              }
+            }
+          ]
+        },
+        "items_title": "Projets participatifs",
         "items": [
           {
-            "title": "Madame la Maire,<br />j’ai une idée",
+            "category": "Madame la Maire, j’ai une idée",
+            "title": "Création d’un jardin partagé",
             "button": {
               "href": "#",
-              "text": "Voir le site"
+              "text": "Voir la fiche du projet"
             }
           },
           {
-            "title": "Votez pour le budget participatif",
+            "category": "Madame la Maire, j’ai une idée",
+            "title": "S’assurer que le métro circule toute la nuit en continu",
             "button": {
               "href": "#",
-              "text": "Voir le site"
+              "text": "Voir la fiche du projet"
             }
           },
           {
-            "title": "E-pétition,<br />prenez la main",
+            "category": "E-pétition",
+            "title": "Restauration du Pont des Arts",
             "button": {
               "href": "#",
-              "text": "Voir le site"
+              "text": "Voir la fiche du projet"
+            }
+          },
+          {
+            "category": "E-pétition",
+            "title": "Des bibliothèques plus attrayantes, ouvertes le dimanche",
+            "button": {
+              "href": "#",
+              "text": "Voir la fiche du projet"
+            }
+          },
+          {
+            "category": "Budget participatif",
+            "title": "Rendre la rue aux enfants",
+            "button": {
+              "href": "#",
+              "text": "Voir la fiche du projet"
+            }
+          },
+          {
+            "category": "Madame la Maire, j’ai une idée",
+            "title": "Création d’un jardin partagé",
+            "button": {
+              "href": "#",
+              "text": "Voir la fiche du projet"
             }
           }
         ]
-      },
-      "items": [
-        {
-          "category": "Madame la Maire, j’ai une idée",
-          "title": "Création d’un jardin partagé",
-          "button": {
-            "href": "#",
-            "text": "Voir la fiche du projet"
-          }
+      }
+    }, {
+      "title": "Avec les mains",
+      "description": "",
+      "data": {
+        "intro": {
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia."
         },
-        {
-          "category": "Madame la Maire, j’ai une idée",
-          "title": "S’assurer que le métro circule toute la nuit en continu",
-          "button": {
-            "href": "#",
-            "text": "Voir la fiche du projet"
-          }
+        "heading": {
+          "title": "Donnez votre avis"
         },
-        {
-          "category": "E-pétition",
-          "title": "Restauration du Pont des Arts",
-          "button": {
-            "href": "#",
-            "text": "Voir la fiche du projet"
-          }
+        "nav": {
+          "title": "Sites participatifs",
+          "items": [
+            {
+              "title": "Madame la Maire,<br />j’ai une idée",
+              "button": {
+                "href": "#",
+                "text": "Voir le site"
+              }
+            },
+            {
+              "title": "Votez pour le budget participatif",
+              "button": {
+                "href": "#",
+                "text": "Voir le site"
+              }
+            },
+            {
+              "title": "E-pétition,<br />prenez la main",
+              "button": {
+                "href": "#",
+                "text": "Voir le site"
+              }
+            }
+          ]
         },
-        {
-          "category": "E-pétition",
-          "title": "Des bibliothèques plus attrayantes, ouvertes le dimanche",
-          "button": {
-            "href": "#",
-            "text": "Voir la fiche du projet"
-          }
-        },
-        {
-          "category": "Budget participatif",
-          "title": "Rendre la rue aux enfants",
-          "button": {
-            "href": "#",
-            "text": "Voir la fiche du projet"
-          }
-        },
-        {
-          "category": "Madame la Maire, j’ai une idée",
-          "title": "Création d’un jardin partagé",
-          "button": {
-            "href": "#",
-            "text": "Voir la fiche du projet"
-          }
-        }
-      ]
-    },
-    "with_hands": {
-      "intro": {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia."
-      },
-      "heading": {
-        "title": "Donnez votre avis"
-      },
-      "nav": {
+        "items_title": "Projets participatifs",
         "items": [
           {
-            "title": "Madame la Maire,<br />j’ai une idée",
+            "modifiers": ["hand"],
+            "category": "Madame la Maire, j’ai une idée",
+            "title": "Création d’un jardin partagé",
             "button": {
               "href": "#",
-              "text": "Voir le site"
+              "text": "Voir la fiche du projet"
             }
           },
           {
-            "title": "Votez pour le budget participatif",
+            "modifiers": ["hand"],
+            "category": "Madame la Maire, j’ai une idée",
+            "title": "S’assurer que le métro circule toute la nuit en continu",
             "button": {
               "href": "#",
-              "text": "Voir le site"
+              "text": "Voir la fiche du projet"
             }
           },
           {
-            "title": "E-pétition,<br />prenez la main",
+            "modifiers": ["hand"],
+            "category": "E-pétition",
+            "title": "Restauration du Pont des Arts",
             "button": {
               "href": "#",
-              "text": "Voir le site"
+              "text": "Voir la fiche du projet"
+            }
+          },
+          {
+            "modifiers": ["hand"],
+            "category": "E-pétition",
+            "title": "Des bibliothèques plus attrayantes, ouvertes le dimanche",
+            "button": {
+              "href": "#",
+              "text": "Voir la fiche du projet"
+            }
+          },
+          {
+            "modifiers": ["hand"],
+            "category": "Budget participatif",
+            "title": "Rendre la rue aux enfants",
+            "button": {
+              "href": "#",
+              "text": "Voir la fiche du projet"
+            }
+          },
+          {
+            "modifiers": ["hand"],
+            "category": "Madame la Maire, j’ai une idée",
+            "title": "Création d’un jardin partagé",
+            "button": {
+              "href": "#",
+              "text": "Voir la fiche du projet"
             }
           }
         ]
-      },
-      "items": [
-        {
-          "modifiers": ["hand"],
-          "category": "Madame la Maire, j’ai une idée",
-          "title": "Création d’un jardin partagé",
-          "button": {
-            "href": "#",
-            "text": "Voir la fiche du projet"
-          }
-        },
-        {
-          "modifiers": ["hand"],
-          "category": "Madame la Maire, j’ai une idée",
-          "title": "S’assurer que le métro circule toute la nuit en continu",
-          "button": {
-            "href": "#",
-            "text": "Voir la fiche du projet"
-          }
-        },
-        {
-          "modifiers": ["hand"],
-          "category": "E-pétition",
-          "title": "Restauration du Pont des Arts",
-          "button": {
-            "href": "#",
-            "text": "Voir la fiche du projet"
-          }
-        },
-        {
-          "modifiers": ["hand"],
-          "category": "E-pétition",
-          "title": "Des bibliothèques plus attrayantes, ouvertes le dimanche",
-          "button": {
-            "href": "#",
-            "text": "Voir la fiche du projet"
-          }
-        },
-        {
-          "modifiers": ["hand"],
-          "category": "Budget participatif",
-          "title": "Rendre la rue aux enfants",
-          "button": {
-            "href": "#",
-            "text": "Voir la fiche du projet"
-          }
-        },
-        {
-          "modifiers": ["hand"],
-          "category": "Madame la Maire, j’ai une idée",
-          "title": "Création d’un jardin partagé",
-          "button": {
-            "href": "#",
-            "text": "Voir la fiche du projet"
-          }
-        }
-      ]
-    }
+      }
+    }]
   }
 }

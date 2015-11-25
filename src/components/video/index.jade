@@ -1,20 +1,3 @@
 include video
-include ../../helpers/code
 
-p Ce composant accepte un bloc (ou un paramètre <code>block</code>) contenant un code HTML d'embed de vidéo. Il adapte automatiquement la taille de l'<code>iframe</code> en conservant un ratio 16/9.
-
-h2 Standard
-.lsg-component(style="max-width: 500px")
-  +video(defaults)
-+code({language: "jade"}).
-  include video
-
-  +video(#{JSON.stringify(defaults, null, 2)})
-
-h2 Sans prendre en compte le cookie
-.lsg-component(style="max-width: 500px")
-  +video(without_cookie)
-+code({language: "jade"}).
-  include video
-
-  +video(#{JSON.stringify(without_cookie, null, 2)})
+include ../../helpers/preview

@@ -32,7 +32,7 @@ mixin rheader(data)
       nav.rheader-nav#navigation(aria-label=data.navigation_label tabindex="-1" role="navigation")
         ul
           each item in data.items
-            - tag = item.current ? "strong" : "span"
+            - var tag = item.current ? "strong" : "span"
             li.rheader-nav-item(class=item.modifiers class=(item.current ? "current" : null))
               a(href=item.href target=item.target aria-label=(item.hover ? item.text + " " + item.hover : null))
                 if item.icon
@@ -45,7 +45,7 @@ mixin rheader(data)
     if data.modifiers && data.modifiers.indexOf("standalone") !== -1
       +rheader-mobile-nav(data)
   if data.quick_access
-    - quick_access = JSON.parse(JSON.stringify(data.quick_access)) // clone the data object
+    - var quick_access = JSON.parse(JSON.stringify(data.quick_access)) // clone the data object
     - quick_access.id = "rheader-search"
     +quick-access(quick_access)
 

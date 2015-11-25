@@ -1,7 +1,11 @@
 .component-links {
   clear: both;
 
-  h2 {
+  .links-title {
+    color: $gray33;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
     margin-top: 0;
   }
 

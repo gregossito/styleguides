@@ -1,15 +1,15 @@
 mixin button(data)
-  - modifiers = data.modifiers || []
-  - attributes = data.attributes || []
+  - var modifiers = data.modifiers || []
+  - var attributes = data.attributes || []
   if data.href
     if data.icon
       - modifiers.push("icon")
     a.button(href=data.href title=data.title target=data.target class=modifiers)&attributes(attributes)
       if modifiers && modifiers.indexOf("marker") !== -1
-        i.icon.icon-marker
+        i.icon.icon-marker(aria-hidden="true")
       else if data.icon
-        i.icon(class="icon-#{data.icon}")
+        i.icon(class="icon-#{data.icon}" aria-hidden="true")
       span.button-text= data.text
   else
-    button.button(class=modifiers)&attributes(attributes)
+    button.button(class=modifiers title=data.title)&attributes(attributes)
       = data.text

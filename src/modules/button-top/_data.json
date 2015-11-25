@@ -1,7 +1,13 @@
 {
   "index": {
-    "defaults": {
-      "accessibility_label": "retour en haut de la page"
-    }
+    "type": "button-top",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "(scroller pour voir le bouton apparaître en bas à gauche de l'écran)",
+      "data": {
+      	"accessibility_label": "retour en haut de la page"
+      }
+    }]
   }
 }

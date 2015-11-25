@@ -1,13 +1,22 @@
 {
   "index": {
-    "defaults": [
-      {"text": "Mercredi 10 décembre 2014"},
-      {"text": "Sport et loisirs"}
-    ],
-    "links": [
-      {"text": "Adjoint", "href": "#"},
-      {"text": "XIIIè arrondissement", "href": "#"},
-      {"text": "Groupe socialiste et apparentés", "href": "#"}
-    ]
+    "type": "tags",
+    "description": "",
+    "examples": [{
+      "title": "Sans liens",
+      "description": "",
+      "data": [
+        {"text": "Mercredi 10 décembre 2014"},
+        {"text": "Sport et loisirs"}
+      ]
+    }, {
+      "title": "Avec liens",
+      "description": "",
+      "data": [
+        {"text": "Adjoint", "href": "#"},
+        {"text": "XIIIè arrondissement", "href": "#"},
+        {"text": "Groupe socialiste et apparentés", "href": "#"}
+      ]
+    }]
   }
 }

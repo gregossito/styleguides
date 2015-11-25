@@ -1,9 +1,14 @@
 {
   "index": {
-    "defaults": {
-    },
-    "with_block": {
-      "block": "<p>Ceci est un paragraphe d'introduction. Il est automatiquement appliqué au premier paragraphe du premier composant texte.</p><h2>Titre de niveau 2</h2><h3>Titre de niveau 3</h3><h4>Titre de niveau 4</h4><p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent&nbsp;<a href=\"#\">lien d'exemple</a> vel libero magna. Morbi viverra quam orci, ultrices dapibus sem aliquam ut</p><ul><li>Élément de liste</li><li>Élément de liste</li><li>Élément de liste long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;<a href=\"#\">lien d'exemple</a> dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</li></ul><p>Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</p><ol><li>Élément de liste numérotée</li><li>Élément de liste numérotée</li><li>Élément de liste numérotée long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;<a href=\"#\">lien d'exemple</a> dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</li></ol><p>Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</p>"
-    }
+    "type": "text",
+    "description": "Ce composant accepte un bloc (ou un paramètre <code>block</code>) contenant du code HTML.",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "attrs": {},
+      "data": {
+        "block": "<p>Ceci est un paragraphe d'introduction. Il est automatiquement appliqué au premier paragraphe du premier composant texte.</p><h2>Titre de niveau 2</h2><h3>Titre de niveau 3</h3><h4>Titre de niveau 4</h4><p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent&nbsp;<a href=\"#\">lien d'exemple</a> vel libero magna. Morbi viverra quam orci, ultrices dapibus sem aliquam ut</p><ul><li>Élément de liste</li><li>Élément de liste</li><li>Élément de liste long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;<a href=\"#\">lien d'exemple</a> dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</li></ul><p>Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</p><ol><li>Élément de liste numérotée</li><li>Élément de liste numérotée</li><li>Élément de liste numérotée long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;<a href=\"#\">lien d'exemple</a> dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</li></ol><p>Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</p>"
+      }
+    }]
   }
 }

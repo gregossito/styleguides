@@ -1,10 +1,19 @@
 include my-module
-include ../../helpers/code
 
-h2 Standard
-.lsg-module
-  +my-module(defaults)
-+code({language: "jade"}).
-  include my-module
+include ../../helpers/preview
 
-  +my-module(#{JSON.stringify(defaults, null, 2)})
+//- for examples with block
+append elements
+  h2.lsg-example-title Title
+
+  p.lsg-elem-desc Description
+
+  .lsg-elem
+    +my-module({"title": "Example"})
+      p Block
+
+  +code("jade").
+    include my-module
+
+    +my-module(#{JSON.stringify({"title": "Example"})})
+      p Block

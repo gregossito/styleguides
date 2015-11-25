@@ -1,6 +1,6 @@
 mixin image(data)
   .component.component-image(class=data.modifiers)
-    - title = [data.title]
+    - var title = [data.title]
     - if (data.credit) {title.push("(" + data.credit + ")")}
     - title = title.join(" ")
     if data.srcset

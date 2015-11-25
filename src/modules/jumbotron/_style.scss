@@ -25,7 +25,7 @@
   position: relative;
   vertical-align: middle;
 
-  &:after {
+  &:not(.no-overlay):after {
     background: $color-primary; /* Old browsers */
     background: -moz-linear-gradient(left, $color-primary 0%, transparent 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,$color-primary), color-stop(100%,transparent)); /* Chrome,Safari4+ */
@@ -55,13 +55,13 @@
 html.no-js,
 html.no-touch {
   .jumbotron {
-    .jumbotron-wrapper:after {
+    .jumbotron-wrapper:not(.no-overlay):after {
       transition: transform 1s ease;
       transform: translateX(-20%);
     }
 
     &:hover {
-      .jumbotron-wrapper:after {
+      .jumbotron-wrapper:not(.no-overlay):after {
         transform: translateX(0);
       }
     }
@@ -77,6 +77,7 @@ html.no-touch {
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 5px;
+  max-width: 470px;
 }
 
 .jumbotron-text {
@@ -85,6 +86,10 @@ html.no-touch {
   line-height: 28px;
   margin: 0 0 8px;
   max-width: 470px;
+}
+
+.jumbotron-block {
+  float: left;
 }
 
 @include large-and-medium {
@@ -101,5 +106,11 @@ html.no-touch {
     font-size: 40px;
     line-height: 44px;
     margin: 0 0 14px;
+  }
+
+  .jumbotron-block {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }

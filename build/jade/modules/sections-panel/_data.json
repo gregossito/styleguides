@@ -1,192 +1,225 @@
 {
   "index": {
-    "defaults": {
-      "nav": {
-        "base": ".",
-        "items": [
-          {
-            "href": "#",
-            "background": "../modules/hub-heading/hub-heading.png",
-            "text": "Culture et patrimoine",
-            "slug": "culture-patrimoine",
-            "subnav": {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
-              "items": [
-                {
-                  "href": "./content.html",
-                  "json": "./content.json",
-                  "background": "../modules/hub-heading/hub-heading.png",
-                  "title": "Musées et expos",
-                  "text": "Donec id elit non mi porta gravida at eget metus."
-                },
-                {
-                  "href": "./content.html",
-                  "json": "./content.json",
-                  "background": "../modules/hub-heading/hub-heading.png",
-                  "title": "Bibliothèques",
-                  "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
-                },
-                {
-                  "href": "./content.html",
-                  "json": "./content.json",
-                  "background": "../modules/hub-heading/hub-heading.png",
-                  "title": "Histoire et patrimoine",
-                  "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
-                },
-                {
-                  "href": "./content.html",
-                  "json": "./content.json",
-                  "background": "../modules/hub-heading/hub-heading.png",
-                  "title": "Photo et cinéma",
-                  "text": "Donec id elit non mi porta gravida at eget metus."
-                },
-                {
-                  "href": "./content.html",
-                  "json": "./content.json",
-                  "background": "../modules/hub-heading/hub-heading.png",
-                  "title": "Pratiques artistiques",
-                  "text": "Sollicitudin nibh ultricies ornare."
-                },
-                {
-                  "href": "./content.html",
-                  "json": "./content.json",
-                  "background": "../modules/hub-heading/hub-heading.png",
-                  "title": "Spectacles",
-                  "text": "Donec ullamcorper nulla non metus auctor."
-                }
-              ]
+    "type": "sections-panel",
+    "description": "",
+    "examples": [{
+      "title": "",
+      "description": "",
+      "data": {
+        "nav": {
+          "base": ".",
+          "items": [
+            {
+              "href": "#",
+              "background": "../modules/hub-heading/hub-heading.png",
+              "text": "Culture et patrimoine",
+              "slug": "culture-patrimoine",
+              "subnav": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Culture et patrimoine\".",
+                "items": [
+                  {
+                    "href": "./content.html",
+                    "json": "./content.json",
+                    "background": "../modules/hub-heading/hub-heading.png",
+                    "title": "Musées et expos",
+                    "text": "Donec id elit non mi porta gravida at eget metus."
+                  },
+                  {
+                    "href": "./content.html",
+                    "json": "./content.json",
+                    "background": "../modules/hub-heading/hub-heading.png",
+                    "title": "Bibliothèques",
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                  },
+                  {
+                    "href": "./content.html",
+                    "json": "./content.json",
+                    "background": "../modules/hub-heading/hub-heading.png",
+                    "title": "Histoire et patrimoine",
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                  },
+                  {
+                    "href": "./content.html",
+                    "json": "./content.json",
+                    "background": "../modules/hub-heading/hub-heading.png",
+                    "title": "Photo et cinéma",
+                    "text": "Donec id elit non mi porta gravida at eget metus."
+                  },
+                  {
+                    "href": "./content.html",
+                    "json": "./content.json",
+                    "background": "../modules/hub-heading/hub-heading.png",
+                    "title": "Pratiques artistiques",
+                    "text": "Sollicitudin nibh ultricies ornare."
+                  },
+                  {
+                    "href": "./content.html",
+                    "json": "./content.json",
+                    "background": "../modules/hub-heading/hub-heading.png",
+                    "title": "Spectacles",
+                    "text": "Donec ullamcorper nulla non metus auctor."
+                  }
+                ]
+              }
+            },
+            {
+              "href": "#",
+              "background": "../modules/hub-heading/hub-heading.png",
+              "text": "Déplacements et stationnement",
+              "slug": "deplacements-stationnement",
+              "subnav": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Déplacements et stationnement\".",
+                "items": [
+                  {
+                    "href": "./content.html",
+                    "json": "./content.json",
+                    "background": "../modules/hub-heading/hub-heading.png",
+                    "title": "Titre",
+                    "text": "Donec id elit non mi porta gravida at eget metus."
+                  },
+                  {
+                    "href": "./content.html",
+                    "json": "./content.json",
+                    "background": "../modules/hub-heading/hub-heading.png",
+                    "title": "Titre",
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                  }
+                ]
+              }
+            },
+            {
+              "href": "#",
+              "background": "../modules/hub-heading/hub-heading.png",
+              "text": "Éducation",
+              "slug": "education",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Éducation\"."
+              }
+            },
+            {
+              "href": "#",
+              "background": "../modules/hub-heading/hub-heading.png",
+              "text": "Emploi",
+              "slug": "emploi",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Emploi\"."
+              }
+            },
+            {
+              "href": "#",
+              "background": "../modules/hub-heading/hub-heading.png",
+              "text": "Espaces verts et environnement",
+              "slug": "espaces-verts-environnement",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Espaces verts et environnement\"."
+              }
+            },
+            {
+              "href": "#",
+              "background": "../modules/hub-heading/hub-heading.png",
+              "text": "Logement",
+              "slug": "logement",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Logement\"."
+              }
+            },
+            {
+              "href": "#",
+              "background": "../modules/hub-heading/hub-heading.png",
+              "text": "Solidarités",
+              "slug": "solidarites",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Solidarités\"."
+              }
+            },
+            {
+              "href": "#",
+              "background": "../modules/hub-heading/hub-heading.png",
+              "text": "Sports et loisirs",
+              "slug": "sports-loisirs",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Sports et loisirs\"."
+              }
+            },
+            {
+              "href": "#",
+              "background": "../modules/hub-heading/hub-heading.png",
+              "text": "Urbanisme",
+              "slug": "urbanisme",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Urbanisme\"."
+              }
+            },
+            {
+              "href": "#",
+              "background": "../modules/hub-heading/hub-heading.png",
+              "text": "Aides, allocations et démarches",
+              "slug": "aides-allocations-demarches",
+              "subnav": {
+                "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Aides, allocations et démarches\"."
+              }
             }
-          },
-          {
+          ],
+          "more": {
             "href": "#",
-            "background": "../modules/hub-heading/hub-heading.png",
-            "text": "Déplacements et stationnement",
-            "slug": "deplacements-stationnement",
-            "subnav": {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
-              "items": [
-                {
-                  "href": "./content.html",
-                  "json": "./content.json",
-                  "background": "../modules/hub-heading/hub-heading.png",
-                  "title": "Titre",
-                  "text": "Donec id elit non mi porta gravida at eget metus."
-                },
-                {
-                  "href": "./content.html",
-                  "json": "./content.json",
-                  "background": "../modules/hub-heading/hub-heading.png",
-                  "title": "Titre",
-                  "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
-                }
-              ]
-            }
-          },
-          {
-            "href": "#",
-            "background": "../modules/hub-heading/hub-heading.png",
-            "text": "Éducation",
-            "slug": "education"
-          },
-          {
-            "href": "#",
-            "background": "../modules/hub-heading/hub-heading.png",
-            "text": "Emploi",
-            "slug": "emploi"
-          },
-          {
-            "href": "#",
-            "background": "../modules/hub-heading/hub-heading.png",
-            "text": "Espaces verts et environnement",
-            "slug": "espaces-verts-environnement"
-          },
-          {
-            "href": "#",
-            "background": "../modules/hub-heading/hub-heading.png",
-            "text": "Logement",
-            "slug": "logement"
-          },
-          {
-            "href": "#",
-            "background": "../modules/hub-heading/hub-heading.png",
-            "text": "Solidarités",
-            "slug": "solidarites"
-          },
-          {
-            "href": "#",
-            "background": "../modules/hub-heading/hub-heading.png",
-            "text": "Sports et loisirs",
-            "slug": "sports-loisirs"
-          },
-          {
-            "href": "#",
-            "background": "../modules/hub-heading/hub-heading.png",
-            "text": "Urbanisme",
-            "slug": "urbanisme"
-          },
-          {
-            "href": "#",
-            "background": "../modules/hub-heading/hub-heading.png",
-            "text": "Aides, allocations et démarches",
-            "slug": "aides-allocations-demarches"
+            "text": "Vous cherchez autre chose ?"
           }
-        ],
-        "more": {
-          "href": "#",
-          "text": "Vous cherchez autre chose ?"
-        }
-      },
-      "default": {
-        "background": "../hub/hub-heading.png",
-        "links": {
-          "title": "Contenus les plus consultés",
-          "items": [
-            {
-              "href": "#",
-              "text": "Listes des bibliothèques"
-            },
-            {
-              "href": "#",
-              "text": "Bibliothèques de prêt"
-            },
-            {
-              "href": "#",
-              "text": "Bibliothèques spécialisées"
-            },
-            {
-              "href": "#",
-              "text": "Informations pratiques"
-            },
-            {
-              "href": "#",
-              "text": "Collections"
-            },
-            {
-              "href": "#",
-              "text": "Autres bibliothèques"
-            }
-          ]
         },
-        "buttons": {
-          "title": "Les démarches",
-          "items": [
-            {
-              "href": "#",
-              "text": "Catalogue des bibliothèques de prêt"
-            },
-            {
-              "href": "#",
-              "text": "Facil’ Familles"
-            },
-            {
-              "href": "#",
-              "text": "Catalogue des bibliothèques spécialisées"
-            }
-          ]
+        "default": {
+          "background": "../hub/hub-heading.png",
+          "links": {
+            "title": "Contenus les plus consultés",
+            "items": [
+              {
+                "href": "#",
+                "text": "Listes des bibliothèques"
+              },
+              {
+                "href": "#",
+                "text": "Bibliothèques de prêt"
+              },
+              {
+                "href": "#",
+                "text": "Bibliothèques spécialisées"
+              },
+              {
+                "href": "#",
+                "text": "Informations pratiques"
+              },
+              {
+                "href": "#",
+                "text": "Collections"
+              },
+              {
+                "href": "#",
+                "text": "Autres bibliothèques"
+              }
+            ]
+          },
+          "buttons": {
+            "title": "Les démarches",
+            "items": [
+              {
+                "href": "#",
+                "text": "Catalogue des bibliothèques de prêt"
+              },
+              {
+                "href": "#",
+                "text": "Facil’ Familles"
+              },
+              {
+                "href": "#",
+                "text": "Catalogue des bibliothèques spécialisées"
+              }
+            ]
+          }
         }
       }
-    }
+    }]
   },
+
   "content": {
     "layout": false,
     "data": {

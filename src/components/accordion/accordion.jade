@@ -1,8 +1,8 @@
 mixin accordion(data)
-  - uuid = Math.random().toString(36).substr(2, 5)
+  - var uuid = Math.random().toString(36).substr(2, 5)
   .component.component-accordion(role='tablist' aria-multiselectable='true')
     each item, index in data.items
-      - slug = item.slug || uuid + "-" + index
+      - var slug = item.slug || uuid + "-" + index
       .accordion-item.panel
         div(role='tab' id='h-#{slug}')
           a.accordion-item-title(href='##{slug}' aria-controls='##{slug}')

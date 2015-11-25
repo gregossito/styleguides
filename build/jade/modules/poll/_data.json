@@ -1,78 +1,90 @@
 {
   "index": {
-    "defaults": {
-      "id": "poll-1",
-      "heading": "À vous la parole",
-      "title": "Le vélo à Paris, c’est…",
-      "items": [
-        {
+    "type": "poll",
+    "description": "",
+    "examples": [{
+      "title": "Choix unique",
+      "description": "",
+      "data": {
+        "id": "poll-1",
+        "heading": "À vous la parole",
+        "title": "Le vélo à Paris, c’est…",
+        "items": [
+          {
+            "href": "#",
+            "text": "agréable, on voit la ville d’un autre œil",
+            "value": 0
+          },
+          {
+            "href": "#",
+            "text": "efficace pour se déplacer en protégeant l’environnement",
+            "value": 1
+          },
+          {
+            "href": "#",
+            "text": "dangereux",
+            "value": 2
+          },
+          {
+            "href": "#",
+            "text": "je n’ai jamais essayé",
+            "value": 3
+          }
+        ],
+        "thanks": "Merci de votre participation",
+        "more": {
           "href": "#",
-          "text": "agréable, on voit la ville d’un autre œil",
-          "value": 0
-        },
-        {
-          "href": "#",
-          "text": "efficace pour se déplacer en protégeant l’environnement",
-          "value": 1
-        },
-        {
-          "href": "#",
-          "text": "dangereux",
-          "value": 2
-        },
-        {
-          "href": "#",
-          "text": "je n’ai jamais essayé",
-          "value": 3
+          "text": "Accéder à l’espace participatif"
         }
-      ],
-      "thanks": "Merci de votre participation",
-      "more": {
-        "href": "#",
-        "text": "Accéder à l’espace participatif"
       }
-    },
-    "yes_no": {
-      "id": "poll-2",
-      "heading": "À vous la parole",
-      "title": "Etes-vous favorable à une interdiction du diesel à Paris ?",
-      "items": [
-        {
+    }, {
+      "title": "Choix binaire",
+      "description": "",
+      "data": {
+        "id": "poll-2",
+        "heading": "À vous la parole",
+        "title": "Etes-vous favorable à une interdiction du diesel à Paris ?",
+        "items": [
+          {
+            "href": "#",
+            "text": "oui",
+            "value": 1
+          },
+          {
+            "href": "#",
+            "text": "non",
+            "value": 0
+          }
+        ],
+        "thanks": "Merci de votre participation",
+        "more": {
           "href": "#",
-          "text": "oui",
-          "value": 1
+          "text": "Accéder à l’espace participatif"
+        }
+      }
+    }, {
+      "title": "Réponse libre",
+      "description": "",
+      "data": {
+        "id": "poll-3",
+        "heading": "À vous la parole",
+        "title": "Pollution à Paris : que seriez-vous prêt(e) à sacrifier pour améliorer la qualité de l’air dans notre ville ?",
+        "form": {
+          "input": {
+            "placeholder": "Votre réponse",
+            "id": "poll-input"
+          },
+          "submit": {
+            "text": "Envoyer",
+            "title": "Valider votre réponse à la question"
+          }
         },
-        {
+        "thanks": "Merci de votre participation",
+        "more": {
           "href": "#",
-          "text": "non",
-          "value": 0
+          "text": "Accéder à l’espace participatif"
         }
-      ],
-      "thanks": "Merci de votre participation",
-      "more": {
-        "href": "#",
-        "text": "Accéder à l’espace participatif"
       }
-    },
-    "text": {
-      "id": "poll-3",
-      "heading": "À vous la parole",
-      "title": "Pollution à Paris : que seriez-vous prêt(e) à sacrifier pour améliorer la qualité de l’air dans notre ville ?",
-      "form": {
-        "input": {
-          "placeholder": "Votre réponse",
-          "id": "poll-input"
-        },
-        "submit": {
-          "text": "Envoyer",
-          "title": "Valider votre réponse à la question"
-        }
-      },
-      "thanks": "Merci de votre participation",
-      "more": {
-        "href": "#",
-        "text": "Accéder à l’espace participatif"
-      }
-    }
+    }]
   }
 }

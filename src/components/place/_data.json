@@ -1,37 +1,52 @@
 {
   "index": {
-    "defaults": {
-      "title": "Patinoire de l'Hôtel de Ville",
-      "address": "Parvis de l'Hôtel de Ville",
-      "items": [
-        {"icon": "subway", "text": "Métro Hôtel de Ville"}
-      ],
-      "button": {"href": "#", "text": "Voir la fiche"}
-    },
-    "multiple_items": {
-      "title": "Patinoire de l'Hôtel de Ville",
-      "address": "Parvis de l'Hôtel de Ville",
-      "items": [
-        {"icon": "subway", "text": "Métro Hôtel de Ville"},
-        {"icon": "bus", "text": "Lignes 254, 75 et N504"},
-        {"icon": "bicycle", "text": "Vélib à proximité"}
-      ],
-      "button": {"href": "#", "text": "Voir la fiche"}
-    },
-    "without_button": {
-      "title": "Patinoire de l'Hôtel de Ville",
-      "address": "Parvis de l'Hôtel de Ville",
-      "items": [
-        {"icon": "subway", "text": "Métro Hôtel de Ville"}
-      ]
-    },
-    "long_address": {
-      "title": "Patinoire de l'Hôtel de Ville",
-      "address": "Place de l'Hôtel de ville<br />75004 Paris",
-      "items": [
-        {"icon": "subway", "text": "Métro Hôtel de Ville"}
-      ],
-      "button": {"href": "#", "text": "Voir la fiche"}
-    }
+    "type": "place",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "title": "Patinoire de l'Hôtel de Ville",
+        "address": "Parvis de l'Hôtel de Ville",
+        "items": [
+          {"icon": "subway", "text": "Métro Hôtel de Ville"}
+        ],
+        "button": {"href": "#", "text": "Voir la fiche"}
+      }
+    }, {
+      "title": "Avec plusieurs items",
+      "description": "",
+      "data": {
+        "title": "Patinoire de l'Hôtel de Ville",
+        "address": "Parvis de l'Hôtel de Ville",
+        "items": [
+          {"icon": "subway", "text": "Métro Hôtel de Ville"},
+          {"icon": "bus", "text": "Lignes 254, 75 et N504"},
+          {"icon": "bicycle", "text": "Vélib à proximité"}
+        ],
+        "button": {"href": "#", "text": "Voir la fiche"}
+      }
+    }, {
+      "title": "Sans bouton",
+      "description": "",
+      "data": {
+        "title": "Patinoire de l'Hôtel de Ville",
+        "address": "Parvis de l'Hôtel de Ville",
+        "items": [
+          {"icon": "subway", "text": "Métro Hôtel de Ville"}
+        ]
+      }
+    }, {
+      "title": "Adresse sur plusieurs lignes",
+      "description": "",
+      "data": {
+        "title": "Patinoire de l'Hôtel de Ville",
+        "address": "Place de l'Hôtel de ville<br />75004 Paris",
+        "items": [
+          {"icon": "subway", "text": "Métro Hôtel de Ville"}
+        ],
+        "button": {"href": "#", "text": "Voir la fiche"}
+      }
+    }]
   }
 }

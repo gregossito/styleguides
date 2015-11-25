@@ -1,16 +1,36 @@
 {
   "index": {
-    "defaults": {
-      "href": "#",
-      "image": "image.jpg",
-      "title": "Titre",
-      "text": "Texte"
-    },
-    "with_image_white": {
-      "href": "#",
-      "image": "image-white.jpg",
-      "title": "Titre",
-      "text": "Texte"
-    }
+    "type": "jumbotron",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "href": "#",
+        "image": "image.jpg",
+        "title": "Titre",
+        "text": "Texte"
+      }
+    }, {
+      "title": "Test avec image claire",
+      "description": "",
+      "data": {
+        "href": "#",
+        "image": "image-white.jpg",
+        "title": "Titre",
+        "text": "Texte"
+      }
+    }, {
+      "title": "Sans dégradé de couleur",
+      "description": "",
+      "data": {
+        "id": "no-overlay",
+        "href": "#",
+        "image": "image.jpg",
+        "modifiers": ["no-overlay"],
+        "title": "Titre",
+        "text": "Texte"
+      }
+    }]
   }
 }

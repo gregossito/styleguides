@@ -1,11 +1,3 @@
 include skip-links
-include ../../helpers/code
 
-h2 Standard
-p (appuyer à plusieurs reprise sur la touche tabulation du clavier pour voir les liens d'évitement)
-.lsg-module
-  +skip-links(defaults)
-+code({language: "jade"}).
-  include skip-links
-
-  +skip-links(#{JSON.stringify(defaults, null, 2)})
+include ../../helpers/preview

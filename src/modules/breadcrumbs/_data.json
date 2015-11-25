@@ -1,23 +1,29 @@
 {
   "index": {
-    "defaults": {
-      "items": [
-        {
-          "href": "#",
-          "text": "Accueil"
-        },
-        {
-          "href": "#",
-          "text": "Services et infos pratiques"
-        },
-        {
-          "href": "#",
-          "text": "Culture et patrimoine"
-        },
-        {
-          "text": "Bibliothèques"
-        }
-      ]
-    }
+    "type": "breadcrumbs",
+    "description": "Ce module contient une ancre nommée <code>#breadcrumbs</code>. Il ne doit donc être inclus qu'une seule fois dans un template.",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "items": [
+          {
+            "href": "#",
+            "text": "Accueil"
+          },
+          {
+            "href": "#",
+            "text": "Services et infos pratiques"
+          },
+          {
+            "href": "#",
+            "text": "Culture et patrimoine"
+          },
+          {
+            "text": "Bibliothèques"
+          }
+        ]
+      }
+    }]
   }
 }

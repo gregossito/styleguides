@@ -1,6 +1,4 @@
 $footer-small-breakpoint: 650px;
-$footer-small: (max-width: $footer-small-breakpoint - 1px);
-$footer-medium-and-large: (min-width: $footer-small-breakpoint);
 
 .footer {
   font-size: 13px;
@@ -53,7 +51,7 @@ $footer-medium-and-large: (min-width: $footer-small-breakpoint);
   }
 }
 
-@media #{$footer-small} {
+@media (max-width: $footer-small-breakpoint - 1px) {
   .footer {
     text-align: center;
   }
@@ -72,7 +70,7 @@ $footer-medium-and-large: (min-width: $footer-small-breakpoint);
 }
 
 
-@media #{$footer-medium-and-large} {
+@media (min-width: $footer-small-breakpoint) {
   .footer-logo {
     float: left;
     margin: 0 50px 0 0;

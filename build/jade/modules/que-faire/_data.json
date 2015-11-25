@@ -1,22 +1,28 @@
 {
   "index": {
-    "defaults": {
-      "background": "que-faire-back-img.jpg",
-      "logo": {
-        "href": "http://www.quefaire.paris.fr",
-        "image": "que-faire-img.png",
-        "alt": "Que faire à Paris"
-      },
-      "items": [
-        {"href": "#", "text": "Que faire à Paris ce week-end ?", "target": "_blank"},
-        {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre", "target": "_blank"},
-        {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire", "target": "_blank"}
-      ],
-      "more": {
-        "href": "#",
-        "text": "Voir toutes les activités sur «&nbsp;Que faire à Paris&nbsp;»",
-        "modifiers": "more"
+    "type": "que-faire",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "background": "que-faire-back-img.jpg",
+        "logo": {
+          "href": "http://www.quefaire.paris.fr",
+          "image": "que-faire-img.png",
+          "alt": "Que faire à Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Que faire à Paris ce week-end ?", "target": "_blank"},
+          {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre", "target": "_blank"},
+          {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire", "target": "_blank"}
+        ],
+        "more": {
+          "href": "#",
+          "text": "Voir toutes les activités sur «&nbsp;Que faire à Paris&nbsp;»",
+          "modifiers": "more"
+        }
       }
-    }
+    }]
   }
 }

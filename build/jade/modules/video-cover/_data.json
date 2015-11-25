@@ -1,21 +1,33 @@
 {
   "index": {
-    "defaults": {
-      "background": "./background.jpg",
-      "button": {
-        "href": "#",
-        "icon": "play",
-        "text": "Voir sur Dailymotion"
+    "type": "video-cover",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "background": "./background.jpg",
+        "button": {
+          "href": "#",
+          "icon": "play",
+          "text": "Voir sur Dailymotion"
+        }
       }
-    },
-    "with_block": {
-      "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher cette vidéo.",
-      "block": "<iframe id=\"dm_jukebox_iframe\" allowfullscreen=\"true\" allowtransparency=\"true\" style=\"overflow:hidden; margin:0; padding:0; width: 100%; height: 100%;\" marginwidth=\"0\" marginheight=\"0\" src=\"http://www.dailymotion.com/widget/jukebox?list[]=%2Fuser%2Fmairiedeparis%2F1&&autoplay=0&automute=0\" align=\"middle\" width=\"100%\" frameborder=\"0\"></iframe>"
-    },
-    "without_cookie": {
-      "cookie": false,
-      "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher cette vidéo.",
-      "block": "<iframe id=\"dm_jukebox_iframe\" allowfullscreen=\"true\" allowtransparency=\"true\" style=\"overflow:hidden; margin:0; padding:0; width: 100%; height: 100%;\" marginwidth=\"0\" marginheight=\"0\" src=\"http://www.dailymotion.com/widget/jukebox?list[]=%2Fuser%2Fmairiedeparis%2F1&&autoplay=0&automute=0\" align=\"middle\" width=\"100%\" frameborder=\"0\"></iframe>"
-    }
+    }, {
+      "title": "Avec un contenu HTML",
+      "description": "",
+      "data": {
+        "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher cette vidéo.",
+        "block": "<iframe id=\"dm_jukebox_iframe\" allowfullscreen=\"true\" allowtransparency=\"true\" style=\"overflow:hidden; margin:0; padding:0; width: 100%; height: 100%;\" marginwidth=\"0\" marginheight=\"0\" src=\"http://www.dailymotion.com/widget/jukebox?list[]=%2Fuser%2Fmairiedeparis%2F1&&autoplay=0&automute=0\" align=\"middle\" width=\"100%\" frameborder=\"0\"></iframe>"
+      }
+    }, {
+      "title": "Sans prendre en compte le cookie",
+      "description": "",
+      "data": {
+        "cookie": false,
+        "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher cette vidéo.",
+        "block": "<iframe id=\"dm_jukebox_iframe\" allowfullscreen=\"true\" allowtransparency=\"true\" style=\"overflow:hidden; margin:0; padding:0; width: 100%; height: 100%;\" marginwidth=\"0\" marginheight=\"0\" src=\"http://www.dailymotion.com/widget/jukebox?list[]=%2Fuser%2Fmairiedeparis%2F1&&autoplay=0&automute=0\" align=\"middle\" width=\"100%\" frameborder=\"0\"></iframe>"
+      }
+    }]
   }
 }

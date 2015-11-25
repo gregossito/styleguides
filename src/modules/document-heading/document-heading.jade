@@ -10,7 +10,7 @@ mixin document-heading(data)
           if data.icons
             .document-heading-icons
               each icon in data.icons
-                - modifiers = JSON.parse(JSON.stringify(icon.modifiers || [])) // clone the data object
+                - var modifiers = JSON.parse(JSON.stringify(icon.modifiers || [])) // clone the data object
                 - modifiers.push("icon-" + icon.name)
                 a.icon(href=icon.href title=icon.title target=icon.target class=modifiers)
           if data.tags

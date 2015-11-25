@@ -2,7 +2,7 @@ include ../../modules/block-content/block-content
 include ../../modules/button/button
 
 mixin block-content-newsletter(data)
-  - modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
+  - var modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
   - modifiers.push("block-content-newsletter")
   +block-content({"title": data.title, "modifiers": modifiers, "attributes": {"data-thanks": data.thanks}})
     p.block-content-text= data.text
@@ -11,7 +11,7 @@ mixin block-content-newsletter(data)
         input(type="email" placeholder=data.input.placeholder title=data.input.placeholder id=data.input.id name=data.input.name required=true aria-required="true")
         button.button.action(type="submit" title=data.submit.title)= data.submit.text
     else if data.button
-      - button = JSON.parse(JSON.stringify(data.button || [])) // clone the data object
+      - var button = JSON.parse(JSON.stringify(data.button || [])) // clone the data object
       - button.modifiers = button.modifiers || []
       - button.modifiers.push("action")
       +button(button)

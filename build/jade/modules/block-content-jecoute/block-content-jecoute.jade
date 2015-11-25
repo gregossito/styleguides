@@ -2,7 +2,7 @@ include ../../modules/block-content/block-content
 include ../../modules/button/button
 
 mixin block-content-jecoute(data)
-  - modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
+  - var modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
   - modifiers.push("block-content-jecoute")
   +block-content({"title": data.title, "modifiers": modifiers})
     if data.items && data.items.length
@@ -23,7 +23,7 @@ mixin block-content-jecoute(data)
                 .text!= item.answer.text
     if data.text
       p.block-content-text= data.text
-    - button = JSON.parse(JSON.stringify(data.button)) // clone the data object
+    - var button = JSON.parse(JSON.stringify(data.button)) // clone the data object
     - button.modifiers = ["action"] // overwrite the modifiers
     .block-content-button
       +button(button)

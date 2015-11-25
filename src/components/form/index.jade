@@ -1,18 +1,3 @@
 include form
-include ../../helpers/code
 
-h2 Standard
-.lsg-component
-  +form(defaults)
-+code({language: "jade"}).
-  include form
-
-  +form(#{JSON.stringify(defaults, null, 2)})
-
-h2 Complet
-.lsg-component
-  +form(full)
-+code({language: "jade"}).
-  include form
-
-  +form(#{JSON.stringify(full, null, 2)})
+include ../../helpers/preview

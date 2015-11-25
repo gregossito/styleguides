@@ -4,13 +4,13 @@ include ../../components/buttons/buttons
 include ../../components/links/links
 
 mixin sections-panel(data)
-  - has_current_item = false
-  - has_content = typeof data.content !== 'undefined'
+  - var has_current_item = false
+  - var has_content = typeof data.content !== 'undefined'
   each item in data.nav.items
     - if (item.current === true) {current_item = item; has_current_item = true;}
   .sections-panel(class=(has_content ? "has-content" : ""))
     if data.nav
-      - nav_classes = []
+      - var nav_classes = []
       - if (has_current_item) {nav_classes.push('has-current-item');}
       - if (has_content) {nav_classes.push('closed');}
       .sections-panel-nav(class=nav_classes)
@@ -18,13 +18,12 @@ mixin sections-panel(data)
           ul.sections-panel-nav-items
             each item in data.nav.items
               li.sections-panel-nav-item
-                a(href=item.href data-subnav-section=item.slug data-background=item.background data-page-title=item.pageTitle class=(item.current ? "current" : ""))= item.text
+                a(href=item.href data-subnav-section=item.slug data-background=item.background data-page-title=item.pageTitle class=(item.current ? "current" : "") aria-expanded=(item.current ? "true" : "false") aria-controls="subnav-#{item.slug}" aria-owns="subnav-#{item.slug}")= item.text
         if data.nav.more
-          - more = JSON.parse(JSON.stringify(data.nav.more)) // clone the data object
+          - var more = JSON.parse(JSON.stringify(data.nav.more)) // clone the data object
           - more.modifiers = ["action", "white", "small", "sections-panel-nav-more"]
           +button(more)
       .sections-panel-subnav#sections-panel-subnav(class=(has_current_item ? "has-current-item" : ""))
-        a.sections-panel-back.sections-panel-subnav-back(href=data.base)
         .sections-panel-subnav-default(data-background=data.default.background)
           if data.default.links
             +block-aside-links(data.default.links)
@@ -32,29 +31,47 @@ mixin sections-panel(data)
             +buttons(data.default.buttons)
         each item in data.nav.items
           .sections-panel-subnav-section(id="subnav-#{item.slug}" data-nav-item=item.slug class=(item.current ? "current" : ""))
+            h2.sections-panel-subnav-title.hidden-accessibly= item.text
             if item.subnav && item.subnav.items && item.subnav.items.length
+              if item.subnav.accessibility_text
+                p.hidden-accessibly= item.subnav.accessibility_text
               if item.subnav.text
-                .sections-panel-intro= item.subnav.text
+                p.sections-panel-intro= item.subnav.text
               ul.sections-panel-subnav-items
                 each subitem in item.subnav.items
                   li.sections-panel-subnav-item
-                    a(href=subitem.href data-background=subitem.background data-json=subitem.json data-page-title=subitem.pageTitle class=(subitem.current ? "current" : ""))
+                    a(href=subitem.href data-background=subitem.background data-json=subitem.json data-page-title=subitem.pageTitle class=(subitem.current ? "current" : "") aria-expanded=(subitem.current ? "true" : "false") aria-controls='sections-panel-content' aria-owns='sections-panel-content')
                       .sections-panel-subnav-item-title= subitem.title
                       .sections-panel-subnav-item-text= subitem.text
+        a.sections-panel-back.sections-panel-subnav-back(href=data.base)
+          span.accessibility_label
     .sections-panel-content#sections-panel-content
-      a.sections-panel-back.sections-panel-content-back(href=current_item ? current_item.href : "")
       .sections-panel-content-wrapper
         if has_content
-          if data.content.intro
-            .sections-panel-intro= data.content.intro
-          if data.content.items && data.content.items.length
-            ul.sections-panel-content-items
-              each item in data.content.items
-                li.sections-panel-content-item
-                  a(href=item.href)
-                    .sections-panel-content-item-title= item.title
-                    .sections-panel-content-item-text= item.text
-          if data.content.buttons
-            +buttons(data.content.buttons)
-          if data.content.more_links
-            +links(data.content.more_links)
+          +sections-panel-content(data.content)
+      a.sections-panel-back.sections-panel-content-back(href=current_item ? current_item.href : "")
+        span.accessibility_label
+
+
+mixin sections-panel-content(data)
+  if data.title
+    h3.hidden-accessibly= data.title
+  if data.accessibility_text
+    p.hidden-accessibly= data.accessibility_text
+  if data.intro
+    p.sections-panel-intro= data.intro
+  if data.items && data.items.length
+    ul.sections-panel-content-items
+      each item in data.items
+        li.sections-panel-content-item
+          a(href=item.href)
+            .sections-panel-content-item-title= item.title
+            .sections-panel-content-item-text= item.text
+  if data.buttons && data.buttons.items && data.buttons.items.length
+    - var buttons = JSON.parse(JSON.stringify(data.buttons)) // clone the data object
+    - buttons.title_tag = 'h3'
+    +buttons(buttons)
+  if data.more_links && data.more_links.items && data.more_links.items.length
+    - var more_links = JSON.parse(JSON.stringify(data.more_links)) // clone the data object
+    - more_links.title_tag = 'h3'
+    +links(more_links)

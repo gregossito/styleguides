@@ -1,18 +1,3 @@
 include block-aside-contact
-include ../../helpers/code
 
-h2 Standard
-.lsg-module
-  +block-aside-contact(defaults)
-+code({language: "jade"}).
-  include block-aside-contact
-
-  +block-aside-contact(#{JSON.stringify(defaults, null, 2)})
-
-h2 Adresse postale et réseaux sociaux
-.lsg-module
-  +block-aside-contact(postal_with_social)
-+code({language: "jade"}).
-  include block-aside-contact
-
-  +block-aside-contact(#{JSON.stringify(postal_with_social, null, 2)})
+extends ../../helpers/preview

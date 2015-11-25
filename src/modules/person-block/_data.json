@@ -1,13 +1,19 @@
 {
   "index": {
-    "defaults": {
-      "href": "#",
-      "image": "../../modules/person-block/portrait.jpg",
-      "title": "Bruno Julliard",
-      "text": "Premier adjoint, Groupe socialiste et apparentés",
-      "button": {
-        "text": "Voir la fiche"
+    "type": "person-block",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "href": "#",
+        "image": "../../modules/person-block/portrait.jpg",
+        "title": "Bruno Julliard",
+        "text": "Premier adjoint, Groupe socialiste et apparentés",
+        "button": {
+          "text": "Voir la fiche"
+        }
       }
-    }
+    }]
   }
 }

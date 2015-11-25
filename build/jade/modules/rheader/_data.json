@@ -1,75 +1,81 @@
 {
   "index": {
-    "defaults": {
-      "logo": {
-        "href": "/",
-        "text": "Paris",
-        "h1": true
-      },
-      "locales": [
-        {"href": "#fr", "lang": "fr", "text": "français", "current": true},
-        {"href": "#en", "lang": "en", "text": "English"},
-        {"href": "#es", "lang": "es", "text": "español"}
-      ],
-      "buttons": {
-        "search": {
-          "href": "#",
-          "icon": "search",
-          "text": "Recherche"
+    "type": "rheader",
+    "description": "",
+    "examples": [{
+      "title": "",
+      "description": "",
+      "data": {
+        "logo": {
+          "href": "/",
+          "text": "Paris",
+          "h1": true
         },
-        "around": {
-          "href": "#",
-          "icon": "marker",
-          "text": "Autour de moi"
-        },
-        "menu": {
-          "href": "#",
-          "text": "Menu"
-        }
-      },
-      "navigation_label": "navigation principale",
-      "items": [
-        {"href": "#", "text": "Services et infos pratiques"},
-        {"href": "#", "text": "Actualités"},
-        {"href": "#", "text": "Entreprises"},
-        {"href": "#", "text": "Municipalité"},
-        {
-          "href": "#",
-          "text": "Participez !",
-          "hover": "C'est à vous !",
-          "modifiers": ["get-involved"]
-        },
-        {
-          "href": "#",
-          "icon": "profile",
-          "text": "Mon compte",
-          "modifiers": ["account"]
-        }
-      ],
-      "quick_access": {
-        "search": {
-          "action": "#",
-          "input": {
-            "placeholder": "Rechercher un service, une information..."
-          },
-          "submit": {
-            "text": "Valider la recherche sur le site",
-            "icon": true
+        "locales": [
+          {"href": "#fr", "lang": "fr", "text": "français", "current": true},
+          {"href": "#en", "lang": "en", "text": "English"},
+          {"href": "#es", "lang": "es", "text": "español"}
+        ],
+        "buttons": {
+          "search": {
+            "href": "#",
+            "icon": "search",
+            "text": "Recherche"
           },
           "around": {
-            "href": "http://meslieux.paris.fr",
-            "text": "Autour de moi",
-            "target": "_blank"
-          },
-          "close_label": "Fermer le moteur de recherche"
-        },
-        "results": {
-          "button": {
             "href": "#",
-            "text": "Voir tous les résultats"
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "#",
+            "text": "Menu"
+          }
+        },
+        "navigation_label": "navigation principale",
+        "items": [
+          {"href": "#", "text": "Services et infos pratiques"},
+          {"href": "#", "text": "Actualités"},
+          {"href": "#", "text": "Entreprises"},
+          {"href": "#", "text": "Municipalité"},
+          {
+            "href": "#",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
+          },
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
+          }
+        ],
+        "quick_access": {
+          "search": {
+            "action": "#",
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Valider la recherche sur le site",
+              "icon": true
+            },
+            "around": {
+              "href": "http://meslieux.paris.fr",
+              "text": "Autour de moi",
+              "target": "_blank"
+            },
+            "close_label": "Fermer le moteur de recherche"
+          },
+          "results": {
+            "button": {
+              "href": "#",
+              "text": "Voir tous les résultats"
+            }
           }
         }
       }
-    }
+    }]
   }
 }

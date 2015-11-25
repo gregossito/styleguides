@@ -1,46 +1,38 @@
 include text
-include ../../modules/button/button
-include ../../helpers/code
 
-p Ce composant accepte un bloc (ou un paramètre <code>block</code>) contenant du code HTML.
+include ../../helpers/preview
 
-h2 Standard
-.lsg-component(style="max-width: 700px")
-  +text(with_block)
-+code({language: "jade"}).
-  include text
+append elements
+  h2.lsg-example-title En passant sous forme de bloc
 
-  +text(#{JSON.stringify(with_block, null, 2)})
-
-h2 En passant sous forme de bloc
-.lsg-component(style="max-width: 700px")
-  +text
-    h2 Titre de niveau 2
-    p
-      | Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent&nbsp;
-      a(href='#') lien d'exemple
-      |  vel libero magna. Morbi viverra quam orci, ultrices dapibus sem aliquam ut
-    ul
-      li Élément de liste
-      li Élément de liste
-      li
-        | Élément de liste long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;
+  .lsg-elem
+    +text
+      h2 Titre de niveau 2
+      p
+        | Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent&nbsp;
         a(href='#') lien d'exemple
-        |  dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
-+code({language: "jade"}).
-  include text
-  include ../../modules/button/button
+        |  vel libero magna. Morbi viverra quam orci, ultrices dapibus sem aliquam ut
+      ul
+        li Élément de liste
+        li Élément de liste
+        li
+          | Élément de liste long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;
+          a(href='#') lien d'exemple
+          |  dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
 
-  +text
-    h2 Titre de niveau 2
-    p
-      | Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent&nbsp;
-      a(href='#') lien d'exemple
-      |  vel libero magna. Morbi viverra quam orci, ultrices dapibus sem aliquam ut
-    ul
-      li Élément de liste
-      li Élément de liste
-      li
-        | Élément de liste long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;
+  +code("jade").
+    include text
+
+    +text
+      h2 Titre de niveau 2
+      p
+        | Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent&nbsp;
         a(href='#') lien d'exemple
-        |  dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
+        |  vel libero magna. Morbi viverra quam orci, ultrices dapibus sem aliquam ut
+      ul
+        li Élément de liste
+        li Élément de liste
+        li
+          | Élément de liste long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;
+          a(href='#') lien d'exemple
+          |  dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.

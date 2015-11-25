@@ -1,26 +1,3 @@
 include block-aside-links
-include ../../helpers/code
 
-h2 Standard
-.lsg-module
-  +block-aside-links(defaults)
-+code({language: "jade"}).
-  include block-aside-links
-
-  +block-aside-links(#{JSON.stringify(defaults, null, 2)})
-
-h2 Avec un item courant
-.lsg-module
-  +block-aside-links(with_current)
-+code({language: "jade"}).
-  include block-aside-links
-
-  +block-aside-links(#{JSON.stringify(with_current, null, 2)})
-
-h2 Avec un item courant et les liens mis en avant
-.lsg-module
-  +block-aside-links(with_emphasis_links)
-+code({language: "jade"}).
-  include block-aside-links
-
-  +block-aside-links(#{JSON.stringify(with_emphasis_links, null, 2)})
+extends ../../helpers/preview

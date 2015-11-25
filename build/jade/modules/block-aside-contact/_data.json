@@ -1,69 +1,76 @@
 {
   "index": {
-    "defaults": {
+    "type": "block-aside-contact",
+    "description": "Ce module sera généralement utilisé dans la colonne de gauche/droite d'une page.<br>Il permet de préciser des informations de contact.",
+    "examples": [{
+      "title": "Standard",
+      "data": {
+        "title": "Contact",
+        "items": [
+          {
+            "title": "Tél.",
+            "hcard_properties": ["tel", "p-tel"],
+            "text": "01 45 39 89 29",
+            "href": "tel:+33145398929"
+          },
+          {
+            "title": "Courriel",
+            "hcard_properties": ["email", "u-email"],
+            "text": "mapiscine@paris.fr",
+            "href": "mailto:mapiscine@paris.fr"
+          }
+        ]
+      }
+    }, {
+      "title": "Avec icônes et/ou liens",
+      "data": {
       "title": "Contact",
-      "items": [
-        {
-          "title": "Tél.",
-          "hcard_properties": ["tel", "p-tel"],
-          "text": "01 45 39 89 29",
-          "href": "tel:+33145398929"
-        },
-        {
-          "title": "Courriel",
-          "hcard_properties": ["email", "u-email"],
-          "text": "mapiscine@paris.fr",
-          "href": "mailto:mapiscine@paris.fr"
-        }
-      ]
-    },
-    "postal_with_social": {
-      "title": "Contact",
-      "items": [
-        {
-          "hcard_properties": ["org", "p-org"],
-          "text": "Mairie du XIIIe arrondissement"
-        },
-        {
-          "hcard_properties": ["street-address", "p-street-address"],
-          "text": "1 place d’Italie"
-        },
-        {
-          "hcard_properties": ["postal-code", "p-postal-code"],
-          "text": "75013"
-        },
-        {
-          "hcard_properties": ["locality", "p-locality"],
-          "text": "Paris"
-        },
-        {
-          "title": "Tél.",
-          "hcard_properties": ["tel", "p-tel"],
-          "text": "01 45 39 89 29",
-          "href": "tel:+33145398929"
-        },
-        {
-          "title": "Compte Twitter",
-          "icon": "twitter",
-          "modifiers": ["social-twitter"],
-          "text": "@BrunoJulliard",
-          "href": "http://twitter.com/BrunoJulliard"
-        },
-        {
-          "title": "Compte Facebook",
-          "icon": "facebook",
-          "modifiers": ["social-facebook"],
-          "text": "Facebook",
-          "href": "https://www.facebook.com/pages/Bruno-Julliard/203706546958"
-        },
-        {
-          "title": "Compte Instagram",
-          "icon": "instagram",
-          "modifiers": ["social-instagram"],
-          "text": "Instagram",
-          "href": "#"
-        }
-      ]
-    }
+        "items": [
+          {
+            "hcard_properties": ["org", "p-org"],
+            "text": "Mairie du XIIIe arrondissement"
+          },
+          {
+            "hcard_properties": ["street-address", "p-street-address"],
+            "text": "1 place d’Italie"
+          },
+          {
+            "hcard_properties": ["postal-code", "p-postal-code"],
+            "text": "75013"
+          },
+          {
+            "hcard_properties": ["locality", "p-locality"],
+            "text": "Paris"
+          },
+          {
+            "title": "Tél.",
+            "hcard_properties": ["tel", "p-tel"],
+            "text": "01 45 39 89 29",
+            "href": "tel:+33145398929"
+          },
+          {
+            "title": "Compte Twitter",
+            "icon": "twitter",
+            "modifiers": ["social-twitter"],
+            "text": "@BrunoJulliard",
+            "href": "http://twitter.com/BrunoJulliard"
+          },
+          {
+            "title": "Compte Facebook",
+            "icon": "facebook",
+            "modifiers": ["social-facebook"],
+            "text": "Facebook",
+            "href": "https://www.facebook.com/pages/Bruno-Julliard/203706546958"
+          },
+          {
+            "title": "Compte Instagram",
+            "icon": "instagram",
+            "modifiers": ["social-instagram"],
+            "text": "Instagram",
+            "href": "#"
+          }
+        ]
+      }
+    }]
   }
 }

@@ -1,7 +1,7 @@
 include ../block-aside/block-aside
 
 mixin block-aside-contact(data)
-  - block_modifiers = data.modifiers || []
+  - var block_modifiers = data.modifiers || []
   - block_modifiers.push("block-aside-contact")
   +block-aside({"title": data.title, "modifiers": block_modifiers})
     ul.block-aside-items

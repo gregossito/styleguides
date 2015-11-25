@@ -225,6 +225,7 @@
         {
           "type": "video",
           "data": {
+            "title": "Venez patiner devant l'Hôtel de Ville !",
             "placeholder": "Le site Paris.fr utilise des cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. En poursuivant votre navigation sur ce site, vous acceptez leur utilisation. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>.<br /><br /><a href=\"#\" data-action=\"allow_cookies\" class=\"button action\">accepter</a>",
             "block": "<iframe frameborder=\"0\" width=\"480\" height=\"270\" src=\"//www.dailymotion.com/embed/video/xn4p8l\" allowfullscreen></iframe><br /><a href=\"http://www.dailymotion.com/video/xn4p8l_venez-patiner-devant-l-hotel-de-ville_people\" target=\"_blank\">Venez patiner devant l&#039;H&ocirc;tel de Ville!</a> <i>par <a href=\"http://www.dailymotion.com/mairiedeparis\" target=\"_blank\">mairiedeparis</a></i>"
           }

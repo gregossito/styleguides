@@ -2,7 +2,7 @@ mixin news-push(data)
   .component.component-news-push
     .news-push-wrapper
       .news-push-after
-      - title = [data.title]
+      - var title = [data.title]
       if data.image.credit
         - title.push("(" + data.image.credit + ")")
       a.news-push-image(href=data.href)

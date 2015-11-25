@@ -1,9 +1,3 @@
 include faq
-include ../../helpers/code
 
-.lsg-component
-  +faq(defaults)
-+code({language: "jade"}).
-  include faq
-
-  +faq(#{JSON.stringify(defaults, null, 2)})
+include ../../helpers/preview

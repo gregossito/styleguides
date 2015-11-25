@@ -1,7 +1,8 @@
 mixin links(data)
   .component.component-links
     if data.title
-      h2= data.title
+      - var title_tag = data.title_tag || 'h2'
+      #{title_tag}.links-title= data.title
     ul.links-items
       each item in data.items
         li.links-item(class=item.modifiers)

@@ -1,27 +1,3 @@
 include jecoute
-include ../../helpers/code
 
-h2 Standard
-.lsg-component
-  +jecoute(defaults)
-+code({language: "jade"}).
-  include jecoute
-
-  +jecoute(#{JSON.stringify(defaults, null, 2)})
-
-h2 Champs pré-remplis
-.lsg-component
-  +jecoute(values)
-+code({language: "jade"}).
-  include jecoute
-
-  +jecoute(#{JSON.stringify(values, null, 2)})
-
-h2 Avec ajout de fichiers
-.lsg-component
-  +jecoute(with_files)
-+code({language: "jade"}).
-  include jecoute
-
-  +jecoute(#{JSON.stringify(with_files, null, 2)})
-
+include ../../helpers/preview

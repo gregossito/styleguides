@@ -1,11 +1,17 @@
 {
   "index": {
-    "defaults": {
-      "items": [
-        {"href": "#content", "text": "Aller au contenu"},
-        {"href": "#navigation", "text": "Aller à la navigation"},
-        {"href": "#search", "text": "Aller à la recherche"}
-      ]
-    }
+    "type": "skip-links",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "(appuyer à plusieurs reprise sur la touche tabulation du clavier pour voir les liens d'évitement)",
+      "data": {
+        "items": [
+          {"href": "#content", "text": "Aller au contenu"},
+          {"href": "#navigation", "text": "Aller à la navigation"},
+          {"href": "#search", "text": "Aller à la recherche"}
+        ]
+      }
+    }]
   }
 }

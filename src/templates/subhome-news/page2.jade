@@ -16,9 +16,14 @@ include ../../modules/notice/notice
 include ../../modules/pagination/pagination
 include ../../modules/que-faire/que-faire
 include ../../modules/rheader/rheader
+include ../../modules/skip-links/skip-links
 include ../../modules/search-push/search-push
 
-append content
+append header
+  if data.skip_links
+    +skip-links(data.skip_links)
+
+append header
   +rheader(data.rheader)
 
 append content
@@ -41,9 +46,10 @@ append content
         +news-list(data.archive.news)
 
 append content
-  .layout-content
-    .layout-wrapper
-      +pagination(data.pagination)
+  if data.pagination
+    .layout-content
+      .layout-wrapper
+        +pagination(data.pagination)
 
 append content
   .layout-content
@@ -82,13 +88,13 @@ append content
           .layout-content
             +block-content-social(data.connected.social)
 
-append content
+append footer
   .layout-content.layout-adjacent-before
     +footer(data.footer)
 
-append content
+append footer
   +button-top(data.button_top)
 
-append content
+append footer
   if data.notices && data.notices.cnil
     +notice(data.notices.cnil)

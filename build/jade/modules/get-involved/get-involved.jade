@@ -6,9 +6,6 @@ mixin get-involved(data)
       +heading(data.heading)
       ul.get-involved-items
         each item in data.items
-          - title = [item.image.title]
-          - if (item.image.credit) {title.push("(" + item.image.credit + ")")}
-          - title = title.join(" ")
           li.get-involved-item
-            a.get-involved-card(href=item.href style="background-image: url(#{item.image.src});" title=title class=item.modifiers)
+            a.get-involved-card(href=item.href style="background-image: url(#{item.image.src});" class=item.modifiers)
               div.get-involved-text= item.text

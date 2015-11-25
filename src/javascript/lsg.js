@@ -2,75 +2,116 @@
 
 'use strict';
 
-var lsg = window.lsg = {};
+var lsg = window.lsg || {};
 
-
-lsg.nav = function(){
+lsg.nav = function nav() {
 
   // DOM
+  var $lsg = $('.lsg');
+  var $toggle = $('.lsg-nav-toggle');
   var $nav = $('.lsg-nav');
   var $navLinks = $nav.find('.lsg-nav-content a');
-  var $iframe = $('#sg-viewport');
-  var $toggle = $('.lsg-nav-toggle');
+  var $iframe = $('#ish-viewport');
 
-  var toggleNav = function () {
-    $nav.toggleClass('lsg-nav-open');
+  var openMenu = function openMenu() {
+    if ($toggle.hasClass('lsg-nav-sticky')) return;
+
+    $lsg.addClass('lsg-nav-open');
   };
 
-  var openeMenu = function () {
-    $nav.addClass('lsg-nav-open');
+  var closeMenu = function closeMenu() {
+    if ($toggle.hasClass('lsg-nav-sticky')) return;
+
+    $lsg.removeClass('lsg-nav-open');
   };
 
-  var closeMenu = function () {
-    $nav.removeClass('lsg-nav-open');
+  var toggleStickyMenu = function toggleStickyMenu() {
+    $toggle.toggleClass('lsg-nav-sticky');
   };
 
-  var openLink = function(url){
-    $iframe.attr('src', url);
-    closeMenu();
-  };
-
-  $navLinks.on('click', function(e){
+  var openLink = function openLink(e) {
     e.preventDefault();
-    $navLinks.removeClass('is-current');
-    $(this).addClass('is-current');
-    openLink($(this).attr('href'));
+    var $link = $(this);
+
+    if ($iframe.length) {
+      $navLinks.removeClass('is-current');
+      $link.addClass('is-current');
+      $iframe.attr('src', $link.attr('href'));
+
+      var hashes = window.location.hash.split('#');
+      if (hashes[1]) {
+        hashes[1] = $link.attr('href');
+        window.location.hash = hashes.join('#');
+      }
+      else {
+        window.location.hash += '#'+$link.attr('href');
+      }
+    }
+    else {
+      var href = "";
+      href += window.location.origin;
+      href += "/ish.html#";
+      href += $link.attr('href');
+
+      window.location.href = href;
+    }
+  };
+
+  // events
+  $navLinks.on({
+    click: openLink
   });
-  $toggle.on("mouseenter", openeMenu);
-  $nav.on("mouseleave", closeMenu);
+
+  $toggle.on({
+    mouseenter: openMenu,
+    mouseleave: closeMenu,
+    click: toggleStickyMenu
+  });
+
+  $nav.on({
+    mouseleave: closeMenu,
+    mouseenter: openMenu,
+    transitionend: function() {
+      if (lsg.ish) lsg.ish.resizeWindow();
+    }
+  });
 };
 
-lsg.highlight = function () {
-  var modules = $(".lsg-module, .lsg-component");
-  var tpl = $('<pre class="prism language-markup"><code></code></pre>');
 
-  modules.each(function(i, module) {
-    var $module = $(module);
-    var node = tpl.clone();
-    var code = $.trim($module.html());
-    node.find('code').text(html_beautify(code));
-    $module.next('.language-jade').after(node);
-  });
+lsg.location = function location($iframe) {
+  var hashes = window.location.hash.split('#');
 
-  if(window.Prism) {
-    Prism.highlightAll();
-  }
-};
-
-lsg.location = function() {
-  var $sgViewport = $('#sg-viewport');
-  if(document.location.hash){
-    $sgViewport.attr('src', document.location.hash.slice(1));
+  if (hashes[1]) {
+    $iframe.attr('src', hashes[1]);
+    $('.lsg-nav a[href="'+hashes[1]+'"]').addClass('is-current');
   }
   else {
-    $sgViewport.attr('src', 'base/index.html');
+    window.location.href = window.location.origin;
   }
 
-  $sgViewport.on('load', function () {
-    var src = this.contentDocument.location.pathname;
-    if(src === '/base/index.html') { return ;}
-    document.location.hash = src;
+  lsg.ish.init(window);
+};
+
+
+lsg.highlight = function highlight($modules) {
+  var tpl = $('<pre class="prism language-markup"><code></code></pre>');
+
+  $modules.each(function() {
+    var $module = $(this);
+    var node = tpl.clone();
+    var code = $.trim($module.html());
+
+    node.find('code').text(window.html_beautify(code));
+    $module.next('pre.prism[class*="language-"]').after(node);
   });
+
+  if (window.Prism) {
+    window.Prism.highlightAll();
+  }
+
+  // set code display
+  var show = $(parent.document.body).find('#code-toggle').hasClass('active');
+  $('pre.prism').toggle(show);
 };
 
 
@@ -78,13 +119,19 @@ lsg.location = function() {
  * Initialization
  */
 
-lsg.init = function () {
+lsg.init = function init() {
 
   if ($('body').hasClass('lsg')) {
     lsg.nav();
-    lsg.location();
   }
-  lsg.highlight();
+  var $iframe = $('#ish-viewport');
+  if ($iframe.length) {
+    lsg.location($iframe);
+  }
+  var $modules = $(".lsg-elem, .lsg-module, .lsg-component");
+  if ($modules.length) {
+    lsg.highlight($modules);
+  }
 };
 
 document.addEventListener("DOMContentLoaded", lsg.init);

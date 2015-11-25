@@ -28,6 +28,7 @@ require('../modules/block-content-newsletter/script');
 require('../modules/button-top/script');
 require('../modules/gallery-ugc/script');
 require('../modules/notice/script');
+require('../modules/person-block/script');
 require('../modules/poll/script');
 require('../modules/quick-access/script');
 require('../modules/rheader/script');
@@ -46,5 +47,5 @@ require('./lib/cnil');
 require('./lib/egg');
 
 var Paris = window.Paris || {};
-Paris.version = "1.1.3";
+Paris.version = "1.2.2";
 Paris.templates = require('./client.tpl');

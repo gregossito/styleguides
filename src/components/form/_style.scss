@@ -27,6 +27,11 @@
     }
   }
 
+  .form-message {
+    &.error {color: $color-primary;}
+    &.success {color: $green1;}
+  }
+
   // error
   .form-item .form-item-label,
   .form-item-matrix .matrix-item .matrix-item-text {
@@ -113,7 +118,8 @@
     padding: 10px;
   }
 
-  // checkbox & radio
+  // checkbox & radio & cgu
+  .form-item-cgu,
   .form-item-checkbox,
   .form-item-radio {
     > div + div {

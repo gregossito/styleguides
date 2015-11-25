@@ -1,21 +1,27 @@
 {
   "index": {
-    "defaults": {
-      "logo": {
-        "href": "#",
-        "src": "../../modules/footer/mairie-de-paris.png",
-        "alt": "retour à l'accueil – Paris"
-      },
-      "items": [
-        {"href": "#", "text": "Visit Paris", "lang": "en", "target": "_blank", "modifiers": ["strong"]},
-        {"href": "#", "text": "FAQ"},
-        {"href": "#", "text": "Newsletter"},
-        {"href": "#", "text": "Contact"},
-        {"href": "#", "text": "Presse"},
-        {"href": "#", "text": "Mentions légales"},
-        {"href": "#", "text": "Crédits"},
-        {"href": "#", "text": "Accessibilité"}
-      ]
-    }
+    "type": "footer",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "logo": {
+          "href": "#",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "retour à l'accueil – Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "lang": "en", "target": "_blank", "modifiers": ["strong"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
+      }
+    }]
   }
 }

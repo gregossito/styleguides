@@ -5,7 +5,7 @@
 
   // modifiers
   &.white-buttons {
-    .links-group-item {
+    .links-group-item a {
       background-color: $white;
     }
   }
@@ -13,28 +13,31 @@
   @include small {
     // modifiers
     &.blue {
-      .links-group-header {color: $color-secondary-variant;}
+      .links-group-header a {color: $color-secondary-variant;}
       .links-group-item-icon,
-      .links-group-item:hover {background-color: $color-secondary-variant;}
+      .links-group-item a:hover {background-color: $color-secondary-variant;}
     }
     &.red {
-      .links-group-header {color: $red1;}
+      .links-group-header a {color: $red1;}
       .links-group-item-icon,
-      .links-group-item:hover {background-color: $red1;}
+      .links-group-item a:hover {background-color: $red1;}
     }
   }
 
 }
 
 .links-group-header {
-  color: $gray99;
-  display: block;
-  margin-bottom: 20px;
-  text-decoration: none;
-  width: 100%;
+  margin: 0 0 20px;
 
-  @include small {
-    background-image: none !important;
+  a {
+    color: $gray99;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+
+    @include small {
+      background-image: none !important;
+    }
   }
 }
 
@@ -57,24 +60,33 @@
   margin-top: 10px;
 }
 
-.links-group-item {
-  background-color: $grayF2;
-  border: none;
-  border-radius: 5px;
-  color: $gray33;
-  display: block;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 20px;
-  margin-bottom: 7px;
-  padding: 15px 80px 15px 15px;
-  position: relative;
-  text-decoration: none;
+.links-group-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  &:hover {
-    background-color: $gray99;
-    color: $white;
-    transition: all 0.2s ease;
+.links-group-item {
+  margin-bottom: 7px;
+
+  a {
+    background-color: $grayF2;
+    border: none;
+    border-radius: 5px;
+    color: $gray33;
+    display: block;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 15px 80px 15px 15px;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $gray99;
+      color: $white;
+      transition: all 0.2s ease;
+    }
   }
 }
 
@@ -109,46 +121,48 @@
 
     // modifiers
     &.white-buttons {
-      .links-group-item:hover {background-color: $gray99;}
+      .links-group-item a:hover {background-color: $gray99;}
     }
 
     &.blue {
-      .links-group-header:after,
-      .links-group-item:hover {background-color: $color-secondary-variant;}
+      .links-group-header a:after,
+      .links-group-item a:hover {background-color: $color-secondary-variant;}
     }
 
     &.red {
-      .links-group-header:after,
-      .links-group-item:hover {background-color: $red1;}
+      .links-group-header a:after,
+      .links-group-item a:hover {background-color: $red1;}
     }
   }
 
   .links-group-header {
-    background-position: 50% 50%;
-    background-size: cover;
-    color: $white;
-    display: table;
-    height: 320px;
-    position: relative;
-    text-align: center;
+    a {
+      background-position: 50% 50%;
+      background-size: cover;
+      color: $white;
+      display: table;
+      height: 320px;
+      position: relative;
+      text-align: center;
 
-    &:hover {
-      &:after {
-        opacity: 0.8;
+      &:hover {
+        &:after {
+          opacity: 0.8;
+        }
       }
-    }
 
-    &:after {
-      background-color: $gray99;
-      content: '';
-      height: 100%;
-      left: 0;
-      opacity: 0.7;
-      position: absolute;
-      transition: opacity 0.2s ease;
-      top: 0;
-      width: 100%;
-      z-index: 1;
+      &:after {
+        background-color: $gray99;
+        content: '';
+        height: 100%;
+        left: 0;
+        opacity: 0.7;
+        position: absolute;
+        transition: opacity 0.2s ease;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
     }
   }
 
@@ -163,19 +177,23 @@
 
   .links-group-item {
     @include gallery(4 of 12);
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 20px;
     margin-bottom: 20px;
-    padding: 0 80px 0 22px;
-    position: relative;
-    text-decoration: none;
 
-    &:hover {
-      background-color: $gray99;
-      color: $white;
-      transition: all 0.2s ease;
+    a {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 20px;
+      padding: 0 80px 0 22px;
+      position: relative;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $gray99;
+        color: $white;
+        transition: all 0.2s ease;
+      }
     }
+
   }
 
   .links-group-item-text {

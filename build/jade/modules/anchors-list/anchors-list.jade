@@ -1,5 +1,5 @@
 mixin anchors-list(data)
-  - data = data || {}
+  - var data = data || {}
   nav.anchors-list(aria-label=data.title)&attributes(data.attributes || {})
     if data.title
       div.anchors-list-title(aria-hidden="true")

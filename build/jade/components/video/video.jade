@@ -1,5 +1,7 @@
 mixin video(data)
   .component.component-video
+    if data.title
+      h3.video-title= data.title
     .video-wrapper
       if data.cookie === false
         if block

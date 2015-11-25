@@ -12,14 +12,17 @@ mixin poll(data)
         ul.poll-options(class=data.modifiers)
           each item in data.items
             li
-              - button = JSON.parse(JSON.stringify(item))
+              - var button = JSON.parse(JSON.stringify(item)) // clone the data object
               - button.modifiers = ["action", "secondary"]
               - button.attributes = {"data-value": item.value}
               +button(button)
       else if data.form
         form.poll-form
           input.poll-input(type="text" placeholder=data.form.input.placeholder title=data.form.input.placeholder id=data.form.input.id aria-describedby=data.id)
-          button.button.action.secondary.poll-submit(type="submit" title=data.form.submit.title)= data.form.submit.text
+          - var submit = JSON.parse(JSON.stringify(data.form.submit)) // clone the data object
+          - submit.modifiers = ["action", "secondary", "poll-submit"]
+          - submit.attributes = {"type": "submit"}
+          +button(submit)
       if data.more
         .poll-more
           a(href=data.more.href)= data.more.text

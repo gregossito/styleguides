@@ -37,10 +37,11 @@ Paris.document = (function(){
       });
     }
 
-    function loadPostit(){
+    function loadPostit() {
       $.ajax({
         url: options.postitContentUrl.replace('${pageId}', pageId),
         type: 'get',
+        cache: false,
         success: renderPostit
       });
     }

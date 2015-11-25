@@ -1,269 +1,284 @@
 {
   "index": {
-    "defaults": {
-      "background": {
-        "image": "background.jpg"
-      },
-      "search": {
-        "input": {
-          "placeholder": "Rechercher un service, une information..."
+    "type": "quick-access",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "background": {
+          "image": "background.jpg"
         },
-        "submit": {
-          "text": "Valider la recherche sur le site",
-          "icon": true
+        "search": {
+          "input": {
+            "placeholder": "Rechercher un service, une information..."
+          },
+          "submit": {
+            "text": "Valider la recherche sur le site",
+            "icon": true
+          },
+          "around": {
+            "href": "http://meslieux.paris.fr",
+            "text": "Autour de moi",
+            "target": "_blank"
+          },
+          "close_label": "Fermer le moteur de recherche"
         },
-        "around": {
-          "href": "http://meslieux.paris.fr",
-          "text": "Autour de moi",
-          "target": "_blank"
-        },
-        "close_label": "Fermer le moteur de recherche"
-      },
-      "items": [
-        {
-          "href": "#",
-          "text": "Inscription à la crèche"
-        },
-        {
-          "href": "#",
-          "text": "Cours municipaux pour adultes"
-        },
-        {
-          "href": "#",
-          "text": "État civil"
-        },
-        {
-          "href": "#",
-          "text": "Encombrants"
-        },
-        {
-          "href": "#",
-          "text": "Tennis"
-        },
-        {
-          "href": "#",
-          "text": "Signalement"
-        },
-        {
-          "href": "#",
-          "text": "Facil’familles"
-        },
-        {
-          "href": "#",
-          "text": "Gardes d’enfants"
-        },
-        {
-          "href": "#",
-          "text": "Bouton caché sur mobile",
-          "modifiers": ["hidden-on-mobile"]
-        }
-      ],
-      "results": {
-        "button": {
-          "href": "#",
-          "text": "Voir tous les résultats"
-        }
-      }
-    },
-    "with_video": {
-      "background": {
-        "image": "video-background.jpg",
-        "video": {
-          "sources": [
-            {"src": "//zippy.gfycat.com/PartialMadeupGorilla.webm", "type": "video/webm"},
-            {"src": "//zippy.gfycat.com/PartialMadeupGorilla.mp4", "type": "video/mp4"}
-          ]
-        }
-      },
-      "heading": {
-        "title": "Accès rapides",
-        "modifiers": ["only-on-small"]
-      },
-      "search": {
-        "input": {
-          "placeholder": "Rechercher un service, une information..."
-        },
-        "submit": {
-          "text": "Valider la recherche sur le site",
-          "icon": true
-        },
-        "around": {
-          "href": "http://meslieux.paris.fr",
-          "text": "Autour de moi",
-          "target": "_blank"
-        },
-        "close_label": "Fermer le moteur de recherche"
-      },
-      "items": [
-        {
-          "href": "#",
-          "text": "Inscription à la crèche"
-        },
-        {
-          "href": "#",
-          "text": "Cours municipaux pour adultes"
-        },
-        {
-          "href": "#",
-          "text": "État civil"
-        },
-        {
-          "href": "#",
-          "text": "Encombrants"
-        },
-        {
-          "href": "#",
-          "text": "Tennis"
-        },
-        {
-          "href": "#",
-          "text": "Signalement"
-        },
-        {
-          "href": "#",
-          "text": "Facil’familles"
-        },
-        {
-          "href": "#",
-          "text": "Gardes d’enfants"
-        }
-      ],
-      "results": {
-        "button": {
-          "href": "#",
-          "text": "Voir tous les résultats"
+        "items": [
+          {
+            "href": "#",
+            "text": "Inscription à la crèche"
+          },
+          {
+            "href": "#",
+            "text": "Cours municipaux pour adultes"
+          },
+          {
+            "href": "#",
+            "text": "État civil"
+          },
+          {
+            "href": "#",
+            "text": "Encombrants"
+          },
+          {
+            "href": "#",
+            "text": "Tennis"
+          },
+          {
+            "href": "#",
+            "text": "Signalement"
+          },
+          {
+            "href": "#",
+            "text": "Facil’familles"
+          },
+          {
+            "href": "#",
+            "text": "Gardes d’enfants"
+          },
+          {
+            "href": "#",
+            "text": "Bouton caché sur mobile",
+            "modifiers": ["hidden-on-mobile"]
+          }
+        ],
+        "results": {
+          "button": {
+            "href": "#",
+            "text": "Voir tous les résultats"
+          }
         }
       }
-    },
-    "searching": {
-      "modifiers": "searching",
-      "background": {
-        "image": "background.jpg"
-      },
-      "heading": {
-        "title": "Accès rapides",
-        "modifiers": ["only-on-small"]
-      },
-      "search": {
-        "input": {
-          "placeholder": "Rechercher un service, une information..."
+    }, {
+      "title": "Avec fond vidéo",
+      "description": "<p>Le player vidéo est mis à l'échelle automatiquement pour couvrir le fond du module.</p><p>Idéalement, la vidéo doit être fournie en deux formats :<ul><li>.mp4 (MPEG-4/H.264) pour IE, Firefox, Chrome, Safari, Opera (<a href=\"http://caniuse.com/#feat=mpeg4\" target=\"_blank\">voir support</a>)</li><li>.webm (WebM VP8 ou VP9) pour Firefox, Chrome et Opera (<a href=\"http://caniuse.com/#feat=webm\" target=\"_blank\">voir support</a>)</li></ul><p>Il est possible de ne fournir qu'un fichier MP4, mais le support navigateur sera moins complet.</p>",
+      "data": {
+        "background": {
+          "image": "video-background.jpg",
+          "video": {
+            "sources": [
+              {"src": "//zippy.gfycat.com/PartialMadeupGorilla.webm", "type": "video/webm"},
+              {"src": "//zippy.gfycat.com/PartialMadeupGorilla.mp4", "type": "video/mp4"}
+            ]
+          }
         },
-        "submit": {
-          "text": "Valider la recherche sur le site",
-          "icon": true
+        "heading": {
+          "title": "Accès rapides",
+          "modifiers": ["only-on-small"]
         },
-        "around": {
-          "href": "http://meslieux.paris.fr",
-          "text": "Autour de moi",
-          "target": "_blank"
+        "search": {
+          "input": {
+            "placeholder": "Rechercher un service, une information..."
+          },
+          "submit": {
+            "text": "Valider la recherche sur le site",
+            "icon": true
+          },
+          "around": {
+            "href": "http://meslieux.paris.fr",
+            "text": "Autour de moi",
+            "target": "_blank"
+          },
+          "close_label": "Fermer le moteur de recherche"
         },
-        "close_label": "Fermer le moteur de recherche"
-      },
-      "items": [
-        {
-          "href": "#",
-          "text": "Inscription à la crèche"
-        },
-        {
-          "href": "#",
-          "text": "Cours municipaux pour adultes"
-        },
-        {
-          "href": "#",
-          "text": "État civil"
-        },
-        {
-          "href": "#",
-          "text": "Encombrants"
-        },
-        {
-          "href": "#",
-          "text": "Tennis"
-        },
-        {
-          "href": "#",
-          "text": "Signalement"
-        },
-        {
-          "href": "#",
-          "text": "Facil’familles"
-        },
-        {
-          "href": "#",
-          "text": "Gardes d’enfants"
-        }
-      ],
-      "results": {
-        "button": {
-          "href": "#",
-          "text": "Voir tous les résultats"
-        }
-      }
-    },
-    "with_primary_item": {
-      "background": {
-        "image": "background.jpg"
-      },
-      "heading": {
-        "title": "Accès rapides",
-        "modifiers": ["only-on-small"]
-      },
-      "search": {
-        "input": {
-          "placeholder": "Rechercher un service, une information..."
-        },
-        "submit": {
-          "text": "Valider la recherche sur le site",
-          "icon": true
-        },
-        "around": {
-          "href": "http://meslieux.paris.fr",
-          "text": "Autour de moi",
-          "target": "_blank"
-        },
-        "close_label": "Fermer le moteur de recherche"
-      },
-      "items": [
-        {
-          "modifiers": ["primary"],
-          "href": "#",
-          "text": "Inscription à la crèche"
-        },
-        {
-          "href": "#",
-          "text": "Cours municipaux pour adultes"
-        },
-        {
-          "href": "#",
-          "text": "État civil"
-        },
-        {
-          "href": "#",
-          "text": "Encombrants"
-        },
-        {
-          "href": "#",
-          "text": "Tennis"
-        },
-        {
-          "href": "#",
-          "text": "Signalement"
-        },
-        {
-          "href": "#",
-          "text": "Facil’familles"
-        },
-        {
-          "href": "#",
-          "text": "Gardes d’enfants"
-        }
-      ],
-      "results": {
-        "button": {
-          "href": "#",
-          "text": "Voir tous les résultats"
+        "items": [
+          {
+            "href": "#",
+            "text": "Inscription à la crèche"
+          },
+          {
+            "href": "#",
+            "text": "Cours municipaux pour adultes"
+          },
+          {
+            "href": "#",
+            "text": "État civil"
+          },
+          {
+            "href": "#",
+            "text": "Encombrants"
+          },
+          {
+            "href": "#",
+            "text": "Tennis"
+          },
+          {
+            "href": "#",
+            "text": "Signalement"
+          },
+          {
+            "href": "#",
+            "text": "Facil’familles"
+          },
+          {
+            "href": "#",
+            "text": "Gardes d’enfants"
+          }
+        ],
+        "results": {
+          "button": {
+            "href": "#",
+            "text": "Voir tous les résultats"
+          }
         }
       }
-    }
+    }, {
+      "title": "Recherche en cours",
+      "description": "",
+      "data": {
+        "modifiers": "searching",
+        "background": {
+          "image": "background.jpg"
+        },
+        "heading": {
+          "title": "Accès rapides",
+          "modifiers": ["only-on-small"]
+        },
+        "search": {
+          "input": {
+            "placeholder": "Rechercher un service, une information..."
+          },
+          "submit": {
+            "text": "Valider la recherche sur le site",
+            "icon": true
+          },
+          "around": {
+            "href": "http://meslieux.paris.fr",
+            "text": "Autour de moi",
+            "target": "_blank"
+          },
+          "close_label": "Fermer le moteur de recherche"
+        },
+        "items": [
+          {
+            "href": "#",
+            "text": "Inscription à la crèche"
+          },
+          {
+            "href": "#",
+            "text": "Cours municipaux pour adultes"
+          },
+          {
+            "href": "#",
+            "text": "État civil"
+          },
+          {
+            "href": "#",
+            "text": "Encombrants"
+          },
+          {
+            "href": "#",
+            "text": "Tennis"
+          },
+          {
+            "href": "#",
+            "text": "Signalement"
+          },
+          {
+            "href": "#",
+            "text": "Facil’familles"
+          },
+          {
+            "href": "#",
+            "text": "Gardes d’enfants"
+          }
+        ],
+        "results": {
+          "button": {
+            "href": "#",
+            "text": "Voir tous les résultats"
+          }
+        }
+      }
+    }, {
+      "title": "Avec un item mis en avant",
+      "description": "",
+      "data": {
+        "background": {
+          "image": "background.jpg"
+        },
+        "heading": {
+          "title": "Accès rapides",
+          "modifiers": ["only-on-small"]
+        },
+        "search": {
+          "input": {
+            "placeholder": "Rechercher un service, une information..."
+          },
+          "submit": {
+            "text": "Valider la recherche sur le site",
+            "icon": true
+          },
+          "around": {
+            "href": "http://meslieux.paris.fr",
+            "text": "Autour de moi",
+            "target": "_blank"
+          },
+          "close_label": "Fermer le moteur de recherche"
+        },
+        "items": [
+          {
+            "modifiers": ["primary"],
+            "href": "#",
+            "text": "Inscription à la crèche"
+          },
+          {
+            "href": "#",
+            "text": "Cours municipaux pour adultes"
+          },
+          {
+            "href": "#",
+            "text": "État civil"
+          },
+          {
+            "href": "#",
+            "text": "Encombrants"
+          },
+          {
+            "href": "#",
+            "text": "Tennis"
+          },
+          {
+            "href": "#",
+            "text": "Signalement"
+          },
+          {
+            "href": "#",
+            "text": "Facil’familles"
+          },
+          {
+            "href": "#",
+            "text": "Gardes d’enfants"
+          }
+        ],
+        "results": {
+          "button": {
+            "href": "#",
+            "text": "Voir tous les résultats"
+          }
+        }
+      }
+    }]
   }
 }

@@ -5,8 +5,7 @@ mixin table-of-contents(data)
         each item in data.nav
           li.table-of-contents-nav-item
             a(href=item.href)
-              - abbr = item.text.slice(0, 3)
-              strong= abbr
+              strong= item.text.slice(0, 3)
               = item.text
     if data.sections
       if data.sections.list && data.sections.list.items && data.sections.list.items.length
@@ -16,8 +15,7 @@ mixin table-of-contents(data)
               li.table-of-contents-sections-item
                 a(href=item.href)
                   = item.text
-                  - abbr = item.text.slice(0, 3)
-                  strong= abbr
+                  strong= item.text.slice(0, 3)
           if data.sections.more
             a.table-of-contents-sections-more(href=data.sections.more.href)
               = data.sections.more.text

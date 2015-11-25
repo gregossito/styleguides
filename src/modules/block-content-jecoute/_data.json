@@ -1,57 +1,66 @@
 {
   "index": {
-    "defaults": {
-      "title": "Paris j'écoute",
-      "items": [
-        {
-          "question": {
-            "user": "@juliechanal",
-            "time": "9h30",
-            "text": "Bonjour, est-ce que la piscine Joséphine Baker sera ouverte cet été ?"
+    "type": "block-content-jecoute",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "title": "Paris j'écoute",
+        "items": [
+          {
+            "question": {
+              "user": "@juliechanal",
+              "time": "9h30",
+              "text": "Bonjour, est-ce que la piscine Joséphine Baker sera ouverte cet été ?"
+            },
+            "answer": {
+              "user": "@Parisjecoute",
+              "time": "10h11",
+              "text": "Oui, la piscine reste ouverte cet été."
+            }
           },
-          "answer": {
-            "user": "@Parisjecoute",
-            "time": "10h11",
-            "text": "Oui, la piscine reste ouverte cet été."
-          }
-        },
-        {
-          "question": {
-            "user": "@JuliePetrucci",
-            "time": "10h20",
-            "text": "Bjr, je loue un local commercial. Quelles sont les démarches pour peindre la façade d'une autre couleur et y peindre le logo ?"
+          {
+            "question": {
+              "user": "@JuliePetrucci",
+              "time": "10h20",
+              "text": "Bjr, je loue un local commercial. Quelles sont les démarches pour peindre la façade d'une autre couleur et y peindre le logo ?"
+            },
+            "answer": {
+              "user": "@Parisjecoute",
+              "time": "10h50",
+              "text": "bjr, il faut déposer une déclaration préalable au 6 promenade Claude Lévi-Strauss dans le 13e <a href=\"http://t.co/h2uYPqkEOx\">http://t.co/h2uYPqkEOx</a>"
+            }
           },
-          "answer": {
-            "user": "@Parisjecoute",
-            "time": "10h50",
-            "text": "bjr, il faut déposer une déclaration préalable au 6 promenade Claude Lévi-Strauss dans le 13e <a href=\"http://t.co/h2uYPqkEOx\">http://t.co/h2uYPqkEOx</a>"
+          {
+            "question": {
+              "user": "@billy141512",
+              "time": "11h02",
+              "text": "Bonjour, à propos du plan qualité air à Paris, les motos de 2012 (donc 3*) seront-elles autorisées en 2020 ? Pas clair."
+            },
+            "answer": {
+              "user": "@Parisjecoute",
+              "time": "11h14",
+              "text": "bonjour, les motos de classe 3 étoiles seront bien concernées par ces mesures de restriction."
+            }
           }
-        },
-        {
-          "question": {
-            "user": "@billy141512",
-            "time": "11h02",
-            "text": "Bonjour, à propos du plan qualité air à Paris, les motos de 2012 (donc 3*) seront-elles autorisées en 2020 ? Pas clair."
-          },
-          "answer": {
-            "user": "@Parisjecoute",
-            "time": "11h14",
-            "text": "bonjour, les motos de classe 3 étoiles seront bien concernées par ces mesures de restriction."
-          }
+        ],
+        "button": {
+          "href": "#",
+          "text": "Posez votre question !"
         }
-      ],
-      "button": {
-        "href": "#",
-        "text": "Posez votre question !"
       }
-    },
-    "simple": {
-      "title": "Paris j'écoute",
-      "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-      "button": {
-        "href": "#",
-        "text": "Posez votre question !"
+    }, {
+      "title": "Texte simple",
+      "description": "",
+      "data": {
+        "title": "Paris j'écoute",
+        "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+        "button": {
+          "href": "#",
+          "text": "Posez votre question !"
+        }
       }
-    }
+    }]
   }
 }

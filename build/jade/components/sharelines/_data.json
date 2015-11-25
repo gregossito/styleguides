@@ -1,48 +1,57 @@
 {
   "index": {
-    "defaults": {
-      "title": "Partager l'article",
-      "items": [
-        {
-          "text": "Il n’y a pas d’âge minimal pour l’accès à la patinoire.",
-          "share": {
-            "items": [
-              {
-                "href": "https://twitter.com/home?status=Il n’y a pas d’âge minimal pour l’accès à la patinoire. http://www.paris.fr/",
-                "icon": "twitter",
-                "text": "Partager sur Twitter",
-                "title": "Partager sur Twitter - nouvelle fenêtre"
-              }
-            ]
+    "type": "sharelines",
+    "description": "Pour plus d'information sur les URL de partage, voir le module <a href=\"../../modules/share\")>share</a>.",
+    "bodyAttributes": {
+      "style": "background-color: #E6E6E6"
+    },
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "title": "Partager l'article",
+        "items": [
+          {
+            "text": "Il n’y a pas d’âge minimal pour l’accès à la patinoire.",
+            "share": {
+              "items": [
+                {
+                  "href": "https://twitter.com/home?status=Il n’y a pas d’âge minimal pour l’accès à la patinoire. http://www.paris.fr/",
+                  "icon": "twitter",
+                  "text": "Partager sur Twitter",
+                  "title": "Partager sur Twitter - nouvelle fenêtre"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Des moniteurs diplômés sont là pour s’adapter aux différents publics.",
+            "share": {
+              "items": [
+                {
+                  "href": "https://twitter.com/home?status=Des moniteurs diplômés sont là pour s’adapter aux différents publics. http://www.paris.fr/",
+                  "icon": "twitter",
+                  "text": "Partager sur Twitter",
+                  "title": "Partager sur Twitter - nouvelle fenêtre"
+                }
+              ]
+            }
+          },
+          {
+            "text": "L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins.",
+            "share": {
+              "items": [
+                {
+                  "href": "https://twitter.com/home?status=L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins. http://www.paris.fr/",
+                  "icon": "twitter",
+                  "text": "Partager sur Twitter",
+                  "title": "Partager sur Twitter - nouvelle fenêtre"
+                }
+              ]
+            }
           }
-        },
-        {
-          "text": "Des moniteurs diplômés sont là pour s’adapter aux différents publics.",
-          "share": {
-            "items": [
-              {
-                "href": "https://twitter.com/home?status=Des moniteurs diplômés sont là pour s’adapter aux différents publics. http://www.paris.fr/",
-                "icon": "twitter",
-                "text": "Partager sur Twitter",
-                "title": "Partager sur Twitter - nouvelle fenêtre"
-              }
-            ]
-          }
-        },
-        {
-          "text": "L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins.",
-          "share": {
-            "items": [
-              {
-                "href": "https://twitter.com/home?status=L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins. http://www.paris.fr/",
-                "icon": "twitter",
-                "text": "Partager sur Twitter",
-                "title": "Partager sur Twitter - nouvelle fenêtre"
-              }
-            ]
-          }
-        }
-      ]
-    }
+        ]
+      }
+    }]
   }
 }
