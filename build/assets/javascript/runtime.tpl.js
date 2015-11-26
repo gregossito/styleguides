@@ -692,7 +692,7 @@ templatizer["form"]["form-matrix"] = function tmpl_form_form_matrix(data) {
 // form.jade:form-captcha compiled template
 templatizer["form"]["form-captcha"] = function tmpl_form_form_captcha(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-    buf.push('<div class="g-recaptcha"></div>');
+    buf.push('<div class="g-recaptcha"></div><noscript><div style="width: 302px; height: 482px;"><div style="width: 302px; height: 422px;"><div style="width: 302px; height: 422px; position: relative;"><iframe src="https://www.google.com/recaptcha/api/fallback?k=6LdKnQ8TAAAAAFEvA3kXmpPPp_xPHx6pKJoTc2HT" frameborder="0" scrolling="no" style="width: 302px; height:422px; border-style: none;"></iframe></div><div style="width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;"><textarea id="g-recaptcha-response" name="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;" class="g-recaptcha-response"></textarea></div></div></div></noscript>');
     return buf.join("");
 };
 
@@ -3036,6 +3036,71 @@ templatizer["notice"]["notice"] = function tmpl_notice_notice(data) {
     return buf.join("");
 };
 
+// pagination.jade compiled template
+templatizer["pagination"] = function tmpl_pagination(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    var locals_for_with = locals || {};
+    (function(parseInt) {}).call(this, "parseInt" in locals_for_with ? locals_for_with.parseInt : typeof parseInt !== "undefined" ? parseInt : undefined);
+    return buf.join("");
+};
+
+// pagination.jade:pagination compiled template
+templatizer["pagination"]["pagination"] = function tmpl_pagination_pagination(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+    buf.push("<nav" + jade.attr("aria-label", data.text.label, true, false) + ' class="pagination">');
+    var current = parseInt(data.current) || 1;
+    var total = parseInt(data.total) || 0;
+    var prev = current - 1;
+    var next = current + 1;
+    var items_before = function() {
+        if (current < 3) {
+            return 1;
+        } else if (current > total - 1 && total > 3) {
+            return 3;
+        } else {
+            return 2;
+        }
+    };
+    var items_after = function() {
+        if (current < 3) {
+            return current * -1 + 5;
+        } else if (current > total - 2) {
+            return total - current;
+        } else {
+            return 2;
+        }
+    };
+    var link_title = data.text.link_title || "${page}";
+    buf.push("<ul>");
+    if (current !== 1) {
+        buf.push('<li class="previous">');
+        var href = prev === 1 ? data.base_url : data.url.replace("${page}", prev);
+        buf.push("<a" + jade.attr("href", href, true, false) + jade.attr("aria-label", data.text.prev, true, false) + ' data-page="prev"' + jade.attr("title", link_title.replace("${page}", prev), true, false) + '><span aria-hidden="true">&lt;</span></a></li>');
+        var item = current - items_before();
+        while (item < current) {
+            var href = item === 1 ? data.base_url : data.url.replace("${page}", item);
+            buf.push('<li class="hidden-on-small"><a' + jade.attr("href", href, true, false) + jade.attr("data-page", item, true, false) + jade.attr("title", link_title.replace("${page}", item), true, false) + ">" + jade.escape(null == (jade_interp = item) ? "" : jade_interp) + "</a></li>");
+            item++;
+        }
+    }
+    buf.push('<li class="current">');
+    var href = current === 1 ? data.base_url : data.url.replace("${page}", current);
+    buf.push("<a" + jade.attr("href", href, true, false) + jade.attr("data-page", current, true, false) + ">" + jade.escape(null == (jade_interp = current) ? "" : jade_interp) + "</a></li>");
+    if (current !== total && total > 1) {
+        var item = current;
+        while (item < total && item < current + items_after()) {
+            item++;
+            var href = item === 1 ? data.base_url : data.url.replace("${page}", item);
+            buf.push('<li class="hidden-on-small"><a' + jade.attr("href", href, true, false) + jade.attr("data-page", item, true, false) + jade.attr("title", link_title.replace("${page}", item), true, false) + ">" + jade.escape(null == (jade_interp = item) ? "" : jade_interp) + "</a></li>");
+        }
+        buf.push('<li class="next"><a' + jade.attr("href", data.url.replace("${page}", next), true, false) + jade.attr("aria-label", data.text.next, true, false) + ' data-page="next"' + jade.attr("title", link_title.replace("${page}", next), true, false) + '><span aria-hidden="true">&gt;</span></a></li>');
+    }
+    buf.push("</ul></nav>");
+    return buf.join("");
+};
+
 // person-block.jade compiled template
 templatizer["person-block"] = function tmpl_person_block(locals) {
     var buf = [];
@@ -3287,71 +3352,6 @@ templatizer["poll"]["poll"] = function tmpl_poll_poll(data) {
         buf.push('<div class="poll-more"><a' + jade.attr("href", data.more.href, true, false) + ">" + jade.escape(null == (jade_interp = data.more.text) ? "" : jade_interp) + "</a></div>");
     }
     buf.push("</div></div>");
-    return buf.join("");
-};
-
-// pagination.jade compiled template
-templatizer["pagination"] = function tmpl_pagination(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    var locals_for_with = locals || {};
-    (function(parseInt) {}).call(this, "parseInt" in locals_for_with ? locals_for_with.parseInt : typeof parseInt !== "undefined" ? parseInt : undefined);
-    return buf.join("");
-};
-
-// pagination.jade:pagination compiled template
-templatizer["pagination"]["pagination"] = function tmpl_pagination_pagination(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-    buf.push("<nav" + jade.attr("aria-label", data.text.label, true, false) + ' class="pagination">');
-    var current = parseInt(data.current) || 1;
-    var total = parseInt(data.total) || 0;
-    var prev = current - 1;
-    var next = current + 1;
-    var items_before = function() {
-        if (current < 3) {
-            return 1;
-        } else if (current > total - 1 && total > 3) {
-            return 3;
-        } else {
-            return 2;
-        }
-    };
-    var items_after = function() {
-        if (current < 3) {
-            return current * -1 + 5;
-        } else if (current > total - 2) {
-            return total - current;
-        } else {
-            return 2;
-        }
-    };
-    var link_title = data.text.link_title || "${page}";
-    buf.push("<ul>");
-    if (current !== 1) {
-        buf.push('<li class="previous">');
-        var href = prev === 1 ? data.base_url : data.url.replace("${page}", prev);
-        buf.push("<a" + jade.attr("href", href, true, false) + jade.attr("aria-label", data.text.prev, true, false) + ' data-page="prev"' + jade.attr("title", link_title.replace("${page}", prev), true, false) + '><span aria-hidden="true">&lt;</span></a></li>');
-        var item = current - items_before();
-        while (item < current) {
-            var href = item === 1 ? data.base_url : data.url.replace("${page}", item);
-            buf.push('<li class="hidden-on-small"><a' + jade.attr("href", href, true, false) + jade.attr("data-page", item, true, false) + jade.attr("title", link_title.replace("${page}", item), true, false) + ">" + jade.escape(null == (jade_interp = item) ? "" : jade_interp) + "</a></li>");
-            item++;
-        }
-    }
-    buf.push('<li class="current">');
-    var href = current === 1 ? data.base_url : data.url.replace("${page}", current);
-    buf.push("<a" + jade.attr("href", href, true, false) + jade.attr("data-page", current, true, false) + ">" + jade.escape(null == (jade_interp = current) ? "" : jade_interp) + "</a></li>");
-    if (current !== total && total > 1) {
-        var item = current;
-        while (item < total && item < current + items_after()) {
-            item++;
-            var href = item === 1 ? data.base_url : data.url.replace("${page}", item);
-            buf.push('<li class="hidden-on-small"><a' + jade.attr("href", href, true, false) + jade.attr("data-page", item, true, false) + jade.attr("title", link_title.replace("${page}", item), true, false) + ">" + jade.escape(null == (jade_interp = item) ? "" : jade_interp) + "</a></li>");
-        }
-        buf.push('<li class="next"><a' + jade.attr("href", data.url.replace("${page}", next), true, false) + jade.attr("aria-label", data.text.next, true, false) + ' data-page="next"' + jade.attr("title", link_title.replace("${page}", next), true, false) + '><span aria-hidden="true">&gt;</span></a></li>');
-    }
-    buf.push("</ul></nav>");
     return buf.join("");
 };
 

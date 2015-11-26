@@ -7,6 +7,17 @@ Let's take the `x.β.α` version number:
 * `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
 * `x` is for major release involving a more careful integration of the styleguide
 
+## 1.2.2 (2015-11-24)
+
+* component `form`: added `noscript` reCaptcha
+* template `generic`: now accepts a `notice` above content
+* upgraded harp to 0.20
+
+## 1.2.1 (2015-11-19)
+
+* do not cache ajax `post-it` request
+* module `block-content-jecoute`: remove margin on `p` tag in answers
+
 ## 1.2.0 (2015-11-10)
 
 * new UI for the styleguide documentation

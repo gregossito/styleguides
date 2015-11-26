@@ -70,6 +70,7 @@ form.ish-current-size {
   }
 }
 
+ul.ish-code-options,
 ul.ish-size-options {
   display: none;
   float: left;
@@ -83,7 +84,10 @@ ul.ish-size-options {
   li {
     float: left;
     list-style: none;
-    border-right: 1px solid lighten($ish-header-bgcolor, 4%);
+
+    &:not(:last-child) {
+      border-right: 1px solid lighten($ish-header-bgcolor, 4%);
+    }
   }
 }
 

@@ -212,6 +212,23 @@ lsg.ish = (function() {
     resizeViewport(size);
   }
 
+  /* CODE BUTTONS */
+
+  function clickCodeButton(e) {
+    e.preventDefault();
+
+    displayCode(!$(this).hasClass('active'));
+  }
+
+  function displayCode(show) {
+    var $codeButton = $('#code-toggle');
+    var $codes = $('#ish-viewport').contents().find('pre.prism');
+
+    $codeButton.toggleClass('active', show);
+    $codes.toggle(show);
+    sessionStorage.setItem('codeDisplay', show);
+  }
+
   /* SIZE HANDLE */
 
   function mousedownSizePullBar(e) {
@@ -254,6 +271,13 @@ lsg.ish = (function() {
     // size buttons
     $('.ish-size-options a').on('click', clickSizeButton);
 
+    // code button
+    $('#code-toggle').on('click', clickCodeButton);
+
+    var show;
+    try { show = JSON.parse(sessionStorage.getItem('codeDisplay')); }
+    catch(e) { show = true; sessionStorage.setItem('codeDisplay', show); }
+    displayCode(show);
 
     // handles widening the "viewport" :
     //   1. on "mousedown" store the click location
@@ -336,6 +360,7 @@ lsg.ish = (function() {
   return {
     resizeViewport: resizeViewport,
     resizeWindow: resizeWindow,
+    displayCode: displayCode,
     init: init
   };
 })();

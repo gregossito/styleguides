@@ -884,6 +884,8 @@ td, th {
     height: 130px;
     overflow: hidden;
     position: relative; }
+    .block-content-jecoute .block-content-question-answer p {
+      margin: 0; }
     .block-content-jecoute .block-content-question-answer a {
       border-bottom: 1px solid; }
   .block-content-jecoute .block-content-question, .block-content-jecoute .block-content-answer {
