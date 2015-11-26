@@ -104,6 +104,7 @@ Let's take the `x.β.α` version number:
 * module `icon-switch` added
 * module `notice`: improved text wrapping on small screens
 * layout `left-col`: fix affix bug when there is no `anchors-list`
+* layout `list-map` added
 * template `faq` is now based on `generic`
 * template `generic`: `aside` data is now an array (same behavior as `components`)
 * template `list-equipments` added

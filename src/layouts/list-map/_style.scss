@@ -1,0 +1,48 @@
+.layout-list-map {
+  height: 800px;
+  height: calc(100vh - #{$rheader-height-large-extended});
+  width: 100%;
+
+  .layout-content-list,
+  .layout-content-map {
+    height: 100%,
+  }
+
+  .layout-content-list {
+    background-color: white;
+    float: left;
+    max-width: 560px;
+    width: 100%;
+  }
+
+  .layout-content-map {
+    background-color: $grayF2;
+    float: right;
+    width: calc(100% - 560px);
+  }
+}
+
+@include small {
+  .layout-list-map {
+    height: calc(100vh - #{$rheader-height-small});
+
+    .layout-content-list,
+    .layout-content-map {
+      float: none;
+    }
+
+    .layout-content-list {
+      max-width: none;
+
+    }
+    .layout-content-map {
+      width: 100%;
+    }
+  }
+}
+
+@include large-and-medium {
+  .layout-list-map {
+    height: calc(100vh - #{$rheader-height-medium});
+  }
+}
