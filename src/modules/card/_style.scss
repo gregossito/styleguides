@@ -1,91 +1,32 @@
-a {
+.card {
   background-color: $grayF2;
+  border-radius: 5px;
   color: $gray33;
   display: block;
   max-width: 230px;
-  width: 100%;
   position: relative;
   text-decoration: none;
   -webkit-transition: background 0.35s ease;
-  transition: background 0.35s ease;
+  transition: color 0.35s ease;
+  width: 100%;
 
-  .card-image {
-    background: center center no-repeat;
-    background-size: cover;
-    height: 120px;
-    overflow: hidden;
-  }
-
-  .card-content {
-    padding: 24px 20px 40px;
-  }
-
-  .card-title {
-    font-size: 18px;
-    margin-top: 0;
-    margin-bottom: 13px;
+  &:hover {
+    color: $black;
+    .card-image:after {opacity: 0;}
   }
 
   // modifiers
-
-  .open {
-    color: $green1;
-  }
-
-  .close {
-    color: $color-primary-variant ;
-  }
-
   &.large {
-    clear: both;
+    background-color: $grayF2;
+    color: $gray33;
+    display: block;
     max-width: 100%;
-
-    > a {
-      background-color: $grayF2;
-      border-radius: 5px;
-      color: $gray33;
-      display: block;
-      max-width: 100%;
-      min-height: 220px;
-      position: relative;
-      text-decoration: none;
-      transition: background 0.35s ease;
-
-      &:hover {
-        background-color: $grayEE;
-
-        .card-image {
-          &:after {opacity: 0;}
-        }
-      }
-    }
-
-    .card-image {
-      border-radius: 5px;
-
-      &:after {
-        background: $black;
-        content: "";
-        display: block;
-        height: 100%;
-        opacity: 0.1;
-        transition: opacity 0.35s ease;
-        width: 100%;
-      }
-    }
-
-    .card-content {
-      padding: 20px;
-    }
-
-    .card-category {
-      color: $color-secondary;
-      font-weight: 500;
-      font-size: 14px;
-    }
+    min-height: 220px;
+    position: relative;
+    text-decoration: none;
+    transition: background 0.35s ease;
 
     .card-title {
-      font-size: 17px;
       margin-top: 10px;
       max-width: 320px;
     }
@@ -96,11 +37,49 @@ a {
   }
 }
 
+.card-image {
+  border-radius: 5px;
+  background: center center no-repeat;
+  background-size: cover;
+  height: 120px;
+  overflow: hidden;
+
+  &:after {
+    background: $black;
+    content: "";
+    display: block;
+    height: 100%;
+    opacity: 0.1;
+    transition: opacity 0.35s ease;
+    width: 100%;
+  }
+}
+
+.card-content {
+  padding: 20px;
+
+  .open {color: $green1;}
+  .close {color: $color-primary-variant;}
+}
+
+.card-category {
+  color: $color-secondary;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+
 @include small {
 
-  a {
+  .card {
 
-    // Card large
+    // modifiers
     &.large {
       .card-image {
         height: 150px;
@@ -112,9 +91,9 @@ a {
 }
 
 @include large-and-medium {
-  a {
+  .card {
 
-    // Card large
+    // modifiers
     &.large {
       .card-image {
         height: 100%;

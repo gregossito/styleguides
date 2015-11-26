@@ -1,5 +1,5 @@
 mixin card(data)
-  a(href=data.href class=data.modifiers)
+  a.card(href=data.href class=data.modifiers)
     .card-image(style="background-image: url(#{data.image.src})")
     .card-content
       if data.category
