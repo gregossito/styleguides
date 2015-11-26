@@ -1,0 +1,134 @@
+a {
+  background-color: $grayF2;
+  color: $gray33;
+  display: block;
+  max-width: 230px;
+  width: 100%;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: background 0.35s ease;
+  transition: background 0.35s ease;
+
+  .card-image {
+    background: center center no-repeat;
+    background-size: cover;
+    height: 120px;
+    overflow: hidden;
+  }
+
+  .card-content {
+    padding: 24px 20px 40px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 13px;
+  }
+
+  // modifiers
+
+  .open {
+    color: $green1;
+  }
+
+  .close {
+    color: $color-primary-variant ;
+  }
+
+  &.large {
+    clear: both;
+    max-width: 100%;
+
+    > a {
+      background-color: $grayF2;
+      border-radius: 5px;
+      color: $gray33;
+      display: block;
+      max-width: 100%;
+      min-height: 220px;
+      position: relative;
+      text-decoration: none;
+      transition: background 0.35s ease;
+
+      &:hover {
+        background-color: $grayEE;
+
+        .card-image {
+          &:after {opacity: 0;}
+        }
+      }
+    }
+
+    .card-image {
+      border-radius: 5px;
+
+      &:after {
+        background: $black;
+        content: "";
+        display: block;
+        height: 100%;
+        opacity: 0.1;
+        transition: opacity 0.35s ease;
+        width: 100%;
+      }
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-category {
+      color: $color-secondary;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .card-title {
+      font-size: 17px;
+      margin-top: 10px;
+      max-width: 320px;
+    }
+
+    .card-text {
+      font-size: 15px;
+    }
+  }
+}
+
+@include small {
+
+  a {
+
+    // Card large
+    &.large {
+      .card-image {
+        height: 150px;
+        height: 30vh;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include large-and-medium {
+  a {
+
+    // Card large
+    &.large {
+      .card-image {
+        height: 100%;
+        left: 0;
+        max-width: 400px;
+        position: absolute;
+        top: 0;
+        width: 45%;
+      }
+
+      .card-content {
+        margin-left: 45%;
+        width: 55%;
+      }
+    }
+  }
+}

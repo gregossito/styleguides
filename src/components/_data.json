@@ -2,7 +2,7 @@
   "components": [
     "accordion",
     "buttons",
-    "card",
+    "cards",
     "districts",
     "faq",
     "form",
