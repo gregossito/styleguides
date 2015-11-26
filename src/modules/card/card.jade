@@ -5,6 +5,7 @@ mixin card(data)
       if data.category
         .card-category= data.category
       h3.card-title= data.title
-      .card-text!= data.text
+      if data.text
+        .card-text!= data.text
       if data.hours
         .card-hours(class=data.modifiers)= data.hours

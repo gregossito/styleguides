@@ -413,13 +413,17 @@
           }
         },
         {
-          "type": "card",
+          "type": "cards",
           "data": {
-            "href": "#",
-            "category": "Spectacles et Concert",
-            "title": "Programme du kiosque à musique du parc Montsouris",
-            "text": "Samedi 05 septembre 2015<br />de 15h00 à 18h00",
-            "image": {"src": "../../components/card/1.jpg"}
+            "items": [
+              {
+                "href": "#",
+                "category": "Spectacles et Concert",
+                "title": "Programme du kiosque à musique du parc Montsouris",
+                "text": "Samedi 05 septembre 2015<br />de 15h00 à 18h00",
+                "image": {"src": "../../modules/card/1.jpg"}
+              }
+            ]
           }
         },
         {
