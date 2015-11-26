@@ -22,8 +22,9 @@ append content
         +block-search-field(data.list.block_search_field)
         +block-search-filters(data.list.block_search_filters)
         +block-search(data.list.block_search_results)
-          each result in data.list.results
-            +card(result)
+          .block-search-cards
+            each result in data.list.results
+              +card(result)
       .layout-content-map
 
 append footer

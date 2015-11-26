@@ -92,6 +92,16 @@
         "text": "Texte"
       }
     }, {
+      "title": "Bouton filtre",
+      "description": "",
+      "data": {
+        "href": "#",
+        "icon": "swimming-pool",
+        "text": "Piscines",
+        "title": "Titre",
+        "modifiers": ["white", "filter"]
+      }
+    }, {
       "title": "Bouton avec marqueur",
       "data": {
         "text": "Texte",

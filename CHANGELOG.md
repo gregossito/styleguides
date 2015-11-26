@@ -93,6 +93,7 @@ Let's take the `x.β.α` version number:
 
 * all components now accept `modifiers`
 * component `cards` added
+* component `opening-hours` added
 * component `rush-hours` added
 * module `block-aside-access` added
 * module `block-aside-contact`: added minimap

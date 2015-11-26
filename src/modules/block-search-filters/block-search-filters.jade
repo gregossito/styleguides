@@ -2,12 +2,13 @@ include ../block-search/block-search
 include ../button/button
 
 mixin block-search-filters(data)
+  - data = JSON.parse(JSON.stringify(data)) // clone the data object
   - data.modifiers = data.modifiers || []
   - data.modifiers.push("block-search-filters")
   +block-search(data)
     if data.filter_items && data.filter_items.length
       each item in data.filter_items
-        - item.modifiers = ["white"]
+        - item.modifiers = ["white", "small"]
         +button(item)
-      - data.all_filters.modifiers = ["secondary"]
-      +button(data.all_filters)
+      - data.more.modifiers = ["secondary", "small"]
+      +button(data.more)

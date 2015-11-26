@@ -1,12 +1,18 @@
 .block-search {
   padding: 30px;
 
+  // modifiers
   &.gray-background {
     background-color: $grayF2;
-  }
 
-  & + .block-search {
-    border-top: 1px solid $grayEE;
+    & + .block-search.gray-background {
+      padding-top: 0;
+
+      .block-search-header {
+        border-top: 1px solid $grayCC;
+        padding-top: 30px;
+      }
+    }
   }
 }
 
@@ -15,14 +21,13 @@
   margin-bottom: 10px;
 }
 
-.block-search-content {
+.block-search-cards {
   @include container;
 
   .card {
     @include gallery(6 of 12);
     margin-bottom: gutter(12);
   }
-
 }
 
 .block-search-title {
@@ -36,6 +41,10 @@
 .block-search-bottom-links a {
   color: $gray33;
   font-size: 14px;
+
+  &:hover {
+    color: $color-primary;
+  }
 }
 
 .block-search-top-link {

@@ -2,6 +2,9 @@ include ../quick-access/quick-access
 
 mixin rheader(data)
   header.rheader(class=data.modifiers role="banner")
+    - var search = data.buttons.search // shortcut
+    - var around = data.buttons.around // shortcut
+    - var menu = data.buttons.menu // shortcut
     .rheader-wrapper
       a.rheader-logo#logo(href=data.logo.href title=data.logo.title)
         .rheader-logo-nef
@@ -18,17 +21,17 @@ mixin rheader(data)
                   strong= locale.lang
                 else
                   = locale.lang
-      if data.buttons.search
-        a.rheader-button.rheader-button-search(href=data.buttons.search.href title=data.buttons.search.text target=data.buttons.search.target aria-controls="rheader-search" role="button" class=data.buttons.search.current ? 'active' : null)
-          if data.buttons.search.icon
-            i.rheader-button-icon(class="icon-#{data.buttons.search.icon}")
-      if data.buttons.around
-        a.rheader-button.rheader-button-around(href=data.buttons.around.href title=data.buttons.around.text target=data.buttons.around.target role="button")
-          if data.buttons.around.icon
-            i.rheader-button-icon(class="icon-#{data.buttons.around.icon}")
-            span.rheader-button-text= data.buttons.around.text
-      a.rheader-button.rheader-button-menu#nav-toggle(href=data.buttons.menu.href target=data.buttons.menu.target rel="nofollow" role="button")
-        span.rheader-button-text= data.buttons.menu.text
+      if search
+        a.rheader-button.rheader-button-search(href=search.href title=search.text target=search.target aria-controls="rheader-search" role="button" class=search.current ? 'active' : null)
+          if search.icon
+            i.rheader-button-icon(class="icon-#{search.icon}")
+      if around
+        a.rheader-button.rheader-button-around(href=around.href title=around.text target=around.target role="button" class=around.current ? 'active' : null)
+          if around.icon
+            i.rheader-button-icon(class="icon-#{around.icon}")
+            span.rheader-button-text= around.text
+      a.rheader-button.rheader-button-menu#nav-toggle(href=menu.href target=menu.target rel="nofollow" role="button")
+        span.rheader-button-text= menu.text
       nav.rheader-nav#navigation(aria-label=data.navigation_label tabindex="-1" role="navigation")
         ul
           each item in data.items
@@ -52,6 +55,7 @@ mixin rheader(data)
 //- This mixin is used to render the mobile-nav server-side, when JS is disabled client-side
 mixin rheader-mobile-nav(data)
   .rheader-mobile-nav#rheader-mobile-nav
+    - var around = data.buttons.around // shortcut
     if data.locales
       ul.rheader-locales
         each locale in data.locales
@@ -59,12 +63,12 @@ mixin rheader-mobile-nav(data)
             a(href=locale.href class=(locale.current ? 'current' : null) target=locale.target)= locale.text
     ul.rheader-nav
       each item in data.items
-        if item.modifiers && item.modifiers.indexOf("account") !== -1 && data.buttons.around
+        if item.modifiers && item.modifiers.indexOf("account") !== -1 && around
           li.rheader-nav-item.around
-            a.rheader-button.rheader-button-around(href=data.buttons.around.href title=data.buttons.around.text target=data.buttons.around.target)
-              if data.buttons.around.icon
-                i.rheader-button-icon(class="icon-#{data.buttons.around.icon}")
-                span.rheader-button-text= data.buttons.around.text
+            a.rheader-button.rheader-button-around(href=around.href title=around.text target=around.target)
+              if around.icon
+                i.rheader-button-icon(class="icon-#{around.icon}")
+                span.rheader-button-text= around.text
         li.rheader-nav-item(class=item.modifiers class=(item.current ? "current" : null))
           a(href=item.href target=item.target)
             if item.icon
