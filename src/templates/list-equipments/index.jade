@@ -1,17 +1,11 @@
 extends ../../layouts/stack/stack
 
-include ../../modules/block-content-jecoute/block-content-jecoute
-include ../../modules/block-content-newsletter/block-content-newsletter
-include ../../modules/block-content-social/block-content-social
-include ../../modules/block-content/block-content
-include ../../modules/button-top/button-top
-include ../../modules/footer/footer
-include ../../modules/heading/heading
+include ../../modules/block-search/block-search
+include ../../modules/block-search-field/block-search-field
+include ../../modules/block-search-filters/block-search-filters
+include ../../modules/card/card
 include ../../modules/notice/notice
-include ../../modules/pagination/pagination
 include ../../modules/rheader/rheader
-include ../../modules/search-field/search-field
-include ../../modules/share/share
 include ../../modules/skip-links/skip-links
 
 append header
@@ -22,35 +16,15 @@ append header
   +rheader(data.rheader)
 
 append content
-  .layout-content.layout-separate-after.layout-adjacent-before.layout-adjacent-after
-    .layout-left-col
-      .layout-wrapper
-        aside.layout-aside
-          .aside-wrapper
-            #search-box
-            #filters
-            ul#hits-container
-        .layout-content
-          #map(style="height: 700px")
-
-append content
-  .layout-content.color-secondary-background.layout-separate-after
-    .layout-three-col
-      .layout-wrapper
-        +heading(data.connected.heading)
-        .layout-content
-          +block-content-newsletter(data.connected.newsletter)
-        .layout-content
-          +block-content-jecoute(data.connected.jecoute)
-        .layout-content
-          +block-content-social(data.connected.social)
-
-append footer
-  .layout-content.layout-adjacent-before
-    +footer(data.footer)
-
-append footer
-  +button-top(data.button_top)
+  .layout-content
+    .layout-list-map
+      .layout-content-list
+        +block-search-field(data.list.block_search_field)
+        +block-search-filters(data.list.block_search_filters)
+        +block-search(data.list.block_search_results)
+          each result in data.list.results
+            +card(result)
+      .layout-content-map
 
 append footer
   if data.notices && data.notices.cnil

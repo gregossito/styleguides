@@ -15,6 +15,16 @@
   margin-bottom: 10px;
 }
 
+.block-search-content {
+  @include container;
+
+  .card {
+    @include gallery(6 of 12);
+    margin-bottom: gutter(12);
+  }
+
+}
+
 .block-search-title {
   color: $color-secondary;
   float: left;

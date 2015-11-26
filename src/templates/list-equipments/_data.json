@@ -99,109 +99,127 @@
           }
         }
       },
-      "aside": [
-
-      ],
-      "results": [
-      ],
-      "connected": {
-        "heading": {
-          "title": "Restez connecté",
-          "modifiers": ["white"]
-        },
-        "newsletter" : {
-          "title": "L’essentiel de Paris",
-          "modifiers": ["color-secondary-background"],
-          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
-          "button": {
-            "href": "#",
-            "text": "Je m'abonne",
-            "target": "_blank"
-          },
-          "link": {
-            "href": "#",
-            "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
-          }
-        },
-        "jecoute": {
-          "title": "Paris j'écoute",
-          "modifiers": ["color-secondary-background"],
-          "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-          "button": {
-            "href": "#",
-            "text": "Posez votre question !"
-          }
-        },
-        "social": {
-          "title": "Restez connecté",
-          "modifiers": ["color-secondary-background"],
-          "items": [
+      "list": {
+        "block_search_field": {
+          "modifiers": [
+            "gray-background"
+          ],
+          "title": "Rechercher",
+          "bottom_links": [
             {
-              "icon": "twitter",
-              "count": "219 000",
-              "unit": "abonnés",
-              "link": {
-                "href": "#",
-                "text": "Twitter",
-                "target": "_blank"
-              }
-            },
-            {
-              "icon": "facebook",
-              "count": "2 508 576",
-              "unit": "abonnés",
-              "link": {
-                "href": "#",
-                "text": "Facebook",
-                "target": "_blank"
-              }
-            },
-            {
-              "icon": "instagram",
-              "count": "16 449",
-              "unit": "abonnés",
-              "link": {
-                "href": "#",
-                "text": "Instagram",
-                "target": "_blank"
-              }
-            },
-            {
-              "icon": "dailymotion",
-              "count": "5 442",
-              "unit": "abonnés",
-              "link": {
-                "href": "#",
-                "text": "Dailymotion",
-                "target": "_blank"
-              }
+              "href": "#",
+              "text": "Mes favoris"
             }
           ],
-          "link": {
-            "href": "#",
-            "text": "Voir tous les réseaux sociaux"
+          "search_field": {
+            "action": "#",
+            "modifiers": [
+              "small"
+            ],
+            "input": {
+              "placeholder": "Rechercher un nom..."
+            },
+            "submit": {
+              "text": "Ok",
+              "title": "Valider la recherche par nom"
+            }
           }
-        }
+        },
+        "block_search_filters": {
+          "modifiers": [
+            "gray-background"
+          ],
+          "title": "Filtrer",
+          "top_link": {
+            "href": "#",
+            "text": "Réinitialiser"
+          },
+          "filter_items": [
+            {
+              "href": "#",
+              "icon": "swimming-pool",
+              "text": "Piscines",
+              "modifiers": [
+                "white",
+                "icon"
+              ]
+            },
+            {
+              "href": "#",
+              "icon": "museum",
+              "text": "Musées municipaux",
+              "modifiers": [
+                "white",
+                "icon"
+              ]
+            }
+          ],
+          "all_filters": {
+            "href": "#",
+            "text": "Afficher la liste complète",
+            "modifiers": [
+              "secondary"
+            ]
+          }
+        },
+        "block_search_results": {
+          "title": "Résultats"
+        },
+        "results": [
+          {
+            "modifiers": [
+              "open"
+            ],
+            "href": "#",
+            "title": "Bibliothèque Parmentier",
+            "text": "20 avenue Parmentier<br />75011 Paris",
+            "hours": "Ouvert jusqu’à 21h",
+            "image": {
+              "src": "../../modules/card/1.jpg"
+            }
+          },
+          {
+            "modifiers": [
+              "open"
+            ],
+            "href": "#",
+            "title": "Bibliothèque Parmentier",
+            "text": "20 avenue Parmentier<br />75011 Paris",
+            "hours": "Ouvert jusqu’à 21h",
+            "image": {
+              "src": "../../modules/card/1.jpg"
+            }
+          },
+          {
+            "modifiers": [
+              "open"
+            ],
+            "href": "#",
+            "title": "Bibliothèque Parmentier",
+            "text": "20 avenue Parmentier<br />75011 Paris",
+            "hours": "Ouvert jusqu’à 21h",
+            "image": {
+              "src": "../../modules/card/1.jpg"
+            }
+          },
+          {
+            "modifiers": [
+              "open"
+            ],
+            "href": "#",
+            "title": "Bibliothèque Parmentier",
+            "text": "20 avenue Parmentier<br />75011 Paris",
+            "hours": "Ouvert jusqu’à 21h",
+            "image": {
+              "src": "../../modules/card/1.jpg"
+            }
+          }
+        ]
       },
+      "map": [
+      ],
       "button_top": {
         "accessibility_label": "retour en haut de la page"
-      },
-      "footer": {
-        "logo": {
-          "href": "../home",
-          "src": "../../modules/footer/mairie-de-paris.png",
-          "alt": "retour à l'accueil – Paris"
-        },
-        "items": [
-          {"href": "#", "text": "Visit Paris", "lang": "en", "modifiers": ["strong"]},
-          {"href": "#", "text": "FAQ"},
-          {"href": "#", "text": "Newsletter"},
-          {"href": "#", "text": "Contact"},
-          {"href": "#", "text": "Presse"},
-          {"href": "#", "text": "Mentions légales"},
-          {"href": "#", "text": "Crédits"},
-          {"href": "#", "text": "Accessibilité"}
-        ]
       }
     }
   }

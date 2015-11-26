@@ -128,5 +128,5 @@ Paris.listEquipments = (function(){
 })();
 
 $(document).ready(function(){
-  Paris.listEquipments('body.list-equipments');
+  //Paris.listEquipments('body.list-equipments');
 });
