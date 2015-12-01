@@ -4,11 +4,13 @@
     "description": "",
     "cssTheme": "",
     "bodyAttributes": {},
-    "examples": [{
-      "title": "",
-      "description": "",
-      "attrs": {},
-      "data": {}
-    }]
+    "examples": [
+      {
+        "title": "",
+        "description": "",
+        "attrs": {},
+        "data": {}
+      }
+    ]
   }
 }

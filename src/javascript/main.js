@@ -27,6 +27,7 @@ require('../modules/block-content-jecoute/script');
 require('../modules/block-content-newsletter/script');
 require('../modules/button-top/script');
 require('../modules/gallery-ugc/script');
+require('../modules/icon-switch/script');
 require('../modules/notice/script');
 require('../modules/person-block/script');
 require('../modules/poll/script');
@@ -47,5 +48,5 @@ require('./lib/cnil');
 require('./lib/egg');
 
 var Paris = window.Paris || {};
-Paris.version = "1.2.2";
+Paris.version = "1.3.0";
 Paris.templates = require('./client.tpl');

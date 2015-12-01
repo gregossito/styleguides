@@ -104,12 +104,19 @@
         "text": "Demander un logement",
         "icons" : [
           {
-            "name": "favorites",
-            "url": "#"
-          },
-          {
-            "name": "bell",
-            "url": "#"
+            "action": {
+              "type": "alert",
+              "id": 1,
+              "fallback_link": "https://connect.paris.fr/alertes"
+            },
+            "icon": [
+              "bell-outline",
+              "bell"
+            ],
+            "label": [
+              "S'inscrire aux alertes",
+              "Se désinscrire des alertes"
+            ]
           }
         ]
       },
@@ -136,76 +143,78 @@
           }
         ]
       },
-      "aside": {
-        "anchors_list": {
-          "attributes": {
-            "data-anchors-favoritable": "true",
-            "data-anchors-shareable": "true"
-          },
-          "title": "Sommaire de la page",
-          "items": [
-            {
-              "href": "#est-ce-que-j-y-ai-droit",
-              "text": "Est-ce que j’y ai droit ?",
-              "attributes": {
-                "data-share-facebook": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr/document/#est-ce-que-j-y-ai-droit",
-                "data-share-twitter": "https://twitter.com/intent/tweet?text=Demander un logement http://www.paris.fr/document/#est-ce-que-j-y-ai-droit",
-                "data-share-mail": "mailto:?subject=Demander un logement&body=http://www.paris.fr/document/#est-ce-que-j-y-ai-droit"
+      "aside": [
+        {
+          "type": "anchors-list",
+          "data": {
+            "title": "Sommaire de la page",
+            "items": [
+              {
+                "href": "#est-ce-que-j-y-ai-droit",
+                "text": "Est-ce que j’y ai droit ?",
+                "attributes": {
+                  "data-share-facebook": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr/document/#est-ce-que-j-y-ai-droit",
+                  "data-share-twitter": "https://twitter.com/intent/tweet?text=Demander un logement http://www.paris.fr/document/#est-ce-que-j-y-ai-droit",
+                  "data-share-mail": "mailto:?subject=Demander un logement&body=http://www.paris.fr/document/#est-ce-que-j-y-ai-droit"
+                }
+              },
+              {
+                "href": "#constituer-un-dossier",
+                "text": "Constituer un dossier",
+                "attributes": {
+                  "data-share-facebook": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr/document/#constituer-un-dossier",
+                  "data-share-twitter": "https://twitter.com/intent/tweet?text=Demander un logement http://www.paris.fr/document/#constituer-un-dossier",
+                  "data-share-mail": "mailto:?subject=Demander un logement&body=http://www.paris.fr/document/#constituer-un-dossier"
+                }
+              },
+              {
+                "href": "#complement-l-aide-au-logement",
+                "text": "Complément : l’aide au logement avec texte très long",
+                "attributes": {
+                  "data-share-facebook": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr/document/#complement-l-aide-au-logement",
+                  "data-share-twitter": "https://twitter.com/intent/tweet?text=Demander un logement http://www.paris.fr/document/#complement-l-aide-au-logement",
+                  "data-share-mail": "mailto:?subject=Demander un logement&body=http://www.paris.fr/document/#complement-l-aide-au-logement"
+                }
+              },
+              {
+                "href": "#questions-frequentes",
+                "text": "Questions fréquentes",
+                "attributes": {
+                  "data-share-facebook": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr/document/#questions-frequentes",
+                  "data-share-twitter": "https://twitter.com/intent/tweet?text=Demander un logement http://www.paris.fr/document/#questions-frequentes",
+                  "data-share-mail": "mailto:?subject=Demander un logement&body=http://www.paris.fr/document/#questions-frequentes"
+                }
               }
-            },
-            {
-              "href": "#constituer-un-dossier",
-              "text": "Constituer un dossier",
-              "attributes": {
-                "data-share-facebook": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr/document/#constituer-un-dossier",
-                "data-share-twitter": "https://twitter.com/intent/tweet?text=Demander un logement http://www.paris.fr/document/#constituer-un-dossier",
-                "data-share-mail": "mailto:?subject=Demander un logement&body=http://www.paris.fr/document/#constituer-un-dossier"
-              }
-            },
-            {
-              "href": "#complement-l-aide-au-logement",
-              "text": "Complément : l’aide au logement avec texte très long",
-              "attributes": {
-                "data-share-facebook": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr/document/#complement-l-aide-au-logement",
-                "data-share-twitter": "https://twitter.com/intent/tweet?text=Demander un logement http://www.paris.fr/document/#complement-l-aide-au-logement",
-                "data-share-mail": "mailto:?subject=Demander un logement&body=http://www.paris.fr/document/#complement-l-aide-au-logement"
-              }
-            },
-            {
-              "href": "#questions-frequentes",
-              "text": "Questions fréquentes",
-              "attributes": {
-                "data-share-facebook": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr/document/#questions-frequentes",
-                "data-share-twitter": "https://twitter.com/intent/tweet?text=Demander un logement http://www.paris.fr/document/#questions-frequentes",
-                "data-share-mail": "mailto:?subject=Demander un logement&body=http://www.paris.fr/document/#questions-frequentes"
-              }
-            }
-          ]
+            ]
+          }
         },
-        "share": {
-          "modifiers": ["circles"],
-          "items": [
-            {
-              "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
-              "icon": "facebook",
-              "text": "Partager sur Facebook",
-              "title": "Partager sur Facebook - nouvelle fenêtre"
-            },
-            {
-              "href": "https://twitter.com/intent/tweet?text=Demander un logement http://www.paris.fr",
-              "icon": "twitter",
-              "text": "Partager sur Twitter",
-              "title": "Partager sur Twitter - nouvelle fenêtre"
-            },
-            {
-              "href": "mailto:?subject=Demander un logement&body=http://www.paris.fr",
-              "icon": "mail",
-              "text": "Partager par courriel",
-              "title": "Partager par courriel - nouvelle fenêtre"
-            }
-          ]
+        {
+          "type": "share",
+          "data": {
+            "modifiers": ["circles"],
+            "items": [
+              {
+                "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
+                "icon": "facebook",
+                "text": "Partager sur Facebook",
+                "title": "Partager sur Facebook - nouvelle fenêtre"
+              },
+              {
+                "href": "https://twitter.com/intent/tweet?text=Demander un logement http://www.paris.fr",
+                "icon": "twitter",
+                "text": "Partager sur Twitter",
+                "title": "Partager sur Twitter - nouvelle fenêtre"
+              },
+              {
+                "href": "mailto:?subject=Demander un logement&body=http://www.paris.fr",
+                "icon": "mail",
+                "text": "Partager par courriel",
+                "title": "Partager par courriel - nouvelle fenêtre"
+              }
+            ]
+          }
         }
-      },
+      ],
       "components": [
         {
           "type": "text",
@@ -761,12 +770,19 @@
         "text": "Demander un logement",
         "icons" : [
           {
-            "name": "favorites",
-            "url": "#"
-          },
-          {
-            "name": "bell",
-            "url": "#"
+            "action": {
+              "type": "alert",
+              "id": 1,
+              "fallback_link": "https://connect.paris.fr/alertes"
+            },
+            "icon": [
+              "bell-outline",
+              "bell"
+            ],
+            "label": [
+              "S'inscrire aux alertes",
+              "Se désinscrire des alertes"
+            ]
           }
         ]
       },
@@ -793,44 +809,60 @@
           }
         ]
       },
-      "aside": {
-        "anchors_list": {
-          "attributes": {
-            "data-anchors-favoritable": "true",
-            "data-anchors-shareable": "true"
-          },
-          "title": "Sommaire de la page",
-          "items": [
-            {"href": "#est-ce-que-j-y-ai-droit", "text": "Est-ce que j’y ai droit ?"},
-            {"href": "#constituer-un-dossier", "text": "Constituer un dossier"},
-            {"href": "#complement-l-aide-au-logement", "text": "Complément : l’aide au logement"},
-            {"href": "#questions-frequentes", "text": "Questions fréquentes"}
-          ]
+      "aside": [
+        {
+          "type": "anchors-list",
+          "data": {
+            "title": "Sommaire de la page",
+            "items": [
+              {
+                "href": "#est-ce-que-j-y-ai-droit",
+                "text": "Est-ce que j’y ai droit ?"
+              },
+              {
+                "href": "#constituer-un-dossier",
+                "text": "Constituer un dossier"
+              },
+              {
+                "href": "#complement-l-aide-au-logement",
+                "text": "Complément : l’aide au logement"
+              },
+              {
+                "href": "#questions-frequentes",
+                "text": "Questions fréquentes"
+              }
+            ]
+          }
         },
-        "share": {
-          "modifiers": ["circles"],
-          "items": [
-            {
-              "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
-              "icon": "facebook",
-              "text": "Partager sur Facebook",
-              "title": "Partager sur Facebook - nouvelle fenêtre"
-            },
-            {
-              "href": "https://twitter.com/intent/tweet?text=Demander un logement http://www.paris.fr",
-              "icon": "twitter",
-              "text": "Partager sur Twitter",
-              "title": "Partager sur Twitter - nouvelle fenêtre"
-            },
-            {
-              "href": "mailto:?subject=Demander un logement&body=http://www.paris.fr",
-              "icon": "mail",
-              "text": "Partager par courriel",
-              "title": "Partager par courriel - nouvelle fenêtre"
-            }
-          ]
+        {
+          "type": "share",
+          "data": {
+            "modifiers": [
+              "circles"
+            ],
+            "items": [
+              {
+                "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
+                "icon": "facebook",
+                "text": "Partager sur Facebook",
+                "title": "Partager sur Facebook - nouvelle fenêtre"
+              },
+              {
+                "href": "https://twitter.com/intent/tweet?text=Demander un logement http://www.paris.fr",
+                "icon": "twitter",
+                "text": "Partager sur Twitter",
+                "title": "Partager sur Twitter - nouvelle fenêtre"
+              },
+              {
+                "href": "mailto:?subject=Demander un logement&body=http://www.paris.fr",
+                "icon": "mail",
+                "text": "Partager par courriel",
+                "title": "Partager par courriel - nouvelle fenêtre"
+              }
+            ]
+          }
         }
-      },
+      ],
       "components": [
         {
           "type": "postit",

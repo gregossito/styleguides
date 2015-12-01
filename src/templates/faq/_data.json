@@ -117,82 +117,88 @@
       },
       "aside": [
         {
-          "title": "Profil",
-          "items": [
-            {
-              "href": "#",
-              "text": "S’installer à Paris"
-            },
-            {
-              "href": "#",
-              "text": "Seniors"
-            },
-            {
-              "href": "#",
-              "text": "Handicap"
-            },
-            {
-              "href": "#",
-              "text": "Que faire avec ses enfants à Paris ?"
-            },
-            {
-              "href": "#",
-              "text": "Demandeurs d’emploi"
-            }
-          ]
+          "type": "block-aside-links",
+          "data": {
+            "title": "Profil",
+            "items": [
+              {
+                "href": "#",
+                "text": "S’installer à Paris"
+              },
+              {
+                "href": "#",
+                "text": "Seniors"
+              },
+              {
+                "href": "#",
+                "text": "Handicap"
+              },
+              {
+                "href": "#",
+                "text": "Que faire avec ses enfants à Paris ?"
+              },
+              {
+                "href": "#",
+                "text": "Demandeurs d’emploi"
+              }
+            ]
+          }
         },
         {
-          "title": "Thématique",
-          "items": [
-            {
-              "href": "#",
-              "text": "Périphérique"
-            },
-            {
-              "href": "#",
-              "text": "Pollution sonore"
-            },
-            {
-              "href": "#",
-              "text": "Mairies d’arrondissement"
-            },
-            {
-              "href": "#",
-              "text": "Lorem ullamcorper"
-            },
-            {
-              "href": "#",
-              "text": "Adipiscing"
-            },
-            {
-              "href": "#",
-              "text": "Ullamcorper"
-            },
-            {
-              "href": "#",
-              "text": "Egestas sollicitudin"
-            },
-            {
-              "href": "#",
-              "text": "Porta cursus"
-            },
-            {
-              "href": "#",
-              "text": "Vulputate"
-            },
-            {
-              "href": "#",
-              "text": "Euismod cursus"
-            },
-            {
-              "href": "#",
-              "text": "Dapibus porta"
-            },
-            {
-              "href": "#",
-              "text": "Cursus"
-            }
-          ]
+          "type": "block-aside-links",
+          "data": {
+            "title": "Thématique",
+            "items": [
+              {
+                "href": "#",
+                "text": "Périphérique"
+              },
+              {
+                "href": "#",
+                "text": "Pollution sonore"
+              },
+              {
+                "href": "#",
+                "text": "Mairies d’arrondissement"
+              },
+              {
+                "href": "#",
+                "text": "Lorem ullamcorper"
+              },
+              {
+                "href": "#",
+                "text": "Adipiscing"
+              },
+              {
+                "href": "#",
+                "text": "Ullamcorper"
+              },
+              {
+                "href": "#",
+                "text": "Egestas sollicitudin"
+              },
+              {
+                "href": "#",
+                "text": "Porta cursus"
+              },
+              {
+                "href": "#",
+                "text": "Vulputate"
+              },
+              {
+                "href": "#",
+                "text": "Euismod cursus"
+              },
+              {
+                "href": "#",
+                "text": "Dapibus porta"
+              },
+              {
+                "href": "#",
+                "text": "Cursus"
+              }
+            ]
+          }
         }
       ],
       "components": [

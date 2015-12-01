@@ -24,7 +24,7 @@
     }, {
       "title": "Avec icônes et/ou liens",
       "data": {
-      "title": "Contact",
+        "title": "Contact",
         "items": [
           {
             "hcard_properties": ["org", "p-org"],
@@ -68,6 +68,29 @@
             "modifiers": ["social-instagram"],
             "text": "Instagram",
             "href": "#"
+          }
+        ]
+      }
+    }, {
+      "title": "Avec mini carte et adresse",
+      "data": {
+        "map": {
+          "href": "http://maps.google.com/?q=48.8242657,2.3095736",
+          "target": "_blank",
+          "src": "https://api.mapbox.com/v4/mapbox.streets/pin-m+0C518A%282.3095736,48.8242657%29/2.3095736,48.8242657,16/280x200.png?access_token=pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw"
+        },
+        "items": [
+          {
+            "hcard_properties": ["street-address", "p-street-address"],
+            "text": "22, avenue Georges Lafenestre"
+          },
+          {
+            "hcard_properties": ["postal-code", "p-postal-code"],
+            "text": "75014"
+          },
+          {
+            "hcard_properties": ["locality", "p-locality"],
+            "text": "Paris"
           }
         ]
       }

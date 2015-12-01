@@ -1,5 +1,5 @@
 mixin links(data)
-  .component.component-links
+  .component.component-links(class=data.modifiers)
     if data.title
       - var title_tag = data.title_tag || 'h2'
       #{title_tag}.links-title= data.title

@@ -84,6 +84,10 @@
     ul {
       list-style-type: disc;
     }
+
+    table {
+      width: 746px;
+    }
   }
 
   .collapse {
@@ -120,4 +124,30 @@
   }
 }
 
+@include medium-and-small {
+  .component-accordion {
+    .accordion-content-wrapper {
+      table {
+        overflow-x: auto;
+        position: relative;
+        width: 100%;
+        td {
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}
 
+@include large {
+  .component-accordion {
+    .accordion-content-wrapper {
+      table {
+        width: 100%;
+        td {
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}

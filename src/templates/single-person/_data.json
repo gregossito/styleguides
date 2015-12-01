@@ -99,12 +99,6 @@
       "heading": {
         "image": "heading.jpg",
         "text": "Bruno Julliard",
-        "icons" : [
-          {
-            "name": "favorites",
-            "url": "#"
-          }
-        ],
         "tags" : [
           {
             "text": "Adjoint"
@@ -137,137 +131,90 @@
           }
         ]
       },
-      "aside": {
-        "permanence": {
-          "title": "Permanences",
-          "block": "<p>Sur rendez-vous à la Mairie du XIIIè arrondissement.</p><button class=\"button action\">Demandez un rendez-vous</button>"
+      "aside": [
+        {
+          "type": "block-aside",
+          "data": {
+            "title": "Permanences",
+            "block": "<p>Sur rendez-vous à la Mairie du XIIIè arrondissement.</p><button class=\"button action\">Demandez un rendez-vous</button>"
+          }
         },
-        "contact" :{
-          "title": "Contact",
-          "items": [
-            {
-              "hcard_properties": [
-                "org",
-                "p-org"
-              ],
-              "text": "Mairie du XIIIe arrondissement"
-            },
-            {
-              "hcard_properties": [
-                "street-address",
-                "p-street-address"
-              ],
-              "text": "1 place d’Italie"
-            },
-            {
-              "hcard_properties": [
-                "postal-code",
-                "p-postal-code"
-              ],
-              "text": "75013"
-            },
-            {
-              "hcard_properties": [
-                "locality",
-                "p-locality"
-              ],
-              "text": "Paris"
-            },
-            {
-              "title": "Tél.",
-              "hcard_properties": [
-                "tel",
-                "p-tel"
-              ],
-              "text": "01 45 39 89 29",
-              "href": "tel:+33145398929"
-            },
-            {
-              "title": "Twitter",
-              "icon": "twitter",
-              "modifiers": [
-                "social-twitter",
-                "has-icon"
-              ],
-              "text": "@BrunoJulliard",
-              "href": "http://twitter.com/BrunoJulliard"
-            },
-            {
-              "title": "Facebook",
-              "icon": "facebook",
-              "modifiers": [
-                "social-facebook",
-                "has-icon"
-              ],
-              "text": "Facebook",
-              "href": "https://www.facebook.com/pages/Bruno-Julliard/203706546958"
-            },
-            {
-              "title": "Instagram",
-              "icon": "instagram",
-              "modifiers": [
-                "social-instagram",
-                "has-icon"
-              ],
-              "text": "Instagram",
-              "href": "#"
-            }
-          ]
-        },
-        "topics": {
-          "title": "Thématique",
-          "items": [
-            {
-              "href": "#",
-              "text": "Périphérique"
-            },
-            {
-              "href": "#",
-              "text": "Pollution sonore"
-            },
-            {
-              "href": "#",
-              "text": "Mairies d’arrondissement"
-            },
-            {
-              "href": "#",
-              "text": "Lorem ullamcorper"
-            },
-            {
-              "href": "#",
-              "text": "Adipiscing"
-            },
-            {
-              "href": "#",
-              "text": "Ullamcorper"
-            },
-            {
-              "href": "#",
-              "text": "Egestas sollicitudin"
-            },
-            {
-              "href": "#",
-              "text": "Porta cursus"
-            },
-            {
-              "href": "#",
-              "text": "Vulputate"
-            },
-            {
-              "href": "#",
-              "text": "Euismod cursus"
-            },
-            {
-              "href": "#",
-              "text": "Dapibus porta"
-            },
-            {
-              "href": "#",
-              "text": "Cursus"
-            }
-          ]
+        {
+          "type": "block-aside-contact",
+          "data": {
+            "title": "Contact",
+            "items": [
+              {
+                "hcard_properties": [
+                  "org",
+                  "p-org"
+                ],
+                "text": "Mairie du XIIIe arrondissement"
+              },
+              {
+                "hcard_properties": [
+                  "street-address",
+                  "p-street-address"
+                ],
+                "text": "1 place d’Italie"
+              },
+              {
+                "hcard_properties": [
+                  "postal-code",
+                  "p-postal-code"
+                ],
+                "text": "75013"
+              },
+              {
+                "hcard_properties": [
+                  "locality",
+                  "p-locality"
+                ],
+                "text": "Paris"
+              },
+              {
+                "title": "Tél.",
+                "hcard_properties": [
+                  "tel",
+                  "p-tel"
+                ],
+                "text": "01 45 39 89 29",
+                "href": "tel:+33145398929"
+              },
+              {
+                "title": "Twitter",
+                "icon": "twitter",
+                "modifiers": [
+                  "social-twitter",
+                  "has-icon"
+                ],
+                "text": "@BrunoJulliard",
+                "href": "http://twitter.com/BrunoJulliard"
+              },
+              {
+                "title": "Facebook",
+                "icon": "facebook",
+                "modifiers": [
+                  "social-facebook",
+                  "has-icon"
+                ],
+                "text": "Facebook",
+                "href": "https://www.facebook.com/pages/Bruno-Julliard/203706546958"
+              },
+              {
+                "title": "Instagram",
+                "icon": "instagram",
+                "modifiers": [
+                  "social-instagram",
+                  "has-icon"
+                ],
+                "text": "Instagram",
+                "href": "#"
+              }
+            ]
+          }
         }
-      },
+      ],
       "components": [
         {
           "type": "text",
@@ -548,12 +495,6 @@
       "heading": {
         "image": "heading-generic.jpg",
         "text": "Bruno Julliard",
-        "icons" : [
-          {
-            "name": "favorites",
-            "url": "#"
-          }
-        ],
         "tags" : [
           {
             "text": "Adjoint"
@@ -586,140 +527,96 @@
           }
         ]
       },
-      "aside": {
-        "picture": {
-          "block": "<img src=\"portrait.jpg\" />"
+      "aside": [
+        {
+          "type": "block-aside",
+          "data": {
+            "block": "<img src=\"portrait.jpg\" />"
+          }
         },
-        "permanence": {
-          "title": "Permanences",
-          "block": "<p>Sur rendez-vous à la Mairie du XIIIè arrondissement.</p><button class=\"button action\">Demandez un rendez-vous</button>"
+        {
+          "type": "block-aside",
+          "data": {
+            "title": "Permanences",
+            "block": "<p>Sur rendez-vous à la Mairie du XIIIè arrondissement.</p><button class=\"button action\">Demandez un rendez-vous</button>"
+          }
         },
-        "contact" :{
-          "title": "Contact",
-          "items": [
-            {
-              "hcard_properties": [
-                "org",
-                "p-org"
-              ],
-              "text": "Mairie du XIIIe arrondissement"
-            },
-            {
-              "hcard_properties": [
-                "street-address",
-                "p-street-address"
-              ],
-              "text": "1 place d’Italie"
-            },
-            {
-              "hcard_properties": [
-                "postal-code",
-                "p-postal-code"
-              ],
-              "text": "75013"
-            },
-            {
-              "hcard_properties": [
-                "locality",
-                "p-locality"
-              ],
-              "text": "Paris"
-            },
-            {
-              "title": "Tél.",
-              "hcard_properties": [
-                "tel",
-                "p-tel"
-              ],
-              "text": "01 45 39 89 29",
-              "href": "tel:+33145398929"
-            },
-            {
-              "title": "Twitter",
-              "icon": "twitter",
-              "modifiers": [
-                "social-twitter",
-                "has-icon"
-              ],
-              "text": "@BrunoJulliard",
-              "href": "http://twitter.com/BrunoJulliard"
-            },
-            {
-              "title": "Facebook",
-              "icon": "facebook",
-              "modifiers": [
-                "social-facebook",
-                "has-icon"
-              ],
-              "text": "Facebook",
-              "href": "https://www.facebook.com/pages/Bruno-Julliard/203706546958"
-            },
-            {
-              "title": "Instagram",
-              "icon": "instagram",
-              "modifiers": [
-                "social-instagram",
-                "has-icon"
-              ],
-              "text": "Instagram",
-              "href": "#"
-            }
-          ]
-        },
-        "topics": {
-          "title": "Thématique",
-          "items": [
-            {
-              "href": "#",
-              "text": "Périphérique"
-            },
-            {
-              "href": "#",
-              "text": "Pollution sonore"
-            },
-            {
-              "href": "#",
-              "text": "Mairies d’arrondissement"
-            },
-            {
-              "href": "#",
-              "text": "Lorem ullamcorper"
-            },
-            {
-              "href": "#",
-              "text": "Adipiscing"
-            },
-            {
-              "href": "#",
-              "text": "Ullamcorper"
-            },
-            {
-              "href": "#",
-              "text": "Egestas sollicitudin"
-            },
-            {
-              "href": "#",
-              "text": "Porta cursus"
-            },
-            {
-              "href": "#",
-              "text": "Vulputate"
-            },
-            {
-              "href": "#",
-              "text": "Euismod cursus"
-            },
-            {
-              "href": "#",
-              "text": "Dapibus porta"
-            },
-            {
-              "href": "#",
-              "text": "Cursus"
-            }
-          ]
+        {
+          "type": "block-aside-contact",
+          "data": {
+            "title": "Contact",
+            "items": [
+              {
+                "hcard_properties": [
+                  "org",
+                  "p-org"
+                ],
+                "text": "Mairie du XIIIe arrondissement"
+              },
+              {
+                "hcard_properties": [
+                  "street-address",
+                  "p-street-address"
+                ],
+                "text": "1 place d’Italie"
+              },
+              {
+                "hcard_properties": [
+                  "postal-code",
+                  "p-postal-code"
+                ],
+                "text": "75013"
+              },
+              {
+                "hcard_properties": [
+                  "locality",
+                  "p-locality"
+                ],
+                "text": "Paris"
+              },
+              {
+                "title": "Tél.",
+                "hcard_properties": [
+                  "tel",
+                  "p-tel"
+                ],
+                "text": "01 45 39 89 29",
+                "href": "tel:+33145398929"
+              },
+              {
+                "title": "Twitter",
+                "icon": "twitter",
+                "modifiers": [
+                  "social-twitter",
+                  "has-icon"
+                ],
+                "text": "@BrunoJulliard",
+                "href": "http://twitter.com/BrunoJulliard"
+              },
+              {
+                "title": "Facebook",
+                "icon": "facebook",
+                "modifiers": [
+                  "social-facebook",
+                  "has-icon"
+                ],
+                "text": "Facebook",
+                "href": "https://www.facebook.com/pages/Bruno-Julliard/203706546958"
+              },
+              {
+                "title": "Instagram",
+                "icon": "instagram",
+                "modifiers": [
+                  "social-instagram",
+                  "has-icon"
+                ],
+                "text": "Instagram",
+                "href": "#"
+              }
+            ]
+          }
         }
-      },
+      ],
       "components": [
         {
           "type": "text",

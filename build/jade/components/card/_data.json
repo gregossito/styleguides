@@ -1,0 +1,38 @@
+{
+  "index": {
+    "type": "card",
+    "description": "",
+    "cssTheme": "",
+    "bodyAttributes": {},
+    "examples": [
+      {
+        "title": "Standard",
+        "description": "",
+        "attrs": {
+          "style": "max-width: 770px"
+        },
+        "data": {
+          "href": "#",
+          "category": "Spectacles et Concert",
+          "title": "Programme du kiosque à musique du parc Montsouris",
+          "text": "Samedi 05 septembre 2015<br />de 15h00 à 18h00",
+          "image": {"src": "../../components/card/1.jpg"}
+        }
+      },
+      {
+        "title": "Avec textes longs",
+        "description": "",
+        "attrs": {
+          "style": "max-width: 770px"
+        },
+        "data": {
+          "href": "#",
+          "category": "Praesent sit amet enim mauris. Morbi ultrices volutpat purus, ut vehicula felis.",
+          "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris metus purus, rutrum in scelerisque nec, aliquet ac erat.",
+          "text": "Duis hendrerit augue nunc, et ultrices est dignissim in. Maecenas at turpis ac nulla fermentum viverra. Aenean porttitor ligula arcu, a malesuada lectus lobortis ut. Pellentesque laoreet orci a felis suscipit, at cursus purus aliquam. Duis eleifend vehicula ligula id rhoncus. Aenean ultricies aliquet quam quis dictum. Duis ipsum metus, pellentesque sed ex ac, fringilla maximus lacus.",
+          "image": {"src": "../../components/card/1.jpg"}
+        }
+      }
+    ]
+  }
+}

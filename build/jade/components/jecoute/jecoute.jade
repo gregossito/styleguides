@@ -1,7 +1,7 @@
 include ../../modules/button/button
 
 mixin jecoute(data)
-  .component.component-jecoute(data-thanks=data.thanks)
+  .component.component-jecoute(data-thanks=data.thanks class=data.modifiers)
     .jecoute-title
       h2= data.title
     .jecoute-content

@@ -18,8 +18,6 @@ Paris.anchors = (function(){
     anchorsProgressSelector: '.anchors-list-progress',
     headerSelector: '.rheader',
     contentEl: '.layout-left-col',
-    anchorsFavoritable: false,
-    anchorsShareable: false,
     anchorTopBorder: 7, // border-top of the .anchor elements, in pixels
     breakpoint: 'large',
     scrollDuration: 1500
@@ -45,9 +43,6 @@ Paris.anchors = (function(){
       PubSub.subscribe('responsive.resize', onResize);
       PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableAnchors);
       PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableAnchors);
-
-      if (options.anchorsFavoritable) {renderFavorite();}
-      if (options.anchorsShareable) {renderShare();}
 
       // Fix bad offset by recalculating items dimensions, 1 second after rendering
       // This could probably be improved by tracking down the origin of the discrepancy
@@ -126,45 +121,6 @@ Paris.anchors = (function(){
       defer(function () {
         PubSub.publish('anchors.ready');
         fillBars();
-      });
-    }
-
-    function renderFavorite() {
-      $anchors.each(function (i, anchor) {
-        var $anchor = $(anchor);
-
-        // Do not display favorite when in postit
-        if ($anchor.data('in-postit')) {return;}
-
-        // TODO: handle click on button, then change text (use favorites/remove)
-        var content = '<button type="button" class="icon icon-anchor icon-favorites"><span class="hidden-accessibly">' + Paris.i18n.t("favorites/add") + '</span></button>';
-        $anchor.append(content);
-      });
-    }
-
-    function renderShare() {
-      $anchors.each(function (i, anchor) {
-        var $anchor = $(anchor);
-        var $anchorInList = $el.find('.anchors-list-link[href="#'+$anchor.attr('id')+'"]');
-
-        // Do not display share when in postit
-        if ($anchor.data('in-postit')) {return;}
-
-        var items = map(['facebook', 'twitter', 'mail'], function(type) {
-          return {
-            "href": $anchorInList.data('share-' + type),
-            "icon": type,
-            "text": Paris.i18n.t("share/" + type),
-            "title": Paris.i18n.t("share/" + type) + ' - ' + Paris.i18n.t("new_window")
-          };
-        });
-
-        var content = Paris.templates.share.share({
-          items: items,
-          modifiers: []
-        });
-
-        $anchor.append(content);
       });
     }
 

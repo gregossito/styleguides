@@ -1,0 +1,87 @@
+.component-card {
+  clear: both;
+
+  > a {
+    background-color: $grayF2;
+    border-radius: 5px;
+    color: $gray33;
+    display: block;
+    min-height: 220px;
+    position: relative;
+    text-decoration: none;
+    transition: background 0.35s ease;
+
+    &:hover {
+      background-color: $grayEE;
+
+      .card-image {
+        &:after {opacity: 0;}
+      }
+    }
+  }
+
+  .card-image {
+    background: center center no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &:after {
+      background: $black;
+      content: "";
+      display: block;
+      height: 100%;
+      opacity: 0.1;
+      transition: opacity 0.35s ease;
+      width: 100%;
+    }
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-category {
+    color: $color-secondary;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .card-title {
+    font-size: 17px;
+    margin-top: 10px;
+    max-width: 320px;
+  }
+
+  .card-text {
+    font-size: 15px;
+  }
+}
+
+@include small {
+  .component-card {
+    .card-image {
+      height: 150px;
+      height: 30vh;
+      width: 100%;
+    }
+  }
+}
+
+@include large-and-medium {
+  .component-card {
+    .card-image {
+      height: 100%;
+      left: 0;
+      max-width: 400px;
+      position: absolute;
+      top: 0;
+      width: 45%;
+    }
+
+    .card-content {
+      margin-left: 45%;
+      width: 55%;
+    }
+  }
+}

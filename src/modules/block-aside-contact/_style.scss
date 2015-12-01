@@ -1,5 +1,10 @@
 .block-aside-contact {
 
+  .block-aside-minimap {
+    margin-bottom: 5px;
+    img {max-width: 100%;}
+  }
+
   .block-aside-items {
     color: $gray4D;
     font-size: 16px;
@@ -56,4 +61,33 @@
     margin-right: 5px;
   }
 
+}
+
+@include medium {
+  .block-aside-contact {
+    .block-aside-minimap,
+    .block-aside-minimap img {
+      height: 185px;
+    }
+  }
+}
+
+@include large-and-medium {
+  .block-aside-contact {
+    .block-aside-minimap {
+      > a,
+      > img {
+        position: absolute;
+      }
+    }
+  }
+}
+
+@include large {
+  .block-aside-contact {
+    .block-aside-minimap,
+    .block-aside-minimap img {
+      height: 200px;
+    }
+  }
 }

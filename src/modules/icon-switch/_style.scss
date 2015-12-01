@@ -1,0 +1,33 @@
+.icon-switch {
+  display: inline-block;
+
+  .icon-switch-off {
+    display: none;
+
+    .icon {color: $gray33;}
+    .icon-bell {color: $color-secondary;}
+    .icon-favorites {color: $orange1;}
+  }
+
+  &.active {
+    .icon-switch-on {display: none;}
+    .icon-switch-off {display: inline-block;}
+  }
+
+  > button {
+    background: none;
+    border: 0;
+    color: $gray99;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    padding: 0;
+
+    &:hover {color: $gray33;}
+    &:focus {outline: 1px dotted $gray99;}
+  }
+
+  & + .icon-switch {
+    margin-left: 10px;
+  }
+}

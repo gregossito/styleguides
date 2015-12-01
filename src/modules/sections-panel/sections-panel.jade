@@ -18,7 +18,7 @@ mixin sections-panel(data)
           ul.sections-panel-nav-items
             each item in data.nav.items
               li.sections-panel-nav-item
-                a(href=item.href data-subnav-section=item.slug data-background=item.background data-page-title=item.pageTitle class=(item.current ? "current" : "") aria-expanded=(item.current ? "true" : "false") aria-controls="subnav-#{item.slug}" aria-owns="subnav-#{item.slug}")= item.text
+                a(href=item.href data-subnav-section=item.slug data-background=item.background data-page-title=item.pageTitle class=(item.current ? "current" : "") aria-expanded=(item.current ? "true" : "false") aria-controls="subnav-#{item.slug}" aria-owns="subnav-#{item.slug}" role="button")= item.text
         if data.nav.more
           - var more = JSON.parse(JSON.stringify(data.nav.more)) // clone the data object
           - more.modifiers = ["action", "white", "small", "sections-panel-nav-more"]
@@ -40,16 +40,16 @@ mixin sections-panel(data)
               ul.sections-panel-subnav-items
                 each subitem in item.subnav.items
                   li.sections-panel-subnav-item
-                    a(href=subitem.href data-background=subitem.background data-json=subitem.json data-page-title=subitem.pageTitle class=(subitem.current ? "current" : "") aria-expanded=(subitem.current ? "true" : "false") aria-controls='sections-panel-content' aria-owns='sections-panel-content')
+                    a(href=subitem.href data-background=subitem.background data-json=subitem.json data-page-title=subitem.pageTitle class=(subitem.current ? "current" : "") aria-expanded=(subitem.current ? "true" : "false") aria-controls='sections-panel-content' aria-owns='sections-panel-content' role="button")
                       .sections-panel-subnav-item-title= subitem.title
                       .sections-panel-subnav-item-text= subitem.text
-        a.sections-panel-back.sections-panel-subnav-back(href=data.base)
+        a.sections-panel-back.sections-panel-subnav-back(href=data.base role="button")
           span.accessibility_label
     .sections-panel-content#sections-panel-content
       .sections-panel-content-wrapper
         if has_content
           +sections-panel-content(data.content)
-      a.sections-panel-back.sections-panel-content-back(href=current_item ? current_item.href : "")
+      a.sections-panel-back.sections-panel-content-back(href=current_item ? current_item.href : "" role="button")
         span.accessibility_label
 
 

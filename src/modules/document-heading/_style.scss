@@ -56,35 +56,6 @@
   margin-right: 25px;
 }
 
-.document-heading-icons {
- font-size: 24px;
- line-height: 36px;
-
- .icon {
-   color: $gray99;
-   cursor: pointer;
-   text-decoration: none;
-
-   &:hover {
-     color: $gray33;
-   }
-
-   &.icon-bell.active {
-     color: $color-secondary;
-     &:hover {color: $color-secondary-variant;}
-   }
-
-   &.icon-favorites.active {
-     color: $color-tertiary;
-     &:hover {color: $color-tertiary-variant;}
-   }
-
-   & + .icon {
-     margin-left: 15px;
-   }
- }
-}
-
 @include small {
   .document-heading-content {
     width: 100%;
@@ -150,7 +121,9 @@
 
   .document-heading-icons {
     float: left;
-    line-height: 40px;
+    line-height: 1;
+    position: relative;
+    top: 6px;
   }
 
 }

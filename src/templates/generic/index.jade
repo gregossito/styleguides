@@ -1,7 +1,9 @@
 extends ../../layouts/stack/stack
 
 include ../../modules/anchors-list/anchors-list
+include ../../modules/block-aside-access/block-aside-access
 include ../../modules/block-aside-contact/block-aside-contact
+include ../../modules/block-aside-links/block-aside-links
 include ../../modules/block-aside/block-aside
 include ../../modules/block-content-jecoute/block-content-jecoute
 include ../../modules/block-content-newsletter/block-content-newsletter
@@ -51,16 +53,8 @@ append content
       .layout-wrapper
         aside.layout-aside
           .aside-wrapper
-            if data.aside.anchors_list
-              +anchors-list(data.aside.anchors_list)
-            if data.aside.picture
-              +block-aside(data.aside.picture)
-            if data.aside.permanence
-              +block-aside(data.aside.permanence)
-            if data.aside.contact
-              +block-aside-contact(data.aside.contact)
-            if data.aside.share
-              +share(data.aside.share)
+            each module in data.aside
+              +#{module.type}(module.data)
         .layout-content.components
           - if (data.last_update) {data.components.push({"type": "last-update", "data": data.last_update});}
           - if (data.jecoute) {data.components.push({"type": "jecoute", "data": data.jecoute});}

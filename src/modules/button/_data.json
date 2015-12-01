@@ -11,6 +11,15 @@
         "title": "Titre"
       }
     }, {
+      "title": "Bouton petit",
+      "description": "",
+      "data": {
+        "href": "#",
+        "text": "Texte",
+        "title": "Titre",
+        "modifiers": ["small"]
+      }
+    }, {
       "title": "Bouton d'action",
       "description": "",
       "data": {

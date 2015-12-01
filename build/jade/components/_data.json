@@ -2,6 +2,7 @@
   "components": [
     "accordion",
     "buttons",
+    "card",
     "faq",
     "form",
     "gallery",
@@ -10,8 +11,10 @@
     "jecoute",
     "links",
     "news-push",
+    "opening-hours",
     "place",
     "postit",
+    "rush-hours",
     "sharelines",
     "table",
     "text",

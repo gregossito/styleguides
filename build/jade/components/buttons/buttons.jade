@@ -1,7 +1,7 @@
 include ../../modules/button/button
 
 mixin buttons(data)
-  .component.component-buttons
+  .component.component-buttons(class=data.modifiers)
     if data.title
       - var title_tag = data.title_tag || 'h2'
       #{title_tag}.buttons-title= data.title

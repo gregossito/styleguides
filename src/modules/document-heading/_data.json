@@ -10,12 +10,19 @@
         "text": "Demander un logement",
         "icons" : [
           {
-            "name": "favorites",
-            "href": "#"
-          },
-          {
-            "name": "bell",
-            "href": "#"
+            "action": {
+              "type": "alert",
+              "id": 1,
+              "fallback_link": "https://connect.paris.fr/alertes"
+            },
+            "icon": [
+              "bell-outline",
+              "bell"
+            ],
+            "label": [
+              "S'inscrire aux alertes",
+              "Se désinscrire des alertes"
+            ]
           }
         ]
       }
@@ -27,14 +34,20 @@
         "text": "Demander un logement",
         "icons" : [
           {
-            "name": "favorites",
-            "href": "#"
-          },
-          {
-            "name": "bell",
-            "href": "#",
-            "modifiers": ["active"],
-            "title": "Vous êtes abonné(e)"
+            "active": true,
+            "action": {
+              "type": "alert",
+              "id": 1,
+              "fallback_link": "https://connect.paris.fr/alertes"
+            },
+            "icon": [
+              "bell-outline",
+              "bell"
+            ],
+            "label": [
+              "S'inscrire aux alertes",
+              "Se désinscrire des alertes"
+            ]
           }
         ]
       }
@@ -46,12 +59,19 @@
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat.",
         "icons" : [
           {
-            "name": "favorites",
-            "href": "#"
-          },
-          {
-            "name": "bell",
-            "href": "#"
+            "action": {
+              "type": "alert",
+              "id": 1,
+              "fallback_link": "https://connect.paris.fr/alertes"
+            },
+            "icon": [
+              "bell-outline",
+              "bell"
+            ],
+            "label": [
+              "S'inscrire aux alertes",
+              "Se désinscrire des alertes"
+            ]
           }
         ]
       }

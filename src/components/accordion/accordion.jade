@@ -1,6 +1,6 @@
 mixin accordion(data)
   - var uuid = Math.random().toString(36).substr(2, 5)
-  .component.component-accordion(role='tablist' aria-multiselectable='true')
+  .component.component-accordion(role='tablist' aria-multiselectable='true' class=data.modifiers)
     each item, index in data.items
       - var slug = item.slug || uuid + "-" + index
       .accordion-item.panel

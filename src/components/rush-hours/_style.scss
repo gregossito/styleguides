@@ -1,0 +1,164 @@
+.component-rush-hours {
+  clear: both;
+
+  h2 {
+    border-top: 7px solid $grayF2;
+    color: $gray1A;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 42px;
+    margin-bottom: 20px;
+    padding-top: 40px;
+  }
+  @include small {
+    h2 {
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+
+  caption {
+    caption-side: top;
+    color: $gray33;
+    font-size: 14px;
+    font-weight: 300;
+    padding-bottom: 15px;
+    text-align: left;
+  }
+
+  table {
+    max-width: 625px;
+
+    p {margin: 0;}
+  }
+
+
+  tr > th,
+  tr > td {
+    border: none;
+
+    &:first-child {border-left: none;}
+  }
+
+  tr > th {
+    background-color: white;
+    color: $gray33;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  tr > td {
+    border-bottom: 10px solid white;
+    border-right: 10px solid white;
+    color: $gray33;
+    font-size: 14px;
+    font-weight: 300;
+    padding-right: 6px;
+    text-align: center;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    a:not(.button) {
+      color: $red1;
+      text-decoration: underline;
+
+      &:hover {text-decoration: none;}
+    }
+
+    // traffic
+    &.traffic-0 {background-color: $grayF2;}
+    &.traffic-1 {background-color: $rush-hours-green;}
+    &.traffic-2 {background-color: $rush-hours-yellow;}
+    &.traffic-3 {background-color: $rush-hours-red;}
+  }
+
+  tbody {
+    tr.info {background-color: $light-blue;}
+    tr:first-child {background-color: white;}
+    tr:last-child > td {border-bottom: none;}
+    tr:first-child > th:first-child {width:16%;}
+    tr:first-child > th {
+      padding: 15px 0;
+      text-align: center;
+      width: 21%;
+    }
+  }
+
+  tfoot {
+    tr {background-color: transparent;}
+    tr > td {text-align: left;}
+  }
+}
+
+.rush-hours-traffic-icon {
+  color: black;
+  font-size: 32px;
+  letter-spacing: -6px;
+  opacity: 0.2;
+  pointer-events: none;
+  text-align: center;
+  vertical-align: middle;
+
+  &:before {
+    @extend %icon-font;
+    @extend %icon-avatar;
+  }
+}
+
+@include medium-and-small {
+  .component-rush-hours {
+    overflow-x: auto;
+    position: relative;
+    width: 100%;
+
+    tr > th {
+      padding-right: 10px;
+    }
+
+    tr:first-child > th:first-child {padding: 0;}
+  }
+}
+
+@include small {
+  .component-rush-hours {
+
+    table {
+      max-width: 350px;
+    }
+
+    tr > th {
+      padding-right: 0;
+    }
+
+    tr:nth-child(5n+1) {
+      display:block;
+      padding-top: 35px;
+
+      > th {
+        font-weight : 700;
+      }
+    }
+
+    tr > td {
+      height: 44px;
+      width: 50%;
+    }
+
+    tbody {
+      tr:first-child > th {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@include large {
+  .component-rush-hours {
+    table {
+      width: 100%;
+    }
+  }
+}

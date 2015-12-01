@@ -8,9 +8,9 @@ Hans Lemuet <hans@etaminstudio.com>
 
 First, clone the repository:
 
-    $ git clone git@git.etaminstudio.com:paris/livingstyleguide.git
+    $ git clone git@git.etaminstud.io:paris/livingstyleguide.git
 
-If this command fails, you probably have to add your SSH key here: http://git.etaminstudio.com/profile/keys and try again.
+If this command fails, you probably have to add your SSH key here: https://git.etaminstud.io/profile/keys and try again.
 
 By default, you will be on the `develop` branch.
 
@@ -41,7 +41,7 @@ You can now get back to the `develop` branch.
     $ git checkout develop
 
 We want the maintainer of the repository to merge our changes, so we'll now create a "merge request".
-Login to http://git.etaminstudio.com/paris/livingstyleguide/merge_requests
+Login to https://git.etaminstud.io/paris/livingstyleguide/merge_requests
 
 Click on "New Merge Request".
 

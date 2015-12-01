@@ -7,9 +7,15 @@ var Paris = window.Paris || {};
 Paris.leftCol = (function(){
 
   function leftCol(selector){
-    var $el = $(selector);
+    var $el = $(selector),
+      $anchorsList;
 
     function init(){
+      $anchorsList = $el.find('.anchors-list');
+
+      // stop now if there is no anchors-list
+      if (!$anchorsList.length) {return;}
+
       PubSub.subscribe('anchors.ready', setAffix);
 
       PubSub.subscribe('responsive.small.enable', setAffix);
@@ -19,7 +25,7 @@ Paris.leftCol = (function(){
     function setAffix() {
       var rheaderHeight = $('.rheader').height();
       // no affix if there is not enough space to show all the anchors
-      if($el.find('.anchors-list').height() > window.innerHeight - rheaderHeight - 100){
+      if ($anchorsList.height() > window.innerHeight - rheaderHeight - 100){
         return;
       }
       var $nextContent = $el.parents('.layout-content').next('.layout-content');
