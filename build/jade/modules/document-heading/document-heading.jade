@@ -1,4 +1,5 @@
 include ../../modules/tags/tags
+include ../../modules/icon-switch/icon-switch
 
 mixin document-heading(data)
   .document-heading
@@ -10,8 +11,6 @@ mixin document-heading(data)
           if data.icons
             .document-heading-icons
               each icon in data.icons
-                - var modifiers = JSON.parse(JSON.stringify(icon.modifiers || [])) // clone the data object
-                - modifiers.push("icon-" + icon.name)
-                a.icon(href=icon.href title=icon.title target=icon.target class=modifiers)
+                +icon-switch(icon)
           if data.tags
             +tags(data.tags)

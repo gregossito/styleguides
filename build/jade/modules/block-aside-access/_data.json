@@ -1,0 +1,58 @@
+{
+  "index": {
+    "type": "block-aside-access",
+    "description": "Ce module sera généralement utilisé dans la colonne de gauche/droite d'une page.<br>Il permet de préciser des informations d'accès et de mobilité.",
+    "examples": [{
+      "title": "Standard",
+      "data": {
+        "title": "Standard titre et texte",
+        "text": "Espace dont l'accessibilité est limitée à certaines zones pour les personnes : "
+      }
+    }, {
+      "title": "Avec icônes",
+      "data": {
+        "title": "Accessibilité",
+        "text": "Espace dont l'accessibilité est limitée à certaines zones pour les personnes : ",
+        "items": [
+          {
+            "icon": "handicap-mobility",
+            "text": "à mobilité réduite"
+          },
+          {
+            "icon": "handicap-visually-impaired",
+            "text": "non ou mal voyantes"
+          },
+          {
+            "icon": "handicap-hearing-impair",
+            "text": "sourdes ou malentendantes"
+          }
+        ]
+      }
+    }, {
+      "title": "Avec icônes et bordure",
+      "data": {
+        "title": "Accès",
+        "items": [
+          {
+            "icon": "subway",
+            "modifiers": ["acces-icon"],
+            "title": "Métro",
+            "text": "Porte de Vanves, ligne 13"
+          },
+          {
+            "icon": "bus",
+            "modifiers": ["acces-icon"],
+            "title": "Bus",
+            "text": "Station n°T3"
+          },
+          {
+            "icon": "bicycle",
+            "modifiers": ["acces-icon"],
+            "title": "Vélib'",
+            "text": ["Station N°14023", "76 Station N°14106", "face 58 avenue Marc Sangnier", "Station N° 14122", "1 rue du colonel Monteil"]
+          }
+        ]
+      }
+    }]
+  }
+}

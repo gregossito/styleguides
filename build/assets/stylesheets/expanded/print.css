@@ -22,7 +22,25 @@ Richard Rutter: http://clagnut.com
 Khoi Vinh: http://subtraction.com
 
 -------------------------------------------------------------- */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+html, body,
+div, span,
+object, iframe,
+h1, h2, h3, h4, h5, h6,
+p, blockquote,
+pre, a,
+abbr, acronym,
+address, code,
+del, dfn,
+em, img,
+q, dl,
+dt, dd,
+ol, ul,
+li, fieldset,
+form, label,
+legend, table,
+caption, tbody,
+tfoot, thead,
+tr, th, td {
   margin: 0;
   padding: 0;
   border: 0;
@@ -236,7 +254,9 @@ textarea {
     color: #FFF; }
 
 /* Paris Specifics */
-.color-primary-background, .color-secondary-background, .color-tertiary-background {
+.color-primary-background,
+.color-secondary-background,
+.color-tertiary-background {
   background: none; }
 
 .anchors-list {
@@ -263,7 +283,8 @@ img, video {
 .rheader .title {
   font-size: 40px; }
 
-.rheader nav a, .menu a {
+.rheader nav a,
+.menu a {
   display: block; }
 
 .back {
@@ -304,7 +325,8 @@ img, video {
 .block-content-item {
   margin-bottom: 20px; }
 
-.block-content-question, .block-content-answer {
+.block-content-question,
+.block-content-answer {
   -webkit-transform: none !important;
       -ms-transform: none !important;
           transform: none !important; }
@@ -315,10 +337,13 @@ canvas {
 .share-items {
   display: none; }
 
-.jecoute-form textarea, .jecoute-form input, .jecoute-form button {
+.jecoute-form textarea,
+.jecoute-form input,
+.jecoute-form button {
   display: block; }
 
-.document-heading, .hub-heading {
+.document-heading,
+.hub-heading {
   background: none !important; }
 
 .block-content-item {

@@ -282,6 +282,7 @@ Paris.sectionsPanel = (function(){
       if (!hasFocus) {return true;}
 
       switch (e.which) {
+        case 9: // tab
         case 27: // Esc
         case 37: // arrow left
         case 38: // arrow top
@@ -306,11 +307,21 @@ Paris.sectionsPanel = (function(){
           else if (currentLevel === "content") {closeContent();}
           break;
 
+        case 9: // tab
         case 38: // arrow top
         case 40: // arrow bottom
-          var $currentLink = $el.find('a:focus');
-          var $currentLinkList;
-          var direction = e.keyCode === 38 ? -1 : 1;
+          var $currentLink = $el.find('a:focus'),
+            $currentLinkList,
+            direction;
+
+          if (e.which === 9) {
+            // tab ? check if the shift key is pressed simultaneously
+            direction = e.shiftKey ? -1 : 1;
+          } else {
+            // arrow ? check the direction
+            direction = e.which === 38 ? -1 : 1;
+          }
+
           if (currentLevel === "nav") {
             $currentLinkList = $nav.find('a');
           } else if (currentLevel === "subnav") {
@@ -318,8 +329,9 @@ Paris.sectionsPanel = (function(){
           } else if (currentLevel === "content") {
             $currentLinkList = $currentLink.closest('.sections-panel-content').find('a');
           }
+
           var nextIndex = $currentLinkList.index($currentLink) + direction;
-          if (nextIndex < 0 || nextIndex >= $currentLinkList.length) {break;}
+          if (nextIndex < 0 || nextIndex >= $currentLinkList.length) {$currentLinkList.first().focus();}
           var $nextLink = $currentLinkList.get(nextIndex);
           if ($nextLink) {$nextLink.focus();}
           break;

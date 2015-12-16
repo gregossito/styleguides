@@ -5,5 +5,6 @@
 @media (min-width: 1161px) {
   .rheader-nav-item.get-involved .rheader-nav-item-back {
     display: none; }
-  .rheader-nav-item.get-involved:hover .rheader-nav-item-back, .rheader-nav-item.get-involved.current .rheader-nav-item-back {
+  .rheader-nav-item.get-involved:hover .rheader-nav-item-back,
+  .rheader-nav-item.get-involved.current .rheader-nav-item-back {
     display: block; } }

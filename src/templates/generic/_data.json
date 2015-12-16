@@ -98,13 +98,7 @@
       },
       "heading": {
         "image": "../../modules/document-heading/document-heading.png",
-        "text": "Titre de la page type",
-        "icons": [
-          {
-            "name": "favorites",
-            "url": "#"
-          }
-        ]
+        "text": "Titre de la page type"
       },
       "breadcrumbs": {
         "items": [
@@ -117,25 +111,28 @@
           }
         ]
       },
-      "aside": {
-        "anchors_list": {
-          "title": "Sommaire de la page",
-          "items": [
-            {
-              "href": "#titre-de-la-premiere-partie",
-              "text": "Titre de la première partie"
-            },
-            {
-              "href": "#titre-de-la-deuxieme-partie",
-              "text": "Titre de la deuxième partie"
-            },
-            {
-              "href": "#titre-de-la-troisieme-partie",
-              "text": "Titre de la troisième partie"
-            }
-          ]
+      "aside": [
+        {
+          "type": "anchors-list",
+          "data": {
+            "title": "Sommaire de la page",
+            "items": [
+              {
+                "href": "#titre-de-la-premiere-partie",
+                "text": "Titre de la première partie"
+              },
+              {
+                "href": "#titre-de-la-deuxieme-partie",
+                "text": "Titre de la deuxième partie"
+              },
+              {
+                "href": "#titre-de-la-troisieme-partie",
+                "text": "Titre de la troisième partie"
+              }
+            ]
+          }
         }
-      },
+      ],
       "components": [
         {
           "type": "html",

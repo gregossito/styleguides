@@ -98,13 +98,7 @@
       },
       "heading": {
         "image": "heading.jpg",
-        "text": "Vos élus",
-        "icons" : [
-          {
-            "name": "favorites",
-            "url": "#"
-          }
-        ]
+        "text": "Vos élus"
       },
       "breadcrumbs": {
         "items": [
@@ -532,13 +526,7 @@
       },
       "heading": {
         "image": "heading.jpg",
-        "text": "Adjoints à la Maire",
-        "icons" : [
-          {
-            "name": "favorites",
-            "url": "#"
-          }
-        ]
+        "text": "Adjoints à la Maire"
       },
       "breadcrumbs": {
         "items": [

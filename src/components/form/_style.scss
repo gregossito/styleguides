@@ -135,6 +135,11 @@
       margin: 2px 10px 2px 0;
     }
   }
+  .form-item-cgu label a:not(.button) {
+    color: $red1;
+    text-decoration: underline;
+    &:hover {text-decoration: none;}
+  }
 
   // matrix
   .form-item-matrix {

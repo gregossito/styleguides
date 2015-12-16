@@ -3,6 +3,10 @@
   border-top: none;
   clear: both;
 
+  .component + & {
+    margin-top: 60px;
+  }
+
   p em,
   .jecoute-message {
     color: $color-secondary;

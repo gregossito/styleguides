@@ -55,14 +55,15 @@ append content
         +news-list(data.currently.news)
 
 append content
-  .layout-content.layout-adjacent-before
-    .layout-half-col.color-secondary-background
-      .layout-wrapper
-        .layout-content
-          +block-content(data.video.block)
-            +video-cover(data.video.cover)
-        .layout-content
-          +block-content-newsletter(data.newsletter)
+  if data.video
+    .layout-content.layout-adjacent-before
+      .layout-half-col.color-secondary-background
+        .layout-wrapper
+          .layout-content
+            +block-content(data.video.block)
+              +video-cover(data.video.cover)
+          .layout-content
+            +block-content-newsletter(data.newsletter)
 
 append content
   if data.archive
@@ -78,17 +79,20 @@ append content
         +pagination(data.pagination)
 
 append content
-  .layout-content
-    .layout-wrapper.full-width-on-small
-      +que-faire(data.que_faire)
+  if data.que_faire
+    .layout-content
+      .layout-wrapper.full-width-on-small
+        +que-faire(data.que_faire)
 
 append content
-  .layout-content.layout-adjacent-before-on-small
-    +search-push(data.search_push)
+  if data.search_push
+    .layout-content.layout-adjacent-before-on-small
+      +search-push(data.search_push)
 
 append content
-  .layout-content.gray-background
-    +get-involved(data.get_involved)
+  if data.get_involved
+    .layout-content.gray-background
+      +get-involved(data.get_involved)
 
 append content
   if data.gallery

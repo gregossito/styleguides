@@ -8,6 +8,7 @@ mixin example(ex)
     p.lsg-example-description!= ex.description
 
   - ex.attrs = ex.attrs || {}
+  //- - ex.dataSample = JSON.parse(JSON.stringify(ex.data || {}))
 
   .lsg-elem&attributes(ex.attrs)
     +#{type}(ex.data)

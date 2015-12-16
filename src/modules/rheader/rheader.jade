@@ -19,15 +19,15 @@ mixin rheader(data)
                 else
                   = locale.lang
       if data.buttons.search
-        a.rheader-button.rheader-button-search(href=data.buttons.search.href title=data.buttons.search.text target=data.buttons.search.target aria-controls="rheader-search" class=data.buttons.search.current ? 'active' : null)
+        a.rheader-button.rheader-button-search(href=data.buttons.search.href title=data.buttons.search.text target=data.buttons.search.target aria-controls="rheader-search" role="button" class=data.buttons.search.current ? 'active' : null)
           if data.buttons.search.icon
             i.rheader-button-icon(class="icon-#{data.buttons.search.icon}")
       if data.buttons.around
-        a.rheader-button.rheader-button-around(href=data.buttons.around.href title=data.buttons.around.text target=data.buttons.around.target)
+        a.rheader-button.rheader-button-around(href=data.buttons.around.href title=data.buttons.around.text target=data.buttons.around.target role="button")
           if data.buttons.around.icon
             i.rheader-button-icon(class="icon-#{data.buttons.around.icon}")
             span.rheader-button-text= data.buttons.around.text
-      a.rheader-button.rheader-button-menu#nav-toggle(href=data.buttons.menu.href target=data.buttons.menu.target rel="nofollow")
+      a.rheader-button.rheader-button-menu#nav-toggle(href=data.buttons.menu.href target=data.buttons.menu.target rel="nofollow" role="button")
         span.rheader-button-text= data.buttons.menu.text
       nav.rheader-nav#navigation(aria-label=data.navigation_label tabindex="-1" role="navigation")
         ul

@@ -1,5 +1,5 @@
 mixin news-push(data)
-  .component.component-news-push
+  .component.component-news-push(class=data.modifiers)
     .news-push-wrapper
       .news-push-after
       - var title = [data.title]

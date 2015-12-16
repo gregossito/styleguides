@@ -1,0 +1,27 @@
+include ../block-aside/block-aside
+
+mixin block-aside-access(data)
+  - var block_modifiers = data.modifiers || []
+  - block_modifiers.push("block-aside-access")
+  +block-aside({"title": data.title, "modifiers": block_modifiers})
+    if data.text
+      p.text-acces= data.text
+    if data.items
+      ul.block-aside-access-items
+        each item in data.items
+          if item.title
+            li.block-aside-access-item(class=item.modifiers)
+              i.icon(class="icon-#{item.icon}")
+              span.acces-item-text
+                h4= item.title
+                if item.text.constructor === Array
+                  p!= item.text.join('<br />')
+                else
+                  p= item.text
+          else
+            li.block-aside-access-item
+              i.icon(class="icon-#{item.icon}")
+              span.acces-item-text= item.text
+
+
+

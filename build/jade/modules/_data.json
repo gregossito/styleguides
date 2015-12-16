@@ -2,6 +2,7 @@
   "modules": [
     "anchors-list",
     "block-aside",
+    "block-aside-access",
     "block-aside-checkboxes",
     "block-aside-contact",
     "block-aside-links",
@@ -21,6 +22,7 @@
     "get-involved-list",
     "heading",
     "hub-heading",
+    "icon-switch",
     "intro-text",
     "jumbotron",
     "last-update",

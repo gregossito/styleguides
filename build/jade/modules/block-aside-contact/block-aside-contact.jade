@@ -4,6 +4,13 @@ mixin block-aside-contact(data)
   - var block_modifiers = data.modifiers || []
   - block_modifiers.push("block-aside-contact")
   +block-aside({"title": data.title, "modifiers": block_modifiers})
+    if data.map
+      .block-aside-minimap
+        if data.map.href
+          a(href=data.map.href target=data.map.target title=data.map.title)
+            img(src=data.map.src alt=data.map.alt)
+        else
+          img(src=data.map.src)
     ul.block-aside-items
       each item in data.items
         - var modifiers = item.modifiers || []

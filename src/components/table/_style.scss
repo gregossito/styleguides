@@ -12,13 +12,12 @@
 
   table {
     width: 770px;
-
     p {margin: 0;}
   }
 
   tr > th,
   tr > td {
-    border-left: 1px solid $grayCC;
+    border-left: 1px solid transparentize($grayCC, 0.5);
     padding: 15px 5px;
 
     &:first-child {border-left: none;}
@@ -60,6 +59,12 @@
       text-decoration: underline;
 
       &:hover {text-decoration: none;}
+    }
+  }
+
+  &.header-primary-color {
+    tr > th {
+      background-color: $color-primary;
     }
   }
 

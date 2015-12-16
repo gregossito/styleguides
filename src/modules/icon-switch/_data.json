@@ -1,0 +1,64 @@
+{
+  "index": {
+    "type": "icon-switch",
+    "description": "Ce module permet d'utiliser une icône comme un switch on / off, et de connecter des actions à celui-ci.",
+    "cssTheme": "",
+    "bodyAttributes": {},
+    "examples": [{
+      "title": "Favori",
+      "description": "",
+      "attrs": {},
+      "data": {
+        "action": {
+          "type": "favorite",
+          "id": 1,
+          "fallback_link": "https://connect.paris.fr/alertes"
+        },
+        "icon": [
+          "favorites-outline",
+          "favorites"
+        ],
+        "label": [
+          "Ajouter aux favoris",
+          "Enlever des favoris"
+        ]
+      }
+    },{
+      "title": "Alerte",
+      "description": "",
+      "attrs": {},
+      "data": {
+        "action": {
+          "type": "alert",
+          "id": 1,
+          "fallback_link": "https://connect.paris.fr/alertes"
+        },
+        "icon": [
+          "bell-outline",
+          "bell"
+        ],
+        "label": [
+          "S'abonner aux alertes",
+          "Se désabonner des alertes"
+        ]
+      }
+    },{
+      "title": "Bouton pause",
+      "description": "",
+      "attrs": {},
+      "data": {
+        "action": {
+          "type": "pause"
+        },
+        "icon": [
+          "pause",
+          "play"
+        ],
+        "label": [
+          "Mettre en pause",
+          "Relancer"
+        ]
+      }
+    }]
+  }
+}

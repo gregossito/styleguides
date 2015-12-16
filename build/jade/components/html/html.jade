@@ -1,5 +1,5 @@
 mixin html(data)
-  .component.component-html
+  .component.component-html(class=data ? data.modifiers : [])
     .html-wrapper
       if data.cookie === false
         if block

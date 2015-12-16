@@ -1,0 +1,48 @@
+.block-aside-acces {
+
+  .block-aside-acces-items {
+    color: $gray4D;
+    font-size: 16px;
+    line-height: 22px;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .block-aside-acces-item {
+    position: relative;
+    margin-bottom: 18px;
+
+    > i {
+      color: $color-secondary;
+      position: absolute;
+      font-size: 25px;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .acces-item-text {
+    display: block;
+    margin-left: 45px;
+
+    h4 {
+      margin: 5px 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  // modifiers
+  .acces-icon {
+    border-bottom: 1px solid $grayCC;
+    padding-bottom: 18px;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}

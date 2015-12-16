@@ -33,6 +33,7 @@ module.exports = {
       'breadcrumbs',
       'buttons',
       'hub-heading',
+      'icon-switch',
       'links',
       'news-list',
       'pagination',

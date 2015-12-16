@@ -1,11 +1,11 @@
 /* Font icons */
 @font-face {
   font-family: 'paris-icons';
-  src:url('../fonts/paris-icons.eot?-pleu1o');
-  src:url('../fonts/paris-icons.eot?#iefix-pleu1o') format('embedded-opentype'),
-    url('../fonts/paris-icons.woff?-pleu1o') format('woff'),
-    url('../fonts/paris-icons.ttf?-pleu1o') format('truetype'),
-    url('../fonts/paris-icons.svg?-pleu1o#icomoon') format('svg');
+  src:url('../fonts/paris-icons.eot?elgujd');
+  src:url('../fonts/paris-icons.eot?#iefixelgujd') format('embedded-opentype'),
+    url('../fonts/paris-icons.woff?elgujd') format('woff'),
+    url('../fonts/paris-icons.ttf?elgujd') format('truetype'),
+    url('../fonts/paris-icons.svg?elgujd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,91 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+%icon-favorites-outline,
+.icon-favorites-outline:before {
+	content: "\e911";
+}
+
+%icon-bell-outline,
+.icon-bell-outline:before {
+	content: "\e912";
+}
+
+%icon-art-studio,
+.icon-art-studio:before {
+	content: "\e902";
+}
+
+%icon-association-house,
+.icon-association-house:before {
+	content: "\e903";
+}
+
+%icon-city-hall,
+.icon-city-hall:before {
+	content: "\e904";
+}
+
+%icon-conservatoire,
+.icon-conservatoire:before {
+	content: "\e905";
+}
+
+%icon-cultural,
+.icon-cultural:before {
+	content: "\e906";
+}
+
+%icon-handicap-hearing-impair,
+.icon-handicap-hearing-impair:before {
+	content: "\e907";
+}
+
+%icon-handicap-mobility,
+.icon-handicap-mobility:before {
+	content: "\e908";
+}
+
+%icon-handicap-visually-impaired,
+.icon-handicap-visually-impaired:before {
+	content: "\e909";
+}
+
+%icon-librairy,
+.icon-librairy:before {
+	content: "\e90a";
+}
+
+%icon-market,
+.icon-market:before {
+	content: "\e90b";
+}
+
+%icon-museum,
+.icon-museum:before {
+	content: "\e90c";
+}
+
+%icon-nf,
+.icon-nf:before {
+	content: "\e90d";
+}
+
+%icon-park,
+.icon-park:before {
+	content: "\e90e";
+}
+
+%icon-pause,
+.icon-pause:before {
+	content: "\e90f";
+}
+
+%icon-swimming-pool,
+.icon-swimming-pool:before {
+	content: "\e910";
 }
 
 %icon-alert,

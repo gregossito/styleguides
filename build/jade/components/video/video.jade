@@ -1,5 +1,5 @@
 mixin video(data)
-  .component.component-video
+  .component.component-video(class=data.modifiers)
     if data.title
       h3.video-title= data.title
     .video-wrapper

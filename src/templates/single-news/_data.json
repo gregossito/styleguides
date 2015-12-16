@@ -124,44 +124,50 @@
           }
         ]
       },
-      "aside": {
-        "anchors_list": {
-          "title": "Sommaire de la page",
-          "items": [
-            {
-              "href": "#deux-pistes-sont-proposees",
-              "text": "Deux pistes sont proposées"
-            },
-            {
-              "href": "#patinoire-mode-d-emploi",
-              "text": "Patinoire mode d'emploi"
-            }
-          ]
+      "aside": [
+        {
+          "type": "anchors-list",
+          "data": {
+            "title": "Sommaire de la page",
+            "items": [
+              {
+                "href": "#deux-pistes-sont-proposees",
+                "text": "Deux pistes sont proposées"
+              },
+              {
+                "href": "#patinoire-mode-d-emploi",
+                "text": "Patinoire mode d'emploi"
+              }
+            ]
+          }
         },
-        "share": {
-          "modifiers": ["circles"],
-          "items": [
-            {
-              "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
-              "icon": "facebook",
-              "text": "Partager sur Facebook",
-              "title": "Partager sur Facebook - nouvelle fenêtre"
-            },
-            {
-              "href": "https://twitter.com/intent/tweet?text=Ça glisse sur la patinoire de l’hôtel de ville http://www.paris.fr",
-              "icon": "twitter",
-              "text": "Partager sur Twitter",
-              "title": "Partager sur Twitter - nouvelle fenêtre"
-            },
-            {
-              "href": "mailto:?subject=Ça glisse sur la patinoire de l’hôtel de ville&body=http://www.paris.fr",
-              "icon": "mail",
-              "text": "Partager par courriel",
-              "title": "Partager par courriel - nouvelle fenêtre"
-            }
-          ]
+        {
+          "type": "share",
+          "data": {
+            "modifiers": ["circles"],
+            "items": [
+              {
+                "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
+                "icon": "facebook",
+                "text": "Partager sur Facebook",
+                "title": "Partager sur Facebook - nouvelle fenêtre"
+              },
+              {
+                "href": "https://twitter.com/intent/tweet?text=Ça glisse sur la patinoire de l’hôtel de ville http://www.paris.fr",
+                "icon": "twitter",
+                "text": "Partager sur Twitter",
+                "title": "Partager sur Twitter - nouvelle fenêtre"
+              },
+              {
+                "href": "mailto:?subject=Ça glisse sur la patinoire de l’hôtel de ville&body=http://www.paris.fr",
+                "icon": "mail",
+                "text": "Partager par courriel",
+                "title": "Partager par courriel - nouvelle fenêtre"
+              }
+            ]
+          }
         }
-      },
+      ],
       "components": [
         {
           "type": "text",

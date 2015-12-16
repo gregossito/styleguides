@@ -1,5 +1,5 @@
 mixin gallery(data)
-  .component.component-gallery
+  .component.component-gallery(class=data.modifiers)
     .gallery-wrapper
       each item in data.items
         .gallery-cell

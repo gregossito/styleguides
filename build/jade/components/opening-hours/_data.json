@@ -1,0 +1,38 @@
+{
+  "index": {
+    "type": "opening-hours",
+    "description": "",
+    "examples": [
+      {
+        "title": "Standard",
+        "description": "",
+        "data": {
+          "title": "Horaires",
+          "text": "Fermeture prévue du 23 février 2015 au 1er mars 2015 (vidange)",
+          "items": [
+            {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
+            {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+            {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+            {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+            {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+            {"title": "Samedi", "text": "07h à 18h00 (sans interruption)"},
+            {"title": "Dimanche", "text": "07h à 18h00 (sans interruption)"}
+          ],
+          "buttons": [
+            {
+              "href": "#",
+              "text": "Voir les horaires de toutes les piscines",
+              "title": "Titre"
+            },
+            {
+              "href": "#",
+              "text": "Voir la fréquentation",
+              "title": "Titre"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+

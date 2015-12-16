@@ -1,0 +1,11 @@
+mixin icon-switch(data)
+  - var modifiers = data.modifiers || []
+  if data.active === true
+    - modifiers.push("active")
+  .icon-switch(class=modifiers data-action=data.action.type data-action-id=data.action.id data-action-fallback-link=data.action.fallback_link)
+    button.icon-switch-on(data-href=data.href title=data.label[0])
+      span.icon(class="icon-#{data.icon[0]}")
+      span.hidden-accessibly= data.label[0]
+    button.icon-switch-off(data-href=data.href title=data.label[1])
+      span.icon(class="icon-#{data.icon[1]}")
+      span.hidden-accessibly= data.label[1]

@@ -1,5 +1,5 @@
 mixin table(data)
-  .component.component-table
+  .component.component-table(class=data.modifiers)
     table(summary=data.summary)
       if data.caption
         caption= data.caption
@@ -7,4 +7,3 @@ mixin table(data)
         block
       else if data.block
         != data.block
-

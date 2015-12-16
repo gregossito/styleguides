@@ -193,7 +193,7 @@ Paris.listPersons = (function(){
             "label": Paris.i18n.t("pagination/label"),
             "prev": Paris.i18n.t("pagination/prev"),
             "next": Paris.i18n.t("pagination/next"),
-            "link_title": Paris.i18n.t("pagination/link_title")
+            "link_title": Paris.i18n.t("pagination/link_title", { page: '{page}' })
           },
           "base_url": window.location.pathname,
           "url": "?page=${page}",

@@ -1,0 +1,31 @@
+{
+  "index": {
+    "type": "rush-hours",
+    "description": "",
+    "examples": [
+      {
+        "title": "Standard",
+        "description": "",
+        "data": {
+          "title": "Affluence",
+          "timeslots": [
+            "7h-8h30",
+            "8h30-12h",
+            "12h-14h",
+            "14h-18h"
+          ],
+          "items": [
+            {"title": "Lundi", "traffic": [1, 0, 3, 0]},
+            {"title": "Mardi", "traffic": [2, 0, 1, 0]},
+            {"title": "Mercredi", "traffic": [2, 0, 2, 0]},
+            {"title": "Jeudi", "traffic": [1, 0, 2, 0]},
+            {"title": "Vendredi", "traffic": [2, 0, 3, 0]},
+            {"title": "Samedi", "traffic": [1, 1, 2, 1]},
+            {"title": "Dimanche", "traffic": [1, 2, 3, 2]}
+          ]
+        }
+      }
+    ]
+  }
+}
+

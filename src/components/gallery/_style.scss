@@ -1,8 +1,12 @@
 @import "../../stylesheets/lib/flickity";
 
 .component-gallery {
-  background-color: $grayF2;
   clear: both;
+  padding-bottom: 25px;
+
+  .gallery-wrapper {
+    background-color: $grayF2;
+  }
 
   .gallery-cell {
     width: 100%; /* full width */

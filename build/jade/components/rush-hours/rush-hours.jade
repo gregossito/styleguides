@@ -1,0 +1,36 @@
+mixin rush-hours(data)
+  .component.component-rush-hours(class=data.modifiers)
+    h2= data.title
+      table.hidden-on-small(summary=data.summary)
+        if data.caption
+          caption= data.caption
+        tr
+          th
+          for slot in data.timeslots
+            th(scope='col')= slot
+        if data.items
+          for item in data.items
+            tr
+              th= item.title
+              for traffic in item.traffic
+                +rush-hours-td(traffic)
+      table.only-on-small(summary=data.summary)
+        if data.caption
+          caption= data.caption
+        if data.items
+          for item in data.items
+            tr
+              th(colspan="2")= item.title
+            for slot, index in data.timeslots
+              - var traffic = item.traffic[index]
+              tr
+                th(scope='col')= slot
+                + rush-hours-td(traffic)
+
+mixin rush-hours-td(traffic)
+  td(class="traffic-#{traffic}")
+    - var icon = 0
+      while icon < traffic
+        i.rush-hours-traffic-icon(aria-hidden="true")
+        - icon++
+

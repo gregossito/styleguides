@@ -1,7 +1,7 @@
 include ../../modules/button/button
 
 mixin place(data)
-  .component.component-place
+  .component.component-place(class=data.modifiers)
     .place-content
       if data.title
         .place-title= data.title

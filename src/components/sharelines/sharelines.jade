@@ -1,7 +1,7 @@
 include ../../modules/share/share
 
 mixin sharelines(data)
-  .component.component-sharelines
+  .component.component-sharelines(class=data.modifiers)
     h2.sharelines-title= data.title
     ul.sharelines-items
       each item in data.items

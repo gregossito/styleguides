@@ -98,7 +98,7 @@ mixin form-buttons(data)
 
 
 mixin form(data)
-  .component.component-form(data-thanks=data.thanks)
+  .component.component-form(data-thanks=data.thanks class=data.modifiers)
     form(action=data.action method=data.method || 'POST')
       each item in data.items
         - item = JSON.parse(JSON.stringify(item || [])) // clone the data object

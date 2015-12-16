@@ -103,6 +103,7 @@
       .quick-access-close-search {
         opacity: 1;
         transform: translateY(0);
+        background-color: $quick-access-blue;
       }
     }
 
@@ -207,7 +208,7 @@
     &:before {
       @extend %icon-font;
       @extend %icon-close;
-      font-size: 1.1em;
+      font-size: 1.07em;
       height: 50px;
       left: -8px;
       position: relative;

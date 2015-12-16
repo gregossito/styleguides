@@ -52,17 +52,20 @@ append content
         +pagination(data.pagination)
 
 append content
-  .layout-content
-    .layout-wrapper.full-width-on-small
-      +que-faire(data.que_faire)
+  if data.que_faire
+    .layout-content
+      .layout-wrapper.full-width-on-small
+        +que-faire(data.que_faire)
 
 append content
-  .layout-content.layout-adjacent-before-on-small
-    +search-push(data.search_push)
+  if data.search_push
+    .layout-content.layout-adjacent-before-on-small
+      +search-push(data.search_push)
 
 append content
-  .layout-content.gray-background
-    +get-involved(data.get_involved)
+  if data.get_involved
+    .layout-content.gray-background
+      +get-involved(data.get_involved)
 
 append content
   if data.gallery

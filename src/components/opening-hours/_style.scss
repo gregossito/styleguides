@@ -1,0 +1,114 @@
+.component-opening-hours {
+  clear: both;
+
+  h2 {
+    border-top: 7px solid $grayF2;
+    color: $gray1A;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 42px;
+    margin-bottom: 20px;
+    padding-top: 40px;
+  }
+  @include small {
+    h2 {
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+
+  .opening-hours-text {
+    color: $color-primary;
+  }
+
+  caption {
+    caption-side: top;
+    color: $gray33;
+    font-size: 14px;
+    font-weight: 300;
+    padding-bottom: 15px;
+    text-align: left;
+  }
+
+  table {
+    width: auto;
+
+    p {margin: 0;}
+  }
+
+  tr > th,
+  tr > td {
+    border-bottom: 1px solid $grayEE;
+    padding: 15px 0 5px;
+
+    &:first-child {border-left: none;}
+  }
+
+  tr > th {
+    border-right: 25px solid $white;
+    color: $gray4D;
+    font-size: 15px;
+    font-weight: 700;
+    min-width: 115px;
+    text-align: left;
+  }
+
+  tr > td {
+    color: $gray33;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+
+    a:not(.button) {
+      color: $red1;
+      text-decoration: underline;
+
+      &:hover {text-decoration: none;}
+    }
+  }
+
+  tfoot {
+    tr {background-color: transparent;}
+    tr > td {text-align: left;}
+  }
+
+  .opening-hours-buttons {
+    list-style: none;
+    margin-top: 40px;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      + li {margin-left: 10px;}
+    }
+  }
+}
+
+@include small {
+  .component-opening-hours {
+
+    .opening-hours-buttons {
+      li {
+        display: inline-block;
+        + li {
+          display: block;
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@include medium-and-small {
+  .component-opening-hours {
+    overflow-x: auto;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@include large {
+  .component-opening-hours {
+  }
+}

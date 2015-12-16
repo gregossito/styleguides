@@ -1,7 +1,7 @@
 include ../../modules/share/share
 
 mixin verbatim(data)
-  blockquote.component.component-verbatim
+  blockquote.component.component-verbatim(class=data.modifiers)
     p.verbatim-text= data.quote
     footer
       .verbatim-separate

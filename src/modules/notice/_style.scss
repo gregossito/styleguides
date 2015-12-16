@@ -50,8 +50,8 @@
       @extend %icon-font;
       @extend %icon-alert;
       font-size: 1.8em;
-      padding: 0 15px 0 0;
-      vertical-align: sub;
+      padding: 0 15px 2px 0;
+      vertical-align: middle;
     }
   }
 
@@ -111,7 +111,11 @@
 .notice-content {
   line-height: 20px;
   margin: 0 20px;
-  padding: 20px 40px 20px 0;
+  padding: 20px 0;
+
+  .close + & {
+    padding-right: 40px;
+  }
 
   a {
     color: white;
@@ -124,6 +128,18 @@
 .notice-button {
   margin: 18px 20px;
   float: right;
+}
+
+@include small {
+  .notice.alert {
+    .notice-content:before {
+      left: 25px;
+      position: absolute;
+    }
+    .notice-content {
+      margin-left: 70px;
+    }
+  }
 }
 
 @include large-and-medium {
@@ -141,4 +157,3 @@
     width: $large-grid-width;
   }
 }
-
