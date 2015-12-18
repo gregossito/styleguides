@@ -1,2 +1,7 @@
 .block-search-field {
+
+  .search-field-input[type="text"]:focus {
+    background-color: $white;
+  }
+
 }

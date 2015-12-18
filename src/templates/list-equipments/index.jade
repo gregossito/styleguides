@@ -22,10 +22,11 @@ append content
         +block-search-field(data.list.block_search_field)
         +block-search-filters(data.list.block_search_filters)
         +block-search(data.list.block_search_results)
-          .block-search-cards
+          .block-search-cards#hits-container
             each result in data.list.results
               +card(result)
       .layout-content-map
+        #map
 
 append footer
   if data.notices && data.notices.cnil

@@ -13,7 +13,7 @@ Paris.listEquipments = (function(){
 
   var defaultOptions = {
     // the Algolia index to use (should be defined in config.js)
-    index: 'global',
+    index: 'equipments',
     // matching the names of Algolia fields
     //fields: {
     //  // the field to use as a link
@@ -60,19 +60,16 @@ Paris.listEquipments = (function(){
 
       search.addWidget(
         instantsearch.widgets.searchBox({
-          container: '#search-box',
-          placeholder: 'Equipement, adresse, métro, arrondissement...'
+          container: '.block-search-field .search-field-input'
         })
       );
 
       search.addWidget(
-        instantsearch.widgets.menu({
-          container: '#filters',
-          attributeName: 'onglet',
-          limit: 10,
-          templates: {
-            header: 'Filtres'
-          }
+        Paris.instantsearch.widgets.refinementList({
+          container: '.block-search-filters .block-search-content',
+          attributeName: 'categories',
+          operator: 'or',
+          limit: 10
         })
       );
 
@@ -81,23 +78,23 @@ Paris.listEquipments = (function(){
           container: '#hits-container',
           templates: {
             empty: 'No results',
-            item: '<li>{{{_highlightResult.titre.value}}}</li>'
+            item: '<a href="#" class="card open"><div style="background-image: url()" class="card-image"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text">{{address}}<br>{{zipCode}} {{city}}</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div></a>'
           }
         })
       );
 
-      search.addWidget(
-        instantsearchGoogleMaps({
-          container: document.querySelector('#map'),
-          prepareMarkerData: function(hit, index, hits) {
-            return {
-              label: hit.name,
-              title: hit.description
-            };
-          },
-          refineOnMapInteraction: true
-        })
-      );
+      //search.addWidget(
+      //  instantsearchGoogleMaps({
+      //    container: document.querySelector('#map'),
+      //    prepareMarkerData: function(hit, index, hits) {
+      //      return {
+      //        label: hit.name,
+      //        title: hit.description
+      //      };
+      //    },
+      //    refineOnMapInteraction: true
+      //  })
+      //);
 
       search.start();
 
@@ -128,5 +125,5 @@ Paris.listEquipments = (function(){
 })();
 
 $(document).ready(function(){
-  //Paris.listEquipments('body.list-equipments');
+  Paris.listEquipments('body.list-equipments');
 });

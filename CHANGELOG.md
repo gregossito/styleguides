@@ -9,6 +9,16 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+* component `cards`: renamed (formerly `card`)
+* module `block-search` added
+* module `block-search-field` added
+* module `block-search-filters` added
+* module `card` added
+* module `search-field`: new modifier `block`
+* layout `list-map` added
+* template `list-equipments` added
+* `config.js`: added `equipments` Algolia index
+
 ## 1.4.3 (2016-07-20)
 
 * module `sections-list`: improved rendering
@@ -92,23 +102,17 @@ Let's take the `x.β.α` version number:
 ## 1.3.0 (2015-11-27)
 
 * all components now accept `modifiers`
-* component `cards` added
+* component `card` added
 * component `opening-hours` added
 * component `rush-hours` added
 * module `block-aside-access` added
 * module `block-aside-contact`: added minimap
-* module `block-search` added
-* module `block-search-field` added
-* module `block-search-filters` added
-* module `card` added
 * module `button`: add button `small`
 * module `icon-switch` added
 * module `notice`: improved text wrapping on small screens
 * layout `left-col`: fix affix bug when there is no `anchors-list`
-* layout `list-map` added
 * template `faq` is now based on `generic`
 * template `generic`: `aside` data is now an array (same behavior as `components`)
-* template `list-equipments` added
 * template `single-equipment` added (based on `generic`)
 * accessibility: improved modules `document-heading`, `rheader`, `sections-panel`
 * DEPRECATED: removed favorite icon from `document-heading` (affects all templates based on `generic`)

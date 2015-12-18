@@ -26,7 +26,7 @@
     left: 0;
     position: absolute;
     top: 0;
-    transition: width 0.35s ease;
+    transition: width 0.35s ease, background 0.35s ease;
     width: 0;
     z-index: -1;
   }
@@ -64,6 +64,13 @@
     background-color: $white;
     color: $black;
     &:after {background-color: $grayF2}
+
+    &.stateful {
+      &:hover, &:focus {color: $black;}
+      &:after {background-color: $grayEE;}
+      &.active {color: $white;}
+      &.active:after {background-color: $green1;}
+    }
   }
 
   &.stateful {
@@ -71,7 +78,8 @@
     color: $color-secondary;
     padding: 15px;
     outline: 0;
-    &:after {background-color: $color-secondary;}
+    &:after {background-color: $color-tertiary-variant;}
+    &.active:after {background-color: $color-secondary;}
 
     &:hover, &:focus, &.active {
       color: $white;

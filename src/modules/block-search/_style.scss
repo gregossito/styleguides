@@ -22,9 +22,11 @@
 }
 
 .block-search-cards {
-  @include container;
+  .ais-hits {
+    @include container;
+  }
 
-  .card {
+  .ais-hits--item {
     @include gallery(6 of 12);
     margin-bottom: gutter(12);
   }
@@ -53,7 +55,7 @@
 
 .block-search-bottom-links {
   list-style: none;
-  margin: 0;
+  margin: 10px 0 0;
   padding: 0;
 }
 

@@ -114,15 +114,13 @@
           ],
           "search_field": {
             "action": "#",
-            "modifiers": [
-              "small"
-            ],
+            "modifiers": ["block"],
             "input": {
-              "placeholder": "Rechercher un nom..."
+              "placeholder": "Equipement, adresse, métro, arrondissement…"
             },
             "submit": {
-              "text": "Ok",
-              "title": "Valider la recherche par nom"
+              "text": "Valider",
+              "title": "Valider la recherche"
             }
           }
         },
@@ -194,54 +192,6 @@
           "title": "Résultats"
         },
         "results": [
-          {
-            "modifiers": [
-              "open"
-            ],
-            "href": "#",
-            "title": "Bibliothèque Parmentier",
-            "text": "20 avenue Parmentier<br />75011 Paris",
-            "hours": "Ouvert jusqu’à 21h",
-            "image": {
-              "src": "../../modules/card/1.jpg"
-            }
-          },
-          {
-            "modifiers": [
-              "open"
-            ],
-            "href": "#",
-            "title": "Bibliothèque Parmentier",
-            "text": "20 avenue Parmentier<br />75011 Paris",
-            "hours": "Ouvert jusqu’à 21h",
-            "image": {
-              "src": "../../modules/card/1.jpg"
-            }
-          },
-          {
-            "modifiers": [
-              "open"
-            ],
-            "href": "#",
-            "title": "Bibliothèque Parmentier",
-            "text": "20 avenue Parmentier<br />75011 Paris",
-            "hours": "Ouvert jusqu’à 21h",
-            "image": {
-              "src": "../../modules/card/1.jpg"
-            }
-          },
-          {
-            "modifiers": [
-              "open"
-            ],
-            "href": "#",
-            "title": "Bibliothèque Parmentier",
-            "text": "20 avenue Parmentier<br />75011 Paris",
-            "hours": "Ouvert jusqu’à 21h",
-            "image": {
-              "src": "../../modules/card/1.jpg"
-            }
-          }
         ]
       },
       "map": [

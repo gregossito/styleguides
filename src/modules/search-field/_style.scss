@@ -4,6 +4,29 @@
   overflow: hidden;
 
   // modifiers
+  &.block {
+    .search-field-input[type="text"],
+    .search-field-submit {
+      border-radius: 5px;
+      font-size: 13px;
+      height: 45px;
+      line-height: 45px;
+    }
+
+    .search-field-input[type="text"] {
+      margin-right: 10px;
+      padding: 0 10px;
+      width: calc(100% - 105px);
+    }
+
+    .search-field-submit {
+      background-color: $green1;
+      color: $white;
+      text-transform: uppercase;
+      width: 95px;
+    }
+  }
+
   &.small {
     background-color: $white;
     border-radius: 5px;
