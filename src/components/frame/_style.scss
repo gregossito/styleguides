@@ -1,61 +1,18 @@
 %component-frame {
 
-  h1, h2, h3, h4, ul, ol, p {
+  h1, h2, h3, h4, p {
     margin: 0;
     padding: 0;
   }
 
-  h1 {
-    font-size: 44px;
-    font-weight: 700;
-  }
-
-  h2 {
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 42px;
-    margin-bottom: 20px;
-    padding-top: 40px;
-
-    img {
-      margin: 0 10px;
-      max-height: 60px;
-      position: relative;
-      top: 5px;
-      vertical-align: bottom;
-    }
-  }
-  @include small {
-    h2 {
-      font-size: 30px;
-      line-height: 38px;
-    }
-  }
-
-  h3 {
-    color: $gray1A;
-    font-size: 27px;
-    font-weight: 500;
-    line-height: 30px;
-    margin-bottom: 20px;
-  }
-
-  h4 {
-    color: $color-secondary;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 28px;
-    margin-bottom: 10px;
-  }
-
   ul, ol, p {
     color: $gray33;
-    margin: 0 0 20px;
+    margin: 20px;
     padding: 0;
   }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 30px;
 
@@ -107,60 +64,20 @@
   clear: both;
   @extend %component-frame;
 
-  @for $index from 1 through 6 {
+  @for $index from 2 through 6 {
     h#{$index}{
       font-weight: 600;
       font-size: 18px;
     }
   }
 
-  h2 {
-    border-top: 7px solid $grayF2;
-    color: $gray1A;
-  }
-  &:first-child h2 {
-    border-top: none;
-    padding-top: 0;
-  }
-
   a:not(.button) {
     color: $red1;
-  }
-
-  .component-postit + & > p:first-child,
-  &:first-child > p:first-child {
-    font-weight: 500;
   }
 
   .anchor {
     clear: both;
     position: relative;
-  }
-
-  .icon-switch {
-    margin-left: 10px;
-  }
-
-  &.intro-primary {
-    & + .component-frame h2 {
-      border-top: 0;
-    }
-
-    p {
-      color: $color-primary;
-      font-weight: 700;
-      font-size: 20px;
-
-      &:after {
-        display: block;
-        content: " ";
-        width: 70px;
-        height: 10px;
-        background: $color-primary;
-        position: relative;
-        bottom: -20px;
-      }
-    }
   }
 
   fieldset {
@@ -171,8 +88,10 @@
       color: $color-primary;
       display: inline-block;
       padding: 0 20px;
+      font-size: 16px;
       font-weight: 400;
       margin-left: 50px;
+      width: auto;
     }
   }
 
@@ -191,12 +110,4 @@
       }
     }
   }
-
-
-
 }
-
-
-
-
-
