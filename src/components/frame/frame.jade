@@ -1,0 +1,5 @@
+mixin frame(data)
+    .component.component-frame(class=data ? data.modifiers : [])
+        fieldset
+            legend= data.title
+            div!=  data.content

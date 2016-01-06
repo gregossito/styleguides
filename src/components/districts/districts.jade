@@ -13,7 +13,7 @@ mixin districts(data)
         - item.attributes = item.attributes || {};
         - item.attributes.type = 'button';
         - if (!item.enabled) { item.attributes.disabled = "disabled"; }
-        - else if (!activeIndex) { activeIndex = index; item.modifiers.push("active"); }
+        - else if (typeof activeIndex === 'undefined') { activeIndex = index; item.modifiers.push("active"); }
         - var slug = uuid + "-" + index;
         - var attributes = {};
         - attributes['id'] = 'h-' + slug;
