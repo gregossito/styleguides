@@ -15,7 +15,8 @@ Paris.gallery = (function(){
 
       new Flickity($wrapper.get(0), {
         imagesLoaded: true,
-        lazyLoad: 1
+        lazyLoad: 1,
+        pageDots: false
       });
     }
 
