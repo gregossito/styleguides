@@ -1,0 +1,15 @@
+{
+  "index": {
+    "type": "frame",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "attrs": {},
+      "data": {
+        "title": "A savoir",
+        "content": "<p><b>Les citoyens européens résidant en France</b> peuvent s'inscrire sur les listes complémentaires <a href='#'>ici</a> mais seulement pour participer aux élections <b>municipales et/ou européennes</b> (voir les cas particuliers plus bas).</p><p>Les électeurs déjà inscrits et n’ayant pas changé de domicile ou de résidence avant le 31 décembre n’ont aucune formalité à accomplir. Ils restent inscrits d’office.</p><h2>Quels sont les documents à fournir ?</h2><ol><li> - la carte nationale d’identité ou le passeport en cours de validité ou périmé de moins d’un an</li><li> - un justificatif de domicile de moins de trois mois à la date du dépôt de la demande</li></ol><p>Il est préférable à <b>Paris</b> de joindre <b>deux justificatifs</b> de domicile, afin que vous ne soyez pas sollicité par nos services pour compléter votre demande d’inscription.</p><h3>Attention :</h3><p>le site « mon.servicepublic.fr » demande de fournir un seul justificatif de domicile.</p><p>Ces justificatifs doivent préciser les noms et prénoms en entier et l'adresse. Les factures de téléphones portables ne sont pas toujours considérées comme suffisamment probantes.</p>"
+      }
+    }]
+  }
+}

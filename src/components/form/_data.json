@@ -116,6 +116,12 @@
             "label": "Numéro de téléphone"
           },
           {
+            "type": "citoyenne",
+            "name": "citoyenne1",
+            "id": "citoyenne1",
+            "label": "Carte citoyenne"
+          },
+          {
             "type": "url",
             "name": "url1",
             "id": "url1",
