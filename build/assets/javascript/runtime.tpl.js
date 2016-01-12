@@ -1224,30 +1224,6 @@ templatizer["jecoute"]["jecoute"] = function tmpl_jecoute_jecoute(data) {
     return buf.join("");
 };
 
-// news-push.jade compiled template
-templatizer["news-push"] = function tmpl_news_push(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// news-push.jade:news-push compiled template
-templatizer["news-push"]["news-push"] = function tmpl_news_push_news_push(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-    buf.push("<div" + jade.cls([ "component", "component-news-push", data.modifiers ], [ null, null, true ]) + '><div class="news-push-wrapper"><div class="news-push-after"></div>');
-    var title = [ data.title ];
-    if (data.image.credit) {
-        title.push("(" + data.image.credit + ")");
-    }
-    buf.push("<a" + jade.attr("href", data.href, true, false) + ' class="news-push-image"><img' + jade.attr("src", data.image.src, true, false) + ' alt=""' + jade.attr("title", title.join(" "), true, false) + '/></a><div class="news-push-content"><h2 class="news-push-title"><span>' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + '</span></h2><p class="news-push-content-text"><a' + jade.attr("href", data.href, true, false) + ">" + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</a>" + jade.escape(null == (jade_interp = " ") ? "" : jade_interp) + "<a" + jade.attr("href", data.href, true, false) + ' class="next">' + jade.escape(null == (jade_interp = data.follow) ? "" : jade_interp) + "</a></p></div></div>");
-    if (data.link && data.link.href && data.link.text) {
-        buf.push("<a" + jade.attr("href", data.link.href, true, false) + ' class="news-push-link"><span>' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</span></a>");
-    }
-    buf.push("</div>");
-    return buf.join("");
-};
-
 // links.jade compiled template
 templatizer["links"] = function tmpl_links(locals) {
     var buf = [];
@@ -1310,6 +1286,30 @@ templatizer["links"]["links"] = function tmpl_links_links(data) {
         }
     }).call(this);
     buf.push("</ul></div>");
+    return buf.join("");
+};
+
+// news-push.jade compiled template
+templatizer["news-push"] = function tmpl_news_push(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// news-push.jade:news-push compiled template
+templatizer["news-push"]["news-push"] = function tmpl_news_push_news_push(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+    buf.push("<div" + jade.cls([ "component", "component-news-push", data.modifiers ], [ null, null, true ]) + '><div class="news-push-wrapper"><div class="news-push-after"></div>');
+    var title = [ data.title ];
+    if (data.image.credit) {
+        title.push("(" + data.image.credit + ")");
+    }
+    buf.push("<a" + jade.attr("href", data.href, true, false) + ' class="news-push-image"><img' + jade.attr("src", data.image.src, true, false) + ' alt=""' + jade.attr("title", title.join(" "), true, false) + '/></a><div class="news-push-content"><h2 class="news-push-title"><span>' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + '</span></h2><p class="news-push-content-text"><a' + jade.attr("href", data.href, true, false) + ">" + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</a>" + jade.escape(null == (jade_interp = " ") ? "" : jade_interp) + "<a" + jade.attr("href", data.href, true, false) + ' class="next">' + jade.escape(null == (jade_interp = data.follow) ? "" : jade_interp) + "</a></p></div></div>");
+    if (data.link && data.link.href && data.link.text) {
+        buf.push("<a" + jade.attr("href", data.link.href, true, false) + ' class="news-push-link"><span>' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</span></a>");
+    }
+    buf.push("</div>");
     return buf.join("");
 };
 

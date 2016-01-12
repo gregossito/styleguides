@@ -9,6 +9,11 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.3.3 (2016-01-12)
+
+* form carte citoyenne component
+* retrait point diaporama
+
 ## 1.3.2 (2015-12-14)
 
 * new component `districts`
