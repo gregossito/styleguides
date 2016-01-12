@@ -506,6 +506,9 @@
       "last_update": {
         "text": "Dernière mise à jour le mercredi 10 décembre 2014"
       },
+      "heading_credit": {
+        "text": "Crédit photo : Vivamus sagittis"
+      },
       "jecoute": {
         "title": "Paris j'écoute",
         "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
@@ -1160,6 +1163,9 @@
       ],
       "last_update": {
         "text": "Dernière mise à jour le mercredi 10 décembre 2014"
+      },
+      "heading_credit": {
+        "text": "Crédit photo : Vivamus sagittis"
       },
       "jecoute": {
         "title": "Paris j'écoute",

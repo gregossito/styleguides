@@ -1,0 +1,103 @@
+.component-districts {
+  clear: both;
+
+  h4.districts-heading {
+    color: $color-secondary;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  ul.districts-items-wrapper {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+
+      .button {
+        font-size: 16px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        min-height: 72px;
+        min-width: 72px;
+        padding: 10px;
+      }
+    }
+  }
+
+  .districts-panel {
+    background-color: $grayF2;
+    border-radius: 4px;
+    display: none;
+    position: relative;
+
+    &.active {
+      display: block;
+    }
+
+    .districts-item-title {
+      color: $color-secondary;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      padding: 20px 40px 20px 12px;
+    }
+
+    .districts-item-content {
+      color: $gray33;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 24px;
+      padding: 0 12px 12px 12px;
+
+      > :last-child {
+        margin-bottom: 0;
+      }
+
+      a:not(.button) {
+        color: $red1;
+        text-decoration: underline;
+        &:hover {text-decoration: none;}
+      }
+
+      ul, ol, p {
+        color: $gray33;
+        margin: 0 0 20px;
+        padding: 0;
+      }
+
+      ul, ol {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        list-style-position: inside;
+
+        li + li {
+          margin-top: 10px;
+        }
+      }
+
+      ul {
+        list-style-type: disc;
+      }
+    }
+  }
+}
+
+
+@include small {
+  // override stateful button style
+  .component-districts {
+    ul.districts-items-wrapper li .button {
+      background-color: $grayF2;
+      min-height: 50px;
+      min-width: 50px;
+
+      &[disabled] {
+        display: none;
+      }
+    }
+  }
+}

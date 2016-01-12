@@ -72,11 +72,13 @@ Paris.anchors = (function(){
       renderAnchors();
       PubSub.subscribe('scroll.document', onScroll);
       PubSub.subscribe('accordion:change', throttle(onContentHeightChange, 500));
+      PubSub.subscribe('districts:change', testChange);
     }
 
     function disableAnchors(){
       PubSub.unsubscribe('scroll.document', onScroll);
       PubSub.unsubscribe('accordion:change');
+      PubSub.unsubscribe('districts:change');
     }
 
     function parseItems() {
@@ -178,6 +180,10 @@ Paris.anchors = (function(){
     function onContentHeightChange(){
       parseItems();
       fillBars();
+    }
+
+    function testChange() {
+      console.log('change');
     }
 
 

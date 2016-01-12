@@ -1,9 +1,14 @@
 mixin button(data)
+  - var data = JSON.parse(JSON.stringify(data || {}))
+  - var attributes = data.attributes || {}
   - var modifiers = data.modifiers || []
-  - var attributes = data.attributes || []
+  if data.icon
+    - modifiers.push("icon")
+
   if data.href
-    if data.icon
-      - modifiers.push("icon")
+    if attributes.disabled
+      - delete attributes.disabled
+      - modifiers.push("disabled")
     a.button(href=data.href title=data.title target=data.target class=modifiers)&attributes(attributes)
       if modifiers && modifiers.indexOf("marker") !== -1
         i.icon.icon-marker(aria-hidden="true")
@@ -12,4 +17,8 @@ mixin button(data)
       span.button-text= data.text
   else
     button.button(class=modifiers title=data.title)&attributes(attributes)
-      = data.text
+      if modifiers && modifiers.indexOf("marker") !== -1
+        i.icon.icon-marker(aria-hidden="true")
+      else if data.icon
+        i.icon(class="icon-#{data.icon}" aria-hidden="true")
+      span.button-text= data.text

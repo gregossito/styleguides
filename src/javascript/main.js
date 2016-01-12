@@ -11,6 +11,7 @@ require('./lib/url');
 
 // load our components
 require('../components/accordion/script');
+require('../components/districts/script');
 require('../components/form/script');
 require('../components/gallery/script');
 require('../components/html/script');
@@ -48,5 +49,5 @@ require('./lib/cnil');
 require('./lib/egg');
 
 var Paris = window.Paris || {};
-Paris.version = "1.3.0";
+Paris.version = "1.3.2";
 Paris.templates = require('./client.tpl');

@@ -4,24 +4,31 @@
     "description": "",
     "examples": [{
       "title": "Standard",
-      "description": "",
+      "description": "<strong>sans le paramètre <code>href</code> :</strong> balise <code>&lt;button&gt;</code>",
+      "data": {
+        "text": "Texte",
+        "title": "Titre"
+      }
+    }, {
+      "description": "<strong>avec le paramètre <code>href</code> :</strong> balise <code>&lt;a&gt;</code>",
       "data": {
         "href": "#",
         "text": "Texte",
         "title": "Titre"
       }
     }, {
-      "title": "Bouton petit",
-      "description": "",
+      "title": "Etat désactivé",
+      "description": "dans le cas d'une balise <code>&lt;a&gt;</code>, la règle css <code>pointer-events: none;</code> est utilisé, mais une désactivation javascript est aussi nécessaire car cette règle ne prend pas en compte la navigation clavier",
       "data": {
         "href": "#",
         "text": "Texte",
         "title": "Titre",
-        "modifiers": ["small"]
+        "attributes": {
+          "disabled": "disabled"
+        }
       }
     }, {
       "title": "Bouton d'action",
-      "description": "",
       "data": {
         "href": "#",
         "text": "Texte",
@@ -29,8 +36,8 @@
         "modifiers": ["action"]
       }
     }, {
-      "title": "Bouton large",
-      "description": "",
+      "title": "Taille de bouton",
+      "description": "large",
       "data": {
         "href": "#",
         "text": "Texte",
@@ -38,28 +45,55 @@
         "modifiers": ["wide"]
       }
     }, {
-      "title": "Bouton secondaire",
-      "description": "",
+      "description": "petit",
       "data": {
         "href": "#",
+        "text": "Texte",
+        "title": "Titre",
+        "modifiers": ["small"]
+      }
+    }, {
+      "title": "Bouton secondaire",
+      "data": {
         "text": "Texte",
         "title": "Titre",
         "modifiers": ["secondary"]
       }
     }, {
-      "title": "Bouton avec icône",
-      "description": "",
+      "title": "Bouton tertiaire",
       "data": {
-        "href": "#",
+        "text": "Texte",
+        "title": "Titre",
+        "modifiers": ["tertiary"]
+      }
+    }, {
+      "title": "Bouton à état",
+      "description": "ce bouton a un style particulier :<br>la couleur <code>$color-tertiary</code> de base et la couleur <code>$color-secondary</code> pour l'état focus/hover/actif",
+      "data": {
+        "text": "Texte",
+        "title": "Titre",
+        "modifiers": ["stateful"]
+      }
+    }, {
+      "description": "et la couleur <code>$gray33</code> pour l'état désactivé",
+      "data": {
+        "text": "Texte",
+        "title": "Titre",
+        "modifiers": ["stateful"],
+        "attributes": {
+          "disabled": "disabled"
+        }
+      }
+    }, {
+      "title": "Bouton avec icône",
+      "data": {
         "icon": "play",
         "title": "Titre",
         "text": "Texte"
       }
     }, {
       "title": "Bouton avec marqueur",
-      "description": "",
       "data": {
-        "href": "#",
         "text": "Texte",
         "title": "Titre",
         "modifiers": ["marker"]

@@ -1,0 +1,113 @@
+%component-frame {
+
+  h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul, ol, p {
+    color: $gray33;
+    margin: 20px;
+    padding: 0;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul, ol {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    list-style-position: inside;
+
+    li + li {
+      margin-top: 10px;
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ul.list-cols {
+    line-height: 25px;
+    list-style-type: none;
+    columns: 3;
+
+    li {
+      border-bottom: 1px solid $grayEE;
+      margin: 0;
+      padding: 10px 0;
+    }
+  }
+
+  a:not(.button) {
+    text-decoration: underline;
+    &:hover {text-decoration: none;}
+  }
+
+  em.light {
+    color: $gray99;
+    font-style: normal;
+  }
+
+}
+
+.component-frame {
+  clear: both;
+  @extend %component-frame;
+
+  @for $index from 2 through 6 {
+    h#{$index}{
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+
+  a:not(.button) {
+    color: $red1;
+  }
+
+  .anchor {
+    clear: both;
+    position: relative;
+  }
+
+  fieldset {
+    border: 5px solid $color-primary;
+    padding: 15px;
+
+    legend {
+      color: $color-primary;
+      display: inline-block;
+      padding: 0 20px;
+      font-size: 16px;
+      font-weight: 400;
+      margin-left: 50px;
+      width: auto;
+    }
+  }
+
+  @include medium-and-small {
+    .component-frame {
+      ul.list-cols {
+        columns: 2;
+      }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .component-frame {
+      ul.list-cols {
+        columns: 1;
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@
       "data": {
         "href": "#",
         "image": "image.jpg",
+        "tag": "h1",
         "title": "Titre",
         "text": "Texte"
       }

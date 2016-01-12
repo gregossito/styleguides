@@ -1,0 +1,134 @@
+{
+  "index": {
+    "type": "districts",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "title": "Séléctionnez un arrondissement :",
+        "items": [
+          {
+            "enabled": false,
+            "text": "1e",
+            "title": "1e arrondissement de Paris",
+            "content": "1e - Lorem ipsum dolors sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": false,
+            "text": "2e",
+            "title": "2e arrondissement de Paris",
+            "content": ""
+          },
+          {
+            "enabled": true,
+            "text": "3e",
+            "title": "3e arrondissement de Paris",
+            "content": "3e - Lorem ipsum dolors sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": false,
+            "text": "4e",
+            "title": "4 arrondissement de Parise"
+          },
+          {
+            "enabled": true,
+            "text": "5e",
+            "title": "5e arrondissement de Paris",
+            "content": "5e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": true,
+            "text": "6e",
+            "title": "6e arrondissement de Paris",
+            "content": "6e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": false,
+            "text": "7e",
+            "title": "7e arrondissement de Paris",
+            "content": "7e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": false,
+            "text": "8e",
+            "title": "8e arrondissement de Paris",
+            "content": "8e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": true,
+            "text": "9e",
+            "title": "9e arrondissement de Paris",
+            "content": "9e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": true,
+            "text": "10e",
+            "title": "10e arrondissement de Paris",
+            "content": "10e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": true,
+            "text": "11e",
+            "title": "11e arrondissement de Paris",
+            "content": "11e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": true,
+            "text": "12e",
+            "title": "12e arrondissement de Paris",
+            "content": "12e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": true,
+            "text": "13e",
+            "title": "13e arrondissement de Paris",
+            "content": "13e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": false,
+            "text": "14e",
+            "title": "14e arrondissement de Paris",
+            "content": "14e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": true,
+            "text": "15e",
+            "title": "15e arrondissement de Paris",
+            "content": "15e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": true,
+            "text": "16e",
+            "title": "16e arrondissement de Paris",
+            "content": "16e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": false,
+            "text": "17e",
+            "title": "17e arrondissement de Paris",
+            "content": "17e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": true,
+            "text": "18e",
+            "title": "18e arrondissement de Paris",
+            "content": "18e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": true,
+            "text": "19e",
+            "title": "19e arrondissement de Paris",
+            "content": "19e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "enabled": true,
+            "text": "20e",
+            "title": "20e arrondissement de Paris",
+            "content": "20e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          }
+        ]
+      }
+    }]
+  }
+}

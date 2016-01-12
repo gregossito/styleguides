@@ -376,6 +376,21 @@
           },
           {
             "type": "title",
+            "text": "CGU"
+          },
+          {
+            "type": "cgu",
+            "name": "cgu",
+            "id": "cgu1",
+            "label": "Conditions générales d'utilisation",
+            "link": "cgu",
+            "href": "#",
+            "items": [
+              {"value": 1, "text": "Merci d'accepter les "}
+            ]
+          },
+          {
+            "type": "title",
             "text": "CAPTCHA"
           },
           {

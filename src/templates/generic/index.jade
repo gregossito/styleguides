@@ -57,6 +57,7 @@ append content
               +#{module.type}(module.data)
         .layout-content.components
           - if (data.last_update) {data.components.push({"type": "last-update", "data": data.last_update});}
+          - if (data.heading_credit) {data.components.push({"type": "last-update", "data": data.heading_credit});}
           - if (data.jecoute) {data.components.push({"type": "jecoute", "data": data.jecoute});}
           each component in data.components
             +#{component.type}(component.data)
