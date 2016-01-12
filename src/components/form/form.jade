@@ -14,6 +14,11 @@ mixin form-email(data)
 mixin form-tel(data)
   +form-text(data)
 
+mixin form-citoyenne(data)
+  label.form-item-label(for=data.id)= data.label
+  input.form-field(type="text" name=data.name id=data.id placeholder=data.placeholder value=data.value required=data.required)
+
+
 mixin form-url(data)
   +form-text(data)
 
@@ -104,7 +109,7 @@ mixin form(data)
         - item = JSON.parse(JSON.stringify(item || [])) // clone the data object
         - item.modifiers = item.modifiers || []
         - item.modifiers.push("form-item-" + item.type);
-        - if (["email", "tel", "url"].indexOf(item.type) !== -1) {item.modifiers.push("form-item-text");}
+        - if (["email", "tel","citoyenne", "url"].indexOf(item.type) !== -1) {item.modifiers.push("form-item-text");}
         - if (item.required === true) {item.modifiers.push("required"); item.label += " *";}
         - if (item.error === true) {item.modifiers.push("error");}
         .form-item(class=item.modifiers)

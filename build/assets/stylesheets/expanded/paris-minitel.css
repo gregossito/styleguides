@@ -2378,7 +2378,7 @@ html.no-touch .jumbotron:hover .jumbotron-wrapper:not(.no-overlay):after {
   z-index: 1; }
 
 .jumbotron-title {
-  font-size: 15px;
+  font-size: 15px !important;
   font-weight: 700;
   margin-bottom: 5px;
   max-width: 470px; }
@@ -2397,7 +2397,7 @@ html.no-touch .jumbotron:hover .jumbotron-wrapper:not(.no-overlay):after {
   .jumbotron {
     height: 320px; }
   .jumbotron-title {
-    font-size: 18px;
+    font-size: 18px !important;
     margin-bottom: 12px; }
   .jumbotron-text {
     font-size: 40px;
@@ -5566,6 +5566,7 @@ body.rheader-mobile-nav-open {
   .component-form .form-item select:invalid {
     box-shadow: none; }
   .component-form .form-item-text input,
+  .component-form .form-item-citoyenne input,
   .component-form .form-item-textarea textarea,
   .component-form .form-item-select select {
     background-color: #F2F2F2;
@@ -5575,10 +5576,12 @@ body.rheader-mobile-nav-open {
     -webkit-transition: border 0.2s ease-in;
             transition: border 0.2s ease-in; }
     .component-form .form-item-text input:focus,
+    .component-form .form-item-citoyenne input:focus,
     .component-form .form-item-textarea textarea:focus,
     .component-form .form-item-select select:focus {
       border-color: #0924fa; }
-  .component-form .form-item-text input {
+  .component-form .form-item-text input,
+  .component-form .form-item-citoyenne input {
     padding: 0 15px;
     width: 385px; }
   .component-form .form-item-textarea textarea {
@@ -5628,6 +5631,97 @@ body.rheader-mobile-nav-open {
     text-align: center; }
   .component-form .form-item-matrix input {
     cursor: pointer; }
+
+.component-frame h1, .component-frame h2, .component-frame h3, .component-frame h4, .component-frame p {
+  margin: 0;
+  padding: 0; }
+
+.component-frame ul, .component-frame ol, .component-frame p {
+  color: #333;
+  margin: 20px;
+  padding: 0; }
+
+.component-frame p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px; }
+  .component-frame p:last-child {
+    margin-bottom: 0; }
+
+.component-frame ul, .component-frame ol {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  list-style-position: inside; }
+  .component-frame ul li + li, .component-frame ol li + li {
+    margin-top: 10px; }
+
+.component-frame ul {
+  list-style-type: disc; }
+
+.component-frame ul.list-cols {
+  line-height: 25px;
+  list-style-type: none;
+  -webkit-columns: 3;
+     -moz-columns: 3;
+          columns: 3; }
+  .component-frame ul.list-cols li {
+    border-bottom: 1px solid #2dfffe;
+    margin: 0;
+    padding: 10px 0; }
+
+.component-frame a:not(.button) {
+  text-decoration: underline; }
+  .component-frame a:not(.button):hover {
+    text-decoration: none; }
+
+.component-frame em.light {
+  color: #999;
+  font-style: normal; }
+
+.component-frame {
+  clear: both; }
+  .component-frame h2 {
+    font-weight: 600;
+    font-size: 18px; }
+  .component-frame h3 {
+    font-weight: 600;
+    font-size: 18px; }
+  .component-frame h4 {
+    font-weight: 600;
+    font-size: 18px; }
+  .component-frame h5 {
+    font-weight: 600;
+    font-size: 18px; }
+  .component-frame h6 {
+    font-weight: 600;
+    font-size: 18px; }
+  .component-frame a:not(.button) {
+    color: #DD275C; }
+  .component-frame .anchor {
+    clear: both;
+    position: relative; }
+  .component-frame fieldset {
+    border: 5px solid #fd28fc;
+    padding: 15px; }
+    .component-frame fieldset legend {
+      color: #fd28fc;
+      display: inline-block;
+      padding: 0 20px;
+      font-size: 16px;
+      font-weight: 400;
+      margin-left: 50px;
+      width: auto; }
+  @media (max-width: 1159px) {
+    .component-frame .component-frame ul.list-cols {
+      -webkit-columns: 2;
+         -moz-columns: 2;
+              columns: 2; } }
+  @media screen and (max-width: 450px) {
+    .component-frame .component-frame ul.list-cols {
+      -webkit-columns: 1;
+         -moz-columns: 1;
+              columns: 1; } }
 
 /*! Flickity v1.1.1
 http://flickity.metafizzy.co
