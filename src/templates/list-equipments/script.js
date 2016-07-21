@@ -5,7 +5,7 @@ var jade = require('jade');
 //var algoliasearch = require('algoliasearch');
 //var algoliaSearchHelper = require('algoliasearch-helper');
 var instantsearch = require('instantsearch.js');
-var instantsearchGoogleMaps = require('instantsearch-googlemaps');
+// var instantsearchGoogleMaps = require('instantsearch-googlemaps');
 
 var Paris = window.Paris || {};
 
@@ -82,19 +82,6 @@ Paris.listEquipments = (function(){
           }
         })
       );
-
-      //search.addWidget(
-      //  instantsearchGoogleMaps({
-      //    container: document.querySelector('#map'),
-      //    prepareMarkerData: function(hit, index, hits) {
-      //      return {
-      //        label: hit.name,
-      //        title: hit.description
-      //      };
-      //    },
-      //    refineOnMapInteraction: true
-      //  })
-      //);
 
       search.start();
 
