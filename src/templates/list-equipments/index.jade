@@ -3,6 +3,7 @@ extends ../../layouts/stack/stack
 include ../../modules/block-search/block-search
 include ../../modules/block-search-field/block-search-field
 include ../../modules/block-search-filters/block-search-filters
+include ../../modules/block-map/block-map
 include ../../modules/card/card
 include ../../modules/notice/notice
 include ../../modules/rheader/rheader
@@ -26,7 +27,8 @@ append content
             each result in data.list.results
               +card(result)
       .layout-content-map
-        #map
+        +block-map()
+        
 
 append footer
   if data.notices && data.notices.cnil
