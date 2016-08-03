@@ -20,6 +20,10 @@
     background-color: $grayF2;
     float: right;
     width: calc(100% - 560px);
+
+    #map {
+      height: 100%;  
+    }
   }
 }
 
