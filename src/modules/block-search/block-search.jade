@@ -4,7 +4,7 @@ mixin block-search(data)
       h3.block-search-title= data.title
       - var top_link = data.top_link || {};
       if top_link
-        a.block-search-top-link(href=top_link.href target=top_link.target title=top_link.title)= top_link.text
+        span.block-search-top-link
     .block-search-content
       if block
         block

@@ -74,6 +74,16 @@ Paris.listEquipments = (function(){
       );
 
       search.addWidget(
+        instantsearch.widgets.clearAll({
+          container: '.block-search-filters .block-search-top-link',
+          autoHideContainer: false,
+          templates: {
+            link: 'Réinitialiser'
+          },
+        })
+      );
+
+      search.addWidget(
         instantsearch.widgets.hits({
           container: '#hits-container',
           templates: {
