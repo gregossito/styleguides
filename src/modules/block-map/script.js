@@ -8,7 +8,7 @@ var Paris = window.Paris || {};
 Paris.blockMap = (function(){
 
   var defaultOptions = {
-    style: 'mapbox://styles/mapbox/dark-v9',
+    style: 'mapbox://styles/mapbox/streets-v9',
     zoom: 11,
     minZoom: 10,
     center: [2.349272, 48.856579],
@@ -46,9 +46,10 @@ Paris.blockMap = (function(){
       $.extend(mapOptions, defaultOptions);
       var map = new mapboxgl.Map(mapOptions);
 
-      // Add map
-      var nav = new mapboxgl.Navigation();
-      map.addControl(nav);
+      // Add navigation and geolocate map
+      map.addControl(new mapboxgl.Navigation());
+      map.addControl(new mapboxgl.Geolocate());
+
     }
 
     init();
