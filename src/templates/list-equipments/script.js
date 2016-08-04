@@ -60,7 +60,8 @@ Paris.listEquipments = (function(){
 
       search.addWidget(
         instantsearch.widgets.searchBox({
-          container: '.block-search-field .search-field-input'
+          container: '.block-search-field .search-field-input',
+          searchOnEnterKeyPressOnly: true
         })
       );
 
@@ -92,6 +93,14 @@ Paris.listEquipments = (function(){
           }
         })
       );
+
+      $('form.search-field').submit(function(event) {
+        event.preventDefault();
+      });
+
+      $('form.search-field').on('click', '.search-field-submit', function(event) {
+        search.helper.search();
+      });
 
       search.start();
 
