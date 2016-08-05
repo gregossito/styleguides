@@ -2,7 +2,7 @@
 require('velocity-animate');
 
 var jade = require('jade');
-//var algoliasearch = require('algoliasearch');
+var algoliasearch = require('algoliasearch');
 //var algoliaSearchHelper = require('algoliasearch-helper');
 var instantsearch = require('instantsearch.js');
 // var instantsearchGoogleMaps = require('instantsearch-googlemaps');
@@ -100,6 +100,23 @@ Paris.listEquipments = (function(){
 
       $('form.search-field').on('click', '.search-field-submit', function(event) {
         search.helper.search();
+      });
+
+      // Autocompletion
+      var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
+      var index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
+      index.search();
+      $('.layout-list-map .search-field-input').autocomplete({ hint: false }, [{
+        source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+        displayKey: 'name',
+        templates: {
+          suggestion: function(suggestion) {
+            return suggestion._highlightResult.name.value;
+          }
+        }
+      }
+      ]).on('autocomplete:selected', function(event, suggestion, dataset) {
+        search.helper.setQuery(suggestion.name);
       });
 
       search.start();
