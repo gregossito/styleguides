@@ -131,6 +131,7 @@ Paris.listEquipments = (function(){
       }
       ]).on('autocomplete:selected', function(event, suggestion, dataset) {
         search.helper.setQuery(suggestion.name);
+        search.helper.search();
       });
 
       search.start();
