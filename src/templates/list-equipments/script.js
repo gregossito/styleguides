@@ -125,7 +125,7 @@ Paris.listEquipments = (function(){
         displayKey: 'name',
         templates: {
           suggestion: function(suggestion) {
-            return suggestion._highlightResult.name.value;
+            return '<span class="autocomplete-category">' + 'Équipement' + '</span>' + '<span class="autocomplete-name">' + suggestion._highlightResult.name.value + '</span>';
           }
         }
       }

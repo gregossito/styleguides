@@ -112,6 +112,13 @@
   padding: 5px 4px;
   border-bottom: 1px solid $grayCC;
 }
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .autocomplete-category {
+  display: block;
+  color: $gray4D;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
 .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
   border-bottom: 0;
 }
