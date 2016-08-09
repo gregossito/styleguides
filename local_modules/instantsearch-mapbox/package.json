@@ -1,0 +1,27 @@
+{
+  "name": "instantsearch-mapbox",
+  "version": "0.0.1",
+  "description": "algolia/instantsearch.js widget to display your Algolia geo hits on a map using Mapbox API",
+  "main": "./js/index.js",
+  "author": {
+    "name": "Tanguy Aladenise"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "instantsearch.js": "^1.1.0"
+  },
+  "peerDependencies": {
+    "instantsearch.js": "^1.0.0"
+  },
+  "dependencies": {
+    "mapbox-gl": "^0.21.0",
+    "jquery": ">=1.8"
+  },
+  "readme": "# README",
+  "readmeFilename": "README.md",
+  "_id": "instantsearch-mapbox@0.0.1",
+  "scripts": {},
+  "_shasum": "d992e805b0f2377cfa54ab55b0f63cf6208a8e33",
+  "_from": "local_modules/instantsearch-mapbox",
+  "_resolved": "file:local_modules/instantsearch-mapbox"
+}
