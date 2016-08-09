@@ -59,7 +59,7 @@ Paris.listEquipments = (function(){
           autoHideContainer: false,
           templates: {
             link: 'Réinitialiser'
-          },
+          }
         })
       );
 
@@ -112,7 +112,21 @@ Paris.listEquipments = (function(){
       var index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
 
       $('.layout-list-map .search-field-input').autocomplete({ hint: false }, [{
-        source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+        source: function(query, callback) {
+          var categories = [];
+          if (search.helper.state.disjunctiveFacetsRefinements && search.helper.state.disjunctiveFacetsRefinements.categories) {
+            $.each(search.helper.state.disjunctiveFacetsRefinements.categories, function(index, category) {
+               categories.push('categories:' + category);
+            });
+          }
+          index.search(query, {
+            facetFilters: ((categories && categories.length > 0) ? [categories] : '*')
+          }).then(function(answer) {
+            callback(answer.hits);
+          }, function() {
+            callback([]);
+          });
+        },
         displayKey: 'name',
         templates: {
           suggestion: function(suggestion) {
@@ -122,6 +136,7 @@ Paris.listEquipments = (function(){
       }
       ]).on('autocomplete:selected', function(event, suggestion, dataset) {
         search.helper.setQuery(suggestion.name);
+        search.helper.search();
       });
 
       search.start();
