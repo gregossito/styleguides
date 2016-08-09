@@ -80,7 +80,7 @@ Paris.listEquipments = (function(){
           autoHideContainer: false,
           templates: {
             link: 'Réinitialiser'
-          },
+          }
         })
       );
 
@@ -105,9 +105,23 @@ Paris.listEquipments = (function(){
       // Autocompletion
       var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       var index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
-      index.search();
+
       $('.layout-list-map .search-field-input').autocomplete({ hint: false }, [{
-        source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+        source: function(query, callback) {
+          var categories = [];
+          if (search.helper.state.disjunctiveFacetsRefinements && search.helper.state.disjunctiveFacetsRefinements.categories) {
+            $.each(search.helper.state.disjunctiveFacetsRefinements.categories, function(index, category) {
+               categories.push('categories:' + category);
+            });
+          }
+          index.search(query, {
+            facetFilters: ((categories && categories.length > 0) ? [categories] : '*')
+          }).then(function(answer) {
+            callback(answer.hits);
+          }, function() {
+            callback([]);
+          });
+        },
         displayKey: 'name',
         templates: {
           suggestion: function(suggestion) {
