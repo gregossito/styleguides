@@ -28,7 +28,6 @@ require('../modules/anchors-list/script');
 require('../modules/block-content-jecoute/script');
 require('../modules/block-content-tweet/script');
 require('../modules/block-content-newsletter/script');
-require('../modules/block-map/script');
 require('../modules/button-top/script');
 require('../modules/gallery-ugc/script');
 require('../modules/icon-switch/script');

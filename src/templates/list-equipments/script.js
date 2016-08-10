@@ -1,11 +1,9 @@
 'use strict';
 require('velocity-animate');
 
-var jade = require('jade');
 var algoliasearch = require('algoliasearch');
-//var algoliaSearchHelper = require('algoliasearch-helper');
 var instantsearch = require('instantsearch.js');
-// var instantsearchGoogleMaps = require('instantsearch-googlemaps');
+var instantsearchMapbox = require('instantsearch-mapbox');
 
 var Paris = window.Paris || {};
 
@@ -14,31 +12,8 @@ Paris.listEquipments = (function(){
   var defaultOptions = {
     // the Algolia index to use (should be defined in config.js)
     index: 'equipments',
-    // matching the names of Algolia fields
-    //fields: {
-    //  // the field to use as a link
-    //  link: 'url',
-    //  // the field to use as the person-block title
-    //  title: 'prenom_nom',
-    //  // the field to use as the person-block text
-    //  text: 'mandat',
-    //  // the field to use as image
-    //  image: 'portrait',
-    //  // the field to use in the person-block text
-    //  group: 'groupe_politique'
-    //},
-    // the number of results to display per page
-    //resultsPerPage: 100,
-    // the available facets that will be displayed in the left column (should have been created on Algolia)
-    // you can set the name displayed in the left column in locales.js (key: $LOCALE/search_results/facets/$YOUR_FACET)
-    //facets: ["groupe_politique", "secteur"],
-    // the facetFilter you want to always add by default (useful for filtering results)
-    //addFacetFilterJson: null,
-    //algoliaHelperParams: {facets: ['mandat'], disjunctiveFacets: ['groupe_politique', 'secteur']}
     searchParams: {
-      "facetFilters": [
-        "onglet:Equipements"
-      ]
+      "attributesToRetrieve": "*"
     }
   };
 
@@ -51,13 +26,15 @@ Paris.listEquipments = (function(){
     function init() {
       initOptions();
 
+      // Init instantsearch
       var search = instantsearch({
         appId: Paris.config.algolia.id,
         apiKey: Paris.config.algolia.api_key,
-        indexName: Paris.config.algolia.indexes[options.index]
-        //searchParameters: options.searchParams
+        indexName: Paris.config.algolia.indexes[options.index],
+        searchParameters: options.searchParams
       });
 
+      // Search box widget
       search.addWidget(
         instantsearch.widgets.searchBox({
           container: '.block-search-field .search-field-input',
@@ -65,6 +42,7 @@ Paris.listEquipments = (function(){
         })
       );
 
+      // Search refinement list
       search.addWidget(
         Paris.instantsearch.widgets.refinementList({
           container: '.block-search-filters .block-search-content',
@@ -74,6 +52,7 @@ Paris.listEquipments = (function(){
         })
       );
 
+      // Search reset
       search.addWidget(
         instantsearch.widgets.clearAll({
           container: '.block-search-filters .block-search-top-link',
@@ -84,6 +63,7 @@ Paris.listEquipments = (function(){
         })
       );
 
+      // Search results
       search.addWidget(
         instantsearch.widgets.hits({
           container: '#hits-container',
@@ -94,15 +74,40 @@ Paris.listEquipments = (function(){
         })
       );
 
+      // Search map
+      search.addWidget(
+        instantsearch.widgets.mapbox({
+          container: '#map',
+          mapBoxAccessToken: 'pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw',
+          mapbox: {
+            style: 'mapbox://styles/mapbox/dark-v9',
+            zoom: 11,
+            minZoom: 10,
+            center: [2.349272, 48.856579],
+            maxBounds:
+            [
+              [2.021942, 48.731991], // SW coordinates
+              [2.698162, 48.985029]  // NE coordinates
+            ]
+          },
+          cluster: {
+            circleColor: '#f89cd3',
+            circleRadius: 15
+          }
+        })
+      );
+
+      // Prevent form to conflict with instantsearch behavior
       $('form.search-field').submit(function(event) {
         event.preventDefault();
       });
 
+      // Form submit button will reload the page. Instantsearch has not yet make it fully compatible with forms. So manually handle the submi action by triggering search
       $('form.search-field').on('click', '.search-field-submit', function(event) {
         search.helper.search();
       });
 
-      // Autocompletion
+      // Autocompletion is not an instantsearch feature. Must use algolia.js directly
       var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       var index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
 
@@ -145,9 +150,6 @@ Paris.listEquipments = (function(){
       });
     }
 
-    // The API for external interaction
-    //api.search = function(query) {
-    //};
 
     init();
 
