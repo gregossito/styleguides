@@ -80,7 +80,7 @@ Paris.listEquipments = (function(){
           container: '#map',
           mapBoxAccessToken: 'pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw',
           mapbox: {
-            style: 'mapbox://styles/mapbox/dark-v9',
+            style: 'mapbox://styles/parisnumerique/cilnr6b9h0047c4knsv84lpv3',
             zoom: 11,
             minZoom: 10,
             center: [2.349272, 48.856579],
@@ -130,7 +130,7 @@ Paris.listEquipments = (function(){
         displayKey: 'name',
         templates: {
           suggestion: function(suggestion) {
-            return suggestion._highlightResult.name.value;
+            return '<span class="autocomplete-category">' + 'Équipement' + '</span>' + '<span class="autocomplete-name">' + suggestion._highlightResult.name.value + '</span>';
           }
         }
       }
