@@ -11,8 +11,8 @@ var mapboxgl = require('mapbox-gl'),
 var map,
 	settings,
 	geoJSON = {
-		"type": "FeatureCollection",
-		"features": []
+		'type': 'FeatureCollection',
+		'features': []
 	};
 
 /**
@@ -22,18 +22,39 @@ var map,
  * @param {Bool} cluster.cluster Enable cluster.
  * @param {Int} cluster.clusterMaxZoom The maximum zoom level to cluster points in.
  * @param {Int} cluster.clusterRadius The radius of each cluster when clustering points, measured in pixels.
- * @param {Color} cluster.circleColor The color of the circle.
- * @param {Int} cluster.circleRadius Circle radius.
+ * @param {String} tempaltes.markerIconImage The marker string of the mapbox style.
+ * @param {Color} templates.clustersLayers[].circleColor The color of the circle.
+ * @param {Int} templates.clustersLayers[].circleRadius Circle radius.
+ * @param {Int} templates.clustersLayers[].range Range to display the cluster layer. If 0 all the time.
+ * @param {[String]} templates.cluster.textFont Array of font for cluster text
+ * @param {String} templates.cluster.textColor Color of text for cluster
+ * @param {Int} templates.cluster.textSize Size of text for cluster
  */
 var defaults = {
-	mapBoxAccessToken: "YOUR-ACCESS-TOKEN",
+	mapBoxAccessToken: 'YOUR-ACCESS-TOKEN',
 	mapbox: {},
 	cluster: {
 		cluster: true,
 		clusterMaxZoom: 14,
-		clusterRadius: 50, 
-		circleColor: "#ffd8c7",
-		circleRadius: 15
+		clusterRadius: 50
+	},
+	templates: {
+		markerIconImage: 'marker-15',
+		clustersLayers: [
+			{
+				circleColor: '#000',
+				circleRadius: 20,
+				range: 0
+			}
+		],
+		cluster: {
+			textFont: [
+				'DIN Offc Pro Medium',
+				'Arial Unicode MS Bold'
+			],
+			textColor: '#fff',
+			textSize: 12
+		}
 	}
 };
 
@@ -43,6 +64,11 @@ var defaults = {
 instantsearch.widgets.mapbox = function mapbox(options) {
 	
 	return {
+		// getConfiguration: function(configuration) {
+		// 	return {
+		// 		hitsPerPage : 100
+		// 	}
+		// },
 		init: function(params) {
 			initOptions(options);
 			initMap(options.container);
@@ -51,8 +77,8 @@ instantsearch.widgets.mapbox = function mapbox(options) {
 
 			geoJSON = hitsToGeoJSON(params.results.hits);
 
-			if (map.getSource("searchHits")) {
-				map.getSource("searchHits").setData(geoJSON);
+			if (map.getSource('searchHits')) {
+				map.getSource('searchHits').setData(geoJSON);
 			}
 		}
 	}
@@ -76,7 +102,7 @@ function initMap(container) {
 	// Get Mapbox user access token
 	var accessToken = settings.mapBoxAccessToken;
 	if (accessToken == defaults.mapBoxAccessToken) {
-		throw "You need to pass your Mapbox access token";
+		throw 'You need to pass your Mapbox access token';
 	}
 	mapboxgl.accessToken = accessToken;
 	settings.mapbox.container = document.querySelector(container).getAttribute('id');
@@ -88,7 +114,26 @@ function initMap(container) {
 	map.addControl(new mapboxgl.Geolocate());
 
 	map.on('load', function () {
-		renderMap(geoJSON, "searchHits");
+		renderMap(geoJSON, 'searchHits');
+	});
+
+	// When a click event occurs near a place, open a popup at the location of
+	// the feature, with description HTML from its properties.
+	map.on('click', function (e) {
+		var features = map.queryRenderedFeatures(e.point, { layers: ['searchHits'] });
+
+		if (!features.length) {
+			return;
+		}
+
+		var feature = features[0];
+		// Populate the popup and set its coordinates
+		// based on the feature found.
+		var popup = new mapboxgl.Popup()
+			.setLngLat(feature.geometry.coordinates)
+			// TODO Evolution - Dynamically set html content from widget 
+            .setHTML('<div class="card-content"><h3 class="card-title">'+feature.properties.title+'</h3><div class="card-text">'+feature.properties.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div>')
+			.addTo(map);
 	});
 }
 
@@ -100,12 +145,11 @@ function initMap(container) {
  */
 function renderMap(geoJSON, sourceID) {
 
-	var clusterID = "cluster-"+sourceID;
-	var clusterCountID = "cluster-count-"+sourceID;
+	var clusterCountID = 'cluster-count-'+sourceID;
 
-	// Create markers
+	// Add source
 	map.addSource(sourceID, {
-		type: "geojson",
+		type: 'geojson',
 		data: geoJSON,
 		cluster: settings.cluster.cluster,
 		clusterMaxZoom: settings.cluster.clusterMaxZoom,
@@ -115,42 +159,51 @@ function renderMap(geoJSON, sourceID) {
 	// Add layer for unclestered points
 	map.addLayer({
 		id: sourceID,
-		type: "symbol",
+		type: 'symbol',
 		source: sourceID,
 		layout: {
-			"icon-image": "marker-15"
+			'icon-image': settings.templates.markerIconImage
 		}
 	});
 
-	// Add a layer for the clusters circles
-	map.addLayer({
-		id: clusterID,
-		type: "circle",
-		source: sourceID,
-		paint: {
-			"circle-color": settings.cluster.circleColor,
-			"circle-radius": settings.cluster.circleRadius
-		},
-		filter: [">", "point_count", 1]
+	// Reorder layers by range
+	var layers = settings.templates.clustersLayers.sort(function (a,b) {
+		return b.range - a.range;
+	});
+
+	layers.forEach(function(layer, i) {
+		console.log(layer.range);
+		map.addLayer({
+			id: 'cluster-' + i,
+			type: 'circle',
+			source: sourceID,
+			paint: {
+				'circle-color': layers[i].circleColor,
+				'circle-radius': layers[i].circleRadius
+			},
+			filter: i === 0 ?
+				['>=', 'point_count', layer.range] :
+				['all',
+					['>=', 'point_count', layer.range],
+					['<', 'point_count', layers[i - 1].range]
+				]
+		});
 	});
 
 	// Add a layer for the clusters' count labels
 	map.addLayer({
 		id: clusterCountID,
-		type: "symbol",
+		type: 'symbol',
 		source: sourceID,
 		paint: {
-			"text-color": "#fff"
+			'text-color': settings.templates.cluster.textColor
 		},
 		layout: {
-			"text-field": "{point_count}",
-			"text-font": [
-				"DIN Offc Pro Medium",
-				"Arial Unicode MS Bold"
-			],
-			"text-size": 12
+			'text-field': '{point_count}',
+			'text-font': settings.templates.cluster.textFont,
+			'text-size': settings.templates.cluster.textSize
 		},
-		filter: [">", "point_count", 1]
+		filter: ['>', 'point_count', 1]
 	});
 }
 
@@ -170,9 +223,9 @@ function hitsToGeoJSON(hits) {
 	// For each hits return by instantsearch create its geoJson object
 	hits.forEach(function(hit) {
 		var feature = {
-			type: "Feature",
+			type: 'Feature',
 			geometry: {
-				type: "Point",
+				type: 'Point',
 				coordinates: [hit._geoloc.lng, hit._geoloc.lat]
 			},
 			properties: {
