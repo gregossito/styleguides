@@ -5,6 +5,84 @@
       margin-bottom: 10px;
       margin-right: 10px;
     }
+
+    #more-filters-button {
+        display: inline-block;
+    }
   }
 
+  .block-search-filters-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba($color-secondary-variant, 0.9);
+    z-index: 9000;
+
+    .popup-background {
+        cursor: pointer;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba($color-secondary-variant, 0.9);
+        z-index: 1;
+    }
+
+    .popup-content {
+        background-color: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: calc(100% - 50px);
+        max-width: 500px;
+        max-height: calc(100% - 50px);
+        overflow: hidden;
+
+        .filters-list {
+            padding: 30px;
+            max-height: calc(100vh - 250px);
+            overflow: auto;
+
+            label {
+                display: block;
+                padding: 15px;
+                border-bottom: 1px solid $grayF2;
+                position: relative;
+                cursor: pointer;
+
+                input {
+                    position: relative;
+                    z-index: 2;
+
+                    &:checked + span {
+                        background-color: $green1;
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    padding-left: 45px;
+                    z-index: 1;
+                    padding-top: 15px;
+                }
+            }
+        }
+
+        .buttons {
+            background-color: $grayF2;
+            padding: 30px 30px 20px;
+            text-align: center;
+        }
+    }
+  }
 }

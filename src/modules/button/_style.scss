@@ -143,6 +143,18 @@
     font-weight: 300;
     padding: 12px 10px;
   }
+
+  &.confirm {
+    background-color: $green1;
+    color: $white;
+    &:after {background-color: darken($green1, 10%);}
+  }
+
+  &.discard {
+    background-color: $gray4D;
+    color: $white;
+    &:after {background-color: darken($gray4D, 10%);}
+  }
 }
 
 
