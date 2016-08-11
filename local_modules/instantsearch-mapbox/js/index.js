@@ -10,6 +10,7 @@ var mapboxgl = require('mapbox-gl'),
 
 var map,
 	settings,
+	helper,
 	layersID = [],
 	geoJSON = {
 		'type': 'FeatureCollection',
@@ -70,6 +71,7 @@ instantsearch.widgets.mapbox = function mapbox(options) {
 		// 	}
 		// },
 		init: function(params) {
+			helper = params.helper;
 			initOptions(options);
 			initMap(options.container);
 		},
@@ -133,6 +135,16 @@ function initMap(container) {
 			// TODO Evolution - Dynamically set html content from widget 
 			.setHTML('<div class="card-content"><h3 class="card-title">'+feature.properties.title+'</h3><div class="card-text">'+feature.properties.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div>')
 			.addTo(map);
+	});
+
+	// Trigger search based on map bounds when user moves
+	map.on('moveend', function (e) {
+		var bounds = map.getBounds();
+		helper
+			.setQueryParameter('insideBoundingBox', bounds._sw.lat+','+bounds._sw.lng+','+bounds._ne.lat+','+bounds._ne.lng)
+			.search()
+			// Clear geoloc param right after launching request
+			.setQueryParameter('insideBoundingBox', undefined);
 	});
 }
 
