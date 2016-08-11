@@ -10,6 +10,7 @@ var mapboxgl = require('mapbox-gl'),
 
 var map,
 	settings,
+	layersID = [],
 	geoJSON = {
 		'type': 'FeatureCollection',
 		'features': []
@@ -39,7 +40,7 @@ var defaults = {
 		clusterRadius: 50
 	},
 	templates: {
-		markerIconImage: 'marker-15',
+		markerIconImage: 'marker',
 		clustersLayers: [
 			{
 				circleColor: '#000',
@@ -77,9 +78,7 @@ instantsearch.widgets.mapbox = function mapbox(options) {
 
 			geoJSON = hitsToGeoJSON(params.results.hits);
 
-			if (map.getSource('searchHits')) {
-				map.getSource('searchHits').setData(geoJSON);
-			}
+			renderMap(geoJSON, 'searchHits');
 		}
 	}
 }
@@ -120,7 +119,8 @@ function initMap(container) {
 	// When a click event occurs near a place, open a popup at the location of
 	// the feature, with description HTML from its properties.
 	map.on('click', function (e) {
-		var features = map.queryRenderedFeatures(e.point, { layers: ['searchHits'] });
+
+		var features = map.queryRenderedFeatures(e.point, { layers: layersID });
 
 		if (!features.length) {
 			return;
@@ -132,7 +132,7 @@ function initMap(container) {
 		var popup = new mapboxgl.Popup()
 			.setLngLat(feature.geometry.coordinates)
 			// TODO Evolution - Dynamically set html content from widget 
-            .setHTML('<div class="card-content"><h3 class="card-title">'+feature.properties.title+'</h3><div class="card-text">'+feature.properties.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div>')
+			.setHTML('<div class="card-content"><h3 class="card-title">'+feature.properties.title+'</h3><div class="card-text">'+feature.properties.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div>')
 			.addTo(map);
 	});
 }
@@ -147,63 +147,79 @@ function renderMap(geoJSON, sourceID) {
 
 	var clusterCountID = 'cluster-count-'+sourceID;
 
-	// Add source
-	map.addSource(sourceID, {
-		type: 'geojson',
-		data: geoJSON,
-		cluster: settings.cluster.cluster,
-		clusterMaxZoom: settings.cluster.clusterMaxZoom,
-		clusterRadius: settings.cluster.clusterRadius
-	});
+	var mapSource = map.getSource(sourceID);
+	if (!mapSource) {
 
-	// Add layer for unclestered points
-	map.addLayer({
-		id: sourceID,
-		type: 'symbol',
-		source: sourceID,
-		layout: {
-			'icon-image': settings.templates.markerIconImage
-		}
-	});
+		// Add source
+		map.addSource(sourceID, {
+			type: 'geojson',
+			data: geoJSON,
+			cluster: settings.cluster.cluster,
+			clusterMaxZoom: settings.cluster.clusterMaxZoom,
+			clusterRadius: settings.cluster.clusterRadius
+		});
 
-	// Reorder layers by range
-	var layers = settings.templates.clustersLayers.sort(function (a,b) {
-		return b.range - a.range;
-	});
+		// Reorder layers by range
+		var layers = settings.templates.clustersLayers.sort(function (a,b) {
+			return b.range - a.range;
+		});
 
-	layers.forEach(function(layer, i) {
-		console.log(layer.range);
+		layers.forEach(function(layer, i) {
+			map.addLayer({
+				id: 'cluster-' + i,
+				type: 'circle',
+				source: sourceID,
+				paint: {
+					'circle-color': layers[i].circleColor,
+					'circle-radius': layers[i].circleRadius
+				},
+				filter: i === 0 ?
+					['>=', 'point_count', layer.range] :
+					['all',
+						['>=', 'point_count', layer.range],
+						['<', 'point_count', layers[i - 1].range]
+					]
+			});
+		});
+
+		// Add a layer for the clusters' count labels
 		map.addLayer({
-			id: 'cluster-' + i,
-			type: 'circle',
+			id: clusterCountID,
+			type: 'symbol',
 			source: sourceID,
 			paint: {
-				'circle-color': layers[i].circleColor,
-				'circle-radius': layers[i].circleRadius
+				'text-color': settings.templates.cluster.textColor
 			},
-			filter: i === 0 ?
-				['>=', 'point_count', layer.range] :
-				['all',
-					['>=', 'point_count', layer.range],
-					['<', 'point_count', layers[i - 1].range]
-				]
+			layout: {
+				'text-field': '{point_count}',
+				'text-font': settings.templates.cluster.textFont,
+				'text-size': settings.templates.cluster.textSize
+			},
+			filter: ['>', 'point_count', 1]
 		});
-	});
+	} else {
+		mapSource.setData(geoJSON);
+	}
 
-	// Add a layer for the clusters' count labels
-	map.addLayer({
-		id: clusterCountID,
-		type: 'symbol',
-		source: sourceID,
-		paint: {
-			'text-color': settings.templates.cluster.textColor
-		},
-		layout: {
-			'text-field': '{point_count}',
-			'text-font': settings.templates.cluster.textFont,
-			'text-size': settings.templates.cluster.textSize
-		},
-		filter: ['>', 'point_count', 1]
+
+	geoJSON.features.forEach(function(feature) {
+		var symbol = feature.properties.icon;
+		var layerID = 'marker-' + symbol;
+
+		// Add a layer for this symbol type if it hasn't been added already.
+		if (!map.getLayer(layerID)) {
+			// Add layer for unclestered points
+			map.addLayer({
+				id: layerID,
+				type: 'symbol',
+				source: sourceID,
+				layout: {
+					'icon-image': 'marker-'+symbol
+				},
+				filter: ["==", "icon", symbol]
+			});
+			layersID.push(layerID);
+		}
 	});
 }
 
@@ -230,7 +246,10 @@ function hitsToGeoJSON(hits) {
 			},
 			properties: {
 				title: hit.name,
-				address: hit.address
+				address: hit.address,
+				// TODO Activate dynamic icons
+				// icon: hit.idcategories[0]
+				icon: 15
 			}
 		}
 		features.push(feature);
