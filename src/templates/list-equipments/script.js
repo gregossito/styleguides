@@ -58,7 +58,7 @@ Paris.listEquipments = (function(){
           container: '.block-search-filters .block-search-top-link',
           autoHideContainer: false,
           templates: {
-            link: 'Réinitialiser'
+            link: Paris.i18n.t('list_equipments/reset_filters')
           }
         })
       );

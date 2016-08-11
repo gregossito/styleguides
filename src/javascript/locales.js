@@ -31,7 +31,8 @@ Paris.i18n.locales = {
       "no_result": "Personne ne correspond à votre recherche."
     },
     "list_equipments": {
-      "no_result": "Aucun résultat ne correspond à votre recherche, modifiez votre zone de recherche ou retirez un filtre."
+      "no_result": "Aucun résultat ne correspond à votre recherche, modifiez votre zone de recherche ou retirez un filtre.",
+      "reset_filters": "Réinitialiser"
     },
     "person_block": {
       "button_view": "Voir la fiche"
