@@ -68,7 +68,7 @@ Paris.listEquipments = (function(){
         instantsearch.widgets.hits({
           container: '#hits-container',
           templates: {
-            empty: 'No results',
+            empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '</p>',
             item: '<a href="#" class="card open"><div style="background-image: url()" class="card-image"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text">{{address}}<br>{{zipCode}} {{city}}</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div></a>'
           }
         })
