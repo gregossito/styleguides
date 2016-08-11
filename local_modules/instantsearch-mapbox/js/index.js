@@ -24,9 +24,9 @@ var map,
  * @param {Int} cluster.clusterMaxZoom The maximum zoom level to cluster points in.
  * @param {Int} cluster.clusterRadius The radius of each cluster when clustering points, measured in pixels.
  * @param {String} tempaltes.markerIconImage The marker string of the mapbox style.
- * @param {Color} templates.clustersLayers[].circleColor The color of the circle.
- * @param {Int} templates.clustersLayers[].circleRadius Circle radius.
- * @param {Int} templates.clustersLayers[].range Range to display the cluster layer. If 0 all the time.
+ * @param {Color} templates.cluster.circleColor The color of the circle.
+ * @param {Int} templates.cluster.circleRadiusStops Stops of circle radius.
+ * @param {Int} templates.cluster.circleRadiusBase Base for stops.
  * @param {[String]} templates.cluster.textFont Array of font for cluster text
  * @param {String} templates.cluster.textColor Color of text for cluster
  * @param {Int} templates.cluster.textSize Size of text for cluster
@@ -41,20 +41,19 @@ var defaults = {
 	},
 	templates: {
 		markerIconImage: 'marker',
-		clustersLayers: [
-			{
-				circleColor: '#000',
-				circleRadius: 20,
-				range: 0
-			}
-		],
 		cluster: {
 			textFont: [
 				'DIN Offc Pro Medium',
 				'Arial Unicode MS Bold'
 			],
 			textColor: '#fff',
-			textSize: 12
+			textSize: 12,
+			circleColor: '#000',
+			circleRadiusStops: [
+				[1, 15],
+				[100, 35],
+			],
+			circleRadiusBase: 0.95
 		}
 	}
 };
@@ -159,27 +158,20 @@ function renderMap(geoJSON, sourceID) {
 			clusterRadius: settings.cluster.clusterRadius
 		});
 
-		// Reorder layers by range
-		var layers = settings.templates.clustersLayers.sort(function (a,b) {
-			return b.range - a.range;
-		});
-
-		layers.forEach(function(layer, i) {
-			map.addLayer({
-				id: 'cluster-' + i,
-				type: 'circle',
-				source: sourceID,
-				paint: {
-					'circle-color': layers[i].circleColor,
-					'circle-radius': layers[i].circleRadius
-				},
-				filter: i === 0 ?
-					['>=', 'point_count', layer.range] :
-					['all',
-						['>=', 'point_count', layer.range],
-						['<', 'point_count', layers[i - 1].range]
-					]
-			});
+		// Circle for clustering with dynamic radius
+		map.addLayer({
+			id: 'cluster-circle',
+			type: 'circle',
+			source: sourceID,
+			paint: {
+				'circle-color': settings.templates.cluster.circleColor,
+				'circle-radius': {
+					property: 'point_count',
+					base: settings.templates.cluster.circleRadiusBase,
+					stops: settings.templates.cluster.circleRadiusStops
+				}
+			},
+			filter: ['>', 'point_count', 1]
 		});
 
 		// Add a layer for the clusters' count labels
