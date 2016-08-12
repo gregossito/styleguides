@@ -11,6 +11,7 @@ var mapboxgl = require('mapbox-gl'),
 var map,
 	settings,
 	helper,
+	userMarker,
 	skipRefine = false,
 	layersID = [],
 	geoJSON = {
@@ -26,6 +27,9 @@ var map,
 		y: 0
 	};
 
+var userMarkerEl = document.createElement('div');
+userMarkerEl.innerHTML = 'User\'s position';
+
 /**
  * Widget options
  * @param {Object} mapbox Mapbox API options. See Mapbox documentation for more details.
@@ -34,6 +38,7 @@ var map,
  * @param {Int} cluster.clusterMaxZoom The maximum zoom level to cluster points in.
  * @param {Int} cluster.clusterRadius The radius of each cluster when clustering points, measured in pixels.
  * @param {String} tempaltes.markerIconImage The marker string of the mapbox style.
+ * @param {Elem} tempaltes.userMarkerEl Dom element used for showing user's position.
  * @param {Color} templates.cluster.circleColor The color of the circle.
  * @param {Int} templates.cluster.circleRadiusStops Stops of circle radius.
  * @param {Int} templates.cluster.circleRadiusBase Base for stops.
@@ -51,6 +56,7 @@ var defaults = {
 	},
 	templates: {
 		markerIconImage: 'marker',
+		userMarkerEl: userMarkerEl,
 		cluster: {
 			textFont: [
 				'DIN Offc Pro Medium',
@@ -118,12 +124,24 @@ function initMap(container) {
 
 	map = new mapboxgl.Map(settings.mapbox);
 
-	//Add map navigation and geolocate controls
-	map.addControl(new mapboxgl.Navigation());
-	map.addControl(new mapboxgl.Geolocate());
-
 	map.on('load', function () {
 		renderMap(geoJSON, 'searchHits');
+	});
+
+	//Add map navigation and geolocate controls
+	map.addControl(new mapboxgl.Navigation());
+	var geolocate = new mapboxgl.Geolocate();
+	map.addControl(geolocate);
+
+	geolocate.on('geolocate', function(e) {
+		
+		// add marker to map
+		if(!userMarker) {
+			userMarker = new mapboxgl.Marker(settings.templates.userMarkerEl);
+			userMarker.setLngLat([e.coords.longitude, e.coords.latitude]);
+			userMarker.addTo(map);
+		}
+		userMarker.setLngLat([e.coords.longitude, e.coords.latitude]);
 	});
 
 	// When a click event occurs near a place, open a popup at the location of
