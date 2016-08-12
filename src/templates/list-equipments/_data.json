@@ -128,6 +128,16 @@
             "href": "#",
             "text": "Réinitialiser"
           },
+          "popup_links": [
+            {
+              "href": "#",
+              "text": "Annuler"
+            },
+            {
+              "href": "#",
+              "text": "Valider"
+            }
+          ],
           "filter_items": [
             {
               "href": "#",

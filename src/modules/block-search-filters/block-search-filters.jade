@@ -10,5 +10,25 @@ mixin block-search-filters(data)
       each item in data.filter_items
         - item.modifiers = ["white", "small"]
         +button(item)
-      - data.more.modifiers = ["secondary", "small"]
-      +button(data.more)
+      #more-filters-button
+        - data.more.modifiers = ["secondary", "small"]
+        +button(data.more)
+      .block-search-filters-popup
+        .popup-background
+        .popup-content
+          .filters-list
+            each item in data.filter_items
+              label
+                input(
+                  type='checkbox'
+                  name='categories[]'
+                )
+                span= item.text
+          if data.popup_links && data.popup_links.length
+          .buttons
+            each button, index in data.popup_links
+              if index == 0
+                - button.modifiers = ["discard", "action"]
+              else if index == 1
+                - button.modifiers = ["confirm", "action"]
+              +button(button)
