@@ -12,6 +12,7 @@ var map,
 	settings,
 	helper,
 	userMarker,
+	lastPopup,
 	skipRefine = false,
 	layersID = [],
 	geoJSON = {
@@ -91,14 +92,20 @@ instantsearch.widgets.mapbox = function mapbox(options) {
 			initMap(options.container);
 		},
 		render: function(params) {
-
 			geoJSON = hitsToGeoJSON(params.results.hits);
-
 			renderMap(geoJSON, 'searchHits');
+		},
+		openHit: function(html, coordinates) {
+			skipRefine = true;
+			map.flyTo({
+				center: coordinates,
+				zoom: settings.cluster.clusterMaxZoom + 1,
+				curve: 1.2
+			});
+			showPopup(html, coordinates);
 		}
 	}
 }
-
 
 /**
  * @param  {Object} Options passed by user
@@ -106,7 +113,6 @@ instantsearch.widgets.mapbox = function mapbox(options) {
 function initOptions(options) {
 	settings = $.extend(true, {}, defaults, options );
 }
-
 
 /**
  * Init Mapbox into container
@@ -134,7 +140,7 @@ function initMap(container) {
 	map.addControl(geolocate);
 
 	geolocate.on('geolocate', function(e) {
-		
+
 		// add marker to map
 		if(!userMarker) {
 			userMarker = new mapboxgl.Marker(settings.templates.userMarkerEl);
@@ -164,11 +170,8 @@ function initMap(container) {
 			});
 			// map.zoomTo(settings.cluster.clusterMaxZoom + 1);
 		} else {
-			var popup = new mapboxgl.Popup()
-				.setLngLat(feature.geometry.coordinates)
-				// TODO Evolution - Dynamically set html content from widget 
-				.setHTML('<div class="card-content"><h3 class="card-title">'+feature.properties.title+'</h3><div class="card-text">'+feature.properties.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div>')
-				.addTo(map);
+			var html = '<div class="card-content"><h3 class="card-title">'+feature.properties.title+'</h3><div class="card-text">'+feature.properties.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div>';
+			showPopup(html, feature.geometry.coordinates);
 		}
 	});
 
@@ -238,6 +241,18 @@ function initMap(container) {
 
 		handleTolerance();
 	});
+}
+
+function showPopup(html, coordinates) {
+	if (lastPopup) {
+		lastPopup.remove();
+	}
+	var popup = new mapboxgl.Popup();
+	popup.setLngLat(coordinates)
+		// TODO Evolution - Dynamically set html content from widget 
+		.setHTML(html)
+		.addTo(map);
+	lastPopup = popup;
 }
 
 /**

@@ -69,33 +69,32 @@ Paris.listEquipments = (function(){
           container: '#hits-container',
           templates: {
             empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '</p>',
-            item: '<a href="#" class="card open"><div style="background-image: url()" class="card-image"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text">{{address}}<br>{{zipCode}} {{city}}</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div></a>'
+            item: '<a href="#" class="card open" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text">{{address}}<br>{{zipCode}} {{city}}</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div></a>'
           }
         })
       );
 
+      var mapboxWidget = instantsearch.widgets.mapbox({
+        container: '#map',
+        mapBoxAccessToken: 'pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw',
+        mapbox: {
+          style: 'mapbox://styles/parisnumerique/cilnr6b9h0047c4knsv84lpv3',
+          zoom: 11,
+          minZoom: 10,
+          center: [2.349272, 48.856579],
+          maxBounds:
+          [
+            [2.021942, 48.731991], // SW coordinates
+            [2.698162, 48.985029]  // NE coordinates
+          ]
+        },
+        cluster: {
+          circleColor: '#f89cd3',
+          circleRadius: 15
+        }
+      });
       // Search map
-      search.addWidget(
-        instantsearch.widgets.mapbox({
-          container: '#map',
-          mapBoxAccessToken: 'pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw',
-          mapbox: {
-            style: 'mapbox://styles/parisnumerique/cilnr6b9h0047c4knsv84lpv3',
-            zoom: 11,
-            minZoom: 10,
-            center: [2.349272, 48.856579],
-            maxBounds:
-            [
-              [2.021942, 48.731991], // SW coordinates
-              [2.698162, 48.985029]  // NE coordinates
-            ]
-          },
-          cluster: {
-            circleColor: '#f89cd3',
-            circleRadius: 15
-          }
-        })
-      );
+      search.addWidget(mapboxWidget);
 
       // Prevent form to conflict with instantsearch behavior
       $('form.search-field').submit(function(event) {
@@ -107,6 +106,13 @@ Paris.listEquipments = (function(){
         search.helper.search();
       });
 
+      // Center map and open pin on list result click
+      $('#hits-container').on('click', '.card', function(event) {
+        var card = event.target.closest('.card');
+        mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">Titre</h3><div class="card-text">Adresse</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div>', [card.getAttribute('lng'), card.getAttribute('lat')]);
+        
+      });
+     
       // Autocompletion is not an instantsearch feature. Must use algolia.js directly
       var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       var index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
@@ -149,7 +155,6 @@ Paris.listEquipments = (function(){
         options[key] = value;
       });
     }
-
 
     init();
 
