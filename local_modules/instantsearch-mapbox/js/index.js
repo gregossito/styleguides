@@ -11,10 +11,19 @@ var mapboxgl = require('mapbox-gl'),
 var map,
 	settings,
 	helper,
+	skipRefine = false,
 	layersID = [],
 	geoJSON = {
 		'type': 'FeatureCollection',
 		'features': []
+	},
+	// Ref for drag tolerance
+	pointCoordinate,
+	lastTouchMove,
+	offsetTolerance = 85,
+	cumulativeOffset = {
+		x: 0,
+		y: 0
 	};
 
 /**
@@ -122,23 +131,38 @@ function initMap(container) {
 	map.on('click', function (e) {
 
 		var features = map.queryRenderedFeatures(e.point, { layers: layersID });
-
 		if (!features.length) {
 			return;
 		}
 
 		var feature = features[0];
-		// Populate the popup and set its coordinates
-		// based on the feature found.
-		var popup = new mapboxgl.Popup()
-			.setLngLat(feature.geometry.coordinates)
-			// TODO Evolution - Dynamically set html content from widget 
-			.setHTML('<div class="card-content"><h3 class="card-title">'+feature.properties.title+'</h3><div class="card-text">'+feature.properties.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div>')
-			.addTo(map);
+
+		if (feature.properties.cluster) {
+			skipRefine = true;
+			map.flyTo({
+				center: feature.geometry.coordinates,
+				zoom: settings.cluster.clusterMaxZoom + 1,
+				curve: 1.2
+			});
+			// map.zoomTo(settings.cluster.clusterMaxZoom + 1);
+		} else {
+			var popup = new mapboxgl.Popup()
+				.setLngLat(feature.geometry.coordinates)
+				// TODO Evolution - Dynamically set html content from widget 
+				.setHTML('<div class="card-content"><h3 class="card-title">'+feature.properties.title+'</h3><div class="card-text">'+feature.properties.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div>')
+				.addTo(map);
+		}
 	});
 
-	// Trigger search based on map bounds when user moves
+	// Trigger search based on map bounds when user moves map
 	map.on('moveend', function (e) {
+
+		// For some scenario we skip launching geo based request (drag tolerance, or programmatic movement, ...)
+		if (skipRefine) {
+			skipRefine = false;
+			return;
+		}
+
 		var bounds = map.getBounds();
 		helper
 			.setQueryParameter('insideBoundingBox', bounds._sw.lat+','+bounds._sw.lng+','+bounds._ne.lat+','+bounds._ne.lng)
@@ -146,8 +170,69 @@ function initMap(container) {
 			// Clear geoloc param right after launching request
 			.setQueryParameter('insideBoundingBox', undefined);
 	});
+
+	// Indicate that the symbols are clickable by changing the cursor style to 'pointer'.
+	map.on('mousemove', function (e) {
+
+		var features = map.queryRenderedFeatures(e.point, { layers: layersID });
+		map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+	});
+
+	// List to touch and mouse event to handle drag tolerance of map. Unfortunatly in JS mouse and touch does not behave the same.
+
+	// When start mouse drag store pointer coordinates
+	map.on('mousedown', function (e) {
+		pointCoordinate = {
+			x: e.point.x, 
+			y: e.point.y
+		};
+	});
+
+	// Calculate the distance made by the cursor
+	map.on('mouseup', function (e) {
+		var offsetX = Math.abs((pointCoordinate.x - e.point.x)) + cumulativeOffset.x;
+		var offsetY = Math.abs((pointCoordinate.y - e.point.y)) + cumulativeOffset.y;
+		cumulativeOffset.x = offsetX;
+		cumulativeOffset.y = offsetY;
+
+		handleTolerance();
+	});
+
+	// When start touch store touch original coordinates
+	map.on('touchstart', function (e) {
+		pointCoordinate = {
+			x: e.originalEvent.touches[0].pageX, 
+			y: e.originalEvent.touches[0].pageY
+		};
+	});
+
+	// Becauce the event touchend does not have point x,y of touch... we store the last touch recorded
+	map.on('touchmove', function (e) {
+		lastTouchMove = e;
+	});
+
+	// Calculate the distance made by the touch
+	map.on('touchend', function (e) {
+		var offsetX = Math.abs((pointCoordinate.x - lastTouchMove.originalEvent.touches[0].pageX)) + cumulativeOffset.x;
+		var offsetY = Math.abs((pointCoordinate.y - lastTouchMove.originalEvent.touches[0].pageY)) + cumulativeOffset.y;
+		cumulativeOffset.x = offsetX;
+		cumulativeOffset.y = offsetY;
+
+		handleTolerance();
+	});
 }
 
+/**
+ * Set skip if drag is tolerated by map
+ */
+function handleTolerance() {
+	if (cumulativeOffset.x > offsetTolerance || cumulativeOffset.y > offsetTolerance) {
+		cumulativeOffset.x = 0;
+		cumulativeOffset.y = 0;
+	} else {
+		skipRefine = true;
+	}
+}
 
 /**
  * Display pin on the map based on given geoJSON
@@ -171,8 +256,9 @@ function renderMap(geoJSON, sourceID) {
 		});
 
 		// Circle for clustering with dynamic radius
+		var clusterCircleID = 'cluster-circle'
 		map.addLayer({
-			id: 'cluster-circle',
+			id: clusterCircleID,
 			type: 'circle',
 			source: sourceID,
 			paint: {
@@ -185,6 +271,7 @@ function renderMap(geoJSON, sourceID) {
 			},
 			filter: ['>', 'point_count', 1]
 		});
+		layersID.push(clusterCircleID);
 
 		// Add a layer for the clusters' count labels
 		map.addLayer({
