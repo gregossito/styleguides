@@ -109,9 +109,11 @@ Paris.listEquipments = (function(){
       // Center map and open pin on list result click
       $('#hits-container').on('click', '.card', function(event) {
         var card = event.target.closest('.card');
-        mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">Titre</h3><div class="card-text">Adresse</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div>', [card.getAttribute('lng'), card.getAttribute('lat')]);
+        mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">Titre</h3><div class="card-text">Adresse</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>', [card.getAttribute('lng'), card.getAttribute('lat')]);
         
       });
+
+     
      
       // Autocompletion is not an instantsearch feature. Must use algolia.js directly
       var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);

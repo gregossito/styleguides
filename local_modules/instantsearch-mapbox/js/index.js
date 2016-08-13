@@ -170,7 +170,7 @@ function initMap(container) {
 			});
 			// map.zoomTo(settings.cluster.clusterMaxZoom + 1);
 		} else {
-			var html = '<div class="card-content"><h3 class="card-title">'+feature.properties.title+'</h3><div class="card-text">'+feature.properties.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div>';
+			var html = '<div class="card-content"><h3 class="card-title">'+feature.properties.title+'</h3><div class="card-text">'+feature.properties.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>';
 			showPopup(html, feature.geometry.coordinates);
 		}
 	});
@@ -247,6 +247,7 @@ function showPopup(html, coordinates) {
 	if (lastPopup) {
 		lastPopup.remove();
 	}
+	
 	var popup = new mapboxgl.Popup();
 	popup.setLngLat(coordinates)
 		// TODO Evolution - Dynamically set html content from widget 
