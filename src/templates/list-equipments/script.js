@@ -91,6 +91,10 @@ Paris.listEquipments = (function(){
         cluster: {
           circleColor: '#f89cd3',
           circleRadius: 15
+        },
+        openedHit: function() {
+          console.log('Click on hit on map event');
+          // TODO scroll to hit
         }
       });
       // Search map
@@ -113,7 +117,9 @@ Paris.listEquipments = (function(){
         
       });
 
-     
+      $('#map').on('click', '.card-title', function(event) {
+        console.log("popup clicked");
+      });
      
       // Autocompletion is not an instantsearch feature. Must use algolia.js directly
       var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);

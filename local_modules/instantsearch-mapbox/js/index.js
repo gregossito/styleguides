@@ -8,7 +8,8 @@ var mapboxgl = require('mapbox-gl'),
  * Instantsearch Mapbox widget
  */
 
-var map,
+var _this,
+	map,
 	settings,
 	helper,
 	userMarker,
@@ -72,7 +73,8 @@ var defaults = {
 			],
 			circleRadiusBase: 0.95
 		}
-	}
+	},
+	openedHit: function() {}
 };
 
 
@@ -87,6 +89,7 @@ instantsearch.widgets.mapbox = function mapbox(options) {
 		// 	}
 		// },
 		init: function(params) {
+			_this = this;
 			helper = params.helper;
 			initOptions(options);
 			initMap(options.container);
@@ -111,7 +114,8 @@ instantsearch.widgets.mapbox = function mapbox(options) {
  * @param  {Object} Options passed by user
  */
 function initOptions(options) {
-	settings = $.extend(true, {}, defaults, options );
+	settings = $.extend(true, {}, defaults, options);
+	_this.openedHit = settings.openedHit;
 }
 
 /**
@@ -171,7 +175,9 @@ function initMap(container) {
 			// map.zoomTo(settings.cluster.clusterMaxZoom + 1);
 		} else {
 			var html = '<div class="card-content"><h3 class="card-title">'+feature.properties.title+'</h3><div class="card-text">'+feature.properties.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>';
-			showPopup(html, feature.geometry.coordinates);
+			showPopup(html, feature.geometry.coordinates); 
+			$(settings.mapbox.container).trigger("openedPoint");
+			_this.openedHit();
 		}
 	});
 
@@ -241,17 +247,21 @@ function initMap(container) {
 
 		handleTolerance();
 	});
+
+	
 }
 
 function showPopup(html, coordinates) {
 	if (lastPopup) {
 		lastPopup.remove();
 	}
-	
+
 	var popup = new mapboxgl.Popup();
+	// To help some binding element
+	var htmlWrapper = '<div class="map-popup">test'+html+'</div>';
 	popup.setLngLat(coordinates)
 		// TODO Evolution - Dynamically set html content from widget 
-		.setHTML(html)
+		.setHTML(htmlWrapper)
 		.addTo(map);
 	lastPopup = popup;
 }
