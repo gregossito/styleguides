@@ -8,12 +8,29 @@ var mapboxgl = require('mapbox-gl'),
  * Instantsearch Mapbox widget
  */
 
-var map,
+var _this,
+	map,
 	settings,
+	helper,
+	userMarker,
+	lastPopup,
+	skipRefine = false,
+	layersID = [],
 	geoJSON = {
 		'type': 'FeatureCollection',
 		'features': []
+	},
+	// Ref for drag tolerance
+	pointCoordinate,
+	lastTouchMove,
+	offsetTolerance = 85,
+	cumulativeOffset = {
+		x: 0,
+		y: 0
 	};
+
+var userMarkerEl = document.createElement('div');
+userMarkerEl.innerHTML = 'User\'s position';
 
 /**
  * Widget options
@@ -23,9 +40,10 @@ var map,
  * @param {Int} cluster.clusterMaxZoom The maximum zoom level to cluster points in.
  * @param {Int} cluster.clusterRadius The radius of each cluster when clustering points, measured in pixels.
  * @param {String} tempaltes.markerIconImage The marker string of the mapbox style.
- * @param {Color} templates.clustersLayers[].circleColor The color of the circle.
- * @param {Int} templates.clustersLayers[].circleRadius Circle radius.
- * @param {Int} templates.clustersLayers[].range Range to display the cluster layer. If 0 all the time.
+ * @param {Elem} tempaltes.userMarkerEl Dom element used for showing user's position.
+ * @param {Color} templates.cluster.circleColor The color of the circle.
+ * @param {Int} templates.cluster.circleRadiusStops Stops of circle radius.
+ * @param {Int} templates.cluster.circleRadiusBase Base for stops.
  * @param {[String]} templates.cluster.textFont Array of font for cluster text
  * @param {String} templates.cluster.textColor Color of text for cluster
  * @param {Int} templates.cluster.textSize Size of text for cluster
@@ -39,23 +57,24 @@ var defaults = {
 		clusterRadius: 50
 	},
 	templates: {
-		markerIconImage: 'marker-15',
-		clustersLayers: [
-			{
-				circleColor: '#000',
-				circleRadius: 20,
-				range: 0
-			}
-		],
+		markerIconImage: 'marker',
+		userMarkerEl: userMarkerEl,
 		cluster: {
 			textFont: [
 				'DIN Offc Pro Medium',
 				'Arial Unicode MS Bold'
 			],
 			textColor: '#fff',
-			textSize: 12
+			textSize: 12,
+			circleColor: '#000',
+			circleRadiusStops: [
+				[1, 15],
+				[100, 35],
+			],
+			circleRadiusBase: 0.95
 		}
-	}
+	},
+	openedHit: function() {}
 };
 
 
@@ -70,28 +89,34 @@ instantsearch.widgets.mapbox = function mapbox(options) {
 		// 	}
 		// },
 		init: function(params) {
+			_this = this;
+			helper = params.helper;
 			initOptions(options);
 			initMap(options.container);
 		},
 		render: function(params) {
-
 			geoJSON = hitsToGeoJSON(params.results.hits);
-
-			if (map.getSource('searchHits')) {
-				map.getSource('searchHits').setData(geoJSON);
-			}
+			renderMap(geoJSON, 'searchHits');
+		},
+		openHit: function(html, coordinates) {
+			skipRefine = true;
+			map.flyTo({
+				center: coordinates,
+				zoom: settings.cluster.clusterMaxZoom + 1,
+				curve: 1.2
+			});
+			showPopup(html, coordinates);
 		}
 	}
 }
-
 
 /**
  * @param  {Object} Options passed by user
  */
 function initOptions(options) {
-	settings = $.extend(true, {}, defaults, options );
+	settings = $.extend(true, {}, defaults, options);
+	_this.openedHit = settings.openedHit;
 }
-
 
 /**
  * Init Mapbox into container
@@ -109,34 +134,149 @@ function initMap(container) {
 
 	map = new mapboxgl.Map(settings.mapbox);
 
-	//Add map navigation and geolocate controls
-	map.addControl(new mapboxgl.Navigation());
-	map.addControl(new mapboxgl.Geolocate());
-
 	map.on('load', function () {
 		renderMap(geoJSON, 'searchHits');
+	});
+
+	//Add map navigation and geolocate controls
+	map.addControl(new mapboxgl.Navigation());
+	var geolocate = new mapboxgl.Geolocate();
+	map.addControl(geolocate);
+
+	geolocate.on('geolocate', function(e) {
+
+		// add marker to map
+		if(!userMarker) {
+			userMarker = new mapboxgl.Marker(settings.templates.userMarkerEl);
+			userMarker.setLngLat([e.coords.longitude, e.coords.latitude]);
+			userMarker.addTo(map);
+		}
+		userMarker.setLngLat([e.coords.longitude, e.coords.latitude]);
 	});
 
 	// When a click event occurs near a place, open a popup at the location of
 	// the feature, with description HTML from its properties.
 	map.on('click', function (e) {
-		var features = map.queryRenderedFeatures(e.point, { layers: ['searchHits'] });
 
+		var features = map.queryRenderedFeatures(e.point, { layers: layersID });
 		if (!features.length) {
 			return;
 		}
 
 		var feature = features[0];
-		// Populate the popup and set its coordinates
-		// based on the feature found.
-		var popup = new mapboxgl.Popup()
-			.setLngLat(feature.geometry.coordinates)
-			// TODO Evolution - Dynamically set html content from widget 
-            .setHTML('<div class="card-content"><h3 class="card-title">'+feature.properties.title+'</h3><div class="card-text">'+feature.properties.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div>')
-			.addTo(map);
+
+		if (feature.properties.cluster) {
+			skipRefine = true;
+			map.flyTo({
+				center: feature.geometry.coordinates,
+				zoom: settings.cluster.clusterMaxZoom + 1,
+				curve: 1.2
+			});
+			// map.zoomTo(settings.cluster.clusterMaxZoom + 1);
+		} else {
+			var html = '<div class="card-content"><h3 class="card-title">'+feature.properties.title+'</h3><div class="card-text">'+feature.properties.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>';
+			showPopup(html, feature.geometry.coordinates); 
+			$(settings.mapbox.container).trigger("openedPoint");
+			_this.openedHit();
+		}
 	});
+
+	// Trigger search based on map bounds when user moves map
+	map.on('moveend', function (e) {
+
+		// For some scenario we skip launching geo based request (drag tolerance, or programmatic movement, ...)
+		if (skipRefine) {
+			skipRefine = false;
+			return;
+		}
+
+		var bounds = map.getBounds();
+		helper
+			.setQueryParameter('insideBoundingBox', bounds._sw.lat+','+bounds._sw.lng+','+bounds._ne.lat+','+bounds._ne.lng)
+			.search()
+			// Clear geoloc param right after launching request
+			.setQueryParameter('insideBoundingBox', undefined);
+	});
+
+	// Indicate that the symbols are clickable by changing the cursor style to 'pointer'.
+	map.on('mousemove', function (e) {
+
+		var features = map.queryRenderedFeatures(e.point, { layers: layersID });
+		map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+	});
+
+	// List to touch and mouse event to handle drag tolerance of map. Unfortunatly in JS mouse and touch does not behave the same.
+
+	// When start mouse drag store pointer coordinates
+	map.on('mousedown', function (e) {
+		pointCoordinate = {
+			x: e.point.x, 
+			y: e.point.y
+		};
+	});
+
+	// Calculate the distance made by the cursor
+	map.on('mouseup', function (e) {
+		var offsetX = Math.abs((pointCoordinate.x - e.point.x)) + cumulativeOffset.x;
+		var offsetY = Math.abs((pointCoordinate.y - e.point.y)) + cumulativeOffset.y;
+		cumulativeOffset.x = offsetX;
+		cumulativeOffset.y = offsetY;
+
+		handleTolerance();
+	});
+
+	// When start touch store touch original coordinates
+	map.on('touchstart', function (e) {
+		pointCoordinate = {
+			x: e.originalEvent.touches[0].pageX, 
+			y: e.originalEvent.touches[0].pageY
+		};
+	});
+
+	// Becauce the event touchend does not have point x,y of touch... we store the last touch recorded
+	map.on('touchmove', function (e) {
+		lastTouchMove = e;
+	});
+
+	// Calculate the distance made by the touch
+	map.on('touchend', function (e) {
+		var offsetX = Math.abs((pointCoordinate.x - lastTouchMove.originalEvent.touches[0].pageX)) + cumulativeOffset.x;
+		var offsetY = Math.abs((pointCoordinate.y - lastTouchMove.originalEvent.touches[0].pageY)) + cumulativeOffset.y;
+		cumulativeOffset.x = offsetX;
+		cumulativeOffset.y = offsetY;
+
+		handleTolerance();
+	});
+
+	
 }
 
+function showPopup(html, coordinates) {
+	if (lastPopup) {
+		lastPopup.remove();
+	}
+
+	var popup = new mapboxgl.Popup();
+	// To help some binding element
+	var htmlWrapper = '<div class="map-popup">test'+html+'</div>';
+	popup.setLngLat(coordinates)
+		// TODO Evolution - Dynamically set html content from widget 
+		.setHTML(htmlWrapper)
+		.addTo(map);
+	lastPopup = popup;
+}
+
+/**
+ * Set skip if drag is tolerated by map
+ */
+function handleTolerance() {
+	if (cumulativeOffset.x > offsetTolerance || cumulativeOffset.y > offsetTolerance) {
+		cumulativeOffset.x = 0;
+		cumulativeOffset.y = 0;
+	} else {
+		skipRefine = true;
+	}
+}
 
 /**
  * Display pin on the map based on given geoJSON
@@ -147,63 +287,74 @@ function renderMap(geoJSON, sourceID) {
 
 	var clusterCountID = 'cluster-count-'+sourceID;
 
-	// Add source
-	map.addSource(sourceID, {
-		type: 'geojson',
-		data: geoJSON,
-		cluster: settings.cluster.cluster,
-		clusterMaxZoom: settings.cluster.clusterMaxZoom,
-		clusterRadius: settings.cluster.clusterRadius
-	});
+	var mapSource = map.getSource(sourceID);
+	if (!mapSource) {
 
-	// Add layer for unclestered points
-	map.addLayer({
-		id: sourceID,
-		type: 'symbol',
-		source: sourceID,
-		layout: {
-			'icon-image': settings.templates.markerIconImage
-		}
-	});
+		// Add source
+		map.addSource(sourceID, {
+			type: 'geojson',
+			data: geoJSON,
+			cluster: settings.cluster.cluster,
+			clusterMaxZoom: settings.cluster.clusterMaxZoom,
+			clusterRadius: settings.cluster.clusterRadius
+		});
 
-	// Reorder layers by range
-	var layers = settings.templates.clustersLayers.sort(function (a,b) {
-		return b.range - a.range;
-	});
-
-	layers.forEach(function(layer, i) {
-		console.log(layer.range);
+		// Circle for clustering with dynamic radius
+		var clusterCircleID = 'cluster-circle'
 		map.addLayer({
-			id: 'cluster-' + i,
+			id: clusterCircleID,
 			type: 'circle',
 			source: sourceID,
 			paint: {
-				'circle-color': layers[i].circleColor,
-				'circle-radius': layers[i].circleRadius
+				'circle-color': settings.templates.cluster.circleColor,
+				'circle-radius': {
+					property: 'point_count',
+					base: settings.templates.cluster.circleRadiusBase,
+					stops: settings.templates.cluster.circleRadiusStops
+				}
 			},
-			filter: i === 0 ?
-				['>=', 'point_count', layer.range] :
-				['all',
-					['>=', 'point_count', layer.range],
-					['<', 'point_count', layers[i - 1].range]
-				]
+			filter: ['>', 'point_count', 1]
 		});
-	});
+		layersID.push(clusterCircleID);
 
-	// Add a layer for the clusters' count labels
-	map.addLayer({
-		id: clusterCountID,
-		type: 'symbol',
-		source: sourceID,
-		paint: {
-			'text-color': settings.templates.cluster.textColor
-		},
-		layout: {
-			'text-field': '{point_count}',
-			'text-font': settings.templates.cluster.textFont,
-			'text-size': settings.templates.cluster.textSize
-		},
-		filter: ['>', 'point_count', 1]
+		// Add a layer for the clusters' count labels
+		map.addLayer({
+			id: clusterCountID,
+			type: 'symbol',
+			source: sourceID,
+			paint: {
+				'text-color': settings.templates.cluster.textColor
+			},
+			layout: {
+				'text-field': '{point_count}',
+				'text-font': settings.templates.cluster.textFont,
+				'text-size': settings.templates.cluster.textSize
+			},
+			filter: ['>', 'point_count', 1]
+		});
+	} else {
+		mapSource.setData(geoJSON);
+	}
+
+
+	geoJSON.features.forEach(function(feature) {
+		var symbol = feature.properties.icon;
+		var layerID = 'marker-' + symbol;
+
+		// Add a layer for this symbol type if it hasn't been added already.
+		if (!map.getLayer(layerID)) {
+			// Add layer for unclestered points
+			map.addLayer({
+				id: layerID,
+				type: 'symbol',
+				source: sourceID,
+				layout: {
+					'icon-image': 'marker-'+symbol
+				},
+				filter: ["==", "icon", symbol]
+			});
+			layersID.push(layerID);
+		}
 	});
 }
 
@@ -230,7 +381,10 @@ function hitsToGeoJSON(hits) {
 			},
 			properties: {
 				title: hit.name,
-				address: hit.address
+				address: hit.address,
+				// TODO Activate dynamic icons
+				// icon: hit.idcategories[0]
+				icon: 15
 			}
 		}
 		features.push(feature);
