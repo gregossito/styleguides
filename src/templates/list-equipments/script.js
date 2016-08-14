@@ -139,6 +139,8 @@ Paris.listEquipments = (function(){
         search.helper.search();
       });
 
+      initSearchFiltersPopupEvents();
+
       search.start();
 
       $el.data('api', api);
@@ -147,6 +149,30 @@ Paris.listEquipments = (function(){
     function initOptions() {
       $.each($el.data(), function(key, value) {
         options[key] = value;
+      });
+    }
+
+    function initSearchFiltersPopupEvents() {
+
+      // Open popup
+      $('.block-search-filters .block-search-content #more-filters-button').click(function(event) {
+        $('.block-search-filters .block-search-content .block-search-filters-popup').fadeIn();
+      });
+
+      // Close popup
+      $('.block-search-filters .block-search-content .block-search-filters-popup .popup-background').click(function(event) {
+        $('.block-search-filters .block-search-content .block-search-filters-popup').fadeOut();
+      });
+
+      // Discard popup
+      $('.block-search-filters .block-search-content .block-search-filters-popup .discard').click(function(event) {
+        $('.block-search-filters .block-search-content .block-search-filters-popup').fadeOut();
+      });
+
+      // Confirm popup
+      $('.block-search-filters .block-search-content .block-search-filters-popup .confirm').click(function(event) {
+        $('.block-search-filters .block-search-content .block-search-filters-popup').fadeOut();
+        // TODO: set filters
       });
     }
 
