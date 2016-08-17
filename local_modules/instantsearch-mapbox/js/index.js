@@ -83,11 +83,11 @@ var defaults = {
 instantsearch.widgets.mapbox = function mapbox(options) {
 	
 	return {
-		// getConfiguration: function(configuration) {
-		// 	return {
-		// 		hitsPerPage : 100
-		// 	}
-		// },
+		getConfiguration: function(configuration) {
+			// return {
+			// 	hitsPerPage : 100
+			// }
+		},
 		init: function(params) {
 			_this = this;
 			helper = params.helper;
@@ -95,8 +95,25 @@ instantsearch.widgets.mapbox = function mapbox(options) {
 			initMap(options.container);
 		},
 		render: function(params) {
+			if (lastPopup) {
+				lastPopup.remove();
+			}
+
 			geoJSON = hitsToGeoJSON(params.results.hits);
 			renderMap(geoJSON, 'searchHits');
+
+			if (params.results.hits.length === 1) {
+				skipRefine = true;
+				var hit = params.results.hits[0];
+				var html = generateCardHTML(hit.name, hit.address);
+				showPopup(html, [hit._geoloc.lng, hit._geoloc.lat]); 
+				map.flyTo({
+					center: [hit._geoloc.lng, hit._geoloc.lat],
+					zoom: settings.cluster.clusterMaxZoom + 1,
+					curve: 1.2
+				});
+				_this.openedHit();
+			}
 		},
 		openHit: function(html, coordinates) {
 			skipRefine = true;
@@ -150,6 +167,7 @@ function initMap(container) {
 			userMarker = new mapboxgl.Marker(settings.templates.userMarkerEl);
 			userMarker.setLngLat([e.coords.longitude, e.coords.latitude]);
 			userMarker.addTo(map);
+			helper.setQueryParameter('aroundLatLng', e.coords.latitude+','+e.coords.longitude);
 		}
 		userMarker.setLngLat([e.coords.longitude, e.coords.latitude]);
 	});
@@ -174,9 +192,8 @@ function initMap(container) {
 			});
 			// map.zoomTo(settings.cluster.clusterMaxZoom + 1);
 		} else {
-			var html = '<div class="card-content"><h3 class="card-title">'+feature.properties.title+'</h3><div class="card-text">'+feature.properties.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>';
+			var html = generateCardHTML(feature.properties.title, feature.properties.address);
 			showPopup(html, feature.geometry.coordinates); 
-			$(settings.mapbox.container).trigger("openedPoint");
 			_this.openedHit();
 		}
 	});
@@ -200,7 +217,6 @@ function initMap(container) {
 
 	// Indicate that the symbols are clickable by changing the cursor style to 'pointer'.
 	map.on('mousemove', function (e) {
-
 		var features = map.queryRenderedFeatures(e.point, { layers: layersID });
 		map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 	});
@@ -248,6 +264,15 @@ function initMap(container) {
 		handleTolerance();
 	});
 
+	helper.on('change', function(state, lastResults) {
+	  if (lastResults.query != state.query) {
+		// Clear geoloc param right after launching request
+	  	helper.setQueryParameter('insideBoundingBox', undefined);
+	  } else {
+	  	var bounds = map.getBounds();
+	  	// helper.setQueryParameter('insideBoundingBox', bounds._sw.lat+','+bounds._sw.lng+','+bounds._ne.lat+','+bounds._ne.lng)
+	  }
+	});
 	
 }
 
@@ -367,6 +392,7 @@ function hitsToGeoJSON(hits) {
 
 	// Abort when no hits
 	if (!hits || (hits && hits.length == 0)) {
+		geoJSON.features = [];
 		return geoJSON;
 	}
 
@@ -393,4 +419,8 @@ function hitsToGeoJSON(hits) {
 	geoJSON.features = features;
 
 	return geoJSON;
+}
+
+function generateCardHTML(title, address) {
+	return '<div class="card-content"><h3 class="card-title">'+title+'</h3><div class="card-text">'+address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>';
 }
