@@ -150,6 +150,19 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
 
         $('.block-search-filters .block-search-content .block-search-filters-popup').fadeOut();
       });
+
+      // Override jQuery contains function (case insensitive)
+      jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function(arg) {
+        return function( elem ) {
+          return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+        };
+      });
+
+      // Search input
+      $('.block-search-filters .block-search-content .block-search-filters-popup').on('input', 'input[name="search-filters"]', function(event) {
+        $('.filters-list label').hide();
+        $('.filters-list label:Contains('+$(this).val()+')').show();
+      });
     },
 
     // Render facet list
@@ -202,6 +215,9 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
     renderPopup(selectedValues) {
 
       var content = '';
+      content += '<div class="search-filters-container">';
+      content += '<input type="text" name="search-filters" placeholder="Rechercher un filtre...">';
+      content += '</div>';
       content += '<div class="filters-list">';
       // For each facets build html
       $.each(facets, function(i, facet) {

@@ -16,6 +16,8 @@ mixin block-search-filters(data)
       .block-search-filters-popup
         .popup-background
         .popup-content
+          .search-filters-container
+            input(type='text', name='search-filters', placeholder=data.popup_search_placeholder)
           .filters-list
             each item in data.filter_items
               label
