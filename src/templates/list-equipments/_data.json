@@ -196,7 +196,8 @@
           }
         },
         "block_search_results": {
-          "title": "Résultats"
+          "title": "Résultats",
+          "modifiers": ["block-search-results"]
         },
         "results": [
         ]

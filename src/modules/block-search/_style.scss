@@ -68,3 +68,9 @@
     margin-left: 10px;
   }
 }
+
+@include small {
+  .block-search-results {
+    display: none;
+  }
+}
