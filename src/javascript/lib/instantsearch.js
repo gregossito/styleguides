@@ -8,24 +8,26 @@ Paris.instantsearch = {widgets: {}};
 // https://community.algolia.com/instantsearch.js/documentation/#custom-widgets
 
 // Extending the instantsearch.widgets namespace, like regular widgets
-Paris.instantsearch.widgets.customSelectorWidget = function customSelectorWidget({
-  container,
-  attributeName,
-  limit = 10,
-  operator = 'or',
-  maxValuesPerFacet = 10,
-  sortBy = ['count:desc', 'name:asc'],
-  numberOfFacets = 200,
-  moreButtonText = 'Afficher la liste complète'
+// TODO: All html generated code could be a Paris module
+Paris.instantsearch.widgets.refinementList = function refinementList({
+  container, // DOM selector in which to add UI
+  attributeName, // Attribute name for facets
+  limit = 10, // Limit of main facets
+  operator = 'or', // Facets operator
+  sortBy = ['count:desc', 'name:asc'], // Facet ordering
+  numberOfFacets = 200, // Expected number of facets (displayed in popup)
+  moreButtonText = 'Afficher la liste complète' // Text for more facets button
 }) {
- 
   var helper;
+  // Store all facets values
   var facets = [];
-  var wrapperSelector = 'facet-list-wrapper';
+  // Internal selector ID for facet list html rendering
+  var wrapperSelectorID = 'facet-list-wrapper';
+  // Base HTML code for popup
   var popupHTML = '<div class="block-search-filters-popup"><div class="popup-background"></div><div class="popup-content"></div></div>';
 
   return {
-    // Method called at startup, to configure the Algolia settings
+
     getConfiguration(configuration) {
       var widgetConfiguration = {
         [operator === 'and' ? 'facets' : 'disjunctiveFacets']: [attributeName]
@@ -34,20 +36,20 @@ Paris.instantsearch.widgets.customSelectorWidget = function customSelectorWidget
       var currentMaxValuesPerFacet = configuration.maxValuesPerFacet || 0;
       widgetConfiguration.maxValuesPerFacet = Math.max(currentMaxValuesPerFacet, limit);
 
-      console.log(widgetConfiguration);
       return widgetConfiguration;
     },
 
-    // Called on the first instantsearch search
+    // Initiate widget
     init({helper}) {
 
       this.helper = helper;
 
+      // Bind filter button event
       $(container).on('click', '.filterButton', this.onClickButton.bind(this));
 
-      // Changing the number of records returned per page to 1
-      // This example uses the callback API
-      that = this;
+      var _this = this;
+
+      // Trigger a fake search request just to retrieve all available facets
       helper.searchOnce({
         hitsPerPage: 1,
         // hierarchicalFacets: [{
@@ -57,62 +59,65 @@ Paris.instantsearch.widgets.customSelectorWidget = function customSelectorWidget
         maxValuesPerFacet: numberOfFacets
       },
         function(error, content, state) {
-          // Store all possible facets
+          // Store all possible facets values (We don't store the facet object because we need to simplify some array object search)
           $.each(content.getFacetValues(attributeName, sortBy), function(i, facet) {
             facets.push(facet.name);
           });
           // Init filter view
-          that.initView();
-          that.initSearchFiltersPopupEvents();
+          _this.initView();
+          _this.initSearchFiltersPopupEvents();
         }
       );
     },
 
     // Called whenever we receive new results from Algolia. This widget does not render anything after each search
     render({results}) {
+      // Nothing to re-render
     },
 
-    // Handle filter select action
+    // Handle facet click action
     onClickButton(e) {
       e.preventDefault();
+      // Find the button DOM element
       var $this = $(e.target).closest('.button');
+      // Toggle the button
       $this.toggleClass('active');
-      var value = $this.text();
-      this.toggleRefinement(value);
-    },
 
-    // Toggling filter
-    toggleRefinement(facetValue) {
-      console.log(facetValue);
+      // Toggle facet and force new search request
       this.helper
-        .toggleRefinement(attributeName, facetValue)
+        .toggleRefinement(attributeName,$this.text())
         .search();
     },
 
+    // Initiate view
     initView() {
       var $container = $(container);
 
-      var content = '<div id="' + wrapperSelector + '"></div>';
+      // Build html for rendering
+      var content = '<div id="' + wrapperSelectorID + '"></div>';
       content += popupHTML;
 
       $container.html(content);
 
+      // Render list with no selected values
       this.renderList([]);
     },
 
+    // Init popup events
     initSearchFiltersPopupEvents() {
 
-      var that = this;
+      var _this = this;
 
-      // Open popup
+      // Open popup event
       $('.block-search-filters .block-search-content').on('click', '.more-filters-button', function(event) {
+        // Get current selected values
         var selectedValues = [];
         $.each($(container + ' .filterButton.active'), function(i, el) {
-          console.log($(el).text());
           selectedValues.push($(el).text());
         });
-        console.log(selectedValues);
-        that.renderPopup(selectedValues);
+        // Render popup with selected values
+        _this.renderPopup(selectedValues);
+        // Show popup
         $('.block-search-filters .block-search-content .block-search-filters-popup').fadeIn();
       });
 
@@ -128,58 +133,61 @@ Paris.instantsearch.widgets.customSelectorWidget = function customSelectorWidget
 
       // Confirm popup
       $('.block-search-filters .block-search-content .block-search-filters-popup').on('click', '.confirm', function(event) {
-
-        var inputs = $('.block-search-filters .filters-list input[type="checkbox"]:checked');
-        console.log(inputs);
         var selectedValues = [];
-        that.helper.clearRefinements();
+        var inputs = $('.block-search-filters .filters-list input[type="checkbox"]:checked');
+        // Clear all facets refinements of Algolia's helper
+        _this.helper.clearRefinements();
+        // Get selected values and toggle them
         $.each(inputs, function(i, input) {
-          console.log(input.value);
           selectedValues.push(input.value);
-          that.helper.toggleRefinement(attributeName, input.value);
+          _this.helper.toggleRefinement(attributeName, input.value);
         });
 
-        that.renderList(selectedValues);
+        // Render list with selected values
+        _this.renderList(selectedValues);
+        // Trigger search with new facet refinement
+        _this.helper.search();
 
         $('.block-search-filters .block-search-content .block-search-filters-popup').fadeOut();
-        
-        that.helper.search();
       });
     },
 
+    // Render facet list
     renderList(selectedValues) {
 
-      var $container = $(container + ' #' + wrapperSelector);
+      var $container = $(container + ' #' + wrapperSelectorID);
 
       var content = '';
+      // For each main facet create html button
       $.each(facets.slice(0, limit), function(i, facet) {
         var data = {
           text: facet,
           modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton']
         };
-
+        // If selected set to active
         if ($.inArray(facet, selectedValues) >= 0) {
           data.modifiers.push('active'); 
         }
         content += Paris.templates['button']['button'](data);
       });
 
-      var mainFacets = facets.slice(0, limit);
-      $.each(selectedValues, function(i, value) {
-        console.log(value);
-        if ($.inArray(value, mainFacets) < 0) {
-          console.log('iidzizdiza');
-          var data = {
-            text: value,
-            modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton', 'active']
-          };
-
-          
-          content += Paris.templates['button']['button'](data); 
-        }
-      });
-
+      // Test if we have a need for main and second facets display (so we need to show more facets in a popup)
       if (facets.length > limit) {
+
+        var mainFacets = facets.slice(0, limit);
+        // Check if some selected values are not main filters.
+        $.each(selectedValues, function(i, value) {
+          // If a selected value is not already a rendered main facets, append a new filter button
+          if ($.inArray(value, mainFacets) < 0) {
+            var data = {
+              text: value,
+              modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton', 'active']
+            };
+            content += Paris.templates['button']['button'](data); 
+          }
+        });
+
+        // At the end append a more button
         var data = {
           text: moreButtonText,
           modifiers: ["secondary", "small", "more-filters-button"]
@@ -190,28 +198,29 @@ Paris.instantsearch.widgets.customSelectorWidget = function customSelectorWidget
       $container.html(content);
     },
 
+    // Render popup
     renderPopup(selectedValues) {
 
       var content = '';
       content += '<div class="filters-list">';
+      // For each facets build html
       $.each(facets, function(i, facet) {
         var checked = ($.inArray(facet, selectedValues) >= 0) ? 'checked="checked"' : '';
         content += '<label><input type="checkbox" name="categories[]" value="' + facet + '" ' + checked + '><span>' + facet + '</span></label>';
       });
       content += '</div>';
 
-      if (facets.length > limit) {
-        content += '<div class="buttons">';
-        content += Paris.templates['button']['button']({
-          text: 'Annuler',
-          modifiers: ["discard", "action"]
-        });
-        content += Paris.templates['button']['button']({
-          text: 'Valider',
-          modifiers: ["confirm", "action"]
-        });
-        content += '</div>';
-      }
+      // Add popup buttons
+      content += '<div class="buttons">';
+      content += Paris.templates['button']['button']({
+        text: 'Annuler',
+        modifiers: ["discard", "action"]
+      });
+      content += Paris.templates['button']['button']({
+        text: 'Valider',
+        modifiers: ["confirm", "action"]
+      });
+      content += '</div>';
 
       $('.popup-content').html(content);
     }

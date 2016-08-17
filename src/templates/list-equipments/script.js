@@ -44,7 +44,7 @@ Paris.listEquipments = (function(){
 
       // Search refinement list
       search.addWidget(
-        Paris.instantsearch.widgets.customSelectorWidget({
+        Paris.instantsearch.widgets.refinementList({
           container: '.block-search-filters .block-search-content',
           attributeName: 'categories',
           operator: 'or',
