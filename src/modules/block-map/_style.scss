@@ -1,1 +1,21 @@
 @import "../../stylesheets/lib/mapbox-gl";
+
+.mapboxgl-popup {
+
+	.mapboxgl-popup-content {
+
+		.card-content {
+			padding: 10px;
+			width: calc(100% - 50px);
+			font-family: 'Montserrat',sans-serif;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 20px;
+
+			h3,
+			.card-text {
+				min-height: 0;
+			}
+		}
+	}
+}
