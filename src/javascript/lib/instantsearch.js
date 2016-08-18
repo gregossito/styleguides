@@ -150,6 +150,41 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
 
         $('.block-search-filters .block-search-content .block-search-filters-popup').fadeOut();
       });
+
+      // Override jQuery contains function (case insensitive + accents)
+      jQuery.expr[':'].contains = function(a, i, m) {
+        var rExps=[
+          {re: /[\xC0-\xC6]/g, ch: "A"},
+          {re: /[\xE0-\xE6]/g, ch: "a"},
+          {re: /[\xC8-\xCB]/g, ch: "E"},
+          {re: /[\xE8-\xEB]/g, ch: "e"},
+          {re: /[\xCC-\xCF]/g, ch: "I"},
+          {re: /[\xEC-\xEF]/g, ch: "i"},
+          {re: /[\xD2-\xD6]/g, ch: "O"},
+          {re: /[\xF2-\xF6]/g, ch: "o"},
+          {re: /[\xD9-\xDC]/g, ch: "U"},
+          {re: /[\xF9-\xFC]/g, ch: "u"},
+          {re: /[\xC7-\xE7]/g, ch: "c"},
+          {re: /[\xD1]/g, ch: "N"},
+          {re: /[\xF1]/g, ch: "n"}
+        ];
+
+        var element = $(a).text();
+        var search  = m[3];
+
+        $.each(rExps, function() {
+          element = element.replace(this.re, this.ch);
+          search = search.replace(this.re, this.ch);
+        });
+
+        return element.toUpperCase().indexOf(search.toUpperCase()) >= 0;
+      };
+
+      // Search input
+      $('.block-search-filters .block-search-content .block-search-filters-popup').on('input', 'input[name="search-filters"]', function(event) {
+        $('.filters-list label').hide();
+        $('.filters-list label:contains('+$(this).val()+')').show();
+      });
     },
 
     // Render facet list
@@ -202,6 +237,9 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
     renderPopup(selectedValues) {
 
       var content = '';
+      content += '<div class="search-filters-container">';
+      content += '<input type="text" name="search-filters" placeholder="Rechercher un filtre...">';
+      content += '</div>';
       content += '<div class="filters-list">';
       // For each facets build html
       $.each(facets, function(i, facet) {

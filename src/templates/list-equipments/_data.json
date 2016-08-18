@@ -138,6 +138,7 @@
               "text": "Valider"
             }
           ],
+          "popup_search_placeholder": "Rechercher un filtre...",
           "filter_items": [
             {
               "href": "#",
