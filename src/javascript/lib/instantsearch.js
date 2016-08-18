@@ -68,6 +68,19 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
           _this.initSearchFiltersPopupEvents();
         }
       );
+
+      // Use change event to detect facets reseting action
+      helper.on('change', function(state, lastResults) {
+        var refinementCount = 0;
+        if (operator === 'and') {
+          refinementCount = state.facetsRefinement[attributeName] ? state.facetsRefinement[attributeName].length : 0;
+        } else {
+          refinementCount = state.disjunctiveFacetsRefinements[attributeName] ? state.disjunctiveFacetsRefinements[attributeName].length : 0;
+        }
+        if (refinementCount == 0 && $(container + ' .filterButton.active').length > 0) {
+          _this.renderList([]);
+        }
+      });
     },
 
     // Called whenever we receive new results from Algolia. This widget does not render anything after each search
