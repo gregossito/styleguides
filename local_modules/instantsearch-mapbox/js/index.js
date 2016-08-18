@@ -15,6 +15,7 @@ var _this,
 	userMarker,
 	lastPopup,
 	skipRefine = false,
+	focusPoint,
 	layersID = [],
 	geoJSON = {
 		'type': 'FeatureCollection',
@@ -109,16 +110,22 @@ instantsearch.widgets.mapbox = function mapbox(options) {
 
 			// Handle case when one result
 			if (params.results.hits.length === 1) {
-				skipRefine = true;
 				var hit = params.results.hits[0];
-				var html = settings.popupHTMLForHit(hit);
-				showPopup(html, [hit._geoloc.lng, hit._geoloc.lat]); 
-				map.flyTo({
-					center: [hit._geoloc.lng, hit._geoloc.lat],
-					zoom: settings.cluster.clusterMaxZoom + 1,
-					curve: 1.2
-				});
-				settings.openedHit();
+				// This clause fixes a bug of map always flying to same point when panning
+				if (!focusPoint || (focusPoint.lat != hit._geoloc.lat && focusPoint.lng != hit._geoloc.lng)) {
+					skipRefine = true;
+					var html = settings.popupHTMLForHit(hit);
+					showPopup(html, [hit._geoloc.lng, hit._geoloc.lat]); 
+					map.flyTo({
+						center: [hit._geoloc.lng, hit._geoloc.lat],
+						zoom: settings.cluster.clusterMaxZoom + 1,
+						curve: 1.2
+					});
+					settings.openedHit();
+					focusPoint = hit._geoloc;
+				}
+			} else {
+				focusPoint = null;
 			}
 		},
 		// Used for example to open a hit from a list outside the map
@@ -274,7 +281,6 @@ function initMap(container) {
 	});
 
 	// Search is based on map bounds all the time except when user type in a text in search field
-
 	helper.on('change', function(state, lastResults) {
 	  if (lastResults.query != state.query) {
 		// Clear geoloc param right after launching request
