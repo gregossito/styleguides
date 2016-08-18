@@ -116,6 +116,8 @@ Paris.listEquipments = (function(){
       // Prevent form to conflict with instantsearch behavior
       $('form.search-field').submit(function(event) {
         event.preventDefault();
+        // Close autocomplete when submitting search
+        $('.layout-list-map .search-field-input').autocomplete('close');
       });
 
       // Form submit button will reload the page. Instantsearch has not yet make it fully compatible with forms. So manually handle the submi action by triggering search
