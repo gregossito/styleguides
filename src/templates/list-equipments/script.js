@@ -51,20 +51,7 @@ Paris.listEquipments = (function(){
           limit: 10
         })
       );
-
-      // search.addWidget(
-      //   instantsearch.widgets.refinementList({
-      //     container: '.block-search-filters .block-search-content',
-      //     attributeName: 'categories',
-      //     operator: 'or',
-      //     limit: 10,
-      //     sortBy: ['name:asc'],
-      //     showMore: {
-      //       limit: 250
-      //     }
-      //   })
-      // );
-
+      
       // Search reset
       search.addWidget(
         instantsearch.widgets.clearAll({
@@ -153,7 +140,8 @@ Paris.listEquipments = (function(){
             });
           }
           index.search(query, {
-            facetFilters: ((categories && categories.length > 0) ? [categories] : '*')
+            facetFilters: ((categories && categories.length > 0) ? [categories] : '*'),
+            attributesToRetrieve: "*"
           }).then(function(answer) {
             callback(answer.hits);
           }, function() {
@@ -169,6 +157,7 @@ Paris.listEquipments = (function(){
       }
       ]).on('autocomplete:selected', function(event, suggestion, dataset) {
         search.helper.setQuery(suggestion.name);
+        mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">'+suggestion.name+'</h3><div class="card-text">'+suggestion.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>', [suggestion._geoloc.lng, suggestion._geoloc.lat]);
       });
 
       search.start();

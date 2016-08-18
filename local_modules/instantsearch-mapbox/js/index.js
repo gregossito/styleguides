@@ -15,7 +15,6 @@ var _this,
 	userMarker,
 	lastPopup,
 	skipRefine = false,
-	focusPoint,
 	layersID = [],
 	geoJSON = {
 		'type': 'FeatureCollection',
@@ -100,33 +99,13 @@ instantsearch.widgets.mapbox = function mapbox(options) {
 			initMap(options.container);
 		},
 		render: function(params) {
-			if (lastPopup) {
+			if (lastPopup && !skipRefine) {
 				lastPopup.remove();
 			}
 
 			// Convert results to geoJSON and render
 			geoJSON = hitsToGeoJSON(params.results.hits);
 			renderMap(geoJSON, 'searchHits');
-
-			// Handle case when one result
-			if (params.results.hits.length === 1) {
-				var hit = params.results.hits[0];
-				// This clause fixes a bug of map always flying to same point when panning
-				if (!focusPoint || (focusPoint.lat != hit._geoloc.lat && focusPoint.lng != hit._geoloc.lng)) {
-					skipRefine = true;
-					var html = settings.popupHTMLForHit(hit);
-					showPopup(html, [hit._geoloc.lng, hit._geoloc.lat]); 
-					map.flyTo({
-						center: [hit._geoloc.lng, hit._geoloc.lat],
-						zoom: settings.cluster.clusterMaxZoom + 1,
-						curve: 1.2
-					});
-					settings.openedHit();
-					focusPoint = hit._geoloc;
-				}
-			} else {
-				focusPoint = null;
-			}
 		},
 		// Used for example to open a hit from a list outside the map
 		openHit: function(html, coordinates) {
@@ -137,6 +116,7 @@ instantsearch.widgets.mapbox = function mapbox(options) {
 				curve: 1.2
 			});
 			showPopup(html, coordinates);
+			settings.openedHit();
 		}
 	}
 }
@@ -249,6 +229,7 @@ function initMap(container) {
 
 	// Calculate the distance made by the cursor
 	map.on('mouseup', function (e) {
+
 		var offsetX = Math.abs((pointCoordinate.x - e.point.x)) + cumulativeOffset.x;
 		var offsetY = Math.abs((pointCoordinate.y - e.point.y)) + cumulativeOffset.y;
 		cumulativeOffset.x = offsetX;
