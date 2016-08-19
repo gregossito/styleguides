@@ -12,11 +12,11 @@ Paris.instantsearch = {widgets: {}};
 Paris.instantsearch.widgets.refinementList = function refinementList({
   container, // DOM selector in which to add UI
   attributeName, // Attribute name for facets
-  limit = 10, // Limit of main facets
-  operator = 'or', // Facets operator
-  sortBy = ['name:asc', 'count:desc'], // Facet ordering
-  numberOfFacets = 200, // Expected number of facets (displayed in popup)
-  moreButtonText = 'Afficher la liste complète' // Text for more facets button
+  limit, // Limit of main facets
+  operator, // Facets operator
+  sortBy, // Facet ordering
+  numberOfFacets, // Expected number of facets (displayed in popup)
+  moreButtonText // Text for more facets button
 }) {
   var helper;
   // Store all facets values

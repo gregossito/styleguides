@@ -50,7 +50,10 @@ Paris.listEquipments = (function(){
           container: '.block-search-filters .block-search-content',
           attributeName: 'categories',
           operator: 'or',
-          limit: 10
+          limit: 10,
+          sortBy: ['name:asc', 'count:desc'],
+          numberOfFacets: 200,
+          moreButtonText: 'Afficher la liste complète'
         })
       );
       
