@@ -169,7 +169,7 @@ Paris.listEquipments = (function(){
       ]).on('autocomplete:selected', function(event, suggestion, dataset) {
         search.helper.setQuery(suggestion.name);
         search.helper.search();
-        
+
         mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">'+suggestion.name+'</h3><div class="card-text">'+suggestion.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>', [suggestion._geoloc.lng, suggestion._geoloc.lat]);
 
         // [mobile] Display results list
@@ -184,12 +184,23 @@ Paris.listEquipments = (function(){
       // [mobile] Results list carousel
       if (options.mobileMediaQuery.matches) {
         var flkyCarousel;
-        search.helper.on('result', function(results, state) {
-          console.log('results');
-          if (flkyCarousel) {
+
+        // On search, destroy carousel (if it exists)
+        search.helper.on('search', function(state, lastResults) {
+
+          if (flkyCarousel && flkyCarousel != undefined) {
             flkyCarousel.destroy();
           }
-          flkyCarousel = new Flickity( '.carousel' );
+
+        });
+
+        // On search result, init carousel
+        search.helper.on('result', function(results, state) {
+
+          flkyCarousel = new Flickity('.carousel', {
+            pageDots: false
+          });
+
         });
       }
 

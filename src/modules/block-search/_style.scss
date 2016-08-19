@@ -77,17 +77,36 @@
 
     .block-search-cards {
 
-      .ais-hits--item {
-        margin: 0;
-        width: 100%;
-        float: left;
-        clear: none;
+      .carousel {
 
-        .card {
-          max-width: 100%;
+        .flickity-prev-next-button {
+          width: 25px;
+          height: 25px;
+          background: transparent;
 
-          .card-image {
-            display: none;
+          &.previous {
+            left: 0;
+          }
+
+          &.next {
+            right: 0;
+          }
+        }
+
+        .ais-hits--item {
+          margin: 0;
+          width: 100%;
+          float: left;
+          clear: none;
+
+          .card {
+            max-width: 100%;
+            width: calc(100% - 60px);
+            margin-left: 30px;
+
+            .card-image {
+              display: none;
+            }
           }
         }
       }
