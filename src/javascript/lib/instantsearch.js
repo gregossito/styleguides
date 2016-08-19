@@ -14,7 +14,7 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
   attributeName, // Attribute name for facets
   limit = 10, // Limit of main facets
   operator = 'or', // Facets operator
-  sortBy = ['count:desc', 'name:asc'], // Facet ordering
+  sortBy = ['name:asc', 'count:desc'], // Facet ordering
   numberOfFacets = 200, // Expected number of facets (displayed in popup)
   moreButtonText = 'Afficher la liste complète' // Text for more facets button
 }) {
@@ -60,7 +60,7 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       },
         function(error, content, state) {
           // Store all possible facets values (We don't store the facet object because we need to simplify some array object search)
-          $.each(content.getFacetValues(attributeName, sortBy), function(i, facet) {
+          $.each(content.getFacetValues(attributeName, {sortBy}), function(i, facet) {
             facets.push(facet.name);
           });
           // Init filter view
