@@ -205,6 +205,8 @@ Paris.listEquipments = (function(){
             pageDots: false
           });
           $('.block-search-results').css('opacity', 1);
+        });
+        
       }
 
       $el.data('api', api);
