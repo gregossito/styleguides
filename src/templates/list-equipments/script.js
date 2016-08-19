@@ -88,7 +88,7 @@ Paris.listEquipments = (function(){
         container: '#map',
         mapBoxAccessToken: 'pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw',
         mapbox: {
-          style: 'mapbox://styles/parisnumerique/cilnr6b9h0047c4knsv84lpv3',
+          style: 'mapbox://styles/parisnumerique/cis1rkqoj000khinpthppoaqd',
           zoom: 11,
           minZoom: 10,
           center: [2.349272, 48.856579],
@@ -146,7 +146,7 @@ Paris.listEquipments = (function(){
       $('#map').on('click', '.card-title', function(event) {
         console.log("popup clicked");
       });
-     
+
       // Autocompletion is not an instantsearch feature. Must use algolia.js directly
       var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       var index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
