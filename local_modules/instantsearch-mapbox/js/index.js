@@ -34,19 +34,22 @@ userMarkerEl.innerHTML = 'User\'s position';
 
 /**
  * Widget options
+ * @param {String} mapBoxAccessToken Mapbox access token. Mandatory.
  * @param {Object} mapbox Mapbox API options. See Mapbox documentation for more details.
  * @param {Object} cluster Cluster options.
  * @param {Bool} cluster.cluster Enable cluster.
  * @param {Int} cluster.clusterMaxZoom The maximum zoom level to cluster points in.
  * @param {Int} cluster.clusterRadius The radius of each cluster when clustering points, measured in pixels.
- * @param {String} tempaltes.markerIconImage The marker string of the mapbox style.
- * @param {Elem} tempaltes.userMarkerEl Dom element used for showing user's position.
- * @param {Color} templates.cluster.circleColor The color of the circle.
- * @param {Int} templates.cluster.circleRadiusStops Stops of circle radius.
- * @param {Int} templates.cluster.circleRadiusBase Base for stops.
+ * @param {String} templates.markerIconImage The marker string of the mapbox style.
+ * @param {Elem} templates.userMarkerEl Dom element used for showing user's position.
  * @param {[String]} templates.cluster.textFont Array of font for cluster text
  * @param {String} templates.cluster.textColor Color of text for cluster
  * @param {Int} templates.cluster.textSize Size of text for cluster
+ * @param {Color} templates.cluster.circleColor The color of the circle.
+ * @param {Int} templates.cluster.circleRadiusStops Stops of circle radius.
+ * @param {Int} templates.cluster.circleRadiusBase Base for stops.
+ * @param {Function} openedHit Function called when a hit has been opened on map. Useful to update some UI.
+ * @param {Function} popupHTMLForHit Function called to retrieve html to display when a hit is opened
  */
 var defaults = {
 	mapBoxAccessToken: 'YOUR-ACCESS-TOKEN',
@@ -74,7 +77,8 @@ var defaults = {
 			circleRadiusBase: 0.95
 		}
 	},
-	openedHit: function() {}
+	openedHit: function() {},
+	popupHTMLForHit: function(hit) {},
 };
 
 
@@ -83,11 +87,11 @@ var defaults = {
 instantsearch.widgets.mapbox = function mapbox(options) {
 	
 	return {
-		getConfiguration: function(configuration) {
+		// getConfiguration: function(configuration) {
 			// return {
 			// 	hitsPerPage : 100
 			// }
-		},
+		// },
 		init: function(params) {
 			_this = this;
 			helper = params.helper;
@@ -95,26 +99,15 @@ instantsearch.widgets.mapbox = function mapbox(options) {
 			initMap(options.container);
 		},
 		render: function(params) {
-			if (lastPopup) {
+			if (lastPopup && !skipRefine) {
 				lastPopup.remove();
 			}
 
+			// Convert results to geoJSON and render
 			geoJSON = hitsToGeoJSON(params.results.hits);
 			renderMap(geoJSON, 'searchHits');
-
-			if (params.results.hits.length === 1) {
-				skipRefine = true;
-				var hit = params.results.hits[0];
-				var html = generateCardHTML(hit.name, hit.address);
-				showPopup(html, [hit._geoloc.lng, hit._geoloc.lat]); 
-				map.flyTo({
-					center: [hit._geoloc.lng, hit._geoloc.lat],
-					zoom: settings.cluster.clusterMaxZoom + 1,
-					curve: 1.2
-				});
-				_this.openedHit();
-			}
 		},
+		// Used for example to open a hit from a list outside the map
 		openHit: function(html, coordinates) {
 			skipRefine = true;
 			map.flyTo({
@@ -123,6 +116,7 @@ instantsearch.widgets.mapbox = function mapbox(options) {
 				curve: 1.2
 			});
 			showPopup(html, coordinates);
+			settings.openedHit();
 		}
 	}
 }
@@ -132,11 +126,10 @@ instantsearch.widgets.mapbox = function mapbox(options) {
  */
 function initOptions(options) {
 	settings = $.extend(true, {}, defaults, options);
-	_this.openedHit = settings.openedHit;
 }
 
 /**
- * Init Mapbox into container
+ * Init Mapbox into container and set it up
  * @param  {String | DOM Element}
  */
 function initMap(container) {
@@ -151,6 +144,7 @@ function initMap(container) {
 
 	map = new mapboxgl.Map(settings.mapbox);
 
+	// Once ready load sources and layers
 	map.on('load', function () {
 		renderMap(geoJSON, 'searchHits');
 	});
@@ -160,16 +154,17 @@ function initMap(container) {
 	var geolocate = new mapboxgl.Geolocate();
 	map.addControl(geolocate);
 
+	// Use this callback to show a marker at user's position
 	geolocate.on('geolocate', function(e) {
-
 		// add marker to map
 		if(!userMarker) {
 			userMarker = new mapboxgl.Marker(settings.templates.userMarkerEl);
 			userMarker.setLngLat([e.coords.longitude, e.coords.latitude]);
 			userMarker.addTo(map);
-			helper.setQueryParameter('aroundLatLng', e.coords.latitude+','+e.coords.longitude);
 		}
+		// update marker position each time
 		userMarker.setLngLat([e.coords.longitude, e.coords.latitude]);
+		helper.setQueryParameter('aroundLatLng', e.coords.latitude+','+e.coords.longitude);
 	});
 
 	// When a click event occurs near a place, open a popup at the location of
@@ -183,6 +178,7 @@ function initMap(container) {
 
 		var feature = features[0];
 
+		// Zoom cluster
 		if (feature.properties.cluster) {
 			skipRefine = true;
 			map.flyTo({
@@ -190,11 +186,11 @@ function initMap(container) {
 				zoom: settings.cluster.clusterMaxZoom + 1,
 				curve: 1.2
 			});
-			// map.zoomTo(settings.cluster.clusterMaxZoom + 1);
+		// open hit
 		} else {
-			var html = generateCardHTML(feature.properties.title, feature.properties.address);
+			var html = settings.popupHTMLForHit(feature.properties);
 			showPopup(html, feature.geometry.coordinates); 
-			_this.openedHit();
+			settings.openedHit();
 		}
 	});
 
@@ -221,7 +217,7 @@ function initMap(container) {
 		map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 	});
 
-	// List to touch and mouse event to handle drag tolerance of map. Unfortunatly in JS mouse and touch does not behave the same.
+	// Touch and mouse event to handle drag tolerance of map. Unfortunatly in JS mouse and touch does not behave the same.
 
 	// When start mouse drag store pointer coordinates
 	map.on('mousedown', function (e) {
@@ -233,6 +229,7 @@ function initMap(container) {
 
 	// Calculate the distance made by the cursor
 	map.on('mouseup', function (e) {
+
 		var offsetX = Math.abs((pointCoordinate.x - e.point.x)) + cumulativeOffset.x;
 		var offsetY = Math.abs((pointCoordinate.y - e.point.y)) + cumulativeOffset.y;
 		cumulativeOffset.x = offsetX;
@@ -264,28 +261,38 @@ function initMap(container) {
 		handleTolerance();
 	});
 
+	// Search is based on map bounds all the time except when user type in a text in search field
 	helper.on('change', function(state, lastResults) {
 	  if (lastResults.query != state.query) {
 		// Clear geoloc param right after launching request
 	  	helper.setQueryParameter('insideBoundingBox', undefined);
 	  } else {
 	  	var bounds = map.getBounds();
-	  	// helper.setQueryParameter('insideBoundingBox', bounds._sw.lat+','+bounds._sw.lng+','+bounds._ne.lat+','+bounds._ne.lng)
+	  	helper.setQueryParameter('insideBoundingBox', bounds._sw.lat+','+bounds._sw.lng+','+bounds._ne.lat+','+bounds._ne.lng)
 	  }
 	});
 	
 }
 
+/**
+ * Display a popup on the map
+ * @param  {String} html        Html to show
+ * @param  {[Coordinates]} coordinates Point coordinates
+ */
 function showPopup(html, coordinates) {
 	if (lastPopup) {
 		lastPopup.remove();
 	}
 
+	if (!html) {
+		return;
+	}
+
 	var popup = new mapboxgl.Popup();
 	// To help some binding element
-	var htmlWrapper = '<div class="map-popup">test'+html+'</div>';
+	var htmlWrapper = '<div class="map-popup">'+html+'</div>';
+
 	popup.setLngLat(coordinates)
-		// TODO Evolution - Dynamically set html content from widget 
 		.setHTML(htmlWrapper)
 		.addTo(map);
 	lastPopup = popup;
@@ -406,21 +413,17 @@ function hitsToGeoJSON(hits) {
 				coordinates: [hit._geoloc.lng, hit._geoloc.lat]
 			},
 			properties: {
-				title: hit.name,
-				address: hit.address,
 				// TODO Activate dynamic icons
 				// icon: hit.idcategories[0]
 				icon: 15
 			}
 		}
+		// Store hit in properties
+		$.extend(feature.properties, hit);
 		features.push(feature);
 	});
 
 	geoJSON.features = features;
 
 	return geoJSON;
-}
-
-function generateCardHTML(title, address) {
-	return '<div class="card-content"><h3 class="card-title">'+title+'</h3><div class="card-text">'+address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>';
 }
