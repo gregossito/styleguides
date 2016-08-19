@@ -30,7 +30,7 @@ var _this,
 	};
 
 var userMarkerEl = document.createElement('div');
-userMarkerEl.innerHTML = 'User\'s position';
+userMarkerEl.innerHTML = '<span class="mapbox-gl-user-marker"></span>';
 
 /**
  * Widget options
