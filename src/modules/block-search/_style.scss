@@ -1,3 +1,5 @@
+@import "../../stylesheets/lib/flickity";
+
 .block-search {
   padding: 30px;
 
@@ -71,6 +73,24 @@
 
 @include small {
   .block-search-results {
-    display: none;
+    // display: none;
+
+    .block-search-cards {
+
+      .ais-hits--item {
+        margin: 0;
+        width: 100%;
+        float: left;
+        clear: none;
+
+        .card {
+          max-width: 100%;
+
+          .card-image {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }

@@ -24,8 +24,10 @@ append content
         +block-search-filters(data.list.block_search_filters)
         +block-search(data.list.block_search_results)
           .block-search-cards#hits-container
-            each result in data.list.results
-              +card(result)
+            .carousel
+              each result in data.list.results
+                .carousel-cell
+                  +card(result)
       .layout-content-map
         +block-map()
         

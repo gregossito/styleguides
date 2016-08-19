@@ -4,6 +4,7 @@ require('velocity-animate');
 var algoliasearch = require('algoliasearch');
 var instantsearch = require('instantsearch.js');
 var instantsearchMapbox = require('instantsearch-mapbox');
+var Flickity = require('flickity');
 
 var Paris = window.Paris || {};
 
@@ -14,7 +15,8 @@ Paris.listEquipments = (function(){
     index: 'equipments',
     searchParams: {
       "attributesToRetrieve": "*"
-    }
+    },
+    mobileMediaQuery: window.matchMedia("(max-width: 767px)")
   };
 
   function listEquipments(selector, userOptions) {
@@ -83,6 +85,10 @@ Paris.listEquipments = (function(){
           templates: {
             empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '</p>',
             item: '<a href="#" class="card open" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text">{{address}}<br>{{zipCode}} {{city}}</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div></a>'
+          },
+          cssClasses: {
+            root: 'carousel',
+            item: 'carousel-cell'
           }
         })
       );
@@ -118,6 +124,11 @@ Paris.listEquipments = (function(){
         event.preventDefault();
         // Close autocomplete when submitting search
         $('.layout-list-map .search-field-input').autocomplete('close');
+
+        // [mobile] Display results list
+        if (options.mobileMediaQuery.matches) {
+          $('.block-search-results').show();
+        }
       });
 
       // Form submit button will reload the page. Instantsearch has not yet make it fully compatible with forms. So manually handle the submi action by triggering search
@@ -166,9 +177,28 @@ Paris.listEquipments = (function(){
       ]).on('autocomplete:selected', function(event, suggestion, dataset) {
         search.helper.setQuery(suggestion.name);
         search.helper.search();
+
+        // [mobile] Display results list
+        if (options.mobileMediaQuery.matches) {
+          $('.block-search-results').show();
+        }
+
       });
 
       search.start();
+
+
+      // [mobile] Results list carousel
+      if (options.mobileMediaQuery.matches) {
+        var flkyCarousel;
+        search.helper.on('result', function(results, state) {
+          console.log('results');
+          if (flkyCarousel) {
+            flkyCarousel.destroy();
+          }
+          flkyCarousel = new Flickity( '.carousel' );
+        });
+      }
 
       $el.data('api', api);
     }
