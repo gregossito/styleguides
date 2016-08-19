@@ -1,5 +1,9 @@
 @import "../../stylesheets/lib/mapbox-gl";
 
+.mapboxgl-ctrl-compass {
+	display: none !important; 
+}
+
 .mapboxgl-popup {
 
 	.mapboxgl-popup-content {
