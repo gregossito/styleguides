@@ -53,7 +53,7 @@ Paris.listEquipments = (function(){
           limit: 10
         })
       );
-      
+
       // Search reset
       search.addWidget(
         instantsearch.widgets.clearAll({
@@ -84,7 +84,7 @@ Paris.listEquipments = (function(){
         container: '#map',
         mapBoxAccessToken: 'pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw',
         mapbox: {
-          style: 'mapbox://styles/parisnumerique/cilnr6b9h0047c4knsv84lpv3',
+          style: 'mapbox://styles/parisnumerique/cis1rkqoj000khinpthppoaqd',
           zoom: 11,
           minZoom: 10,
           center: [2.349272, 48.856579],
@@ -131,13 +131,13 @@ Paris.listEquipments = (function(){
       $('#hits-container').on('click', '.card', function(event) {
         var card = event.target.closest('.card');
         mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">Titre</h3><div class="card-text">Adresse</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>', [card.getAttribute('lng'), card.getAttribute('lat')]);
-        
+
       });
 
       $('#map').on('click', '.card-title', function(event) {
         console.log("popup clicked");
       });
-     
+
       // Autocompletion is not an instantsearch feature. Must use algolia.js directly
       var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       var index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
@@ -169,7 +169,7 @@ Paris.listEquipments = (function(){
       ]).on('autocomplete:selected', function(event, suggestion, dataset) {
         search.helper.setQuery(suggestion.name);
         search.helper.search();
-        
+
         mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">'+suggestion.name+'</h3><div class="card-text">'+suggestion.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>', [suggestion._geoloc.lng, suggestion._geoloc.lat]);
 
         // [mobile] Display results list
