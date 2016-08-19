@@ -42,7 +42,25 @@
   background: center center no-repeat;
   background-size: cover;
   height: 120px;
+  background-color: $green1;
   overflow: hidden;
+  position: relative;
+
+  &.no-img {
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-color: $white;
+      mask: url('../modules/rheader/nef.svg') center center no-repeat;
+      opacity: 0.5;
+    }
+  }
 
   &:after {
     background: $black;

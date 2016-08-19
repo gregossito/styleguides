@@ -71,7 +71,7 @@ Paris.listEquipments = (function(){
           container: '#hits-container',
           templates: {
             empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '</p>',
-            item: '<a href="#" class="card open" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text">{{address}}<br>{{zipCode}} {{city}}</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div></a>'
+            item: '<a href="#" class="card open" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text">{{address}}<br>{{zipCode}} {{city}}</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div></a>'
           },
           cssClasses: {
             root: 'carousel',
@@ -206,7 +206,7 @@ Paris.listEquipments = (function(){
           });
           $('.block-search-results').css('opacity', 1);
         });
-        
+
       }
 
       $el.data('api', api);
