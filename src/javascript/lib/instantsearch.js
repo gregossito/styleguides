@@ -131,7 +131,9 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
         // Render popup with selected values
         _this.renderPopup(selectedValues);
         // Show popup
-        $('.block-search-filters .block-search-content .block-search-filters-popup').fadeIn();
+        $('.block-search-filters .block-search-content .block-search-filters-popup').fadeIn(400, function() {
+          $('input[type="text"]').focus();
+        });
       });
 
       // Close popup
