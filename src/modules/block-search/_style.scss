@@ -72,8 +72,23 @@
 }
 
 @include small {
+
+  .block-search-filters {
+    display: none;
+  }
+
   .block-search-results {
-    // display: none;
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding: 0;
+    z-index: 2;
+
+    .block-search-header {
+      display: none;
+    }
 
     .block-search-cards {
 
@@ -85,11 +100,11 @@
           background: transparent;
 
           &.previous {
-            left: 0;
+            left: 5px;
           }
 
           &.next {
-            right: 0;
+            right: 5px;
           }
         }
 
@@ -106,6 +121,14 @@
 
             .card-image {
               display: none;
+            }
+
+            .card-title {
+              min-height: 0;
+            }
+
+            .card-text {
+              min-height: 0;
             }
           }
         }

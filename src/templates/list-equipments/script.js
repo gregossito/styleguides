@@ -44,7 +44,7 @@ Paris.listEquipments = (function(){
         })
       );
 
-      // Search refinement list
+      // Search refinement list widget
       search.addWidget(
         Paris.instantsearch.widgets.refinementList({
           container: '.block-search-filters .block-search-content',
@@ -54,7 +54,7 @@ Paris.listEquipments = (function(){
         })
       );
       
-      // Search reset
+      // Search reset widget
       search.addWidget(
         instantsearch.widgets.clearAll({
           container: '.block-search-filters .block-search-top-link',
@@ -65,7 +65,7 @@ Paris.listEquipments = (function(){
         })
       );
 
-      // Search results
+      // Search results widget
       search.addWidget(
         instantsearch.widgets.hits({
           container: '#hits-container',
@@ -80,6 +80,7 @@ Paris.listEquipments = (function(){
         })
       );
 
+      // Mapbox widget
       var mapboxWidget = instantsearch.widgets.mapbox({
         container: '#map',
         mapBoxAccessToken: 'pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw',
@@ -107,12 +108,16 @@ Paris.listEquipments = (function(){
           return '<div class="card-content"><h3 class="card-title">'+hit.name+'</h3><div class="card-text">'+hit.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>';
         }
       });
-      // Search map
+
+      // Search map widget
       search.addWidget(mapboxWidget);
 
-      // Prevent form to conflict with instantsearch behavior
+      // On search submit
       $('form.search-field').submit(function(event) {
+
+        // Prevent form to conflict with instantsearch behavior
         event.preventDefault();
+
         // Close autocomplete when submitting search
         $('.layout-list-map .search-field-input').autocomplete('close');
 
@@ -120,9 +125,10 @@ Paris.listEquipments = (function(){
         if (options.mobileMediaQuery.matches) {
           $('.block-search-results').show();
         }
+
       });
 
-      // Form submit button will reload the page. Instantsearch has not yet make it fully compatible with forms. So manually handle the submi action by triggering search
+      // Form submit button will reload the page. Instantsearch has not yet make it fully compatible with forms. So manually handle the submit action by triggering search
       $('form.search-field').on('click', '.search-field-submit', function(event) {
         search.helper.search();
       });
@@ -131,9 +137,9 @@ Paris.listEquipments = (function(){
       $('#hits-container').on('click', '.card', function(event) {
         var card = event.target.closest('.card');
         mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">Titre</h3><div class="card-text">Adresse</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>', [card.getAttribute('lng'), card.getAttribute('lat')]);
-        
       });
 
+      // Handle click on map popup
       $('#map').on('click', '.card-title', function(event) {
         console.log("popup clicked");
       });
@@ -150,7 +156,8 @@ Paris.listEquipments = (function(){
                categories.push('categories:' + category);
             });
           }
-          index.search(query, {
+          index.search(query, { 
+            hitsPerPage: 8,
             facetFilters: ((categories && categories.length > 0) ? [categories] : '*'),
             attributesToRetrieve: "*"
           }).then(function(answer) {
@@ -172,10 +179,6 @@ Paris.listEquipments = (function(){
 
         mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">'+suggestion.name+'</h3><div class="card-text">'+suggestion.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>', [suggestion._geoloc.lng, suggestion._geoloc.lat]);
 
-        // [mobile] Display results list
-        if (options.mobileMediaQuery.matches) {
-          $('.block-search-results').show();
-        }
       });
 
       search.start();
@@ -188,6 +191,7 @@ Paris.listEquipments = (function(){
         // On search, destroy carousel (if it exists)
         search.helper.on('search', function(state, lastResults) {
 
+          $('.block-search-results').css('opacity', 0);
           if (flkyCarousel && flkyCarousel != undefined) {
             flkyCarousel.destroy();
           }
@@ -196,12 +200,11 @@ Paris.listEquipments = (function(){
 
         // On search result, init carousel
         search.helper.on('result', function(results, state) {
-
+          console.log('render results');
           flkyCarousel = new Flickity('.carousel', {
             pageDots: false
           });
-
-        });
+          $('.block-search-results').css('opacity', 1);
       }
 
       $el.data('api', api);
