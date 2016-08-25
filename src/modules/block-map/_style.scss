@@ -44,3 +44,10 @@
 		}
 	}
 }
+
+@include small {
+
+  .mapboxgl-popup {
+  	display: none !important;
+  }
+}

@@ -9,6 +9,12 @@
     .more-filters-button {
         display: inline-block;
     }
+
+    .apply-filters-button {
+        display: none;
+        margin-top: 15px;
+        width: 100%;
+    }
   }
 
   .block-search-filters-popup {
@@ -102,6 +108,24 @@
             left: 0;
             right: 0;
         }
+    }
+  }
+}
+
+@include small {
+
+  .block-search-filters {
+    display: none;
+
+    .block-search-header {
+      display: none;
+    }
+
+    .block-search-content {
+
+      .apply-filters-button {
+        display: block;
+      }
     }
   }
 }

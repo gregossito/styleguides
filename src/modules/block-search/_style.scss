@@ -31,6 +31,7 @@
   .ais-hits--item {
     @include gallery(6 of 12);
     margin-bottom: gutter(12);
+    bottom: 0;
   }
 }
 
@@ -73,14 +74,10 @@
 
 @include small {
 
-  .block-search-filters {
-    display: none;
-  }
-
   .block-search-results {
     display: none;
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
     left: 0;
     right: 0;
     padding: 0;
@@ -98,26 +95,44 @@
           width: 25px;
           height: 25px;
           background: transparent;
+          bottom: 25px;
+          top: auto;
 
           &.previous {
-            left: 5px;
+            left: 0;
           }
 
           &.next {
-            right: 5px;
+            right: 0;
+          }
+        }
+
+        &.ais-hits__empty {
+          padding: 10px;
+          background-color: $white;
+          text-align: center;
+          
+          button.flickity-prev-next-button {
+            display: none;
           }
         }
 
         .ais-hits--item {
           margin: 0;
+          margin-bottom: 10px;
+          margin-top: 10px;
           width: 100%;
           float: left;
           clear: none;
 
           .card {
             max-width: 100%;
-            width: calc(100% - 60px);
-            margin-left: 30px;
+            width: calc(100% - 40px);
+            margin-left: 20px;
+
+            .card-content {
+              padding: 12px 15px;
+            }
 
             .card-image {
               display: none;
@@ -125,10 +140,20 @@
 
             .card-title {
               min-height: 0;
+              font-size: 16px;
+              line-height: 20px;
+              margin-bottom: 5px;
+            }
+
+            .card-text,
+            .card-hours {
+              min-height: 0;
+              font-size: 14px;
+              line-height: 18px;
             }
 
             .card-text {
-              min-height: 0;
+              margin-bottom: 2px;
             }
           }
         }

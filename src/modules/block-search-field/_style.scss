@@ -1,7 +1,48 @@
 .block-search-field {
-
+  position: relative;
+  
   .search-field-input[type="text"]:focus {
     background-color: $white;
   }
+}
 
+@include small {
+
+  .block-search-field {
+    padding-bottom: 25px;
+
+    .block-search-content {
+      padding-top: 20px;
+      border-top: 1px solid $grayCC;
+    }
+
+    .block-search-header {
+      width: 50%;
+
+      h3 {
+        float: none;
+        text-align: center;
+      }
+    }
+
+    .block-search-bottom-links {
+
+      height: 0;
+      margin: 0;
+      
+      a {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: calc(50% - 30px);
+        text-align: center;
+        color: $color-secondary;
+        font-size: 18px;
+        margin: 0;
+        text-decoration: none;
+        font-weight: bold;
+        opacity: 0.5;
+      }
+    }
+  }
 }

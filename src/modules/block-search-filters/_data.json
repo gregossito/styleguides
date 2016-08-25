@@ -71,6 +71,9 @@
           "more": {
             "href": "#",
             "text": "Afficher la liste complète"
+          },
+          "apply": {
+            "text": "Appliquer"
           }
         }
       }

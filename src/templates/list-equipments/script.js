@@ -53,7 +53,8 @@ Paris.listEquipments = (function(){
           limit: 10,
           sortBy: ['name:asc', 'count:desc'],
           numberOfFacets: 200,
-          moreButtonText: 'Afficher la liste complète'
+          moreButtonText: 'Afficher la liste complète',
+          applyButtonText: 'Appliquer'
         })
       );
       
@@ -115,19 +116,23 @@ Paris.listEquipments = (function(){
       // Search map widget
       search.addWidget(mapboxWidget);
 
+      // [mobile] On search input focus, add searching class
+      $('form').on('focus', '.search-field-input', function(event) {
+        $(this).closest('.layout-content-list').addClass('searching');
+      });
+
       // On search submit
       $('form.search-field').submit(function(event) {
+
+        // [mobile] On search submit, remove searching class
+        $(this).closest('.layout-content-list').removeClass('searching');
+        $(this).find('input').blur();
 
         // Prevent form to conflict with instantsearch behavior
         event.preventDefault();
 
         // Close autocomplete when submitting search
         $('.layout-list-map .search-field-input').autocomplete('close');
-
-        // [mobile] Display results list
-        if (options.mobileMediaQuery.matches) {
-          $('.block-search-results').show();
-        }
 
       });
 
@@ -181,6 +186,7 @@ Paris.listEquipments = (function(){
         search.helper.search();
 
         mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">'+suggestion.name+'</h3><div class="card-text">'+suggestion.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>', [suggestion._geoloc.lng, suggestion._geoloc.lat]);
+        $(this).closest('.layout-content-list').removeClass('searching');
 
       });
 
@@ -194,7 +200,7 @@ Paris.listEquipments = (function(){
         // On search, destroy carousel (if it exists)
         search.helper.on('search', function(state, lastResults) {
 
-          $('.block-search-results').css('opacity', 0);
+          $('.block-search-results').css('opacity', 0); // fix blinking bug
           if (flkyCarousel && flkyCarousel != undefined) {
             flkyCarousel.destroy();
           }
@@ -203,11 +209,12 @@ Paris.listEquipments = (function(){
 
         // On search result, init carousel
         search.helper.on('result', function(results, state) {
-          console.log('render results');
           flkyCarousel = new Flickity('.carousel', {
-            pageDots: false
+            pageDots: false,
+            adaptiveHeight: true
           });
-          $('.block-search-results').css('opacity', 1);
+          $('.block-search-results').css('opacity', 1); // fix blinking bug
+          $('.block-search-results').show();
         });
 
       }

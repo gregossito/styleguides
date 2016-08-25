@@ -139,6 +139,16 @@
     font-size: 12px;
     width: calc(100% - 58px);
   }
+  .block-search-field .search-field-submit {
+      display: none;
+  }
+  .algolia-autocomplete,
+  .algolia-autocomplete .search-field-input[type="text"].aa-input,
+  .algolia-autocomplete .aa-input,
+  .algolia-autocomplete .aa-hint,
+  .algolia-autocomplete .aa-dropdown-menu {
+    width: 100%;
+  }
 }
 
 @include medium {

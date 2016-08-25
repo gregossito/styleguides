@@ -30,18 +30,28 @@
 @include small {
   .layout-list-map {
     height: calc(100vh - #{$rheader-height-small});
-
+    
     .layout-content-list,
     .layout-content-map {
       float: none;
     }
 
     .layout-content-list {
-      max-width: none;
       height: auto;
-      overflow: visible;
 
+      &.searching {
+        height: inherit;
+    
+        .block-search-filters {
+          display: block;
+        }
+
+        .block-search-results {
+          display: none !important;
+        }
+      }
     }
+
     .layout-content-map {
       width: 100%;
     }

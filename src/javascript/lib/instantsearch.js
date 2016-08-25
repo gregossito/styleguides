@@ -16,7 +16,8 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
   operator, // Facets operator
   sortBy, // Facet ordering
   numberOfFacets, // Expected number of facets (displayed in popup)
-  moreButtonText // Text for more facets button
+  moreButtonText, // Text for more facets button
+  applyButtonText // Text for apply facets button
 }) {
   var helper;
   // Store all facets values
@@ -25,6 +26,11 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
   var wrapperSelectorID = 'facet-list-wrapper';
   // Base HTML code for popup
   var popupHTML = '<div class="block-search-filters-popup"><div class="popup-background"></div><div class="popup-content"></div></div>';
+
+
+  var options = {
+    mobileMediaQuery: window.matchMedia("(max-width: 767px)")
+  };
 
   return {
 
@@ -46,6 +52,7 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
 
       // Bind filter button event
       $(container).on('click', '.filterButton', this.onClickButton.bind(this));
+      $(container).on('click', '.apply-filters-button', this.onClickApplyButton.bind(this));
 
       var _this = this;
 
@@ -97,9 +104,16 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       $this.toggleClass('active');
 
       // Toggle facet and force new search request
-      this.helper
-        .toggleRefinement(attributeName,$this.text())
-        .search();
+      this.helper.toggleRefinement(attributeName,$this.text());
+
+      if (!options.mobileMediaQuery.matches) {
+        this.helper.search();
+      }
+    },
+
+    onClickApplyButton(e) {
+      this.helper.search();
+      $(e.target).closest('.layout-content-list').removeClass('searching');
     },
 
     // Initiate view
@@ -241,6 +255,13 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
         var data = {
           text: moreButtonText,
           modifiers: ["secondary", "small", "more-filters-button"]
+        };
+        content += Paris.templates['button']['button'](data);
+
+        // At the end append a apply button
+        var data = {
+          text: applyButtonText,
+          modifiers: ["apply-filters-button"]
         };
         content += Paris.templates['button']['button'](data);
       }
