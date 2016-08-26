@@ -19,6 +19,8 @@ Paris.listEquipments = (function(){
     mobileMediaQuery: window.matchMedia("(max-width: 767px)")
   };
 
+  var flkyCarousel;
+
   function listEquipments(selector, userOptions) {
     var $el = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
@@ -124,8 +126,7 @@ Paris.listEquipments = (function(){
       // On search submit
       $('form.search-field').submit(function(event) {
 
-        // [mobile] On search submit, remove searching class
-        $(this).closest('.layout-content-list').removeClass('searching');
+        // [mobile] On search submit, blur input
         $(this).find('input').blur();
 
         // Prevent form to conflict with instantsearch behavior
@@ -186,40 +187,66 @@ Paris.listEquipments = (function(){
         search.helper.search();
 
         mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">'+suggestion.name+'</h3><div class="card-text">'+suggestion.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>', [suggestion._geoloc.lng, suggestion._geoloc.lat]);
-        $(this).closest('.layout-content-list').removeClass('searching');
 
       });
 
       search.start();
 
 
-      // [mobile] Results list carousel
-      if (options.mobileMediaQuery.matches) {
-        var flkyCarousel;
+      // On search
+      search.helper.on('search', function(state, lastResults) {
 
-        // On search, destroy carousel (if it exists)
-        search.helper.on('search', function(state, lastResults) {
+        if (options.mobileMediaQuery.matches) {
 
+          // [mobile] Destroy carousel
           $('.block-search-results').css('opacity', 0); // fix blinking bug
-          if (flkyCarousel && flkyCarousel != undefined) {
-            flkyCarousel.destroy();
-          }
+          destroyCarousel();
 
-        });
+        }
+      });
 
-        // On search result, init carousel
-        search.helper.on('result', function(results, state) {
-          flkyCarousel = new Flickity('.carousel', {
-            pageDots: false,
-            adaptiveHeight: true
-          });
+      // On search result
+      search.helper.on('result', function(results, state) {
+
+        $('.layout-content-list').removeClass('searching');
+
+        if (options.mobileMediaQuery.matches) {
+
+          // [mobile] Init carousel
+          initCarousel();
           $('.block-search-results').css('opacity', 1); // fix blinking bug
-          $('.block-search-results').show();
-        });
 
-      }
+        }
+      });
+
+      // On resize
+      $( window ).resize(function() {
+
+        if (options.mobileMediaQuery.matches) {
+          // [mobile] Init carousel
+          initCarousel();
+        } else {
+          // [desktop] Destroy carousel
+          destroyCarousel();
+        }
+      });
 
       $el.data('api', api);
+    }
+
+    function initCarousel() {
+      destroyCarousel();
+      flkyCarousel = new Flickity('.carousel', {
+        pageDots: false,
+        adaptiveHeight: true
+      });
+      $('.block-search-results').show();
+    }
+
+    function destroyCarousel() {
+      if (flkyCarousel && flkyCarousel != undefined) {
+        flkyCarousel.destroy();
+      }
     }
 
     function initOptions() {
