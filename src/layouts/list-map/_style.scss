@@ -34,6 +34,8 @@
     .layout-content-list,
     .layout-content-map {
       float: none;
+      width: 100%;
+      max-width: 100%;
     }
 
     .layout-content-list {
@@ -50,10 +52,6 @@
           display: none !important;
         }
       }
-    }
-
-    .layout-content-map {
-      width: 100%;
     }
   }
 }
