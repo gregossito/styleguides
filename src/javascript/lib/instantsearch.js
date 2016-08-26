@@ -280,7 +280,7 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       // For each facets build html
       $.each(facets, function(i, facet) {
         var checked = ($.inArray(facet, selectedValues) >= 0) ? 'checked="checked"' : '';
-        content += '<label><input type="checkbox" name="categories[]" value="' + facet + '" ' + checked + '><span>' + facet + '</span></label>';
+        content += '<label><input type="checkbox" name="categories[]" value="' + facet + '" ' + checked + '><span class="label-bg"></span><span class="label-txt">' + facet + '</span></label>';
       });
       content += '</div>';
 
