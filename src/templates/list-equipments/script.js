@@ -3,8 +3,7 @@ require('velocity-animate');
 
 var algoliasearch = require('algoliasearch');
 var instantsearch = require('instantsearch.js');
-var instantsearchMapbox = require('instantsearch-mapbox');
-var Flickity = require('flickity');
+var Flickity = require('flickity-imagesloaded');
 
 var Paris = window.Paris || {};
 
@@ -87,7 +86,7 @@ Paris.listEquipments = (function(){
       );
 
       // Mapbox widget
-      var mapboxWidget = instantsearch.widgets.mapbox({
+      var mapboxWidget = Paris.instantsearch.widgets.mapbox({
         container: '#map',
         mapBoxAccessToken: 'pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw',
         mapbox: {

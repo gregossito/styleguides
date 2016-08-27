@@ -65,7 +65,6 @@
     "gulp-util": "^3.0.4",
     "harp": "^0.20",
     "instantsearch.js": "^1.6.4",
-    "instantsearch-mapbox": "file:local_modules/instantsearch-mapbox",
     "jade": "^1.9.2",
     "jadeify": "^4.1.0",
     "js-cookie": "^2.0.3",
