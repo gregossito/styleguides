@@ -51,9 +51,9 @@ Paris.listEquipments = (function(){
           container: '.block-search-filters .block-search-content',
           attributeName: 'categories',
           operator: 'or',
-          limit: 10,
           sortBy: ['name:asc', 'count:desc'],
           numberOfFacets: 200,
+          mainFacets: ["Associations", "Collèges", "Cinémas", "Commissariats", "Trésorerie", "Tennis", "Piscines"],
           moreButtonText: 'Afficher la liste complète',
           applyButtonText: 'Appliquer'
         })

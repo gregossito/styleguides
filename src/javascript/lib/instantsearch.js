@@ -12,12 +12,12 @@ Paris.instantsearch = {widgets: {}};
 Paris.instantsearch.widgets.refinementList = function refinementList({
   container, // DOM selector in which to add UI
   attributeName, // Attribute name for facets
-  limit, // Limit of main facets
   operator, // Facets operator
   sortBy, // Facet ordering
   numberOfFacets, // Expected number of facets (displayed in popup)
   moreButtonText, // Text for more facets button
-  applyButtonText // Text for apply facets button
+  applyButtonText, // Text for apply facets button
+  mainFacets // Main facets filter
 }) {
   var helper;
   // Store all facets values
@@ -26,8 +26,6 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
   var wrapperSelectorID = 'facet-list-wrapper';
   // Base HTML code for popup
   var popupHTML = '<div class="block-search-filters-popup"><div class="popup-background"></div><div class="popup-content"></div></div>';
-
-
   var options = {
     mobileMediaQuery: window.matchMedia("(max-width: 767px)")
   };
@@ -40,7 +38,7 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       };
 
       var currentMaxValuesPerFacet = configuration.maxValuesPerFacet || 0;
-      widgetConfiguration.maxValuesPerFacet = Math.max(currentMaxValuesPerFacet, limit);
+      widgetConfiguration.maxValuesPerFacet = Math.max(currentMaxValuesPerFacet, mainFacets.length);
 
       return widgetConfiguration;
     },
@@ -70,6 +68,9 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
           $.each(content.getFacetValues(attributeName, {sortBy}), function(i, facet) {
             facets.push(facet.name);
           });
+
+          _this.orderFacets();
+
           // Init filter view
           _this.initView();
           _this.initSearchFiltersPopupEvents();
@@ -116,6 +117,19 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       $(e.target).closest('.layout-content-list').removeClass('searching');
     },
 
+    orderFacets() {
+      // Clean not valid facets passed as parameters
+      mainFacets = $.grep(mainFacets, function(n, i) {
+        return $.inArray(n, facets) >= 0;
+      });
+      // Remove duplicate between mainfacets and facets
+      facets = $.grep(facets, function(n, i) {
+        return $.inArray(n, mainFacets) < 0;
+      });
+      // Merge into a unique array with mainFacets at the beginninf of the arry
+      facets = $.merge($.merge( [], mainFacets ), facets);
+    },
+    
     // Initiate view
     initView() {
       var $container = $(container);
@@ -223,7 +237,7 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
 
       var content = '';
       // For each main facet create html button
-      $.each(facets.slice(0, limit), function(i, facet) {
+      $.each(mainFacets, function(i, facet) {
         var data = {
           text: facet,
           modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton']
@@ -236,9 +250,8 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       });
 
       // Test if we have a need for main and second facets display (so we need to show more facets in a popup)
-      if (facets.length > limit) {
+      if (facets.length > mainFacets.length) {
 
-        var mainFacets = facets.slice(0, limit);
         // Check if some selected values are not main filters.
         $.each(selectedValues, function(i, value) {
           // If a selected value is not already a rendered main facets, append a new filter button
