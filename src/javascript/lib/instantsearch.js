@@ -69,7 +69,7 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
             facets.push(facet.name);
           });
 
-          _this.orderFacets();
+          _this.prepareFacets();
 
           // Init filter view
           _this.initView();
@@ -117,19 +117,13 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       $(e.target).closest('.layout-content-list').removeClass('searching');
     },
 
-    orderFacets() {
+    prepareFacets() {
       // Clean not valid facets passed as parameters
       mainFacets = $.grep(mainFacets, function(n, i) {
         return $.inArray(n, facets) >= 0;
       });
-      // Remove duplicate between mainfacets and facets
-      facets = $.grep(facets, function(n, i) {
-        return $.inArray(n, mainFacets) < 0;
-      });
-      // Merge into a unique array with mainFacets at the beginninf of the arry
-      facets = $.merge($.merge( [], mainFacets ), facets);
     },
-    
+
     // Initiate view
     initView() {
       var $container = $(container);
