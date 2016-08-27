@@ -425,6 +425,13 @@ Paris.instantsearch.widgets.mapbox = function mapbox(options) {
       });
       showPopup(html, coordinates);
       settings.openedHit();
+    },
+    flyTo: function(coordinates) {
+      map.flyTo({
+        center: coordinates,
+        zoom: settings.cluster.clusterMaxZoom,
+        curve: 1.2
+      });
     }
   }
 }
@@ -514,9 +521,7 @@ function initMap(container) {
     var bounds = map.getBounds();
     helper
       .setQueryParameter('insideBoundingBox', bounds._sw.lat+','+bounds._sw.lng+','+bounds._ne.lat+','+bounds._ne.lng)
-      .search()
-      // Clear geoloc param right after launching request
-      .setQueryParameter('insideBoundingBox', undefined);
+      .search();
   });
 
   // Indicate that the symbols are clickable by changing the cursor style to 'pointer'.
@@ -571,7 +576,7 @@ function initMap(container) {
 
   // Search is based on map bounds all the time except when user type in a text in search field
   helper.on('change', function(state, lastResults) {
-    if (lastResults.query != state.query) {
+    if (state.query && (lastResults.query != state.query)) {
     // Clear geoloc param right after launching request
       helper.setQueryParameter('insideBoundingBox', undefined);
     } else {

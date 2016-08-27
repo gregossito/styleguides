@@ -4,6 +4,9 @@ require('velocity-animate');
 var algoliasearch = require('algoliasearch');
 var instantsearch = require('instantsearch.js');
 var Flickity = require('flickity-imagesloaded');
+var autocomplete = require('autocomplete.js');
+var places =  require('places.js');
+var placesAutocompleteDataset =  require('places.js/autocompleteDataset');
 
 var Paris = window.Paris || {};
 
@@ -23,6 +26,7 @@ Paris.listEquipments = (function(){
   function listEquipments(selector, userOptions) {
     var $el = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
+      placeQuery = '',
       api = {},
       search;
 
@@ -132,7 +136,7 @@ Paris.listEquipments = (function(){
         event.preventDefault();
 
         // Close autocomplete when submitting search
-        $('.layout-list-map .search-field-input').autocomplete('close');
+        autocomplete('close');
 
       });
 
@@ -156,7 +160,7 @@ Paris.listEquipments = (function(){
       var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       var index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
 
-      $('.layout-list-map .search-field-input').autocomplete({ hint: false }, [{
+      var equipementDataset = {
         source: function(query, callback) {
           var categories = [];
           if (search.helper.state.disjunctiveFacetsRefinements && search.helper.state.disjunctiveFacetsRefinements.categories) {
@@ -176,21 +180,52 @@ Paris.listEquipments = (function(){
         },
         displayKey: 'name',
         templates: {
+          header: '<div class="ad-example-header">Équipements</div>',
           suggestion: function(suggestion) {
             return '<span class="autocomplete-category">' + 'Équipement' + '</span>' + '<span class="autocomplete-name">' + suggestion._highlightResult.name.value + '</span>';
           }
         }
-      }
+      };
+
+      var placesDataset = placesAutocompleteDataset({
+        algoliasearch: algoliasearch,
+        templates: {
+          header: '<div class="ad-example-header">Adresses</div>',
+          suggestion: function(suggestion) {
+            return '<span class="autocomplete-category">' + 'ADRESSE' + '</span>' + '<span class="autocomplete-name">' + suggestion.highlight.name + '</span>';
+          },
+          footer : ''
+        },
+        hitsPerPage: 2,
+        countries: ['fr'],
+        aroundLatLngViaIP: true,
+        style: false
+      });
+
+      autocomplete('.layout-list-map .search-field-input', { hint: false }, [
+        placesDataset, equipementDataset
       ]).on('autocomplete:selected', function(event, suggestion, dataset) {
-        search.helper.setQuery(suggestion.name);
-        search.helper.search();
-
-        mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">'+suggestion.name+'</h3><div class="card-text">'+suggestion.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>', [suggestion._geoloc.lng, suggestion._geoloc.lat]);
-
+        if (dataset == 'places') {
+          placeQuery = suggestion.value;
+          search.helper.setQuery(suggestion.value);
+          mapboxWidget.flyTo([suggestion.latlng.lng, suggestion.latlng.lat]);
+        } else {
+          placeQuery = '';
+          search.helper.setQuery(suggestion.name);
+          search.helper.search();
+          mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">'+suggestion.name+'</h3><div class="card-text">'+suggestion.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>', [suggestion._geoloc.lng, suggestion._geoloc.lat]);
+        }
       });
 
       search.start();
 
+      // Use change event to detect facets reseting action
+      search.helper.on('change', function(state, lastResults) {
+        var query = state.query;
+        if (query && placeQuery.indexOf(query) >= 0) {
+          state.query = '';
+        }
+      });
 
       // On search
       search.helper.on('search', function(state, lastResults) {
