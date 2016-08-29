@@ -416,7 +416,7 @@ Paris.instantsearch.widgets.mapbox = function mapbox(options) {
       renderMap(geoJSON, 'searchHits');
     },
     // Used for example to open a hit from a list outside the map
-    openHit: function(html, coordinates) {
+    openHit: function(html, coordinates, hitID) {
       skipRefine = true;
       map.flyTo({
         center: coordinates,
@@ -424,7 +424,7 @@ Paris.instantsearch.widgets.mapbox = function mapbox(options) {
         curve: 1.2
       });
       showPopup(html, coordinates);
-      settings.openedHit();
+      settings.openedHit(hitID);
     },
     flyTo: function(coordinates) {
       map.flyTo({
@@ -510,7 +510,7 @@ function initMap(container) {
     } else {
       var html = settings.popupHTMLForHit(feature.properties);
       showPopup(html, feature.geometry.coordinates); 
-      settings.openedHit();
+      settings.openedHit(feature.properties.idequipements);
     }
   });
 
@@ -608,7 +608,11 @@ function showPopup(html, coordinates) {
 
   var popup = new mapboxgl.Popup({
     closeButton: false
+  })
+  popup.on('close', function(e) {
+    $('.card').removeClass('active');
   });
+
   // To help some binding element
   var htmlWrapper = '<div class="map-popup">'+html+'</div>';
 

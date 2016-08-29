@@ -10,6 +10,10 @@
   transition: color 0.35s ease;
   width: 100%;
 
+  &.active {
+    background-color: darken($grayF2, 5%);
+  }
+
   &:hover {
     color: $black;
     .card-image:after {opacity: 0;}

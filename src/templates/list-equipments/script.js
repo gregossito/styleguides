@@ -80,7 +80,7 @@ Paris.listEquipments = (function(){
           container: '#hits-container',
           templates: {
             empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '</p>',
-            item: '<a href="#" class="card open" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address}}</span><br><span class="card-zipcode">{{zipCode}}</span> <span class="card-city">{{city}}</span></div><div class="card-hours open">Ouvert jusqu’à 21h</div></div></a>'
+            item: '<a href="#" class="card open" hitid="{{idequipements}}" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address}}</span><br><span class="card-zipcode">{{zipCode}}</span> <span class="card-city">{{city}}</span></div><div class="card-hours open">Ouvert jusqu’à 21h</div></div></a>'
           },
           cssClasses: {
             root: 'carousel',
@@ -108,12 +108,13 @@ Paris.listEquipments = (function(){
           circleColor: '#f89cd3',
           circleRadius: 15
         },
-        openedHit: function() {
-          console.log('Click on hit on map event');
-          // TODO scroll to hit
+        openedHit: function(hitID) {
+          var addClassDelay = ($('#hits-container .card[hitid="'+hitID+'"]').length > 0) ? 0 : 100;
+          setTimeout(function() {
+            $('#hits-container .card[hitid="'+hitID+'"]').addClass('active');
+          }, addClassDelay);
         },
         popupHTMLForHit: function(hit) {
-          console.log(hit);
           return renderMapPopupContent(hit);
         }
       });
@@ -155,7 +156,10 @@ Paris.listEquipments = (function(){
           city: $(card).find('.card-city').html()
         }
         var content = renderMapPopupContent(hit);
-        mapboxWidget.openHit(content, [card.getAttribute('lng'), card.getAttribute('lat')]);
+        mapboxWidget.openHit(content, [card.getAttribute('lng'), card.getAttribute('lat')], card.getAttribute('hitid'));
+
+         
+        $(card).addClass('active');
       });
 
       // Handle click on map popup
@@ -226,7 +230,7 @@ Paris.listEquipments = (function(){
           search.helper.setQuery(suggestion.name);
           search.helper.search();
           var content = renderMapPopupContent(suggestion);
-          mapboxWidget.openHit(content, [suggestion._geoloc.lng, suggestion._geoloc.lat]);
+          mapboxWidget.openHit(content, [suggestion._geoloc.lng, suggestion._geoloc.lat], suggestion.idequipements);
         }
       });
 
