@@ -80,7 +80,7 @@ Paris.listEquipments = (function(){
           container: '#hits-container',
           templates: {
             empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '</p>',
-            item: '<a href="#" class="card open" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text">{{address}}<br>{{zipCode}} {{city}}</div><div class="card-hours open">Ouvert jusqu’à 21h</div></div></a>'
+            item: '<a href="#" class="card open" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address}}</span><br><span class="card-zipcode">{{zipCode}}</span> <span class="card-city">{{city}}</span></div><div class="card-hours open">Ouvert jusqu’à 21h</div></div></a>'
           },
           cssClasses: {
             root: 'carousel',
@@ -114,7 +114,7 @@ Paris.listEquipments = (function(){
         },
         popupHTMLForHit: function(hit) {
           console.log(hit);
-          return '<div class="card-content"><h3 class="card-title">'+hit.name+'</h3><div class="card-text">'+hit.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>';
+          return renderMapPopupContent(hit);
         }
       });
 
@@ -148,7 +148,14 @@ Paris.listEquipments = (function(){
       // Center map and open pin on list result click
       $('#hits-container').on('click', '.card', function(event) {
         var card = event.target.closest('.card');
-        mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">Titre</h3><div class="card-text">Adresse</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>', [card.getAttribute('lng'), card.getAttribute('lat')]);
+        var hit = {
+          name: $(card).find('.card-title').html(),
+          address: $(card).find('.card-address').html(),
+          zipCode: $(card).find('.card-zipcode').html(),
+          city: $(card).find('.card-city').html()
+        }
+        var content = renderMapPopupContent(hit);
+        mapboxWidget.openHit(content, [card.getAttribute('lng'), card.getAttribute('lat')]);
       });
 
       // Handle click on map popup
@@ -213,7 +220,8 @@ Paris.listEquipments = (function(){
           placeQuery = '';
           search.helper.setQuery(suggestion.name);
           search.helper.search();
-          mapboxWidget.openHit('<div class="card-content"><h3 class="card-title">'+suggestion.name+'</h3><div class="card-text">'+suggestion.address+'</div><div class="card-hours open">Ouvert jusqu’à 21h</div><a href="/">Fiche complète</a></div>', [suggestion._geoloc.lng, suggestion._geoloc.lat]);
+          var content = renderMapPopupContent(suggestion);
+          mapboxWidget.openHit(content, [suggestion._geoloc.lng, suggestion._geoloc.lat]);
         }
       });
 
@@ -281,6 +289,22 @@ Paris.listEquipments = (function(){
       if (flkyCarousel && flkyCarousel != undefined) {
         flkyCarousel.destroy();
       }
+    }
+
+    function renderMapPopupContent(hit) {
+      var content = '';
+      content += '<div class="card-content">';
+      content += '<h3 class="card-title">'+hit.name+'</h3>';
+      content += '<div class="card-text"><span class="card-address">'+hit.address+'</span><br><span class="card-zipcode">'+hit.zipCode+'</span> <span class="card-city">'+hit.city+'</span></div>';
+      content += '<div class="card-hours open">Ouvert jusqu’à 21h</div>';
+      content += '<div class="buttons">';
+      content += Paris.templates['button']['button']({
+        text: 'Voir la fiche complète',
+        modifiers: ["secondary", "small"]
+      });
+      content += '</div>';
+      content += '</div>';
+      return content;
     }
 
     function initOptions() {
