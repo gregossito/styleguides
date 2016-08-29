@@ -432,6 +432,11 @@ Paris.instantsearch.widgets.mapbox = function mapbox(options) {
         zoom: settings.cluster.clusterMaxZoom,
         curve: 1.2
       });
+    },
+    removePopup: function() {
+      if (lastPopup) {
+        lastPopup.remove();
+      }
     }
   }
 }
@@ -601,7 +606,9 @@ function showPopup(html, coordinates) {
     return;
   }
 
-  var popup = new mapboxgl.Popup();
+  var popup = new mapboxgl.Popup({
+    closeButton: false
+  });
   // To help some binding element
   var htmlWrapper = '<div class="map-popup">'+html+'</div>';
 

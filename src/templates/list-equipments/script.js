@@ -163,6 +163,11 @@ Paris.listEquipments = (function(){
         console.log("popup clicked");
       });
 
+      // Handle click on map close popup button
+      $('#map').on('click', '.close-popup-btn', function(event) {
+        mapboxWidget.removePopup();
+      });
+
       // Autocompletion is not an instantsearch feature. Must use algolia.js directly
       var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       var index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
@@ -303,6 +308,7 @@ Paris.listEquipments = (function(){
         modifiers: ["secondary", "small"]
       });
       content += '</div>';
+      content += '<span class="close-popup-btn"><i class="icon-close"></i></span>'
       content += '</div>';
       return content;
     }
