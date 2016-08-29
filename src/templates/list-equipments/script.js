@@ -182,7 +182,7 @@ Paris.listEquipments = (function(){
         templates: {
           header: '<div class="ad-example-header">Équipements</div>',
           suggestion: function(suggestion) {
-            return '<span class="autocomplete-category">' + 'Équipement' + '</span>' + '<span class="autocomplete-name">' + suggestion._highlightResult.name.value + '</span>';
+            return '<span class="autocomplete-name">' + suggestion._highlightResult.name.value + '</span>';
           }
         }
       };
@@ -192,7 +192,7 @@ Paris.listEquipments = (function(){
         templates: {
           header: '<div class="ad-example-header">Adresses</div>',
           suggestion: function(suggestion) {
-            return '<span class="autocomplete-category">' + 'ADRESSE' + '</span>' + '<span class="autocomplete-name">' + suggestion.highlight.name + '</span>';
+            return '<span class="autocomplete-name">' + suggestion.value + '</span>';
           },
           footer : ''
         },

@@ -134,6 +134,12 @@
   width: calc(100% - 10px);
 }
 
+.algolia-autocomplete .ad-example-header {
+  padding: 10px 5px;
+  background-color: $grayCC;
+  font-weight: bold;
+}
+
 @include small {
   .search-field-input[type="text"] {
     font-size: 12px;
