@@ -116,6 +116,10 @@
         width: 100%;
       }
     }
+
+    &.active {
+      background-color: $grayF2;
+    }
   }
 }
 

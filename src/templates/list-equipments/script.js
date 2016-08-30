@@ -109,10 +109,17 @@ Paris.listEquipments = (function(){
           circleRadius: 15
         },
         openedHit: function(hitID) {
+          // [desktop] Add active class
           var addClassDelay = ($('#hits-container .card[hitid="'+hitID+'"]').length > 0) ? 0 : 100;
           setTimeout(function() {
             $('#hits-container .card[hitid="'+hitID+'"]').addClass('active');
           }, addClassDelay);
+
+          // [mobile] Go to slide
+          if (flkyCarousel && flkyCarousel != undefined) {
+            var index = $('#hits-container .card[hitid="'+hitID+'"]').closest('.carousel-cell').prevAll().length;
+            flkyCarousel.select(index);
+          }
         },
         popupHTMLForHit: function(hit) {
           return renderMapPopupContent(hit);
