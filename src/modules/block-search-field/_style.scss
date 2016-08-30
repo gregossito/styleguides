@@ -9,10 +9,10 @@
 @include small {
 
   .block-search-field {
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 
     .block-search-content {
-      padding-top: 20px;
+      padding-top: 15px;
       border-top: 1px solid $grayCC;
     }
 
@@ -32,9 +32,9 @@
       
       a {
         position: absolute;
-        top: 30px;
-        right: 30px;
-        width: calc(50% - 30px);
+        top: 15px;
+        right: 15px;
+        width: calc(50% - 15px);
         text-align: center;
         color: $color-secondary;
         font-size: 18px;

@@ -74,6 +74,10 @@
 
 @include small {
 
+  .block-search {
+    padding: 15px;
+  }
+
   .block-search-results {
     display: none;
     position: absolute;

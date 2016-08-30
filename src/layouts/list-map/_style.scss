@@ -27,6 +27,12 @@
   }
 }
 
+@include large-and-medium {
+  .layout-list-map {
+    height: calc(100vh - #{$rheader-height-medium});
+  }
+}
+
 @include small {
   .layout-list-map {
     height: calc(100vh - #{$rheader-height-small});
@@ -53,11 +59,9 @@
         }
       }
     }
-  }
-}
 
-@include large-and-medium {
-  .layout-list-map {
-    height: calc(100vh - #{$rheader-height-medium});
+    .layout-content-map {
+      height: calc(100vh - #{$rheader-height-medium} - 109px);
+    }
   }
 }
