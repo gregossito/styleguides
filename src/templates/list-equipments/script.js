@@ -60,7 +60,8 @@ Paris.listEquipments = (function(){
           numberOfFacets: 200,
           mainFacets: ["Associations", "Collèges", "Cinémas", "Commissariats", "Trésorerie", "Tennis", "Piscines"],
           moreButtonText: 'Afficher la liste complète',
-          applyButtonText: 'Appliquer'
+          applyButtonText: 'Appliquer',
+          aroundMeButtonText: 'Autour de moi'
         })
       );
       

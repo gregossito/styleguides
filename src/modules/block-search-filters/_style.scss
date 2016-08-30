@@ -6,6 +6,12 @@
       margin-right: 10px;
     }
 
+    .around-me-button {
+      display: none;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
     .more-filters-button {
         display: inline-block;
     }
@@ -129,6 +135,11 @@
       .apply-filters-button {
         display: block;
       }
+
+      .around-me-button {
+        display: block;
+      }
+
     }
   }
 }

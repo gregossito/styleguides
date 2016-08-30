@@ -17,6 +17,7 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
   numberOfFacets, // Expected number of facets (displayed in popup)
   moreButtonText, // Text for more facets button
   applyButtonText, // Text for apply facets button
+  aroundMeButtonText, // Text for around me button
   mainFacets // Main facets filter
 }) {
   var helper;
@@ -230,6 +231,13 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       var $container = $(container + ' #' + wrapperSelectorID);
 
       var content = '';
+      // Append an around me button
+      var data = {
+        text: aroundMeButtonText,
+        modifiers: ["secondary", "around-me-button"]
+      };
+      content += Paris.templates['button']['button'](data);
+
       // For each main facet create html button
       $.each(mainFacets, function(i, facet) {
         var data = {
