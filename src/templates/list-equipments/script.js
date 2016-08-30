@@ -22,6 +22,7 @@ Paris.listEquipments = (function(){
   };
 
   var flkyCarousel;
+  var firstLoad = true;
 
   function listEquipments(selector, userOptions) {
     var $el = $(selector),
@@ -266,7 +267,10 @@ Paris.listEquipments = (function(){
       // On search result
       search.helper.on('result', function(results, state) {
 
-        $('.layout-content-list').removeClass('searching');
+        if ( firstLoad === false) {
+          $('.layout-content-list').removeClass('searching');
+        }
+        firstLoad = false;
 
         if (options.mobileMediaQuery.matches) {
 
