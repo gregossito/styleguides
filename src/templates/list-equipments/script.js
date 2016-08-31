@@ -58,7 +58,7 @@ Paris.listEquipments = (function(){
           operator: 'or',
           sortBy: ['name:asc', 'count:desc'],
           numberOfFacets: 200,
-          mainFacets: ["Associations", "Collèges", "Cinémas", "Commissariats", "Trésorerie", "Tennis", "Piscines"],
+          mainFacets: ["Piscines", "Bibliothèques", "Parcs et jardins", "Marchés", "Ateliers des Beaux-Arts", "Centres d’animation", "Conservatoires", "Musées municipaux", "Tennis", "Maisons des assos"],
           moreButtonText: 'Afficher la liste complète',
           applyButtonText: 'Appliquer',
           aroundMeButtonText: 'Autour de moi'

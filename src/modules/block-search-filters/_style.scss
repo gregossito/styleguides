@@ -23,6 +23,28 @@
     }
   }
 
+  .secondary-filters {
+    margin-top: 5px;
+
+    .secondary-filter {
+      border-top: 1px solid $grayCC;
+      padding: 15px 0;
+      text-align: center;
+
+      span.secondary-filter-title {
+        display: block;
+        margin-bottom: 15px;
+        color: $color-secondary;
+        font-weight: 400;
+      }
+
+      input[type="checkbox"] {
+        display: inline-block;
+        margin-right: 8px;
+      }
+    }
+  }
+
   .block-search-filters-popup {
     display: none;
     position: fixed;

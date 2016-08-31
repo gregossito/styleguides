@@ -272,14 +272,31 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
           modifiers: ["secondary", "small", "more-filters-button"]
         };
         content += Paris.templates['button']['button'](data);
-
-        // At the end append a apply button
-        var data = {
-          text: applyButtonText,
-          modifiers: ["apply-filters-button"]
-        };
-        content += Paris.templates['button']['button'](data);
       }
+
+      // Append secondary filters
+      content += '<div class="secondary-filters">';
+      content += '<div class="secondary-filter">';
+      content += '<span class="secondary-filter-title">Ouverture</span>';
+      content += '<label>';
+      content += '<input type="checkbox" name="open-now">';
+      content += '<span>Ouvert maintenant</span>';
+      content += '</label>';
+      content += '</div>';
+      content += '<div class="secondary-filter">';
+      content += '<span class="secondary-filter-title">Accès handicapé</span>';
+      content += '<select name="open-now">';
+      content += '<option value="">Sans préférence</option>';
+      content += '</select>';
+      content += '</div>';
+      content += '</div>';
+
+      // At the end append a apply button
+      var data = {
+        text: applyButtonText,
+        modifiers: ["apply-filters-button"]
+      };
+      content += Paris.templates['button']['button'](data);
 
       $container.html(content);
     },

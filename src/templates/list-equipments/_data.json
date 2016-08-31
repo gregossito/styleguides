@@ -194,6 +194,23 @@
           "more": {
             "href": "#",
             "text": "Afficher la liste complète"
+          },
+          "applyFiltersButton": {
+            "text": "Appliquer"
+          },
+          "aroundMeButton": {
+            "text": "Autour de moi"
+          },
+          "secondary_filters": {
+            "opening_title": "Ouverture",
+            "opening_label": "Ouvert maintenant",
+            "accessibility_title": "Accès handicapé",
+            "accessibility_choices" : [
+              {
+                "value": "",
+                "text": "Sans préférence"
+              }
+            ]
           }
         },
         "block_search_results": {

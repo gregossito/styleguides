@@ -6,6 +6,9 @@ mixin block-search-filters(data)
   - data.modifiers = data.modifiers || []
   - data.modifiers.push("block-search-filters")
   +block-search(data)
+    if data.aroundMeButton
+      - data.aroundMeButton.modifiers = ["secondary", "around-me-button"]
+      +button(data.aroundMeButton)
     if data.filter_items && data.filter_items.length
       each item in data.filter_items
         - item.modifiers = ["white", "small"]
@@ -34,3 +37,18 @@ mixin block-search-filters(data)
               else if index == 1
                 - button.modifiers = ["confirm", "action"]
               +button(button)
+    .secondary-filters
+      .secondary-filter
+        span.secondary-filter-title= data.secondary_filters.opening_title
+        label
+          input(type='checkbox', name='open-now')
+          span= data.secondary_filters.opening_label
+      if data.secondary_filters.accessibility_choices
+      .secondary-filter
+        span.secondary-filter-title= data.secondary_filters.accessibility_title
+        select(name='open-now')
+          each choice in data.secondary_filters.accessibility_choices
+            option(value= choice.value)= choice.text
+    if data.aroundMeButton
+      - data.applyFiltersButton.modifiers = ["apply-filters-button"]
+      +button(data.applyFiltersButton)

@@ -67,14 +67,7 @@
               "icon": "art-studio",
               "text": "Ateliers des Beaux-Arts"
             }
-          ],
-          "more": {
-            "href": "#",
-            "text": "Afficher la liste complète"
-          },
-          "apply": {
-            "text": "Appliquer"
-          }
+          ]
         }
       }
     ]
