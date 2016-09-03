@@ -59,7 +59,7 @@ Paris.listEquipments = (function(){
           operator: 'or',
           sortBy: ['name:asc', 'count:desc'],
           numberOfFacets: 200,
-          mainFacets: ["Piscines", "Bibliothèques", "Parcs et jardins", "Marchés", "Ateliers des Beaux-Arts", "Centres d’animation", "Conservatoires", "Musées municipaux", "Tennis", "Maisons des assos"],
+          mainFacets: Paris.config.algolia.main_facets,
           moreButtonText: 'Afficher la liste complète',
           applyButtonText: 'Appliquer',
           aroundMeButtonText: 'Autour de moi'
@@ -95,7 +95,7 @@ Paris.listEquipments = (function(){
       // Mapbox widget
       var mapboxWidget = Paris.instantsearch.widgets.mapbox({
         container: '#map',
-        mapBoxAccessToken: 'pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw',
+        mapBoxAccessToken: Paris.config.mapbox.access_token,
         mapbox: {
           style: 'mapbox://styles/parisnumerique/cis1rkqoj000khinpthppoaqd',
           zoom: 11,
@@ -190,7 +190,7 @@ Paris.listEquipments = (function(){
       $('.search-results-container').on('click', '.around-me-button', function(event) {
         mapboxWidget.geolocate();
       });
-      
+
       // Handle click on map favorite button (popup)
       $('#map').on('click', '.favorite-popup-btn', function(event) {
         toggleFavorite(event.target);

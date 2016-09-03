@@ -14,7 +14,7 @@ Paris.config = {
       "persons": "recette_Elus",
       "equipments": "Eqpt"
     },
-
+    "main_facets": ["Piscines", "Bibliothèques", "Parcs et jardins", "Marchés", "Ateliers des Beaux-Arts", "Centres d’animation", "Conservatoires", "Musées municipaux", "Tennis", "Maisons des assos"],
     "url": {
       "api_popular_searches": "http://r7.paris-fr-api.lestudio.mx/AlgoliaStats/getMostSearchedKeywords"
     }
@@ -42,5 +42,8 @@ Paris.config = {
   },
   "captcha": {
     "key": "6Lf2DQoTAAAAAKmk3wEFCZuK3FqG00SlQM3o6Yvp"
+  },
+  "mapbox": {
+    "access_token": "pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw"
   }
 };
