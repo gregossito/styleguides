@@ -347,6 +347,7 @@ var _this,
   helper,
   userMarker,
   lastPopup,
+  geolocate,
   skipRefine = false,
   resizing = false,
   layersID = [],
@@ -364,7 +365,7 @@ var _this,
   };
 
 var userMarkerEl = document.createElement('div');
-userMarkerEl.innerHTML = 'User\'s position';
+userMarkerEl.innerHTML = '<span class="mapbox-gl-user-marker"></span>';
 
 /**
  * Widget options
@@ -463,6 +464,12 @@ Paris.instantsearch.widgets.mapbox = function mapbox(options) {
       if (lastPopup) {
         lastPopup.remove();
       }
+    },
+    zoomOut: function() {
+      map.zoomOut();
+    },
+    geolocate: function() {
+      geolocate._onClickGeolocate();
     }
   }
 }
@@ -497,7 +504,7 @@ function initMap(container) {
 
   //Add map navigation and geolocate controls
   map.addControl(new mapboxgl.Navigation());
-  var geolocate = new mapboxgl.Geolocate();
+  geolocate = new mapboxgl.Geolocate();
   map.addControl(geolocate);
 
   // Use this callback to show a marker at user's position
@@ -510,7 +517,11 @@ function initMap(container) {
     }
     // update marker position each time
     userMarker.setLngLat([e.coords.longitude, e.coords.latitude]);
-    helper.setQueryParameter('aroundLatLng', e.coords.latitude+','+e.coords.longitude);
+    // We can only have search send once with aroundLatLng since it's not working with insideBoundingBox
+    helper
+      .setQueryParameter('aroundLatLng', e.coords.latitude+','+e.coords.longitude)
+      .search()
+      .setQueryParameter('aroundLatLng', undefined);
   });
 
   // When a click event occurs near a place, open a popup at the location of
@@ -609,10 +620,10 @@ function initMap(container) {
     handleTolerance();
   });
 
-  // Search is based on map bounds all the time except when user type in a text in search field
+  // Search is based on map bounds all the time except when user type in a text in search field or search is around lat long
   helper.on('change', function(state, lastResults) {
-    if (state.query && (lastResults.query != state.query)) {
-    // Clear geoloc param right after launching request
+    if ((state.query && (lastResults.query != state.query)) || helper.getQueryParameter('aroundLatLng')) {
+      // Clear geoloc param right after launching request
       helper.setQueryParameter('insideBoundingBox', undefined);
     } else {
       var bounds = map.getBounds();
