@@ -22,6 +22,7 @@ Paris.listEquipments = (function(){
   };
 
   var flkyCarousel;
+  var resizing = false;
   var firstLoad = true;
 
   function listEquipments(selector, userOptions) {
@@ -263,30 +264,27 @@ Paris.listEquipments = (function(){
 
       // On search
       search.helper.on('search', function(state, lastResults) {
+        // Carousel doest not support dom changes so it conflicts with instantsearch. Destroy before hits gets refresh
+        destroyCarousel();
 
         if (options.mobileMediaQuery.matches) {
-
           // [mobile] Destroy carousel
           $('.block-search-results').css('opacity', 0); // fix blinking bug
-          destroyCarousel();
-
         }
       });
 
       // On search result
       search.helper.on('result', function(results, state) {
 
-        if ( firstLoad === false) {
+        if (firstLoad === false) {
           $('.layout-content-list').removeClass('searching');
         }
         firstLoad = false;
 
         if (options.mobileMediaQuery.matches) {
-
-          // [mobile] Init carousel
-          initCarousel();
+          // Carousel doest not support dom changes so it conflicts with instantsearch. Init once search is done
+          initCarousel(); 
           $('.block-search-results').css('opacity', 1); // fix blinking bug
-
         }
       });
 
@@ -302,7 +300,7 @@ Paris.listEquipments = (function(){
 
       // On resize
       $( window ).resize(function() {
-
+        // Constantly check if carousel needs to be initialized depending on media query
         if (options.mobileMediaQuery.matches) {
           // [mobile] Init carousel
           initCarousel();
@@ -310,9 +308,8 @@ Paris.listEquipments = (function(){
           // [desktop] Destroy carousel
           destroyCarousel();
         }
+        $el.data('api', api);
       });
-
-      $el.data('api', api);
     }
 
     function openFavorites() {
@@ -337,17 +334,21 @@ Paris.listEquipments = (function(){
     }
 
     function initCarousel() {
-      destroyCarousel();
-      flkyCarousel = new Flickity('.carousel', {
-        pageDots: false,
-        adaptiveHeight: true
-      });
-      $('.block-search-results').show();
+      // Since init carousel can be called a lot of times, make sure initialization happens only when necessary
+      if (flkyCarousel === undefined) {
+        flkyCarousel = new Flickity('.carousel', {
+          pageDots: false,
+          adaptiveHeight: true
+        });
+        $('.block-search-results').show();
+      }
     }
 
     function destroyCarousel() {
+      // Destroy carousel when necessary
       if (flkyCarousel && flkyCarousel != undefined) {
         flkyCarousel.destroy();
+        flkyCarousel = undefined
       }
     }
 

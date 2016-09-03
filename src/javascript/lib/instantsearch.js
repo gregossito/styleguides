@@ -348,6 +348,7 @@ var _this,
   userMarker,
   lastPopup,
   skipRefine = false,
+  resizing = false,
   layersID = [],
   geoJSON = {
     'type': 'FeatureCollection',
@@ -541,6 +542,10 @@ function initMap(container) {
 
   // Trigger search based on map bounds when user moves map
   map.on('moveend', function (e) {
+    // /!\ This fix a bug with Flickyity carousel which does not support dom changes once intiated. So we avoid triggering search upon window resizing.
+    if (resizing) {
+      return;
+    }
 
     // For some scenario we skip launching geo based request (drag tolerance, or programmatic movement, ...)
     if (skipRefine) {
@@ -614,7 +619,19 @@ function initMap(container) {
       helper.setQueryParameter('insideBoundingBox', bounds._sw.lat+','+bounds._sw.lng+','+bounds._ne.lat+','+bounds._ne.lng)
     }
   });
-  
+
+  // /!\ This fix a bug with Flickyity carousel which does not support dom changes once intiated. So we avoid triggering search upon window resizing.
+  var windowTimer;
+  $( window ).resize(function() {
+    resizing = true
+    clearTimeout(windowTimer);
+    windowTimer = setTimeout(windowDoneResizing, 100);
+  });
+
+  function windowDoneResizing() {
+    resizing = false
+  }
+
 }
 
 /**
