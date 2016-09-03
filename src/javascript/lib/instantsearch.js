@@ -347,6 +347,7 @@ var _this,
   helper,
   userMarker,
   lastPopup,
+  geolocate,
   skipRefine = false,
   resizing = false,
   layersID = [],
@@ -463,6 +464,12 @@ Paris.instantsearch.widgets.mapbox = function mapbox(options) {
       if (lastPopup) {
         lastPopup.remove();
       }
+    },
+    zoomOut: function() {
+      map.zoomOut();
+    },
+    geolocate: function() {
+      geolocate._onClickGeolocate();
     }
   }
 }
@@ -497,7 +504,7 @@ function initMap(container) {
 
   //Add map navigation and geolocate controls
   map.addControl(new mapboxgl.Navigation());
-  var geolocate = new mapboxgl.Geolocate();
+  geolocate = new mapboxgl.Geolocate();
   map.addControl(geolocate);
 
   // Use this callback to show a marker at user's position
@@ -617,7 +624,6 @@ function initMap(container) {
   helper.on('change', function(state, lastResults) {
     if ((state.query && (lastResults.query != state.query)) || helper.getQueryParameter('aroundLatLng')) {
       // Clear geoloc param right after launching request
-      console.log("clear insideBoundingBox");
       helper.setQueryParameter('insideBoundingBox', undefined);
     } else {
       var bounds = map.getBounds();

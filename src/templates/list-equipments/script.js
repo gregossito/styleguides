@@ -182,6 +182,10 @@ Paris.listEquipments = (function(){
         mapboxWidget.removePopup();
       });
 
+      $('.search-results-container').on('click', '.around-me-button', function(event) {
+        mapboxWidget.geolocate();
+      });
+
       // Autocompletion is not an instantsearch feature. Must use algolia.js directly
       var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       var index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
@@ -267,7 +271,6 @@ Paris.listEquipments = (function(){
 
       // On search result
       search.helper.on('result', function(results, state) {
-
         if (firstLoad === false) {
           $('.layout-content-list').removeClass('searching');
         }
@@ -321,6 +324,7 @@ Paris.listEquipments = (function(){
     }
 
     function initCarousel() {
+      destroyCarousel();
       // Since init carousel can be called a lot of times, make sure initialization happens only when necessary
       if (flkyCarousel === undefined) {
         flkyCarousel = new Flickity('.carousel', {
