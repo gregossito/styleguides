@@ -177,11 +177,6 @@ Paris.listEquipments = (function(){
         }
       });
 
-      // Handle click on map popup
-      $('#map').on('click', '.card-title', function(event) {
-        console.log("popup clicked");
-      });
-
       // Handle click on map close popup button
       $('#map').on('click', '.close-popup-btn', function(event) {
         mapboxWidget.removePopup();
@@ -266,6 +261,9 @@ Paris.listEquipments = (function(){
 
       // On search
       search.helper.on('search', function(state, lastResults) {
+
+        // Remove inactive card
+        $('#hits-container .card').removeClass('inactive');
         // Carousel doest not support dom changes so it conflicts with instantsearch. Destroy before hits gets refresh
         destroyCarousel();
 
