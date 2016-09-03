@@ -39,6 +39,40 @@
       font-size: 15px;
     }
   }
+
+  &.cat- {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          background-color: $white;
+          mask: url('../modules/rheader/nef.svg') center center no-repeat;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  &.cat-57 {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+          @include icon-font;
+          color: $white;
+          text-align: center;
+          font-size: 40px;
+          opacity: 0.5;
+          line-height: 120px;
+        }
+      }
+    }
+  }
 }
 
 .card-image {
@@ -53,16 +87,15 @@
   &.no-img {
 
     &:before {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
-      content: "";
+      right: 0;
+      bottom: 0;
       display: block;
       height: 100%;
       width: 100%;
-      background-color: $white;
-      mask: url('../modules/rheader/nef.svg') center center no-repeat;
-      opacity: 0.5;
     }
   }
 
