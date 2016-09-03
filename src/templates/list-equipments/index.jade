@@ -1,6 +1,7 @@
 extends ../../layouts/stack/stack
 
 include ../../modules/block-search/block-search
+include ../../modules/block-favorites/block-favorites
 include ../../modules/block-search-field/block-search-field
 include ../../modules/block-search-filters/block-search-filters
 include ../../modules/block-map/block-map
@@ -20,14 +21,17 @@ append content
   .layout-content
     .layout-list-map
       .layout-content-list.searching
-        +block-search-field(data.list.block_search_field)
-        +block-search-filters(data.list.block_search_filters)
-        +block-search(data.list.block_search_results)
-          .block-search-cards#hits-container
-            .carousel
-              each result in data.list.results
-                .carousel-cell
-                  +card(result)
+        .search-results-container
+          +block-search-field(data.list.block_search_field)
+          +block-search-filters(data.list.block_search_filters)
+          +block-search(data.list.block_search_results)
+            .block-search-cards#hits-container
+              .carousel
+                each result in data.list.results
+                  .carousel-cell
+                    +card(result)
+        .favorites-container
+          +block-search(data.list.block_favorites)
       .layout-content-map
         +block-map()
         

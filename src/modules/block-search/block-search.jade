@@ -5,6 +5,7 @@ mixin block-search(data)
       - var top_link = data.top_link || {};
       if top_link
         span.block-search-top-link
+          a(href=top_link.href title=top_link.text)= top_link.text
     .block-search-content
       if block
         block

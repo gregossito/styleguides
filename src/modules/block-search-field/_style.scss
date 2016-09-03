@@ -11,16 +11,13 @@
   .block-search-field {
     padding-bottom: 15px;
 
-    .block-search-content {
-      padding-top: 15px;
-      border-top: 1px solid $grayCC;
-    }
-
     .block-search-header {
-      width: 50%;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $grayCC;
 
       h3 {
         float: none;
+        width: 50%;
         text-align: center;
       }
     }
@@ -41,7 +38,6 @@
         margin: 0;
         text-decoration: none;
         font-weight: bold;
-        opacity: 0.5;
       }
     }
   }

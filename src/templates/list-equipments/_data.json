@@ -217,6 +217,14 @@
           "title": "Résultats",
           "modifiers": ["block-search-results"]
         },
+        "block_favorites": {
+          "title": "Mes favoris",
+          "modifiers": ["block-favorites"],
+          "top_link": {
+            "href": "#",
+            "text": "Revenir à la recherche"
+          }
+        },
         "results": [
         ]
       },
