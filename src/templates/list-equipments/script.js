@@ -282,6 +282,16 @@ Paris.listEquipments = (function(){
         }
       });
 
+      // Open favorites
+      $('.block-search-field .block-search-bottom-links a').click(function(event) {
+        openFavorites();
+      });
+
+      // Close favorites
+      $('.block-favorites .block-search-top-link a, .block-search-field h3.block-search-title').click(function(event) {
+        closeFavorites();
+      });
+
       // On resize
       $( window ).resize(function() {
 
@@ -295,6 +305,22 @@ Paris.listEquipments = (function(){
       });
 
       $el.data('api', api);
+    }
+
+    function openFavorites() {
+      $('.layout-list-map').addClass('favorites');
+      console.log('TODO: get favorites');
+      var favorites = [];
+      if (favorites && favorites.length > 0) {
+        // Render favorites
+        console.log('TODO: render favorites');
+      } else {
+        $('.block-favorites .block-search-content').html('<p class="no-favorites">' + Paris.i18n.t('list_equipments/no_favorite') + '</p>');
+      }
+    }
+
+    function closeFavorites() {
+      $('.layout-list-map').removeClass('favorites');
     }
 
     function initCarousel() {
