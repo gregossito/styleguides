@@ -112,10 +112,11 @@ Paris.listEquipments = (function(){
           circleRadius: 15
         },
         openedHit: function(hitID) {
-          // [desktop] Add active class
+          // [desktop] Add inactive class
           var addClassDelay = ($('#hits-container .card[hitid="'+hitID+'"]').length > 0) ? 0 : 100;
           setTimeout(function() {
-            $('#hits-container .card[hitid="'+hitID+'"]').addClass('active');
+            $('#hits-container .card').addClass('inactive');
+            $('#hits-container .card[hitid="'+hitID+'"]').removeClass('inactive');
           }, addClassDelay);
 
           // [mobile] Go to slide
@@ -171,7 +172,8 @@ Paris.listEquipments = (function(){
           var content = renderMapPopupContent(hit);
           mapboxWidget.openHit(content, [card.getAttribute('lng'), card.getAttribute('lat')], card.getAttribute('hitid'));
 
-          $(card).addClass('active');
+          $('#hits-container').addClass('inactive');
+          $(card).removeClass('inactive');
         }
       });
 

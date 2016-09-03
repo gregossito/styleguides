@@ -10,8 +10,8 @@
   transition: color 0.35s ease;
   width: 100%;
 
-  &.active {
-    background-color: darken($grayF2, 5%);
+  &.inactive {
+    opacity: 0.3;
   }
 
   &:hover {
@@ -132,8 +132,8 @@
       }
     }
 
-    &.active {
-      background-color: $grayF2;
+    &.inactive {
+      opacity: 1;
     }
   }
 }
