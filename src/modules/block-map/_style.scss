@@ -46,13 +46,24 @@
 				margin-top: 15px;
 			}
 
-			.close-popup-btn {
+			.close-popup-btn,
+			.favorite-popup-btn {
+				color: $gray99;
 				cursor: pointer;
 				position: absolute;
-				right: 0;
+				right: 5px;
 				top: 7px;
-				font-size: 45px;
+				font-size: 20px;
 			}
+
+			.favorite-popup-btn {
+				right: 30px;
+
+				&.selected {
+					color: $orange1;
+				}
+			}
+
 		}
 	}
 }

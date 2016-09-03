@@ -78,6 +78,7 @@
 }
 
 .card-content {
+  position: relative;
   padding: 20px;
 
   .open {color: $green1;}
@@ -95,12 +96,26 @@
   margin-top: 0;
   margin-bottom: 10px;
   min-height: 48px;
+  width: calc(100% - 25px);
 }
 
 .card-text {
   min-height: 38px;
   margin-bottom: 5px;
   color: $gray99;
+}
+
+.favorite-btn {
+  color: $gray99;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+
+  &.selected {
+    color: $orange1;
+  }
 }
 
 

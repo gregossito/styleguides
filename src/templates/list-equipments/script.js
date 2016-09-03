@@ -82,7 +82,7 @@ Paris.listEquipments = (function(){
           container: '#hits-container',
           templates: {
             empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '</p>',
-            item: '<a href="#" class="card open" hitid="{{idequipements}}" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address}}</span><br><span class="card-zipcode">{{zipCode}}</span> <span class="card-city">{{city}}</span></div><div class="card-hours open">Ouvert jusqu’à 21h</div></div></a>'
+            item: '<a href="#" class="card open" hitid="{{idequipements}}" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address}}</span><br><span class="card-zipcode">{{zipCode}}</span> <span class="card-city">{{city}}</span></div><div class="card-hours open">Ouvert jusqu’à 21h</div><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div></a>'
           },
           cssClasses: {
             root: 'carousel',
@@ -157,18 +157,21 @@ Paris.listEquipments = (function(){
 
       // Center map and open pin on list result click
       $('#hits-container').on('click', '.card', function(event) {
-        var card = event.target.closest('.card');
-        var hit = {
-          name: $(card).find('.card-title').html(),
-          address: $(card).find('.card-address').html(),
-          zipCode: $(card).find('.card-zipcode').html(),
-          city: $(card).find('.card-city').html()
-        }
-        var content = renderMapPopupContent(hit);
-        mapboxWidget.openHit(content, [card.getAttribute('lng'), card.getAttribute('lat')], card.getAttribute('hitid'));
+        if (event.target.closest('.favorite-btn')) {
+          toggleFavorite(event.target);
+        } else {
+          var card = event.target.closest('.card');
+          var hit = {
+            name: $(card).find('.card-title').html(),
+            address: $(card).find('.card-address').html(),
+            zipCode: $(card).find('.card-zipcode').html(),
+            city: $(card).find('.card-city').html()
+          }
+          var content = renderMapPopupContent(hit);
+          mapboxWidget.openHit(content, [card.getAttribute('lng'), card.getAttribute('lat')], card.getAttribute('hitid'));
 
-         
-        $(card).addClass('active');
+          $(card).addClass('active');
+        }
       });
 
       // Handle click on map popup
@@ -179,6 +182,11 @@ Paris.listEquipments = (function(){
       // Handle click on map close popup button
       $('#map').on('click', '.close-popup-btn', function(event) {
         mapboxWidget.removePopup();
+      });
+
+      // Handle click on map favorite button (popup)
+      $('#map').on('click', '.favorite-popup-btn', function(event) {
+        toggleFavorite(event.target);
       });
 
       // Autocompletion is not an instantsearch feature. Must use algolia.js directly
@@ -323,6 +331,11 @@ Paris.listEquipments = (function(){
       $('.layout-list-map').removeClass('favorites');
     }
 
+    function toggleFavorite(favorite) {
+      console.log('todo: toggle favorite');
+      $(favorite).closest('.ico-btn').toggleClass('selected');
+    }
+
     function initCarousel() {
       destroyCarousel();
       flkyCarousel = new Flickity('.carousel', {
@@ -342,7 +355,7 @@ Paris.listEquipments = (function(){
       var content = '';
       content += '<div class="card-content">';
       content += '<h3 class="card-title">'+hit.name+'</h3>';
-      content += '<div class="card-text"><span class="card-address">'+hit.address+'</span><br><span class="card-zipcode">'+hit.zipCode+'</span> <span class="card-city">'+hit.city+'</span></div>';
+      content += '<div class="card-text"><span class="card-address">'+hit.address+'</span><br><span class="card-zipcode">'+hit.zipCode+'</span> <span class="card-city">'+hit.city+'</span><span class="ico-btn favorite-popup-btn"><i class="icon-favorites"></i></span></div>';
       content += '<div class="card-hours open">Ouvert jusqu’à 21h</div>';
       content += '<div class="buttons">';
       content += Paris.templates['button']['button']({
@@ -350,7 +363,8 @@ Paris.listEquipments = (function(){
         modifiers: ["secondary", "small"]
       });
       content += '</div>';
-      content += '<span class="close-popup-btn"><i class="icon-close"></i></span>'
+      content += '<span class="ico-btn favorite-popup-btn"><i class="icon-favorites"></i></span>'
+      content += '<span class="ico-btn close-popup-btn"><i class="icon-close"></i></span>'
       content += '</div>';
       return content;
     }
