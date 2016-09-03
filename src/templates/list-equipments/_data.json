@@ -209,6 +209,18 @@
               {
                 "value": "",
                 "text": "Sans préférence"
+              },
+              {
+                "value": "disability-hearing",
+                "text": "Handicap moteur"
+              },
+              {
+                "value": "disability-visual",
+                "text": "Handicap visuel"
+              },
+              {
+                "value": "disability-phisical",
+                "text": "Handicap auditif"
               }
             ]
           }

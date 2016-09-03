@@ -287,6 +287,9 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       content += '<span class="secondary-filter-title">Accès handicapé</span>';
       content += '<select name="open-now">';
       content += '<option value="">Sans préférence</option>';
+      content += '<option value="disability-hearing">Handicap moteur</option>';
+      content += '<option value="disability-visual">Handicap visuel</option>';
+      content += '<option value="disability-phisical">Handicap auditif</option>';
       content += '</select>';
       content += '</div>';
       content += '</div>';
