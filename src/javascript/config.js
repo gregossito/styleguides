@@ -45,5 +45,11 @@ Paris.config = {
   },
   "mapbox": {
     "access_token": "pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw"
+  },
+  "search": {
+    "paris_coordinates" : {
+      "lat": 48.856579,
+      "lng": 2.349272
+    }
   }
 };

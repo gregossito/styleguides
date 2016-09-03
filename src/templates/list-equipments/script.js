@@ -100,7 +100,7 @@ Paris.listEquipments = (function(){
           style: 'mapbox://styles/parisnumerique/cis1rkqoj000khinpthppoaqd',
           zoom: 11,
           minZoom: 10,
-          center: [2.349272, 48.856579],
+          center: [Paris.config.search.paris_coordinates.lat, Paris.config.search.paris_coordinates.lng],
           maxBounds:
           [
             [2.021942, 48.731991], // SW coordinates
@@ -237,11 +237,10 @@ Paris.listEquipments = (function(){
           footer : ''
         },
         hitsPerPage: 2,
-        countries: ['fr'],
-        aroundLatLngViaIP: true,
+        aroundLatLng: Paris.config.search.paris_coordinates.lat + ',' + Paris.config.search.paris_coordinates.lng,
+        aroundRadius: 22000,
         style: false
       });
-
       autocomplete('.layout-list-map .search-field-input', { hint: false }, [
         placesDataset, equipementDataset
       ]).on('autocomplete:selected', function(event, suggestion, dataset) {
