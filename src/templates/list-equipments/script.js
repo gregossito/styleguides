@@ -27,10 +27,10 @@ Paris.listEquipments = (function(){
 
   function listEquipments(selector, userOptions) {
     var $el = $(selector),
-      options = $.extend({}, defaultOptions, userOptions),
-      placeQuery = '',
-      api = {},
-      search;
+        options = $.extend({}, defaultOptions, userOptions),
+        placeQuery = '',
+        api = {},
+        search;
 
     function init() {
       initOptions();
@@ -60,9 +60,12 @@ Paris.listEquipments = (function(){
           sortBy: ['name:asc', 'count:desc'],
           numberOfFacets: 200,
           mainFacets: Paris.config.algolia.main_facets,
-          moreButtonText: 'Afficher la liste complète',
-          applyButtonText: 'Appliquer',
-          aroundMeButtonText: 'Autour de moi'
+          moreButtonText: Paris.i18n.t('list_equipments/more_filters'),
+          applyButtonText: Paris.i18n.t('list_equipments/apply_filters'),
+          aroundMeButtonText: Paris.i18n.t('list_equipments/around_me'),
+          searchFilterPlaceholder: Paris.i18n.t('list_equipments/search_filter'),
+          cancelButtonText: Paris.i18n.t('list_equipments/cancel'),
+          confirmButtonText: Paris.i18n.t('list_equipments/confirm')
         })
       );
       
@@ -220,7 +223,7 @@ Paris.listEquipments = (function(){
         },
         displayKey: 'name',
         templates: {
-          header: '<div class="ad-example-header">Équipements</div>',
+          header: '<div class="ad-example-header">'+Paris.i18n.t('list_equipments/equipements')+'</div>',
           suggestion: function(suggestion) {
             return '<span class="autocomplete-name">' + suggestion._highlightResult.name.value + '</span>';
           }
@@ -230,7 +233,7 @@ Paris.listEquipments = (function(){
       var placesDataset = placesAutocompleteDataset({
         algoliasearch: algoliasearch,
         templates: {
-          header: '<div class="ad-example-header">Adresses</div>',
+          header: '<div class="ad-example-header">'+Paris.i18n.t('list_equipments/addresses')+'</div>',
           suggestion: function(suggestion) {
             return '<span class="autocomplete-name">' + suggestion.value + '</span>';
           },
@@ -368,7 +371,7 @@ Paris.listEquipments = (function(){
       content += '<div class="card-hours open">Ouvert jusqu’à 21h</div>';
       content += '<div class="buttons">';
       content += Paris.templates['button']['button']({
-        text: 'Voir la fiche complète',
+        text: Paris.i18n.t('list_equipments/button_view'),
         modifiers: ["secondary", "small"]
       });
       content += '</div>';

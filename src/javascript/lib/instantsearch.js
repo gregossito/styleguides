@@ -18,6 +18,9 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
   moreButtonText, // Text for more facets button
   applyButtonText, // Text for apply facets button
   aroundMeButtonText, // Text for around me button
+  searchFilterPlaceholder, // Text for search filter input placeholder
+  cancelButtonText, // Text for cancel button (filters popup)
+  confirmButtonText, // Text for confirm button (filters popup)
   mainFacets // Main facets filter
 }) {
   var helper;
@@ -309,7 +312,7 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
 
       var content = '';
       content += '<div class="search-filters-container">';
-      content += '<input type="text" name="search-filters" placeholder="Rechercher un filtre...">';
+      content += '<input type="text" name="search-filters" placeholder="'+searchFilterPlaceholder+'">';
       content += '</div>';
       content += '<div class="filters-list">';
       // For each facets build html
@@ -322,11 +325,11 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       // Add popup buttons
       content += '<div class="buttons">';
       content += Paris.templates['button']['button']({
-        text: 'Annuler',
+        text: cancelButtonText,
         modifiers: ["discard", "action"]
       });
       content += Paris.templates['button']['button']({
-        text: 'Valider',
+        text: confirmButtonText,
         modifiers: ["confirm", "action"]
       });
       content += '</div>';
