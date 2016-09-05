@@ -765,6 +765,12 @@ function renderMap(geoJSON, sourceID) {
         source: sourceID,
         layout: {
           'icon-image': 'marker-'+symbol
+          // Icons must be added into Mapbox editor as SVG file
+          // To export SVG from Illustrator:
+          //// File > Export
+          //// Name: 'ico-category-state.svg'
+          //// Stylisation: Presentation attributes
+          //// Responsive: unchecked
         },
         filter: ["==", "icon", symbol]
       });
