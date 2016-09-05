@@ -393,7 +393,7 @@ Paris.listEquipments = (function(){
       content += '</div>';
       var classes = ($('#hits-container .card[hitid="'+hit.idequipements+'"] .favorite-btn.selected').length > 0 ? 'selected' : '');
       content += '<span class="ico-btn favorite-btn '+classes+'"><i class="icon-favorites"></i></span>'
-      content += '<span class="ico-btn close-popup-btn"><i class="icon-close"></i></span>'
+      content += '<span class="ico-btn close-popup-btn"><i class="icon-close-big"></i></span>'
       content += '</div>';
       return content;
     }
