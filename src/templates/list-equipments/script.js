@@ -201,6 +201,20 @@ Paris.listEquipments = (function(){
         mapboxWidget.zoomOut();
       });
 
+      // Handle click on go back to search button
+      $('.layout-content-list').scroll(function(event) {
+        if ($(this).scrollTop() > $('.block-search-filters').outerHeight() + $('.block-search-field').outerHeight()) {
+          $('.back-search-btn').addClass('visible');
+        } else {
+          $('.back-search-btn').removeClass('visible');
+        }
+      });
+
+      // Handle click on go back to search button
+      $('.back-search-btn').click(function(event) {
+        $('.layout-content-list').animate({scrollTop: 0}, 200);
+      });
+
       // Autocompletion is not an instantsearch feature. Must use algolia.js directly
       var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       var index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);

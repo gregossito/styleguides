@@ -21,6 +21,9 @@ append content
   .layout-content
     .layout-list-map
       .layout-content-list.searching
+        span.back-search-btn
+          i.icon-arrow-top
+          span= data.list.block_search_field.back_search_btn
         .search-results-container
           +block-search-field(data.list.block_search_field)
           +block-search-filters(data.list.block_search_filters)
