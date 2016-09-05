@@ -162,11 +162,12 @@ Paris.listEquipments = (function(){
 
       // Center map and open pin on list result click
       $('#hits-container').on('click', '.card', function(event) {
+        var card = event.target.closest('.card');
         if (event.target.closest('.favorite-btn')) {
-          toggleFavorite(event.target);
+          toggleFavorite(card.getAttribute('hitid'));
         } else {
-          var card = event.target.closest('.card');
           var hit = {
+            idequipements: card.getAttribute('hitid'),
             name: $(card).find('.card-title').html(),
             address: $(card).find('.card-address').html(),
             zipCode: $(card).find('.card-zipcode').html(),
@@ -190,8 +191,9 @@ Paris.listEquipments = (function(){
       });
 
       // Handle click on map favorite button (popup)
-      $('#map').on('click', '.favorite-popup-btn', function(event) {
-        toggleFavorite(event.target);
+      $('#map').on('click', '.favorite-btn', function(event) {
+        var hitID = event.target.closest('.card-content').getAttribute('hitid');
+        toggleFavorite(hitID);
       });
 
       // Handle click on zoom out button
@@ -338,9 +340,9 @@ Paris.listEquipments = (function(){
       $('.layout-list-map').removeClass('favorites');
     }
 
-    function toggleFavorite(favorite) {
-      console.log('todo: toggle favorite');
-      $(favorite).closest('.ico-btn').toggleClass('selected');
+    function toggleFavorite(hitID) {
+      $('#hits-container .card[hitid="'+hitID+'"]').find('.favorite-btn').toggleClass('selected');
+      $('#map .card-content[hitid="'+hitID+'"]').find('.favorite-btn').toggleClass('selected');
     }
 
     function initCarousel() {
@@ -365,9 +367,9 @@ Paris.listEquipments = (function(){
 
     function renderMapPopupContent(hit) {
       var content = '';
-      content += '<div class="card-content">';
+      content += '<div class="card-content" hitid="'+hit.idequipements+'">';
       content += '<h3 class="card-title">'+hit.name+'</h3>';
-      content += '<div class="card-text"><span class="card-address">'+hit.address+'</span><br><span class="card-zipcode">'+hit.zipCode+'</span> <span class="card-city">'+hit.city+'</span><span class="ico-btn favorite-popup-btn"><i class="icon-favorites"></i></span></div>';
+      content += '<div class="card-text"><span class="card-address">'+hit.address+'</span><br><span class="card-zipcode">'+hit.zipCode+'</span> <span class="card-city">'+hit.city+'</span><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div>';
       content += '<div class="card-hours open">Ouvert jusqu’à 21h</div>';
       content += '<div class="buttons">';
       content += Paris.templates['button']['button']({
@@ -375,7 +377,8 @@ Paris.listEquipments = (function(){
         modifiers: ["secondary", "small"]
       });
       content += '</div>';
-      content += '<span class="ico-btn favorite-popup-btn"><i class="icon-favorites"></i></span>'
+      var classes = ($('#hits-container .card[hitid="'+hit.idequipements+'"] .favorite-btn.selected').length > 0 ? 'selected' : '');
+      content += '<span class="ico-btn favorite-btn '+classes+'"><i class="icon-favorites"></i></span>'
       content += '<span class="ico-btn close-popup-btn"><i class="icon-close"></i></span>'
       content += '</div>';
       return content;
