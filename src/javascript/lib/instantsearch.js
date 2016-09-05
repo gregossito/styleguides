@@ -410,7 +410,7 @@ var defaults = {
       ],
       textColor: '#fff',
       textSize: 12,
-      circleColor: '#000',
+      circleColor: '#0C518A',
       circleRadiusStops: [
         [1, 15],
         [100, 35],
