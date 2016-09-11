@@ -15,6 +15,97 @@ Paris.config = {
       "equipments": "Eqpt"
     },
     "main_facets": ["Piscines", "Bibliothèques", "Parcs et jardins", "Marchés", "Ateliers Beaux-Arts", "Centres d’animation", "Conservatoires", "Mairies", "Maisons des assos", "Maisons entreprises et emploi", "Musées municipaux", "Tennis"],
+    "secondary_filters": [
+      {
+        "title": "Ouverture",
+        "type": "checkbox",
+        "id": "filter-opening",
+        "label": "Ouvert maintenant"
+      },
+      {
+        "title": "Accessibilité",
+        "type": "select",
+        "id": "filter-accessibility",
+        "values": [
+          {
+            "id": "",
+            "label": "Sans préférence"
+          },
+          {
+            "id": "disability-hearing",
+            "label": "Handicap moteur"
+          },
+          {
+            "id": "disability-visual",
+            "label": "Handicap visuel"
+          },
+          {
+            "id": "disability-phisical",
+            "label": "Handicap auditif"
+          }
+        ]
+      },
+      {
+        "title": "Taille du bassin",
+        "type": "select",
+        "id": "filter-swimming-pool",
+        "linked_filter": "Piscines",
+        "values": [
+          {
+            "id": "",
+            "label": "Sans préférence"
+          },
+          {
+            "id": "25",
+            "label": "25 m"
+          },
+          {
+            "id": "33",
+            "label": "33 m"
+          },
+          {
+            "id": "50",
+            "label": "50 m"
+          }
+        ]
+      },
+      {
+        "title": "Section",
+        "type": "select",
+        "id": "filter-library",
+        "linked_filter": "Bibliothèques",
+        "values": [
+          {
+            "id": "",
+            "label": "Tous"
+          },
+          {
+            "id": "adults",
+            "label": "Adulte"
+          },
+          {
+            "id": "youth",
+            "label": "Jeunesse"
+          },
+          {
+            "id": "discotheques",
+            "label": "Discothèques"
+          },
+          {
+            "id": "videotheques",
+            "label": "Vidéothèques"
+          },
+          {
+            "id": "music-languages-pole",
+            "label": "Pôles musique et langues"
+          },
+          {
+            "id": "thematic",
+            "label": "Fonds thématiques"
+          }
+        ]
+      }
+    ],
     "url": {
       "api_popular_searches": "http://r7.paris-fr-api.lestudio.mx/AlgoliaStats/getMostSearchedKeywords"
     }

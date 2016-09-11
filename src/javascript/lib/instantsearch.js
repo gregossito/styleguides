@@ -279,22 +279,29 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
 
       // Append secondary filters
       content += '<div class="secondary-filters">';
-      content += '<div class="secondary-filter">';
-      content += '<span class="secondary-filter-title">Ouverture</span>';
-      content += '<label>';
-      content += '<input type="checkbox" name="open-now">';
-      content += '<span>Ouvert maintenant</span>';
-      content += '</label>';
-      content += '</div>';
-      content += '<div class="secondary-filter">';
-      content += '<span class="secondary-filter-title">Accès handicapé</span>';
-      content += '<select name="open-now">';
-      content += '<option value="">Sans préférence</option>';
-      content += '<option value="disability-hearing">Handicap moteur</option>';
-      content += '<option value="disability-visual">Handicap visuel</option>';
-      content += '<option value="disability-phisical">Handicap auditif</option>';
-      content += '</select>';
-      content += '</div>';
+
+      $.each(Paris.config.algolia.secondary_filters, function(index, val) {
+           
+        content += '<div class="secondary-filter">';
+        content += '<span class="secondary-filter-title">'+val.title+'</span>';
+
+        if (val.type == 'checkbox') {
+          content += '<label>';
+          content += '<input type="checkbox" name="'+val.id+'">';
+          content += '<span>'+val.label+'</span>';
+          content += '</label>';
+        } else if (val.type == 'select') {
+          content += '<select name="'+val.id+'">';
+          $.each(val.values, function(index, option) {
+            content += '<option value="'+option.id+'">'+option.label+'</option>';
+          });
+          content += '</select>';
+        }
+
+        content += '</div>';
+
+      });
+
       content += '</div>';
 
       // At the end append a apply button

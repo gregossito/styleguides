@@ -201,29 +201,6 @@
           },
           "aroundMeButton": {
             "text": "Autour de moi"
-          },
-          "secondary_filters": {
-            "opening_title": "Ouverture",
-            "opening_label": "Ouvert maintenant",
-            "accessibility_title": "Accès handicapé",
-            "accessibility_choices" : [
-              {
-                "value": "",
-                "text": "Sans préférence"
-              },
-              {
-                "value": "disability-hearing",
-                "text": "Handicap moteur"
-              },
-              {
-                "value": "disability-visual",
-                "text": "Handicap visuel"
-              },
-              {
-                "value": "disability-phisical",
-                "text": "Handicap auditif"
-              }
-            ]
           }
         },
         "block_search_results": {
