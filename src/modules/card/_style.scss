@@ -145,6 +145,7 @@
   top: 20px;
   right: 20px;
   font-size: 20px;
+  display: none; // Hide favorites until it is ready
 
   &.selected {
     color: $orange1;
