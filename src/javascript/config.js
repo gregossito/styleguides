@@ -14,7 +14,7 @@ Paris.config = {
       "persons": "recette_Elus",
       "equipments": "Eqpt"
     },
-    "main_facets": ["Piscines", "Bibliothèques", "Parcs et jardins", "Marchés", "Ateliers des Beaux-Arts", "Centres d’animation", "Conservatoires", "Musées municipaux", "Tennis", "Maisons des assos"],
+    "main_facets": ["Piscines", "Bibliothèques", "Parcs et jardins", "Marchés", "Ateliers Beaux-Arts", "Centres d’animation", "Conservatoires", "Mairies", "Maisons des assos", "Maisons entreprises et emploi", "Musées municipaux", "Tennis"],
     "url": {
       "api_popular_searches": "http://r7.paris-fr-api.lestudio.mx/AlgoliaStats/getMostSearchedKeywords"
     }
