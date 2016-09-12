@@ -1,4 +1,5 @@
 include ../block-search/block-search
+include ../block-search-filters-mobile/block-search-filters-mobile
 include ../button/button
 
 mixin block-search-filters(data)
@@ -16,27 +17,9 @@ mixin block-search-filters(data)
       .more-filters-button
         - data.more.modifiers = ["secondary", "small"]
         +button(data.more)
-      .block-search-filters-popup
-        .popup-background
-        .popup-content
-          .search-filters-container
-            input(type='text', name='search-filters', placeholder=data.popup_search_placeholder)
-          .filters-list
-            each item in data.filter_items
-              label
-                input(
-                  type='checkbox'
-                  name='categories[]'
-                )
-                span= item.text
-          if data.popup_links && data.popup_links.length
-          .buttons
-            each button, index in data.popup_links
-              if index == 0
-                - button.modifiers = ["discard", "action"]
-              else if index == 1
-                - button.modifiers = ["confirm", "action"]
-              +button(button)
     if data.aroundMeButton
       - data.applyFiltersButton.modifiers = ["apply-filters-button"]
       +button(data.applyFiltersButton)
+
+  .block-search-filters-mobile
+    +block-search-filters-mobile(data)

@@ -11,6 +11,8 @@ Paris.instantsearch = {widgets: {}};
 // TODO: All html generated code could be a Paris module
 Paris.instantsearch.widgets.refinementList = function refinementList({
   container, // DOM selector in which to add UI
+  selectedFiltersContainer, // DOM selector in which to add selected filters
+  filtersPopupContainer, // DOM selector in which to add filters popup
   attributeName, // Attribute name for facets
   operator, // Facets operator
   sortBy, // Facet ordering
@@ -55,8 +57,20 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       // Bind filter button event
       $(container).on('click', '.filterButton', this.onClickButton.bind(this));
       $(container).on('click', '.apply-filters-button', this.onClickApplyButton.bind(this));
+      $(selectedFiltersContainer).on('click', '.filterButton', this.onClickSelectedFilter.bind(this));
+
+
 
       var _this = this;
+      var windowTimer;
+      $( window ).resize(function() {
+        clearTimeout(windowTimer);
+        windowTimer = setTimeout(windowDoneResizing, 100);
+      });
+
+      function windowDoneResizing() {
+        _this.selectedFacetsDisplay();
+      }
 
       // Trigger a fake search request just to retrieve all available facets
       helper.searchOnce({
@@ -118,7 +132,27 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
 
     onClickApplyButton(e) {
       this.helper.search();
+      var selectedValues = [];
+      $.each($(container + ' .filterButton.active'), function(i, el) {
+        selectedValues.push($(el).text());
+      });
+      this.renderSelectedFacets(selectedValues);
       $(e.target).closest('.layout-content-list').removeClass('searching');
+    },
+
+    onClickSelectedFilter(e) {
+      this.onClickButton(e);
+      $(e.target).closest('.filterButton').remove();
+      this.selectedFacetsDisplay();
+      var selectedValues = [];
+      var inputs = $('.block-search-filters .filters-list input[type="checkbox"]:checked');
+      // Get selected values and toggle them
+      $.each($(selectedFiltersContainer + ' .filterButton.active'), function(i, el) {
+        selectedValues.push($(el).text());
+       });
+      // Render list with selected values
+      this.renderList(selectedValues);
+      this.helper.search();
     },
 
     prepareFacets() {
@@ -130,13 +164,8 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
 
     // Initiate view
     initView() {
-      var $container = $(container);
-
-      // Build html for rendering
-      var content = '<div id="' + wrapperSelectorID + '"></div>';
-      content += popupHTML;
-
-      $container.html(content);
+      $(container).html('<div id="' + wrapperSelectorID + '"></div>');
+      $(filtersPopupContainer).html(popupHTML);
 
       // Render list with no selected values
       this.renderList([]);
@@ -148,7 +177,7 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       var _this = this;
 
       // Open popup event
-      $('.block-search-filters .block-search-content').on('click', '.more-filters-button', function(event) {
+      $('.layout-content-list').on('click', '.more-filters-button', function(event) {
         // Get current selected values
         var selectedValues = [];
         $.each($(container + ' .filterButton.active'), function(i, el) {
@@ -157,25 +186,25 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
         // Render popup with selected values
         _this.renderPopup(selectedValues);
         // Show popup
-        $('.block-search-filters .block-search-content .block-search-filters-popup').fadeIn(400, function() {
-          $('input[type="text"]').focus();
+        $(filtersPopupContainer).fadeIn(400, function() {
+          $(this).find('input[type="text"]').focus();
         });
       });
 
       // Close popup
-      $('.block-search-filters .block-search-content .block-search-filters-popup').on('click', '.popup-background', function(event) {
-        $('.block-search-filters .block-search-content .block-search-filters-popup').fadeOut();
+      $(filtersPopupContainer).on('click', '.popup-background', function(event) {
+        $(filtersPopupContainer).fadeOut();
       });
 
       // Discard popup
-      $('.block-search-filters .block-search-content .block-search-filters-popup').on('click', '.discard', function(event) {
-        $('.block-search-filters .block-search-content .block-search-filters-popup').fadeOut();
+      $(filtersPopupContainer).on('click', '.discard', function(event) {
+        $(filtersPopupContainer).fadeOut();
       });
 
       // Confirm popup
-      $('.block-search-filters .block-search-content .block-search-filters-popup').on('click', '.confirm', function(event) {
+      $(filtersPopupContainer).on('click', '.confirm', function(event) {
         var selectedValues = [];
-        var inputs = $('.block-search-filters .filters-list input[type="checkbox"]:checked');
+        var inputs = $(filtersPopupContainer).find('.filters-list input[type="checkbox"]:checked');
         // Clear all facets refinements of Algolia's helper
         _this.helper.clearRefinements();
         // Get selected values and toggle them
@@ -186,10 +215,13 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
 
         // Render list with selected values
         _this.renderList(selectedValues);
+        _this.renderSelectedFacets(selectedValues);
         // Trigger search with new facet refinement
-        _this.helper.search();
+        if (!options.mobileMediaQuery.matches) {
+          _this.helper.search();
+        }
 
-        $('.block-search-filters .block-search-content .block-search-filters-popup').fadeOut();
+        $(filtersPopupContainer).fadeOut();
       });
 
       // Override jQuery contains function (case insensitive + accents)
@@ -312,6 +344,69 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       content += Paris.templates['button']['button'](data);
 
       $container.html(content);
+    },
+
+    // Render selected facets
+    renderSelectedFacets(selectedValues) {
+
+      // Render all selected values
+      $selectedFiltersContainer = $(selectedFiltersContainer);
+
+      var content = '';
+      $.each(selectedValues, function(i, value) {
+        var data = {
+          text: value,
+          modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton', 'active']
+        };
+        content += Paris.templates['button']['button'](data);
+      });
+      var data = {
+        text: moreButtonText,
+        modifiers: ["secondary", "small", "more-filters-button"]
+      };
+      content += Paris.templates['button']['button'](data);
+
+      $selectedFiltersContainer.html(content);
+      
+      this.selectedFacetsDisplay();
+    },
+
+    selectedFacetsDisplay() {
+      // Set filters in one line and add a more button if needed
+      var totalWidth = 0;
+      var moreButtonWidth = 0;
+      var maxWidth = $selectedFiltersContainer.width();
+      var btnLeft = $selectedFiltersContainer.find('button.filterButton').length;
+
+      $selectedFiltersContainer.find('button.more-filters-button').hide();
+
+      setTimeout(function() {
+        $selectedFiltersContainer.find('button.filterButton').each(function(i) {
+
+          // Calculate total width
+          totalWidth += $(this).width() + 50;
+
+          // Set more filters button
+          if (btnLeft > 1 ) {
+            $selectedFiltersContainer.find('button.more-filters-button').html(Paris.i18n.t("list_equipments/more_filters_nb", [btnLeft - 1])); 
+            $selectedFiltersContainer.find('button.more-filters-button').show();
+            moreButtonWidth = $selectedFiltersContainer.find('button.more-filters-button').width() + 20;
+          } else if (totalWidth < maxWidth) {
+            $selectedFiltersContainer.find('button.more-filters-button').hide();
+            moreButtonWidth = 0;
+          }
+
+          if (totalWidth + moreButtonWidth > maxWidth) {
+            $(this).addClass('hidden');
+            $selectedFiltersContainer.find('button.more-filters-button').html(Paris.i18n.t("list_equipments/more_filters_nb", [btnLeft])); 
+            totalWidth += moreButtonWidth;
+            return;
+          } else {
+            $(this).removeClass('hidden');
+          }
+          btnLeft--;
+        });
+      }, 1);
     },
 
     // Render popup
@@ -647,13 +742,13 @@ function initMap(container) {
   // /!\ This fix a bug with Flickyity carousel which does not support dom changes once intiated. So we avoid triggering search upon window resizing.
   var windowTimer;
   $( window ).resize(function() {
-    resizing = true
+    resizing = true;
     clearTimeout(windowTimer);
     windowTimer = setTimeout(windowDoneResizing, 100);
   });
 
   function windowDoneResizing() {
-    resizing = false
+    resizing = false;
   }
 
 }

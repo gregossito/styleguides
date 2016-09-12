@@ -55,6 +55,8 @@ Paris.listEquipments = (function(){
       search.addWidget(
         Paris.instantsearch.widgets.refinementList({
           container: '.block-search-filters .block-search-content',
+          selectedFiltersContainer: '.block-search-filters-mobile',
+          filtersPopupContainer: '.layout-content-filters-popup',
           attributeName: 'categories',
           operator: 'or',
           sortBy: ['name:asc', 'count:desc'],
@@ -334,6 +336,7 @@ Paris.listEquipments = (function(){
           // [desktop] Destroy carousel
           destroyCarousel();
         }
+
         $el.data('api', api);
       });
     }

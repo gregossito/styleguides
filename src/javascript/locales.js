@@ -35,6 +35,7 @@ Paris.i18n.locales = {
       "no_favorite": "Vous n'avez pas encore de favoris, cliquez sur l'étoile pour ajouter un équipement.",
       "reset_filters": "Réinitialiser",
       "more_filters": "Afficher la liste complète",
+      "more_filters_nb": "Et {0} de plus",
       "apply_filters": "Appliquer",
       "search_filter": "Rechercher un filtre...",
       "around_me": "Autour de moi",
