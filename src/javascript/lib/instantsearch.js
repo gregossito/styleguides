@@ -644,7 +644,7 @@ function initMap(container) {
   // When a click event occurs near a place, open a popup at the location of
   // the feature, with description HTML from its properties.
   map.on('click', function (e) {
-
+    
     var features = map.queryRenderedFeatures(e.point, { layers: layersID });
     if (!features.length) {
       return;
@@ -721,6 +721,7 @@ function initMap(container) {
 
   // When start touch store touch original coordinates
   map.on('touchstart', function (e) {
+    lastTouchMove = e;
     pointCoordinate = {
       x: e.originalEvent.touches[0].pageX, 
       y: e.originalEvent.touches[0].pageY
