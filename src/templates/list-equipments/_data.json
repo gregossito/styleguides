@@ -218,8 +218,9 @@
         "results": [
         ]
       },
-      "map": [
-      ],
+      "map": {
+        "refresh_map_title": "Rechercher quand je déplace la carte"
+      },
       "button_top": {
         "accessibility_label": "retour en haut de la page"
       }

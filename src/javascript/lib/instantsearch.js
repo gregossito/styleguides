@@ -674,6 +674,11 @@ function initMap(container) {
       return;
     }
 
+    // Search on move is disable
+    if (!$('input[name="map-refresh"]').is(':checked')) {
+      return;
+    }
+
     // For some scenario we skip launching geo based request (drag tolerance, or programmatic movement, ...)
     if (skipRefine) {
       skipRefine = false;

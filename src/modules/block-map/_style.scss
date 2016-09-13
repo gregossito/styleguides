@@ -25,6 +25,27 @@
 	}
 }
 
+.map-refresh {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	padding: 10px;
+	background-color: $white;
+	border-radius: 2px;
+
+	label {
+
+		span {
+			display: inline-block;
+			margin-left: 5px;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 400;
+			color: $green1;
+		}
+	}
+}
+
 .mapboxgl-popup {
 
 	.mapboxgl-popup-content {
