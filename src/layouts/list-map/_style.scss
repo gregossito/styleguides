@@ -48,8 +48,9 @@
 
         .filters-list {
             padding: 30px;
-            max-height: calc(100vh - 222px);
+            max-height: calc(100vh - 225px);
             overflow: auto;
+            z-index: 1;
 
             label {
                 display: block;
@@ -97,6 +98,7 @@
             bottom: 0;
             left: 0;
             right: 0;
+            z-index: 5;
 
             .button {
               margin-right: 10px;
@@ -195,6 +197,29 @@
 @include small {
   .layout-list-map {
     height: calc(100vh - #{$rheader-height-small});
+
+    .layout-content-filters-popup {
+
+      .popup-content {
+
+        .search-filters-container {
+          padding: 10px;
+
+          input {
+            width: 100%;
+          }
+        }
+
+        .filters-list {
+          padding: 10px;
+          max-height: calc(100vh - 195px);
+        }
+
+        .buttons {
+          padding: 10px;
+        }
+      }
+    }
     
     .layout-content-list,
     .layout-content-map {
