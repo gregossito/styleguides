@@ -32,12 +32,16 @@
 	padding: 10px;
 	background-color: $white;
 	border-radius: 2px;
+	max-width: calc(100% - 65px);
 
 	label {
 
-		span {
+		input {
 			display: inline-block;
-			margin-left: 5px;
+			margin-right: 5px;
+		}
+
+		span {
 			text-transform: uppercase;
 			font-size: 12px;
 			font-weight: 400;
