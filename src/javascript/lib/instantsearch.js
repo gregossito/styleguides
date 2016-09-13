@@ -254,7 +254,7 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       };
 
       // Search input
-      $('.block-search-filters .block-search-content .block-search-filters-popup').on('input', 'input[name="search-filters"]', function(event) {
+      $(filtersPopupContainer).on('input', 'input[name="search-filters"]', function(event) {
         $('.filters-list label').hide();
         $('.filters-list label:contains('+$(this).val()+')').show();
       });
