@@ -18,6 +18,7 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
   sortBy, // Facet ordering
   numberOfFacets, // Expected number of facets (displayed in popup)
   moreButtonText, // Text for more facets button
+
   applyButtonText, // Text for apply facets button
   aroundMeButtonText, // Text for around me button
   searchFilterPlaceholder, // Text for search filter input placeholder
@@ -54,14 +55,13 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
 
       this.helper = helper;
 
+      var _this = this;
+
       // Bind filter button event
       $(container).on('click', '.filterButton', this.onClickButton.bind(this));
       $(container).on('click', '.apply-filters-button', this.onClickApplyButton.bind(this));
       $(selectedFiltersContainer).on('click', '.filterButton', this.onClickSelectedFilter.bind(this));
 
-
-
-      var _this = this;
       var windowTimer;
       $( window ).resize(function() {
         clearTimeout(windowTimer);
@@ -344,6 +344,14 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
       content += Paris.templates['button']['button'](data);
 
       $container.html(content);
+    },
+
+    getAndRenderSelectedFacets() {
+      var selectedValues = [];
+      $.each($(container + ' .filterButton.active'), function(i, el) {
+        selectedValues.push($(el).text());
+      });
+      this.renderSelectedFacets(selectedValues);
     },
 
     // Render selected facets

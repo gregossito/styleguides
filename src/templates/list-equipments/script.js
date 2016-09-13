@@ -51,25 +51,24 @@ Paris.listEquipments = (function(){
         })
       );
 
+      var refinementWidget = Paris.instantsearch.widgets.refinementList({
+        container: '.block-search-filters .block-search-content',
+        selectedFiltersContainer: '.block-search-filters-mobile',
+        filtersPopupContainer: '.layout-content-filters-popup',
+        attributeName: 'categories',
+        operator: 'or',
+        sortBy: ['name:asc', 'count:desc'],
+        numberOfFacets: 200,
+        mainFacets: Paris.config.algolia.main_facets,
+        moreButtonText: Paris.i18n.t('list_equipments/more_filters'),
+        applyButtonText: Paris.i18n.t('list_equipments/apply_filters'),
+        aroundMeButtonText: Paris.i18n.t('list_equipments/around_me'),
+        searchFilterPlaceholder: Paris.i18n.t('list_equipments/search_filter'),
+        cancelButtonText: Paris.i18n.t('list_equipments/cancel'),
+        confirmButtonText: Paris.i18n.t('list_equipments/confirm')
+      })
       // Search refinement list widget
-      search.addWidget(
-        Paris.instantsearch.widgets.refinementList({
-          container: '.block-search-filters .block-search-content',
-          selectedFiltersContainer: '.block-search-filters-mobile',
-          filtersPopupContainer: '.layout-content-filters-popup',
-          attributeName: 'categories',
-          operator: 'or',
-          sortBy: ['name:asc', 'count:desc'],
-          numberOfFacets: 200,
-          mainFacets: Paris.config.algolia.main_facets,
-          moreButtonText: Paris.i18n.t('list_equipments/more_filters'),
-          applyButtonText: Paris.i18n.t('list_equipments/apply_filters'),
-          aroundMeButtonText: Paris.i18n.t('list_equipments/around_me'),
-          searchFilterPlaceholder: Paris.i18n.t('list_equipments/search_filter'),
-          cancelButtonText: Paris.i18n.t('list_equipments/cancel'),
-          confirmButtonText: Paris.i18n.t('list_equipments/confirm')
-        })
-      );
+      search.addWidget(refinementWidget);
       
       // Search reset widget
       search.addWidget(
@@ -304,9 +303,13 @@ Paris.listEquipments = (function(){
 
       // On search result
       search.helper.on('result', function(results, state) {
+        if ($('.layout-content-list').hasClass('searching')) {
+          refinementWidget.getAndRenderSelectedFacets();
+        }
         if (firstLoad === false) {
           $('.layout-content-list').removeClass('searching');
         }
+
         firstLoad = false;
 
         if (options.mobileMediaQuery.matches) {
