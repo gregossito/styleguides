@@ -26,6 +26,11 @@
 .block-search-cards {
   .ais-hits {
     @include container;
+
+    button.zoom-out-button {
+      margin-top: 10px;
+      display: inline-block;
+    }
   }
 
   .ais-hits--item {
@@ -80,7 +85,7 @@
 
   .block-search-results {
     display: none;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
