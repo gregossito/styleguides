@@ -382,6 +382,7 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
 
     selectedFacetsDisplay() {
       // Set filters in one line and add a more button if needed
+      $selectedFiltersContainer = $(selectedFiltersContainer);
       var totalWidth = 0;
       var moreButtonWidth = 0;
       var maxWidth = $selectedFiltersContainer.width();
@@ -644,7 +645,7 @@ function initMap(container) {
   // When a click event occurs near a place, open a popup at the location of
   // the feature, with description HTML from its properties.
   map.on('click', function (e) {
-    
+
     var features = map.queryRenderedFeatures(e.point, { layers: layersID });
     if (!features.length) {
       return;
