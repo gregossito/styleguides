@@ -54,6 +54,11 @@
             z-index: 1;
 
             label {
+
+                & > * {
+                  pointer-events: none;
+                }
+
                 display: block;
                 padding: 15px;
                 border-bottom: 1px solid $grayF2;
