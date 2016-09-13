@@ -35,17 +35,14 @@
 	max-width: calc(100% - 65px);
 
 	label {
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: 400;
+		color: $green1;
 
 		input {
 			display: inline-block;
 			margin-right: 5px;
-		}
-
-		span {
-			text-transform: uppercase;
-			font-size: 12px;
-			font-weight: 400;
-			color: $green1;
 		}
 	}
 }
