@@ -275,6 +275,7 @@ Paris.listEquipments = (function(){
           var content = renderMapPopupContent(suggestion);
           mapboxWidget.openHit(content, [suggestion._geoloc.lng, suggestion._geoloc.lat], suggestion.idequipements);
         }
+        $(this).blur();
       });
 
       search.start();
