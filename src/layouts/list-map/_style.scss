@@ -50,6 +50,7 @@
             padding: 30px;
             max-height: calc(100vh - 225px);
             overflow: auto;
+            -webkit-overflow-scrolling: touch;
             z-index: 1;
 
             label {
