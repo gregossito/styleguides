@@ -237,6 +237,7 @@
 
     .layout-content-list {
       position: inherit;
+      -webkit-overflow-scrolling: inherit;
 
       span.back-search-btn {
         display: none !important;
