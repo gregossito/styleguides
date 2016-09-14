@@ -129,6 +129,7 @@
     overflow-x: auto;
     width: 100%;
     position: relative;
+    -webkit-overflow-scrolling: touch;
 
     span.back-search-btn {
       position: fixed;
