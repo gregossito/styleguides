@@ -51,7 +51,7 @@ Paris.listEquipments = (function(){
         })
       );
 
-      var refinementWidget = Paris.instantsearch.widgets.refinementList({
+      var refinementWidget = Paris.instantsearch.widgets.newrefinementList({
         container: '.block-search-filters .block-search-content',
         selectedFiltersContainer: '.block-search-filters-mobile',
         filtersPopupContainer: '.layout-content-filters-popup',
