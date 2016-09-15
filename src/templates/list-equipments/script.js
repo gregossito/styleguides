@@ -268,6 +268,7 @@ Paris.listEquipments = (function(){
           placeQuery = suggestion.value;
           search.helper.setQuery(suggestion.value);
           mapboxWidget.flyTo([suggestion.latlng.lng, suggestion.latlng.lat]);
+          $('.layout-content-list').removeClass('searching');
         } else {
           placeQuery = '';
           search.helper.setQuery(suggestion.name);
