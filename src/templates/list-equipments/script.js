@@ -66,7 +66,7 @@ Paris.listEquipments = (function(){
         searchFilterPlaceholder: Paris.i18n.t('list_equipments/search_filter'),
         cancelButtonText: Paris.i18n.t('list_equipments/cancel'),
         confirmButtonText: Paris.i18n.t('list_equipments/confirm')
-      })
+      });
       // Search refinement list widget
       search.addWidget(refinementWidget);
       
@@ -173,7 +173,7 @@ Paris.listEquipments = (function(){
             address: $(card).find('.card-address').html(),
             zipCode: $(card).find('.card-zipcode').html(),
             city: $(card).find('.card-city').html()
-          }
+          };
           var content = renderMapPopupContent(hit);
           mapboxWidget.openHit(content, [card.getAttribute('lng'), card.getAttribute('lat')], card.getAttribute('hitid'));
 
@@ -282,7 +282,7 @@ Paris.listEquipments = (function(){
 
       // Use change event to detect facets reseting action
       search.helper.on('change', function(state, lastResults) {
-        var query = state.query;
+        var query = state.query
         if (query && placeQuery.indexOf(query) >= 0) {
           state.query = '';
         }
@@ -290,7 +290,6 @@ Paris.listEquipments = (function(){
 
       // On search
       search.helper.on('search', function(state, lastResults) {
-
         // Remove inactive card
         $('#hits-container .card').removeClass('inactive');
         // Carousel doest not support dom changes so it conflicts with instantsearch. Destroy before hits gets refresh
@@ -304,6 +303,7 @@ Paris.listEquipments = (function(){
 
       // On search result
       search.helper.on('result', function(results, state) {
+
         if ($('.layout-content-list').hasClass('searching')) {
           refinementWidget.getAndRenderSelectedFacets();
         }
@@ -382,7 +382,7 @@ Paris.listEquipments = (function(){
       // Destroy carousel when necessary
       if (flkyCarousel && flkyCarousel != undefined) {
         flkyCarousel.destroy();
-        flkyCarousel = undefined
+        flkyCarousel = undefined;
       }
     }
 
@@ -399,8 +399,8 @@ Paris.listEquipments = (function(){
       });
       content += '</div>';
       var classes = ($('#hits-container .card[hitid="'+hit.idequipements+'"] .favorite-btn.selected').length > 0 ? 'selected' : '');
-      content += '<span class="ico-btn favorite-btn '+classes+'"><i class="icon-favorites"></i></span>'
-      content += '<span class="ico-btn close-popup-btn"><i class="icon-close-big"></i></span>'
+      content += '<span class="ico-btn favorite-btn '+classes+'"><i class="icon-favorites"></i></span>';
+      content += '<span class="ico-btn close-popup-btn"><i class="icon-close-big"></i></span>';
       content += '</div>';
       return content;
     }
