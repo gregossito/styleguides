@@ -8,7 +8,6 @@ Paris.instantsearch = {widgets: {}};
 // https://community.algolia.com/instantsearch.js/documentation/#custom-widgets
 
 // Extending the instantsearch.widgets namespace, like regular widgets
-// TODO: All html generated code could be a Paris module
 Paris.instantsearch.widgets.refinementList = function refinementList({
   container, // DOM selector in which to add UI
   selectedFiltersContainer, // DOM selector in which to add selected filters
@@ -448,8 +447,7 @@ Paris.instantsearch.widgets.refinementList = function refinementList({
 
       $('.popup-content').html(content);
     }
-
-  }
+  };
 };
 
 
@@ -589,8 +587,8 @@ Paris.instantsearch.widgets.mapbox = function mapbox(options) {
     geolocate: function() {
       geolocate._onClickGeolocate();
     }
-  }
-}
+  };
+};
 
 /**
  * @param  {Object} Options passed by user
@@ -751,7 +749,7 @@ function initMap(container) {
       helper.setQueryParameter('insideBoundingBox', undefined);
     } else {
       var bounds = map.getBounds();
-      helper.setQueryParameter('insideBoundingBox', bounds._sw.lat+','+bounds._sw.lng+','+bounds._ne.lat+','+bounds._ne.lng)
+      helper.setQueryParameter('insideBoundingBox', bounds._sw.lat+','+bounds._sw.lng+','+bounds._ne.lat+','+bounds._ne.lng);
     }
   });
 
@@ -785,7 +783,7 @@ function showPopup(html, coordinates) {
 
   var popup = new mapboxgl.Popup({
     closeButton: false
-  })
+  });
   popup.on('close', function(e) {
     $('.card').removeClass('active');
   });
@@ -833,7 +831,7 @@ function renderMap(geoJSON, sourceID) {
     });
 
     // Circle for clustering with dynamic radius
-    var clusterCircleID = 'cluster-circle'
+    var clusterCircleID = 'cluster-circle';
     map.addLayer({
       id: clusterCircleID,
       type: 'circle',
@@ -924,7 +922,7 @@ function hitsToGeoJSON(hits) {
         // icon: hit.idcategories[0]
         icon: 15
       }
-    }
+    };
     // Store hit in properties
     $.extend(feature.properties, hit);
     features.push(feature);
