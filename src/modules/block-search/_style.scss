@@ -98,6 +98,10 @@
 
     .block-search-cards {
 
+      button.zoom-out-button {
+        display: none;
+      }
+
       .carousel {
 
         .flickity-prev-next-button {
