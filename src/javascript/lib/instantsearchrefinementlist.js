@@ -41,9 +41,15 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
   
   return {
     getConfiguration: function(configuration) {
-      var widgetConfiguration = {
-        options.operator === 'and' ? 'facets' : 'disjunctiveFacets': [options.attributeName]
-      };
+      if (options.operator === 'and') {
+        widgetConfiguration = {
+          'facets': [options.attributeName]
+        };
+      } else {
+        widgetConfiguration = {
+          'disjunctiveFacets': [options.attributeName]
+        };
+      }
 
       var currentMaxValuesPerFacet = configuration.maxValuesPerFacet || 0;
       widgetConfiguration.maxValuesPerFacet = Math.max(currentMaxValuesPerFacet, options.mainFacets.length);
