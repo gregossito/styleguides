@@ -59,13 +59,7 @@ Paris.listEquipments = (function(){
         operator: 'or',
         sortBy: ['name:asc', 'count:desc'],
         numberOfFacets: 200,
-        mainFacets: Paris.config.algolia.main_facets,
-        moreButtonText: Paris.i18n.t('list_equipments/more_filters'),
-        applyButtonText: Paris.i18n.t('list_equipments/apply_filters'),
-        aroundMeButtonText: Paris.i18n.t('list_equipments/around_me'),
-        searchFilterPlaceholder: Paris.i18n.t('list_equipments/search_filter'),
-        cancelButtonText: Paris.i18n.t('list_equipments/cancel'),
-        confirmButtonText: Paris.i18n.t('list_equipments/confirm')
+        mainFacets: Paris.config.algolia.main_facets
       });
       // Search refinement list widget
       search.addWidget(refinementWidget);

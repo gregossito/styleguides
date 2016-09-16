@@ -9,9 +9,6 @@ var facets = [];
 var wrapperSelectorID = 'facet-list-wrapper';
 // Base HTML code for popup
 var popupHTML = '<div class="block-search-filters-popup"><div class="popup-background"></div><div class="popup-content"></div></div>';
-var options = {
-  mobileMediaQuery: window.matchMedia("(max-width: 767px)")
-};
 var settings;
 var mediaQuery = {
   mobileMediaQuery: window.matchMedia("(max-width: 767px)")
@@ -24,12 +21,6 @@ var container, // DOM selector in which to add UI
   operator, // Facets operator
   sortBy, // Facet ordering
   numberOfFacets, // Expected number of facets (displayed in popup)
-  moreButtonText, // Text for more facets button
-  applyButtonText, // Text for apply facets button
-  aroundMeButtonText, // Text for around me button
-  searchFilterPlaceholder, // Text for search filter input placeholder
-  cancelButtonText, // Text for cancel button (filters popup)
-  confirmButtonText, // Text for confirm button (filters popup)
   mainFacets; // Main facets filter
 
 // See more details in the documentation:
@@ -227,7 +218,7 @@ function initSearchFiltersPopupEvents() {
     renderList(selectedValues);
     renderSelectedFacets(selectedValues);
     // Trigger search with new facet refinement
-    if (!options.mobileMediaQuery.matches) {
+    if (!mediaQuery.mobileMediaQuery.matches) {
       helper.search();
     }
 
@@ -278,7 +269,7 @@ function renderList(selectedValues) {
   var content = '';
   // Append an around me button
   var data = {
-    text: settings.aroundMeButtonText,
+    text: Paris.i18n.t('list_equipments/around_me'),
     modifiers: ["secondary", "around-me-button"]
   };
   content += Paris.templates['button']['button'](data);
@@ -313,7 +304,7 @@ function renderList(selectedValues) {
 
     // At the end append a more button
     var data = {
-      text: settings.moreButtonText,
+      text: Paris.i18n.t('list_equipments/more_filters'),
       modifiers: ["secondary", "small", "more-filters-button"]
     };
     content += Paris.templates['button']['button'](data);
@@ -348,7 +339,7 @@ function renderList(selectedValues) {
 
   // At the end append a apply button
   var data = {
-    text: settings.applyButtonText,
+    text: Paris.i18n.t('list_equipments/apply_filters'),
     modifiers: ["apply-filters-button"]
   };
   content += Paris.templates['button']['button'](data);
@@ -371,7 +362,7 @@ function renderSelectedFacets(selectedValues) {
     content += Paris.templates['button']['button'](data);
   });
   var data = {
-    text: settings.moreButtonText,
+    text: Paris.i18n.t('list_equipments/more_filters'),
     modifiers: ["secondary", "small", "more-filters-button"]
   };
   content += Paris.templates['button']['button'](data);
@@ -425,7 +416,7 @@ function renderPopup(selectedValues) {
 
   var content = '';
   content += '<div class="search-filters-container">';
-  content += '<input type="text" name="search-filters" placeholder="'+settings.searchFilterPlaceholder+'">';
+  content += '<input type="text" name="search-filters" placeholder="'+Paris.i18n.t('list_equipments/around_me')+'">';
   content += '</div>';
   content += '<div class="filters-list">';
   // For each facets build html
@@ -438,11 +429,11 @@ function renderPopup(selectedValues) {
   // Add popup buttons
   content += '<div class="buttons">';
   content += Paris.templates['button']['button']({
-    text: settings.cancelButtonText,
+    text: Paris.i18n.t('list_equipments/cancel'),
     modifiers: ["discard", "action"]
   });
   content += Paris.templates['button']['button']({
-    text: settings.confirmButtonText,
+    text: Paris.i18n.t('list_equipments/confirm'),
     modifiers: ["confirm", "action"]
   });
   content += '</div>';

@@ -212,7 +212,7 @@ function initMap(container) {
         zoom: settings.cluster.clusterMaxZoom + 1,
         curve: 1.2
       });
-    // open hit
+    // Open hit
     } else {
       var html = settings.popupHTMLForHit(feature.properties);
       showPopup(html, feature.geometry.coordinates); 
