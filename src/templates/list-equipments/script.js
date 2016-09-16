@@ -163,19 +163,19 @@ Paris.listEquipments = (function(){
 
       // Center map and open pin on list result click
       $('#hits-container').on('click', '.card', function(event) {
-        var card = event.target.closest('.card');
-        if (event.target.closest('.favorite-btn')) {
-          toggleFavorite(card.getAttribute('hitid'));
+        var card = $(event.target).closest('.card');
+        if ($(event.target).closest('.favorite-btn').length > 0) {
+          toggleFavorite(card.attr('hitid'));
         } else {
           var hit = {
-            idequipements: card.getAttribute('hitid'),
+            idequipements: card.attr('hitid'),
             name: $(card).find('.card-title').html(),
             address: $(card).find('.card-address').html(),
             zipCode: $(card).find('.card-zipcode').html(),
             city: $(card).find('.card-city').html()
           };
           var content = renderMapPopupContent(hit);
-          mapboxWidget.openHit(content, [card.getAttribute('lng'), card.getAttribute('lat')], card.getAttribute('hitid'));
+          mapboxWidget.openHit(content, [card.attr('lng'), card.attr('lat')], card.attr('hitid'));
 
           $('#hits-container').addClass('inactive');
           $(card).removeClass('inactive');
@@ -193,7 +193,7 @@ Paris.listEquipments = (function(){
 
       // Handle click on map favorite button (popup)
       $('#map').on('click', '.favorite-btn', function(event) {
-        var hitID = event.target.closest('.card-content').getAttribute('hitid');
+        var hitID = $(event.target).closest('.card-content').attr('hitid');
         toggleFavorite(hitID);
       });
 
