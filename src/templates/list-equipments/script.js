@@ -81,7 +81,7 @@ Paris.listEquipments = (function(){
           container: '#hits-container',
           templates: {
             empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '<br>' + Paris.templates['button']['button']({ text: 'Dézoomer', modifiers: ["secondary", "zoom-out-button"]}) + '</p>',
-            item: '<a href="#" class="card open cat-{{idcategories}}" hitid="{{idequipements}}" lat="{{_geoloc.lat}}" lng="{{_geoloc.lon}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address}}</span><br><span class="card-zipcode">{{zipCode}}</span> <span class="card-city">{{city}}</span></div><div class="card-hours open">Ouvert jusqu’à 21h</div><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div></a>'
+            item: '<a href="#" class="card open cat-{{idcategories}}" hitid="{{idequipements}}" lat="{{_geoloc.lat}}" lng="{{_geoloc.lon}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address}}</span><br><span class="card-zipcode">{{zipCode}}</span> <span class="card-city">{{city}}</span></div><div class="card-hours {{#is_open}} open {{/is_open}} {{^is_open}} close {{/is_open}}" data-open="{{is_open}}">{{open_details}}</div><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div></a>'
           },
           cssClasses: {
             root: 'carousel',
@@ -166,7 +166,9 @@ Paris.listEquipments = (function(){
             name: $(card).find('.card-title').html(),
             address: $(card).find('.card-address').html(),
             zipCode: $(card).find('.card-zipcode').html(),
-            city: $(card).find('.card-city').html()
+            city: $(card).find('.card-city').html(),
+            open_details: $(card).find('.card-hours').html(),
+            is_open: $(card).find('.card-hours').attr('data-open')
           };
           var content = renderMapPopupContent(hit);
           mapboxWidget.openHit(content, [card.attr('lng'), card.attr('lat')], card.attr('hitid'));
@@ -386,10 +388,11 @@ Paris.listEquipments = (function(){
 
     function renderMapPopupContent(hit) {
       var content = '';
+      var is_open = hit.is_open == 'true' ? 'open' : 'close';
       content += '<div class="card-content" hitid="'+hit.idequipements+'">';
       content += '<h3 class="card-title">'+hit.name+'</h3>';
       content += '<div class="card-text"><span class="card-address">'+hit.address+'</span><br><span class="card-zipcode">'+hit.zipCode+'</span> <span class="card-city">'+hit.city+'</span><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div>';
-      content += '<div class="card-hours open">Ouvert jusqu’à 21h</div>';
+      content += '<div class="card-hours '+ is_open +'">'+hit.open_details+'</div>';
       content += '<div class="buttons">';
       content += Paris.templates['button']['button']({
         text: Paris.i18n.t('list_equipments/button_view'),
