@@ -483,6 +483,5 @@ function hitsToGeoJSON(hits) {
   });
 
   geoJSON.features = features;
-  console.log(geoJSON);
   return geoJSON;
 }
