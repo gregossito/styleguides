@@ -22,7 +22,6 @@ Paris.listEquipments = (function(){
   };
 
   var flkyCarousel;
-  var resizing = false;
   var firstLoad = true;
 
   function listEquipments(selector, userOptions) {
@@ -328,7 +327,7 @@ Paris.listEquipments = (function(){
       // On resize
       $( window ).resize(function() {
         // Constantly check if carousel needs to be initialized depending on media query
-        if (options.mobileMediaQuery.matches) {
+        if (options.mobileMediaQuery.matches && !$('.layout-content-list').hasClass('searching')) {
           // [mobile] Init carousel
           initCarousel();
         } else {
