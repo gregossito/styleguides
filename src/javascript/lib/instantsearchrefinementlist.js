@@ -171,7 +171,10 @@ function onChangeSelectSecondaryFilter(e) {
   if (value != 'all') {
     helper.toggleRefinement(attributeName, value);
   }
-  helper.search();
+  // Trigger search with new facet refinement
+  if (!mediaQuery.mobileMediaQuery.matches) {
+    helper.search();
+  }
 }
 
 function onCheckSecondaryFilter(e) {
@@ -182,7 +185,10 @@ function onCheckSecondaryFilter(e) {
   } else {
       helper.clearRefinements(attributeName);
   }
-  helper.search();
+  // Trigger search with new facet refinement
+  if (!mediaQuery.mobileMediaQuery.matches) {
+    helper.search();
+  }
 }
 
 function prepareFacets() {
