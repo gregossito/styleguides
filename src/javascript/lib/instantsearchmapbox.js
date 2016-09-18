@@ -433,7 +433,8 @@ function renderMap(geoJSON, sourceID) {
         type: 'symbol',
         source: sourceID,
         layout: {
-          'icon-image': 'marker-'+symbol
+          // TODO: Dynamic image
+          'icon-image': 'marker-'+15
           // Icons must be added into Mapbox editor as SVG file
           // To export SVG from Illustrator:
           //// File > Export
@@ -468,7 +469,7 @@ function hitsToGeoJSON(hits) {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [hit._geoloc.lng, hit._geoloc.lat]
+        coordinates: [hit._geoloc.lon, hit._geoloc.lat]
       },
       properties: {
         // TODO Activate dynamic icons
@@ -482,6 +483,6 @@ function hitsToGeoJSON(hits) {
   });
 
   geoJSON.features = features;
-
+  console.log(geoJSON);
   return geoJSON;
 }

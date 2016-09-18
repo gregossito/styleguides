@@ -246,11 +246,11 @@
                 "text": "à mobilité réduite"
               },
               {
-                "icon": "handicap-visually-impaired",
+                "icon": "handicap-vision",
                 "text": "non ou mal voyantes"
               },
               {
-                "icon": "handicap-hearing-impair",
+                "icon": "handicap-hearing",
                 "text": "sourdes ou malentendantes"
               }
             ]

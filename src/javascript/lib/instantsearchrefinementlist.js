@@ -34,11 +34,11 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
     getConfiguration: function(configuration) {
       if (options.operator === 'and') {
         widgetConfiguration = {
-          'facets': [options.attributeName]
+          'facets': [options.attributeName, 'sections', 'pool_length', 'accessibility', 'is_open']
         };
       } else {
         widgetConfiguration = {
-          'disjunctiveFacets': [options.attributeName]
+          'disjunctiveFacets': [options.attributeName, 'sections', 'pool_length', 'accessibility', 'is_open']
         };
       }
 
@@ -57,6 +57,9 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
       $(options.container).on('click', '.filterButton', onClickButton.bind(this));
       $(options.container).on('click', '.apply-filters-button', onClickApplyButton.bind(this));
       $(options.selectedFiltersContainer).on('click', '.filterButton', onClickSelectedFilter.bind(this));
+      $(options.container).on('change', 'select', onChangeSelectSecondaryFilter.bind(this));
+      $(options.container).on('change', 'input[type="checkbox"]', onCheckSecondaryFilter.bind(this));
+
 
       var windowTimer;
       $( window ).resize(function() {
@@ -152,9 +155,30 @@ function onClickSelectedFilter(e) {
   // Get selected values and toggle them
   $.each($(settings.selectedFiltersContainer + ' .filterButton.active'), function(i, el) {
     selectedValues.push($(el).text());
-   });
+  });
   // Render list with selected values
   renderList(selectedValues);
+  helper.search();
+}
+
+function onChangeSelectSecondaryFilter(e) {
+  var value = $(e.target).val();
+  var attributeName = $(e.target).attr('name');
+  helper.clearRefinements(attributeName);
+  if (value != 'all') {
+    helper.toggleRefinement(attributeName, value);
+  }
+  helper.search();
+}
+
+function onCheckSecondaryFilter(e) {
+  var isChecked = $(e.target).is(':checked');
+  var attributeName = $(e.target).attr('name');
+  if (isChecked) {
+    helper.toggleRefinement(attributeName, isChecked.toString());
+  } else {
+      helper.clearRefinements(attributeName);
+  }
   helper.search();
 }
 
@@ -326,7 +350,7 @@ function renderList(selectedValues) {
     } else if (val.type == 'select') {
       content += '<select name="'+val.id+'">';
       $.each(val.values, function(index, option) {
-        content += '<option value="'+option.id+'">'+option.label+'</option>';
+        content += '<option value="'+option.id+'" myAttribute="joidzaoijdzajoidazoj">'+option.label+'</option>';
       });
       content += '</select>';
     }

@@ -7,40 +7,43 @@ Paris.config = {
 
     // This API key should be created on Algolia, and have `search` permission on all the indexes below
     "api_key": "219f93ef781ffa09cdb6803f702cf6f1",
+    // TODO Remove after debug ?
+    "dev_mes_lieux_api_key": "850ba3330a69483fb4d56287a9e5eb06",
 
     // You can add any Algolia index here, to be able to use it in the quick-access module and search-results template
     "indexes": {
       "global": "recette_ParisFront",
       "persons": "recette_Elus",
-      "equipments": "Eqpt"
+      "equipments": "Eqpt",
+      "dev_mes_lieux": "dev_MesLieux"
     },
     "main_facets": ["Piscines", "Bibliothèques", "Parcs et jardins", "Marchés", "Ateliers Beaux-Arts", "Centres d’animation", "Conservatoires", "Mairies", "Maisons des assos", "Maisons entreprises et emploi", "Musées municipaux", "Tennis"],
     "secondary_filters": [
       {
         "title": "Ouverture",
         "type": "checkbox",
-        "id": "filter-opening",
+        "id": "is_open",
         "label": "Ouvert maintenant"
       },
       {
         "title": "Accessibilité",
         "type": "select",
-        "id": "filter-accessibility",
+        "id": "accessibility",
         "values": [
           {
-            "id": "",
+            "id": "all",
             "label": "Sans préférence"
           },
           {
-            "id": "disability-hearing",
+            "id": "accessible aux personnes à mobilité réduite",
             "label": "Handicap moteur"
           },
           {
-            "id": "disability-visual",
+            "id": "accessible aux non-voyants et malvoyants",
             "label": "Handicap visuel"
           },
           {
-            "id": "disability-phisical",
+            "id": "accessible aux sourds et malentendants",
             "label": "Handicap auditif"
           }
         ]
@@ -48,23 +51,23 @@ Paris.config = {
       {
         "title": "Taille du bassin",
         "type": "select",
-        "id": "filter-swimming-pool",
+        "id": "pool_length",
         "linked_filter": "Piscines",
         "values": [
           {
-            "id": "",
+            "id": "all",
             "label": "Sans préférence"
           },
           {
-            "id": "25",
+            "id": "25m",
             "label": "25 m"
           },
           {
-            "id": "33",
+            "id": "33m",
             "label": "33 m"
           },
           {
-            "id": "50",
+            "id": "50m",
             "label": "50 m"
           }
         ]
@@ -72,36 +75,32 @@ Paris.config = {
       {
         "title": "Section",
         "type": "select",
-        "id": "filter-library",
+        "id": "sections",
         "linked_filter": "Bibliothèques",
         "values": [
           {
-            "id": "",
+            "id": "all",
             "label": "Tous"
           },
           {
-            "id": "adults",
+            "id": "adulte",
             "label": "Adulte"
           },
           {
-            "id": "youth",
-            "label": "Jeunesse"
+            "id": "bibliothèque spécialisée",
+            "label": "Bibliothèques spécialisées"
           },
           {
-            "id": "discotheques",
+            "id": "discothèque",
             "label": "Discothèques"
           },
           {
-            "id": "videotheques",
+            "id": "jeunesse",
+            "label": "Jeunesse"
+          },
+          {
+            "id": "vidéothèque",
             "label": "Vidéothèques"
-          },
-          {
-            "id": "music-languages-pole",
-            "label": "Pôles musique et langues"
-          },
-          {
-            "id": "thematic",
-            "label": "Fonds thématiques"
           }
         ]
       }
