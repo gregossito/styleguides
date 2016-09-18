@@ -14,7 +14,8 @@ Paris.listEquipments = (function(){
 
   var defaultOptions = {
     // the Algolia index to use (should be defined in config.js)
-    index: 'equipments',
+    // TODO: REMOVE DEV INDEX
+    index: 'dev_mes_lieux',
     searchParams: {
       "attributesToRetrieve": "*"
     },
@@ -38,7 +39,7 @@ Paris.listEquipments = (function(){
       // Init instantsearch
       var search = instantsearch({
         appId: Paris.config.algolia.id,
-        apiKey: Paris.config.algolia.api_key,
+        apiKey: Paris.config.algolia.dev_mes_lieux_api_key,
         indexName: Paris.config.algolia.indexes[options.index],
         searchParameters: options.searchParams
       });
@@ -81,7 +82,7 @@ Paris.listEquipments = (function(){
           container: '#hits-container',
           templates: {
             empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '<br>' + Paris.templates['button']['button']({ text: 'Dézoomer', modifiers: ["secondary", "zoom-out-button"]}) + '</p>',
-            item: '<a href="#" class="card open cat-{{idcategories}}" hitid="{{idequipements}}" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address}}</span><br><span class="card-zipcode">{{zipCode}}</span> <span class="card-city">{{city}}</span></div><div class="card-hours open">Ouvert jusqu’à 21h</div><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div></a>'
+            item: '<a href="#" class="card open cat-{{idcategories}}" hitid="{{idequipements}}" lat="{{_geoloc.lat}}" lng="{{_geoloc.lon}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address}}</span><br><span class="card-zipcode">{{zipCode}}</span> <span class="card-city">{{city}}</span></div><div class="card-hours open">Ouvert jusqu’à 21h</div><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div></a>'
           },
           cssClasses: {
             root: 'carousel',
@@ -211,7 +212,7 @@ Paris.listEquipments = (function(){
       });
 
       // Autocompletion is not an instantsearch feature. Must use algolia.js directly
-      var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
+      var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.dev_mes_lieux_api_key);
       var index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
 
       var equipementDataset = {
