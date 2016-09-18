@@ -261,7 +261,10 @@ Paris.listEquipments = (function(){
         if (dataset == 'places') {
           placeQuery = suggestion.value;
           search.helper.setQuery(suggestion.value);
-          mapboxWidget.flyTo([suggestion.latlng.lng, suggestion.latlng.lat]);
+          setTimeout(function() {
+            // Timeout fix a bug on android with keyboard toggle
+            mapboxWidget.flyTo([suggestion.latlng.lng, suggestion.latlng.lat]);
+          }, 500);
           $('.layout-content-list').removeClass('searching');
         } else {
           placeQuery = '';
