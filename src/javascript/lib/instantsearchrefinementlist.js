@@ -131,6 +131,9 @@ function onClickButton(e) {
   // Toggle facet and force new search request
   helper.toggleRefinement(settings.attributeName, $this.text());
 
+  // Handle secondary filters display
+  handleSecondaryFilters();
+
   if (!mediaQuery.mobileMediaQuery.matches) {
     helper.search();
   }
@@ -348,7 +351,7 @@ function renderList(selectedValues) {
       content += '<span>'+val.label+'</span>';
       content += '</label>';
     } else if (val.type == 'select') {
-      content += '<select name="'+val.id+'">';
+      content += '<select name="'+val.id+'" data-linked-filter-id="'+val.linked_filter+'">';
       $.each(val.values, function(index, option) {
         content += '<option value="'+option.id+'" myAttribute="joidzaoijdzajoidazoj">'+option.label+'</option>';
       });
@@ -369,6 +372,28 @@ function renderList(selectedValues) {
   content += Paris.templates['button']['button'](data);
 
   $(settings.container).html(content);
+
+  // Handle secondary filters display
+  handleSecondaryFilters();
+}
+
+function handleSecondaryFilters() {
+
+  // Handle secondary filters
+  $.each($('.secondary-filters select'), function(i, el) {
+    var linked_filter = $(el).attr('data-linked-filter-id');
+    var selectedValues = [];
+    $.each($(settings.container + ' .filterButton.active'), function(i, el) {
+      selectedValues.push($(el).text());
+    });
+    if (linked_filter && linked_filter != 'undefined') {
+      if (selectedValues.indexOf(linked_filter) != -1) {
+        $(this).closest('.secondary-filter').show();
+      } else {
+        $(this).closest('.secondary-filter').hide();
+      }
+    }
+  });
 }
 
 // Render selected facets
