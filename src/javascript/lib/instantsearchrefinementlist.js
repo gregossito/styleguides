@@ -359,7 +359,7 @@ function renderList(selectedValues) {
     } else if (val.type == 'select') {
       content += '<select name="'+val.id+'" data-linked-filter-id="'+val.linked_filter+'">';
       $.each(val.values, function(index, option) {
-        content += '<option value="'+option.id+'" myAttribute="joidzaoijdzajoidazoj">'+option.label+'</option>';
+        content += '<option value="'+option.id+'">'+option.label+'</option>';
       });
       content += '</select>';
     }
@@ -396,6 +396,10 @@ function handleSecondaryFilters() {
       if (selectedValues.indexOf(linked_filter) != -1) {
         $(this).closest('.secondary-filter').show();
       } else {
+        console.log(el);
+        var attributeName = $(el).attr('name');
+        helper.clearRefinements(attributeName);
+        $(el).val('all');
         $(this).closest('.secondary-filter').hide();
       }
     }
