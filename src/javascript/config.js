@@ -76,7 +76,7 @@ Paris.config = {
         "title": "Section",
         "type": "select",
         "id": "sections",
-        "linked_filter": "Bibliothèques",
+        "linked_filter": "Bibliothèques universitaires",
         "values": [
           {
             "id": "all",

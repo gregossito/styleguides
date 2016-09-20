@@ -440,6 +440,10 @@ function handleSecondaryFilters() {
       if (selectedValues.indexOf(linked_filter) != -1) {
         $(this).closest('.secondary-filter').show();
       } else {
+        console.log(el);
+        var attributeName = $(el).attr('name');
+        helper.clearRefinements(attributeName);
+        $(el).val('all');
         $(this).closest('.secondary-filter').hide();
       }
     }
