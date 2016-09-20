@@ -316,23 +316,33 @@ function initSearchFiltersPopupEvents() {
 function initSelectedFiltersPopupEvents() {
   // Open popup event
   $(settings.selectedFiltersContainer).on('click', '.more-filters-button', function(event) {
-    $(settings.selectedFiltersContainer).find('.list-equipment-popup').fadeIn(400);
-  });
+    
+    // Set popup content
+    var $button = $selectedFiltersContainer.find('.selected-filters-buttons-container button.filterButton').clone();
+    $(settings.selectedFiltersContainer).find('.list-equipment-popup .filters-buttons').html($button);
+    $(settings.selectedFiltersContainer).find('.list-equipment-popup .filters-buttons .filterButton').removeClass('hidden');
 
-  // Close popup
-  $(settings.selectedFiltersContainer).on('click', '.popup-background', function(event) {
-    $(settings.selectedFiltersContainer).find('.list-equipment-popup').fadeOut(400);
+    // Show popup
+    $(settings.selectedFiltersContainer).find('.list-equipment-popup').fadeIn(400);
   });
 
   // Discard popup
   $(settings.selectedFiltersContainer).on('click', '.discard', function(event) {
-    $(settings.selectedFiltersContainer).find('.list-equipment-popup').fadeOut(400);
+
+    // Close popup
+    closeSelectedFiltersPopup();
   });
 
   // Confirm popup
   $(settings.selectedFiltersContainer).on('click', '.confirm', function(event) {
-    $(settings.selectedFiltersContainer).find('.list-equipment-popup').fadeOut(400);
+
+    // Close popup
+    closeSelectedFiltersPopup();
   });
+}
+
+function closeSelectedFiltersPopup() {
+  $(settings.selectedFiltersContainer).find('.list-equipment-popup').fadeOut(400);
 }
 
 // Render facet list
@@ -531,7 +541,7 @@ function renderSelectedFacets(selectedValues) {
   content += '<div class="list-equipment-popup selected-facets-popup">';
   content += '<div class="popup-background"></div>';
   content += '<div class="popup-content">';
-  content += buttonsHTML;
+  content += '<div class="filters-buttons"></div>';
   // Add popup buttons
   content += '<div class="buttons">';
   content += Paris.templates['button']['button']({
