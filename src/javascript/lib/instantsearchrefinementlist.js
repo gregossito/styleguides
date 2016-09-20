@@ -164,7 +164,14 @@ function onClickApplyButton(e) {
 
 function onClickSelectedFilter(e) {
   onClickButton(e);
+
+  var facet = $(e.target).closest('.filterButton').attr('data-facet');
+  var value =  $(e.target).closest('.filterButton').attr('data-value');
+
+  // Remove clicked filter and filters that depend on it
   $(e.target).closest('.filterButton').remove();
+  $(settings.selectedFiltersContainer + ' .selected-filters-buttons-container .filterButton[data-linked-filter-id="'+value+'"]').remove();
+
   selectedFacetsDisplay();
   var selectedValues = [];
   // Get selected values and toggle them
@@ -440,7 +447,6 @@ function handleSecondaryFilters() {
       if (selectedValues.indexOf(linked_filter) != -1) {
         $(this).closest('.secondary-filter').show();
       } else {
-        console.log(el);
         var attributeName = $(el).attr('name');
         helper.clearRefinements(attributeName);
         $(el).val('all');
@@ -477,6 +483,7 @@ function renderSelectedFacets(selectedValues) {
     var facet = $(el).attr('name');
     var value = $(el).val();
     var label = $(el).find(':selected').text();
+    var linkedFilter = ($(el).attr('data-linked-filter-id') ? $(el).attr('data-linked-filter-id') : '');
     if (value && value != 'all') {
       var data = {
         text: label,
@@ -484,7 +491,8 @@ function renderSelectedFacets(selectedValues) {
         attributes: {
           'data-facet': facet,
           'data-value': value,
-          'data-label': label
+          'data-label': label,
+          'data-linked-filter-id': linkedFilter
         }
       };
       buttonsHTML += Paris.templates['button']['button'](data);
@@ -495,6 +503,7 @@ function renderSelectedFacets(selectedValues) {
     var facet = $(el).attr('name');
     var value = $(el).is(':checked');
     var label = $(el).next('span').text();
+    var linkedFilter = ($(el).attr('data-linked-filter-id') ? $(el).attr('data-linked-filter-id') : '');
     if (value) {
       var data = {
         text: label,
@@ -502,7 +511,8 @@ function renderSelectedFacets(selectedValues) {
         attributes: {
           'data-facet': facet,
           'data-value': value.toString,
-          'data-label': label
+          'data-label': label,
+          'data-linked-filter-id': linkedFilter
         }
       };
       buttonsHTML += Paris.templates['button']['button'](data);
