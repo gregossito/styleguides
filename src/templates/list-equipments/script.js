@@ -305,6 +305,7 @@ Paris.listEquipments = (function(){
       search.helper.on('result', function(results, state) {
 
         if ($('.layout-content-list').hasClass('searching')) {
+          // This allow to display filters when we click on around me button
           refinementWidget.getAndRenderSelectedFacets();
         }
         if (firstLoad === false) {

@@ -91,6 +91,7 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
           // Init filter view
           initView();
           initSearchFiltersPopupEvents();
+          initSelectedFiltersPopupEvents();
         }
       );
 
@@ -122,14 +123,26 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
 
 // Handle facet click action
 function onClickButton(e) {
+  
   e.preventDefault();
+
   // Find the button DOM element
   var $this = $(e.target).closest('.button');
+  
   // Toggle the button
   $this.toggleClass('active');
 
   // Toggle facet and force new search request
-  helper.toggleRefinement(settings.attributeName, $this.text());
+  if ($this.attr('data-value') && $this.attr('data-value') != undefined) { // button or select
+    helper.toggleRefinement($this.attr('data-facet'), $this.attr('data-value'));
+  } else { // checkbox
+    var isChecked = $this.is(':checked');
+    if (isChecked) {
+      helper.toggleRefinement($this.attr('data-facet'), isChecked.toString());
+    } else {
+        helper.clearRefinements($this.attr('data-facet'));
+    }
+  }
 
   // Handle secondary filters display
   handleSecondaryFilters();
@@ -154,9 +167,8 @@ function onClickSelectedFilter(e) {
   $(e.target).closest('.filterButton').remove();
   selectedFacetsDisplay();
   var selectedValues = [];
-  var inputs = $('.block-search-filters .filters-list input[type="checkbox"]:checked');
   // Get selected values and toggle them
-  $.each($(settings.selectedFiltersContainer + ' .filterButton.active'), function(i, el) {
+  $.each($(settings.selectedFiltersContainer + ' .selected-filters-buttons-container .filterButton.active'), function(i, el) {
     selectedValues.push($(el).text());
   });
   // Render list with selected values
@@ -206,11 +218,10 @@ function initView() {
   renderList([]);
 }
 
-// Init popup events
+// Init search filters popup events
 function initSearchFiltersPopupEvents() {
-
   // Open popup event
-  $('.layout-content-list').on('click', '.more-filters-button', function(event) {
+  $(settings.container).on('click', '.more-filters-button', function(event) {
     // Get current selected values
     var selectedValues = [];
     $.each($(settings.container + ' .filterButton.active'), function(i, el) {
@@ -294,6 +305,29 @@ function initSearchFiltersPopupEvents() {
   });
 }
 
+// Init selected filters popup events
+function initSelectedFiltersPopupEvents() {
+  // Open popup event
+  $(settings.selectedFiltersContainer).on('click', '.more-filters-button', function(event) {
+    $(settings.selectedFiltersContainer).find('.list-equipment-popup').fadeIn(400);
+  });
+
+  // Close popup
+  $(settings.selectedFiltersContainer).on('click', '.popup-background', function(event) {
+    $(settings.selectedFiltersContainer).find('.list-equipment-popup').fadeOut(400);
+  });
+
+  // Discard popup
+  $(settings.selectedFiltersContainer).on('click', '.discard', function(event) {
+    $(settings.selectedFiltersContainer).find('.list-equipment-popup').fadeOut(400);
+  });
+
+  // Confirm popup
+  $(settings.selectedFiltersContainer).on('click', '.confirm', function(event) {
+    $(settings.selectedFiltersContainer).find('.list-equipment-popup').fadeOut(400);
+  });
+}
+
 // Render facet list
 function renderList(selectedValues) {
 
@@ -311,7 +345,12 @@ function renderList(selectedValues) {
   $.each(settings.mainFacets, function(i, facet) {
     var data = {
       text: facet,
-      modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton']
+      modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton'],
+      attributes: {
+        'data-facet': 'categories',
+        'data-value': facet,
+        'data-label': facet
+      }
     };
     // If selected set to active
     if ($.inArray(facet, selectedValues) >= 0) {
@@ -329,7 +368,12 @@ function renderList(selectedValues) {
       if ($.inArray(value, settings.mainFacets) < 0) {
         var data = {
           text: value,
-          modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton', 'active']
+          modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton', 'active'],
+          attributes: {
+            'data-facet': 'categories',
+            'data-value': value,
+            'data-label': value
+          }
         };
         content += Paris.templates['button']['button'](data); 
       }
@@ -357,9 +401,9 @@ function renderList(selectedValues) {
       content += '<span>'+val.label+'</span>';
       content += '</label>';
     } else if (val.type == 'select') {
-      content += '<select name="'+val.id+'" data-linked-filter-id="'+val.linked_filter+'">';
+      content += '<select name="'+val.id+'" data-linked-filter-id="'+(val.linked_filter ? val.linked_filter : '')+'">';
       $.each(val.values, function(index, option) {
-        content += '<option value="'+option.id+'" myAttribute="joidzaoijdzajoidazoj">'+option.label+'</option>';
+        content += '<option value="'+option.id+'">'+option.label+'</option>';
       });
       content += '</select>';
     }
@@ -409,18 +453,84 @@ function renderSelectedFacets(selectedValues) {
   $selectedFiltersContainer = $(settings.selectedFiltersContainer);
 
   var content = '';
+  var buttonsHTML = '';
+  content += '<div class="selected-filters-buttons-container">';
+  // Add categories
   $.each(selectedValues, function(i, value) {
     var data = {
       text: value,
-      modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton', 'active']
+      modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton', 'active'],
+      attributes: {
+        'data-facet': 'categories',
+        'data-value': value,
+        'data-label': value
+      }
     };
-    content += Paris.templates['button']['button'](data);
+    buttonsHTML += Paris.templates['button']['button'](data);
   });
+  // Add secondary filters (select)
+  $.each($('.secondary-filters .secondary-filter select'), function(i, el) {
+    var facet = $(el).attr('name');
+    var value = $(el).val();
+    var label = $(el).find(':selected').text();
+    if (value && value != 'all') {
+      var data = {
+        text: label,
+        modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton', 'active'],
+        attributes: {
+          'data-facet': facet,
+          'data-value': value,
+          'data-label': label
+        }
+      };
+      buttonsHTML += Paris.templates['button']['button'](data);
+    }
+  });
+  // Add secondary filters (checkbox)
+  $.each($('.secondary-filters .secondary-filter input[type="checkbox"]'), function(i, el) {
+    var facet = $(el).attr('name');
+    var value = $(el).is(':checked');
+    var label = $(el).next('span').text();
+    if (value) {
+      var data = {
+        text: label,
+        modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton', 'active'],
+        attributes: {
+          'data-facet': facet,
+          'data-value': value.toString,
+          'data-label': label
+        }
+      };
+      buttonsHTML += Paris.templates['button']['button'](data);
+    }
+  });
+  content += buttonsHTML;
+  // Add a more filters button
   var data = {
     text: Paris.i18n.t('list_equipments/more_filters'),
     modifiers: ["secondary", "small", "more-filters-button"]
   };
   content += Paris.templates['button']['button'](data);
+  content += '</div>';
+
+  // Render popup
+  content += '<div class="list-equipment-popup selected-facets-popup">';
+  content += '<div class="popup-background"></div>';
+  content += '<div class="popup-content">';
+  content += buttonsHTML;
+  // Add popup buttons
+  content += '<div class="buttons">';
+  content += Paris.templates['button']['button']({
+    text: Paris.i18n.t('list_equipments/cancel'),
+    modifiers: ["discard", "action"]
+  });
+  content += Paris.templates['button']['button']({
+    text: Paris.i18n.t('list_equipments/confirm'),
+    modifiers: ["confirm", "action"]
+  });
+  content += '</div>';
+  content += '</div>';
+  content += '</div>';
 
   $selectedFiltersContainer.html(content);
   
@@ -433,29 +543,29 @@ function selectedFacetsDisplay() {
   var totalWidth = 0;
   var moreButtonWidth = 0;
   var maxWidth = $selectedFiltersContainer.width();
-  var btnLeft = $selectedFiltersContainer.find('button.filterButton').length;
+  var btnLeft = $selectedFiltersContainer.find('.selected-filters-buttons-container button.filterButton').length;
 
-  $selectedFiltersContainer.find('button.more-filters-button').hide();
+  $selectedFiltersContainer.find('.selected-filters-buttons-container button.more-filters-button').hide();
 
   setTimeout(function() {
-    $selectedFiltersContainer.find('button.filterButton').each(function(i) {
+    $selectedFiltersContainer.find('.selected-filters-buttons-container button.filterButton').each(function(i) {
 
       // Calculate total width
       totalWidth += $(this).width() + 50;
 
       // Set more filters button
       if (btnLeft > 1 ) {
-        $selectedFiltersContainer.find('button.more-filters-button').html(Paris.i18n.t("list_equipments/more_filters_nb", [btnLeft - 1])); 
-        $selectedFiltersContainer.find('button.more-filters-button').show();
-        moreButtonWidth = $selectedFiltersContainer.find('button.more-filters-button').width() + 20;
+        $selectedFiltersContainer.find('.selected-filters-buttons-container button.more-filters-button').html(Paris.i18n.t("list_equipments/more_filters_nb", [btnLeft - 1])); 
+        $selectedFiltersContainer.find('.selected-filters-buttons-container button.more-filters-button').show();
+        moreButtonWidth = $selectedFiltersContainer.find('.selected-filters-buttons-container button.more-filters-button').width() + 20;
       } else if (totalWidth < maxWidth) {
-        $selectedFiltersContainer.find('button.more-filters-button').hide();
+        $selectedFiltersContainer.find('.selected-filters-buttons-container button.more-filters-button').hide();
         moreButtonWidth = 0;
       }
 
       if (totalWidth + moreButtonWidth > maxWidth) {
         $(this).addClass('hidden');
-        $selectedFiltersContainer.find('button.more-filters-button').html(Paris.i18n.t("list_equipments/more_filters_nb", [btnLeft])); 
+        $selectedFiltersContainer.find('.selected-filters-buttons-container button.more-filters-button').html(Paris.i18n.t("list_equipments/more_filters_nb", [btnLeft])); 
         totalWidth += moreButtonWidth;
         return;
       } else {
@@ -466,12 +576,12 @@ function selectedFacetsDisplay() {
   }, 1);
 }
 
-// Render popup
+// Render search filters popup
 function renderPopup(selectedValues) {
 
   var content = '';
   content += '<div class="search-filters-container">';
-  content += '<input type="text" name="search-filters" placeholder="'+Paris.i18n.t('list_equipments/around_me')+'">';
+  content += '<input type="text" name="search-filters" placeholder="'+Paris.i18n.t('list_equipments/search_filter')+'">';
   content += '</div>';
   content += '<div class="filters-list">';
   // For each facets build html
