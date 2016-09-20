@@ -112,14 +112,21 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
       // Nothing to re-render
     },
     getAndRenderSelectedFacets: function() {
-      var selectedValues = [];
-      $.each($(settings.container + ' .filterButton.active'), function(i, el) {
-        selectedValues.push($(el).text());
-      });
+      var selectedValues = getSelectedValues($(settings.container + ' .filterButton.active'));
       renderSelectedFacets(selectedValues);
     }
   };
 };
+
+// Get 
+function getSelectedValues(parentSelector) {
+
+  var selectedValues = [];
+  $.each(parentSelector, function(i, el) {
+    selectedValues.push($(el).text());
+  });
+  return selectedValues;
+}
 
 // Handle facet click action
 function onClickButton(e) {
@@ -154,10 +161,7 @@ function onClickButton(e) {
 
 function onClickApplyButton(e) {
   helper.search();
-  var selectedValues = [];
-  $.each($(settings.container + ' .filterButton.active'), function(i, el) {
-    selectedValues.push($(el).text());
-  });
+  var selectedValues = getSelectedValues($(settings.container + ' .filterButton.active'));
   renderSelectedFacets(selectedValues);
   $(e.target).closest('.layout-content-list').removeClass('searching');
 }
@@ -173,11 +177,8 @@ function onClickSelectedFilter(e) {
   $(settings.selectedFiltersContainer + ' .selected-filters-buttons-container .filterButton[data-linked-filter-id="'+value+'"]').remove();
 
   selectedFacetsDisplay();
-  var selectedValues = [];
   // Get selected values and toggle them
-  $.each($(settings.selectedFiltersContainer + ' .selected-filters-buttons-container .filterButton.active'), function(i, el) {
-    selectedValues.push($(el).text());
-  });
+  var selectedValues = getSelectedValues($(settings.selectedFiltersContainer + ' .selected-filters-buttons-container .filterButton.active'));
   // Render list with selected values
   renderList(selectedValues);
   helper.search();
@@ -230,10 +231,7 @@ function initSearchFiltersPopupEvents() {
   // Open popup event
   $(settings.container).on('click', '.more-filters-button', function(event) {
     // Get current selected values
-    var selectedValues = [];
-    $.each($(settings.container + ' .filterButton.active'), function(i, el) {
-      selectedValues.push($(el).text());
-    });
+    var selectedValues = getSelectedValues($(settings.container + ' .filterButton.active'));
     // Render popup with selected values
     renderPopup(selectedValues);
     // Show popup
@@ -449,10 +447,7 @@ function handleSecondaryFilters() {
   // Handle secondary filters
   $.each($('.secondary-filters select'), function(i, el) {
     var linked_filter = $(el).attr('data-linked-filter-id');
-    var selectedValues = [];
-    $.each($(settings.container + ' .filterButton.active'), function(i, el) {
-      selectedValues.push($(el).text());
-    });
+    var selectedValues = getSelectedValues($(settings.container + ' .filterButton.active'));
     if (linked_filter && linked_filter != 'undefined') {
       if (selectedValues.indexOf(linked_filter) != -1) {
         $(this).closest('.secondary-filter').show();
