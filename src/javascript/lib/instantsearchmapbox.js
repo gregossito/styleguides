@@ -469,7 +469,7 @@ function hitsToGeoJSON(hits) {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [hit._geoloc.lon, hit._geoloc.lat]
+        coordinates: [hit._geoloc.lng, hit._geoloc.lat]
       },
       properties: {
         // TODO Activate dynamic icons
