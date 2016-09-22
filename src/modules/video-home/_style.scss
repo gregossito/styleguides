@@ -1,5 +1,6 @@
 .video-home{
   align-items: center;
+  background: $gray28;
   display: flex;
   height: 100%;
   list-style: none;
@@ -7,7 +8,7 @@
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  padding: 30px;
+  padding: 40px 30px 30px;
 }
 
 .video-home-item{
@@ -27,58 +28,89 @@
   outline: 15px solid $gray1A;
 }
 
-.video-home-content{
+.video-home-content {
   text-align: left;
   .video-home-title, .video-home-duration{
     color: $white;
     font-weight: 700;
-  }  
+  } 
   .video-home-duration{
     margin-top:5px;
   }
 }
 
-@include large-and-medium {
-  .video-home-list-item {
-      // modifiers
-      &.small {
-        @include span(3 of 12);
-        margin-right: 60px;
-        .video-home-wrapper {
-          .video-home-image {
-            display: block;
-            min-height: 127px;
-          }
+.video-home-list-item {
+    // modifiers
+  &.small {
+    .video-home-title{
+      font-size: 1.7rem;
+      line-height: 1.9rem;
+    }
+    
+    .video-home-duration{
+      font-weight: 500;
+      font-size: 1.1rem;
+      letter-spacing: 0.15rem;
+    }
+  }
+  
+  &.large{
+    .video-home-title{
+      font-size: 2.2rem;
+      line-height: 2.4rem;
+      max-width: 350px;
+    }
+    .video-home-duration{
+      font-weight: 500;
+      font-size: 1.4rem;
+      letter-spacing: 0.15rem;
+    }
+  }
+}
 
-          .video-home-content {
-            .video-home-title{
-              font-size: 1.7rem;
-              line-height: 1.9rem;
+@include small {
+  .video-home{
+    display: flex;
+    flex-flow: row wrap;
+    
+    .video-home-list-item {
+      flex: 1 100%;
+        // modifiers
+        &.small {
+          &:first-child{
+            margin-top: 25px;
+            order: 2;
+          }
+          &:last-child{
+            order: 3;
+          }
+          .video-home-wrapper {
+            .video-home-image {
+              float: left;
+              height: 70px;
+              outline: 5px solid $gray1A;
+              min-width: 120px;
             }
-            .video-home-duration{
-              font-weight: 500;
-              font-size: 1.1rem;
-              letter-spacing: 0.15rem;
+            .video-home-content {
+              margin-left: 145px;
             }
           }
         }
-      }
-    
-      &.large {
-          @include span(6 of 12);
-          margin-right: 60px;
+
+        &.large {
+          order: 1;
+          @include span(12 of 12);
           .video-home-wrapper {
             .video-home-image {
-              display: block;
-              min-height: 300px;
+              margin-bottom: 20px;
+              min-height: 280px;
+              outline: none;
             }
-
             .video-home-content {
-              text-align: left;
               .video-home-title{
                 font-size: 2.2rem;
                 line-height: 2.4rem;
-                max-width: 350px;
+                max-width: 100%;
               }
               .video-home-duration{
                 font-weight: 500;
@@ -88,9 +120,41 @@
             }
           }
         }
+      }
+    }
+}
+
+@include large-and-medium {
+  .video-home-list-item {
+      // modifiers
+      &.small {
+        @include span(3 of 12);
+        margin-right: 60px;
+        
+        .video-home-wrapper {
+          .video-home-image {
+            min-height: 127px;
+          }
+
+          .video-home-content {}
+        }
+      }
+    
+      &.large {
+        @include span(6 of 12);
+        margin-right: 60px;
+        
+        .video-home-wrapper {
+          .video-home-image {
+            min-height: 300px;
+          }
+
+          .video-home-content {}
+        }
+      }
 
       &:last-child{
         margin-right: 0;
       }
-  }
-}
+    }
+} 
