@@ -247,7 +247,7 @@ function onClickFilterButton(e) {
 // UI click on facet filter buttons in all selected facet filters (mobile only)
 function onClickSelectedFacetFilterButton(e) {
   onClickFilterButton(e);
-  $(e.target.closest('button')).remove();
+  $(e.target).closest('button').remove();
   updateUI();
   helper.search();
 }
