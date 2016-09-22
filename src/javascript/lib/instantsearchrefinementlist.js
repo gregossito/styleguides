@@ -244,7 +244,7 @@ function onClickFilterButton(e) {
     facet: button.attr('data-facet'),
     value: button.attr('data-value'),
     label: button.attr('data-label')
-  }
+  };
   // Toggle the button style
   button.toggleClass('active');
   toggletFacet(facetFilter);
@@ -287,7 +287,7 @@ function onClickSelectedFacetPopupFilterButton(e) {
 // UI action when secondary filter of select type changes value
 function onChangeSelectSecondaryFilter(e) {
 
-  var facet = $(e.target).attr('name')
+  var facet = $(e.target).attr('name');
   var value = $(e.target).val();
   var label = $(e.target).find(':selected').text();
 
