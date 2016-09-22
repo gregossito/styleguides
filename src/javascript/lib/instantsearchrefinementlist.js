@@ -499,6 +499,13 @@ function renderSelectedFacetFilters() {
   content += '</div>';
 
   $selectedFiltersContainer.html(content);
+
+
+  // Calculate map height
+  setTimeout(function() {
+    var mapHeight = $(window).height() - $('header').height() - $('.layout-content-list').height();
+    $('.layout-content-map').height(mapHeight);
+  }, 1);
   
   selectedFacetsMoreButtonDisplay();
 }
