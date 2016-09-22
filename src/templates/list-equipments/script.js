@@ -86,6 +86,7 @@ Paris.listEquipments = (function(){
         mapBoxAccessToken: Paris.config.mapbox.access_token,
         mapbox: {
           style: 'mapbox://styles/parisnumerique/cis1rkqoj000khinpthppoaqd',
+          trackResize: true,
           zoom: 11,
           minZoom: 10,
           center: [Paris.config.search.paris_coordinates.lng, Paris.config.search.paris_coordinates.lat],

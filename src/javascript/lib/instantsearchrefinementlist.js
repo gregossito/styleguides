@@ -502,10 +502,14 @@ function renderSelectedFacetFilters() {
 
 
   // Calculate map height
-  // setTimeout(function() {
-  //   var mapHeight = $(window).height() - $('header').height() - $('.layout-content-list').height();
-  //   $('.layout-content-map').height(mapHeight);
-  // }, 1);
+  setTimeout(function() {
+    if (mediaQuery.mobileMediaQuery.matches) {
+      var mapHeight = $(window).height() - $('header').height() - $('.layout-content-list').height();
+    } else {
+      var mapHeight = '100%';
+    }
+    $('.layout-content-map').height(mapHeight);
+  }, 1);
   
   selectedFacetsMoreButtonDisplay();
 }
