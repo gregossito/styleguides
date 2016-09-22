@@ -216,7 +216,7 @@ function initMap(container) {
     } else {
       var html = settings.popupHTMLForHit(feature.properties);
       showPopup(html, feature.geometry.coordinates); 
-      settings.openedHit(feature.properties.idequipements);
+      settings.openedHit(feature.properties.objectID);
     }
   });
 
