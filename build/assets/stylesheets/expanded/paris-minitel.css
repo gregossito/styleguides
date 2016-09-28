@@ -3770,8 +3770,6 @@ html.no-touch .news-card-counter {
 
 @media (max-width: 767px) {
   .quick-access-video,
-  .quick-access-search,
-  .quick-access-close-search,
   .quick-access-results {
     display: none !important; } }
 
@@ -3787,7 +3785,10 @@ html.no-touch .news-card-counter {
     .quick-access-buttons .button {
       display: block;
       margin-bottom: 10px;
-      white-space: normal; } }
+      white-space: normal; }
+  .home .quick-access-search {
+    margin-top: -160px;
+    height: 160px; } }
 
 @media (min-width: 768px) and (max-width: 1159px) {
   .quick-access-wrapper {
