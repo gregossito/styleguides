@@ -71,6 +71,7 @@
     "title": "Icônes",
     "icons": [
       "alert",
+      "animation",
       "arrow-bottom",
       "arrow-left",
       "arrow-light-bottom",
@@ -106,6 +107,7 @@
       "handicap-mobility",
       "handicap-vision",
       "instagram",
+      "jobs",
       "library",
       "link",
       "mail",
@@ -121,6 +123,7 @@
       "search",
       "subway",
       "swimming-pool",
+      "tennis",
       "text",
       "twitter"
     ]
