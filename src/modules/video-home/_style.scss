@@ -22,12 +22,16 @@
   margin-bottom: 30px;
   outline: 15px solid $gray1A;
   padding-top: 56.25%;
-          
 }
+
+.video-home-embed {
+  display:none;
+}
+
 .video-home-modal {
    display: none; 
    position: fixed;  
-   z-index: 1;  
+   z-index: 1000;  
    left: 0;
    top: 0;
    width: 100%; 
@@ -44,11 +48,13 @@
    border: 15px solid #000;
    width: 640px;
    height: 360px; 
+   width: 80%;
+   height: 80%;
    text-align: center;
 }
 
 .video-home-close {
-   color: #aaa;
+   color: #666;
    float: right;
    font-size: 28px;
    font-weight: bold;
@@ -158,6 +164,9 @@
         }
       }
     }
+  .video-home-modal {
+    height:auto;
+  }  
 }
 @media (min-width:768px) and (max-width:1024px){
   .video-home{
@@ -208,6 +217,9 @@
         }
       }
     }
+  .video-home-modal {
+    height:auto;
+  }  
 }
 
 @include large-and-medium {
