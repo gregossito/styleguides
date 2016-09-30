@@ -9,6 +9,11 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.5.1 (2016-09-30)
+
+* fix `quick-access` on mobility
+* add script and modal to module `video-home` and fix mobile compatibility
+
 ## 1.5.0 (2016-09-23)
 
 * added module `video-home`
