@@ -1,0 +1,11 @@
+mixin video-home(data)
+  ul.video-home(class=data.modifiers)
+    each item in data.items
+      li.video-home-list-item(class=item.modifiers)
+        a.video-home-item(href=item.href)
+          .video-home-wrapper
+            .video-home-image(style=item.image && 'background-image: url(#{item.image});')
+            .video-home-content
+              .video-home-title= item.text
+              .video-home-duration= item.duration
+              

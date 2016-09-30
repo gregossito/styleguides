@@ -53,7 +53,7 @@ Paris.rheader = (function(){
       // extend or unextend
       PubSub.subscribe('scroll.search.down', unextend);
       PubSub.subscribe('scroll.search.up', extend);
-      if ($mainSearch.length !== 0 && isAboveMainSearch()) {
+      if ($mainSearch.length !== 0) {
         // extend initially if we are above the main search field
         extend();
       }
@@ -72,6 +72,7 @@ Paris.rheader = (function(){
     }
 
     function initOptions() {
+      $el.removeClass('extended');
       $.each($el.data(), function(key, value){
         options[key] = value;
       });
@@ -108,7 +109,7 @@ Paris.rheader = (function(){
     // extend or unextend
     function extend() {
       if ($mainSearch.length === 0 || !$('body').hasClass(options.extendOnTemplate)) {return;}
-      $el.addClass('extended');
+      //$el.addClass('extended');
       // prevent focus on hidden buttons when using keyboard navigation (for accessibility)
       $el.find('.rheader-wrapper > .rheader-button').attr('tabindex', '-1');
     }

@@ -2349,13 +2349,7 @@ th {
     @media (min-width: 768px) {
       .jumbotron .layout-wrapper.jumbotron-content {
         padding-left: 35px; } }
-
-.jumbotron-wrapper {
-  display: table-cell;
-  overflow: hidden;
-  position: relative;
-  vertical-align: middle; }
-  .jumbotron-wrapper:not(.no-overlay):after {
+  .jumbotron:not(.no-overlay) .jumbotron-wrapper:after {
     background: #DF225A;
     /* Old browsers */
     /* FF3.6+ */
@@ -2380,18 +2374,51 @@ th {
     width: 150%;
     z-index: 0; }
     @media screen\0 {
-      .jumbotron-wrapper:not(.no-overlay):after {
+      .jumbotron:not(.no-overlay) .jumbotron-wrapper:after {
         height: 200%; } }
+  .jumbotron.home {
+    height: auto; }
+    .jumbotron.home .layout-wrapper.jumbotron-content {
+      border: none;
+      padding: 0;
+      text-align: center; }
+      .jumbotron.home .layout-wrapper.jumbotron-content > * {
+        margin: 0 auto; }
+    .jumbotron.home .jumbotron-wrapper {
+      padding: 30px; }
+      .jumbotron.home .jumbotron-wrapper:after {
+        background: black;
+        opacity: 0.45;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 0; }
+        @media screen\0 {
+          .jumbotron.home .jumbotron-wrapper:after {
+            height: 200%; } }
+    .jumbotron.home .jumbotron-text {
+      padding-top: 10px;
+      padding-bottom: 10px; }
 
-html.no-js .jumbotron .jumbotron-wrapper:not(.no-overlay):after,
-html.no-touch .jumbotron .jumbotron-wrapper:not(.no-overlay):after {
+.jumbotron-wrapper {
+  display: table-cell;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle; }
+
+html.no-js .jumbotron:not(.no-overlay):not(.home) .jumbotron-wrapper:after,
+html.no-touch .jumbotron:not(.no-overlay):not(.home) .jumbotron-wrapper:after {
   -webkit-transition: -webkit-transform 1s ease;
           transition: transform 1s ease;
   -webkit-transform: translateX(-20%);
           transform: translateX(-20%); }
 
-html.no-js .jumbotron:hover .jumbotron-wrapper:not(.no-overlay):after,
-html.no-touch .jumbotron:hover .jumbotron-wrapper:not(.no-overlay):after {
+html.no-js .jumbotron:not(.no-overlay):not(.home):hover .jumbotron-wrapper:after,
+html.no-touch .jumbotron:not(.no-overlay):not(.home):hover .jumbotron-wrapper:after {
   -webkit-transform: translateX(0);
           transform: translateX(0); }
 
@@ -2418,6 +2445,11 @@ html.no-touch .jumbotron:hover .jumbotron-wrapper:not(.no-overlay):after {
 @media (min-width: 768px) {
   .jumbotron {
     height: 320px; }
+    .jumbotron.home {
+      height: 350px; }
+      .jumbotron.home .jumbotron-text {
+        max-width: 740px;
+        padding: 15px 0; }
   .jumbotron-title {
     font-size: 1.8rem !important;
     margin-bottom: 12px; }
@@ -3713,8 +3745,6 @@ html.no-touch .news-card-counter {
 
 @media (max-width: 767px) {
   .quick-access-video,
-  .quick-access-search,
-  .quick-access-close-search,
   .quick-access-results {
     display: none !important; } }
 
@@ -3730,7 +3760,10 @@ html.no-touch .news-card-counter {
     .quick-access-buttons .button {
       display: block;
       margin-bottom: 10px;
-      white-space: normal; } }
+      white-space: normal; }
+  .home .quick-access-search {
+    margin-top: -160px;
+    height: 160px; } }
 
 @media (min-width: 768px) and (max-width: 1159px) {
   .quick-access-wrapper {
@@ -5400,6 +5433,80 @@ body.rheader-mobile-nav-open {
     padding-left: 40px;
     padding-right: 40px; }
 
+.video-home {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  list-style: none;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 30px; }
+
+.video-home-item {
+  text-decoration: none; }
+
+.video-home-wrapper {
+  position: relative; }
+
+.video-home-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 30px;
+  max-width: 100%;
+  outline: 15px solid #1A1A1A; }
+
+.video-home-content {
+  text-align: left; }
+  .video-home-content .video-home-title, .video-home-content .video-home-duration {
+    color: #FFF;
+    font-weight: 700; }
+  .video-home-content .video-home-duration {
+    margin-top: 5px; }
+
+@media (min-width: 768px) {
+  .video-home-list-item.small {
+    width: 23.17073%;
+    float: left;
+    margin-right: 2.43902%;
+    margin-right: 60px; }
+    .video-home-list-item.small .video-home-wrapper .video-home-image {
+      display: block;
+      min-height: 127px; }
+    .video-home-list-item.small .video-home-wrapper .video-home-content .video-home-title {
+      font-size: 1.7rem;
+      line-height: 1.9rem; }
+    .video-home-list-item.small .video-home-wrapper .video-home-content .video-home-duration {
+      font-weight: 500;
+      font-size: 1.1rem;
+      letter-spacing: 0.15rem; }
+  .video-home-list-item.large {
+    width: 48.78049%;
+    float: left;
+    margin-right: 2.43902%;
+    margin-right: 60px; }
+    .video-home-list-item.large .video-home-wrapper .video-home-image {
+      display: block;
+      min-height: 300px; }
+    .video-home-list-item.large .video-home-wrapper .video-home-content {
+      text-align: left; }
+      .video-home-list-item.large .video-home-wrapper .video-home-content .video-home-title {
+        font-size: 2.2rem;
+        line-height: 2.4rem;
+        max-width: 350px; }
+      .video-home-list-item.large .video-home-wrapper .video-home-content .video-home-duration {
+        font-weight: 500;
+        font-size: 1.4rem;
+        letter-spacing: 0.15rem; }
+  .video-home-list-item:last-child {
+    margin-right: 0; } }
+
 .component + .component {
   margin-top: 50px; }
 
@@ -5846,11 +5953,9 @@ http://flickity.metafizzy.co
 
 .flickity-enabled.is-draggable .flickity-viewport {
   cursor: move;
-  cursor: -webkit-grab;
   cursor: grab; }
 
 .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
-  cursor: -webkit-grabbing;
   cursor: grabbing; }
 
 /* ---- previous/next buttons ---- */

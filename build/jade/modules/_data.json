@@ -47,6 +47,7 @@
     "skip-links",
     "table-of-contents",
     "tags",
-    "video-cover"
+    "video-cover",
+    "video-home"
   ]
 }

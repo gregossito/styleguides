@@ -9,6 +9,12 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.5.0 (2016-09-23)
+
+* added module `video-home`
+* disable extended rheader to display search button at all time
+* module `jumbotron`: add `home` modifier for different display
+
 ## 1.4.4 (2016-08-24)
 
 * accessibility: use `rem` instead of `px` for font units
