@@ -38,6 +38,7 @@ require('../modules/rheader/script');
 require('../modules/sections-panel/script');
 require('../modules/share/script');
 require('../modules/video-cover/script');
+require('../modules/video-home/script');
 
 // load our templates
 require('../templates/document/script');
