@@ -126,30 +126,80 @@
       }
     }
 }
+@media (min-width:768px) and (max-width:1024px){
+  .video-home{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    max-width: 600px;
+    
+    .video-home-list-item {
+      flex: 1 100%;
+        // modifiers
+        &.small {    
+          margin-top: 20px;
+          max-width: 260px;
+          
+          &:first-child{
+            margin-right: 20px;
+            order: 2;
+          }
+          &:last-child{
+            order: 3;
+          }
+          .video-home-wrapper {
+            max-width: 100%;
+            .video-home-image {
+              float: left;
+              outline: 5px solid $gray1A;
+              height: 70px;
+              padding-top: 0;
+              width: 105px;
+
+            }
+            .video-home-content {
+              margin-left: 130px;
+            }
+          }
+        }
+
+        &.large {
+          @include span(12 of 12);
+          width:100%;
+          .video-home-content {
+            padding: 5px 0px 10px 0px;
+            .video-home-title{
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+}
 
 @include large-and-medium {
   .video-home-list-item {
-      // modifiers
-      &.small {
-        @include span(3 of 12);
-        margin-right: 60px;
-        .video-home-wrapper {
-          max-width: 225px;
-          .video-home-content {}
-        }
-      }
-    
-      &.large {
-        @include span(6 of 12);
-        width: 66.78049%;
-        margin-right: 60px;
-        .video-home-wrapper {
-          max-width: 800px;
-        }
-      }
-
-      &:last-child{
-        margin-right: 0;
+    // modifiers
+    &.small {
+      @include span(3 of 12);
+      margin-right: 60px;
+      .video-home-wrapper {
+        max-width: 225px;
+        .video-home-content {}
       }
     }
+
+    &.large {
+      @include span(6 of 12);
+      width: 66.78049%;
+      margin-right: 60px;
+      .video-home-wrapper {
+        max-width: 800px;
+      }
+    }
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
 } 
