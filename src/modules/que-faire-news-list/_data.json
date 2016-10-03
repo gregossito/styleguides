@@ -1,0 +1,35 @@
+{
+  "index": {
+    "type": "que-faire-news-list",
+    "description": "",
+    "cssTheme": "",
+    "bodyAttributes": {},
+    "examples": [{
+      "title": "3 actualités",
+      "description": "",
+      "data": {
+        "modifiers": ["news-cards"],
+        "items": [
+          {
+            "href": "#",
+            "image": "../../modules/que-faire-news-list/image1.jpg",
+            "category": "Expositions",
+            "title": "Chients et chats, l’expo"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/que-faire-news-list/image1.jpg",
+            "category": "Evènement",
+            "title": "Lac Daumesnil: baignade aurorisée en 2019"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/que-faire-news-list/image1.jpg",
+            "category": "Expositions",
+            "title": "Beauté congo 1926-2015"
+          }
+        ]
+      }
+    }]
+  }
+}

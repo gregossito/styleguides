@@ -1,0 +1,78 @@
+/* Add your style here */
+.que-faire-news-list-wrapper{
+  background: $que-faire-red;
+}
+
+.que-faire-news-list {
+  list-style: none;
+  padding: 0;
+}
+
+.que-faire-news-list-item {
+  border-bottom: 1px solid $grayEE;
+  color: $gray4D;
+  display: block;
+  min-height: 100px;
+  padding: 25px 0;
+  text-decoration: none;
+  transition: background 0.15s ease;
+  position: relative;
+
+  .que-faire-news-list-item:first-child &,
+  .que-faire-news-list-item:nth-child(2) & {
+    border-top: 1px solid $grayEE;
+  }
+
+  html.no-js &,
+  html.no-touch & {
+    &:hover,
+    &:focus {
+      background-color: $color-secondary;
+      transition: none;
+      &,
+      .news-list-category,
+      .news-list-title {
+        color: $white;
+      }
+      .news-list-meta,
+      .news-list-title {
+        transform: translateX(20px);
+      }
+      .que-faire-news-list-title {
+        transform: translateX(20px);
+      }
+
+      .social-counters {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include large-and-medium {
+
+  .que-faire-news-list  {
+    @include container;
+    // mode gallery
+    &.gallery {
+      .que-faire-news-list-card-item {
+        @include gallery(4 of 12);
+      }
+
+      .que-faire-news-list-item {
+        @include gallery(8 of 16);
+      }
+    }
+  }
+
+  .news-item {
+    min-height: 140px;
+    padding: 25px 0 40px;
+  }
+
+  .news-item-title {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+}

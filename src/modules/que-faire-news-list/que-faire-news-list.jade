@@ -1,0 +1,8 @@
+include ../news-card/news-card
+
+mixin que-faire-news-list(data)
+  .que-faire-news-list-wrapper
+    ul.que-faire-news-list.gallery(class=data.modifiers)
+      each item in data.items
+        li.que-faire-news-list-card-item
+          +news-card(item)
