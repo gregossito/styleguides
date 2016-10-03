@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.5.3 (2016-10-03)
+
+* fix `video-home` style background image
+
 ## 1.5.2 (2016-10-03)
 
 * fix `video-home` cookie cnil placeholder
