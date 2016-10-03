@@ -246,6 +246,9 @@ textarea {
 .black-background {
   background-color: #000; }
 
+.black-background .heading-title {
+  color: #FFF; }
+
 .notice-browser {
   background-color: #F77F68;
   color: #FFF;

@@ -605,6 +605,31 @@ templatizer["faq"]["faq"] = function tmpl_faq_faq(data) {
     return buf.join("");
 };
 
+// frame.jade compiled template
+templatizer["frame"] = function tmpl_frame(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// frame.jade:frame compiled template
+templatizer["frame"]["frame"] = function tmpl_frame_frame(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "component", "component-frame", data ? data.modifiers : [] ], [ null, null, true ]) + "><fieldset>");
+    if (data.title) {
+        buf.push("<legend>" + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</legend>");
+    }
+    buf.push("<div>");
+    if (block) {
+        block && block(buf);
+    } else if (data.content) {
+        buf.push(null == (jade_interp = data.content) ? "" : jade_interp);
+    }
+    buf.push("</div></fieldset></div>");
+    return buf.join("");
+};
+
 // form.jade compiled template
 templatizer["form"] = function tmpl_form(locals) {
     var buf = [];
@@ -985,31 +1010,6 @@ templatizer["form"]["form"] = function tmpl_form_form(data) {
         }
     }).call(this);
     buf.push("</form></div>");
-    return buf.join("");
-};
-
-// frame.jade compiled template
-templatizer["frame"] = function tmpl_frame(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// frame.jade:frame compiled template
-templatizer["frame"]["frame"] = function tmpl_frame_frame(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "component", "component-frame", data ? data.modifiers : [] ], [ null, null, true ]) + "><fieldset>");
-    if (data.title) {
-        buf.push("<legend>" + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</legend>");
-    }
-    buf.push("<div>");
-    if (block) {
-        block && block(buf);
-    } else if (data.content) {
-        buf.push(null == (jade_interp = data.content) ? "" : jade_interp);
-    }
-    buf.push("</div></fieldset></div>");
     return buf.join("");
 };
 
@@ -6732,20 +6732,20 @@ templatizer["video-home"] = function tmpl_video_home(locals) {
 // video-home.jade:video-home compiled template
 templatizer["video-home"]["video-home"] = function tmpl_video_home_video_home(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<div class="video-home-modal"><div class="video-home-modal-content"><div class="video-home-modal-header"><span class="video-home-close">x</span></div><div class="video-home-modal-body"></div></div></div><ul' + jade.cls([ "video-home", data.modifiers ], [ null, true ]) + ">");
+    buf.push('<div class="video-home-modal"><div class="video-home-modal-content"><div class="video-home-modal-header"><span class="video-home-close">x</span></div><div class="video-home-modal-body"></div></div></div><div class="video-home-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div><ul" + jade.cls([ "video-home", data.modifiers ], [ null, true ]) + ">");
     (function() {
         var $$obj = data.items;
         if ("number" == typeof $$obj.length) {
             for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
                 var item = $$obj[$index];
-                buf.push("<li" + jade.cls([ "video-home-list-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ' class="video-home-item"><div class="video-home-wrapper"><div class="video-home-embed">' + (null == (jade_interp = item.embed_html) ? "" : jade_interp) + "</div><div" + jade.attr("style", item.image && "background-image: url(" + item.image + ");", true, false) + ' class="video-home-image"></div><div class="video-home-content"><div class="video-home-title">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + '</div><div class="video-home-duration">' + jade.escape(null == (jade_interp = item.duration) ? "" : jade_interp) + "</div></div></div></a></li>");
+                buf.push("<li" + jade.cls([ "video-home-list-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ' class="video-home-item"><div class="video-home-wrapper"><div class="video-home-embed">' + (null == (jade_interp = item.embed_html) ? "" : jade_interp) + "</div><div" + jade.attr("style", item.image && "background-image: url(" + item.image + ");", true, false) + ' class="video-home-image"><span></span></div><div class="video-home-content"><div class="video-home-title">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + '</div><div class="video-home-duration">' + jade.escape(null == (jade_interp = item.duration) ? "" : jade_interp) + "</div></div></div></a></li>");
             }
         } else {
             var $$l = 0;
             for (var $index in $$obj) {
                 $$l++;
                 var item = $$obj[$index];
-                buf.push("<li" + jade.cls([ "video-home-list-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ' class="video-home-item"><div class="video-home-wrapper"><div class="video-home-embed">' + (null == (jade_interp = item.embed_html) ? "" : jade_interp) + "</div><div" + jade.attr("style", item.image && "background-image: url(" + item.image + ");", true, false) + ' class="video-home-image"></div><div class="video-home-content"><div class="video-home-title">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + '</div><div class="video-home-duration">' + jade.escape(null == (jade_interp = item.duration) ? "" : jade_interp) + "</div></div></div></a></li>");
+                buf.push("<li" + jade.cls([ "video-home-list-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ' class="video-home-item"><div class="video-home-wrapper"><div class="video-home-embed">' + (null == (jade_interp = item.embed_html) ? "" : jade_interp) + "</div><div" + jade.attr("style", item.image && "background-image: url(" + item.image + ");", true, false) + ' class="video-home-image"><span></span></div><div class="video-home-content"><div class="video-home-title">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + '</div><div class="video-home-duration">' + jade.escape(null == (jade_interp = item.duration) ? "" : jade_interp) + "</div></div></div></a></li>");
             }
         }
     }).call(this);

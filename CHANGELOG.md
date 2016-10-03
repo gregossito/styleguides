@@ -9,6 +9,11 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.5.2 (2016-10-03)
+
+* fix `video-home` cookie cnil placeholder
+* fix `video-home` player button and items styles
+
 ## 1.5.1 (2016-09-30)
 
 * fix `quick-access` on mobility
