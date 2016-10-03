@@ -16,7 +16,8 @@
 
 .video-home-image{
   display: block;
-  background-size:cover;
+  background-size:contain;
+  background-repeat:no-repeat;
   background-position: center;  /* Internet Explorer 7/8 */
   height: 100%;
   margin-bottom: 30px;
