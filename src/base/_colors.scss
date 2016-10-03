@@ -37,6 +37,7 @@ $grayF2 : #F2F2F2;
 $white  : #FFF;
 
 .black-background {background-color:  $black;}
+.black-background .heading-title {color: $white;}
 
 // Que Faire
 $que-faire-red: #F95053;

@@ -709,6 +709,9 @@ body.rheader-mobile-nav-open {
   .rheader + .quick-access {
     margin-top: $rheader-height-medium;
   }
+  .rheader.fixed + .layout-main > .layout-content.black-background:first-child {
+    background:$black;
+  }
 }
 
 @include small {
