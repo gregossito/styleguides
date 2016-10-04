@@ -9,9 +9,12 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
-## 1.5.5 (2016-10-04)
+## 1.5.6 (2016-10-04)
 
 * remove `video-home` item small on mobility
+
+## 1.5.5 (2016-10-04)
+
 * add dailymotion link on `video-home` heading title
 
 ## 1.5.4 (2016-10-04)
