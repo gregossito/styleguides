@@ -9,14 +9,13 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  vertical-align: middle;
 
   .que-faire-header-logo{
     background-repeat: no-repeat;
     background-size: contain;
     float: left;
     height: 139px;
-    left: 20px;
+    margin-left: 20px;
     width: 245px;
     position: relative;
     top: 18px;
@@ -27,7 +26,7 @@
     border-color:transparentize($white, 0.7);
     float: left;
     height: 85px;
-    left: 70px;
+    margin-left: 40px;
     top: 18px;
     position: relative;
     
@@ -35,7 +34,7 @@
       color: $white;
       font-size: 1.8rem;
       line-height: 2.4rem;
-      max-width: 365px;
+      max-width: 240px;
       padding: 0;
       margin: 5px 0 0 20px;
     }
@@ -76,9 +75,53 @@
   }
 }
 
+@media (max-width:550px) {
+  .que-faire-news-list-header{
+    text-align: center;
+    
+    .que-faire-header-logo{
+      display: block;
+      float: inherit;
+      margin: 0 auto;
+    }
+    .que-faire-header-title{
+       border: none;
+       float: none;
+       height: auto;
+       margin: 0;
+       padding:25px 0 15px;
+       text-align: center;
+       top:inherit;
+       
+      .header-title{
+        margin: 0 auto;
+        max-width:75%;
+      }
+    }
+  }
+}
+
+@include small {
+  .que-faire-news-list-header{
+    display: inline-block;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    
+    .que-faire-header-logo{
+      height: 109px;
+      width: 155px;
+    }
+    .que-faire-header-title{
+      .header-title{
+        font-size: 1.6rem;
+        line-height:2rem;
+      }
+    }
+  }
+}
 
 @include large-and-medium {
-
   .que-faire-news-list  {
     @include container;
     // mode gallery
@@ -86,21 +129,14 @@
       .que-faire-news-list-item {
         @include gallery(4 of 12);
       }
-
-//      .que-faire-news-list-item {
-//        @include gallery(8 of 16);
-//      }
     }
   }
-
-  .news-item {
-    min-height: 140px;
-    padding: 25px 0 40px;
+  
+  .que-faire-news-list-header{
+    .que-faire-header-title{
+      .header-title{
+        max-width: 365px;
+      }
+    }
   }
-
-  .news-item-title {
-    font-size: 2rem;
-    line-height: 2.4rem;
-  }
-
 }
