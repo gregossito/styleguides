@@ -18,7 +18,7 @@
   background-color: #F8E273; }
 
 .black-background {
-  background-color: #000; }
+  background-color: #282828; }
 
 .black-background .heading-title {
   color: #FFF; }
@@ -4484,7 +4484,7 @@ body.rheader-mobile-nav-open {
   .rheader + .quick-access {
     margin-top: 80px; }
   .rheader.fixed + .layout-main > .layout-content.black-background:first-child {
-    background: #000; } }
+    background: #282828; } }
 
 @media (max-width: 767px) {
   .rheader + .quick-access {
@@ -5491,7 +5491,8 @@ body.rheader-mobile-nav-open {
   margin-bottom: 30px;
   outline: 15px solid #1A1A1A;
   padding-top: 56.25%;
-  position: relative; }
+  position: relative;
+  margin-top: 15px; }
   .video-home-image span {
     width: 100px;
     height: 70px;
