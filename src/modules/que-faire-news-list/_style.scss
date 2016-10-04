@@ -1,6 +1,45 @@
 /* Add your style here */
 .que-faire-news-list-wrapper{
   background: $que-faire-red;
+  position: relative;
+}
+
+.que-faire-news-list-header{
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  vertical-align: middle;
+
+  .que-faire-header-logo{
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    height: 139px;
+    left: 20px;
+    width: 245px;
+    position: relative;
+    top: 18px;
+    z-index: 10;
+  }
+  .que-faire-header-title{
+    border-left:1px solid;
+    border-color:transparentize($white, 0.7);
+    float: left;
+    height: 85px;
+    left: 70px;
+    top: 18px;
+    position: relative;
+    
+    .header-title{
+      color: $white;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      max-width: 365px;
+      padding: 0;
+      margin: 5px 0 0 20px;
+    }
+  }
 }
 
 .que-faire-news-list {
@@ -9,45 +48,34 @@
 }
 
 .que-faire-news-list-item {
-  border-bottom: 1px solid $grayEE;
-  color: $gray4D;
-  display: block;
-  min-height: 100px;
-  padding: 25px 0;
-  text-decoration: none;
-  transition: background 0.15s ease;
-  position: relative;
-
-  .que-faire-news-list-item:first-child &,
-  .que-faire-news-list-item:nth-child(2) & {
-    border-top: 1px solid $grayEE;
+  .news-card, .news-card-category{
+    color:$white;
   }
+  .news-card{
+    html.no-js &,
+    html.no-touch & {
+      &:hover,
+      &:focus {
+        color: $que-faire-red;
 
-  html.no-js &,
-  html.no-touch & {
-    &:hover,
-    &:focus {
-      background-color: $color-secondary;
-      transition: none;
-      &,
-      .news-list-category,
-      .news-list-title {
-        color: $white;
-      }
-      .news-list-meta,
-      .news-list-title {
-        transform: translateX(20px);
-      }
-      .que-faire-news-list-title {
-        transform: translateX(20px);
-      }
+        .news-card-content {
+          &:before {
+            background-color:$white;
+          }
+        }
 
-      .social-counters {
-        opacity: 1;
+        .news-card-category {
+          color: $que-faire-red;
+
+          &:before, &:after {
+            border-color: transparentize($que-faire-red, 0.7);
+          }
+        }
       }
     }
   }
 }
+
 
 @include large-and-medium {
 
@@ -55,13 +83,13 @@
     @include container;
     // mode gallery
     &.gallery {
-      .que-faire-news-list-card-item {
+      .que-faire-news-list-item {
         @include gallery(4 of 12);
       }
 
-      .que-faire-news-list-item {
-        @include gallery(8 of 16);
-      }
+//      .que-faire-news-list-item {
+//        @include gallery(8 of 16);
+//      }
     }
   }
 
