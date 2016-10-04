@@ -14,9 +14,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     float: left;
-    height: 139px;
+    height: 109px;
     margin-left: 20px;
-    width: 245px;
+    width: 155px;
     position: relative;
     top: 18px;
     z-index: 10;
@@ -83,6 +83,7 @@
       display: block;
       float: inherit;
       margin: 0 auto;
+      width: 175px;
     }
     .que-faire-header-title{
        border: none;
@@ -107,11 +108,7 @@
     margin: 0;
     max-width: 100%;
     width: 100%;
-    
-    .que-faire-header-logo{
-      height: 109px;
-      width: 155px;
-    }
+   
     .que-faire-header-title{
       .header-title{
         font-size: 1.6rem;
@@ -131,8 +128,12 @@
       }
     }
   }
-  
+ 
   .que-faire-news-list-header{
+    .que-faire-header-logo{
+      height: 139px;
+      width: 245px;
+    }
     .que-faire-header-title{
       .header-title{
         max-width: 365px;
