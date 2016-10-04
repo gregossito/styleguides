@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.5.4 (2016-10-04)
+
+* fix `video-home` styles
+
 ## 1.5.3 (2016-10-03)
 
 * fix `video-home` style background image
