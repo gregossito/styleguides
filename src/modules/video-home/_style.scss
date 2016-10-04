@@ -143,6 +143,7 @@
         // modifiers
         &.small {
           padding: 0 30px;
+          display:none;
           &:first-child{
             margin-top: 25px;
             order: 2;
