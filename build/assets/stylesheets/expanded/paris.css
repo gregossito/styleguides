@@ -5569,7 +5569,8 @@ body.rheader-mobile-nav-open {
           -ms-flex: 1 100%;
               flex: 1 100%; }
       .video-home .video-home-list-item.small {
-        padding: 0 30px; }
+        padding: 0 30px;
+        display: none; }
         .video-home .video-home-list-item.small:first-child {
           margin-top: 25px;
           -webkit-box-ordinal-group: 3;
