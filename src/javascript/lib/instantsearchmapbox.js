@@ -384,6 +384,9 @@ function renderMap(geoJSON, sourceID) {
       clusterRadius: settings.cluster.clusterRadius
     });
 
+    // Disable touch gestures
+    map.touchZoomRotate.disable();
+
     // Circle for clustering with dynamic radius
     var clusterCircleID = 'cluster-circle';
     map.addLayer({

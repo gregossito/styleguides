@@ -54,6 +54,7 @@ Paris.listEquipments = (function(){
       var refinementWidget = Paris.instantsearch.widgets.newrefinementList({
         container: '.block-search-filters .block-search-content',
         selectedFiltersContainer: '.block-search-filters-mobile',
+        resetFiltersButtonContainer: '.block-search-filters .block-search-top-link',
         filtersPopupContainer: '.layout-content-filters-popup',
         attributeName: 'categories',
         operator: 'or',
@@ -63,17 +64,6 @@ Paris.listEquipments = (function(){
       });
       // Search refinement list widget
       search.addWidget(refinementWidget);
-      
-      // Search reset widget
-      search.addWidget(
-        instantsearch.widgets.clearAll({
-          container: '.block-search-filters .block-search-top-link',
-          autoHideContainer: false,
-          templates: {
-            link: Paris.i18n.t('list_equipments/reset_filters')
-          }
-        })
-      );
 
       // Search results widget
       search.addWidget(
@@ -96,6 +86,7 @@ Paris.listEquipments = (function(){
         mapBoxAccessToken: Paris.config.mapbox.access_token,
         mapbox: {
           style: 'mapbox://styles/parisnumerique/cis1rkqoj000khinpthppoaqd',
+          trackResize: true,
           zoom: 11,
           minZoom: 10,
           center: [Paris.config.search.paris_coordinates.lng, Paris.config.search.paris_coordinates.lat],

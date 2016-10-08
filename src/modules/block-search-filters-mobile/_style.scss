@@ -1,5 +1,7 @@
 .block-search-filters-mobile {
   display: none;
+  max-height: 54px;
+  overflow: hidden;
   padding: 0 15px;
 
   button {

@@ -148,8 +148,8 @@
             },
             {
               "href": "#",
-              "icon": "museum",
-              "text": "Musées municipaux"
+              "icon": "library",
+              "text": "Bibliothèques"
             },
             {
               "href": "#",
@@ -158,18 +158,13 @@
             },
             {
               "href": "#",
-              "icon": "library",
-              "text": "Bibliothèques"
+              "icon": "market",
+              "text": "Marchés"
             },
             {
               "href": "#",
-              "icon": "association-house",
-              "text": "Maisons des assos"
-            },
-            {
-              "href": "#",
-              "icon": "conservatoire",
-              "text": "Conservatoires"
+              "icon": "art-studio",
+              "text": "Ateliers des Beaux-Arts"
             },
             {
               "href": "#",
@@ -178,8 +173,8 @@
             },
             {
               "href": "#",
-              "icon": "market",
-              "text": "Marchés"
+              "icon": "conservatoire",
+              "text": "Conservatoires"
             },
             {
               "href": "#",
@@ -188,8 +183,23 @@
             },
             {
               "href": "#",
-              "icon": "art-studio",
-              "text": "Ateliers des Beaux-Arts"
+              "icon": "association-house",
+              "text": "Maisons des assos"
+            },
+            {
+              "href": "#",
+              "icon": "",
+              "text": "Maisons entreprises et emploi"
+            },
+            {
+              "href": "#",
+              "icon": "museum",
+              "text": "Musées municipaux"
+            },
+            {
+              "href": "#",
+              "icon": "",
+              "text": "Tennis"
             }
           ],
           "more": {

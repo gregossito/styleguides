@@ -17,6 +17,7 @@ var mediaQuery = {
 
 var container, // DOM selector in which to add UI
     selectedFiltersContainer, // DOM selector in which to add selected filters
+    resetFiltersButtonContainer, // DOM selector for reset button
     filtersPopupContainer, // DOM selector in which to add filters popup
     attributeName, // Attribute name for facets
     operator, // Facets operator
@@ -62,6 +63,7 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
       $(options.container).on('click', '.apply-filters-button', onClickApplySearchButton.bind(this));
       $(options.selectedFiltersContainer).on('click', '.selected-filters-buttons-container .filterButton', onClickSelectedFacetFilterButton.bind(this));
       $(options.selectedFiltersContainer).on('click', '.selected-facets-popup .filterButton', onClickSelectedFacetPopupFilterButton.bind(this));
+      $(options.resetFiltersButtonContainer).on('click', 'a', onClickResetFiltersButton.bind(this));
       $(options.container).on('change', 'select', onChangeSelectSecondaryFilter.bind(this));
       $(options.container).on('change', 'input[type="checkbox"]', onCheckSecondaryFilter.bind(this));
 
@@ -100,19 +102,6 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
           initSelectedFiltersPopupEvents();
         }
       );
-
-      // Use change event to detect facets reseting action
-      helper.on('change', function(state, lastResults) {
-        var refinementCount = 0;
-        if (options.operator === 'and') {
-          refinementCount = state.facetsRefinement[options.attributeName] ? state.facetsRefinement[options.attributeName].length : 0;
-        } else {
-          refinementCount = state.disjunctiveFacetsRefinements[options.attributeName] ? state.disjunctiveFacetsRefinements[options.attributeName].length : 0;
-        }
-        if (refinementCount == 0 && $(options.container + ' .filterButton.active').length > 0) {
-          // resetFacets();
-        }
-      });
     },
     render: function(params) {
       // Nothing to re-render
@@ -244,7 +233,7 @@ function onClickFilterButton(e) {
     facet: button.attr('data-facet'),
     value: button.attr('data-value'),
     label: button.attr('data-label')
-  }
+  };
   // Toggle the button style
   button.toggleClass('active');
   toggletFacet(facetFilter);
@@ -258,7 +247,7 @@ function onClickFilterButton(e) {
 // UI click on facet filter buttons in all selected facet filters (mobile only)
 function onClickSelectedFacetFilterButton(e) {
   onClickFilterButton(e);
-  $(e.target.closest('button')).remove();
+  $(e.target).closest('button').remove();
   updateUI();
   helper.search();
 }
@@ -283,11 +272,18 @@ function onClickSelectedFacetPopupFilterButton(e) {
   }
 }
 
+// UI click on reset filters button
+function onClickResetFiltersButton(e) {
+  resetFacets();
+  helper.search();
+  updateUI();
+}
+
 
 // UI action when secondary filter of select type changes value
 function onChangeSelectSecondaryFilter(e) {
 
-  var facet = $(e.target).attr('name')
+  var facet = $(e.target).attr('name');
   var value = $(e.target).val();
   var label = $(e.target).find(':selected').text();
 
@@ -503,6 +499,17 @@ function renderSelectedFacetFilters() {
   content += '</div>';
 
   $selectedFiltersContainer.html(content);
+
+
+  // Calculate map height
+  setTimeout(function() {
+    if (mediaQuery.mobileMediaQuery.matches) {
+      var mapHeight = $(window).height() - $('header').height() - $('.layout-content-list').height();
+    } else {
+      var mapHeight = '100%';
+    }
+    $('.layout-content-map').height(mapHeight);
+  }, 1);
   
   selectedFacetsMoreButtonDisplay();
 }
