@@ -206,7 +206,8 @@ function initMap(container) {
 
     // Zoom cluster
     if (feature.properties.cluster) {
-      skipRefine = true;
+      // Force refine because tolerance will skip it after click
+      skipRefine = false;
       map.flyTo({
         center: feature.geometry.coordinates,
         zoom: settings.cluster.clusterMaxZoom + 1,
