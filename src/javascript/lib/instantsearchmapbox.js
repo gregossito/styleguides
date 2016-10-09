@@ -427,7 +427,8 @@ function renderMap(geoJSON, sourceID) {
 
   geoJSON.features.forEach(function(feature) {
     var symbol = feature.properties.icon;
-    var layerID = 'marker-' + symbol;
+    var state = feature.properties.is_open ? "open" : "close";
+    var layerID = 'ico-' + symbol + '-' + state;
 
     // Add a layer for this symbol type if it hasn't been added already.
     if (!map.getLayer(layerID)) {
@@ -437,14 +438,7 @@ function renderMap(geoJSON, sourceID) {
         type: 'symbol',
         source: sourceID,
         layout: {
-          // TODO: Dynamic image
-          'icon-image': 'marker-'+15
-          // Icons must be added into Mapbox editor as SVG file
-          // To export SVG from Illustrator:
-          //// File > Export
-          //// Name: 'ico-category-state.svg'
-          //// Stylisation: Presentation attributes
-          //// Responsive: unchecked
+          'icon-image': layerID
         },
         filter: ["==", "icon", symbol]
       });
