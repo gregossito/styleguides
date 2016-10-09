@@ -40,22 +40,131 @@
     }
   }
 
-  &.cat- {
+  .card-image {
+
+    &.no-img {
+
+      &:before {
+          content: "";
+          @include icon-font;
+          color: $white;
+          text-align: center;
+          font-size: 40px;
+          opacity: 0.5;
+          line-height: 120px;
+      }
+    }
+  }
+
+  &.cat-animation {
 
     .card-image {
 
       &.no-img {
 
         &:before {
-          background-color: $white;
-          mask: url('../modules/rheader/nef.svg') center center no-repeat;
-          opacity: 0.5;
+          content: "";
         }
       }
     }
   }
+  &.cat-art-workshop {
 
-  &.cat-57 {
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-library {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-conservatoire {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-jobs {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-city-hall {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-market {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-museum {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-park {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-swimming-pool {
 
     .card-image {
 
@@ -63,12 +172,18 @@
 
         &:before {
           content: "";
-          @include icon-font;
-          color: $white;
-          text-align: center;
-          font-size: 40px;
-          opacity: 0.5;
-          line-height: 120px;
+        }
+      }
+    }
+  }
+  &.cat-tennis {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
         }
       }
     }
