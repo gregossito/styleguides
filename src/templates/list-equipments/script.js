@@ -85,7 +85,7 @@ Paris.listEquipments = (function(){
         container: '#map',
         mapBoxAccessToken: Paris.config.mapbox.access_token,
         mapbox: {
-          style: 'mapbox://styles/juliearrigoni/ciu2x5j8i00mi2irq6rbw9qv9',
+          style: 'mapbox://styles/parisnumerique/cis1rkqoj000khinpthppoaqd',
           trackResize: true,
           zoom: 11,
           minZoom: 10,
