@@ -85,7 +85,7 @@ Paris.listEquipments = (function(){
         container: '#map',
         mapBoxAccessToken: Paris.config.mapbox.access_token,
         mapbox: {
-          style: 'mapbox://styles/parisnumerique/cis1rkqoj000khinpthppoaqd',
+          style: 'mapbox://styles/juliearrigoni/ciu2x5j8i00mi2irq6rbw9qv9',
           trackResize: true,
           zoom: 11,
           minZoom: 10,
@@ -159,7 +159,7 @@ Paris.listEquipments = (function(){
             zipCode: $(card).find('.card-zipcode').html(),
             city: $(card).find('.card-city').html(),
             open_details: $(card).find('.card-hours').html(),
-            is_open: $(card).find('.card-hours').attr('data-open')
+            is_open: $(card).find('.card-hours').attr('data-open') == 'true'
           };
           var content = renderMapPopupContent(hit);
           mapboxWidget.openHit(content, [card.attr('lng'), card.attr('lat')], card.attr('hitid'));
@@ -380,7 +380,7 @@ Paris.listEquipments = (function(){
 
     function renderMapPopupContent(hit) {
       var content = '';
-      var is_open = hit.is_open == 'true' ? 'open' : 'close';
+      var is_open = hit.is_open ? 'open' : 'close';
       content += '<div class="card-content" hitid="'+hit.objectID+'">';
       content += '<h3 class="card-title">'+hit.name+'</h3>';
       content += '<div class="card-text"><span class="card-address">'+hit.address+'</span><br><span class="card-zipcode">'+hit.zipCode+'</span> <span class="card-city">'+hit.city+'</span><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div>';

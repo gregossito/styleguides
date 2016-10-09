@@ -440,7 +440,11 @@ function renderMap(geoJSON, sourceID) {
         layout: {
           'icon-image': layerID
         },
-        filter: ["==", "icon", symbol]
+        filter: [
+          "all",
+          ["==", "icon", symbol],
+          ["==", "is_open", feature.properties.is_open]
+        ]
       });
       layersID.push(layerID);
     }
@@ -469,11 +473,7 @@ function hitsToGeoJSON(hits) {
         type: 'Point',
         coordinates: [hit._geoloc.lng, hit._geoloc.lat]
       },
-      properties: {
-        // TODO Activate dynamic icons
-        // icon: hit.idcategories[0]
-        icon: 15
-      }
+      properties: {}
     };
     // Store hit in properties
     $.extend(feature.properties, hit);
