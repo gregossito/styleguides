@@ -23,7 +23,8 @@ var container, // DOM selector in which to add UI
     operator, // Facets operator
     sortBy, // Facet ordering
     numberOfFacets, // Expected number of facets (displayed in popup)
-    mainFacets; // Main facets filter
+    mainFacets, // Main facets filter
+    mainFacetsIcons; // Main facets icons
 
 // Keep referance of facets selected via UI
 var selectedFacets = [];
@@ -360,9 +361,15 @@ function renderEquipmentsFacetFilters() {
       attributes: {
         'data-facet': 'categories',
         'data-value': facet,
-        'data-label': facet
+        'data-label': facet,
       }
     };
+    var facetIcon = $.grep(settings.mainFacetsIcons, function(facetIcon) {
+      return ( facetIcon.facet == facet);
+    });
+    if (facetIcon.length > 0) {
+      data['icon'] = facetIcon[0].icon;
+    }
     // Check if the main facet is one of the selected values
     $.each(selectedFacets, function(i, el) {
       if (el.facet == 'categories' && el.value == facet) {

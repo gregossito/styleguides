@@ -60,7 +60,8 @@ Paris.listEquipments = (function(){
         operator: 'or',
         sortBy: ['name:asc', 'count:desc'],
         numberOfFacets: 200,
-        mainFacets: Paris.config.algolia.main_facets
+        mainFacets: Paris.config.algolia.main_facets,
+        mainFacetsIcons: Paris.config.algolia.main_facets_icon
       });
       // Search refinement list widget
       search.addWidget(refinementWidget);

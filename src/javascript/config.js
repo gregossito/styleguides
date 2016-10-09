@@ -18,6 +18,60 @@ Paris.config = {
       "dev_mes_lieux": "dev_MesLieux"
     },
     "main_facets": ["Piscines", "Bibliothèques", "Parcs et jardins", "Marchés", "Ateliers Beaux-Arts", "Centres d'animation", "Conservatoires", "Mairies", "Maisons des assos", "Maisons entreprises et emploi", "Musées municipaux", "Tennis"],
+    "main_facets_icon": [
+      {
+        facet: "Piscines",
+        icon: "swimming-pool"
+      },
+      {
+        facet: "Bibliothèques",
+        icon: "library"
+      },
+      {
+        facet: "Parcs et jardins",
+        icon: "park"
+      },
+      {
+        facet: "Marchés",
+        icon: "market"
+      },
+      {
+        facet: "Ateliers Beaux-Arts",
+        icon: "art-workshop"
+      },
+      {
+        facet: "Centres d'animation",
+        icon: "animation"
+      },
+      {
+        facet: "Conservatoires",
+        icon: "conservatoire"
+      },
+      {
+        facet: "Mairies",
+        icon: "library"
+      },
+      {
+        facet: "Maisons des assos",
+        icon: "associations"
+      },
+      {
+        facet: "Maisons entreprises et emploi",
+        icon: "jobs"
+      },
+      {
+        facet: "Musées municipaux",
+        icon: "museum"
+      },
+      {
+        facet: "Mairies",
+        icon: "city-hall"
+      },
+      {
+        facet: "Tennis",
+        icon: "tennis"
+      }
+    ],
     "secondary_filters": [
       {
         "title": "Ouverture",
