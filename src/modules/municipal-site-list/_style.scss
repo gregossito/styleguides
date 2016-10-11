@@ -1,0 +1,84 @@
+.municipal-site-list-intro{
+  color: $white;
+  display: inline-block;
+  float: left;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  max-width: 240px;
+}
+
+.municipal-site-list{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: auto;
+  max-width:90%;
+  padding: 0;
+}
+
+.municipal-site-list-item {
+  height: 90px;
+  min-width: 80px;
+  padding: 3px;
+  
+  .municipal-site-list-button{  
+    height:95%;
+    width:95%;
+    .button{
+      height: 100%;
+      width: 100%;
+      &.white{
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+@media (max-width:600px){
+  .municipal-site-list-item {
+    height:110px;
+    min-width: 100px;
+  }
+}
+
+@include small{
+  
+  .municipal-site-list-content{
+    margin:auto;
+    text-align:center;
+  }
+  .municipal-site-list-intro{
+    display:block;
+    float:none;
+    margin:auto;
+    margin-bottom:20px;
+    max-width:100%;
+    padding:0 20px;
+  }
+  .municipal-site-list-button .button{  
+    font-size:1.6rem;
+  }
+}
+
+@include large-and-medium {
+  
+  .municipal-site-list-intro{
+    margin: 0 55px 0 0;  
+  }
+  .municipal-site-list {
+    justify-content:flex-start;
+    max-width: 760px;
+  }
+  .municipal-site-list-item{
+    flex:inherit;
+    height: 70px;
+    min-width: inherit;
+    width: 70px;
+    
+    .municipal-site-list-button{
+      height:100%;
+      width:100%;
+    }
+  }
+}
