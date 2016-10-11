@@ -1,0 +1,12 @@
+include ../button/button
+
+mixin municipal-site-list(data)
+  .municipal-site-list-content
+    p.municipal-site-list-intro= data.text
+    ul.municipal-site-list
+      each item in data.items
+        li.municipal-site-list-item
+          .municipal-site-list-button
+            if item.button
+            - var button = JSON.parse(JSON.stringify(item.button)) // clone the data object
+            +button(button)
