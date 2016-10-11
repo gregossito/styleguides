@@ -18,6 +18,7 @@ Paris.videoHome = (function(){
         event.preventDefault();
         var $embed = $(this).find('.video-home-embed').html();
         var $placeholder = $('.video-home-placeholder').html();
+        var autoplay = "&autoplay=1";
 
         if(Cookies.get(Paris.config.cookies.cnil.name) !== Paris.config.cookies.cnil.value) {
           $('.video-home-modal .video-home-modal-body').empty().append($placeholder);
@@ -31,6 +32,9 @@ Paris.videoHome = (function(){
           $('.video-home-modal .video-home-modal-body').empty().append($embed);
         });
 
+        var url = $('.video-home-modal .video-home-modal-body .embed-container iframe').attr('src');
+        url = url+autoplay;
+        $('.video-home-modal .video-home-modal-body .embed-container iframe').attr('src', url);
         $('.video-home-modal').show();
       });
 

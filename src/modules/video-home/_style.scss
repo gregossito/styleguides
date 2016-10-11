@@ -7,7 +7,7 @@
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  padding: 0px 30px 30px;
+  padding: 0px 30px 30px; 
 }
 
 .video-home-item{
@@ -172,7 +172,7 @@
           @include span(12 of 12);
           .video-home-wrapper {
             .video-home-image {
-              margin-bottom: 20px;
+              margin-bottom: 0px;
               min-height: 280px;
               outline: none;
             }
@@ -187,6 +187,7 @@
                 font-weight: 500;
                 font-size: 1.4rem;
                 letter-spacing: 0.15rem;
+                margin-bottom: 20px;
               }
             }
           }

@@ -1,9 +1,0 @@
-include ../button/button
-
-mixin search-push(data)
-  .search-push
-    h2.search-push-title= data.title
-    - var button = JSON.parse(JSON.stringify(data.button)) // clone the data object
-    - button.modifiers = ["action"] // overwrite the modifiers
-    - button.attributes = {"data-action": "open-search", "aria-controls": "rheader-search"}
-    +button(button)
