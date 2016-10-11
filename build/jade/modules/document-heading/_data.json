@@ -1,0 +1,80 @@
+{
+  "index": {
+    "type": "document-heading",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "image": "./document-heading.png",
+        "text": "Demander un logement",
+        "icons" : [
+          {
+            "action": {
+              "type": "alert",
+              "id": 1,
+              "fallback_link": "https://connect.paris.fr/alertes"
+            },
+            "icon": [
+              "bell-outline",
+              "bell"
+            ],
+            "label": [
+              "S'inscrire aux alertes",
+              "Se désinscrire des alertes"
+            ]
+          }
+        ]
+      }
+    }, {
+      "title": "Icône active",
+      "description": "",
+      "data": {
+        "image": "./document-heading.png",
+        "text": "Demander un logement",
+        "icons" : [
+          {
+            "active": true,
+            "action": {
+              "type": "alert",
+              "id": 1,
+              "fallback_link": "https://connect.paris.fr/alertes"
+            },
+            "icon": [
+              "bell-outline",
+              "bell"
+            ],
+            "label": [
+              "S'inscrire aux alertes",
+              "Se désinscrire des alertes"
+            ]
+          }
+        ]
+      }
+    }, {
+      "title": "Test avec titre long",
+      "description": "",
+      "data": {
+        "image": "./document-heading.png",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat.",
+        "icons" : [
+          {
+            "action": {
+              "type": "alert",
+              "id": 1,
+              "fallback_link": "https://connect.paris.fr/alertes"
+            },
+            "icon": [
+              "bell-outline",
+              "bell"
+            ],
+            "label": [
+              "S'inscrire aux alertes",
+              "Se désinscrire des alertes"
+            ]
+          }
+        ]
+      }
+    }]
+  }
+}

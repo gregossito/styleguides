@@ -1,0 +1,12 @@
+mixin gallery(data)
+  .component.component-gallery(class=data.modifiers)
+    .gallery-wrapper
+      each item in data.items
+        .gallery-cell
+          img.gallery-cell-image(data-flickity-lazyload=item.src alt=item.alt title=item.title)
+          if item.title || item.credit
+            .gallery-caption
+              if item.title
+                .gallery-title!= item.title
+              if item.credit
+                .gallery-credit!= item.credit

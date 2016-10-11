@@ -1,0 +1,8 @@
+mixin heading(data)
+  .heading(class=data.modifiers)
+    h2.heading-title= data.title
+    if (data.link)
+      .heading-links
+        if (data.link.external)
+          span.icon-dailymotion 
+        a(href=data.link.href)= data.link.text

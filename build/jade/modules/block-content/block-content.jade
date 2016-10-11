@@ -1,0 +1,9 @@
+mixin block-content(data)
+  - var attributes = data.attributes || {}
+  .block-content(class=data.modifiers)&attributes(attributes)
+    h3.block-content-title= data.title
+    .block-content-content
+      if data.block
+        != data.block
+      if block
+        block

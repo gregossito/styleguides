@@ -1,0 +1,88 @@
+{
+  "index": {
+    "type": "block-content-tweet",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "modifiers": ["color-secondary-background"],
+        "title": "En direct sur Twitter",
+        "items": [
+          {
+            "user": "@juliechanal",
+            "text": "Prévoyez vos déplacements en ligne à Paris et dans toutes les villes de l’<a href=\"https://twitter.com/#!/search?q=%23EURO2016\" title=\"#EURO2016\" class=\"tweet-url hashtag\" rel=\"nofollow\">#EURO2016</a> ⚽<br><br>👉 <a href=\"https://t.co/iu4TsBSgAL\" title=\"https://paris.g7booking.com/\" rel=\"nofollow\">paris.g7booking.com</a> <a href=\"https://t.co/9eETL2QjeT\" title=\"http://twitter.com/Paris/status/742732448463790080/photo/1\" rel=\"nofollow\">pic.twitter.com/9eETL2QjeT</a>",
+            "links": {
+              "time": {
+                "href": "#",
+                "text": "Il y a 23h"
+              },
+              "reply": {
+                "href": "#",
+                "text": "Répondre"
+              },
+              "retweet": {
+                "href": "#",
+                "text": "Retweeter"
+              },
+              "like": {
+                "href": "#",
+                "text": "Aimer"
+              }
+            }
+          },
+          {
+            "user": "@JuliePetrucci",
+            "text": "Bjr, je loue un local commercial. Quelles sont les démarches pour peindre la façade d'une autre couleur et y peindre le logo ?",
+            "links": {
+              "time": {
+                "href": "#",
+                "text": "Il y a 23h"
+              },
+              "reply": {
+                "href": "#",
+                "text": "Répondre"
+              },
+              "retweet": {
+                "href": "#",
+                "text": "Retweeter"
+              },
+              "like": {
+                "href": "#",
+                "text": "Aimer"
+              }
+            }
+          },
+          {
+            "user": "@billy141512",
+            "text": "Bonjour, à propos du plan qualité air à Paris, les motos de 2012 (donc 3*) seront-elles autorisées en 2020 ? Pas clair.",
+            "links": {
+              "time": {
+                "href": "#",
+                "text": "Il y a 1h"
+              },
+              "reply": {
+                "href": "#",
+                "text": "Répondre"
+              },
+              "retweet": {
+                "href": "#",
+                "text": "Retweeter"
+              },
+              "like": {
+                "href": "#",
+                "text": "Aimer"
+              }
+            }
+          }
+        ],
+        "pause": {
+          "label": [
+            "Mettre en pause le défilement",
+            "Relancer le défilement"
+          ]
+        }
+      }
+    }]
+  }
+}

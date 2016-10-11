@@ -1,0 +1,9 @@
+mixin table(data)
+  .component.component-table(class=data.modifiers)
+    table(summary=data.summary)
+      if data.caption
+        caption= data.caption
+      if block
+        block
+      else if data.block
+        != data.block

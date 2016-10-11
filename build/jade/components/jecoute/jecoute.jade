@@ -1,0 +1,40 @@
+include ../../modules/button/button
+
+mixin jecoute(data)
+  .component.component-jecoute(data-thanks=data.thanks data-error=data.error class=data.modifiers)
+    .jecoute-title
+      h2= data.title
+    .jecoute-content
+      p.jecoute-text= data.text
+      form.jecoute-form(method="post")&attributes(data.form)
+        - var textarea = JSON.parse(JSON.stringify(data.textarea)) // clone the data object
+        - delete textarea.value
+        textarea(name="message" required=true aria-required="true")&attributes(textarea)= data.textarea.value
+        input(type="email" name="email" required=true aria-required="true")&attributes(data.email)
+        if data.upload
+          - var upload = JSON.parse(JSON.stringify(data.upload))
+          div.jecoute-upload
+            label.button(type="button" class="secondary icon")
+              i.icon(class="icon-#{upload.button.icon}")
+              span.button-text= upload.button.text
+              input(type="file" name="files" formenctype="multipart/form-data" multiple)
+            p
+              em #{upload.title} :&nbsp;
+              span.upload-size #{upload.size},&nbsp;
+              a(href=upload.link.href target=upload.link.target)
+                = upload.link.text
+            output: ul.output-items
+        if data.policy
+          - var policy = JSON.parse(JSON.stringify(data.policy))
+          p.jecoute-policy
+            label
+              input(type="checkbox" name="policy" required=true)
+              span
+                em= policy.text
+                a(href=policy.link.href target=policy.link.target)
+                  = policy.link.text
+        - var button = JSON.parse(JSON.stringify(data.button)) // clone the data object
+        - button.modifiers = ["secondary", "action"]
+        - button.attributes = {"type": "submit"}
+        +button(button)
+      p.jecoute-message

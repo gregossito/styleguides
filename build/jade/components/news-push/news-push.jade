@@ -1,0 +1,19 @@
+mixin news-push(data)
+  .component.component-news-push(class=data.modifiers)
+    .news-push-wrapper
+      .news-push-after
+      - var title = [data.title]
+      if data.image.credit
+        - title.push("(" + data.image.credit + ")")
+      a.news-push-image(href=data.href)
+        img(src=data.image.src alt="" title=title.join(" "))
+      .news-push-content
+        h2.news-push-title
+          span= data.title
+        p.news-push-content-text
+          a(href=data.href)= data.text
+          = " "
+          a.next(href=data.href)= data.follow
+    if data.link && data.link.href && data.link.text
+      a.news-push-link(href=data.link.href)
+        span= data.link.text

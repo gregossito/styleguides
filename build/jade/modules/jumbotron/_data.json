@@ -1,0 +1,51 @@
+{
+  "index": {
+    "type": "jumbotron",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "href": "#",
+        "image": "image.jpg",
+        "tag": "h1",
+        "title": "Titre",
+        "text": "Texte"
+      }
+    }, {
+      "title": "Test avec image claire",
+      "description": "",
+      "data": {
+        "href": "#",
+        "image": "image-white.jpg",
+        "title": "Titre",
+        "text": "Texte"
+      }
+    }, {
+      "title": "Sans dégradé de couleur",
+      "description": "",
+      "data": {
+        "id": "no-overlay",
+        "href": "#",
+        "image": "image.jpg",
+        "modifiers": ["no-overlay"],
+        "title": "Titre",
+        "text": "Texte"
+      }
+    }, {
+      "title": "jumbotron home",
+      "description": "",
+      "data": {
+        "href": "#",
+        "image": "image-home.jpg",
+        "modifiers": ["home"],
+        "title": "À la une",
+        "text": "10 raisons de surtout pas piétonniser les Berges Rive droite",
+        "button": {
+          "text": "En savoir plus",
+          "title": "En savoir plus sur cette actualité"
+        }
+      }
+    }]
+  }
+}

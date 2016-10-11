@@ -1,0 +1,74 @@
+{
+  "index": {
+    "type": "image",
+    "description": "Chaque image doit être redimensionnée automatiquement aux formats suivants : <ul><li><strong>Petit</strong> avec une largeur max de 400px</li><li><strong>Moyen</strong> avec une largeur max de 600px</li><li><strong>Grand</strong> avec une largeur max de 800px</li><ul>",
+    "examples": [{
+      "title": "Standard (image responsive)",
+      "description": "La taille d'image moyenne est passée par défaut dans l'attribut <code>src</code>.<br>L'attribut <code>srcset</code> contient un tableau des tailles disponibles, en suivant le format de la <a href=\"http://responsiveimages.org/\" target=\"_blank\">spécification</a> (URL de l'image, espace, largeur en pixels avec l'unité <code>w</code> pour <em>width</em>).<br>Les valeurs de <code>title</code> et <code>credit</code> seront concaténées dans l'attribut <code>title</code> de l'élément <code>img</code>.",
+      "data": {
+        "src": "image-600px.jpg",
+        "srcset": [
+          "image-400px.jpg 400w",
+          "image-600px.jpg 600w",
+          "image-800px.jpg 800w"
+        ],
+        "alt": "Texte alternatif",
+        "title": "Titre",
+        "credit": "Mairie de Paris / DICOM"
+      }
+    }, {
+      "title": "Image vertical",
+      "description": "Les images sont limitées à 540px de haut, pour éviter que les images au format vertical prennent une hauteur trop importante.",
+      "data": {
+        "src": "vertical_image-600px.jpg",
+        "srcset": [
+          "vertical_image-400px.jpg 400w",
+          "vertical_image-600px.jpg 600w",
+          "vertical_image-800px.jpg 800w"
+        ],
+        "alt": "Texte alternatif",
+        "title": "Titre",
+        "credit": "Mairie de Paris / DICOM"
+      }
+    }, {
+      "title": "Image vertical non contrainte",
+      "description": "Il est possible de lever la limite de 540px de hauteur en ajoutant le <em>modifier</em> <code>full-height</code>. C'est notamment utile pour les infographies verticales.",
+      "data": {
+        "modifiers": ["full-height"],
+        "src": "vertical_image-600px.jpg",
+        "srcset": [
+          "vertical_image-400px.jpg 400w",
+          "vertical_image-600px.jpg 600w",
+          "vertical_image-800px.jpg 800w"
+        ],
+        "alt": "Texte alternatif",
+        "title": "Titre",
+        "credit": "Mairie de Paris / DICOM"
+      }
+    }],
+    "more": {
+      "left": {
+        "title": "Image flottant à gauche",
+        "description": "En ajoutant le <em>modifier</em> <code>left</code>, l'image flotte à gauche et est habillée par le texte qui la suit.",
+        "data": {
+          "modifiers": ["left"],
+          "src": "small_image.jpg",
+          "alt": "Texte alternatif",
+          "title": "Titre",
+          "credit": "Mairie de Paris / DICOM"
+        }
+      },
+      "right": {
+        "title": "Image flottant à droite",
+        "description": "",
+        "data": {
+          "modifiers": ["right"],
+          "src": "small_image.jpg",
+          "alt": "Texte alternatif",
+          "title": "Titre",
+          "credit": "Mairie de Paris / DICOM"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+include ../../modules/share/share
+
+mixin verbatim(data)
+  blockquote.component.component-verbatim(class=data.modifiers)
+    p.verbatim-text= data.quote
+    footer
+      .verbatim-separate
+      cite
+        .verbatim-author
+          = data.author
+          | ,
+        .verbatim-function= data.function
+      - var share = JSON.parse(JSON.stringify(data.share)) // clone the data object
+      - share.modifiers = ["circles"] // overwrite the modifiers
+      +share(share)

@@ -1,0 +1,9 @@
+mixin footer(data)
+  footer.footer(role="contentinfo")
+    .layout-wrapper.footer-wrapper
+      a.footer-logo(href=data.logo.href)
+        img(src=data.logo.src alt=data.logo.alt)
+      ul.footer-links
+        each item in data.items
+          li(class=item.modifiers)
+            a(href=item.href target=item.target lang=item.lang)= item.text

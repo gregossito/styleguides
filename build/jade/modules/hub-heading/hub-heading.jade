@@ -1,0 +1,11 @@
+mixin hub-heading(data)
+  .hub-heading(style=data.image && "background-image:url('#{data.image}')" class=data.modifiers)
+    .hub-heading-wrapper.layout-wrapper
+      .hub-heading-content
+        if block
+          block
+        else if data.block
+          != data.block
+        else if data.text
+          h1!= data.text
+

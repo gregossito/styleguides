@@ -1,0 +1,10 @@
+mixin tags(data)
+  ul.tags
+    each tag, index in data
+      li
+        if tag.href
+          a.tags-item(href="#{tag.href}")= tag.text
+        else
+          span.tags-item= tag.text
+        if index < data.length-1
+          span.tags-separator —

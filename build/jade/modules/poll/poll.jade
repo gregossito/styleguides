@@ -1,0 +1,33 @@
+include ../button/button
+include ../icon-switch/icon-switch
+include ../search-field/search-field
+
+mixin poll(data)
+  .poll
+    .poll-wrapper
+      - var pause = JSON.parse(JSON.stringify(data.pause || []))
+      - pause.action = {"type": "pause"}
+      - pause.icon = ["pause", "play"]
+      +icon-switch(pause)
+      if data.heading
+        h2.poll-heading
+          = data.heading
+      .poll-title(id=data.id data-thanks=data.thanks)= data.title
+      if data.items && data.items.length
+        ul.poll-options(class=data.modifiers)
+          each item in data.items
+            li
+              - var button = JSON.parse(JSON.stringify(item)) // clone the data object
+              - button.modifiers = ["action", "secondary"]
+              - button.attributes = {"data-value": item.value}
+              +button(button)
+      else if data.form
+        form.poll-form
+          input.poll-input(type="text" placeholder=data.form.input.placeholder title=data.form.input.placeholder id=data.form.input.id aria-describedby=data.id)
+          - var submit = JSON.parse(JSON.stringify(data.form.submit)) // clone the data object
+          - submit.modifiers = ["action", "secondary", "poll-submit"]
+          - submit.attributes = {"type": "submit"}
+          +button(submit)
+      if data.more
+        .poll-more
+          a(href=data.more.href)= data.more.text

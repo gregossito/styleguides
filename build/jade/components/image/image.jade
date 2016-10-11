@@ -1,0 +1,16 @@
+mixin image(data)
+  .component.component-image(class=data.modifiers)
+    - var title = [data.title]
+    - if (data.credit) {title.push("(" + data.credit + ")")}
+    - title = title.join(" ")
+    if data.srcset
+      //- https://ericportis.com/posts/2014/srcset-sizes/
+      //- The srcset is computed from the data passed
+      //- The size is fixed on desktop (max width of the right column in a document template)
+      //- And fluid on mobile (it should be close to full width, hence 100vw)
+      img(src=data.src
+          srcset=data.srcset.join(", ")
+          sizes="(min-width: 1160px) 770px, 100vw"
+          alt=data.alt title=title)
+    else
+      img(src=data.src alt=data.alt title=title)

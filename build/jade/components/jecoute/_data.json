@@ -1,0 +1,104 @@
+{
+  "index": {
+    "type": "jecoute",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "title": "Paris j'écoute",
+        "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
+        "form": {
+          "action": "#",
+          "method": "post"
+        },
+        "textarea": {
+          "placeholder": "Quelle information cherchiez-vous dans cette rubrique ?",
+          "title": "Quelle information cherchiez-vous dans cette rubrique ? - obligatoire"
+        },
+        "email": {
+          "placeholder": "Votre adresse e-mail",
+          "title": "Renseignez votre adresse e-mail (type xxx@xxx.xx) - obligatoire"
+        },
+        "button": {
+          "text": "Valider",
+          "title": "Valider votre question à Paris j'écoute"
+        },
+        "thanks": "Merci, votre question a bien été transmise.",
+        "error": "Une erreur est survenue lors de l'envoie de votre question. Merci de réessayer plus tard."
+      }
+    }, {
+      "title": "Champs pré-remplis",
+      "description": "",
+      "data": {
+        "title": "Paris j'écoute",
+        "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
+        "form": {
+          "action": "#",
+          "method": "post"
+        },
+        "textarea": {
+          "placeholder": "Quelle information cherchiez-vous dans cette rubrique ?",
+          "title": "Quelle information cherchiez-vous dans cette rubrique ? - obligatoire",
+          "value": "Je n'ai pas trouvé la réponse à ma question..."
+        },
+        "email": {
+          "placeholder": "Votre adresse e-mail",
+          "title": "Renseignez votre adresse e-mail (type xxx@xxx.xx) - obligatoire",
+          "value": "john.doe@gmail.com"
+        },
+        "button": {
+          "text": "Valider",
+          "title": "Valider votre question à Paris j'écoute"
+        },
+        "thanks": "Merci, votre question a bien été transmise.",
+        "error": "Une erreur est survenue lors de l'envoie de votre question. Merci de réessayer plus tard."
+      }
+    }, {
+      "title": "Avec ajout de fichiers",
+      "description": "",
+      "data": {
+        "title": "Parhistoire",
+        "text": "Vous avez une question à poser relative à l'histoire et au patrimoine parisiens ? C’est à vous !",
+        "form": {
+          "action": "#",
+          "method": "post"
+        },
+        "textarea": {
+          "placeholder": "Quelle information sur l'histoire et le patrimoine parisiens cherchez vous ?",
+          "title": "Quelle information sur l'histoire et le patrimoine parisiens cherchez vous ? - obligatoire"
+        },
+        "email": {
+          "placeholder": "Renseignez votre adresse e-mail",
+          "title": "Renseignez votre adresse e-mail (type xxx@xxx.xx) - obligatoire"
+        },
+        "upload": {
+          "button": {
+            "icon": "dl",
+            "text": "Joindre des fichiers"
+          },
+          "title": "Poids total maximum",
+          "size": "10Mo",
+          "link": {
+            "href": "javascript:alert('.jpg, .jpeg, .png, .gif, .bmp, .doc, .xls, .ods, .odt, .pdf, .txt, .csv, .zip, .rar, .ppt, .xpptx, .pptx')",
+            "text": "types de fichiers autorisés"
+          }
+        },
+        "policy": {
+          "text": "En cochant cette case, j'accepte ",
+          "link": {
+            "href": "#",
+            "text": "la charte de Parhistoire",
+            "target": "_blank"
+          }
+        },
+        "button": {
+          "text": "Valider",
+          "title": "Valider votre question à Parhistoire"
+        },
+        "thanks": "Merci, votre question a bien été transmise.",
+        "error": "Une erreur est survenue lors de l'envoie de votre question. Merci de réessayer plus tard."
+      }
+    }]
+  }
+}

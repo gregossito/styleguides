@@ -1,0 +1,17 @@
+include ../../modules/block-content/block-content
+
+mixin block-content-social(data)
+  - var modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
+  - modifiers.push("block-content-social")
+  +block-content({"title": data.title, "modifiers": modifiers})
+    ul.block-content-items
+      each item in data.items
+        li.block-content-item
+          a(href=item.link.href target=item.link.target)
+            .block-content-count
+              i.block-content-icon(class="icon-#{item.icon}" aria-hidden="true")
+              = item.count
+              span.block-content-unit= " " + item.unit
+            .block-content-link= item.link.text
+    if data.link
+      a.block-content-link(href=data.link.href)= data.link.text

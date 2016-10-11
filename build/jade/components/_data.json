@@ -1,0 +1,26 @@
+{
+  "components": [
+    "accordion",
+    "buttons",
+    "card",
+    "districts",
+    "faq",
+    "form",
+    "frame",
+    "gallery",
+    "html",
+    "image",
+    "jecoute",
+    "links",
+    "news-push",
+    "opening-hours",
+    "place",
+    "postit",
+    "rush-hours",
+    "sharelines",
+    "table",
+    "text",
+    "verbatim",
+    "video"
+  ]
+}

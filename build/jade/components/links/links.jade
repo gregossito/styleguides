@@ -1,0 +1,21 @@
+mixin links(data)
+  .component.component-links(class=data.modifiers)
+    if data.title
+      - var title_tag = data.title_tag || 'h2'
+      #{title_tag}.links-title= data.title
+    ul.links-items
+      each item in data.items
+        li.links-item(class=item.modifiers)
+          a(href=item.href target=item.target)
+            = item.text
+            if (item.target && item.target === '_blank') || item.filetype || item.filesize
+              span.links-item-attributes
+                if item.target && item.target === '_blank'
+                  span.links-item-target
+                    = item.target_text || "nouvelle fenêtre"
+                if item.filetype
+                  span.links-item-filetype
+                    = item.filetype
+                if item.filesize
+                  span.links-item-filesize
+                    = item.filesize

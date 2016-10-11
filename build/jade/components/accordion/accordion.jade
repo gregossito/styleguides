@@ -1,0 +1,14 @@
+mixin accordion(data)
+  - var uuid = Math.random().toString(36).substr(2, 5)
+  .component.component-accordion(role='tablist' aria-multiselectable='true' class=data.modifiers)
+    each item, index in data.items
+      - var slug = item.slug || uuid + "-" + index
+      .accordion-item.panel
+        div(role='tab' id='h-#{slug}')
+          a.accordion-item-title(href='##{slug}' aria-controls='##{slug}')
+            = item.title
+            span.icon.icon-arrow-top
+        .accordion-item-content(role='tabpanel' aria-labelledby='h-#{slug}' id="#{slug}")
+          .accordion-content-wrapper
+            != item.content
+

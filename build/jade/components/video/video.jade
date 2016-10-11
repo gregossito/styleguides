@@ -1,0 +1,18 @@
+mixin video(data)
+  .component.component-video(class=data.modifiers)
+    if data.title
+      h3.video-title= data.title
+    .video-wrapper
+      if data.cookie === false
+        if block
+          != block
+        else if data.block
+          != data.block
+      else
+        if data.placeholder
+          .video-placeholder!= data.placeholder
+        script.video-embed(type="text/html")
+          if block
+            != block
+          else if data.block
+            != data.block

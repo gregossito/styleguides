@@ -1,0 +1,105 @@
+{
+  "index": {
+    "type": "notice",
+    "description": "Possibilité de la rendre fixe par rapport au scroll avec les modifiers <code>fixed</code> et <code>top</code>/<code>bottom</code>.",
+    "examples": [{
+      "title": "Standard",
+      "data": {
+        "block": "Texte de la notice"
+      }
+    }, {
+      "title": "Fermable",
+      "data": {
+        "block": "Texte de la notice",
+        "closable": true
+      }
+    }, {
+      "title": "Fermé par défaut",
+      "description": "Pour ouvrir cette notice, publier l'évènement <code>notice.open</code> avec l'<code>id</code> de la notice en paramètre :<br><code>Paris.events.publish('notice.open', {id: 'openable_notice'});</code>",
+      "data": {
+        "id": "openable_notice",
+        "block": "Texte de la notice",
+        "closable": true,
+        "modifiers": ["closed"]
+      }
+    }, {
+      "title": "Avec un bouton",
+      "description": "L'object <code>closable</code> correspond aux données d'un bouton.",
+      "data": {
+        "block": "Texte de la notice",
+        "closable": {
+          "href": "#",
+          "text": "Accepter",
+          "modifiers": ["action"],
+          "attributes": {"data-action": "close"}
+        }
+      }
+    }, {
+      "description": "Et les textes longs ne dépassent pas.",
+      "data": {
+        "block": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "closable": {
+          "href": "#",
+          "text": "Accepter",
+          "modifiers": ["action"],
+          "attributes": {"data-action": "close"}
+        }
+      }
+    }, {
+      "title": "Avec le texte centré",
+      "data": {
+        "block": "Texte de la notice",
+        "modifiers": ["center-text"]
+      }
+    }, {
+      "title": "Avec une icône alert",
+      "data": {
+        "block": "Texte de la notice",
+        "modifiers": ["alert"]
+      }
+    }, {
+      "title": "Les couleurs disponibles",
+      "description": "bleu",
+      "data": {
+        "block": "Texte de la notice",
+        "modifiers": ["blue"]
+      }
+    }, {
+      "description": "orange",
+      "data": {
+        "block": "Texte de la notice",
+        "modifiers": ["orange"]
+      }
+    }, {
+      "description": "jaune",
+      "data": {
+        "block": "Texte de la notice",
+        "modifiers": ["yellow"]
+      }
+    }, {
+      "description": "blanc",
+      "data": {
+        "block": "Texte de la notice",
+        "modifiers": ["white"]
+      }
+    }, {
+      "description": "gris",
+      "data": {
+        "block": "Texte de la notice",
+        "modifiers": ["grey"]
+      }
+    }, {
+      "description": "transparent, peut être associé à une des couleurs ci-dessus",
+      "data": {
+        "block": "Texte de la notice",
+        "modifiers": ["transparent"]
+      }
+    }, {
+      "title": "Avec une image de fond",
+      "data": {
+        "block": "Texte de la notice",
+        "modifiers": ["blue", "buildings"]
+      }
+    }]
+  }
+}

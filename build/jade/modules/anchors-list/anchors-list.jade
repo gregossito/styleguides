@@ -1,0 +1,12 @@
+mixin anchors-list(data)
+  - var data = data || {}
+  nav.anchors-list(aria-label=data.title)&attributes(data.attributes || {})
+    if data.title
+      div.anchors-list-title(aria-hidden="true")
+        span= data.title
+    if data.items && data.items.length
+      ul.anchors-list-items
+        each item in data.items
+          li.anchors-list-item(class=item.modifiers)
+            a.anchors-list-link(href=item.href)&attributes(item.attributes || {})= item.text
+            span.anchors-list-progress

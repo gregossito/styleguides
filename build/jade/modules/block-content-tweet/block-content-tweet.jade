@@ -1,0 +1,25 @@
+include ../../modules/block-content/block-content
+include ../../modules/icon-switch/icon-switch
+
+mixin block-content-tweet(data)
+  - var modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
+  - modifiers.push("block-content-tweet")
+  +block-content({"title": data.title, "modifiers": modifiers})
+    if data.items && data.items.length
+      - var pause = JSON.parse(JSON.stringify(data.pause || []))
+      - pause.action = {"type": "pause"}
+      - pause.icon = ["pause", "play"]
+      if data.items.length > 1
+        +icon-switch(pause)
+      .block-content-items
+        each item in data.items
+          .block-content-item
+            .user= item.user
+            .text!= item.text
+            .block-content-links
+              .block-content-links-time
+                a(href=item.links.time.href target=item.links.time.target)= item.links.time.text
+              .block-content-links-actions
+                a.reply(href=item.links.reply.href target=item.links.reply.target)= item.links.reply.text
+                a.retweet(href=item.links.retweet.href target=item.links.retweet.target)= item.links.retweet.text
+                a.like(href=item.links.like.href target=item.links.like.target)= item.links.like.text

@@ -1,0 +1,38 @@
+include ../news-card/news-card
+
+mixin news-list(data)
+  if data.modifiers && data.modifiers.indexOf("news-cards") !== -1
+    if data.modifiers.indexOf("large-first-child") !== -1
+      ul.news-list(class=data.modifiers)
+        each item, index in data.items.slice(0, 5)
+          li.news-list-card-item
+            if index === 0
+              - var item = JSON.parse(JSON.stringify(item)) // clone the data object
+              - item.modifiers = ["large"] // overwrite the modifiers
+              +news-card(item)
+            else
+              +news-card(item)
+    else
+      ul.news-list.gallery(class=data.modifiers)
+        each item in data.items
+          li.news-list-card-item
+            +news-card(item)
+  else
+    ul.news-list.gallery(class=data.modifiers)
+      each item in data.items
+        li.news-list-item
+          a.news-item(href=item.href)
+            .news-item-meta
+              .news-item-date= item.date
+              .news-item-category= item.category
+            .news-item-title= item.title
+            if item.counters
+              .social-counters
+                .facebook-counter
+                  i.icon.icon-facebook(aria-hidden="true")
+                  span.counter-value= item.counters.facebook[0]
+                  span.counter-label= item.counters.facebook[1]
+                .twitter-counter
+                  i.icon.icon-twitter(aria-hidden="true")
+                  span.counter-value= item.counters.twitter[0]
+                  span.counter-label= item.counters.twitter[1]

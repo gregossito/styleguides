@@ -1,0 +1,9 @@
+{
+  "layouts": [
+    "stack",
+    "half-col",
+    "left-col",
+    "right-col",
+    "three-col"
+  ]
+}

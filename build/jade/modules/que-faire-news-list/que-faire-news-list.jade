@@ -1,0 +1,12 @@
+include ../news-card/news-card
+
+mixin que-faire-news-list(data)
+  .que-faire-news-list-wrapper
+    .que-faire-news-list-header
+      .que-faire-header-logo(style=data.logo && 'background-image: url(#{data.logo});')
+      .que-faire-header-title
+        p.header-title= data.text
+    ul.que-faire-news-list.gallery(class=data.modifiers)
+      each item in data.items
+        li.que-faire-news-list-item
+          +news-card(item)

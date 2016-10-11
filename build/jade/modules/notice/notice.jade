@@ -1,0 +1,17 @@
+include ../button/button
+
+mixin notice(data)
+  .notice(class=data.modifiers id=data.id)
+    if data.closable === true
+      button.close(type="button")
+        if data.close_label
+          .hidden-accessibly= data.close_label
+    else if data.closable
+      .notice-button
+        +button(data.closable)
+
+    p.notice-content
+      if data.block
+        != data.block
+      if block
+        block

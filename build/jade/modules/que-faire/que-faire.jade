@@ -1,0 +1,13 @@
+mixin que-faire(data)
+  .que-faire
+    .que-faire-wrapper(style='background-image: url(#{data.background});')
+      a.que-faire-logo(href=data.logo.href style='background-image: url(#{data.logo.image});' target="_blank")
+        span= data.logo.alt
+      ul.que-faire-items
+        each item in data.items
+          li.que-faire-item
+            a.button.button-que-faire(href=item.href target=item.target)
+              span= item.text
+      if data.more
+        a.button.button-que-faire.more(href=data.more.href target="_blank")
+          span!= data.more.text
