@@ -34,8 +34,20 @@ $offset-heading: 32px;
   margin: 0;
 }
 
+.black-background {
+  .heading-links {
+    span {
+      color:#fff;
+    }
+  }
+}
+
 .heading-links {
   font-size: 1.5rem;
+
+  span {
+    margin-right:3px;
+  }
 
   > a {
     border-bottom: 1px solid $gray4D;

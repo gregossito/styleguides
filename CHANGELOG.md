@@ -9,6 +9,32 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.5.6 (2016-10-04)
+
+* remove `video-home` item small on mobility
+
+## 1.5.5 (2016-10-04)
+
+* add dailymotion link on `video-home` heading title
+
+## 1.5.4 (2016-10-04)
+
+* fix `video-home` styles
+
+## 1.5.3 (2016-10-03)
+
+* fix `video-home` style background image
+
+## 1.5.2 (2016-10-03)
+
+* fix `video-home` cookie cnil placeholder
+* fix `video-home` player button and items styles
+
+## 1.5.1 (2016-09-30)
+
+* fix `quick-access` on mobility
+* add script and modal to module `video-home` and fix mobile compatibility
+
 ## 1.5.0 (2016-09-23)
 
 * added module `video-home`
