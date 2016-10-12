@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.5.9 (2016-10-12)
+
+* fix `video-home` margin-bottom to 0
+
 ## 1.5.8 (2016-10-12)
 
 * fix `que-faire-news-list` red background
