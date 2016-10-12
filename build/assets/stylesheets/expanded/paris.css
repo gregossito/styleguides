@@ -5655,7 +5655,8 @@ body.rheader-mobile-nav-open {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  padding: 0px 30px 30px; }
+  padding: 0px 30px 30px;
+  margin-bottom: 0; }
 
 .video-home-item {
   text-decoration: none; }
