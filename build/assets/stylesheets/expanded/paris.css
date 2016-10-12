@@ -5820,7 +5820,7 @@ body.rheader-mobile-nav-open {
             letter-spacing: 0.15rem;
             margin-bottom: 20px; }
   .video-home-modal {
-    height: auto; } }
+    height: 100%; } }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .video-home {
@@ -5868,7 +5868,7 @@ body.rheader-mobile-nav-open {
           .video-home .video-home-list-item.large .video-home-content .video-home-title {
             max-width: 100%; }
   .video-home-modal {
-    height: auto; } }
+    height: 100%; } }
 
 @media (min-width: 768px) {
   .video-home-list-item.small {
