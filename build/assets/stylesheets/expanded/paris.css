@@ -5684,7 +5684,7 @@ body.rheader-mobile-nav-open {
     background-size: cover;
     background-position: center;
     /* Internet Explorer 7/8 */
-    opacity: .9; }
+    opacity: 1; }
 
 .video-home-embed,
 .video-home-placeholder {
@@ -5700,13 +5700,13 @@ body.rheader-mobile-nav-open {
   height: 100%;
   overflow: auto;
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.4); }
+  background-color: #282828; }
 
 .video-home-modal-content {
-  background-color: #fefefe;
+  background-color: #282828;
   margin: 5% auto;
   padding: 20px;
-  border: 15px solid #000;
+  border: 15px solid #282828;
   width: 640px;
   height: 360px;
   width: 80%;
