@@ -4686,7 +4686,9 @@ body.rheader-mobile-nav-open {
   .rheader + .quick-access {
     margin-top: 80px; }
   .rheader.fixed + .layout-main > .layout-content.black-background:first-child {
-    background: #282828; } }
+    background: #282828; }
+  .rheader.fixed + .layout-main > .layout-content.red-background:first-child {
+    background: #F95053; } }
 
 @media (max-width: 767px) {
   .rheader + .quick-access {

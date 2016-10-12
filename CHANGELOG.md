@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.5.8 (2016-10-12)
+
+* fix `que-faire-news-list` red background
+
 ## 1.5.7 (2016-10-11)
 
 * add `video-home` link Plus de vidéos
