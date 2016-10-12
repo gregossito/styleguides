@@ -712,6 +712,9 @@ body.rheader-mobile-nav-open {
   .rheader.fixed + .layout-main > .layout-content.black-background:first-child {
     background:$gray28;
   }
+  .rheader.fixed + .layout-main > .layout-content.red-background:first-child {
+    background:#F95053;
+  }
 }
 
 @include small {
