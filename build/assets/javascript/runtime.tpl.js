@@ -1067,6 +1067,32 @@ templatizer["gallery"]["gallery"] = function tmpl_gallery_gallery(data) {
     return buf.join("");
 };
 
+// image.jade compiled template
+templatizer["image"] = function tmpl_image(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// image.jade:image compiled template
+templatizer["image"]["image"] = function tmpl_image_image(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "component", "component-image", data.modifiers ], [ null, null, true ]) + ">");
+    var title = [ data.title ];
+    if (data.credit) {
+        title.push("(" + data.credit + ")");
+    }
+    title = title.join(" ");
+    if (data.srcset) {
+        buf.push("<img" + jade.attr("src", data.src, true, false) + jade.attr("srcset", data.srcset.join(", "), true, false) + ' sizes="(min-width: 1160px) 770px, 100vw"' + jade.attr("alt", data.alt, true, false) + jade.attr("title", title, true, false) + "/>");
+    } else {
+        buf.push("<img" + jade.attr("src", data.src, true, false) + jade.attr("alt", data.alt, true, false) + jade.attr("title", title, true, false) + "/>");
+    }
+    buf.push("</div>");
+    return buf.join("");
+};
+
 // html.jade compiled template
 templatizer["html"] = function tmpl_html(locals) {
     var buf = [];
@@ -1098,32 +1124,6 @@ templatizer["html"]["html"] = function tmpl_html_html(data) {
         buf.push("</script>");
     }
     buf.push("</div></div>");
-    return buf.join("");
-};
-
-// image.jade compiled template
-templatizer["image"] = function tmpl_image(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// image.jade:image compiled template
-templatizer["image"]["image"] = function tmpl_image_image(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "component", "component-image", data.modifiers ], [ null, null, true ]) + ">");
-    var title = [ data.title ];
-    if (data.credit) {
-        title.push("(" + data.credit + ")");
-    }
-    title = title.join(" ");
-    if (data.srcset) {
-        buf.push("<img" + jade.attr("src", data.src, true, false) + jade.attr("srcset", data.srcset.join(", "), true, false) + ' sizes="(min-width: 1160px) 770px, 100vw"' + jade.attr("alt", data.alt, true, false) + jade.attr("title", title, true, false) + "/>");
-    } else {
-        buf.push("<img" + jade.attr("src", data.src, true, false) + jade.attr("alt", data.alt, true, false) + jade.attr("title", title, true, false) + "/>");
-    }
-    buf.push("</div>");
     return buf.join("");
 };
 

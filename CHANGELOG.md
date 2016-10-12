@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.5.11 (2016-10-12)
+
+* optim `video-home` styles
+
 ## 1.5.10 (2016-10-12)
 
 * optim `video-home` styles

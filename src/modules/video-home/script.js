@@ -38,7 +38,7 @@ Paris.videoHome = (function(){
         $('.video-home-modal').show();
       });
 
-      $('.video-home-close').on('click', function(){
+      $('.video-home-close, .video-home-modal').on('click', function(){
         $('.video-home-modal .video-home-modal-body').empty();
         $('.video-home-modal').hide();
       });
