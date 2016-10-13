@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.5.12 (2016-10-12)
+
+* fix `que-faire-news-list` background-color item wrapper
+
 ## 1.5.11 (2016-10-12)
 
 * optim `video-home` styles

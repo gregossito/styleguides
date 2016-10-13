@@ -3934,6 +3934,9 @@ html.no-touch .que-faire-news-list-item .news-card:focus {
   .que-faire-news-list-header .que-faire-header-title .header-title {
     max-width: 365px; } }
 
+html.touch .que-faire-news-list-item .news-card-wrapper {
+  background-color: #F95053; }
+
 .quick-access {
   background-color: #FFF;
   width: 100%; }
