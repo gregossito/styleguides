@@ -1,0 +1,20 @@
+extends ../../layouts/stack/stack
+
+include ../../modules/footer/footer
+include ../../modules/notice/notice
+include ../../modules/rheader/rheader
+
+append header
+  if data.notice
+    +notice(data.notice)
+
+append header
+  +rheader(data.rheader)
+
+append content
+  .layout-content.layout-adjacent-before
+    != data.content
+
+append footer
+  .layout-content.layout-adjacent-before
+    +footer(data.footer)

@@ -9,6 +9,9 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+* `rheader`: added modifier `static`
+* added template `full-page`
+
 ## 1.5.12 (2016-10-12)
 
 * fix `que-faire-news-list` background-color item wrapper

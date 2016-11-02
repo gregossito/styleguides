@@ -7,6 +7,10 @@
   width: 100%;
   z-index: 300;
 
+  &.static {
+    position: static !important;
+  }
+
   &.fixed {
     left: 0;
     position: fixed;
