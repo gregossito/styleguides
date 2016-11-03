@@ -38,7 +38,7 @@ Paris.rheader = (function(){
       PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableMobileNav);
 
       // fix or unfix
-      if (!$el.addClass('static')) {
+      if (!$el.hasClass('static')) {
         PubSub.subscribe('scroll.notice.down', fix);
         PubSub.subscribe('scroll.notice.up', unfix);
         PubSub.subscribe('header.search.close', fix);
