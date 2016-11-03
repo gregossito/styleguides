@@ -8,7 +8,12 @@
   z-index: 300;
 
   &.static {
-    position: static !important;
+    position: relative !important;
+
+    & + .layout-main > .layout-content:first-child,
+    & + .quick-access + .layout-main > .layout-content:first-child {
+      padding-top: 0 !important;
+    }
   }
 
   &.fixed {

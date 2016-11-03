@@ -40,7 +40,6 @@
         "logo": {
           "href": "../home/",
           "text": "Paris",
-          "h1": true,
           "title": "Retour à l’accueil – Paris"
         },
         "locales": [
@@ -82,7 +81,31 @@
             "text": "Mon compte",
             "modifiers": ["account"]
           }
-        ]
+        ],
+        "quick_access": {
+          "search": {
+            "action": "../search",
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Valider la recherche sur le site",
+              "icon": true
+            },
+            "around": {
+              "href": "http://meslieux.paris.fr",
+              "text": "Autour de moi",
+              "target": "_blank"
+            },
+            "close_label": "Fermer le moteur de recherche"
+          },
+          "results": {
+            "button": {
+              "href": "../search",
+              "text": "Voir tous les résultats"
+            }
+          }
+        }
       },
       "content": "<div style=\"min-height: 1000px; background-color: white\"><h1>Grand format</h1></div>",
       "button_top": {
