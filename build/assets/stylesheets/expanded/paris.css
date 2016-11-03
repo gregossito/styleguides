@@ -4132,6 +4132,11 @@ html.touch .que-faire-news-list-item .news-card-wrapper {
   position: relative;
   width: 100%;
   z-index: 300; }
+  .rheader.static {
+    position: relative !important; }
+    .rheader.static + .layout-main > .layout-content:first-child,
+    .rheader.static + .quick-access + .layout-main > .layout-content:first-child {
+      padding-top: 0 !important; }
   .rheader.fixed {
     left: 0;
     position: fixed;
