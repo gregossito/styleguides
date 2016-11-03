@@ -7,6 +7,15 @@
   width: 100%;
   z-index: 300;
 
+  &.static {
+    position: relative !important;
+
+    & + .layout-main > .layout-content:first-child,
+    & + .quick-access + .layout-main > .layout-content:first-child {
+      padding-top: 0 !important;
+    }
+  }
+
   &.fixed {
     left: 0;
     position: fixed;

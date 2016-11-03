@@ -38,16 +38,18 @@ Paris.rheader = (function(){
       PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableMobileNav);
 
       // fix or unfix
-      PubSub.subscribe('scroll.notice.down', fix);
-      PubSub.subscribe('scroll.notice.up', unfix);
-      PubSub.subscribe('header.search.close', fix);
-      PubSub.subscribe('notice.closed', function(e, data){
-        if (data && data.id === "notice_home_top") {
+      if (!$el.addClass('static')) {
+        PubSub.subscribe('scroll.notice.down', fix);
+        PubSub.subscribe('scroll.notice.up', unfix);
+        PubSub.subscribe('header.search.close', fix);
+        PubSub.subscribe('notice.closed', function(e, data){
+          if (data && data.id === "notice_home_top") {
+            fix();
+          }
+        });
+        if(!$('.notice.top').length || $(window).scrollTop() >= $('.notice.top').height() ) {
           fix();
         }
-      });
-      if(!$('.notice.top').length || $(window).scrollTop() >= $('.notice.top').height() ) {
-        fix();
       }
 
       // extend or unextend
