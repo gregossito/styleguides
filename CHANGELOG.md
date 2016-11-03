@@ -9,6 +9,8 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.6.0 (2016-11-03)
+
 * `rheader`: added modifier `static`
 * added template `full-page`
 
