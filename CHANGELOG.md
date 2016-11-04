@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.6.1 (2016-11-04)
+
+* `rheader`: fix typo in script.js hasClass instead of addClass
+
 ## 1.6.0 (2016-11-03)
 
 * `rheader`: added modifier `static`
