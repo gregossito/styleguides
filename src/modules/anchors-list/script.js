@@ -134,6 +134,9 @@ Paris.anchors = (function(){
     }
 
     function scrollToAnchor(anchor) {
+      if ($('#notice_home_top').length > 0) {
+        options.anchorTopBorder = options.anchorTopBorder - 10;
+      }
       var $anchor = $(anchor);
       if ($anchor.length === 0) {return;}
       $anchor
