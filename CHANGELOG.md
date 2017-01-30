@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.6.3 (2017-01-30)
+
+* `list-persons`: remove pagination click js
+
 ## 1.6.2 (2017-01-13)
 
 * `anchors-list`: fix offset in script.js when green banner is display

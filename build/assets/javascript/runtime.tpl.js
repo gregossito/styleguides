@@ -1965,93 +1965,6 @@ templatizer["anchors-list"]["anchors-list"] = function tmpl_anchors_list_anchors
     return buf.join("");
 };
 
-// block-aside-acces.jade compiled template
-templatizer["block-aside-acces"] = function tmpl_block_aside_acces(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    var locals_for_with = locals || {};
-    (function(Array) {}).call(this, "Array" in locals_for_with ? locals_for_with.Array : typeof Array !== "undefined" ? Array : undefined);
-    return buf.join("");
-};
-
-// block-aside-acces.jade:block-aside compiled template
-templatizer["block-aside-acces"]["block-aside"] = function tmpl_block_aside_acces_block_aside(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "block-aside", data.modifiers ], [ null, true ]) + ">");
-    if (data.title) {
-        buf.push("<h3" + jade.attr("id", data.title_id, true, false) + ' class="block-aside-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
-    }
-    buf.push('<div class="block-aside-content">');
-    if (data.block) {
-        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-    }
-    if (block) {
-        block && block(buf);
-    }
-    buf.push("</div></div>");
-    return buf.join("");
-};
-
-
-// block-aside-acces.jade:block-aside-acces compiled template
-templatizer["block-aside-acces"]["block-aside-acces"] = function tmpl_block_aside_acces_block_aside_acces(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    var block_modifiers = data.modifiers || [];
-    block_modifiers.push("block-aside-acces");
-    buf.push(templatizer["block-aside-acces"]["block-aside"].call({
-        block: function(buf) {
-            if (data.text) {
-                buf.push('<p class="text-acces">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</p>");
-            }
-            if (data.items) {
-                buf.push('<ul class="block-aside-acces-items">');
-                (function() {
-                    var $$obj = data.items;
-                    if ("number" == typeof $$obj.length) {
-                        for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                            var item = $$obj[$index];
-                            if (item.title) {
-                                buf.push("<li" + jade.cls([ "block-aside-acces-item", item.modifiers ], [ null, true ]) + ">   <i" + jade.cls([ "icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><span class="acces-item-text"><h4>' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</h4>");
-                                if (item.text.constructor === Array) {
-                                    buf.push("<p>" + (null == (jade_interp = item.text.join("<br />")) ? "" : jade_interp) + "</p>");
-                                } else {
-                                    buf.push("<p>" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</p>");
-                                }
-                                buf.push("</span></li>");
-                            } else {
-                                buf.push('<li class="block-aside-acces-item"><i' + jade.cls([ "icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><span class="acces-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</span></li>");
-                            }
-                        }
-                    } else {
-                        var $$l = 0;
-                        for (var $index in $$obj) {
-                            $$l++;
-                            var item = $$obj[$index];
-                            if (item.title) {
-                                buf.push("<li" + jade.cls([ "block-aside-acces-item", item.modifiers ], [ null, true ]) + ">   <i" + jade.cls([ "icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><span class="acces-item-text"><h4>' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</h4>");
-                                if (item.text.constructor === Array) {
-                                    buf.push("<p>" + (null == (jade_interp = item.text.join("<br />")) ? "" : jade_interp) + "</p>");
-                                } else {
-                                    buf.push("<p>" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</p>");
-                                }
-                                buf.push("</span></li>");
-                            } else {
-                                buf.push('<li class="block-aside-acces-item"><i' + jade.cls([ "icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><span class="acces-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</span></li>");
-                            }
-                        }
-                    }
-                }).call(this);
-                buf.push("</ul>");
-            }
-        }
-    }, {
-        title: data.title,
-        modifiers: block_modifiers
-    }));
-    return buf.join("");
-};
-
 // block-aside-access.jade compiled template
 templatizer["block-aside-access"] = function tmpl_block_aside_access(locals) {
     var buf = [];
@@ -2125,6 +2038,93 @@ templatizer["block-aside-access"]["block-aside-access"] = function tmpl_block_as
                                 buf.push("</span></li>");
                             } else {
                                 buf.push('<li class="block-aside-access-item"><i' + jade.cls([ "icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><span class="acces-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</span></li>");
+                            }
+                        }
+                    }
+                }).call(this);
+                buf.push("</ul>");
+            }
+        }
+    }, {
+        title: data.title,
+        modifiers: block_modifiers
+    }));
+    return buf.join("");
+};
+
+// block-aside-acces.jade compiled template
+templatizer["block-aside-acces"] = function tmpl_block_aside_acces(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    var locals_for_with = locals || {};
+    (function(Array) {}).call(this, "Array" in locals_for_with ? locals_for_with.Array : typeof Array !== "undefined" ? Array : undefined);
+    return buf.join("");
+};
+
+// block-aside-acces.jade:block-aside compiled template
+templatizer["block-aside-acces"]["block-aside"] = function tmpl_block_aside_acces_block_aside(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "block-aside", data.modifiers ], [ null, true ]) + ">");
+    if (data.title) {
+        buf.push("<h3" + jade.attr("id", data.title_id, true, false) + ' class="block-aside-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
+    }
+    buf.push('<div class="block-aside-content">');
+    if (data.block) {
+        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+    }
+    if (block) {
+        block && block(buf);
+    }
+    buf.push("</div></div>");
+    return buf.join("");
+};
+
+
+// block-aside-acces.jade:block-aside-acces compiled template
+templatizer["block-aside-acces"]["block-aside-acces"] = function tmpl_block_aside_acces_block_aside_acces(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    var block_modifiers = data.modifiers || [];
+    block_modifiers.push("block-aside-acces");
+    buf.push(templatizer["block-aside-acces"]["block-aside"].call({
+        block: function(buf) {
+            if (data.text) {
+                buf.push('<p class="text-acces">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</p>");
+            }
+            if (data.items) {
+                buf.push('<ul class="block-aside-acces-items">');
+                (function() {
+                    var $$obj = data.items;
+                    if ("number" == typeof $$obj.length) {
+                        for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                            var item = $$obj[$index];
+                            if (item.title) {
+                                buf.push("<li" + jade.cls([ "block-aside-acces-item", item.modifiers ], [ null, true ]) + ">   <i" + jade.cls([ "icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><span class="acces-item-text"><h4>' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</h4>");
+                                if (item.text.constructor === Array) {
+                                    buf.push("<p>" + (null == (jade_interp = item.text.join("<br />")) ? "" : jade_interp) + "</p>");
+                                } else {
+                                    buf.push("<p>" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</p>");
+                                }
+                                buf.push("</span></li>");
+                            } else {
+                                buf.push('<li class="block-aside-acces-item"><i' + jade.cls([ "icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><span class="acces-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</span></li>");
+                            }
+                        }
+                    } else {
+                        var $$l = 0;
+                        for (var $index in $$obj) {
+                            $$l++;
+                            var item = $$obj[$index];
+                            if (item.title) {
+                                buf.push("<li" + jade.cls([ "block-aside-acces-item", item.modifiers ], [ null, true ]) + ">   <i" + jade.cls([ "icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><span class="acces-item-text"><h4>' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</h4>");
+                                if (item.text.constructor === Array) {
+                                    buf.push("<p>" + (null == (jade_interp = item.text.join("<br />")) ? "" : jade_interp) + "</p>");
+                                } else {
+                                    buf.push("<p>" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</p>");
+                                }
+                                buf.push("</span></li>");
+                            } else {
+                                buf.push('<li class="block-aside-acces-item"><i' + jade.cls([ "icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><span class="acces-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</span></li>");
                             }
                         }
                     }
@@ -3773,6 +3773,39 @@ templatizer["links-group"]["links-group"] = function tmpl_links_group_links_grou
     return buf.join("");
 };
 
+// municipal-team.jade compiled template
+templatizer["municipal-team"] = function tmpl_municipal_team(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// municipal-team.jade:heading compiled template
+templatizer["municipal-team"]["heading"] = function tmpl_municipal_team_heading(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "heading", data.modifiers ], [ null, true ]) + '><h2 class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
+    if (data.link) {
+        buf.push('<div class="heading-links">');
+        if (data.link.external) {
+            buf.push('<span class="icon-dailymotion"> </span>');
+        }
+        buf.push("<a" + jade.attr("href", data.link.href, true, false) + ">" + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></div>");
+    }
+    buf.push("</div>");
+    return buf.join("");
+};
+
+
+// municipal-team.jade:municipal-team compiled template
+templatizer["municipal-team"]["municipal-team"] = function tmpl_municipal_team_municipal_team(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push('<div class="municipal-team"><div class="layout-wrapper">');
+    buf.push(templatizer["municipal-team"]["heading"](data.heading));
+    buf.push('<div class="municipal-team-content"><img' + jade.attr("src", data.img.src, true, false) + ' alt="" class="municipal-team-img"/><p class="municipal-team-intro">' + jade.escape(null == (jade_interp = data.intro) ? "" : jade_interp) + '</p><p class="municipal-team-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</p></div></div></div>");
+    return buf.join("");
+};
+
 // municipal-site-list.jade compiled template
 templatizer["municipal-site-list"] = function tmpl_municipal_site_list(locals) {
     var buf = [];
@@ -3858,39 +3891,6 @@ templatizer["municipal-site-list"]["municipal-site-list"] = function tmpl_munici
         }
     }).call(this);
     buf.push("</ul></div>");
-    return buf.join("");
-};
-
-// municipal-team.jade compiled template
-templatizer["municipal-team"] = function tmpl_municipal_team(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// municipal-team.jade:heading compiled template
-templatizer["municipal-team"]["heading"] = function tmpl_municipal_team_heading(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "heading", data.modifiers ], [ null, true ]) + '><h2 class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
-    if (data.link) {
-        buf.push('<div class="heading-links">');
-        if (data.link.external) {
-            buf.push('<span class="icon-dailymotion"> </span>');
-        }
-        buf.push("<a" + jade.attr("href", data.link.href, true, false) + ">" + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></div>");
-    }
-    buf.push("</div>");
-    return buf.join("");
-};
-
-
-// municipal-team.jade:municipal-team compiled template
-templatizer["municipal-team"]["municipal-team"] = function tmpl_municipal_team_municipal_team(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<div class="municipal-team"><div class="layout-wrapper">');
-    buf.push(templatizer["municipal-team"]["heading"](data.heading));
-    buf.push('<div class="municipal-team-content"><img' + jade.attr("src", data.img.src, true, false) + ' alt="" class="municipal-team-img"/><p class="municipal-team-intro">' + jade.escape(null == (jade_interp = data.intro) ? "" : jade_interp) + '</p><p class="municipal-team-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</p></div></div></div>");
     return buf.join("");
 };
 
