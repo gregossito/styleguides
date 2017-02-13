@@ -21,7 +21,7 @@ mixin news-list(data)
     ul.news-list.gallery(class=data.modifiers)
       each item in data.items
         li.news-list-item
-          a.news-item(href=item.href)
+          a.news-item(href=item.href onclick=item.onclick)
             .news-item-meta
               .news-item-date= item.date
               .news-item-category= item.category

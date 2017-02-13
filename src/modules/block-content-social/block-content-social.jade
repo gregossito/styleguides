@@ -7,11 +7,11 @@ mixin block-content-social(data)
     ul.block-content-items
       each item in data.items
         li.block-content-item
-          a(href=item.link.href target=item.link.target)
+          a(href=item.link.href onclick=item.link.onclick target=item.link.target)
             .block-content-count
               i.block-content-icon(class="icon-#{item.icon}" aria-hidden="true")
               = item.count
               span.block-content-unit= " " + item.unit
             .block-content-link= item.link.text
     if data.link
-      a.block-content-link(href=data.link.href)= data.link.text
+      a.block-content-link(href=data.link.href onclick=data.link.onclick)= data.link.text

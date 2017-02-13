@@ -7,4 +7,4 @@ mixin block-aside-links(data)
     ul.block-aside-items
       each item in data.items
         li.block-aside-item(class=item.modifiers)
-          a(href=item.href)= item.text
+          a(href=item.href onclick=item.onclick)= item.text

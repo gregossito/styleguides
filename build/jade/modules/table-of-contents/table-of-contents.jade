@@ -4,7 +4,7 @@ mixin table-of-contents(data)
       ul.table-of-contents-nav
         each item in data.nav
           li.table-of-contents-nav-item
-            a(href=item.href)
+            a(href=item.href onclick=item.onclick)
               strong= item.text.slice(0, 3)
               = item.text
     if data.sections
@@ -13,7 +13,7 @@ mixin table-of-contents(data)
           ul.table-of-contents-sections-items
             each item in data.sections.list.items
               li.table-of-contents-sections-item
-                a(href=item.href)
+                a(href=item.href onclick=item.onclick)
                   = item.text
                   strong= item.text.slice(0, 3)
           if data.sections.more

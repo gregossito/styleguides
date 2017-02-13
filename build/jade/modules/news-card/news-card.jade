@@ -1,5 +1,5 @@
 mixin news-card(data)
-  a.news-card(href=data.href class=data.modifiers)
+  a.news-card(href=data.href onclick=data.onclick class=data.modifiers)
     .news-card-wrapper
       .news-card-image(style=data.image && 'background-image: url(#{data.image});')
       .news-card-content

@@ -7,7 +7,7 @@ mixin block-aside-contact(data)
     if data.map
       .block-aside-minimap
         if data.map.href
-          a(href=data.map.href target=data.map.target title=data.map.title)
+          a(href=data.map.href onclick=data.map.onclick target=data.map.target title=data.map.title)
             img(src=data.map.src alt=data.map.alt)
         else
           img(src=data.map.src)
@@ -20,7 +20,7 @@ mixin block-aside-contact(data)
             if !item.icon
               = item.title + " "
             if item.href
-              a(href=item.href class=item.hcard_properties)
+              a(href=item.href onclick=item.onclick class=item.hcard_properties)
                 if item.icon
                   i.icon(class="icon-#{item.icon}" aria-hidden="true")
                   span.hidden-accessibly= item.title + " :"
@@ -34,7 +34,7 @@ mixin block-aside-contact(data)
         else
           li.block-aside-item(class=modifiers class=item.hcard_properties)
             if item.href
-              a(href=item.href)
+              a(href=item.href onclick=item.onclick)
                 if item.icon
                   i.icon(class="icon-#{item.icon}" aria-hidden="true")
                 = item.text

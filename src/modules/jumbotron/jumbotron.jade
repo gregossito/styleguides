@@ -1,7 +1,7 @@
 include ../button/button
 
 mixin jumbotron(data)
-  a.jumbotron(href=data.href style="background-image: url(#{data.image});" id=data.id class=data.modifiers)
+  a.jumbotron(href=data.href onclick=data.onclick style="background-image: url(#{data.image});" id=data.id class=data.modifiers)
     .jumbotron-wrapper
       .layout-wrapper.jumbotron-content.layout-outside
         - var tag = data.tag || 'h2'
