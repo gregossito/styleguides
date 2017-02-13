@@ -15,6 +15,6 @@ mixin links-group(data)
       ul.links-group-items
         each item in data.items
           li.links-group-item
-            a(href=item.href)
+            a(href=item.href onclick=item.onclick)
               span.links-group-item-text= item.text
               i.links-group-item-icon(aria-hidden="true")

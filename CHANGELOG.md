@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.6.4 (2017-02-13)
+
+* add onclick attributes on links plan de marquage
+
 ## 1.6.3 (2017-01-30)
 
 * `list-persons`: remove pagination click js

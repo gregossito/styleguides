@@ -1,7 +1,7 @@
 mixin cross-content(data)
   .cross-content
     each item in data.items
-      a.cross-content-item(href=item.href class=item.modifiers style='background-image: url(#{item.background});')
+      a.cross-content-item(href=item.href onclick=item.onclick class=item.modifiers style='background-image: url(#{item.background});')
         h2.cross-content-title= item.title
         if item.icon
           i.cross-content-icon(class="icon-#{item.icon}")

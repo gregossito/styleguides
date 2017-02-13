@@ -7,5 +7,5 @@ mixin get-involved(data)
       ul.get-involved-items
         each item in data.items
           li.get-involved-item
-            a.get-involved-card(href=item.href style="background-image: url(#{item.image.src});" class=item.modifiers)
+            a.get-involved-card(href=item.href onclick=item.onclick style="background-image: url(#{item.image.src});" class=item.modifiers)
               div.get-involved-text= item.text
