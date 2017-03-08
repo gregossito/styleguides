@@ -9,7 +9,12 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.6.5 (2017-03-08)
+
+* added input sanitation
+
 ## 1.6.4 (2017-02-13)
+
 
 * add onclick attributes on links plan de marquage
 
