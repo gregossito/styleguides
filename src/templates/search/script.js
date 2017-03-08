@@ -4,6 +4,7 @@ require('velocity-animate');
 var values = require('lodash.values');
 var algoliasearch = require('algoliasearch');
 var PubSub = require('pubsub-js');
+var DOMPurify = require('dompurify');
 
 var Paris = window.Paris || {};
 
@@ -88,7 +89,7 @@ Paris.search = (function(){
 
     function onInput() {
       currentPage = 0;
-      var query = $searchFieldInput.val();
+      var query = DOMPurify.sanitize($searchFieldInput.val());
       if (query !== "") {
         launchSearch(query);
       } else {
@@ -113,7 +114,7 @@ Paris.search = (function(){
 
     function launchSearch(query){
       if (typeof query === 'undefined') {
-        query = $searchFieldInput.val();
+        query = DOMPurify.sanitize($searchFieldInput.val());
       }
 
       var params = {
@@ -326,6 +327,7 @@ Paris.search = (function(){
     // The API for external interaction
 
     api.search = function(query){
+      query = DOMPurify.sanitize(query);
       $searchFieldInput.val(query).trigger('input');
     };
 

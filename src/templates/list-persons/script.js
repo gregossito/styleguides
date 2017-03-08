@@ -9,6 +9,7 @@ var forEach = require('lodash.foreach');
 var map = require('lodash.map');
 var algoliasearch = require('algoliasearch');
 var algoliaSearchHelper = require('algoliasearch-helper');
+var DOMPurify = require('dompurify');
 
 var Paris = window.Paris || {};
 
@@ -112,7 +113,7 @@ Paris.listPersons = (function(){
     }
 
     function launchSearch() {
-      var query = $searchFieldInput.val();
+      var query = DOMPurify.sanitize($searchFieldInput.val());
 
       isFiltered = query ? true : false;
       helper.setQuery(query);
