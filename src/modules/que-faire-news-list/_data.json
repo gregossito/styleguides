@@ -8,10 +8,13 @@
       "title": "3 actualités",
       "description": "",
       "data": {
-        "link": "Voir l'agenda",
+       "link": {
+          "href": "#",
+          "text": "Voir l'agenda"
+        },
         "logo":"../../modules/que-faire-news-list/logo-quefaire.svg",
         "text":"L'agenda culture et loisirs de la Ville de Paris qui déniche les meilleurs bons plans pour tous les Parisiens !",
-        "modifiers": ["news-cards"],
+        "modifiers": ["news-cards", "white"],
         "items": [
           {
             "href": "#",

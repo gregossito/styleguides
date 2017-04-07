@@ -15,18 +15,19 @@
     background-size: contain;
     float: left;
     height: 109px;
-    margin-left: 20px;
+    margin-left: 2rem;
     width: 155px;
     position: relative;
     top: 18px;
     z-index: 10;
   }
+
   .que-faire-header-title{
-    border-left:1px solid;
+    border-left: 1px solid;
     border-color:transparentize($white, 0.7);
     float: left;
     height: 85px;
-    margin-left: 40px;
+    margin-left: 4rem;
     top: 18px;
     position: relative;
     
@@ -36,10 +37,25 @@
       line-height: 2.4rem;
       max-width: 240px;
       padding: 0;
-      margin: 5px 0 0 20px;
+      margin: 0.5rem 0 0 2rem;
+    }
+
+    &.white {
+      .heading-links > a{
+        border-bottom-color: $white;
+        color: $white;
+        &:after {background-color: $gray33;}
+        &:hover {color: $gray33;}
+      }
+    }
+
+    .heading-links {
+        > a{
+          margin-left: 2rem;
+        }
+      }
     }
   }
-}
 
 .que-faire-news-list {
   list-style: none;
@@ -90,7 +106,7 @@
        float: none;
        height: auto;
        margin: 0;
-       padding:25px 0 15px;
+       padding: 2.5rem 0 1.5rem;
        text-align: center;
        top:inherit;
        
