@@ -175,12 +175,17 @@
 }
 
 @include large{
+  .que-faire-news-list-header{
    .que-faire-header-title{
       .header-title{
         min-width: 350px;
         max-width: 500px;
       }
+       .heading-links {
+         margin: 0;
+      }
     }
+  }
 }
 
 html.touch .que-faire-news-list-item .news-card-wrapper {
