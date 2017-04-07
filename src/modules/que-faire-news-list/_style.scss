@@ -8,6 +8,7 @@
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1rem;
   position: relative;
 
   .que-faire-header-logo{
@@ -26,7 +27,6 @@
     border-left: 1px solid;
     border-color:transparentize($white, 0.7);
     float: left;
-    height: 85px;
     margin-left: 4rem;
     top: 18px;
     position: relative;
@@ -35,7 +35,6 @@
       color: $white;
       font-size: 1.8rem;
       line-height: 2.4rem;
-      max-width: 240px;
       padding: 0;
       margin: 0.5rem 0 0 2rem;
     }
@@ -50,6 +49,7 @@
     }
 
     .heading-links {
+      margin-top: 1rem;
         > a{
           margin-left: 2rem;
         }
@@ -118,10 +118,15 @@
   }
 }
 
+@media (min-width:550px) {
+  .que-faire-news-list-header{
+    margin-bottom: 3rem;
+  }
+}
+
 @include small {
   .que-faire-news-list-header{
     display: inline-block;
-    margin: 0;
     max-width: 100%;
     width: 100%;
    
@@ -129,12 +134,28 @@
       .header-title{
         font-size: 1.6rem;
         line-height:2rem;
+        max-width: 280px;
       }
     }
   }
 }
 
+@include medium{
+  .que-faire-news-list-header{
+   .que-faire-header-title{
+      top: 10px;
+      .header-title{
+        max-width: 380px;
+      }
+      .heading-links {
+         margin: 0;
+      }
+    }
+   }
+}
+
 @include large-and-medium {
+
   .que-faire-news-list  {
     @include container;
     // mode gallery
@@ -150,12 +171,16 @@
       height: 139px;
       width: 245px;
     }
-    .que-faire-header-title{
+  }
+}
+
+@include large{
+   .que-faire-header-title{
       .header-title{
+        min-width: 350px;
         max-width: 500px;
       }
     }
-  }
 }
 
 html.touch .que-faire-news-list-item .news-card-wrapper {
