@@ -1,5 +1,7 @@
 'use strict';
 
+var PubSub = require('pubsub-js');
+
 var Paris = window.Paris || {};
 
 Paris.districts = (function() {
@@ -24,6 +26,7 @@ Paris.districts = (function() {
       $item.addClass('active');
       $districtsItem.attr('aria-selected', 'true');
       $(districtId).attr('aria-hidden', 'false').addClass('active');
+      PubSub.publish('districts:change');
     }
 
     function init() {
