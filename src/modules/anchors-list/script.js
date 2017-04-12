@@ -17,6 +17,7 @@ Paris.anchors = (function(){
     anchorsSelector: '.anchor',
     anchorsProgressSelector: '.anchors-list-progress',
     headerSelector: '.rheader',
+    noticeTopSelector: '#notice_home_top',
     contentEl: '.layout-left-col',
     anchorTopBorder: 7, // border-top of the .anchor elements, in pixels
     breakpoint: 'large',
@@ -66,6 +67,11 @@ Paris.anchors = (function(){
 
     function onResize() {
       headerHeight = $(options.headerSelector).height();
+
+      var $noticeTop = $(options.noticeTopSelector);
+      if ($noticeTop.length > 0) {
+        headerHeight += $noticeTop.height();
+      }
     }
 
     function enableAnchors(){
@@ -134,16 +140,21 @@ Paris.anchors = (function(){
     }
 
     function scrollToAnchor(anchor) {
-      if ($('#notice_home_top').length > 0) {
-        options.anchorTopBorder = options.anchorTopBorder - 10;
-      }
       var $anchor = $(anchor);
       if ($anchor.length === 0) {return;}
+
+      var anchorOffset = $(options.headerSelector).height();
+      var $noticeTop = $(options.noticeTopSelector);
+      if ($noticeTop.length > 0) {
+        anchorOffset += $noticeTop.height();
+      }
+      anchorOffset += options.anchorTopBorder;
+
       $anchor
         .velocity("stop")
         .velocity("scroll", {
           duration: options.scrollDuration,
-          offset: $(options.headerSelector).height() * -1 + options.anchorTopBorder,
+          offset: -1 * anchorOffset,
           complete: function(){
             if (Modernizr.history && window.location.hash !== anchor) {
               history.replaceState({}, $anchor.text(), anchor);

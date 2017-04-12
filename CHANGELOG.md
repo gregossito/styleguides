@@ -11,7 +11,10 @@ Let's take the `x.β.α` version number:
 
 ## 1.6.6
 
-* `anchors-list`: fix height recalculation on districts change
+* module `quick-search`: fix visible quick-access-search on small and medium
+* module `anchors-list`:
+  * fix height recalculation on districts change
+  * scroll offset with a notice top
 
 ## 1.6.5 (2017-03-08)
 

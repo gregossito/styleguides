@@ -51,6 +51,8 @@
 }
 
 .quick-access-video,
+.quick-access-search,
+.quick-access-close-search,
 .quick-access-results {
   @include hidden-on-small;
 }
@@ -75,6 +77,7 @@
     }
   }
   .home .quick-access-search {
+    display: block !important;
     margin-top: -160px;
     height: 160px;
   }
