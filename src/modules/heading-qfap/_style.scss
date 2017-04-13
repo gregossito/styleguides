@@ -1,0 +1,114 @@
+.heading-qfap {
+  // clearfix
+  & { *zoom: 1; }
+  &:before, &:after { content: ""; display: table; }
+  &:after { clear: both; }
+
+  margin-bottom: 2rem;
+
+  &-logo {
+    display: inline-block;
+    width: 25rem;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+
+    &-text {
+      height: 1px;
+      width: 1px;
+      clip: rect(1px 1px 1px 1px);
+      position: absolute;
+      overflow: hidden;
+    }
+  }
+
+  &-title {
+    color: $white;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+
+    &-link {
+      font-size: 90%;
+
+      span {
+        margin-right: 7px;
+      }
+
+      > a {
+        border-bottom: 1px solid $white;
+        color: $white;
+        display: inline-block;
+        line-height: 2rem;
+        padding-bottom: 2px;
+        position: relative;
+        text-decoration: none;
+        transition: all 0.35s ease;
+
+        &:after {
+          background-color: $gray33;
+          bottom: -1px;
+          content: "";
+          display: block;
+          height: 1px;
+          left: 0;
+          position: absolute;
+          transition: width 0.35s ease;
+          width: 0;
+        }
+
+        &:hover {
+          color: $gray33;
+          &:after { width: 100%; }
+        }
+      }
+    }
+  }
+
+}
+
+// SMALL
+@include small {
+  .heading-qfap {
+    text-align: center;
+
+    &-logo {
+      width: 17.5rem;
+    }
+
+    &-title {
+      font-size: 1.6rem;
+      line-height: 2rem;
+
+      p {
+        margin: 1em auto;
+        max-width: 75%;
+      }
+    }
+
+  }
+}
+
+// LARGE AND MEDIUM
+@include large-and-medium {
+  .heading-qfap {
+
+    &-logo {
+      float: left;
+      margin-left: 2rem;
+    }
+
+    &-title {
+      border-left: 1px solid transparentize($white, 0.7);
+      float: left;
+      margin-left: 4rem;
+      max-width: 38rem;
+
+      p {
+        margin: 0.5em 0 0.5em 2rem;
+      }
+    }
+
+  }
+}

@@ -9,8 +9,14 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
-## 1.6.6
+## 1.7.0
 
+* module `que-faire-news-list`: renamed into `heading-qfap`
+* module `news-card`:
+  * add `qfap` style
+  * add icon for external links
+* colors: rename `que-faire-red` to `qfap-red`
+* icons: add `link-external`
 * module `quick-search`: fix visible quick-access-search on small and medium
 * module `anchors-list`:
   * fix height recalculation on districts change
