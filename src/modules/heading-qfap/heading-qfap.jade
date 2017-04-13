@@ -1,7 +1,7 @@
 mixin heading-qfap(data)
   .heading-qfap
     if (data.logo)
-      a.heading-qfap-logo(href=data.logo.href)
+      a.heading-qfap-logo(href=data.logo.href target="_blank")
         include logo-qfap.svg
         .heading-qfap-logo-text= data.logo.text
     .heading-qfap-title
@@ -9,4 +9,4 @@ mixin heading-qfap(data)
       if (data.link)
         p.heading-qfap-title-link
           span.icon-link-external
-          a(href=data.link.href)= data.link.text
+          a(href=data.link.href target="_blank")= data.link.text

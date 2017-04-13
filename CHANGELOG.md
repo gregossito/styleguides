@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.7.1
+
+* modules `news-card` & `heading-qfap`: add target
+
 ## 1.7.0 (2017-04-13)
 
 * module `que-faire-news-list`: renamed into `heading-qfap`

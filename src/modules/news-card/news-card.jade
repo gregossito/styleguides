@@ -1,11 +1,11 @@
 mixin news-card(data)
-  a.news-card(href=data.href onclick=data.onclick class=data.modifiers)
+  a.news-card(href=data.href onclick=data.onclick class=data.modifiers target=data.target)
     .news-card-wrapper
       .news-card-image(style=data.image && 'background-image: url(#{data.image});')
       .news-card-content
         .news-card-category: span= data.category
         .news-card-title
-          if (data.external)
+          if (data.target === "_blank")
             span.icon-link-external
           = data.title
         if data.counters
