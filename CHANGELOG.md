@@ -11,6 +11,7 @@ Let's take the `x.β.α` version number:
 
 ## 1.7.0
 
+* module `que-faire-news-list`: renamed into `heading-qfap`
 * module `news-card`:
   * add `qfap` style
   * add icon for external links
