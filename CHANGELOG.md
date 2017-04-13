@@ -9,7 +9,7 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
-## 1.7.1
+## 1.7.1 (2017-04-13)
 
 * modules `news-card` & `heading-qfap`: add target
 
