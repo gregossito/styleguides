@@ -4,7 +4,10 @@ mixin news-card(data)
       .news-card-image(style=data.image && 'background-image: url(#{data.image});')
       .news-card-content
         .news-card-category: span= data.category
-        .news-card-title= data.title
+        .news-card-title
+          if (data.external)
+            span.icon-link-external
+          = data.title
         if data.counters
           .news-card-counters
             .news-card-counter.facebook-counter
