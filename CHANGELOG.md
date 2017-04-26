@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.7.3 (2017-04-26)
+
+* `anchors-list-title` minimize font-size 
+
 ## 1.7.2 (2017-04-26)
 
 * opacity .25 `jumbotron` home page
