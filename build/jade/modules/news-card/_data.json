@@ -79,8 +79,8 @@
         "href": "#",
         "image": "",
         "category": "Catégorie",
-        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-        "external": true,
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "target": "_blank",
         "counters": {
           "facebook": [5, "j'aime"],
           "twitter": [12, "retweets"]

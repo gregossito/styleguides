@@ -9,6 +9,11 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.7.2 (2017-04-26)
+
+* opacity .25 `jumbotron` home page
+* add 20px padding-bottom to `Services et Infos pratiques` home block 
+
 ## 1.7.1 (2017-04-13)
 
 * modules `news-card` & `heading-qfap`: add target
