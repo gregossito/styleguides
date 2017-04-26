@@ -207,6 +207,12 @@
   }
 }
 
+@include large-and-medium {
+  .home .sections-list {
+    padding-bottom:20px;
+  }
+}
+
 @include large {
   .sections-list-item {@include gallery(4);}
 }

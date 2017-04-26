@@ -2506,7 +2506,7 @@ body {
       padding: 30px; }
       .jumbotron.home .jumbotron-wrapper:after {
         background: black;
-        opacity: 0.45;
+        opacity: 0.25;
         content: "";
         display: block;
         height: 100%;
@@ -5066,6 +5066,10 @@ body.rheader-mobile-nav-open {
     html.no-touch .sections-list-item:nth-child(8) .sections-list-button:before, html.no-js .sections-list-item:nth-child(14) .sections-list-button:before,
     html.no-touch .sections-list-item:nth-child(14) .sections-list-button:before {
       background-color: #F8C243; } }
+
+@media (min-width: 768px) {
+  .home .sections-list {
+    padding-bottom: 20px; } }
 
 @media (min-width: 1160px) {
   .sections-list-item {
