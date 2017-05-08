@@ -38,22 +38,24 @@ Paris.rheader = (function(){
       PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableMobileNav);
 
       // fix or unfix
-      PubSub.subscribe('scroll.notice.down', fix);
-      PubSub.subscribe('scroll.notice.up', unfix);
-      PubSub.subscribe('header.search.close', fix);
-      PubSub.subscribe('notice.closed', function(e, data){
-        if (data && data.id === "notice_home_top") {
+      if (!$el.hasClass('static')) {
+        PubSub.subscribe('scroll.notice.down', fix);
+        PubSub.subscribe('scroll.notice.up', unfix);
+        PubSub.subscribe('header.search.close', fix);
+        PubSub.subscribe('notice.closed', function(e, data){
+          if (data && data.id === "notice_home_top") {
+            fix();
+          }
+        });
+        if(!$('.notice.top').length || $(window).scrollTop() >= $('.notice.top').height() ) {
           fix();
         }
-      });
-      if(!$('.notice.top').length || $(window).scrollTop() >= $('.notice.top').height() ) {
-        fix();
       }
 
       // extend or unextend
       PubSub.subscribe('scroll.search.down', unextend);
       PubSub.subscribe('scroll.search.up', extend);
-      if ($mainSearch.length !== 0 && isAboveMainSearch()) {
+      if ($mainSearch.length !== 0) {
         // extend initially if we are above the main search field
         extend();
       }
@@ -72,6 +74,7 @@ Paris.rheader = (function(){
     }
 
     function initOptions() {
+      $el.removeClass('extended');
       $.each($el.data(), function(key, value){
         options[key] = value;
       });
@@ -108,7 +111,7 @@ Paris.rheader = (function(){
     // extend or unextend
     function extend() {
       if ($mainSearch.length === 0 || !$('body').hasClass(options.extendOnTemplate)) {return;}
-      $el.addClass('extended');
+      //$el.addClass('extended');
       // prevent focus on hidden buttons when using keyboard navigation (for accessibility)
       $el.find('.rheader-wrapper > .rheader-button').attr('tabindex', '-1');
     }

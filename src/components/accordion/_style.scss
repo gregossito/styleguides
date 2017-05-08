@@ -23,7 +23,7 @@
     transition: .3s ease transform;
     &:before{
       color: $color-secondary;
-      font-size: 20px;
+      font-size: 2rem;
     }
   }
 
@@ -35,9 +35,9 @@
   .accordion-item-title {
     color: $color-secondary;
     display: block;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 2rem;
     outline: 0;
     padding: 20px 40px 20px 12px;
     text-decoration: none;
@@ -49,9 +49,9 @@
 
   .accordion-content-wrapper {
     color: $gray33;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 300;
-    line-height: 24px;
+    line-height: 2.4rem;
     padding-bottom: 12px;
 
     > :last-child {
@@ -71,9 +71,9 @@
     }
 
     ul, ol {
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: 300;
-      line-height: 24px;
+      line-height: 2.4rem;
       list-style-position: inside;
 
       li + li {

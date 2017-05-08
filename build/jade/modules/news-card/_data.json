@@ -67,6 +67,25 @@
           "twitter": [12, "retweets"]
         }
       }
+    }, {
+      "title": "QFAP",
+      "description": "",
+      "attrs": {
+        "class": "red-background",
+        "style": "max-width: 350px"
+      },
+      "data": {
+        "modifiers": ["qfap"],
+        "href": "#",
+        "image": "",
+        "category": "Catégorie",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "target": "_blank",
+        "counters": {
+          "facebook": [5, "j'aime"],
+          "twitter": [12, "retweets"]
+        }
+      }
     }]
   }
 }

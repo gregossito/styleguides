@@ -22,12 +22,14 @@
     "get-involved",
     "get-involved-list",
     "heading",
+    "heading-qfap",
     "hub-heading",
     "icon-switch",
     "intro-text",
     "jumbotron",
     "last-update",
     "links-group",
+    "municipal-site-list",
     "municipal-team",
     "news-card",
     "news-list",
@@ -47,6 +49,7 @@
     "skip-links",
     "table-of-contents",
     "tags",
-    "video-cover"
+    "video-cover",
+    "video-home"
   ]
 }

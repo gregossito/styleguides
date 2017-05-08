@@ -6,14 +6,14 @@
   }
 
   h1 {
-    font-size: 44px;
+    font-size: 4.4rem;
     font-weight: 700;
   }
 
   h2 {
-    font-size: 34px;
+    font-size: 3.4rem;
     font-weight: 700;
-    line-height: 42px;
+    line-height: 4.2rem;
     margin-bottom: 20px;
     padding-top: 40px;
 
@@ -27,24 +27,24 @@
   }
   @include small {
     h2 {
-      font-size: 30px;
-      line-height: 38px;
+      font-size: 3rem;
+      line-height: 3.8rem;
     }
   }
 
   h3 {
     color: $gray1A;
-    font-size: 27px;
+    font-size: 2.7rem;
     font-weight: 500;
-    line-height: 30px;
+    line-height: 3rem;
     margin-bottom: 20px;
   }
 
   h4 {
     color: $color-secondary;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
-    line-height: 28px;
+    line-height: 2.8rem;
     margin-bottom: 10px;
   }
 
@@ -55,9 +55,9 @@
   }
 
   p {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 3rem;
 
     &:last-child {
       margin-bottom: 0;
@@ -65,9 +65,9 @@
   }
 
   ul, ol {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 300;
-    line-height: 24px;
+    line-height: 2.4rem;
     list-style-position: inside;
 
     li + li {
@@ -80,7 +80,7 @@
   }
 
   ul.list-cols {
-    line-height: 25px;
+    line-height: 2.5rem;
     list-style-type: none;
     columns: 3;
 
@@ -141,7 +141,7 @@
     p {
       color: $color-primary;
       font-weight: 700;
-      font-size: 20px;
+      font-size: 2rem;
 
       &:after {
         display: block;

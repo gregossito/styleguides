@@ -26,6 +26,7 @@ $red3       : #BF2257;
 // Gray nuances
 $black  : #000;
 $gray1A : #1A1A1A;
+$gray28 : #282828;
 $gray33 : #333;
 $gray4D : #4D4D4D;
 $gray66 : #666;
@@ -35,10 +36,12 @@ $grayEE : #EEE;
 $grayF2 : #F2F2F2;
 $white  : #FFF;
 
-.black-background {background-color:  $black;}
+.black-background {background-color:  $gray28;}
+.black-background .heading-title {color: $white;}
 
-// Que Faire
-$que-faire-red: #F95053;
+// Que Faire à Paris
+$qfap-red: #F94F4F;
+.red-background { background-color: $qfap-red;}
 
 // Notice
 $notice-blue   : #A6CCDD;
@@ -60,8 +63,8 @@ $rush-hours-yellow  : #F3C872;
 $rush-hours-red     : #DB4928;
 
 // Home categories
-$home-cat-red     : #E95756; 
+$home-cat-red     : #E95756;
 $home-cat-blue1   : #3EC2DE;
 $home-cat-blue2   : #D7EDF2;
-$home-cat-green   : #42A769; 
-$home-cat-yellow  : #F8C243; 
+$home-cat-green   : #42A769;
+$home-cat-yellow  : #F8C243;

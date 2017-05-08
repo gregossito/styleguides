@@ -42,7 +42,7 @@
 
     > h2 {
       color: $color-secondary;
-      font-size: 17px;
+      font-size: 1.7rem;
       font-weight: 500;
       margin: 0;
       padding: 0 16px;
@@ -56,9 +56,9 @@
 
   .jecoute-text {
     color: $gray4D;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 300;
-    line-height: 22px;
+    line-height: 2.2rem;
     margin-bottom: 25px;
     max-width: 570px;
     position: relative;
@@ -70,8 +70,8 @@
 
     p {
       color: $gray4D;
-      font-size: 15px;
-      line-height: 22px;
+      font-size: 1.5rem;
+      line-height: 2.2rem;
 
       a:not(.button) {
         color: $color-secondary;
@@ -134,13 +134,13 @@
         .output-item {
           color: $gray33;
           display: block;
-          font-size: 16px;
-          line-height: 25px;
+          font-size: 1.6rem;
+          line-height: 2.5rem;
 
           &:before {
             @include icon(text);
             float: left;
-            font-size: 1.3em;
+            font-size: 2.1rem;
             line-height: inherit;
             padding-right: 15px;
             pointer-events: none;
@@ -148,7 +148,7 @@
 
           i {
             color: $gray66;
-            font-size: 14px;
+            font-size: 1.4rem;
             margin-left: 10px;
           }
 

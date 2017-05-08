@@ -2,6 +2,7 @@ var gulp   = require('gulp');
 var config = require('../config');
 var path   = require('path');
 var rename = require('gulp-rename');
+var replace = require('gulp-replace');
 
 
 gulp.task('build:jade:copy', function () {
@@ -23,6 +24,10 @@ gulp.task('build:jade:copy', function () {
       '!src/layouts/_layout*.jade',
       'src/layouts/**/*.json'
     ], { base: './src/' })
+
+    // Fix path to included svg
+    .pipe(replace('include logo-qfap.svg', 'include ../../../assets/images/modules/heading-qfap/logo-qfap.svg'))
+
     .pipe(gulp.dest(path.join(config.build.output, 'jade')));
 });
 

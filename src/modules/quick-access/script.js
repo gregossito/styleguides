@@ -3,6 +3,7 @@ require('velocity-animate');
 
 var PubSub = require('pubsub-js');
 var algoliasearch = require('algoliasearch');
+var DOMPurify = require('dompurify');
 
 var Paris = window.Paris || {};
 
@@ -132,7 +133,7 @@ Paris.quickAccess = (function(){
       if (!isSearching()) {
         startSearch();
       }
-      var val = $searchFieldInput.val();
+      var val = DOMPurify.sanitize($searchFieldInput.val());
       if (val !== "") {
         index.search(val, {
           // filters: "(NOT onglet:Professionnels)",

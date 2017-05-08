@@ -7,6 +7,6 @@ mixin gallery-ugc(data)
       ul.gallery-ugc-content(style=(hashtag.current ? '' : 'display: none;') id="gallery-ugc-#{hashtag.id}")
         each item in hashtag.items
           li.gallery-ugc-item
-            a.gallery-ugc-image(href=item.href target="_blank" style="background-image: url(#{item.image});" title=item.title)
+            a.gallery-ugc-image(href=item.href onclick=item.onclick target="_blank" style="background-image: url(#{item.image});" title=item.title)
               .overlay
                 .gallery-ugc-text=item.text

@@ -1,7 +1,7 @@
 .notice {
   background-color: $black;
   color: white;
-  font-size: 13px;
+  font-size: 1.3rem;
   font-weight: 500;
   // min-height: 60px;
   overflow: hidden;
@@ -15,7 +15,7 @@
 
   [class^="icon-"],
   [class*=" icon-"] {
-    font-size: 1.8em;
+    font-size: 2.4rem;
     padding: 0 15px 0 0;
     vertical-align: sub;
   }
@@ -25,7 +25,7 @@
       @include icon(close-rounded);
       border: 2px solid;
       border-radius: 50%;
-      font-size: 1.8em;
+      font-size: 2.4rem;
       height: 30px;
       padding: 0 1px 2px 2px;
       width: 30px;
@@ -48,7 +48,7 @@
   &.alert {
     .notice-content:before {
       @include icon(alert);
-      font-size: 1.8em;
+      font-size: 2.4rem;
       padding: 0 15px 2px 0;
       vertical-align: middle;
     }
@@ -109,7 +109,7 @@
 }
 
 .notice-content {
-  line-height: 20px;
+  line-height: 2rem;
   margin: 0 20px;
   padding: 20px 0;
 

@@ -53,16 +53,16 @@
   > span {
     color: $gray33;
     display: block;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 2rem;
     padding: 20px;
     text-align: left;
     text-decoration: none;
     transition: color 0.35s ease;
     vertical-align: middle;
   }
-  &:hover > span {color: $que-faire-red;}
+  &:hover > span {color: $qfap-red;}
 
   // modifiers
   &.more,

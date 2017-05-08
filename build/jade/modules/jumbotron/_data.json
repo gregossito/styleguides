@@ -32,6 +32,20 @@
         "title": "Titre",
         "text": "Texte"
       }
+    }, {
+      "title": "jumbotron home",
+      "description": "",
+      "data": {
+        "href": "#",
+        "image": "image-home.jpg",
+        "modifiers": ["home"],
+        "title": "À la une",
+        "text": "10 raisons de surtout pas piétonniser les Berges Rive droite",
+        "button": {
+          "text": "En savoir plus",
+          "title": "En savoir plus sur cette actualité"
+        }
+      }
     }]
   }
 }

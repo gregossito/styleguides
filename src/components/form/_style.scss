@@ -9,7 +9,7 @@
   .form-item-label {
     color: $color-secondary;
     display: block;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: normal;
     margin-bottom: 5px;
     max-width: 320px;
@@ -18,7 +18,7 @@
 
   .form-item-help {
     color: $gray4D;
-    font-size: 13px;
+    font-size: 1.3rem;
     margin-top: 5px;
     max-width: 385px;
 
@@ -46,7 +46,7 @@
     }
   }
   .form-item-matrix .matrix-item .matrix-item-text {
-    &:after {line-height: 23px;}
+    &:after {line-height: 2.3rem;}
   }
 
   .form-item.error .form-item-label,
@@ -79,7 +79,7 @@
     background-color: $grayF2;
     border: 2px solid $grayF2;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 1.4rem;
     transition: border 0.2s ease-in;
 
     &:focus {
@@ -156,8 +156,8 @@
     }
 
     table {
-      font-size: 14px;
-      line-height: 24px;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
       width: 100%;
     }
     th {

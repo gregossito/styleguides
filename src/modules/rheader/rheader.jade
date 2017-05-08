@@ -37,7 +37,7 @@ mixin rheader(data)
           each item in data.items
             - var tag = item.current ? "strong" : "span"
             li.rheader-nav-item(class=item.modifiers class=(item.current ? "current" : null))
-              a(href=item.href target=item.target aria-label=(item.hover ? item.text + " " + item.hover : null))
+              a(href=item.href target=item.target onclick=item.onclick aria-label=(item.hover ? item.text + " " + item.hover : null))
                 if item.icon
                   i.rheader-nav-item-icon(class="icon-#{item.icon}" aria-hidden="true")
                 if item.hover

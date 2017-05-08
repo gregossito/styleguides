@@ -29,7 +29,7 @@
 
     .sections-list-button-text {
       display: table-cell;
-      font-size: 13px;
+      font-size: 1.3rem;
       font-weight: 500;
       vertical-align: middle;
     }
@@ -69,9 +69,9 @@
 .sections-list-button-title {
   color: $gray33;
   display: block;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 700;
-  line-height: 17px;
+  line-height: 1.7rem;
   vertical-align: middle;
   width: 100%;
   margin-bottom: 5px;
@@ -79,9 +79,9 @@
 
 .sections-list-button-text {
   color: $gray4D;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 300;
-  line-height: 18px;
+  line-height: 1.8rem;
   min-height: 60px;
 }
 
@@ -207,6 +207,12 @@
   }
 }
 
+@include large-and-medium {
+  .home .sections-list {
+    padding-bottom:20px;
+  }
+}
+
 @include large {
   .sections-list-item {@include gallery(4);}
 }
@@ -237,7 +243,7 @@
 
       &:after {
         @include icon(arrow-right);
-        font-size: 20px;
+        font-size: 2rem;
         position: absolute;
         right: 30px;
         top: 50%;
@@ -246,9 +252,9 @@
       }
 
       .sections-list-button-text {
-        font-size: 16px;
+        font-size: 1.6rem;
         font-weight: 700;
-        line-height: 22px;
+        line-height: 2.2rem;
         max-width: 200px;
       }
     }

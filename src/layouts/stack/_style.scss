@@ -15,6 +15,11 @@
       padding: 40px 0;
     }
 
+    &.gray-video-background {
+      background-color: $grayCC;
+      padding: 40px 0;
+    }
+
     &.layout-separate-after {
       padding-bottom: 40px;
       border-bottom: 1px solid $grayCC;

@@ -27,21 +27,33 @@ $offset-heading: 32px;
 
 .heading-title {
   color: $gray33;
-  font-size: 26px;
+  font-size: 2.6rem;
   font-weight: 700;
   float: left;
-  line-height: 32px;
+  line-height: 3.2rem;
   margin: 0;
 }
 
+.black-background {
+  .heading-links {
+    span {
+      color:#fff;
+    }
+  }
+}
+
 .heading-links {
-  font-size: 15px;
+  font-size: 1.5rem;
+
+  span {
+    margin-right:3px;
+  }
 
   > a {
     border-bottom: 1px solid $gray4D;
     color: $gray4D;
     display: inline-block;
-    line-height: 20px;
+    line-height: 2rem;
     padding-bottom: 2px;
     position: relative;
     text-decoration: none;
@@ -86,12 +98,12 @@ $offset-heading: 32px;
   }
 
   .heading-title {
-    font-size: 34px;
-    line-height: 40px;
+    font-size: 3.4rem;
+    line-height: 4rem;
     margin: 0 20px 0 0;
   }
 
   .heading-links {
-    line-height: 40px;
+    line-height: 4rem;
   }
 }

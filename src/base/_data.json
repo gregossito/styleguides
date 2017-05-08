@@ -29,6 +29,7 @@
         "items": [
           {"var": "$black", "hex": "#000", "rgb": "0, 0, 0"},
           {"var": "$gray1A", "hex": "#1A1A1A", "rgb": "026, 026, 026"},
+          {"var": "$gray28", "hex": "#282828", "rgb": "40, 40, 40"},
           {"var": "$gray33", "hex": "#333", "rgb": "051, 051, 051"},
           {"var": "$gray4D", "hex": "#4D4D4D", "rgb": "077, 077, 077"},
           {"var": "$gray66", "hex": "#666", "rgb": "102, 102, 102"},
@@ -42,7 +43,7 @@
       {
         "title": "Que Faire",
         "items": [
-          {"var": "$que-faire-red", "hex": "#F95053", "rgb": "249, 080, 083"}
+          {"var": "$qfap-red", "hex": "#F94F4F", "rgb": "249, 079, 079"}
         ]
       },
       {
@@ -110,6 +111,7 @@
       "jobs",
       "library",
       "link",
+      "link-external",
       "mail",
       "marker",
       "market",

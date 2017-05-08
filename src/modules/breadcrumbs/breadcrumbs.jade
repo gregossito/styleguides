@@ -5,6 +5,6 @@ mixin breadcrumbs(data)
       li.breadcrumbs-item
         if item.href
           - var last = (index + 1 === data.items.length)
-          a(href=item.href tabindex=(last ? -1 : null))= item.text
+          a(href=item.href onclick=item.onclick tabindex=(last ? -1 : null))= item.text
         else
           = item.text

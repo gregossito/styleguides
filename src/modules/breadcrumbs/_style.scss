@@ -1,6 +1,6 @@
 .breadcrumbs {
   font-size: 0;
-  line-height: 30px;
+  line-height: 3rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -12,13 +12,13 @@
 
 .breadcrumbs-item {
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 300;
   margin-right: 10px;
 
   & + .breadcrumbs-item:before {
     @include icon(arrow-light-right);
-    font-size: 17px;
+    font-size: 1.7rem;
     margin-right: 10px;
     position: relative;
     speak: none;
@@ -29,7 +29,7 @@
     border-bottom: 1px solid $gray1A;
     color: $gray1A;
     display: inline-block;
-    line-height: 20px;
+    line-height: 2rem;
     padding: 2px 0;
     position: relative;
     text-decoration: none;

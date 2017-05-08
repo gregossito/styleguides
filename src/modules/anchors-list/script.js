@@ -17,6 +17,7 @@ Paris.anchors = (function(){
     anchorsSelector: '.anchor',
     anchorsProgressSelector: '.anchors-list-progress',
     headerSelector: '.rheader',
+    noticeTopSelector: '#notice_home_top',
     contentEl: '.layout-left-col',
     anchorTopBorder: 7, // border-top of the .anchor elements, in pixels
     breakpoint: 'large',
@@ -66,13 +67,18 @@ Paris.anchors = (function(){
 
     function onResize() {
       headerHeight = $(options.headerSelector).height();
+
+      var $noticeTop = $(options.noticeTopSelector);
+      if ($noticeTop.length > 0) {
+        headerHeight += $noticeTop.height();
+      }
     }
 
     function enableAnchors(){
       renderAnchors();
       PubSub.subscribe('scroll.document', onScroll);
       PubSub.subscribe('accordion:change', throttle(onContentHeightChange, 500));
-      PubSub.subscribe('districts:change', testChange);
+      PubSub.subscribe('districts:change', throttle(onContentHeightChange, 500));
     }
 
     function disableAnchors(){
@@ -136,11 +142,19 @@ Paris.anchors = (function(){
     function scrollToAnchor(anchor) {
       var $anchor = $(anchor);
       if ($anchor.length === 0) {return;}
+
+      var anchorOffset = $(options.headerSelector).height();
+      var $noticeTop = $(options.noticeTopSelector);
+      if ($noticeTop.length > 0) {
+        anchorOffset += $noticeTop.height();
+      }
+      anchorOffset += options.anchorTopBorder;
+
       $anchor
         .velocity("stop")
         .velocity("scroll", {
           duration: options.scrollDuration,
-          offset: $(options.headerSelector).height() * -1 + options.anchorTopBorder,
+          offset: -1 * anchorOffset,
           complete: function(){
             if (Modernizr.history && window.location.hash !== anchor) {
               history.replaceState({}, $anchor.text(), anchor);
@@ -180,10 +194,6 @@ Paris.anchors = (function(){
     function onContentHeightChange(){
       parseItems();
       fillBars();
-    }
-
-    function testChange() {
-      console.log('change');
     }
 
 

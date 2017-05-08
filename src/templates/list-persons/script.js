@@ -9,6 +9,7 @@ var forEach = require('lodash.foreach');
 var map = require('lodash.map');
 var algoliasearch = require('algoliasearch');
 var algoliaSearchHelper = require('algoliasearch-helper');
+var DOMPurify = require('dompurify');
 
 var Paris = window.Paris || {};
 
@@ -112,7 +113,7 @@ Paris.listPersons = (function(){
     }
 
     function launchSearch() {
-      var query = $searchFieldInput.val();
+      var query = DOMPurify.sanitize($searchFieldInput.val());
 
       isFiltered = query ? true : false;
       helper.setQuery(query);
@@ -208,7 +209,7 @@ Paris.listPersons = (function(){
     }
 
     function onClickPagination(e) {
-      e.preventDefault();
+      //e.preventDefault();
       var page = $(this).data('page');
       if (page === "prev") {
         currentPage -= 1;
@@ -217,8 +218,8 @@ Paris.listPersons = (function(){
       } else {
         currentPage = parseInt(page, 10) - 1;
       }
-      launchSearch();
-      scrollToResultsTop();
+      //launchSearch();
+      //scrollToResultsTop();
     }
 
     function renderFacets(data) {

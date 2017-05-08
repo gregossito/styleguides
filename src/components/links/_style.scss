@@ -3,9 +3,9 @@
 
   .links-title {
     color: $gray33;
-    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: 700;
-    line-height: 28px;
+    line-height: 2.8rem;
     margin-top: 0;
   }
 
@@ -30,8 +30,8 @@
     > a {
       color: $gray33;
       display: block;
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 1.6rem;
+      line-height: 2rem;
       padding: 16px 0 16px 45px;
       text-decoration: none;
       &:hover {
@@ -43,7 +43,7 @@
     &:before {
       @include icon(link);
       float: left;
-      font-size: 1.5em;
+      font-size: 2.4rem;
       padding: 13px 20px 0 0;
       pointer-events: none;
     }
@@ -72,7 +72,7 @@
   .links-item-attributes {
     color: $gray66;
     display: inline-block;
-    font-size: 14px;
+    font-size: 1.4rem;
     margin-left: 10px;
     text-decoration: none;
     &:before {content: "(";}

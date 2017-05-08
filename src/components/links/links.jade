@@ -6,7 +6,7 @@ mixin links(data)
     ul.links-items
       each item in data.items
         li.links-item(class=item.modifiers)
-          a(href=item.href target=item.target)
+          a(href=item.href target=item.target onclick=item.onclick)
             = item.text
             if (item.target && item.target === '_blank') || item.filetype || item.filesize
               span.links-item-attributes

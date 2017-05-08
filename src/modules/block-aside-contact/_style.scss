@@ -7,8 +7,8 @@
 
   .block-aside-items {
     color: $gray4D;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
     overflow: hidden;
   }
 
@@ -34,13 +34,13 @@
     &.has-icon {
       .icon {
         color: $color-secondary;
-        font-size: 20px;
+        font-size: 2rem;
         margin-right: 8px;
         vertical-align: top;
       }
 
       a {
-        font-size: 16px;
+        font-size: 1.6rem;
         font-weight: 500;
 
         &:hover {

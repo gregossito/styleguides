@@ -83,9 +83,9 @@
 }
 
 .news-item-meta {
-  font-size: 13px;
+  font-size: 1.3rem;
   font-weight: 300;
-  line-height: 16px;
+  line-height: 1.6rem;
   margin-bottom: 5px;
   text-transform: uppercase;
   transition: transform 0.35s ease;
@@ -108,9 +108,9 @@
 
 .news-item-title {
   color: $gray33;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 2.2rem;
   min-width: 200px;
   transition: transform 0.35s ease;
   transform: translateX(0);
@@ -173,8 +173,8 @@
   }
 
   .news-item-title {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 2rem;
+    line-height: 2.4rem;
   }
 
 }

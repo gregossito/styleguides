@@ -1,0 +1,23 @@
+{
+  "index": {
+    "type": "heading-qfap",
+    "description": "",
+    "cssTheme": "",
+    "bodyAttributes": {},
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "link": {
+          "href": "#",
+          "text": "Voir l'agenda"
+        },
+        "logo": {
+          "href": "#",
+          "text": "Que Faire à Paris ?"
+        },
+        "text": "L'agenda culture et loisirs de la Ville de Paris qui déniche les meilleurs bons plans pour tous les Parisiens !"
+      }
+    }]
+  }
+}

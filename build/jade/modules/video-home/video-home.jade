@@ -1,0 +1,19 @@
+mixin video-home(data)
+  .video-home-modal
+    .video-home-modal-content
+      .video-home-modal-header
+        span.video-home-close
+      .video-home-modal-body
+  .video-home-placeholder!= data.placeholder
+  ul.video-home(class=data.modifiers)
+    each item in data.items
+      li.video-home-list-item(class=item.modifiers)
+        a.video-home-item(href=item.href)
+          .video-home-wrapper
+            .video-home-embed
+              != item.embed_html
+            .video-home-image(style=item.image && 'background-image: url(#{item.image});')
+              span
+            .video-home-content
+              .video-home-title= item.text
+              .video-home-duration= item.duration

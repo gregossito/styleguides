@@ -9,7 +9,7 @@ mixin button(data)
     if attributes.disabled
       - delete attributes.disabled
       - modifiers.push("disabled")
-    a.button(href=data.href title=data.title target=data.target class=modifiers)&attributes(attributes)
+    a.button(href=data.href onclick=data.onclick title=data.title target=data.target class=modifiers)&attributes(attributes)
       if modifiers && modifiers.indexOf("marker") !== -1
         i.icon.icon-marker(aria-hidden="true")
       else if data.icon

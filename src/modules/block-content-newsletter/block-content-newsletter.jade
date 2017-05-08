@@ -17,4 +17,4 @@ mixin block-content-newsletter(data)
       +button(button)
     if data.link
       .block-content-link
-        a(href=data.link.href target=data.link.target)!= data.link.text
+        a(href=data.link.href onclick=data.link.onclick target=data.link.target)!= data.link.text

@@ -244,7 +244,13 @@ textarea {
   background-color: #F8E273; }
 
 .black-background {
-  background-color: #000; }
+  background-color: #282828; }
+
+.black-background .heading-title {
+  color: #FFF; }
+
+.red-background {
+  background-color: #F94F4F; }
 
 .notice-browser {
   background-color: #F77F68;
@@ -281,7 +287,7 @@ img, video {
   display: none; }
 
 .rheader .title {
-  font-size: 40px; }
+  font-size: 4rem; }
 
 .rheader nav a,
 .menu a {

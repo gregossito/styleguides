@@ -76,6 +76,11 @@
       white-space: normal;
     }
   }
+  .home .quick-access-search {
+    display: block !important;
+    margin-top: -160px;
+    height: 160px;
+  }
 }
 
 @include medium {
@@ -172,9 +177,9 @@
 
   .quick-access-results {
     > ul {
-      font-size: 17px;
+      font-size: 1.7rem;
       font-weight: 300;
-      line-height: 20px;
+      line-height: 2rem;
       list-style: none;
       margin: 10px 0 35px;
       padding: 0;
@@ -206,8 +211,8 @@
           }
 
           > .section {
-            font-size: 15px;
-            line-height: 20px;
+            font-size: 1.5rem;
+            line-height: 2rem;
             position: absolute;
             right: 15px;
             text-align: right;
@@ -232,7 +237,7 @@
   .quick-access-close-search {
     &:before {
       @include icon(close);
-      font-size: 1.07em;
+      font-size: 5.2rem;
       height: 50px;
       left: -8px;
       position: relative;
@@ -244,7 +249,7 @@
     border-radius: 50%;
     color: $gray66;
     cursor: pointer;
-    font-size: 49px;
+    font-size: 4.9rem;
     height: 50px;
     opacity: 0;
     position: absolute;
@@ -263,7 +268,7 @@
 
     .icon-close {
       display: block;
-      line-height: 45px;
+      line-height: 4.5rem;
     }
   }
 }

@@ -24,7 +24,7 @@
 
   .block-content-count,
   .block-content-icon {
-    font-size: 24px;
+    font-size: 2.4rem;
     margin-right: 10px;
   }
 
@@ -39,7 +39,7 @@
   .block-content-link {
     border-bottom: 1px solid $white;
     display: inline-block;
-    font-size: 13px;
+    font-size: 1.3rem;
     font-weight: 300;
   }
 }
@@ -47,7 +47,7 @@
 @include small {
   .block-content-social {
     .block-content-count{
-      font-size: 20px;
+      font-size: 2rem;
     }
   }
 }

@@ -19,6 +19,114 @@ Let's take the `x.β.α` version number:
 * template `list-equipments` added
 * `config.js`: added `equipments` Algolia index
 
+## 1.7.2 (2017-04-26)
+
+* opacity .25 `jumbotron` home page
+* add 20px padding-bottom to `Services et Infos pratiques` home block
+
+## 1.7.1 (2017-04-13)
+
+* modules `news-card` & `heading-qfap`: add target
+
+## 1.7.0 (2017-04-13)
+
+* module `que-faire-news-list`: renamed into `heading-qfap`
+* module `news-card`:
+  * add `qfap` style
+  * add icon for external links
+* colors: rename `que-faire-red` to `qfap-red`
+* icons: add `link-external`
+* module `quick-search`: fix visible quick-access-search on small and medium
+* module `anchors-list`:
+  * fix height recalculation on districts change
+  * scroll offset with a notice top
+
+## 1.6.5 (2017-03-08)
+
+* added input sanitation
+
+## 1.6.4 (2017-02-13)
+
+* add onclick attributes on links plan de marquage
+
+## 1.6.3 (2017-01-30)
+
+* `list-persons`: remove pagination click js
+
+## 1.6.2 (2017-01-13)
+
+* `anchors-list`: fix offset in script.js when green banner is display
+
+## 1.6.1 (2016-11-04)
+
+* `rheader`: fix typo in script.js hasClass instead of addClass
+
+## 1.6.0 (2016-11-03)
+
+* `rheader`: added modifier `static`
+* added template `full-page`
+
+## 1.5.12 (2016-10-12)
+
+* fix `que-faire-news-list` background-color item wrapper
+
+## 1.5.11 (2016-10-12)
+
+* optim `video-home` styles
+
+## 1.5.10 (2016-10-12)
+
+* optim `video-home` styles
+
+## 1.5.9 (2016-10-12)
+
+* fix `video-home` margin-bottom to 0
+
+## 1.5.8 (2016-10-12)
+
+* fix `que-faire-news-list` red background
+
+## 1.5.7 (2016-10-11)
+
+* add `video-home` link Plus de vidéos
+* add `que-faire-news-list` block
+
+## 1.5.6 (2016-10-04)
+
+* remove `video-home` item small on mobility
+
+## 1.5.5 (2016-10-04)
+
+* add dailymotion link on `video-home` heading title
+
+## 1.5.4 (2016-10-04)
+
+* fix `video-home` styles
+
+## 1.5.3 (2016-10-03)
+
+* fix `video-home` style background image
+
+## 1.5.2 (2016-10-03)
+
+* fix `video-home` cookie cnil placeholder
+* fix `video-home` player button and items styles
+
+## 1.5.1 (2016-09-30)
+
+* fix `quick-access` on mobility
+* add script and modal to module `video-home` and fix mobile compatibility
+
+## 1.5.0 (2016-09-23)
+
+* added module `video-home`
+* disable extended rheader to display search button at all time
+* module `jumbotron`: add `home` modifier for different display
+
+## 1.4.4 (2016-08-24)
+
+* accessibility: use `rem` instead of `px` for font units
+
 ## 1.4.3 (2016-07-20)
 
 * module `sections-list`: improved rendering

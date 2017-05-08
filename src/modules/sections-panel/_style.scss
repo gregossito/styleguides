@@ -20,8 +20,8 @@ $sections-panel-subnav-offset: 200px;
 
 .sections-panel-intro {
   color: $gray4D;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 1.4rem;
+  line-height: 2rem;
   margin: 0px 0px 30px;
 
   .sections-panel-content & {
@@ -36,9 +36,9 @@ $sections-panel-subnav-offset: 200px;
 
 .sections-panel-nav-items {
   color: $gray1A;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 300;
-  line-height: 20px;
+  line-height: 2rem;
   margin: 0 0 25px;
   opacity: 1;
   padding: 0;
@@ -74,7 +74,7 @@ $sections-panel-subnav-offset: 200px;
     &:after {
       @include icon(arrow-right);
       display: block;
-      line-height: 20px;
+      line-height: 2rem;
       position: absolute;
       right: 0;
       top: 10px;
@@ -99,7 +99,7 @@ $sections-panel-subnav-offset: 200px;
 .sections-panel-subnav-default {
 
   h2 {
-    font-size: 22px;
+    font-size: 2.2rem;
   }
 
   > * + * {
@@ -117,8 +117,8 @@ $sections-panel-subnav-offset: 200px;
   }
 
   .block-aside-item {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
   }
 
 }
@@ -163,17 +163,17 @@ $sections-panel-subnav-offset: 200px;
 
 .sections-panel-subnav-item-title,
 .sections-panel-content-item-title {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 2.4rem;
   text-decoration: underline;
 }
 
 .sections-panel-subnav-item-text,
 .sections-panel-content-item-text {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 300;
-  line-height: 18px;
+  line-height: 1.8rem;
   margin: 5px 0;
 }
 
@@ -218,7 +218,7 @@ $sections-panel-subnav-offset: 200px;
 }
 
 .sections-panel-content-item-title {
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 
@@ -244,7 +244,7 @@ $sections-panel-subnav-offset: 200px;
   .sections-panel-back {
     box-shadow: inset -3px 0px 3px -2px transparentize($black, 0.9);
     color: $color-secondary;
-    font-size: 20px;
+    font-size: 2rem;
     height: 100%;
     position: absolute;
     left: 0;

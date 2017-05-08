@@ -17,6 +17,76 @@
       padding-left: 35px;
     }
   }
+
+  &:not(.no-overlay) {
+    .jumbotron-wrapper:after {
+      background: $color-primary; /* Old browsers */
+      background: -moz-linear-gradient(left, $color-primary 0%, transparent 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, right top, color-stop(0%,$color-primary), color-stop(100%,transparent)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(left, $color-primary 0%,transparent 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(left, $color-primary 0%,transparent 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(left, $color-primary 0%,transparent 100%); /* IE10+ */
+      background: linear-gradient(to right, $color-primary 0%,transparent 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-primary', endColorstr='transparent',GradientType=1 ); /* IE6-8 */
+
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: translateX(0);
+      width: 150%;
+      z-index: 0;
+
+      // Target IE 10 and 11
+      @media screen\0 {
+        height: 200%;
+      }
+    }
+  }
+
+  &.home {
+    height: auto;
+
+    .layout-wrapper.jumbotron-content {
+      border: none;
+      padding: 0;
+      text-align: center;
+
+      & > * {
+        margin: 0 auto;
+      }
+    }
+
+    .jumbotron-wrapper {
+      padding: 30px;
+
+      &:after {
+        background: black;
+        opacity: 0.25;
+
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+
+        // Target IE 10 and 11
+        @media screen\0 {
+          height: 200%;
+        }
+      }
+    }
+
+    .jumbotron-text {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
 }
 
 .jumbotron-wrapper {
@@ -24,44 +94,18 @@
   overflow: hidden;
   position: relative;
   vertical-align: middle;
-
-  &:not(.no-overlay):after {
-    background: $color-primary; /* Old browsers */
-    background: -moz-linear-gradient(left, $color-primary 0%, transparent 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,$color-primary), color-stop(100%,transparent)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, $color-primary 0%,transparent 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, $color-primary 0%,transparent 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, $color-primary 0%,transparent 100%); /* IE10+ */
-    background: linear-gradient(to right, $color-primary 0%,transparent 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-primary', endColorstr='transparent',GradientType=1 ); /* IE6-8 */
-
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transform: translateX(0);
-    width: 150%;
-    z-index: 0;
-
-    // Target IE 10 and 11
-    @media screen\0 {
-      height: 200%;
-    }
-  }
 }
 
 html.no-js,
 html.no-touch {
-  .jumbotron {
-    .jumbotron-wrapper:not(.no-overlay):after {
+  .jumbotron:not(.no-overlay):not(.home) {
+    .jumbotron-wrapper:after {
       transition: transform 1s ease;
       transform: translateX(-20%);
     }
 
     &:hover {
-      .jumbotron-wrapper:not(.no-overlay):after {
+      .jumbotron-wrapper:after {
         transform: translateX(0);
       }
     }
@@ -74,16 +118,16 @@ html.no-touch {
 }
 
 .jumbotron-title {
-  font-size: 15px !important;
+  font-size: 1.5rem !important;
   font-weight: 700;
   margin-bottom: 5px;
   max-width: 470px;
 }
 
 .jumbotron-text {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 2.8rem;
   margin: 0 0 8px;
   max-width: 470px;
 }
@@ -95,16 +139,25 @@ html.no-touch {
 @include large-and-medium {
   .jumbotron {
     height: 320px;
+
+    &.home {
+      height: 350px;
+
+      .jumbotron-text {
+        max-width: 740px;
+        padding: 15px 0;
+      }
+    }
   }
 
   .jumbotron-title {
-    font-size: 18px !important;
+    font-size: 1.8rem !important;
     margin-bottom: 12px;
   }
 
   .jumbotron-text {
-    font-size: 40px;
-    line-height: 44px;
+    font-size: 4rem;
+    line-height: 4.4rem;
     margin: 0 0 14px;
   }
 

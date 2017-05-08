@@ -36,10 +36,10 @@
 
     .search-field-input[type="text"],
     .search-field-submit {
-      font-size: 14px;
+      font-size: 1.4rem;
       font-weight: 500;
       height: 40px;
-      line-height: 40px;
+      line-height: 4rem;
     }
 
     .search-field-input[type="text"] {
@@ -61,7 +61,7 @@
   display: block;
   float: left;
   height: 60px;
-  line-height: 60px;
+  line-height: 6rem;
 }
 
 .search-field-submit {
@@ -71,7 +71,7 @@
 .search-field-input[type="text"] {
   @include input-color-placeholder($gray4D);
   border-radius: 5px 0 0 5px;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 300;
   margin: 0;
   padding: 0 10px;
@@ -82,7 +82,7 @@
   color: $gray4D;
   border: 0;
   border-radius: 0 5px 5px 0;
-  font-size: 24px;
+  font-size: 2.4rem;
   padding: 0;
   width: 58px;
   > span {@include hidden-accessibly;}
@@ -142,7 +142,7 @@
 
 @include small {
   .search-field-input[type="text"] {
-    font-size: 12px;
+    font-size: 1.2rem;
     width: calc(100% - 58px);
   }
   .block-search-field .search-field-submit {
@@ -168,7 +168,7 @@
   .search-field-input[type="text"],
   .search-field-submit {
     height: 80px;
-    line-height: 80px;
+    line-height: 8rem;
   }
 
   .search-field-input[type="text"] {

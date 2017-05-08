@@ -11,7 +11,7 @@
   &:after {
     @include icon(search);
     bottom: -38px;
-    font-size: 13em;
+    font-size: 20.8rem;
     opacity: 0.16;
     position: absolute;
     right: 6%;
@@ -20,7 +20,7 @@
 
 .search-push-title {
   color: $gray33;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 700;
   margin: 0 0 12px;
 }

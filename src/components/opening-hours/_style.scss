@@ -4,16 +4,16 @@
   h2 {
     border-top: 7px solid $grayF2;
     color: $gray1A;
-    font-size: 34px;
+    font-size: 3.4rem;
     font-weight: 700;
-    line-height: 42px;
+    line-height: 4.2rem;
     margin-bottom: 20px;
     padding-top: 40px;
   }
   @include small {
     h2 {
-      font-size: 30px;
-      line-height: 38px;
+      font-size: 3rem;
+      line-height: 3.8rem;
     }
   }
 
@@ -24,7 +24,7 @@
   caption {
     caption-side: top;
     color: $gray33;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 300;
     padding-bottom: 15px;
     text-align: left;
@@ -47,7 +47,7 @@
   tr > th {
     border-right: 25px solid $white;
     color: $gray4D;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 700;
     min-width: 115px;
     text-align: left;
@@ -55,7 +55,7 @@
 
   tr > td {
     color: $gray33;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 300;
     text-align: left;
 

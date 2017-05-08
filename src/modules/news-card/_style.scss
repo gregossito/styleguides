@@ -57,6 +57,9 @@
   html.touch .gray-background & {
     background-color: $white;
   }
+  html.touch .red-background & {
+    background-color: transparentize($white, 0.8);
+  }
 }
 
 .news-card-image {
@@ -89,7 +92,7 @@
 
 .news-card-category {
   color: $color-secondary;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 500;
   margin: 0 auto 5px;
   padding-top: 15px;
@@ -114,11 +117,17 @@
 }
 
 .news-card-title {
-  font-size: 17px;
+  font-size: 1.7rem;
   font-weight: 700;
   margin: 0 auto;
   max-width: 310px;
   position: relative;
+
+  span.icon-link-external {
+    margin-right: 7px;
+    position: relative;
+    top: 1px;
+  }
 }
 
 .news-card-counters {display: none;}
@@ -143,8 +152,8 @@ html.no-touch {
     color: $white;
     padding: 5px 10px;
     height: 40px;
-    line-height: 30px;
-    font-size: 18px;
+    line-height: 3rem;
+    font-size: 1.8rem;
     transition: opacity ease .3s;
 
     & + .news-card-counter {
@@ -252,7 +261,7 @@ html.no-touch {
       .news-card-category {
         color: $white;
         display: block;
-        font-size: 17px;
+        font-size: 1.7rem;
         font-weight: 300;
         margin: 0 0 5px;
         text-align: left;
@@ -269,8 +278,8 @@ html.no-touch {
 
       .news-card-title {
         color: $white;
-        font-size: 22px;
-        line-height: 26px;
+        font-size: 2.2rem;
+        line-height: 2.6rem;
         min-height: 45px;
       }
 
@@ -294,4 +303,56 @@ html.no-touch {
     }
   }
 
+}
+
+// QFAP colors
+.news-card.qfap {
+  color: $white;
+
+  html.no-js &,
+  html.no-touch & {
+    &:hover,
+    &:focus {
+      color: $qfap-red;
+
+      .news-card-content {
+        &:before {
+          background-color: $white;
+        }
+      }
+
+      .news-card-category {
+        color: $qfap-red;
+
+        &:before, &:after {
+          border-color: transparentize($qfap-red, 0.7);
+        }
+      }
+
+      .news-card-counter {
+        background: $color-secondary;
+
+        & + .news-card-counter {
+          border-left: 1px solid $color-secondary-variant;
+        }
+      }
+    }
+  }
+
+  .news-card-content {
+    &:before {
+      background-color: $qfap-red;
+    }
+  }
+
+  .news-card-category {
+    color: $white;
+
+    html.flexbox & {
+      &:before,
+      &:after{
+        border-bottom-color: $grayEE;
+      }
+    }
+  }
 }
