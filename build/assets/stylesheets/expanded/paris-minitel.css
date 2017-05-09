@@ -7284,7 +7284,9 @@ http://flickity.metafizzy.co
   .component-table {
     overflow-x: auto;
     position: relative;
-    width: 100%; } }
+    width: 100%; }
+    .component-table table {
+      width: auto; } }
 
 @media (min-width: 1160px) {
   .component-table table {
