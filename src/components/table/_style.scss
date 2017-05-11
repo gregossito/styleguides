@@ -80,18 +80,15 @@
   }
 }
 
-@include medium-and-small {
+@include small {
   .component-table {
     overflow-x: auto;
     position: relative;
     width: 100%;
-    table {
-      width: auto;
-    }
   }
 }
 
-@include large {
+@include large-and-medium {
   .component-table {
     table {
       width: 100%;

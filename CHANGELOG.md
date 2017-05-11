@@ -9,14 +9,16 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+* component `table`: fix responsive on medium
+
 ## 1.7.3 (2017-04-26)
 
-* `anchors-list-title` minimize font-size 
+* `anchors-list-title` minimize font-size
 
 ## 1.7.2 (2017-04-26)
 
 * opacity .25 `jumbotron` home page
-* add 20px padding-bottom to `Services et Infos pratiques` home block 
+* add 20px padding-bottom to `Services et Infos pratiques` home block
 
 ## 1.7.1 (2017-04-13)
 
