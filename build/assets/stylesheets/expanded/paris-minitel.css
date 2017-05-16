@@ -7280,15 +7280,13 @@ http://flickity.metafizzy.co
   .component-table tfoot tr > td {
     text-align: left; }
 
-@media (max-width: 1159px) {
+@media (max-width: 767px) {
   .component-table {
     overflow-x: auto;
     position: relative;
-    width: 100%; }
-    .component-table table {
-      width: auto; } }
+    width: 100%; } }
 
-@media (min-width: 1160px) {
+@media (min-width: 768px) {
   .component-table table {
     width: 100%; } }
 

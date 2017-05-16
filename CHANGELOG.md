@@ -7,7 +7,7 @@ Let's take the `x.β.α` version number:
 * `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
 * `x` is for major release involving a more careful integration of the styleguide
 
-## x.β.α (coming soon)
+## 1.7.4 (2017-05-16)
 
 * component `table`: fix responsive on medium
 
