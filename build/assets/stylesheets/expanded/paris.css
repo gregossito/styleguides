@@ -4355,8 +4355,8 @@ body.rheader-mobile-nav-open {
     .rheader.folded {
       -webkit-transition-delay: 0.5s;
               transition-delay: 0.5s;
-      -webkit-transform: translateY(-52px);
-              transform: translateY(-52px); }
+      -webkit-transform: translateY(-60px);
+              transform: translateY(-60px); }
       .rheader.folded .rheader-logo {
         opacity: 0;
         -webkit-transition-delay: 0.5s;

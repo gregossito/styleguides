@@ -280,7 +280,7 @@ body.rheader-mobile-nav-open {
 
     &.folded {
       transition-delay: 0.5s;
-      transform: translateY(-$rheader-height-small + 8px);
+      transform: translateY(-$rheader-height-small + 0px);
       .rheader-logo {
         opacity: 0;
         transition-delay: 0.5s;
