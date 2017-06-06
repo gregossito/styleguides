@@ -1,0 +1,14 @@
+include ../button/button
+
+mixin jumbotron-slider(data)
+  div.jumbotron-slider(style="background-image: url(#{data.image});" title="#{data.image}" id=data.id class=data.modifiers)
+    .jumbotron-slider-wrapper
+      .layout-wrapper.jumbotron-slider-content
+        .jumbotron-slider-text
+          if (data.href)
+            a(href=data.href)= data.text
+          else 
+            span= data.text
+        if block
+          .jumbotron-block
+            block

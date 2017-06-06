@@ -30,6 +30,7 @@ require('../modules/block-content-newsletter/script');
 require('../modules/button-top/script');
 require('../modules/gallery-ugc/script');
 require('../modules/icon-switch/script');
+require('../modules/jumbotron-slider/script');
 require('../modules/notice/script');
 require('../modules/person-block/script');
 require('../modules/poll/script');
