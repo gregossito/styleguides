@@ -2581,7 +2581,6 @@ html.no-touch .jumbotron:not(.no-overlay):not(.home):hover .jumbotron-wrapper:af
     right: 0; } }
 
 .layout-jo {
-  display: none;
   top: 0px;
   position: absolute;
   width: 100%;

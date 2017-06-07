@@ -1,9 +1,6 @@
 'use strict';
 require('velocity-animate');
 
-var PubSub = require('pubsub-js');
-var Cookies = require('js-cookie');
-
 var Paris = window.Paris || {};
 
 Paris.jumbotronSlider = (function(){
@@ -12,10 +9,16 @@ Paris.jumbotronSlider = (function(){
     var $el = $(selector);
     function init(){
       var imgSlider = $('.layout-jo .jumbotron-slider').attr('title'); // src image
+      if($('.jumbotron-slider-text > a').length > 0){
+        $('.jumbotron-slider').css('cursor','pointer');
+        $('.jumbotron-slider').click(function(){
+          document.location.href=$('.jumbotron-slider-text > a').attr('href');
+        });
+      }
       var tmpImg = new Image();
       tmpImg.src = imgSlider;
       tmpImg.onload = function() {
-        $('.layout-jo').slideDown();
+        $('.layout-jo').show();
         setTimeout(function(){
           $('.layout-jo').addClass("done");
           var object = {value: "1", timestamp: new Date().getTime()};
@@ -43,8 +46,8 @@ $(document).ready(function(){
     if(parisJo !== null) {
       parisJo = JSON.parse(parisJo);
       var now = new Date().getTime().toString();
-      var expire = (now - parisJo.timestamp) / 60 / 1000;
-      if(parisJo.value === '1' && expire < 1) {
+      var expire = (now - parisJo.timestamp) / 60 / 1000; // 1 hour
+      if(parisJo.value === '1' && expire < 0) { // no expiration
         $('.layout-jo').remove();
       }
       else {
