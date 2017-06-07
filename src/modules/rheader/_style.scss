@@ -41,6 +41,8 @@
   }
 }
 
+
+
 .rheader-logo {
   background-color: $color-primary;
   border-bottom: 4px solid $color-tertiary;
@@ -731,3 +733,32 @@ body.rheader-mobile-nav-open {
     margin-top: 0;
   }
 }
+
+@include large {
+  .jo {
+    &.rheader {
+      background-color: $red-color-jo;
+    }
+    .rheader-logo {
+      background-color: $red-color-jo;
+    }
+    .rheader-nav-item.get-involved {
+      background-color: $purple-color-jo;
+    }
+    .rheader-button-menu {
+      background-color: $red-color-jo;
+    }
+
+    .rheader-wrapper {
+      > .rheader-button-search {
+        border-right: 1px solid #cc0410;
+        border-left: 1px solid #cc0410;
+        &:hover,
+        &.active {
+          background: $red-color-jo-variant;
+        }
+      }
+    }
+  }
+}
+

@@ -2555,6 +2555,134 @@ html.no-touch .jumbotron:not(.no-overlay):not(.home):hover .jumbotron-wrapper:af
     top: 0;
     right: 0; } }
 
+.layout-jo {
+  top: 0px;
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  height: 980px; }
+  .layout-jo.done {
+    -webkit-transform: translateY(-430px);
+            transform: translateY(-430px);
+    -webkit-transition: 2s ease -webkit-transform;
+            transition: 2s ease transform; }
+
+.jumbotron-slider {
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  display: table;
+  height: 980px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  /*  .layout-wrapper.jumbotron-slider-content {
+    border-left: 6px solid $color-tertiary;
+    color: $white;
+    padding: 5px 24px 3px 24px;
+    @include large-and-medium {
+      padding-left: 35px;
+    }
+  }*/ }
+  .jumbotron-slider.home {
+    height: auto; }
+    .jumbotron-slider.home .layout-wrapper.jumbotron-slider-content {
+      border: none;
+      padding: 0;
+      text-align: center; }
+      .jumbotron-slider.home .layout-wrapper.jumbotron-slider-content > * {
+        margin: 0 auto; }
+    .jumbotron-slider.home .jumbotron-slider-wrapper {
+      padding: 0px;
+      /*      &:after {
+        background: white;
+        opacity: 0.25;
+
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+
+        // Target IE 10 and 11
+        @media screen\0 {
+          height: 200%;
+        }
+      }*/ }
+    .jumbotron-slider.home .jumbotron-slider-text {
+      padding-top: 10px;
+      padding-bottom: 10px; }
+
+.jumbotron-slider-wrapper {
+  display: table-cell;
+  overflow: hidden;
+  position: relative;
+  vertical-align: bottom; }
+
+html.no-js .jumbotron-slider:not(.no-overlay):not(.home) .jumbotron-slider-wrapper:after,
+html.no-touch .jumbotron-slider:not(.no-overlay):not(.home) .jumbotron-slider-wrapper:after {
+  -webkit-transition: -webkit-transform 1s ease;
+          transition: transform 1s ease;
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%); }
+
+html.no-js .jumbotron-slider:not(.no-overlay):not(.home):hover .jumbotron-slider-wrapper:after,
+html.no-touch .jumbotron-slider:not(.no-overlay):not(.home):hover .jumbotron-slider-wrapper:after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0); }
+
+.jumbotron-slider-content {
+  position: relative;
+  z-index: 1; }
+
+.jumbotron-slider-text {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  margin: 0 0 0px;
+  max-width: 960px;
+  text-transform: uppercase;
+  color: #28377D;
+  text-align: center; }
+
+.jumbotron-slider-block {
+  float: left; }
+
+@media (min-width: 1160px) {
+  .layout-jo {
+    height: 490px; }
+  .jumbotron-slider {
+    height: 490px; }
+    .jumbotron-slider.home {
+      height: 490px; }
+      .jumbotron-slider.home .jumbotron-slider-text {
+        max-width: 960px;
+        padding: 15px 0; }
+  .jumbotron-slider-text {
+    font-size: 1.2rem;
+    line-height: 3rem;
+    margin: 0 auto;
+    height: 60px; }
+    .jumbotron-slider-text a {
+      color: #28377D; } }
+
+@media (max-width: 767px) {
+  .jumbotron-slider,
+  .layout-jo {
+    display: none; } }
+
+@media (min-width: 768px) and (max-width: 1159px) {
+  .jumbotron-slider,
+  .layout-jo {
+    display: none; } }
+
 .last-update {
   color: #999;
   font-size: 1.5rem;
@@ -4676,6 +4804,21 @@ body.rheader-mobile-nav-open {
 @media (max-width: 767px) {
   .rheader + .quick-access {
     margin-top: 0; } }
+
+@media (min-width: 1160px) {
+  .jo.rheader {
+    background-color: #ff0514; }
+  .jo .rheader-logo {
+    background-color: #ff0514; }
+  .jo .rheader-nav-item.get-involved {
+    background-color: #e6007e; }
+  .jo .rheader-button-menu {
+    background-color: #ff0514; }
+  .jo .rheader-wrapper > .rheader-button-search {
+    border-right: 1px solid #cc0410;
+    border-left: 1px solid #cc0410; }
+    .jo .rheader-wrapper > .rheader-button-search:hover, .jo .rheader-wrapper > .rheader-button-search.active {
+      background: #ed1421; } }
 
 .search-field {
   overflow: hidden; }
