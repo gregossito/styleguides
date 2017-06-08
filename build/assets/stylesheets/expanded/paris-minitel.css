@@ -2593,7 +2593,8 @@ html.no-touch .jumbotron:not(.no-overlay):not(.home):hover .jumbotron-wrapper:af
     -webkit-transform: translateY(-430px);
             transform: translateY(-430px);
     -webkit-transition: 2s ease -webkit-transform;
-            transition: 2s ease transform; }
+            transition: 2s ease transform;
+    position: fixed; }
 
 .jumbotron-slider {
   background-color: #FFF;
@@ -2668,12 +2669,11 @@ html.no-touch .jumbotron-slider:not(.no-overlay):not(.home):hover .jumbotron-sli
   z-index: 1; }
 
 .jumbotron-slider-text {
-  font-weight: 700;
-  font-size: 1.2rem;
-  line-height: 3rem;
+  font-size: 14px;
+  position: relative;
+  line-height: 2rem;
   margin: 0 0 0px;
   max-width: 960px;
-  text-transform: uppercase;
   color: #28377D;
   text-align: center; }
 
@@ -2688,25 +2688,38 @@ html.no-touch .jumbotron-slider:not(.no-overlay):not(.home):hover .jumbotron-sli
     .jumbotron-slider.home {
       height: 490px; }
       .jumbotron-slider.home .jumbotron-slider-text {
-        max-width: 960px;
-        padding: 15px 0; }
+        max-width: 960px; }
   .jumbotron-slider-text {
-    font-size: 1.2rem;
-    line-height: 3rem;
+    font-size: 14px;
+    line-height: 2rem;
     margin: 0 auto;
-    height: 60px; }
+    height: 60px;
+    font-weight: 500; }
     .jumbotron-slider-text a {
-      color: #28377D; } }
+      color: #28377D;
+      text-transform: none;
+      text-decoration: none;
+      cursor: pointer; }
+      .jumbotron-slider-text a span {
+        border-bottom: 1px solid #28377D; }
+      .jumbotron-slider-text a i {
+        padding: 0;
+        font-size: 3.4em;
+        -webkit-transition: right 0.2s;
+                transition: right 0.2s;
+        vertical-align: middle; } }
 
 @media (max-width: 767px) {
   .jumbotron-slider,
   .layout-jo {
-    display: none; } }
+    display: none;
+    z-index: 0; } }
 
 @media (min-width: 768px) and (max-width: 1159px) {
   .jumbotron-slider,
   .layout-jo {
-    display: none; } }
+    display: none;
+    z-index: 0; } }
 
 .last-update {
   color: #999;
@@ -4280,6 +4293,7 @@ html.no-touch .news-card-counter {
       line-height: 4.5rem; } }
 
 .rheader {
+  display: none;
   background-color: #fd28fc;
   height: 60px;
   position: relative;
@@ -4582,7 +4596,7 @@ body.rheader-mobile-nav-open {
 @media (min-width: 601px) and (max-width: 1160px) {
   .rheader,
   .rheader-logo {
-    height: 80px; }
+    height: 60px; }
   .rheader-logo {
     width: 238px; }
   .rheader-logo-nef {
@@ -4590,9 +4604,9 @@ body.rheader-mobile-nav-open {
   .rheader-logo-paris {
     width: 170px; }
   .rheader-wrapper > .rheader-button {
-    height: 80px;
-    line-height: 80px;
-    width: 81px; }
+    height: 60px;
+    line-height: 60px;
+    width: 61px; }
   .rheader-button-search {
     border-right: 1px solid #A51B50; }
   .rheader-button-menu {
@@ -4600,15 +4614,15 @@ body.rheader-mobile-nav-open {
     -webkit-transition: border 0.2s;
             transition: border 0.2s; }
     .rheader-button-menu .rheader-button-text {
-      left: 30px;
-      top: 40px; }
+      left: 20px;
+      top: 30px; }
   .rheader-nav {
     display: none; }
   .rheader-mobile-nav .rheader-nav {
-    top: 80px; }
+    top: 60px; }
   .rheader-mobile-nav .rheader-locales {
-    line-height: 80px;
-    margin-right: 90px; } }
+    line-height: 60px;
+    margin-right: 70px; } }
 
 @media (min-width: 1161px) {
   .rheader {
@@ -4616,27 +4630,27 @@ body.rheader-mobile-nav-open {
     text-align: right; }
     .rheader.extended,
     .rheader.extended .rheader-nav-item {
-      height: 100px; }
+      height: 80px; }
     .rheader.extended .rheader-logo {
-      height: 89px; }
+      height: 69px; }
     .rheader.extended .rheader-logo,
     .rheader.extended .rheader-locales {
       -webkit-transform: translateY(10px);
               transform: translateY(10px); }
     .rheader.extended .rheader-nav-item a {
-      height: 100px;
-      line-height: 100px; }
+      height: 80px;
+      line-height: 80px; }
     .rheader.extended .rheader-wrapper > .rheader-button {
       border-left: 1px solid transparent;
-      -webkit-transform: translateY(100px);
-              transform: translateY(100px); }
+      -webkit-transform: translateY(80px);
+              transform: translateY(80px); }
   .rheader,
   .rheader-logo {
-    height: 80px;
+    height: 60px;
     -webkit-transition: height 0.2s ease;
             transition: height 0.2s ease; }
   .rheader-nav-item {
-    height: 80px;
+    height: 60px;
     -webkit-transition: background-color 0.3s ease, height 0.2s ease;
             transition: background-color 0.3s ease, height 0.2s ease; }
   .rheader-logo,
@@ -4663,13 +4677,13 @@ body.rheader-mobile-nav-open {
     border-right: 1px solid #A51B50;
     display: inline-block;
     font-size: 2.6rem;
-    height: 80px;
-    line-height: 80px;
+    height: 60px;
+    line-height: 60px;
     position: static;
     -webkit-transition: background-color 0.3s ease, -webkit-transform 0.4s ease, border 0.4s ease 0.2s;
             transition: background-color 0.3s ease, transform 0.4s ease, border 0.4s ease 0.2s;
     vertical-align: top;
-    width: 81px; }
+    width: 61px; }
     .rheader-wrapper > .rheader-button .rheader-button-icon {
       font-size: 2.8rem; }
   .rheader-wrapper > .rheader-button-menu {
@@ -4689,8 +4703,8 @@ body.rheader-mobile-nav-open {
       margin-left: 20px; }
     .rheader-nav-item a {
       display: inline-block;
-      height: 80px;
-      line-height: 80px;
+      height: 60px;
+      line-height: 60px;
       -webkit-transition: height 0.2s ease, line-height 0.2s ease;
               transition: height 0.2s ease, line-height 0.2s ease; }
     .rheader-nav-item.get-involved {
@@ -4769,7 +4783,7 @@ body.rheader-mobile-nav-open {
 
 @media (min-width: 1370px) {
   .rheader.extended .rheader-logo {
-    height: 80px; }
+    height: 60px; }
   .rheader-logo {
     border-bottom: 0;
     left: 30px;
@@ -4810,17 +4824,17 @@ body.rheader-mobile-nav-open {
 @media (min-width: 1161px) {
   .rheader.fixed.extended + .layout-main > .layout-content:first-child,
   .rheader.extended + .quick-access + .layout-main > .layout-content:first-child {
-    padding-top: 100px; }
+    padding-top: 80px; }
   .rheader.extended + .quick-access {
-    margin-top: 100px; } }
+    margin-top: 80px; } }
 
 @media (min-width: 601px) {
   .rheader.fixed + .layout-main > .layout-content:first-child,
   .rheader + .quick-access + .layout-main > .layout-content:first-child {
     background-color: #fd28fc;
-    padding-top: 80px; }
+    padding-top: 60px; }
   .rheader + .quick-access {
-    margin-top: 80px; }
+    margin-top: 60px; }
   .rheader.fixed + .layout-main > .layout-content.black-background:first-child {
     background: #282828; }
   .rheader.fixed + .layout-main > .layout-content.red-background:first-child {
@@ -4830,20 +4844,34 @@ body.rheader-mobile-nav-open {
   .rheader + .quick-access {
     margin-top: 0; } }
 
-@media (min-width: 1160px) {
-  .jo.rheader {
-    background-color: #ff0514; }
-  .jo .rheader-logo {
-    background-color: #ff0514; }
-  .jo .rheader-nav-item.get-involved {
-    background-color: #e6007e; }
-  .jo .rheader-button-menu {
-    background-color: #ff0514; }
-  .jo .rheader-wrapper > .rheader-button-search {
-    border-right: 1px solid #cc0410;
-    border-left: 1px solid #cc0410; }
-    .jo .rheader-wrapper > .rheader-button-search:hover, .jo .rheader-wrapper > .rheader-button-search.active {
-      background: #ed1421; } }
+.jo.rheader {
+  background-color: #ff0514; }
+
+.jo .rheader-logo {
+  background-color: #ff0514; }
+
+.jo .rheader-nav-item.get-involved {
+  background-color: #e6007e; }
+
+.jo .rheader-button-menu {
+  background-color: #ff0514; }
+
+.jo .rheader-mobile-nav {
+  background-color: #ff0514; }
+
+.jo .rheader-wrapper > .rheader-button:hover,
+.jo .rheader-wrapper > .rheader-button.active {
+  background-color: #e6007e; }
+
+.jo .rheader-locales {
+  font-size: 1rem;
+  line-height: 1.7rem; }
+
+.jo .rheader-wrapper > .rheader-button-search {
+  border-right: 1px solid #cc0410;
+  border-left: 1px solid #cc0410; }
+  .jo .rheader-wrapper > .rheader-button-search:hover, .jo .rheader-wrapper > .rheader-button-search.active {
+    background: #ed1421; }
 
 .search-field {
   overflow: hidden; }

@@ -12,6 +12,7 @@
   &.done {
     transform: translateY(-430px);
     transition: 2s ease transform;
+    position:fixed;
   }
 }
 
@@ -112,12 +113,11 @@ html.no-touch {
 }
 
 .jumbotron-slider-text {
-  font-weight: 700;   
-  font-size: 1.2rem;
-  line-height: 3rem;
+  font-size: 14px;
+  position: relative;
+  line-height: 2rem;
   margin: 0 0 0px;
   max-width: 960px;
-  text-transform: uppercase;
   color:$jo-blue;
   text-align: center;
 }
@@ -140,18 +140,30 @@ html.no-touch {
 
       .jumbotron-slider-text {
         max-width: 960px;
-        padding: 15px 0;
       }
     }
   }
 
   .jumbotron-slider-text {
-    font-size: 1.2rem;
-    line-height: 3rem;
+    font-size: 14px;
+    line-height: 2rem;
     margin: 0 auto;
     height:60px;
+    font-weight:500;
     a {
       color:$jo-blue;
+      text-transform: none;
+      text-decoration: none;
+      cursor: pointer;
+      span {
+        border-bottom:1px solid #28377D;
+      }
+      i {
+        padding: 0;
+        font-size: 3.4em;
+        transition: right 0.2s;
+        vertical-align: middle;
+      }
     }
   }
 
@@ -161,6 +173,7 @@ html.no-touch {
   .jumbotron-slider,
   .layout-jo {
     display:none;
+    z-index:0;
   }
 }
 
@@ -168,5 +181,6 @@ html.no-touch {
   .jumbotron-slider,
   .layout-jo {
     display:none;
+    z-index:0;
   }
 }
