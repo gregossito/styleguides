@@ -52,6 +52,10 @@ Paris.rheader = (function(){
         }
       }
 
+      if ($('#notice_home_top.jo').length) {
+        $('.rheader').addClass('jo');
+      }
+
       // extend or unextend
       PubSub.subscribe('scroll.search.down', unextend);
       PubSub.subscribe('scroll.search.up', extend);
@@ -71,6 +75,7 @@ Paris.rheader = (function(){
       $buttonSearch.on('click', onClickButtonSearch);
       // also open search from skip-links
       $('.skip-links a[href="#search"]').on('click', onClickButtonSearch);
+      $('.rheader').show();
     }
 
     function initOptions() {

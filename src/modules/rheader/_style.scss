@@ -1,6 +1,7 @@
 @import "_variables";
 
 .rheader {
+  display:none;
   background-color: $color-primary;
   height: $rheader-height-small;
   position: relative;
@@ -734,29 +735,41 @@ body.rheader-mobile-nav-open {
   }
 }
 
-@include large {
-  .jo {
-    &.rheader {
-      background-color: $red-color-jo;
-    }
-    .rheader-logo {
-      background-color: $red-color-jo;
-    }
-    .rheader-nav-item.get-involved {
-      background-color: $purple-color-jo;
-    }
-    .rheader-button-menu {
-      background-color: $red-color-jo;
-    }
+.jo {
+  &.rheader {
+    background-color: $red-color-jo;
+  }
+  .rheader-logo {
+    background-color: $red-color-jo;
+  }
+  .rheader-nav-item.get-involved {
+    background-color: $purple-color-jo;
+  }
+  .rheader-button-menu {
+    background-color: $red-color-jo;
+  }
 
-    .rheader-wrapper {
-      > .rheader-button-search {
-        border-right: 1px solid #cc0410;
-        border-left: 1px solid #cc0410;
-        &:hover,
-        &.active {
-          background: $red-color-jo-variant;
-        }
+  .rheader-mobile-nav {
+    background-color: $red-color-jo;
+  }
+
+  .rheader-wrapper>.rheader-button:hover, 
+  .rheader-wrapper>.rheader-button.active {
+    background-color: $purple-color-jo;
+  }
+
+  .rheader-locales {
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+
+  .rheader-wrapper {
+    > .rheader-button-search {
+      border-right: 1px solid #cc0410;
+      border-left: 1px solid #cc0410;
+      &:hover,
+      &.active {
+        background: $red-color-jo-variant;
       }
     }
   }

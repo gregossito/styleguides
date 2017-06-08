@@ -6,7 +6,11 @@ mixin jumbotron-slider(data)
       .layout-wrapper.jumbotron-slider-content
         .jumbotron-slider-text
           if (data.href)
-            a(href=data.href)= data.text
+            a.jumbotron-slider-link(href=data.href)
+              strong= data.text
+              = "    —  "
+              span= data.hreftitle
+              i.icon-arrow-small-right
           else 
             span= data.text
         if block

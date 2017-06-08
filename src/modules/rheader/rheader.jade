@@ -1,7 +1,7 @@
 include ../quick-access/quick-access
 
 mixin rheader(data)
-  header.rheader.jo(class=data.modifiers role="banner")
+  header.rheader(class=data.modifiers role="banner")
     .rheader-wrapper
       a.rheader-logo#logo(href=data.logo.href title=data.logo.title)
         .rheader-logo-nef
