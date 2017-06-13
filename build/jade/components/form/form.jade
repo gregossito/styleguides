@@ -6,7 +6,7 @@ mixin form-title(data)
 
 mixin form-text(data)
   label.form-item-label(for=data.id)= data.label
-  input.form-field(type=data.type name=data.name id=data.id placeholder=data.placeholder value=data.value required=data.required)
+  input.form-field(type=data.type title=data.label name=data.name id=data.id placeholder=data.placeholder value=data.value required=data.required)
 
 mixin form-email(data)
   +form-text(data)
@@ -28,14 +28,14 @@ mixin form-hidden(data)
 
 mixin form-select(data)
   label.form-item-label(for=data.id)= data.label
-  select.form-field(name=data.name id=data.id required=data.required)
+  select.form-field(name=data.name id=data.id title=data.label required=data.required)
     each item in data.items
       option(value=item.value)= item.text
 
 
 mixin form-textarea(data)
   label.form-item-label(for=data.id)= data.label
-  textarea.form-field(name=data.name id=data.id placeholder=data.placeholder maxlength=data.maxlength rows=data.rows required=data.required)
+  textarea.form-field(name=data.name title=data.label id=data.id placeholder=data.placeholder maxlength=data.maxlength rows=data.rows required=data.required)
     = data.value
 
 
@@ -44,7 +44,7 @@ mixin form-checkbox(data)
   each item in data.items
     div: label
       //- input.form-field(type="hidden" name=data.name value="")
-      input.form-field(type=data.type name=data.name+((data.type==="checkbox") ? "[]" : "") value=item.value checked=item.checked)
+      input.form-field(type=data.type name=data.name+((data.type==="checkbox") ? "[]" : "") value=item.value title=data.label checked=item.checked)
       = item.text
 
 mixin form-radio(data)
@@ -56,7 +56,7 @@ mixin form-cgu(data)
   - data.label += " *";
   .form-item-label= data.label
   div: label
-    input.form-field(type="checkbox" name=data.name value="true" required)
+    input.form-field(type="checkbox" title=data.label name=data.name value="true" required)
     = data.text
     | &nbsp;
     if data.link
