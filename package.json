@@ -1,6 +1,6 @@
 {
   "name": "paris-styleguide",
-  "version": "1.8.2",
+  "version": "1.8.3",
   "description": "Paris Living Style Guide",
   "author": "Hans Lemuet <hans@etaminstudio.com>",
   "contributors": [
@@ -36,6 +36,9 @@
     },
     {
       "name": "SNVT"
+    },
+    {
+      "name": "Greg Giglietta"
     }
   ],
   "main": "index.js",
