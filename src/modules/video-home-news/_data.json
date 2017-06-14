@@ -1,0 +1,35 @@
+{
+  "index": {
+    "type": "video-home-news",
+    "description": "",
+    "examples": [{
+      "title": "3 vidéos",
+      "description": "",
+      "data": {
+        "items": [
+          {
+            "href": "#",
+            "image": "",
+            "text": "Les Parisiens aiment les Berges de Seine !",
+            "duration": "01:50",
+            "modifiers":["large"]
+          },
+          {
+            "href": "#",
+            "image": "",
+            "text": "Nuit Blanche 2016 racontée par son directeur artistique",
+            "duration": "04:12",
+            "modifiers":["small"]
+          },
+          {
+            "href": "#",
+            "image": "",
+            "text": "Revivez le 1er Festival Paris Drone",
+            "duration": "02:05",
+            "modifiers":["small"]
+          }
+        ]
+      }
+    }]
+  }
+}
