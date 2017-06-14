@@ -1,0 +1,29 @@
+mixin video-home-news(data)
+  .video-home-modal
+    .video-home-modal-content
+      .video-home-modal-header
+        span.video-home-close
+      .video-home-modal-body
+  .video-home-placeholder!= data.placeholder
+  ul.video-home-news
+    li.video-home-list-item(class=data.items[0].modifiers)
+      a.video-home-item(href=data.items[0].href)
+        .video-home-wrapper
+          .video-home-embed
+            != data.items[0].embed_html
+          .video-home-image(style=data.items[0].image && 'background-image: url(#{data.items[0].image});')
+          .video-home-content
+            .video-home-title= data.items[0].text
+                .video-home-duration= data.items[0].duration
+      li.video-home-list-wrapper
+        each item in data.items
+          if item.modifiers && item.modifiers.indexOf("small") != -1
+            .video-home-list-item(class=item.modifiers)
+              a.video-home-item(href=item.href)
+                .video-home-wrapper
+                  .video-home-embed
+                    != item.embed_html
+                  .video-home-image(style=item.image && 'background-image: url(#{item.image});')
+                  .video-home-content
+                    .video-home-title= item.text
+                        .video-home-duration= item.duration

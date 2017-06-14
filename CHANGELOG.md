@@ -7,7 +7,13 @@ Let's take the `x.β.α` version number:
 * `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
 * `x` is for major release involving a more careful integration of the styleguide
 
+## 1.8.2 (2017-06-14)
+
+* fix module `jumbotron-slider` scrollTop detect
+* add module `video-home-news
+
 ## 1.8.1 (2017-06-08)
+
 * fix module `jumbotron-slider` for JO Home
 * fix module `rheader` JO red colors and height 
 

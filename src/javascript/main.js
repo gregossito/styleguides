@@ -40,6 +40,7 @@ require('../modules/sections-panel/script');
 require('../modules/share/script');
 require('../modules/video-cover/script');
 require('../modules/video-home/script');
+require('../modules/video-home-news/script');
 
 // load our templates
 require('../templates/document/script');
@@ -53,5 +54,5 @@ require('./lib/egg');
 require('./lib/3975');
 
 var Paris = window.Paris || {};
-Paris.version = "1.8.1";
+Paris.version = "1.8.2";
 Paris.templates = require('./client.tpl');
