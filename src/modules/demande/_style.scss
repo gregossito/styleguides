@@ -1,0 +1,16 @@
+$offset-heading: 32px;
+
+.demande {
+  .component-text{
+    p{
+      clear: both;
+    }
+  }
+  .component-text:first-child{
+    h2{
+      border-top: 7px solid $grayF2;
+      padding-top: 40px;
+    }
+  } 
+}
+
