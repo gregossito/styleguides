@@ -6921,7 +6921,7 @@ http://flickity.metafizzy.co
   .component-jecoute .jecoute-text {
     color: #4D4D4D;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 2.2rem;
     margin-bottom: 25px;
     max-width: 570px;
@@ -7019,6 +7019,31 @@ http://flickity.metafizzy.co
   @media (min-width: 768px) {
     .component-jecoute .jecoute-content {
       padding: 0 42px 25px 40px; } }
+
+.component-jecoute .jecoute-text {
+  font-weight: 400; }
+
+.component-jecoute .jecoute-form > textarea {
+  font-size: 1.6rem;
+  font-weight: 400; }
+  .component-jecoute .jecoute-form > textarea::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #4D4D4D; }
+  .component-jecoute .jecoute-form > textarea:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #4D4D4D;
+    opacity: 1; }
+  .component-jecoute .jecoute-form > textarea::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #4D4D4D;
+    opacity: 1; }
+  .component-jecoute .jecoute-form > textarea:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #4D4D4D; }
+
+.component-jecoute .jecoute-form p.jecoute-warning {
+  font-size: inherit;
+  font-size: 1.3rem; }
 
 .component-links {
   clear: both; }
