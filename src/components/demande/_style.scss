@@ -1,6 +1,7 @@
 $offset-heading: 32px;
 
-.demande {
+.component-demande {
+  margin: 40px 0 20px 0;
   .component-text{
     p{
       clear: both;
@@ -9,7 +10,7 @@ $offset-heading: 32px;
   .component-text:first-child{
     h2{
       border-top: 7px solid $grayF2;
-      padding-top: 40px;
+      padding-top: 20px;
     }
   } 
 }
