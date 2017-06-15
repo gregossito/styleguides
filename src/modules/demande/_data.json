@@ -1,0 +1,19 @@
+{
+  "index": {
+    "type": "demande",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "title": "Vous avez une demande ?",
+        "text": "Contactez le service concerné en utilisant ce formulaire :",
+        "button": {
+          "text": "Valider",
+          "title": "Formulaire de contact",
+          "modifiers": ["secondary","action"]
+        }
+      }
+    }]
+  }
+}
