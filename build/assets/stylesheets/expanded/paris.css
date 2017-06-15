@@ -1634,13 +1634,6 @@ th {
     font-size: 2.4rem;
     line-height: 3rem; } }
 
-.demande .component-text p {
-  clear: both; }
-
-.demande .component-text:first-child h2 {
-  border-top: 7px solid #F2F2F2;
-  padding-top: 40px; }
-
 .document-heading {
   position: relative;
   width: 100%;
@@ -6452,6 +6445,14 @@ body.rheader-mobile-nav-open {
   .component-card .card-content {
     margin-left: 45%;
     width: 55%; } }
+
+.component-demande {
+  margin: 40px 0 20px 0; }
+  .component-demande .component-text p {
+    clear: both; }
+  .component-demande .component-text:first-child h2 {
+    border-top: 7px solid #F2F2F2;
+    padding-top: 20px; }
 
 .component-districts {
   clear: both; }
