@@ -57,7 +57,7 @@
   .jecoute-text {
     color: $gray4D;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 2.2rem;
     margin-bottom: 25px;
     max-width: 570px;
@@ -79,7 +79,9 @@
 
         &:hover { text-decoration: none; }
       }
+  
     }
+
 
     > textarea,
     > input {
@@ -196,4 +198,22 @@
     }
   }
 
+}
+
+.component-jecoute{
+  .jecoute-text{
+    font-weight: 400;
+  }
+ 
+  .jecoute-form{
+    >textarea{
+      @include input-color-placeholder($gray4D);
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+    p.jecoute-warning{
+      font-size: inherit;
+      font-size: 1.3rem;
+    }
+  }
 }
