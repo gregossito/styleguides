@@ -6,9 +6,9 @@ var Cookies = require('js-cookie');
 
 var Paris = window.Paris || {};
 
-Paris.videoHome = (function(){
+Paris.videoHomeNews = (function(){
 
-  function videoHome(selector){
+  function videoHomeNews(selector){
     var $el     = $(selector),
       $placeholder,
       $embed;
@@ -59,12 +59,12 @@ Paris.videoHome = (function(){
 
   return function(selector){
     return $(selector).each(function(){
-      videoHome(this);
+      videoHomeNews(this);
     });
   };
 
 })();
 
 $(document).ready(function(){
-  Paris.videoHome('.video-home');
+  Paris.videoHomeNews('.video-home-news');
 });

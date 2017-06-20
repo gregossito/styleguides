@@ -7,7 +7,7 @@ var Paris = window.Paris || {};
 Paris.jecoute = (function(){
 
   var defaultOptions = {
-    thanks: ""
+    thanks: "Attention nous ne formulons pas de réponse dans cet espace."
   };
 
   function jecoute(selector, userOptions){
