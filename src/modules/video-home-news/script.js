@@ -34,6 +34,8 @@ Paris.videoHomeNews = (function(){
 
         var url = $('.video-home-modal .video-home-modal-body .embed-container iframe').attr('src');
         url = url+autoplay;
+        url = url.replace(/^http:/, 'https:');
+        
         $('.video-home-modal .video-home-modal-body .embed-container iframe').attr('src', url);
         $('.video-home-modal').show();
       });

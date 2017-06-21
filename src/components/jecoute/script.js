@@ -153,6 +153,7 @@ Paris.jecoute = (function(){
     function onQuestionSaved(jqXHR, status) {
       $form.hide();
       $message.text(options.thanks).show();
+      $message.removeClass('init');
     }
 
     function onQuestionError(jqXHR, status, err) {
@@ -167,6 +168,7 @@ Paris.jecoute = (function(){
 
     function showError(msg) {
       $message.text(msg).addClass('text-error').show();
+      $message.removeClass('init');
       window.setTimeout(function() {
         $formElements.attr('disabled', false);
         $message.show().removeClass('text-error').text('');

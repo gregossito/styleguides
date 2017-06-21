@@ -7,6 +7,11 @@ Let's take the `x.β.α` version number:
 * `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
 * `x` is for major release involving a more careful integration of the styleguide
 
+## 1.8.8 (2017-06-21)
+
+* fix `rheader` button participez color JO
+* fix `jecoute` message 
+
 ## 1.8.7 (2017-06-20)
 
 * add `video-home-news` module

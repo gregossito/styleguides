@@ -37,4 +37,4 @@ mixin jecoute(data)
         - button.modifiers = ["secondary", "action"]
         - button.attributes = {"type": "submit"}
         +button(button)
-      p.jecoute-message
+      p.jecoute-message.init= data.desc

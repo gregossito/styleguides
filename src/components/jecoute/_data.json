@@ -24,6 +24,7 @@
           "text": "Valider",
           "title": "Valider votre question à Paris j'écoute"
         },
+        "desc": "Merci pour votre contribution. Attention nous ne formulons pas de réponse dans cet espace.",
         "thanks": "Merci, votre question a bien été transmise.",
         "error": "Une erreur est survenue lors de l'envoie de votre question. Merci de réessayer plus tard."
       }
@@ -51,6 +52,7 @@
           "text": "Valider",
           "title": "Valider votre question à Paris j'écoute"
         },
+        "desc": "Merci pour votre contribution. Attention nous ne formulons pas de réponse dans cet espace.",
         "thanks": "Merci, votre question a bien été transmise.",
         "error": "Une erreur est survenue lors de l'envoie de votre question. Merci de réessayer plus tard."
       }
@@ -96,6 +98,7 @@
           "text": "Valider",
           "title": "Valider votre question à Parhistoire"
         },
+        "desc": "Merci pour votre contribution. Attention nous ne formulons pas de réponse dans cet espace.",
         "thanks": "Merci, votre question a bien été transmise.",
         "error": "Une erreur est survenue lors de l'envoie de votre question. Merci de réessayer plus tard."
       }
