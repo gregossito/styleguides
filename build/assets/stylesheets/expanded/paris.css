@@ -4834,6 +4834,15 @@ body.rheader-mobile-nav-open {
 
 .jo .rheader-nav-item.get-involved {
   background-color: #e6007e; }
+  .jo .rheader-nav-item.get-involved:hover a,
+  .jo .rheader-nav-item.get-involved a:focus,
+  .jo .rheader-nav-item.get-involved.current a {
+    background-color: #ffcc00; }
+
+.jo .rheader-nav-item.get-involved:hover .rheader-nav-item-hover {
+  color: #ff0514; }
+  .jo .rheader-nav-item.get-involved:hover .rheader-nav-item-hover:after {
+    background-color: #ff0514; }
 
 .jo .rheader-button-menu {
   background-color: #ff0514; }
@@ -4854,6 +4863,12 @@ body.rheader-mobile-nav-open {
   border-left: 1px solid #cc0410; }
   .jo .rheader-wrapper > .rheader-button-search:hover, .jo .rheader-wrapper > .rheader-button-search.active {
     background: #ed1421; }
+
+@media (max-width: 767px) {
+  .jo .rheader-nav-item.get-involved:hover .rheader-nav-item-text {
+    color: #ff0514; }
+    .jo .rheader-nav-item.get-involved:hover .rheader-nav-item-text:after {
+      background-color: #ff0514; } }
 
 .search-field {
   overflow: hidden; }
@@ -6886,6 +6901,11 @@ http://flickity.metafizzy.co
     color: #0C518A;
     font-style: normal;
     font-weight: 500; }
+  .component-jecoute .jecoute-message.init {
+    font-size: 14px;
+    font-style: italic;
+    color: #646464;
+    font-weight: 300; }
   .component-jecoute .text-error {
     color: #DF225A; }
   html.flexbox .component-jecoute .jecoute-title {
@@ -7014,8 +7034,6 @@ http://flickity.metafizzy.co
         margin: 2px 10px 2px 0; }
       .component-jecoute .jecoute-form > .jecoute-policy label span {
         vertical-align: middle; }
-  .component-jecoute .jecoute-message {
-    display: none; }
   @media (min-width: 768px) {
     .component-jecoute .jecoute-content {
       padding: 0 42px 25px 40px; } }

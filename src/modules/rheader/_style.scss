@@ -247,6 +247,8 @@ body.rheader-mobile-nav-open {
   }
 }
 
+
+
 .rheader-nav-item-icon,
 .rheader-button-icon {
   display: inline-block;
@@ -745,7 +747,22 @@ body.rheader-mobile-nav-open {
   }
   .rheader-nav-item.get-involved {
     background-color: $purple-color-jo;
+    &:hover a,
+    & a:focus,
+    &.current a {
+      background-color: #ffcc00;
+    }
   }
+
+  .rheader-nav-item.get-involved:hover {
+    .rheader-nav-item-hover {
+      color: $red-color-jo;
+      &:after { 
+        background-color: $red-color-jo; 
+      }
+    }
+  }
+      
   .rheader-button-menu {
     background-color: $red-color-jo;
   }
@@ -776,3 +793,15 @@ body.rheader-mobile-nav-open {
   }
 }
 
+@include small {
+  .jo {
+    .rheader-nav-item.get-involved:hover {
+      .rheader-nav-item-text {
+        color:$red-color-jo; 
+        &:after { 
+          background-color: $red-color-jo; 
+        }
+      }
+    }
+  }
+}

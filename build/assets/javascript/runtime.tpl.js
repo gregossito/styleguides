@@ -1288,7 +1288,7 @@ templatizer["jecoute"]["jecoute"] = function tmpl_jecoute_jecoute(data) {
         type: "submit"
     };
     buf.push(templatizer["jecoute"]["button"](button));
-    buf.push('</form><p class="jecoute-message"></p></div></div>');
+    buf.push('</form><p class="jecoute-message init">' + jade.escape(null == (jade_interp = data.desc) ? "" : jade_interp) + "</p></div></div>");
     return buf.join("");
 };
 
@@ -6769,38 +6769,6 @@ templatizer["sections-panel"]["sections-panel-content"] = function tmpl_sections
     return buf.join("");
 };
 
-// skip-links.jade compiled template
-templatizer["skip-links"] = function tmpl_skip_links(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// skip-links.jade:skip-links compiled template
-templatizer["skip-links"]["skip-links"] = function tmpl_skip_links_skip_links(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<ul class="skip-links">');
-    (function() {
-        var $$obj = data.items;
-        if ("number" == typeof $$obj.length) {
-            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                var item = $$obj[$index];
-                buf.push("<li><a" + jade.attr("href", item.href, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
-            }
-        } else {
-            var $$l = 0;
-            for (var $index in $$obj) {
-                $$l++;
-                var item = $$obj[$index];
-                buf.push("<li><a" + jade.attr("href", item.href, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
-            }
-        }
-    }).call(this);
-    buf.push("</ul>");
-    return buf.join("");
-};
-
 // share.jade compiled template
 templatizer["share"] = function tmpl_share(locals) {
     var buf = [];
@@ -6834,6 +6802,38 @@ templatizer["share"]["share"] = function tmpl_share_share(data) {
         buf.push("</ul>");
     }
     buf.push("</div>");
+    return buf.join("");
+};
+
+// skip-links.jade compiled template
+templatizer["skip-links"] = function tmpl_skip_links(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// skip-links.jade:skip-links compiled template
+templatizer["skip-links"]["skip-links"] = function tmpl_skip_links_skip_links(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push('<ul class="skip-links">');
+    (function() {
+        var $$obj = data.items;
+        if ("number" == typeof $$obj.length) {
+            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                var item = $$obj[$index];
+                buf.push("<li><a" + jade.attr("href", item.href, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
+            }
+        } else {
+            var $$l = 0;
+            for (var $index in $$obj) {
+                $$l++;
+                var item = $$obj[$index];
+                buf.push("<li><a" + jade.attr("href", item.href, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
+            }
+        }
+    }).call(this);
+    buf.push("</ul>");
     return buf.join("");
 };
 

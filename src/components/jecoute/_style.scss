@@ -13,6 +13,12 @@
     font-style: normal;
     font-weight: 500;
   }
+  .jecoute-message.init {
+    font-size: 14px;
+    font-style: italic;
+    color: #646464;
+    font-weight: 300;
+  }
 
   .text-error {
     color: $color-primary;
@@ -189,7 +195,7 @@
   }
 
   .jecoute-message {
-    display: none;
+    
   }
 
   @include large-and-medium {
