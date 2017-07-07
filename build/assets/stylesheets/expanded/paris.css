@@ -6094,6 +6094,12 @@ body.rheader-mobile-nav-open {
   .video-home-list-item:last-child {
     margin-right: 0; } }
 
+.video-home-modal-body {
+  color: #F9F9F9;
+  font-size: 1.5rem; }
+  .video-home-modal-body a {
+    color: white; }
+
 .video-home-news {
   display: -webkit-box;
   display: -ms-flexbox;
