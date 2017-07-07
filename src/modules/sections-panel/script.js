@@ -65,6 +65,9 @@ Paris.sectionsPanel = (function(){
       $(document).keyup(onKeyUp);
 
       $el.data('api', api);
+
+      // Buttons demarches
+      $('.component-buttons a').attr('target','_blank');
     }
 
     function initOptions() {
