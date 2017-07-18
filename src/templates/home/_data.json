@@ -170,6 +170,16 @@
           }
         },
         {
+          "type": "jumbotron-slider",
+          "modifiers": ["layout-adjacent-before"],
+          "data": {
+            "image": "../../modules/jumbotron-slider/journees-olympiques.jpg",
+            "href": "#",
+            "title": "Journées Olympiques",
+            "text": "Du 23 au 24 juin, paris.fr se met aux couleurs des J.O."
+          }
+        },
+        {
           "type": "sections",
           "modifiers": ["layout-adjacent-before-on-small"],
           "data": {

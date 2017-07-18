@@ -9,7 +9,7 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
-
+* module `jumbotron-slider`: refactored to be reusable
 * module `notice`: add top banner style
 
 ## 1.8.10 (2017-07-18)

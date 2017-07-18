@@ -1,192 +1,96 @@
-.layout-jo {
-  top: 0px;
-  position: absolute;
-  width: 100%;
-  z-index: 9999;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  height: 980px;
-
-
-  &.done {
-    transform: translateY(-430px);
-    transition: 2s ease transform;
-    position:fixed;
-  }
-
-  &.donenoeffect {
-    transform: translateY(-430px);
-    transition:0;
-    position:fixed;
-  }
-}
-
 .jumbotron-slider {
-  background-color: $white;
-  background-repeat:no-repeat;
-  background-position:50% 50%;
-  background-size: contain;
-  display: table;
-  height: 980px;
-  position: relative;
+  background-color: white;
+  color: $black;
+  display: block;
+  position: absolute;
   text-decoration: none;
+  top: 0;
   width: 100%;
+  z-index: 1050;
 
-
-  
-
-/*  .layout-wrapper.jumbotron-slider-content {
-    border-left: 6px solid $color-tertiary;
-    color: $white;
-    padding: 5px 24px 3px 24px;
-    @include large-and-medium {
-      padding-left: 35px;
-    }
-  }*/
-
-  &.home {
-    height: auto;
-
-    .layout-wrapper.jumbotron-slider-content {
-      border: none;
-      padding: 0;
-      text-align: center;
-
-      & > * {
-        margin: 0 auto;
-      }
-    }
-
-    .jumbotron-slider-wrapper {
-      padding: 0px;
-       
-
-/*      &:after {
-        background: white;
-        opacity: 0.25;
-
-        content: "";
-        display: block;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 0;
-
-        // Target IE 10 and 11
-        @media screen\0 {
-          height: 200%;
-        }
-      }*/
-      
-    }
-
-    .jumbotron-slider-text {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  }
-}
-
-.jumbotron-slider-wrapper {
-  display: table-cell;
-  overflow: hidden;
-  position: relative;
-  vertical-align: bottom;
-}
-
-html.no-js,
-html.no-touch {
-  .jumbotron-slider:not(.no-overlay):not(.home) {
-    .jumbotron-slider-wrapper:after {
-      transition: transform 1s ease;
-      transform: translateX(-20%);
-    }
-
-    &:hover {
-      .jumbotron-slider-wrapper:after {
-        transform: translateX(0);
-      }
-    }
-  }
-}
-
-.jumbotron-slider-content {
-  position: relative;
-  z-index: 1;
-}
-
-.jumbotron-slider-text {
-  font-size: 14px;
-  position: relative;
-  line-height: 2rem;
-  margin: 0 0 0px;
-  max-width: 960px;
-  color:$jo-blue;
-  text-align: center;
-}
-
-.jumbotron-slider-block {
-  float: left;
-}
-
-@include large {
-  .layout-jo {
-    height:490px;
-
+  &.closed {
+    top: -43rem;
+    position: fixed;
   }
 
-  .jumbotron-slider {
-    height: 490px;
-
-    &.home {
-      height: 490px;
-
-      .jumbotron-slider-text {
-        max-width: 960px;
-      }
+  animation: 2s ease-out 3s 1 forwards close;
+  @keyframes close {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: -43rem;
+      position: fixed;
     }
   }
 
-  .jumbotron-slider-text {
-    font-size: 14px;
-    line-height: 2rem;
-    margin: 0 auto;
-    height:60px;
-    font-weight:500;
-    a {
-      color:$jo-blue;
-      text-transform: none;
-      text-decoration: none;
-      cursor: pointer;
-      span {
-        border-bottom:1px solid #28377D;
+  &:hover {
+    .jumbotron-slider-notice {
+      &-text {
+        border-bottom: none;
       }
+
       i {
-        padding: 0;
-        font-size: 3.4em;
-        transition: right 0.2s;
-        vertical-align: middle;
+        right: -55px;
+        transition: right 0.5s;
       }
     }
   }
 
-}
+  &-content {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 43rem;
+  }
 
-@include small {
-  .jumbotron-slider,
-  .layout-jo {
+  &-notice {
+    display: table;
+    font-size: 1.4rem;
+    height: 6rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    &-content {
+      display: table-cell;
+      padding: 0 20px;
+      vertical-align: middle;
+      width: auto;
+
+      &-wrapper {
+        position: relative;
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+    }
+
+    &-text {
+      border-bottom: .1rem solid;
+      border-color: inherit;
+    }
+
+    i {
+      position: absolute;
+      top: -95%;
+      right: -47px;
+      padding: 0;
+      font-size: 3.4em;
+      transition: right 0.2s;
+    }
+  }
+
+  @include small {
     display:none;
-    z-index:0;
   }
 }
 
-@include medium {
-  .jumbotron-slider,
-  .layout-jo {
-    display:none;
-    z-index:0;
+html.no-cssanimations {
+  .jumbotron-slider {
+    top: -43rem;
+    position: fixed;
   }
 }

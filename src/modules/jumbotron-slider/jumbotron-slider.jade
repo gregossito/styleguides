@@ -1,18 +1,13 @@
-include ../button/button
-
 mixin jumbotron-slider(data)
-  div.jumbotron-slider(style="background-image: url(#{data.image});" title="#{data.image}" id=data.id class=data.modifiers)
-    .jumbotron-slider-wrapper
-      .layout-wrapper.jumbotron-slider-content
-        .jumbotron-slider-text
-          if (data.href)
-            a.jumbotron-slider-link(href=data.href)
-              strong= data.text
-              = "    —  "
-              span= data.hreftitle
-              i.icon-arrow-small-right
-          else 
-            span= data.text
-        if block
-          .jumbotron-block
-            block
+  - var tag = (data.href) ? 'a' : 'div'
+  #{tag}.jumbotron-slider(class=data.modifiers href=data.href)
+    .jumbotron-slider-content(style="background-image: url(#{data.image});")
+    .jumbotron-slider-notice
+      p.jumbotron-slider-notice-content
+        span.jumbotron-slider-notice-content-wrapper
+          span.jumbotron-slider-notice-title= data.title
+          if data.text
+            != "&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;"
+            span.jumbotron-slider-notice-text= data.text
+          if data.href
+            i.icon-arrow-small-right
