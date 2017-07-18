@@ -33,6 +33,10 @@
         }
       }
 
+      .news-card-date{
+        color: $white;
+      }
+
       .news-card-counters {
         opacity: 1;
         transform: scaleY(1);
@@ -128,6 +132,18 @@
     position: relative;
     top: 1px;
   }
+}
+
+.news-card-date {
+  color: $gray99;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+    >span{
+      display: block;
+      margin-top: 1rem;
+    }
 }
 
 .news-card-counters {display: none;}

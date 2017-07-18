@@ -40,6 +40,35 @@
           }
         ]
       }
+    },{
+      "title": "3 appels à projets",
+      "description": "",
+      "data": {
+        "modifiers": ["news-cards"],
+        "items": [
+          {
+            "href": "#",
+            "image": "../../modules/news-card/image.jpg",
+            "category": "Environnement",
+            "title": "Trophées de l'Agriculture urbaine: postulez!",
+            "date": "du 26/06/17 au 31/12/2017"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/news-card/image.jpg",
+            "category": "Jeunes talents",
+            "title": "Talents #Paris2024, un appel à projets innovants pour les 16-25 ans",
+            "date": "du 26/06/17 au 31/12/2017"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/news-card/image.jpg",
+            "category": "Vie de quartier",
+            "title": "Appel à propositions pour un emplacement de commerce alimentaire square d’E. d’Orves (9e)",
+            "date": "à partir du 26/06/17"
+          }
+        ]
+      }
     }, {
       "title": "1 grande actualité + jusqu'à 4 petites actualités",
       "description": "",
