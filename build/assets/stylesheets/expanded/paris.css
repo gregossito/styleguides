@@ -3045,6 +3045,10 @@ html.no-touch .jumbotron-slider:not(.no-overlay):not(.home):hover .jumbotron-sli
       html.no-touch .news-card:focus .news-card-category:before,
       html.no-touch .news-card:focus .news-card-category:after {
         border-color: rgba(255, 255, 255, 0.3); }
+    html.no-js .news-card:hover .news-card-date, html.no-js .news-card:focus .news-card-date,
+    html.no-touch .news-card:hover .news-card-date,
+    html.no-touch .news-card:focus .news-card-date {
+      color: #FFF; }
     html.no-js .news-card:hover .news-card-counters, html.no-js .news-card:focus .news-card-counters,
     html.no-touch .news-card:hover .news-card-counters,
     html.no-touch .news-card:focus .news-card-counters {
@@ -3137,6 +3141,16 @@ html.no-touch .jumbotron-slider:not(.no-overlay):not(.home):hover .jumbotron-sli
     margin-right: 7px;
     position: relative;
     top: 1px; }
+
+.news-card-date {
+  color: #999;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  position: relative; }
+  .news-card-date > span {
+    display: block;
+    margin-top: 1rem; }
 
 .news-card-counters {
   display: none; }
