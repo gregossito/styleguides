@@ -13,5 +13,15 @@ mixin notice(data)
     p.notice-content
       if data.block
         != data.block
-      if block
+      else if block
         block
+      else
+        if data.href
+          a.notice-content-link(href=data.href)
+            span.notice-content-title= data.title
+            if data.text
+              != "&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;"
+              span.notice-content-text= data.text
+            i.icon-arrow-small-right
+        else
+          span.notice-content-title= data.title

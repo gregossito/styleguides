@@ -7,6 +7,11 @@ Let's take the `x.β.α` version number:
 * `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
 * `x` is for major release involving a more careful integration of the styleguide
 
+## x.β.α (coming soon)
+
+
+* module `notice`: add top banner style
+
 ## 1.8.10 (2017-07-18)
 
 * fix `news-card` add date
@@ -20,7 +25,7 @@ Let's take the `x.β.α` version number:
 ## 1.8.8 (2017-06-21)
 
 * fix `rheader` button participez color JO
-* fix `jecoute` message 
+* fix `jecoute` message
 
 ## 1.8.7 (2017-06-20)
 
@@ -36,7 +41,7 @@ Let's take the `x.β.α` version number:
 
 ## 1.8.4 (2017-06-15)
 
-* add `demande` block 
+* add `demande` block
 
 ## 1.8.3 (2017-06-15)
 
@@ -55,8 +60,12 @@ Let's take the `x.β.α` version number:
 ## 1.8.0 (2017-06-07)
 
 * add module `jumbotron-slider` for JO Home
-* module `rheafer`
+* module `rheader`
   * add `jo` style
+
+## 1.7.5 (2017-05-31)
+
+* module `rheader`: hide totally when minimized on mobile
 
 ## 1.7.4 (2017-05-16)
 

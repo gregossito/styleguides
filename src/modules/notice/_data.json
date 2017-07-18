@@ -8,6 +8,14 @@
         "block": "Texte de la notice"
       }
     }, {
+      "title": "Avec lien",
+      "data": {
+        "modifiers": ["long-text"],
+        "href": "#",
+        "title": "Titre",
+        "text": "label du lien"
+      }
+    }, {
       "title": "Fermable",
       "data": {
         "block": "Texte de la notice",
