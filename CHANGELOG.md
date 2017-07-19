@@ -9,6 +9,7 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+* component `demande`: refactor to follow component model
 * component `jecoute`: set email optional
 * `modernizr`: update to 3.5.0 (touch renamed to touchevents)
 * module `jumbotron-slider`: refactored to be reusable

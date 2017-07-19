@@ -1,17 +1,8 @@
-$offset-heading: 32px;
-
 .component-demande {
-  margin: 40px 0 20px 0;
-  .component-text{
-    p{
-      clear: both;
-    }
-  }
-  .component-text:first-child{
-    h2{
-      border-top: 7px solid $grayF2;
-      padding-top: 20px;
-    }
-  } 
-}
+  @extend %component-text;
 
+  h2 {
+    border-top: 7px solid $grayF2;
+    color: $gray1A;
+  }
+}
