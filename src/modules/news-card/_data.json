@@ -34,8 +34,8 @@
           "twitter": [67890, "retweets"]
         }
       }
-    },{
-      "title": "Date de publication et dépublication",
+    }, {
+      "title": "Avec une indication de dates",
       "description": "",
       "attrs": {
         "style": "max-width: 350px"
@@ -45,22 +45,9 @@
         "image": "image.jpg",
         "category": "Catégorie",
         "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra nisi fermentum",
-        "date": "du xx/xx/xxxx au xx/xx/xxxx"
+        "date": "Du xx/xx/xxxx au xx/xx/xxxx"
       }
-    },{
-      "title": "Sans date de dépublication",
-      "description": "",
-      "attrs": {
-        "style": "max-width: 350px"
-      },
-      "data": {
-        "href": "#",
-        "image": "image.jpg",
-        "category": "Catégorie",
-        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra nisi fermentum",
-        "date": "À partir du xx/xx/xxxx"
-      }
-    },{
+    }, {
       "title": "Large",
       "description": "",
       "attrs": {
