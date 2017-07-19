@@ -7,7 +7,8 @@ var Paris = window.Paris || {};
 Paris.jecoute = (function(){
 
   var defaultOptions = {
-    thanks: "Attention nous ne formulons pas de réponse dans cet espace."
+    desc: "",
+    thanks: ""
   };
 
   function jecoute(selector, userOptions){
@@ -152,8 +153,7 @@ Paris.jecoute = (function(){
 
     function onQuestionSaved(jqXHR, status) {
       $form.hide();
-      $message.text(options.thanks).show();
-      $message.removeClass('init');
+      $message.text(options.thanks).addClass('thanks');
     }
 
     function onQuestionError(jqXHR, status, err) {
@@ -167,11 +167,10 @@ Paris.jecoute = (function(){
     /////////////
 
     function showError(msg) {
-      $message.text(msg).addClass('text-error').show();
-      $message.removeClass('init');
+      $message.text(msg).addClass('error');
       window.setTimeout(function() {
         $formElements.attr('disabled', false);
-        $message.show().removeClass('text-error').text('');
+        $message.removeClass('error').html('<em>' + options.desc + '</em>');
       }, 7000);
     }
 
