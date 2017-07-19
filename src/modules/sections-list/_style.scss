@@ -36,7 +36,7 @@
   }
 
   html.no-js &,
-  html.no-touch & {
+  html.no-touchevents & {
     &:before {
       bottom: 0px;
       content: "";
@@ -103,7 +103,7 @@
     }
 
     html.no-js &,
-    html.no-touch & {
+    html.no-touchevents & {
       &:before {
         border-radius: 5px;
       }
@@ -117,7 +117,7 @@
       background-color: transparentize($home-cat-blue2, 0.3);
 
       html.no-js &,
-      html.no-touch & {
+      html.no-touchevents & {
         &:before {
           background-color: $home-cat-blue2;
         }
@@ -136,7 +136,7 @@
         background-color: transparentize($home-cat-red, 0.3);
 
         html.no-js &,
-        html.no-touch & {
+        html.no-touchevents & {
           &:before {
             background-color: $home-cat-red;
           }
@@ -157,7 +157,7 @@
         background-color: transparentize($home-cat-blue1, 0.3);
 
         html.no-js &,
-        html.no-touch & {
+        html.no-touchevents & {
           &:before {
             background-color: $home-cat-blue1;
           }
@@ -177,7 +177,7 @@
         background-color: transparentize($home-cat-green, 0.3);
 
         html.no-js &,
-        html.no-touch & {
+        html.no-touchevents & {
           &:before {
             background-color: $home-cat-green;
           }
@@ -197,7 +197,7 @@
         background-color: transparentize($home-cat-yellow, 0.3);
 
         html.no-js &,
-        html.no-touch & {
+        html.no-touchevents & {
           &:before {
             background-color: $home-cat-yellow;
           }
@@ -235,7 +235,7 @@
       padding: 30px $small-page-padding;
 
       html.no-js,
-      html.no-touch {
+      html.no-touchevents {
         &:hover:after {
           color: $grayF2;
         }

@@ -33,7 +33,7 @@
   &:last-child:after {background-color: rgba($color-secondary-variant, 0.9);}
 
   html.no-js &,
-  html.no-touch & {
+  html.no-touchevents & {
     &:hover {
       &:after {background-color: rgba($yellow1, 1);}
     }

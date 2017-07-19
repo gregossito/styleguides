@@ -5,7 +5,7 @@
   text-decoration: none;
 
   html.no-js &,
-  html.no-touch & {
+  html.no-touchevents & {
     &:hover,
     &:focus {
       color: $white;
@@ -47,21 +47,21 @@
 }
 
 .news-card-wrapper {
-  html.touch &    {margin-bottom: 20px;}
+  html.touchevents &    {margin-bottom: 20px;}
   html.no-js &,
-  html.no-touch & {margin-bottom: 10px;}
+  html.no-touchevents & {margin-bottom: 10px;}
   border-radius: 5px;
   transition: 0.2s ease transform;
   transform: translateY(0);
 
-  html.touch & {
+  html.touchevents & {
     background-color: $grayF2;
     border-radius: 0 0 5px 5px;
   }
-  html.touch .gray-background & {
+  html.touchevents .gray-background & {
     background-color: $white;
   }
-  html.touch .red-background & {
+  html.touchevents .red-background & {
     background-color: transparentize($white, 0.8);
   }
 }
@@ -77,9 +77,9 @@
 }
 
 .news-card-content {
-  html.touch &    {padding-bottom: 20px;}
+  html.touchevents &    {padding-bottom: 20px;}
   html.no-js &,
-  html.no-touch & {padding-bottom: 30px;}
+  html.no-touchevents & {padding-bottom: 30px;}
   position: relative;
 
   &:before {
@@ -149,7 +149,7 @@
 .news-card-counters {display: none;}
 
 html.no-js,
-html.no-touch {
+html.no-touchevents {
   .news-card-counters {
     display: block;
     opacity: 0;
@@ -212,8 +212,8 @@ html.no-touch {
 
       html.no-js &:hover,
       html.no-js &:focus,
-      html.no-touch &:hover,
-      html.no-touch &:focus {
+      html.no-touchevents &:hover,
+      html.no-touchevents &:focus {
         .news-card-wrapper {
           transform: none;
         }
@@ -269,7 +269,7 @@ html.no-touch {
         transition: 0.3s ease transform;
         z-index: 1;
         html.no-js &,
-        html.no-touch & {
+        html.no-touchevents & {
           &:before {background: none;}
         }
       }
@@ -326,7 +326,7 @@ html.no-touch {
   color: $white;
 
   html.no-js &,
-  html.no-touch & {
+  html.no-touchevents & {
     &:hover,
     &:focus {
       color: $qfap-red;

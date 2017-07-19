@@ -97,7 +97,7 @@
 }
 
 html.no-js,
-html.no-touch {
+html.no-touchevents {
   .jumbotron:not(.no-overlay):not(.home) {
     .jumbotron-wrapper:after {
       transition: transform 1s ease;
