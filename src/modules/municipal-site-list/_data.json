@@ -152,6 +152,156 @@
           }
         ]
       }
+    },
+    {
+      "title": "Liste des arrondissements",
+      "description": "",
+      "data": {
+        "logo":"oui",
+        "text":"Retrouvez l’actualité de votre arrondissement et accédez rapidement à vos démarches administratives",
+        "items": [
+          {
+            "button": {
+              "text": "1",
+              "title": "Mairie du 1er arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "2",
+              "title": "Mairie du 2ème arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "3",
+              "title": "Mairie du 3ème arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "4",
+              "title": "Mairie du 4eme arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "5",
+              "title": "Mairie du 5ème arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "6",
+              "title": "Mairie du 6eme arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "7",
+              "title": "Mairie du 7ème arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "8",
+              "title": "Mairie du 8ème arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "9",
+              "title": "Mairie du 9eme arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "10",
+              "title": "Mairie du 10ème arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "11",
+              "title": "Mairie du 1er arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "12",
+              "title": "Mairie du 2ème arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "13",
+              "title": "Mairie du 3ème arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "14",
+              "title": "Mairie du 4eme arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "15",
+              "title": "Mairie du 5ème arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "16",
+              "title": "Mairie du 6eme arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "17",
+              "title": "Mairie du 7ème arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "18",
+              "title": "Mairie du 8ème arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "19",
+              "title": "Mairie du 9eme arrondissement",
+              "modifiers": ["white"]
+            }
+          },
+          {
+            "button": {
+              "text": "20",
+              "title": "Mairie du 10ème arrondissement",
+              "modifiers": ["white"]
+            }
+          }
+        ]
+      }
     }]
   }
 }

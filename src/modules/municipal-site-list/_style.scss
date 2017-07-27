@@ -1,14 +1,25 @@
-.municipal-site-list-intro{
-  color: $white;
+.municipal-site-list-intro,
+.municipal-site-list-intro-secondary{
   display: inline-block;
   float: left;
-  font-size: 2.2rem;
-  font-weight: 700;
-  line-height: 2.4rem;
-  max-width: 240px;
 }
 
-.municipal-site-list{
+.municipal-site-list-intro{
+  color: $white;
+  font-size: 2.2rem;
+  font-weight: 700;
+  max-width: 24rem;
+}
+
+.municipal-site-list-intro-secondary{
+  color: $gray33;
+  font-size: 1.8rem;
+  font-weight: 300;
+  max-width: 29rem;
+}
+
+.municipal-site-list,
+.municipal-site-list-secondary{
   display: flex;
   flex-wrap: wrap;
   list-style: none;
