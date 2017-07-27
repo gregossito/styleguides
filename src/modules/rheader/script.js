@@ -11,7 +11,7 @@ Paris.rheader = (function(){
     breakpoint: "rheader-medium",
     mobileNavId: "rheader-mobile-nav",
     scrollMinDelta: 50,
-    extendOnTemplate: 'home',
+    // extendOnTemplate: 'home',
     selectorButtonInPage: '.button[data-action="open-search"]'
   };
 
@@ -47,19 +47,17 @@ Paris.rheader = (function(){
             fix();
           }
         });
-        if(!$('.notice.top').length || $(window).scrollTop() >= $('.notice.top').height() ) {
+        if(!$('.notice.top').length
+            || $('.notice.top.fixed').length
+            || ($(window).scrollTop() >= $('.notice.top').height())) {
           fix();
         }
-      }
-
-      if ($('#notice_home_top.jo').length) {
-        $('.rheader').addClass('jo');
       }
 
       // extend or unextend
       PubSub.subscribe('scroll.search.down', unextend);
       PubSub.subscribe('scroll.search.up', extend);
-      if ($mainSearch.length !== 0) {
+      if ($mainSearch.length !== 0 && isAboveMainSearch()) {
         // extend initially if we are above the main search field
         extend();
       }
@@ -75,17 +73,15 @@ Paris.rheader = (function(){
       $buttonSearch.on('click', onClickButtonSearch);
       // also open search from skip-links
       $('.skip-links a[href="#search"]').on('click', onClickButtonSearch);
-      $('.rheader').show();
     }
 
     function initOptions() {
-      $el.removeClass('extended');
       $.each($el.data(), function(key, value){
         options[key] = value;
       });
     }
 
-    function isAboveMainSearch(){
+    function isAboveMainSearch() {
       return $(window).scrollTop() < $mainSearch.offset().top;
     }
 
@@ -116,7 +112,7 @@ Paris.rheader = (function(){
     // extend or unextend
     function extend() {
       if ($mainSearch.length === 0 || !$('body').hasClass(options.extendOnTemplate)) {return;}
-      //$el.addClass('extended');
+      $el.addClass('extended');
       // prevent focus on hidden buttons when using keyboard navigation (for accessibility)
       $el.find('.rheader-wrapper > .rheader-button').attr('tabindex', '-1');
     }
@@ -149,8 +145,12 @@ Paris.rheader = (function(){
         }
         var $parent = $mainSearch.closest('.layout-content');
         if ($mainSearch.length) {
+          var offset = $el.height();
+          offset += $('.notice.top.fixed').length ? $('.notice.top.fixed').height() : 0;
+
           $parent.velocity("scroll",
             {
+              offset: -offset,
               duration: 1000,
               complete: focusMainSearch
             }
@@ -180,7 +180,12 @@ Paris.rheader = (function(){
     function openMenu() {
       $('.rheader-mobile-nav .rheader-nav').get(0).scrollTop = 0;
 
-      if (!$el.hasClass('fixed')) {$buttonMenu.hide();}
+      var shouldTranslateButtonMenu = (!$el.hasClass('fixed') || $('.notice.top.fixed').length);
+
+      if (shouldTranslateButtonMenu) {
+        $buttonMenu.hide();
+      }
+
       $overlay.velocity({
         opacity: [1, 0]
       }, {
@@ -188,7 +193,10 @@ Paris.rheader = (function(){
         ease: 'ease-in-out',
         display: 'block',
         complete: function(){
-          if (!$el.hasClass('fixed')) {$buttonMenu.css('transform', 'translateY(-' + (60 - $(document).scrollTop()) + 'px)').show();}
+          if (shouldTranslateButtonMenu) {
+            // $buttonMenu.css('transform', 'translateY(-' + (60 - $(document).scrollTop()) + 'px)').show();
+            $buttonMenu.css('transform', 'translateY(-60px)').show();
+          }
         }
       });
       $('body').addClass('rheader-mobile-nav-open');
@@ -201,7 +209,12 @@ Paris.rheader = (function(){
     }
 
     function closeMenu() {
-      if (!$el.hasClass('fixed')) {$buttonMenu.hide();}
+      var shouldTranslateButtonMenu = (!$el.hasClass('fixed') || $('.notice.top.fixed').length);
+
+      if (shouldTranslateButtonMenu) {
+        $buttonMenu.hide();
+      }
+
       $overlay.velocity({
         opacity: [0, 1]
       }, {
@@ -209,11 +222,15 @@ Paris.rheader = (function(){
         ease: 'ease-in-out',
         display: 'none',
         complete: function(){
-          if (!$el.hasClass('fixed')) {$buttonMenu.css('transform', 'translateY(0)').show();}
+          if (shouldTranslateButtonMenu) {
+            $buttonMenu.css('transform', 'translateY(0)').show();
+          }
         }
       });
       $('body').removeClass('rheader-mobile-nav-open');
+
       $(document).off('touchstart touchmove');
+
       mobileNavOpen = false;
     }
 

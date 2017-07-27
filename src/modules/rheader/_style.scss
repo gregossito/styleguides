@@ -1,7 +1,7 @@
 @import "_variables";
 
 .rheader {
-  display:none;
+  // display:none;
   background-color: $color-primary;
   height: $rheader-height-small;
   position: relative;
@@ -42,8 +42,6 @@
   }
 }
 
-
-
 .rheader-logo {
   background-color: $color-primary;
   border-bottom: 4px solid $color-tertiary;
@@ -79,9 +77,11 @@
 }
 
 .rheader-locales {
-  display: none;
-  font-size: 1rem;
-  line-height: 1.7rem;
+  display: none !important;
+  font-size: 1.2rem;
+  line-height: 2.8rem;
+  // font-size: 1rem;
+  // line-height: 1.8rem;
   padding: 0;
   text-align: left;
   text-transform: uppercase;
@@ -247,8 +247,6 @@ body.rheader-mobile-nav-open {
   }
 }
 
-
-
 .rheader-nav-item-icon,
 .rheader-button-icon {
   display: inline-block;
@@ -272,6 +270,12 @@ body.rheader-mobile-nav-open {
 
 .rheader.fixed + .layout-main > .layout-content:first-child {
   padding-top: $rheader-height-small;
+}
+
+.notice.top.fixed + .rheader {
+  position: fixed;
+  top: $notice-height;
+  left: 0;
 }
 
 
@@ -681,8 +685,8 @@ body.rheader-mobile-nav-open {
   }
 
   .rheader-locales {
-    font-size: 1rem;
-    line-height: 1.7rem;
+    line-height: 2.4rem;
+    // line-height: 1.4rem;
   }
 
   .rheader-nav-item {
@@ -703,6 +707,13 @@ body.rheader-mobile-nav-open {
   .rheader + .quick-access + .layout-main > .layout-content:first-child {
     padding-top: $rheader-height-small;
   }
+
+  .notice.top.fixed {
+    & + .rheader.fixed + .layout-main > .layout-content:first-child,
+    & + .rheader + .quick-access + .layout-main > .layout-content:first-child {
+      padding-top: $rheader-height-small + $notice-height;
+    }
+  }
 }
 
 @media (min-width: $rheader-large-min) {
@@ -713,6 +724,22 @@ body.rheader-mobile-nav-open {
   .rheader.extended + .quick-access {
     margin-top: $rheader-height-medium + 20px;
   }
+  .rheader + .quick-access {
+    margin-top: $rheader-height-medium;
+  }
+
+  .notice.top.fixed {
+    & + .rheader.fixed.extended + .layout-main > .layout-content:first-child,
+    & + .rheader.extended + .quick-access + .layout-main > .layout-content:first-child {
+      padding-top: $rheader-height-medium + $notice-height + 20px;
+    }
+    & + .rheader.extended + .quick-access {
+      margin-top: $rheader-height-medium + $notice-height + 20px;
+    }
+    & + .rheader + .quick-access {
+      margin-top: $rheader-height-medium + $notice-height;
+    }
+  }
 }
 
 @media (min-width: $rheader-medium-min) {
@@ -721,87 +748,17 @@ body.rheader-mobile-nav-open {
     background-color: $color-primary; // to prevent a white area below header (edge case)
     padding-top: $rheader-height-medium;
   }
-  .rheader + .quick-access {
-    margin-top: $rheader-height-medium;
-  }
   .rheader.fixed + .layout-main > .layout-content.black-background:first-child {
-    background:$gray28;
+    background: $gray28;
   }
   .rheader.fixed + .layout-main > .layout-content.red-background:first-child {
-    background:#F95053;
-  }
-}
-
-@include small {
-  .rheader + .quick-access {
-    margin-top: 0;
-  }
-}
-
-.jo {
-  &.rheader {
-    background-color: $red-color-jo;
-  }
-  .rheader-logo {
-    background-color: $red-color-jo;
-  }
-  .rheader-nav-item.get-involved {
-    background-color: $purple-color-jo;
-    &:hover a,
-    & a:focus,
-    &.current a {
-      background-color: #ffcc00;
-    }
+    background: $qfap-red;
   }
 
-  .rheader-nav-item.get-involved:hover {
-    .rheader-nav-item-hover {
-      color: $red-color-jo;
-      &:after {
-        background-color: $red-color-jo;
-      }
-    }
-  }
-
-  .rheader-button-menu {
-    background-color: $red-color-jo;
-  }
-
-  .rheader-mobile-nav {
-    background-color: $red-color-jo;
-  }
-
-  .rheader-wrapper>.rheader-button:hover,
-  .rheader-wrapper>.rheader-button.active {
-    background-color: $purple-color-jo;
-  }
-
-  .rheader-locales {
-    font-size: 1rem;
-    line-height: 1.7rem;
-  }
-
-  .rheader-wrapper {
-    > .rheader-button-search {
-      border-right: 1px solid #cc0410;
-      border-left: 1px solid #cc0410;
-      &:hover,
-      &.active {
-        background: $red-color-jo-variant;
-      }
-    }
-  }
-}
-
-@include small {
-  .jo {
-    .rheader-nav-item.get-involved:hover {
-      .rheader-nav-item-text {
-        color:$red-color-jo;
-        &:after {
-          background-color: $red-color-jo;
-        }
-      }
+  .notice.top.fixed {
+    & + .rheader.fixed + .layout-main > .layout-content:first-child,
+    & + .rheader + .quick-access + .layout-main > .layout-content:first-child {
+      padding-top: $rheader-height-medium + $notice-height;
     }
   }
 }
