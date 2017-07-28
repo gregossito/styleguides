@@ -8,7 +8,9 @@ mixin news-card(data)
           if (data.target === "_blank")
             span.icon-link-external
           = data.title
-        .news-card-date: span= data.date
+        if data.date
+          .news-card-date
+            span= data.date
         if data.counters
           .news-card-counters
             .news-card-counter.facebook-counter

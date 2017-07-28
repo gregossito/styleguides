@@ -9,11 +9,19 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+
+
+## 1.9.0 (2017-07-28)
+
 * component `demande`: refactor to follow component model
 * component `jecoute`: set email optional
 * `modernizr`: update to 3.5.0 (touch renamed to touchevents)
 * module `jumbotron-slider`: refactored to be reusable
 * module `notice`: add top banner style
+* module `rheader`:
+  * disable unfix when there is a top fixed notice
+  * fix spacing when there is a top fixed notice
+  * remove extended on home
 
 ## 1.8.10 (2017-07-18)
 

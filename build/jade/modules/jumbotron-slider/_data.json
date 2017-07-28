@@ -3,13 +3,12 @@
     "type": "jumbotron-slider",
     "description": "",
     "examples": [{
-      "title": "jumbotron slider home",
+      "title": "Standard",
       "description": "",
       "data": {
-        "href": "http://www.paris.fr",
+        "href": "#",
         "image": "journees-olympiques.jpg",
-        "modifiers": ["layout-jo"],
-        "title": "",
+        "title": "Journées Olympiques",
         "text": "Du 23 au 24 juin, paris.fr se met aux couleurs des J.O."
       }
     }]

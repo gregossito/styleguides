@@ -9,11 +9,11 @@
         "title": "Vous avez une demande ?",
         "text": "Contactez le service concerné en utilisant ce formulaire :",
         "button": {
-          "text": "Valider",
+          "text": "Accéder au formulaire",
           "title": "Formulaire de contact",
           "href": "https://sollicitations.paris.fr",
           "target": "_blank",
-          "modifiers": ["secondary","action"]
+          "modifiers": ["secondary", "action"]
         }
       }
     }]

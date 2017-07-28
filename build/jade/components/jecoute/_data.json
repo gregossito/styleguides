@@ -24,9 +24,30 @@
           "text": "Valider",
           "title": "Valider votre question à Paris j'écoute"
         },
-        "desc": "Merci pour votre contribution. Attention nous ne formulons pas de réponse dans cet espace.",
         "thanks": "Merci, votre question a bien été transmise.",
         "error": "Une erreur est survenue lors de l'envoie de votre question. Merci de réessayer plus tard."
+      }
+    }, {
+      "title": "Sans email",
+      "description": "",
+      "data": {
+        "title": "Paris j'écoute",
+        "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
+        "form": {
+          "action": "#",
+          "method": "post"
+        },
+        "textarea": {
+          "placeholder": "Quelle information cherchiez-vous dans cette rubrique ?",
+          "title": "Quelle information cherchiez-vous dans cette rubrique ? - obligatoire"
+        },
+        "button": {
+          "text": "Valider",
+          "title": "Valider votre question à Paris j'écoute"
+        },
+        "desc": "Merci pour votre contribution. Attention nous ne formulons pas de réponse dans cet espace.",
+        "thanks": "Nous vous remercions pour votre message que nous prenons bien en compte. Veuillez noter par contre que nous ne formulons pas de réponse aux messages postés ici.",
+        "error": "Une erreur est survenue lors de l'envoie de votre contribution. Merci de réessayer plus tard."
       }
     }, {
       "title": "Champs pré-remplis",
@@ -52,7 +73,6 @@
           "text": "Valider",
           "title": "Valider votre question à Paris j'écoute"
         },
-        "desc": "Merci pour votre contribution. Attention nous ne formulons pas de réponse dans cet espace.",
         "thanks": "Merci, votre question a bien été transmise.",
         "error": "Une erreur est survenue lors de l'envoie de votre question. Merci de réessayer plus tard."
       }
@@ -98,7 +118,6 @@
           "text": "Valider",
           "title": "Valider votre question à Parhistoire"
         },
-        "desc": "Merci pour votre contribution. Attention nous ne formulons pas de réponse dans cet espace.",
         "thanks": "Merci, votre question a bien été transmise.",
         "error": "Une erreur est survenue lors de l'envoie de votre question. Merci de réessayer plus tard."
       }

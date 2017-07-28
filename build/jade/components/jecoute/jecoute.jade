@@ -1,7 +1,7 @@
 include ../../modules/button/button
 
 mixin jecoute(data)
-  .component.component-jecoute(data-thanks=data.thanks data-error=data.error class=data.modifiers)
+  .component.component-jecoute(data-thanks=data.thanks data-error=data.error data-desc=data.desc class=data.modifiers)
     .jecoute-title
       h2= data.title
     .jecoute-content
@@ -10,7 +10,8 @@ mixin jecoute(data)
         - var textarea = JSON.parse(JSON.stringify(data.textarea)) // clone the data object
         - delete textarea.value
         textarea(name="message" required=true aria-required="true")&attributes(textarea)= data.textarea.value
-        input(type="hidden" name="email" required=true aria-required="true")&attributes(data.email)
+        if data.email
+          input(type="email" name="email" required=true aria-required="true")&attributes(data.email)
         if data.upload
           - var upload = JSON.parse(JSON.stringify(data.upload))
           div.jecoute-upload
@@ -37,4 +38,6 @@ mixin jecoute(data)
         - button.modifiers = ["secondary", "action"]
         - button.attributes = {"type": "submit"}
         +button(button)
-      p.jecoute-message.init= data.desc
+      p.jecoute-message
+        if data.desc
+          em= data.desc
