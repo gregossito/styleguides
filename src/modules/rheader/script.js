@@ -24,7 +24,8 @@ Paris.rheader = (function(){
         $mainSearch,
         scrollMonitor,
         lastScrollY = 0,
-        mobileNavOpen = false
+        mobileNavOpen = false,
+        hasFixedTopNotice = false
       ;
 
     function init(){
@@ -33,6 +34,8 @@ Paris.rheader = (function(){
       $buttonMenu = $el.find('.rheader-button-menu');
       $buttonSearch = $el.find('.rheader-button-search');
       $mainSearch = $('#main-search');
+
+      hasFixedTopNotice = Boolean($('.notice.top.fixed').length);
 
       PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableMobileNav);
       PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableMobileNav);
@@ -107,7 +110,12 @@ Paris.rheader = (function(){
 
     // fix or unfix
     function fix() {$el.addClass('fixed');}
-    function unfix() {$el.removeClass('fixed');}
+    function unfix() {
+      if (hasFixedTopNotice) {
+        return;
+      }
+      $el.removeClass('fixed');
+    }
 
     // extend or unextend
     function extend() {
@@ -146,7 +154,7 @@ Paris.rheader = (function(){
         var $parent = $mainSearch.closest('.layout-content');
         if ($mainSearch.length) {
           var offset = $el.height();
-          offset += $('.notice.top.fixed').length ? $('.notice.top.fixed').height() : 0;
+          offset += hasFixedTopNotice ? $('.notice.top.fixed').height() : 0;
 
           $parent.velocity("scroll",
             {
@@ -180,7 +188,7 @@ Paris.rheader = (function(){
     function openMenu() {
       $('.rheader-mobile-nav .rheader-nav').get(0).scrollTop = 0;
 
-      var shouldTranslateButtonMenu = (!$el.hasClass('fixed') || $('.notice.top.fixed').length);
+      var shouldTranslateButtonMenu = (!$el.hasClass('fixed') || hasFixedTopNotice);
 
       if (shouldTranslateButtonMenu) {
         $buttonMenu.hide();
@@ -209,7 +217,7 @@ Paris.rheader = (function(){
     }
 
     function closeMenu() {
-      var shouldTranslateButtonMenu = (!$el.hasClass('fixed') || $('.notice.top.fixed').length);
+      var shouldTranslateButtonMenu = (!$el.hasClass('fixed') || hasFixedTopNotice);
 
       if (shouldTranslateButtonMenu) {
         $buttonMenu.hide();
