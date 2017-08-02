@@ -1,10 +1,9 @@
-  .video-home-modal-body {
-    color:#F9F9F9;
-    font-size:1.5rem;
-    a {
-      color:white;
-    }
+.video-home-modal-body {
+  font-size:1.5rem;
+  a {
+    color:white;
   }
+}
 
 .video-home-news{
   display: flex;
@@ -129,10 +128,8 @@
     }
     
     &.large{
-      background: $grayF2;
       border-radius: 4px;
       margin-right: 3rem;
-      padding: 2rem;
 
       .video-home-title{
         font-size: 2.2rem;
@@ -232,6 +229,9 @@
       }
 
       &.large {
+        // .video-home-image{
+        //   height: 270px;
+        // }
         @include span(8 of 12);
       }
     }
