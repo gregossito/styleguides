@@ -4,300 +4,152 @@
     "description": "",
     "cssTheme": "",
     "bodyAttributes": {},
-    "examples": [{
-      "title": "Liste des arrondissements",
-      "description": "",
-      "data": {
-        "text":"Retrouver toute l'information et l'actualité de votre arrondissement",
-        "items": [
-          {
-            "button": {
-              "text": "1",
-              "title": "Mairie du 1er arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "2",
-              "title": "Mairie du 2ème arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "3",
-              "title": "Mairie du 3ème arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "4",
-              "title": "Mairie du 4eme arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "5",
-              "title": "Mairie du 5ème arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "6",
-              "title": "Mairie du 6eme arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "7",
-              "title": "Mairie du 7ème arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "8",
-              "title": "Mairie du 8ème arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "9",
-              "title": "Mairie du 9eme arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "10",
-              "title": "Mairie du 10ème arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "11",
-              "title": "Mairie du 1er arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "12",
-              "title": "Mairie du 2ème arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "13",
-              "title": "Mairie du 3ème arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "14",
-              "title": "Mairie du 4eme arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "15",
-              "title": "Mairie du 5ème arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "16",
-              "title": "Mairie du 6eme arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "17",
-              "title": "Mairie du 7ème arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "18",
-              "title": "Mairie du 8ème arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "19",
-              "title": "Mairie du 9eme arrondissement",
-              "modifiers": ["white"]
-            }
-          },
-          {
-            "button": {
-              "text": "20",
-              "title": "Mairie du 10ème arrondissement",
-              "modifiers": ["white"]
-            }
-          }
-        ]
-      }
-    },
+    "examples": [
     {
       "title": "Liste des arrondissements",
       "description": "",
       "data": {
         "logo":"oui",
-        "text":"Retrouvez l’actualité de votre arrondissement et accédez rapidement à vos démarches administratives",
+        "text":"Retrouvez l’actualité des Mairies d’arrondissements : Informations pratiques, sorties, services et démarches en ligne sont au rendez-vous ",
         "items": [
           {
             "button": {
-              "text": "1",
+              "text": "1er",
               "title": "Mairie du 1er arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "2",
+              "text": "2e",
               "title": "Mairie du 2ème arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "3",
+              "text": "3e",
               "title": "Mairie du 3ème arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "4",
+              "text": "4e",
               "title": "Mairie du 4eme arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "5",
+              "text": "5e",
               "title": "Mairie du 5ème arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "6",
+              "text": "6e",
               "title": "Mairie du 6eme arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "7",
+              "text": "7e",
               "title": "Mairie du 7ème arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "8",
+              "text": "8e",
               "title": "Mairie du 8ème arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "9",
+              "text": "9e",
               "title": "Mairie du 9eme arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "10",
+              "text": "10e",
               "title": "Mairie du 10ème arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "11",
+              "text": "11e",
               "title": "Mairie du 1er arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "12",
+              "text": "12e",
               "title": "Mairie du 2ème arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "13",
+              "text": "13e",
               "title": "Mairie du 3ème arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "14",
+              "text": "14e",
               "title": "Mairie du 4eme arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "15",
+              "text": "15e",
               "title": "Mairie du 5ème arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "16",
+              "text": "16e",
               "title": "Mairie du 6eme arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "17",
+              "text": "17e",
               "title": "Mairie du 7ème arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "18",
+              "text": "18e",
               "title": "Mairie du 8ème arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "19",
+              "text": "19e",
               "title": "Mairie du 9eme arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           },
           {
             "button": {
-              "text": "20",
+              "text": "20e",
               "title": "Mairie du 10ème arrondissement",
-              "modifiers": ["white"]
+              "modifiers": ["blue"]
             }
           }
         ]
