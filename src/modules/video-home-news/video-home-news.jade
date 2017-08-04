@@ -8,13 +8,13 @@ mixin video-home-news(data)
   ul.video-home-news
     li.video-home-list-item(class=data.items[0].modifiers)
       a.video-home-item(href=data.items[0].href)
-        .video-home-wrapper
+        .video-home-wrapper.news-item
           .video-home-embed
             != data.items[0].embed_html
           .video-home-image(style=data.items[0].image && 'background-image: url(#{data.items[0].image});')
           .video-home-content
-            .video-home-title= data.items[0].text
-                .video-home-duration= data.items[0].duration
+            .video-home-title.news-item-meta= data.items[0].text
+                .video-home-duration.news-item-title= data.items[0].duration
       li.video-home-list-wrapper
         each item in data.items
           if item.modifiers && item.modifiers.indexOf("small") != -1

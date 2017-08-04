@@ -20,6 +20,10 @@
     text-decoration: none;
   }
 
+  .video-home-wrapper.news-item{
+    padding-top: 0;
+  }
+
   .video-home-image{
     display: block;
     background: $black;
@@ -98,6 +102,7 @@
     .video-home-title, .video-home-duration{
       color: $gray33;
       font-weight: 700;
+      text-transform: none;
     } 
     .video-home-duration{
       margin-top: 0.5rem;
@@ -106,6 +111,7 @@
 
   .video-home-list-item {
     // modifiers
+
     &.small {
       display: block;
       margin-right: 0;
