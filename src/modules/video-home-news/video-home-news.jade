@@ -15,15 +15,15 @@ mixin video-home-news(data)
           .video-home-content
             .video-home-title.news-item-meta= data.items[0].text
                 .video-home-duration.news-item-title= data.items[0].duration
-      li.video-home-list-wrapper
-        each item in data.items
-          if item.modifiers && item.modifiers.indexOf("small") != -1
-            .video-home-list-item(class=item.modifiers)
-              a.video-home-item(href=item.href)
-                .video-home-wrapper
-                  .video-home-embed
-                    != item.embed_html
-                  .video-home-image(style=item.image && 'background-image: url(#{item.image});')
-                  .video-home-content
-                    .video-home-title= item.text
-                        .video-home-duration= item.duration
+    li.video-home-list-item.video-home-list-wrapper
+      each item in data.items
+        if item.modifiers && item.modifiers.indexOf("small") != -1
+          .video-home-list-item(class=item.modifiers)
+            a.video-home-item(href=item.href)
+              .video-home-wrapper.news-item
+                .video-home-embed
+                  != item.embed_html
+                .video-home-image(style=item.image && 'background-image: url(#{item.image});')
+                .video-home-content
+                  .video-home-title.news-item-meta= item.text
+                      .video-home-duration.news-item-title= item.duration

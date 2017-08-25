@@ -108,10 +108,24 @@
       margin-top: 0.5rem;
     }
   }
+}
 
+.video-home-news{
   .video-home-list-item {
-    // modifiers
+    .video-home-wrapper.news-item{
+      border-bottom: none;
+      padding: 0 0 10px;
+      &:hover .video-home-title, 
+      &:focus .video-home-title{
+        color: $white;
 
+        & .video-home-duration{
+          transform: translateX(0);
+        }
+      }
+    }
+
+    // modifiers
     &.small {
       display: block;
       margin-right: 0;
