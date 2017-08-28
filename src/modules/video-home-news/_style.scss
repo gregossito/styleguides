@@ -1,5 +1,5 @@
 .video-home-modal-body {
-  font-size:1.5rem;
+  font-size: 1.5rem;
   a {
     color:white;
   }
@@ -34,7 +34,7 @@
     background-position: center;  /* Internet Explorer 7/8 */
     border-radius: 4px;
     height: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-top: 0;
     outline: none;
     padding-top: 56.25%;
@@ -45,13 +45,13 @@
       background-size:cover;
       background-position: center;  /* Internet Explorer 7/8 */
       content: '';
-      height: 5.7rem;
+      height: 57px;
       left: 50%;
       opacity: 1;
       position: absolute;
       top: 50%;
       transform: translate(-50%,-50%);
-      width: 5rem;
+      width: 50px;
       z-index: 100;
     }
   }
@@ -99,21 +99,39 @@
      text-decoration: none;
      cursor: pointer;
   }
-
-  .video-home-duration{
-    bottom: 8.5rem;
-    color: $white;    
-    font-weight: 500;
-    font-size: 1rem;
-    letter-spacing: 0.15rem;
+  .video-home-height{
+    height: 100%;
     position: absolute;
-    right: 1rem;
-    z-index: 1;
+    top: 0;
+    width: 100%;
+     
+     .video-home-duration{
+      bottom: 10px;
+      color: $white;    
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 0.15rem;
+      position: absolute;
+      right: 12px;
+      z-index: 1;
+    }
   }
+ 
 
   .video-home-content{
-    .video-home-title{
+    .video-home-title, 
+    .video-home-text{
       color: $gray33;
+    }
+
+    .video-home-title{
+      font-size: 1.3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      transition: 0.35s ease;
+    }
+
+    .video-home-text{
       font-weight: 700;
       text-transform: none;
     } 
@@ -122,17 +140,25 @@
   .video-home-list-item {
     .video-home-wrapper.news-item{
       border-bottom: none;
-      padding: 0 0 10px;
+      border-radius: 0 0 4px 4px;
       position: relative;
+      padding: 0;
       
       .news-item-meta{
         max-width: 90%; 
       }
 
+      &:hover .video-home-text, 
       &:hover .video-home-title, 
+      &:focus .video-home-text,
       &:focus .video-home-title{
         color: $white;
       }
+
+      &:hover .video-home-title{
+        transform: translateX(20px);
+      }
+
     }
 
     // modifiers
@@ -140,28 +166,36 @@
       display: block;
       margin-right: 0;
 
-      .video-home-title{
+      .video-home-content{
+        padding-bottom: 15px;
+      }
+
+      .video-home-text{
         font-size: 1.7rem;
-        line-height: 1.9rem;
+        line-height: 2.2rem;
       }
       
       .video-home-image:before{
-        height: 2.7rem;
-        width: 2.5rem;
+        height: 27px;
+        width: 25px;
       }
     }
     
     &.large{
       border-radius: 4px;
-      margin-right: 3rem;
+      margin-right: 30px;
+      
+      .video-home-content{
+        padding-bottom: 25px;
+      }
 
-      .video-home-title{
+      .video-home-text{
         font-size: 2.8rem;
         line-height: 3.2rem;
       }
       .video-home-image span {
-        width: 10rem;
-        height: 7.5rem;
+        width: 100px;
+        height: 75px;
       }
     }
 
@@ -177,8 +211,8 @@
   .video-home-news{
     .video-home-image{
        &:before {
-          height: 4rem;
-          width: 3.4rem;
+          height: 40px;
+          width: 34px;
         }
     }
   }
@@ -201,8 +235,8 @@
       .video-home-list-item {
         // modifiers
         &.small {    
-          margin-top: 2rem;         
-          padding-right: 1.5rem;
+          margin-top: 20px;         
+          padding-right: 15px;
           width: 50%;
 
           .video-home-image{
@@ -213,10 +247,10 @@
             max-width: 100%;
             .video-home-image {
               float: left;
-              height: 12rem;
+              height: 120px;
               margin-bottom: 0;
               padding-top: 0;
-              width: 19rem;
+              width: 190px;
             }
           }
         }
@@ -244,18 +278,15 @@
   .video-home-news{
     .video-home-list-wrapper {
       @include span(4 of 12);
-    }
-    .video-home-list-item {
-        &.small{
-          &:last-child{
-          padding-top: 2rem;
-        }
+      .video-home-image{
+        padding-top: 50.6%;
       }
-
+    }
+    .video-home-list-item {  
+      &.small:last-child{
+        padding-top: 10px;
+      } 
       &.large {
-        // .video-home-image{
-        //   height: 270px;
-        // }
         @include span(8 of 12);
       }
     }
