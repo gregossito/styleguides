@@ -145,7 +145,7 @@
       padding: 0;
       
       .news-item-meta{
-        max-width: 90%; 
+        padding-right: 15px;
       }
 
       &:hover .video-home-text, 
@@ -263,6 +263,25 @@
   .video-home-news{
     flex-flow: row wrap;
     .video-home-list-item {
+        &.small{
+          .video-home-item{
+            height: 100%;
+            .news-item{
+              min-height: 100%;
+              &:hover .video-home-text, 
+              &:focus .video-home-text{
+                transform:translateX(0);
+              }
+              .video-home-content{
+                padding: 10px 0 0 0;
+                .news-item-meta{
+                  max-width: 100%;
+                }
+              }
+            }
+          }  
+        }  
+
         &.large {
           margin-right: 0;
           width:100%;
