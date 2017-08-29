@@ -184,7 +184,9 @@
     &.large{
       border-radius: 4px;
       margin-right: 30px;
-      
+      width: 100%;
+      .video-home-wrapper{
+      }
       .video-home-content{
         padding-bottom: 25px;
       }
@@ -209,6 +211,9 @@
 
 @media (max-width:600px){
   .video-home-news{
+    .video-home-list-wrapper{
+      display: none;
+    }
     .video-home-image{
        &:before {
           height: 40px;
@@ -219,78 +224,112 @@
 }
 
 @include small{
-.video-home-news{
-    .video-home-list-wrapper{
-      display: none;
-    }
-  }
-}
-
-@media (min-width:768px) and (max-width:1024px){
   .video-home-news{
-    .video-home-list-wrapper{
-      display: flex;
-      width: 100%;
-      
-      .video-home-list-item {
-        // modifiers
-        &.small {    
-          margin-top: 20px;         
-          padding-right: 15px;
-          width: 50%;
+    .video-home-list-wrapper {
+    flex-direction: column;
+    .video-home-list-item {
+      // modifiers
+      &.small {
+        width: 100%;
+        .video-content{
+            padding: 0;
+        }
 
-          .video-home-image{
-            margin-right: 2rem;
-          }
-
-          .video-home-wrapper {
-            max-width: 100%;
-            .video-home-image {
-              float: left;
-              height: 120px;
-              margin-bottom: 0;
-              padding-top: 0;
-              width: 190px;
-            }
-          }
+      &.large{
+          margin-right: 0;
+          width: 100%;
         }
       }
     }
-  }
+   }
+ }
 }
+
+// @media (min-width:600px) and (max-width:1024px){
+//   .video-home-news{
+//     .video-home-list-wrapper{
+//       display: flex;
+//       width: 100%;
+      
+//       .video-home-list-item {
+//         // modifiers
+//         &.small {    
+//           .video-home-item{
+//             margin-top: 20px;         
+//             padding-right: 15px;
+//             width: 50%;
+
+//             .video-home-image{
+//               margin-right: 2rem;
+//             }
+
+//             .video-home-wrapper {
+//               max-width: 100%;
+//               .video-home-image {
+//                 float: left;
+//                 height: 120px;
+//                 margin-bottom: 0;
+//                 padding-top: 0;
+//                 width: 190px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 @media (max-width:1024px){
   .video-home-news{
     flex-flow: row wrap;
-    .video-home-list-item {
-        &.small{
-          .video-home-item{
-            height: 100%;
-            .news-item{
-              min-height: 100%;
-              &:hover .video-home-text, 
-              &:focus .video-home-text{
-                transform:translateX(0);
-              }
-              .video-home-content{
-                padding: 10px 0 0 0;
-                .news-item-meta{
-                  max-width: 100%;
-                }
-              }
-            }
-          }  
-        }  
 
-        &.large {
-          margin-right: 0;
-          width:100%;
+
+    .video-home-list-wrapper{
+      display: flex;
+      width: 100%;
+    }
+    .video-home-list-item {
+      &.small{
+
+      }
+      &.large{
+        margin-right: 0;
+        .video-home-wrapper{
+          max-width: 100%;
         }
       }
     }
-  .video-home-modal {
-    height:100%;
-  }  
+  //   .video-home-list-item {
+  //       &.small{
+  //         .video-home-item{
+  //           height: 100%;
+  //           .news-item{
+  //             min-height: 100%;
+  //             &:hover .video-home-text, 
+  //             &:focus .video-home-text{
+  //               transform:translateX(0);
+  //             }
+  //             .news-item-meta{
+  //               max-width: 100%;
+  //             }
+  //           }
+  //         }  
+  //       }  
+
+  //       &.large {
+  //         margin-right: 0;
+  //         width:100%;
+  //       }
+  //     }
+  //   }
+  // .video-home-list-item.small .video-content{
+  //   padding: 10px 0 0 0;
+  // }
+  // .video-home-modal {
+  //   height:100%;
+  // }  
+  }
 }
 
 @media (min-width:1024px){
@@ -328,12 +367,6 @@
     }
 
     .video-home-list-item {
-        &.large {
-          .video-home-wrapper {
-            max-width: 100%;
-          }
-        }
-
         &:last-child{
           margin-right: 0;
         }
