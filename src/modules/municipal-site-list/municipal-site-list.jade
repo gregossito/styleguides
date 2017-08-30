@@ -1,12 +1,10 @@
 include ../button/button
 
 mixin municipal-site-list(data)
-  .municipal-site-list-content
+  .municipal-site-list
     p.municipal-site-list-intro= data.text
-    ul.municipal-site-list
+    ul.municipal-site-list-items
       each item in data.items
-        li.municipal-site-list-item
-          .municipal-site-list-button
-            if item.button
-            - var button = JSON.parse(JSON.stringify(item.button)) // clone the data object
-              +button(button)
+        - item = JSON.parse(JSON.stringify(item || {})) // clone the data object
+        li
+          +button(item)
