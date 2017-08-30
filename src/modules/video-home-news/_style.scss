@@ -29,8 +29,8 @@
   .video-home-image{
     display: block;
     background: $black;
-    background-size:contain;
-    background-repeat:no-repeat;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     background-position: center;  /* Internet Explorer 7/8 */
     border-radius: 4px;
     height: 100%;
@@ -45,13 +45,11 @@
       background-size:cover;
       background-position: center;  /* Internet Explorer 7/8 */
       content: '';
-      height: 57px;
       left: 50%;
       opacity: 1;
       position: absolute;
       top: 50%;
       transform: translate(-50%,-50%);
-      width: 50px;
       z-index: 100;
     }
   }
@@ -100,13 +98,8 @@
      cursor: pointer;
   }
   .video-home-height{
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 100%;
-     
      .video-home-duration{
-      bottom: 10px;
+      top: 10px;
       color: $white;    
       font-weight: 500;
       font-size: 1rem;
@@ -148,6 +141,33 @@
         padding-right: 15px;
       }
 
+      .video-home-height{
+        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.7));
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+      }
+
+      .video-home-height:before{
+        background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        transition: opacity 0.4s ease;
+        width: 100%;
+        z-index: 2;
+      }
+
+      &:hover .video-home-height:before{
+        opacity: 1;
+      }
+
       &:hover .video-home-text, 
       &:hover .video-home-title, 
       &:focus .video-home-text,
@@ -167,7 +187,7 @@
       margin-right: 0;
 
       .video-home-content{
-        padding-bottom: 15px;
+        padding: 0 20px 15px 0;
       }
 
       .video-home-text{
@@ -185,19 +205,18 @@
       border-radius: 4px;
       margin-right: 30px;
       width: 100%;
-      .video-home-wrapper{
-      }
+
       .video-home-content{
-        padding-bottom: 25px;
+        padding: 0 50px 25px 0;
       }
 
       .video-home-text{
         font-size: 2.8rem;
-        line-height: 3.2rem;
+        line-height: 3.4rem;
       }
-      .video-home-image span {
-        width: 100px;
-        height: 75px;
+      .video-home-image:before{
+        width: 40px;
+        height: 45px;
       }
     }
 
@@ -337,7 +356,7 @@
     .video-home-list-wrapper {
       @include span(4 of 12);
       .video-home-image{
-        padding-top: 50.6%;
+        padding-top: 56%;
       }
     }
     .video-home-list-item {  

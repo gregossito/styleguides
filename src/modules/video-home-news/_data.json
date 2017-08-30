@@ -9,23 +9,23 @@
         "items": [
           {
             "href": "#",
-            "image": "",
+            "image": "large.jpg",
             "title": "À voir en ce moment",
-            "text": "Paris véritable parc Olympique !",
-            "duration": "00:44",
+            "text": "Conduisez un bateau sans permis au bassin de la Villette !",
+            "duration": "01:53",
             "modifiers":["large"]
           },
           {
             "href": "#",
-            "image": "",
-            "text": "Samedi les Journées Olympiques continuent !",
-            "duration": "04:12",
+            "image": "small1.jpg",
+            "text": "Découvrez Paris depuis le Petit Palais en Timelapse",
+            "duration": "02:55",
             "modifiers":["small"]
           },
           {
             "href": "#",
-            "image": "",
-            "text": "Journées Olympiques : une 1ère journée grandiose !",
+            "image": "small2.jpg",
+            "text": "Pour la première fois, Paris accueille une baignade surveillée en eau libre",
             "duration": "02:05",
             "modifiers":["small"]
           }

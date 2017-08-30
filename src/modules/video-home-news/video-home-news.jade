@@ -6,12 +6,12 @@ mixin video-home-news(data)
       .video-home-modal-body
   .video-home-placeholder!= data.placeholder
   ul.video-home-news
-    li.video-home-list-item(class=data.items[0].modifiers)
-      a.video-home-item(href=data.items[0].href)
+    li.video-home-list-item(class= data.items[0].modifiers)
+      a.video-home-item(href= data.items[0].href)
         .video-home-wrapper.news-item
           .video-home-embed
             != data.items[0].embed_html
-          .video-home-image(style=data.items[0].image && 'background-image: url(#{data.items[0].image});')
+          .video-home-image(style= data.items[0].image && 'background-image: url(#{data.items[0].image});')
             .video-home-height
               .video-home-duration= data.items[0].duration
           .video-home-content
@@ -25,7 +25,7 @@ mixin video-home-news(data)
               .video-home-wrapper.news-item
                 .video-home-embed
                   != item.embed_html
-                .video-home-image(style=item.image && 'background-image: url(#{item.image});')
+                .video-home-image(style= item.image && 'background-image: url(#{item.image});')
                   .video-home-height
                     .video-home-duration= item.duration
                 .video-home-content
