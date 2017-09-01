@@ -3966,28 +3966,26 @@ templatizer["municipal-site-list"]["button"] = function tmpl_municipal_site_list
 // municipal-site-list.jade:municipal-site-list compiled template
 templatizer["municipal-site-list"]["municipal-site-list"] = function tmpl_municipal_site_list_municipal_site_list(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<div class="municipal-site-list-content"><p class="municipal-site-list-intro">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + '</p><ul class="municipal-site-list">');
+    buf.push('<div class="municipal-site-list"><p class="municipal-site-list-intro">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + '</p><ul class="municipal-site-list-items">');
     (function() {
         var $$obj = data.items;
         if ("number" == typeof $$obj.length) {
             for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
                 var item = $$obj[$index];
-                buf.push('<li class="municipal-site-list-item"><div class="municipal-site-list-button">');
-                if (item.button) {}
-                var button = JSON.parse(JSON.stringify(item.button));
-                buf.push(templatizer["municipal-site-list"]["button"](button));
-                buf.push("</div></li>");
+                item = JSON.parse(JSON.stringify(item || {}));
+                buf.push("<li>");
+                buf.push(templatizer["municipal-site-list"]["button"](item));
+                buf.push("</li>");
             }
         } else {
             var $$l = 0;
             for (var $index in $$obj) {
                 $$l++;
                 var item = $$obj[$index];
-                buf.push('<li class="municipal-site-list-item"><div class="municipal-site-list-button">');
-                if (item.button) {}
-                var button = JSON.parse(JSON.stringify(item.button));
-                buf.push(templatizer["municipal-site-list"]["button"](button));
-                buf.push("</div></li>");
+                item = JSON.parse(JSON.stringify(item || {}));
+                buf.push("<li>");
+                buf.push(templatizer["municipal-site-list"]["button"](item));
+                buf.push("</li>");
             }
         }
     }).call(this);
@@ -5821,6 +5819,46 @@ templatizer["search-results-list"]["search-results-list"] = function tmpl_search
         }
     }
     buf.push("</div>");
+    return buf.join("");
+};
+
+// sections-list-picto.jade compiled template
+templatizer["sections-list-picto"] = function tmpl_sections_list_picto(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// sections-list-picto.jade:sections-list-picto compiled template
+templatizer["sections-list-picto"]["sections-list-picto"] = function tmpl_sections_list_picto_sections_list_picto(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push('<ul class="sections-list-picto">');
+    (function() {
+        var $$obj = data.items;
+        if ("number" == typeof $$obj.length) {
+            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                var item = $$obj[$index];
+                buf.push('<li class="sections-list-picto-item"><a' + jade.attr("href", item.href, true, false) + jade.cls([ "sections-list-picto-button", item.modifiers ], [ null, true ]) + '><div class="sections-list-picto-icon">');
+                if (item.title) {
+                    buf.push('<strong class="sections-list-picto-button-title">' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</strong>");
+                }
+                buf.push('<div class="sections-list-picto-button-text">' + (null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a></li>");
+            }
+        } else {
+            var $$l = 0;
+            for (var $index in $$obj) {
+                $$l++;
+                var item = $$obj[$index];
+                buf.push('<li class="sections-list-picto-item"><a' + jade.attr("href", item.href, true, false) + jade.cls([ "sections-list-picto-button", item.modifiers ], [ null, true ]) + '><div class="sections-list-picto-icon">');
+                if (item.title) {
+                    buf.push('<strong class="sections-list-picto-button-title">' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</strong>");
+                }
+                buf.push('<div class="sections-list-picto-button-text">' + (null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a></li>");
+            }
+        }
+    }).call(this);
+    buf.push("</ul>");
     return buf.join("");
 };
 

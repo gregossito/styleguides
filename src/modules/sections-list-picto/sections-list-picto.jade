@@ -1,0 +1,9 @@
+mixin sections-list-picto(data)
+  ul.sections-list-picto
+    each item in data.items
+      li.sections-list-picto-item
+        a.sections-list-picto-button(href=item.href class=item.modifiers)
+          div.sections-list-picto-icon
+            if (item.title)
+              strong.sections-list-picto-button-title= item.title
+            div.sections-list-picto-button-text!= item.text
