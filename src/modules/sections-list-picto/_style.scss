@@ -119,6 +119,20 @@
   /* Home categories colors */
   .sections-list-picto-item {
 
+    .sections-list-picto-icon {
+      &:before {
+        transition: .3s ease-out 0.2s;
+      }
+    }
+
+    &:hover {
+      .sections-list-picto-icon {
+        &:before {
+          transition: .3s ease-out 0s;
+        }
+      }
+    }
+
     .sections-list-picto-button {
       background-color: transparentize($home-cat-blue2, 0.1);
 
@@ -177,6 +191,7 @@
             background-color: $home-cat-blue1;
             background-color: $white;
           }
+
         }
 
         .sections-list-picto-button-text {
@@ -273,7 +288,8 @@
     &:nth-child(2) {
       .sections-list-picto-icon {
          &:before { 
-          background-position: -93px -26px;
+          background-position: -93px -24px;
+          height:57px;
         }
       }
     }
@@ -339,7 +355,7 @@
     &:nth-child(11) {
       .sections-list-picto-icon {
          &:before { 
-          background-position: -166px -173px;
+          background-position: -166px -172px;
         }
       }
     }
