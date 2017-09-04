@@ -9,10 +9,14 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.9.2 (2017-09-04)
+
+* fix css transitions `sections-list-picto` module
+
 ## 1.9.1 (2017-09-01)
 
-* add `municipal-site-list`module
-* add `sections-list-picto`module
+* add `municipal-site-list` module
+* add `sections-list-picto` module
 
 ## 1.9.0 (2017-07-28)
 
