@@ -9,9 +9,13 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.9.3 (2017-09-05)
+
+* module `notice`: fix notice height when display table on firefox
+
 ## 1.9.2 (2017-09-04)
 
-* fix css transitions `sections-list-picto` module
+* module `sections-list-picto`: fix css transitions
 
 ## 1.9.1 (2017-09-01)
 
