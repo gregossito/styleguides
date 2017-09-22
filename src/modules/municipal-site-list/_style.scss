@@ -1,84 +1,80 @@
-.municipal-site-list-intro{
-  color: $white;
-  display: inline-block;
-  float: left;
-  font-size: 2.2rem;
-  font-weight: 700;
-  line-height: 2.4rem;
-  max-width: 240px;
-}
+.municipal-site-list {
 
-.municipal-site-list{
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: auto;
-  max-width:90%;
-  padding: 0;
-}
+  &-intro {
+    color: $gray33;
+    display: block;
+    float: left;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-top: 0;
+    max-width: 30rem;
+  }
 
-.municipal-site-list-item {
-  height: 90px;
-  min-width: 80px;
-  padding: 3px;
-  
-  .municipal-site-list-button{  
-    height:95%;
-    width:95%;
-    .button{
-      height: 100%;
-      width: 100%;
-      &.white{
-        color: $color-secondary;
+  &-items {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 69rem;
+    padding-left: 0;
+  }
+
+  li {
+    display: inline-block;
+
+    .button {
+      background: $grayF2;
+      color: $color-secondary;
+      font-size: 1.6rem;
+      line-height: 6.4rem;
+      margin-left: .25rem;
+      margin-right: .25rem;
+      margin-bottom: .5rem;
+      min-height: 6.4rem;
+      min-width: 6.4rem;
+      padding: 0 1rem;
+
+      &:after {
+        background: $color-secondary;
+      }
+
+      &:hover, &:focus {
+        color: $white;
       }
     }
   }
 }
 
-@media (max-width:600px){
-  .municipal-site-list-item {
-    height:110px;
-    min-width: 100px;
-  }
-}
+@include small {
 
-@include small{
-  
-  .municipal-site-list-content{
-    margin:auto;
-    text-align:center;
-  }
-  .municipal-site-list-intro{
-    display:block;
-    float:none;
-    margin:auto;
-    margin-bottom:20px;
-    max-width:100%;
-    padding:0 20px;
-  }
-  .municipal-site-list-button .button{  
-    font-size:1.6rem;
-  }
-}
-
-@include large-and-medium {
-  
-  .municipal-site-list-intro{
-    margin: 0 55px 0 0;  
-  }
   .municipal-site-list {
-    justify-content:flex-start;
-    max-width: 760px;
+    text-align: center;
+
+    &-intro {
+      float: none;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      max-width: 85%;
+    }
+
+    &-items {
+      max-width: 40rem;
+    }
   }
-  .municipal-site-list-item{
-    flex:inherit;
-    height: 70px;
-    min-width: inherit;
-    width: 70px;
-    
-    .municipal-site-list-button{
-      height:100%;
-      width:100%;
+}
+
+@include medium {
+
+  .municipal-site-list {
+    &-items {
+      margin-left: 40%;
+    }
+  }
+}
+
+@include large {
+
+  .municipal-site-list {
+    &-items {
+      margin-left: 30%;
     }
   }
 }

@@ -19,7 +19,7 @@
   }
 
   html.no-js &,
-  html.no-touch & {
+  html.no-touchevents & {
     &:hover,
     &:focus {
       background-color: $color-secondary;

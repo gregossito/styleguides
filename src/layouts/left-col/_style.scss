@@ -104,6 +104,12 @@
 
   }
 
+  .notice.top.fixed ~ .layout-main {
+    .layout-left-col .layout-aside .aside-wrapper.affix {
+      top: 140px;
+    }
+  }
+
 }
 
 @include medium {

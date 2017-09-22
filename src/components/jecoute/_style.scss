@@ -9,9 +9,18 @@
 
   p em,
   .jecoute-message {
-    color: $color-secondary;
-    font-style: normal;
-    font-weight: 500;
+    font-size: 1.4rem;
+    color: $gray66;
+    font-weight: 300;
+
+    &.thanks {
+      color: $color-secondary;
+      font-weight: 500;
+    }
+    &.error {
+      color: $color-primary;
+      font-weight: 500;
+    }
   }
 
   .text-error {
@@ -57,7 +66,7 @@
   .jecoute-text {
     color: $gray4D;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 2.2rem;
     margin-bottom: 25px;
     max-width: 570px;
@@ -83,10 +92,14 @@
 
     > textarea,
     > input {
+      @include input-color-placeholder($gray4D);
+
       border: none;
       background-color: $grayF2;
       border-radius:5px;
       display: block;
+      font-size: 1.6rem;
+      font-weight: 400;
       margin-bottom: 15px;
       overflow: auto;
       transition: background 0.3s ease;
@@ -186,10 +199,6 @@
     }
   }
 
-  .jecoute-message {
-    display: none;
-  }
-
   @include large-and-medium {
     .jecoute-content {
       padding: 0 42px 25px 40px;
@@ -197,3 +206,4 @@
   }
 
 }
+

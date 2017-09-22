@@ -27,6 +27,7 @@
     "icon-switch",
     "intro-text",
     "jumbotron",
+    "jumbotron-slider",
     "last-update",
     "links-group",
     "municipal-site-list",
@@ -44,12 +45,14 @@
     "search-push",
     "search-results-list",
     "sections-list",
+    "sections-list-picto",
     "sections-panel",
     "share",
     "skip-links",
     "table-of-contents",
     "tags",
     "video-cover",
-    "video-home"
+    "video-home",
+    "video-home-news"
   ]
 }
