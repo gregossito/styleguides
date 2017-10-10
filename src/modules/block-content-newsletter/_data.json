@@ -16,6 +16,10 @@
         "link": {
           "href": "#",
           "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
+        },
+        "engagements": {
+          "href": "http://www.paris.fr/mentions-legales#donnees-a-caractere-personnel_7",
+          "text": "Nos engagements sur les données personnelles"
         }
       }
     }, {
@@ -41,7 +45,11 @@
           "href": "#",
           "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
         },
-        "thanks": "Merci, vous allez recevoir un courriel de confirmation."
+        "thanks": "Merci, vous allez recevoir un courriel de confirmation.",
+        "engagements": {
+          "href": "http://www.paris.fr/mentions-legales#donnees-a-caractere-personnel_7",
+          "text": "Nos engagements sur les données personnelles"
+        }
       }
     }]
   }

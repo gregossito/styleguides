@@ -2786,6 +2786,9 @@ templatizer["block-content-newsletter"]["block-content-newsletter"] = function t
             if (data.link) {
                 buf.push('<div class="block-content-link"><a' + jade.attr("href", data.link.href, true, false) + jade.attr("onclick", data.link.onclick, true, false) + jade.attr("target", data.link.target, true, false) + ">" + (null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></div>");
             }
+            if (data.engagements) {
+                buf.push('<div class="block-content-link"><a' + jade.attr("href", data.engagements.href, true, false) + jade.attr("onclick", data.engagements.onclick, true, false) + jade.attr("target", data.engagements.target, true, false) + ">" + (null == (jade_interp = data.engagements.text) ? "" : jade_interp) + "</a></div>");
+            }
         }
     }, {
         title: data.title,
