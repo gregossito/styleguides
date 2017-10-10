@@ -18,3 +18,6 @@ mixin block-content-newsletter(data)
     if data.link
       .block-content-link
         a(href=data.link.href onclick=data.link.onclick target=data.link.target)!= data.link.text
+    if data.engagements
+      .block-content-link
+        a(href=data.engagements.href onclick=data.engagements.onclick target=data.engagements.target)!= data.engagements.text

@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.9.4 (2017-10-10)
+
+* module `block-content-newsletter`: add a link to mentions légales
+
 ## 1.9.3 (2017-09-05)
 
 * module `notice`: fix notice height when display table on firefox
