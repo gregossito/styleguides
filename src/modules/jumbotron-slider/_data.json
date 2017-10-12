@@ -1,0 +1,16 @@
+{
+  "index": {
+    "type": "jumbotron-slider",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "href": "#",
+        "image": "journees-olympiques.jpg",
+        "title": "Journées Olympiques",
+        "text": "Du 23 au 24 juin, paris.fr se met aux couleurs des J.O."
+      }
+    }]
+  }
+}

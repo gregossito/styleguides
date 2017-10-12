@@ -76,9 +76,11 @@
 }
 
 .rheader-locales {
-  display: none;
+  display: none !important;
   font-size: 1.2rem;
   line-height: 2.8rem;
+  // font-size: 1rem;
+  // line-height: 1.8rem;
   padding: 0;
   text-align: left;
   text-transform: uppercase;
@@ -269,6 +271,12 @@ body.rheader-mobile-nav-open {
   padding-top: $rheader-height-small;
 }
 
+.notice.top.fixed + .rheader {
+  position: fixed;
+  top: $notice-height;
+  left: 0;
+}
+
 
 @media (max-width: $rheader-small-max) {
   .rheader {
@@ -280,7 +288,7 @@ body.rheader-mobile-nav-open {
 
     &.folded {
       transition-delay: 0.5s;
-      transform: translateY(-$rheader-height-small + 8px);
+      transform: translateY(-$rheader-height-small + 0px);
       .rheader-logo {
         opacity: 0;
         transition-delay: 0.5s;
@@ -599,7 +607,7 @@ body.rheader-mobile-nav-open {
   }
 
   html.no-js,
-  html.no-touch {
+  html.no-touchevents {
     .rheader-nav-item-text {
       position: relative;
 
@@ -677,6 +685,7 @@ body.rheader-mobile-nav-open {
 
   .rheader-locales {
     line-height: 2.4rem;
+    // line-height: 1.4rem;
   }
 
   .rheader-nav-item {
@@ -697,6 +706,13 @@ body.rheader-mobile-nav-open {
   .rheader + .quick-access + .layout-main > .layout-content:first-child {
     padding-top: $rheader-height-small;
   }
+
+  .notice.top.fixed {
+    & + .rheader.fixed + .layout-main > .layout-content:first-child,
+    & + .rheader + .quick-access + .layout-main > .layout-content:first-child {
+      padding-top: $rheader-height-small + $notice-height;
+    }
+  }
 }
 
 @media (min-width: $rheader-large-min) {
@@ -707,6 +723,22 @@ body.rheader-mobile-nav-open {
   .rheader.extended + .quick-access {
     margin-top: $rheader-height-medium + 20px;
   }
+  .rheader + .quick-access {
+    margin-top: $rheader-height-medium;
+  }
+
+  .notice.top.fixed {
+    & + .rheader.fixed.extended + .layout-main > .layout-content:first-child,
+    & + .rheader.extended + .quick-access + .layout-main > .layout-content:first-child {
+      padding-top: $rheader-height-medium + $notice-height + 20px;
+    }
+    & + .rheader.extended + .quick-access {
+      margin-top: $rheader-height-medium + $notice-height + 20px;
+    }
+    & + .rheader + .quick-access {
+      margin-top: $rheader-height-medium + $notice-height;
+    }
+  }
 }
 
 @media (min-width: $rheader-medium-min) {
@@ -715,19 +747,17 @@ body.rheader-mobile-nav-open {
     background-color: $color-primary; // to prevent a white area below header (edge case)
     padding-top: $rheader-height-medium;
   }
-  .rheader + .quick-access {
-    margin-top: $rheader-height-medium;
-  }
   .rheader.fixed + .layout-main > .layout-content.black-background:first-child {
-    background:$gray28;
+    background: $gray28;
   }
   .rheader.fixed + .layout-main > .layout-content.red-background:first-child {
-    background:#F95053;
+    background: $qfap-red;
   }
-}
 
-@include small {
-  .rheader + .quick-access {
-    margin-top: 0;
+  .notice.top.fixed {
+    & + .rheader.fixed + .layout-main > .layout-content:first-child,
+    & + .rheader + .quick-access + .layout-main > .layout-content:first-child {
+      padding-top: $rheader-height-medium + $notice-height;
+    }
   }
 }

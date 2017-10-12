@@ -19,6 +19,98 @@ Let's take the `x.β.α` version number:
 * template `list-equipments` added
 * `config.js`: added `equipments` Algolia index
 
+## 1.9.4 (2017-10-10)
+
+* module `block-content-newsletter`: add a link to mentions légales
+
+## 1.9.3 (2017-09-05)
+
+* module `notice`: fix notice height when display table on firefox
+
+## 1.9.2 (2017-09-04)
+
+* module `sections-list-picto`: fix css transitions
+
+## 1.9.1 (2017-09-01)
+
+* add `municipal-site-list` module
+* add `sections-list-picto` module
+
+## 1.9.0 (2017-07-28)
+
+* component `demande`: refactor to follow component model
+* component `jecoute`: set email optional
+* `modernizr`: update to 3.5.0 (touch renamed to touchevents)
+* module `jumbotron-slider`: refactored to be reusable
+* module `notice`: add top banner style
+* module `rheader`:
+  * disable unfix when there is a top fixed notice
+  * fix spacing when there is a top fixed notice
+  * remove extended on home
+
+## 1.8.10 (2017-07-18)
+
+* fix `news-card` add date
+* fix `news-list` add date
+
+## 1.8.9 (2017-07-07)
+
+* fix `video-home-news` style accept cookies message
+* fix `sections-panel` open formalities links on a new window
+
+## 1.8.8 (2017-06-21)
+
+* fix `rheader` button participez color JO
+* fix `jecoute` message
+
+## 1.8.7 (2017-06-20)
+
+* add `video-home-news` module
+
+## 1.8.6 (2017-06-15)
+
+* fix `jecoute` module transform email field to hidden field + add custom styles
+
+## 1.8.5 (2017-06-15)
+
+* fix `demande` module and transform it to a component
+
+## 1.8.4 (2017-06-15)
+
+* add `demande` block
+
+## 1.8.3 (2017-06-15)
+
+* fix component `form` accessibility: add title attribute to form fields
+
+## 1.8.2 (2017-06-14)
+
+* fix module `jumbotron-slider` scrollTop detect
+* add module `video-home-news`
+
+## 1.8.1 (2017-06-08)
+
+* fix module `jumbotron-slider` for JO Home
+* fix module `rheader` JO red colors and height
+
+## 1.8.0 (2017-06-07)
+
+* add module `jumbotron-slider` for JO Home
+* module `rheader`
+  * add `jo` style
+
+## 1.7.5 (2017-05-31)
+
+* module `rheader`: hide totally when minimized on mobile
+
+## 1.7.4 (2017-05-16)
+
+* component `table`: fix responsive on medium
+
+## 1.7.3 (2017-04-26)
+
+* `anchors-list-title` minimize font-size
+
 ## 1.7.2 (2017-04-26)
 
 * opacity .25 `jumbotron` home page

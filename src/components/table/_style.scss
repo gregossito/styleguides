@@ -80,7 +80,7 @@
   }
 }
 
-@include medium-and-small {
+@include small {
   .component-table {
     overflow-x: auto;
     position: relative;
@@ -88,7 +88,7 @@
   }
 }
 
-@include large {
+@include large-and-medium {
   .component-table {
     table {
       width: 100%;

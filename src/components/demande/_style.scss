@@ -1,0 +1,8 @@
+.component-demande {
+  @extend %component-text;
+
+  h2 {
+    border-top: 7px solid $grayF2;
+    color: $gray1A;
+  }
+}

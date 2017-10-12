@@ -1,0 +1,94 @@
+{
+  "index": {
+    "type": "sections-list-picto",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "items": [
+          {
+            "href": "#",
+            "title": "Aides & démarches",
+            "text": "Etat civil, toutes les aides, services sociaux, médiateur, élections..."
+          },
+          {
+            "href": "#",
+            "title": "Associations",
+            "text": "Annuaire des associations, aides, bénévolat, Simpa..."
+          },
+          {
+            "href": "#",
+            "title": "Culture & patrimoine",
+            "text": "Musées, bibliothèques, conservatoires, archives, ateliers des beaux arts..."
+          },
+          {
+            "href": "#",
+            "title": "Déplacements & stationnement",
+            "text": "Stationnement résidentiel, transports en commun, vélo, trafic, taxis..."
+          },
+          {
+            "href": "#",
+            "title": "Emploi & formations",
+            "text": "Concours de la ville, formations, cours municipaux, aides à l'emploi..."
+          },
+          {
+            "href": "#",
+            "title": "Environnement & espaces verts",
+            "text": "Parcs et jardins, déchets, propreté, lutte contre la pollution"
+          },
+          {
+            "href": "#",
+            "title": "Famille & éducation",
+            "text": "Petite enfance, école, cantine, centres de loisirs, Facil' Familles..."
+          },
+          {
+            "href": "#",
+            "title": "Innovation et recherche",
+            "text": "Applications, wi-fi, open data, startup..."
+          },
+          {
+            "href": "#",
+            "title": "Logement",
+            "text": "Logement social, aides pour se loger, travaux, rénovation..."
+          },
+          {
+            "href": "#",
+            "title": "Prévention et sécurité",
+            "text": "Lutte contre les incivilités, prévention des risques majeurs..."
+          },
+          {
+            "href": "#",
+            "title": "Santé",
+            "text": "Centres de santé, PMI, hôpitaux, pharmacies de garde, dépistage, vaccinations..."
+          },
+          {
+            "href": "#",
+            "title": "Social & solidarités",
+            "text": "Handicap, seniors, personnes en difficulté..."
+          },
+          {
+            "href": "#",
+            "title": "Sports & loisirs",
+            "text": "Piscines, tennis, gymnases, centres d'animation"
+          },
+          {
+            "href": "#",
+            "title": "Travaux et aménagements",
+            "text": "Aménagements, chantiers, voirie..."
+          },
+          {
+            "href": "#",
+            "title": "Urbanisme et architecture",
+            "text": "Projets urbains, P.L.U., demandes d'autorisations..."
+          },
+          {
+            "href": "#",
+            "text": "Découvrez tous les services de la ville",
+            "modifiers": ["more", "only-on-small"]
+          }
+        ]
+      }
+    }]
+  }
+}

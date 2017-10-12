@@ -1,0 +1,96 @@
+.jumbotron-slider {
+  background-color: white;
+  color: $black;
+  display: block;
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  width: 100%;
+  z-index: 750;
+
+  &.closed {
+    top: -43rem;
+    position: fixed;
+  }
+
+  animation: 2s ease-out 3s 1 forwards close;
+  @keyframes close {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: -43rem;
+      position: fixed;
+    }
+  }
+
+  &:hover {
+    .jumbotron-slider-notice {
+      &-text {
+        border-bottom: none;
+      }
+
+      i {
+        right: -55px;
+        transition: right 0.5s;
+      }
+    }
+  }
+
+  &-content {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 43rem;
+  }
+
+  &-notice {
+    display: table;
+    font-size: 1.4rem;
+    height: 6rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    &-content {
+      display: table-cell;
+      padding: 0 20px;
+      vertical-align: middle;
+      width: auto;
+
+      &-wrapper {
+        position: relative;
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+    }
+
+    &-text {
+      border-bottom: .1rem solid;
+      border-color: inherit;
+    }
+
+    i {
+      position: absolute;
+      top: -95%;
+      right: -47px;
+      padding: 0;
+      font-size: 3.4em;
+      transition: right 0.2s;
+    }
+  }
+
+  @include small {
+    display:none;
+  }
+}
+
+html.no-cssanimations {
+  .jumbotron-slider {
+    top: -43rem;
+    position: fixed;
+  }
+}

@@ -1,0 +1,8 @@
+include ../../modules/button/button
+
+mixin demande(data)
+  .component.component-demande
+    h2= data.title
+    p= data.text
+    if (data.button)
+      +button(data.button)

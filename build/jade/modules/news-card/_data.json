@@ -35,6 +35,19 @@
         }
       }
     }, {
+      "title": "Avec une indication de dates",
+      "description": "",
+      "attrs": {
+        "style": "max-width: 350px"
+      },
+      "data": {
+        "href": "#",
+        "image": "image.jpg",
+        "category": "Catégorie",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra nisi fermentum",
+        "date": "Du xx/xx/xxxx au xx/xx/xxxx"
+      }
+    }, {
       "title": "Large",
       "description": "",
       "attrs": {
