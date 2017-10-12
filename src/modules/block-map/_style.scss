@@ -1,7 +1,7 @@
-@import "../../stylesheets/lib/mapbox-gl";
+@import "../../node_modules/mapbox-gl/dist/mapbox-gl";
 
 .mapboxgl-ctrl-compass {
-	display: none !important; 
+	display: none !important;
 }
 
 .mapbox-gl-user-marker {
