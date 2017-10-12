@@ -89,7 +89,7 @@ var defaults = {
 // instantsearch.js custom widget with plain JavaScript
 // First, we add ourselves to the instantsearch.widgets namespace
 Paris.instantsearch.widgets.mapbox = function mapbox(options) {
-  
+
   return {
     // getConfiguration: function(configuration) {
       // return {
@@ -172,8 +172,8 @@ function initMap(container) {
   });
 
   //Add map navigation and geolocate controls
-  map.addControl(new mapboxgl.Navigation());
-  geolocate = new mapboxgl.Geolocate();
+  map.addControl(new mapboxgl.NavigationControl());
+  geolocate = new mapboxgl.GeolocateControl();
   map.addControl(geolocate);
 
   // Use this callback to show a marker at user's position
@@ -216,7 +216,7 @@ function initMap(container) {
     // Open hit
     } else {
       var html = settings.popupHTMLForHit(feature.properties);
-      showPopup(html, feature.geometry.coordinates); 
+      showPopup(html, feature.geometry.coordinates);
       settings.openedHit(feature.properties.objectID);
     }
   });
@@ -256,7 +256,7 @@ function initMap(container) {
   // When start mouse drag store pointer coordinates
   map.on('mousedown', function (e) {
     pointCoordinate = {
-      x: e.point.x, 
+      x: e.point.x,
       y: e.point.y
     };
   });
@@ -276,7 +276,7 @@ function initMap(container) {
   map.on('touchstart', function (e) {
     lastTouchMove = e;
     pointCoordinate = {
-      x: e.originalEvent.touches[0].pageX, 
+      x: e.originalEvent.touches[0].pageX,
       y: e.originalEvent.touches[0].pageY
     };
   });
