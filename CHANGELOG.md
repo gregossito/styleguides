@@ -9,6 +9,8 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+* component `opening-hours`: changed data structure
+
 ## 1.9.4 (2017-10-10)
 
 * module `block-content-newsletter`: add a link to mentions légales

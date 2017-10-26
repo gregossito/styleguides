@@ -4,35 +4,183 @@
     "description": "",
     "examples": [
       {
-        "title": "Standard",
+        "title": "Fermé",
         "description": "",
         "data": {
           "title": "Horaires",
-          "text": "Fermeture prévue du 23 février 2015 au 1er mars 2015 (vidange)",
-          "items": [
-            {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
-            {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
-            {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
-            {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
-            {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
-            {"title": "Samedi", "text": "07h à 18h00 (sans interruption)"},
-            {"title": "Dimanche", "text": "07h à 18h00 (sans interruption)"}
-          ],
-          "buttons": [
-            {
-              "href": "#",
-              "text": "Voir les horaires de toutes les piscines",
-              "title": "Titre"
-            },
-            {
-              "href": "#",
-              "text": "Voir la fréquentation",
-              "title": "Titre"
-            }
-          ]
+          "title_link": {
+            "href": "#",
+            "text": "Retrouver tous les horaires des piscines sur une carte"
+          },
+          "status": {
+            "open": false,
+            "text": "Fermée en ce moment - Réouverture demain à 07h00"
+          },
+          "current_hours": {
+            "caption": "Période scolaire",
+            "items": [
+              {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
+              {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+              {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+              {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+              {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+              {"title": "Samedi", "text": "07h à 18h00 (sans interruption)"},
+              {"title": "Dimanche", "text": "07h à 18h00 (sans interruption)"}
+            ]
+          },
+          "other_hours": {
+            "title": "Horaires spécifiques",
+            "items": [
+              {
+                "caption": "Du 1er octobre au 31 décembre 2017",
+                "items": [
+                  {"title": "Lundi", "text": "07h à 8h30"},
+                  {"title": "Mardi", "text": "07h à 8h30"},
+                  {"title": "Mercredi", "text": "07h à 8h30"},
+                  {"title": "Jeudi", "text": "07h à 8h30"},
+                  {"title": "Vendredi", "text": "07h à 8h30"},
+                  {"title": "Samedi", "text": "fermé"},
+                  {"title": "Dimanche", "text": "07h à 18h00"}
+                ]
+              },
+              {
+                "caption": "Du 29 octobre au 28 février 2018",
+                "items": [
+                  {"title": "Lundi", "text": "07h à 8h30"},
+                  {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Samedi", "text": "fermé"},
+                  {"title": "Dimanche", "text": "07h à 18h00"}
+                ]
+              },
+              {
+                "caption": "Du 1er octobre au 31 décembre 2017",
+                "items": [
+                  {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Samedi", "text": "fermé"},
+                  {"title": "Dimanche", "text": "07h à 18h00"}
+                ]
+              },
+              {
+                "caption": "Du 29 octobre au 28 février 2018",
+                "items": [
+                  {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Samedi", "text": "fermé"},
+                  {"title": "Dimanche", "text": "07h à 18h00"}
+                ]
+              }
+            ]
+          },
+          "planned_closures": {
+            "text": "Fermetures prévues :",
+            "items": [
+              "le 1er novembre 2017",
+              "du 27 décembre 2017 au 04 janvier 2018"
+            ]
+          },
+          "button": {
+            "text": "Tous les horaires",
+            "title": ""
+          }
+        }
+      },
+      {
+        "title": "Ouvert, sans lien à côté du titre",
+        "description": "",
+        "data": {
+          "title": "Horaires",
+          "status": {
+            "open": true,
+            "text": "Ouvert jusqu'à 18h30"
+          },
+          "current_hours": {
+            "caption": "Période scolaire",
+            "items": [
+              {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
+              {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+              {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+              {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+              {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+              {"title": "Samedi", "text": "07h à 18h00 (sans interruption)"},
+              {"title": "Dimanche", "text": "07h à 18h00 (sans interruption)"}
+            ]
+          },
+          "other_hours": {
+            "title": "Horaires spécifiques",
+            "items": [
+              {
+                "caption": "Du 1er octobre au 31 décembre 2017",
+                "items": [
+                  {"title": "Lundi", "text": "07h à 8h30"},
+                  {"title": "Mardi", "text": "07h à 8h30"},
+                  {"title": "Mercredi", "text": "07h à 8h30"},
+                  {"title": "Jeudi", "text": "07h à 8h30"},
+                  {"title": "Vendredi", "text": "07h à 8h30"},
+                  {"title": "Samedi", "text": "fermé"},
+                  {"title": "Dimanche", "text": "07h à 18h00"}
+                ]
+              },
+              {
+                "caption": "Du 29 octobre au 28 février 2018",
+                "items": [
+                  {"title": "Lundi", "text": "07h à 8h30"},
+                  {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Samedi", "text": "fermé"},
+                  {"title": "Dimanche", "text": "07h à 18h00"}
+                ]
+              },
+              {
+                "caption": "Du 1er octobre au 31 décembre 2017",
+                "items": [
+                  {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Samedi", "text": "fermé"},
+                  {"title": "Dimanche", "text": "07h à 18h00"}
+                ]
+              },
+              {
+                "caption": "Du 29 octobre au 28 février 2018",
+                "items": [
+                  {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Samedi", "text": "fermé"},
+                  {"title": "Dimanche", "text": "07h à 18h00"}
+                ]
+              }
+            ]
+          },
+          "planned_closures": {
+            "text": "Fermetures prévues :",
+            "items": [
+              "le 1er novembre 2017",
+              "du 27 décembre 2017 au 04 janvier 2018"
+            ]
+          },
+          "button": {
+            "text": "Tous les horaires",
+            "title": ""
+          }
         }
       }
     ]
   }
 }
-
