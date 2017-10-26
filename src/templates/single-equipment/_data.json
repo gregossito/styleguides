@@ -93,46 +93,7 @@
       },
       "heading": {
         "image": "document-heading.jpg",
-        "text": "Piscine Didot",
-        "icons": [
-          {
-            "action": {
-              "type": "favorite",
-              "id": 1
-            },
-            "icon": [
-              "favorites-outline",
-              "favorites"
-            ],
-            "label": [
-              "Ajouter aux favoris",
-              "Enlever des favoris"
-            ]
-          },
-          {
-            "action": {
-              "type": "alert",
-              "id": 1,
-              "fallback_link": "https://connect.paris.fr/alertes"
-            },
-            "icon": [
-              "bell-outline",
-              "bell"
-            ],
-            "label": [
-              "S'inscrire aux alertes",
-              "Se désinscrire des alertes"
-            ]
-          }
-        ],
-        "tags" : [
-          {
-            "text": "XIVe arrondissement"
-          },
-          {
-            "text": "Ouvert jusqu'à 19h"
-          }
-        ]
+        "text": "Piscine Didot"
       },
       "breadcrumbs": {
         "items": [
@@ -142,19 +103,11 @@
           },
           {
             "href": "#",
-            "text": "Services et infos pratiques"
+            "text": "Équipements"
           },
           {
             "href": "#",
-            "text": "Sports"
-          },
-          {
-            "href": "#",
-            "text": "Où faire du sport ?"
-          },
-          {
-            "href": "#",
-            "text": "Liste des piscines"
+            "text": "Piscines"
           },
           {
             "text": "Piscine Didot"
