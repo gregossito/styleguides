@@ -43,7 +43,7 @@
     }
 
     &.is-open {
-      color: $green1;
+      color: $green2;
     }
 
     &.is-closed {
@@ -194,7 +194,7 @@
 
       table {
         float: left;
-        margin: 0 2rem 3rem 0;
+        margin: 0 2rem 4rem 0;
         min-width: calc(50% - 2rem);
 
         &:nth-child(2n) {

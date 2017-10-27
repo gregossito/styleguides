@@ -296,18 +296,6 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Bassin</h2><p>Température de l'eau : <em class='light'>28° en moyenne</em><br />Longueur : <em class='light'>25m</em><br />Largeur : <em class='light'>12,50m</em><br />Profondeur minimum : <em class='light'>0,80m</em><br />Profondeur maximum : <em class='light'>3,50m</em></p>"
-          }
-        },
-        {
-          "type": "text",
-          "data": {
-            "block": "<h2>Services</h2><ul class=\"list-cols\"><li>Football : <em class='light'>2</em></li><li>Manèges : <em class='light'>1</em></li><li>Promenade à poney : <em class='light'>1</em></li><li>Restaurant : <em class='light'>1</em></li><li>Snack : <em class='light'>2</em></li><li>Ping-pong : <em class='light'>1</em></li><li>Toilettes publiques : <em class='light'>2</em></li><li>Wi-fi : <em class='light'>3</em></li><li>Chiens admis : <em class='light'>1</em></li><li>Points d’eau : <em class='light'>5</em></li><li>Guignol : <em class='light'>1</em></li><li>Label QualiPARIS : <em class='light'>1</em></li><li>Aire de jeux : <em class='light'>3</em></li><li>Basket : <em class='light'>1</em></li></ul>"
-          }
-        },
-        {
-          "type": "text",
-          "data": {
             "block": "<h2>Tarifs</h2>"
           }
         },
@@ -344,6 +332,12 @@
           }
         },
         {
+          "type": "text",
+          "data": {
+            "block": "<h2>Services</h2><ul class=\"list-cols\"><li>Football : <em class='light'>2</em></li><li>Manèges : <em class='light'>1</em></li><li>Promenade à poney : <em class='light'>1</em></li><li>Restaurant : <em class='light'>1</em></li><li>Snack : <em class='light'>2</em></li><li>Ping-pong : <em class='light'>1</em></li><li>Toilettes publiques : <em class='light'>2</em></li><li>Wi-fi : <em class='light'>3</em></li><li>Chiens admis : <em class='light'>1</em></li><li>Points d’eau : <em class='light'>5</em></li><li>Guignol : <em class='light'>1</em></li><li>Label QualiPARIS : <em class='light'>1</em></li><li>Aire de jeux : <em class='light'>3</em></li><li>Basket : <em class='light'>1</em></li></ul><h3>Bassin</h3><p><strong>Température de l'eau :</strong> 28° en moyenne<br /><strong>Longueur :</strong> 25m<br /><strong>Largeur :</strong> 12,50m<br /><strong>Profondeur minimum :</strong> 0,80m<br /><strong>Profondeur maximum :</strong> 3,50m</p><h3>Les extras</h3><h4>Distributeurs d’accessoires</h4><p>Sont en vente : bonnets, lunettes et maillots</p><h4>Leçons et brevets de natation</h4><ul><li>1 leçon de natation 1 à 3 personnes (30 mn) : 13 €</li><li>6 leçons de natation 1 à 3 personnes (30 mn) : 56 €</li><li>1 leçon de natation 4 à 16 personnes (40 mn) : 16 €</li></ul><p>Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a></p>"
+          }
+        },
+        {
           "type": "rush-hours",
           "data": {
             "title": "Affluence",
@@ -362,12 +356,6 @@
               {"title": "Samedi", "traffic": [1, 1, 2, 1]},
               {"title": "Dimanche", "traffic": [1, 2, 3, 2]}
             ]
-          }
-        },
-        {
-          "type": "text",
-          "data": {
-            "block": "<h2>Équipements</h2><h3>Distributeurs d’accessoires</h3><p>Sont en vente : bonnets, lunettes et maillots</p><h3>Leçons et brevets de natation</h3><ul><li>1 leçon de natation 1 à 3 personnes (30 mn) : 13 €</li><li>6 leçons de natation 1 à 3 personnes (30 mn) : 56 €</li><li>1 leçon de natation 4 à 16 personnes (40 mn) : 16 €</li></ul>"
           }
         },
         {
@@ -401,35 +389,6 @@
             "title": "Programme du kiosque à musique du parc Montsouris",
             "text": "Samedi 05 septembre 2015<br />de 15h00 à 18h00",
             "image": {"src": "../../components/card/1.jpg"}
-          }
-        },
-        {
-          "type": "text",
-          "data": {
-            "block": "<h2>Questions fréquentes</h2><p>Regardez dans les questions suivantes si la vôtre n’y figure pas déjà :</p>"
-          }
-        },
-        {
-          "type": "faq",
-          "data": {
-            "modifiers": ["small-margin-top"],
-            "items": [
-              {
-                "title": "Maecenas sed diam eget risus varius blandit sit amet non magna ?",
-                "slug": "titre1",
-                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-              },
-              {
-                "title": "Cras mattis consectetur purus sit amet fermentum ?",
-                "slug": "titre2",
-                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-              },
-              {
-                "title": "Nullam quis risus eget urna mollis ornare vel eu leo ?",
-                "slug": "titre3",
-                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-              }
-            ]
           }
         },
         {
