@@ -7,7 +7,9 @@
         "title": "Standard",
         "description": "",
         "data": {
-          "title": "Affluence",
+          "title": {
+            "text": "Affluence"
+          },
           "days": [
             "Lundi",
             "Mardi",

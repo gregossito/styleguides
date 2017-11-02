@@ -10,6 +10,7 @@ Let's take the `x.β.α` version number:
 ## x.β.α (coming soon)
 
 * component `opening-hours`: changed data structure
+* component `rush-hours`: changed data structure
 * re-added default font size for body
 
 ## 1.9.4 (2017-10-10)

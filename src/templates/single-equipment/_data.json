@@ -111,6 +111,46 @@
       },
       "aside": [
         {
+          "type": "anchors-list",
+          "data": {
+            "title": "Sommaire de la page",
+            "items": [
+              {
+                "href": "#horaires",
+                "text": "Horaires"
+              },
+              {
+                "href": "#activites",
+                "text": "Activités"
+              },
+              {
+                "href": "#services",
+                "text": "Services"
+              },
+              {
+                "href": "#tarifs",
+                "text": "Tarifs"
+              },
+              {
+                "href": "#affluence",
+                "text": "Affluence"
+              },
+              {
+                "href": "#photos",
+                "text": "Photos"
+              },
+              {
+                "href": "#evenements",
+                "text": "Évènements"
+              },
+              {
+                "href": "#presentation",
+                "text": "Présentation"
+              }
+            ]
+          }
+        },
+        {
           "type": "block-aside-contact",
           "data": {
             "map": {
@@ -206,10 +246,13 @@
         {
           "type": "opening-hours",
           "data": {
-            "title": "Horaires",
-            "title_link": {
-              "href": "#",
-              "text": "Retrouver tous les horaires des piscines sur une carte"
+            "title": {
+              "id": "horaires",
+              "text": "Horaires",
+              "link": {
+                "href": "#",
+                "text": "Retrouver tous les horaires des piscines sur une carte"
+              }
             },
             "status": {
               "open": false,
@@ -296,7 +339,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Activités <a href=\"#\" target=\"_blank\"><img src=\"logo-que-faire.png\" alt=\"Que Faire à Paris\" /></a></h2>"
+            "block": "<h2 class=\"anchor\" id=\"activites\">Activités <a href=\"#\" target=\"_blank\"><img src=\"logo-que-faire.png\" alt=\"Que Faire à Paris\" /></a></h2>"
           }
         },
         {
@@ -321,13 +364,13 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Services</h2><ul class=\"list-cols\"><li>Football : <em class='light'>2</em></li><li>Manèges : <em class='light'>1</em></li><li>Promenade à poney : <em class='light'>1</em></li><li>Restaurant : <em class='light'>1</em></li><li>Snack : <em class='light'>2</em></li><li>Ping-pong : <em class='light'>1</em></li><li>Toilettes publiques : <em class='light'>2</em></li><li>Wi-fi : <em class='light'>3</em></li><li>Chiens admis : <em class='light'>1</em></li><li>Points d’eau : <em class='light'>5</em></li><li>Guignol : <em class='light'>1</em></li><li>Label QualiPARIS : <em class='light'>1</em></li><li>Aire de jeux : <em class='light'>3</em></li><li>Basket : <em class='light'>1</em></li></ul><h3>Bassin</h3><p><strong>Température de l'eau :</strong> 28° en moyenne<br /><strong>Longueur :</strong> 25m<br /><strong>Largeur :</strong> 12,50m<br /><strong>Profondeur minimum :</strong> 0,80m<br /><strong>Profondeur maximum :</strong> 3,50m</p><h3>Les extras</h3><h4>Distributeurs d’accessoires</h4><p>Sont en vente : bonnets, lunettes et maillots</p><h4>Leçons et brevets de natation</h4><ul><li>1 leçon de natation 1 à 3 personnes (30 mn) : 13 €</li><li>6 leçons de natation 1 à 3 personnes (30 mn) : 56 €</li><li>1 leçon de natation 4 à 16 personnes (40 mn) : 16 €</li></ul><p>Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a></p>"
+            "block": "<h2 class=\"anchor\" id=\"services\">Services</h2><ul class=\"list-cols\"><li>Football : <em class='light'>2</em></li><li>Manèges : <em class='light'>1</em></li><li>Promenade à poney : <em class='light'>1</em></li><li>Restaurant : <em class='light'>1</em></li><li>Snack : <em class='light'>2</em></li><li>Ping-pong : <em class='light'>1</em></li><li>Toilettes publiques : <em class='light'>2</em></li><li>Wi-fi : <em class='light'>3</em></li><li>Chiens admis : <em class='light'>1</em></li><li>Points d’eau : <em class='light'>5</em></li><li>Guignol : <em class='light'>1</em></li><li>Label QualiPARIS : <em class='light'>1</em></li><li>Aire de jeux : <em class='light'>3</em></li><li>Basket : <em class='light'>1</em></li></ul><h3>Bassin</h3><p><strong>Température de l'eau :</strong> 28° en moyenne<br /><strong>Longueur :</strong> 25m<br /><strong>Largeur :</strong> 12,50m<br /><strong>Profondeur minimum :</strong> 0,80m<br /><strong>Profondeur maximum :</strong> 3,50m</p><h3>Les extras</h3><h4>Distributeurs d’accessoires</h4><p>Sont en vente : bonnets, lunettes et maillots</p><h4>Leçons et brevets de natation</h4><ul><li>1 leçon de natation 1 à 3 personnes (30 mn) : 13 €</li><li>6 leçons de natation 1 à 3 personnes (30 mn) : 56 €</li><li>1 leçon de natation 4 à 16 personnes (40 mn) : 16 €</li></ul><p>Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a></p>"
           }
         },
         {
           "type": "text",
           "data": {
-            "block": "<h2>Tarifs</h2>"
+            "block": "<h2 class=\"anchor\" id=\"tarifs\">Tarifs</h2>"
           }
         },
         {
@@ -346,7 +389,10 @@
         {
           "type": "rush-hours",
           "data": {
-            "title": "Affluence",
+            "title": {
+              "id": "affluence",
+              "text": "Affluence"
+            },
             "days": [
               "Lundi",
               "Mardi",
@@ -375,7 +421,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Photos</h2>"
+            "block": "<h2 class=\"anchor\" id=\"photos\">Photos</h2>"
           }
         },
         {
@@ -392,7 +438,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Évènements <a href=\"#\" target=\"_blank\"><img src=\"logo-que-faire.png\" alt=\"Que Faire à Paris\" /></a></h2>"
+            "block": "<h2 class=\"anchor\" id=\"evenements\">Évènements <a href=\"#\" target=\"_blank\"><img src=\"logo-que-faire.png\" alt=\"Que Faire à Paris\" /></a></h2>"
           }
         },
         {
@@ -408,7 +454,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Présentation</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p>"
+            "block": "<h2 class=\"anchor\" id=\"presentation\">Présentation</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p>"
           }
         },
         {

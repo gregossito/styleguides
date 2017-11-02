@@ -3,10 +3,10 @@ include ../../modules/button/button
 mixin opening-hours(data)
   .component.component-opening-hours(class=data.modifiers)
     .opening-hours-heading
-      h2= data.title
-      if data.title_link
+      h2.anchor(id=data.title.id)= data.title.text
+      if data.title.link
         .opening-hours-title-links
-          a(href=data.title_link.href)= data.title_link.text
+          a(href=data.title.link.href)= data.title.link.text
     if data.status
       p.opening-hours-status(class=data.status.open ? "is-open" : "is-closed")
         i.icon.icon-alert

@@ -1,6 +1,6 @@
 mixin rush-hours(data)
   .component.component-rush-hours(class=data.modifiers)
-    h2= data.title
+    h2.anchor(id=data.title.id)= data.title.text
     .hidden-on-small
       +rush-hours-table(data)
     .only-on-small

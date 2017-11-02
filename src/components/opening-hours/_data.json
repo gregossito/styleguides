@@ -7,10 +7,12 @@
         "title": "Fermé",
         "description": "",
         "data": {
-          "title": "Horaires",
-          "title_link": {
-            "href": "#",
-            "text": "Retrouver tous les horaires des piscines sur une carte"
+          "title": {
+            "text": "Horaires",
+            "link": {
+              "href": "#",
+              "text": "Retrouver tous les horaires des piscines sur une carte"
+            }
           },
           "status": {
             "open": false,
@@ -98,7 +100,9 @@
         "title": "Ouvert, sans lien à côté du titre",
         "description": "",
         "data": {
-          "title": "Horaires",
+          "title": {
+            "text": "Horaires"
+          },
           "status": {
             "open": true,
             "text": "Ouvert jusqu'à 18h30"
