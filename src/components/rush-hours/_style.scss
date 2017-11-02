@@ -27,8 +27,6 @@
   }
 
   table {
-    max-width: 625px;
-
     p {margin: 0;}
   }
 
@@ -43,14 +41,14 @@
   tr > th {
     background-color: white;
     color: $gray33;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 500;
-    text-align: left;
+    text-align: center;
   }
 
   tr > td {
-    border-bottom: 10px solid white;
-    border-right: 10px solid white;
+    border-bottom: 0.7rem solid white;
+    border-right: 0.7rem solid white;
     color: $gray33;
     font-size: 1.4rem;
     font-weight: 300;
@@ -81,9 +79,7 @@
     tr:last-child > td {border-bottom: none;}
     tr:first-child > th:first-child {width:16%;}
     tr:first-child > th {
-      padding: 15px 0;
-      text-align: center;
-      width: 21%;
+      padding: 1rem 0;
     }
   }
 
@@ -95,7 +91,7 @@
 
 .rush-hours-traffic-icon {
   color: black;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   letter-spacing: -0.6rem;
   opacity: 0.2;
   pointer-events: none;
@@ -104,6 +100,16 @@
 
   &:before {
     @include icon(avatar);
+  }
+}
+
+.rush-hours-text {
+  margin-top: 4rem;
+
+  a:not(.button) {
+    color: $red1;
+    text-decoration: underline;
+    &:hover {text-decoration: none;}
   }
 }
 
@@ -117,7 +123,7 @@
       padding-right: 10px;
     }
 
-    tr:first-child > th:first-child {padding: 0;}
+    tr:first-child > th:first-child {padding-top: 0;}
   }
 }
 
@@ -128,18 +134,23 @@
       max-width: 350px;
     }
 
-    tr > th {
-      padding-right: 0;
+    table + table {
+      margin-top: 2rem;
     }
 
-    tr:nth-child(5n+1) {
-      display:block;
-      padding-top: 35px;
+    tr > th {
+      text-align: left;
 
-      > th {
-        font-weight : 700;
+      &[colspan="2"] {
+        font-weight: 700;
+        padding: 1rem 0;
       }
     }
+
+    tr:first-child > th {
+      text-align: center;
+    }
+
 
     tr > td {
       height: 44px;
@@ -148,7 +159,7 @@
 
     tbody {
       tr:first-child > th {
-        text-align: left;
+        // text-align: left;
       }
     }
   }
@@ -156,8 +167,5 @@
 
 @include large {
   .component-rush-hours {
-    table {
-      width: 100%;
-    }
   }
 }

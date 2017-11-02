@@ -1,31 +1,32 @@
 mixin rush-hours(data)
   .component.component-rush-hours(class=data.modifiers)
     h2= data.title
-      table.hidden-on-small(summary=data.summary)
-        if data.caption
-          caption= data.caption
+    .hidden-on-small
+      +rush-hours-table(data)
+    .only-on-small
+      +rush-hours-table(data, 0, 3)
+      +rush-hours-table(data, 3, 6)
+      +rush-hours-table(data, 6, 8)
+    if data.text
+      p.rush-hours-text!= data.text
+
+mixin rush-hours-table(data, beginning, end)
+  - data = JSON.parse(JSON.stringify(data || {})); // clone the data object
+  - beginning = beginning || 0
+  - end = end || 100
+  table(summary=data.summary)
+    if data.caption
+      caption= data.caption
+    tr
+      th
+      for day in data.days.slice(beginning, end)
+        th(scope='col')= day
+    if data.items
+      for item in data.items
         tr
-          th
-          for slot in data.timeslots
-            th(scope='col')= slot
-        if data.items
-          for item in data.items
-            tr
-              th= item.title
-              for traffic in item.traffic
-                +rush-hours-td(traffic)
-      table.only-on-small(summary=data.summary)
-        if data.caption
-          caption= data.caption
-        if data.items
-          for item in data.items
-            tr
-              th(colspan="2")= item.title
-            for slot, index in data.timeslots
-              - var traffic = item.traffic[index]
-              tr
-                th(scope='col')= slot
-                + rush-hours-td(traffic)
+          th= item.title
+          for t in item.traffic.slice(beginning, end)
+            +rush-hours-td(t)
 
 mixin rush-hours-td(traffic)
   td(class="traffic-#{traffic}")
@@ -33,4 +34,3 @@ mixin rush-hours-td(traffic)
       while icon < traffic
         i.rush-hours-traffic-icon(aria-hidden="true")
         - icon++
-

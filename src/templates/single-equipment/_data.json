@@ -341,21 +341,29 @@
           "type": "rush-hours",
           "data": {
             "title": "Affluence",
-            "timeslots": [
-              "7h-8h30",
-              "8h30-12h",
-              "12h-14h",
-              "14h-18h"
+            "days": [
+              "Lundi",
+              "Mardi",
+              "Mercredi",
+              "Jeudi",
+              "Vendredi",
+              "Samedi",
+              "Dimanche"
             ],
             "items": [
-              {"title": "Lundi", "traffic": [1, 0, 3, 0]},
-              {"title": "Mardi", "traffic": [2, 0, 1, 0]},
-              {"title": "Mercredi", "traffic": [2, 0, 2, 0]},
-              {"title": "Jeudi", "traffic": [1, 0, 2, 0]},
-              {"title": "Vendredi", "traffic": [2, 0, 3, 0]},
-              {"title": "Samedi", "traffic": [1, 1, 2, 1]},
-              {"title": "Dimanche", "traffic": [1, 2, 3, 2]}
-            ]
+              {"title": "8h-9h", "traffic": [1, 1, 0, 1, 0, 1, 0]},
+              {"title": "9h-10h", "traffic": [2, 2, 0, 2, 0, 2, 0]},
+              {"title": "10h-11h", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+              {"title": "11h-12h", "traffic": [3, 3, 0, 3, 0, 3, 0]},
+              {"title": "12h-13h", "traffic": [3, 3, 0, 3, 0, 3, 0]},
+              {"title": "13h-14h", "traffic": [1, 1, 0, 0, 0, 0, 0]},
+              {"title": "14h-15h", "traffic": [2, 2, 1, 0, 1, 0, 1]},
+              {"title": "15h-16h", "traffic": [2, 2, 2, 1, 2, 1, 2]},
+              {"title": "16h-17h", "traffic": [3, 3, 0, 2, 0, 2, 0]},
+              {"title": "17h-18h", "traffic": [3, 3, 3, 0, 3, 0, 3]},
+              {"title": "18h-19h", "traffic": [0, 0, 3, 0, 3, 0, 3]}
+            ],
+            "text": "Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a>"
           }
         },
         {
