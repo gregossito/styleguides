@@ -447,28 +447,22 @@
               }
             ]
           }
+        },
+        {
+          "type": "demande",
+          "data": {
+            "title": "Vous avez une demande ?",
+            "text": "Contactez le service concerné en utilisant ce formulaire :",
+            "button": {
+              "text": "Accéder au formulaire",
+              "title": "Formulaire de contact",
+              "href": "https://sollicitations.paris.fr",
+              "target": "_blank",
+              "modifiers": ["secondary", "action"]
+            }
+          }
         }
       ],
-      "jecoute": {
-        "title": "Paris j'écoute",
-        "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
-        "form": {
-          "action": "#",
-          "method": "post"
-        },
-        "textarea": {
-          "placeholder": "Quelle information cherchiez-vous dans cette rubrique ?",
-          "name": "question"
-        },
-        "email": {
-          "placeholder": "Votre adresse e-mail"
-        },
-        "button": {
-          "text": "Valider",
-          "title": "Valider votre question à Paris j'écoute"
-        },
-        "thanks": "Merci, votre question a bien été transmise."
-      },
       "related": {
         "heading": {
           "title": "À lire aussi",
