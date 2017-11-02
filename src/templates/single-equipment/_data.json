@@ -296,19 +296,6 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Tarifs</h2>"
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "modifiers": ["header-primary-color", "small-margin-top"],
-            "block": "<tbody><tr><th scope=\"col\">Entrées</th><th scope=\"col\">Plein tarif</th><th scope=\"col\">Tarif réduit*</th></tr><tr><td>Entrée à l'unité</td><td>3,00 €</td><td>1,70 €</td></tr><tr><td>Carte de 10 entrées</td><td>24,00 €</td><td>14,00 €</td></tr><tr><td>Abonnement de 3 mois</td><td>37,00 €</td><td>19,00 €</td></tr></tbody>"
-          }
-        },
-        {
-          "type": "text",
-          "data": {
             "block": "<h2>Activités <a href=\"#\" target=\"_blank\"><img src=\"logo-que-faire.png\" alt=\"Que Faire à Paris\" /></a></h2>"
           }
         },
@@ -335,6 +322,25 @@
           "type": "text",
           "data": {
             "block": "<h2>Services</h2><ul class=\"list-cols\"><li>Football : <em class='light'>2</em></li><li>Manèges : <em class='light'>1</em></li><li>Promenade à poney : <em class='light'>1</em></li><li>Restaurant : <em class='light'>1</em></li><li>Snack : <em class='light'>2</em></li><li>Ping-pong : <em class='light'>1</em></li><li>Toilettes publiques : <em class='light'>2</em></li><li>Wi-fi : <em class='light'>3</em></li><li>Chiens admis : <em class='light'>1</em></li><li>Points d’eau : <em class='light'>5</em></li><li>Guignol : <em class='light'>1</em></li><li>Label QualiPARIS : <em class='light'>1</em></li><li>Aire de jeux : <em class='light'>3</em></li><li>Basket : <em class='light'>1</em></li></ul><h3>Bassin</h3><p><strong>Température de l'eau :</strong> 28° en moyenne<br /><strong>Longueur :</strong> 25m<br /><strong>Largeur :</strong> 12,50m<br /><strong>Profondeur minimum :</strong> 0,80m<br /><strong>Profondeur maximum :</strong> 3,50m</p><h3>Les extras</h3><h4>Distributeurs d’accessoires</h4><p>Sont en vente : bonnets, lunettes et maillots</p><h4>Leçons et brevets de natation</h4><ul><li>1 leçon de natation 1 à 3 personnes (30 mn) : 13 €</li><li>6 leçons de natation 1 à 3 personnes (30 mn) : 56 €</li><li>1 leçon de natation 4 à 16 personnes (40 mn) : 16 €</li></ul><p>Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a></p>"
+          }
+        },
+        {
+          "type": "text",
+          "data": {
+            "block": "<h2>Tarifs</h2>"
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "modifiers": ["text-align-left", "small-margin-top"],
+            "block": "<tbody><tr><th scope=\"col\">Entrées</th><th scope=\"col\">Tarifs</th></tr><tr><td>Entrée à l'unité</td><td>3,00 €</td></tr><tr><td>Carte de 10 entrées</td><td>24,00 €</td></tr><tr><td>Abonnement de 3 mois</td><td>37,00 €</td></tr></tbody>"
+          }
+        },
+        {
+          "type": "text",
+          "data": {
+            "block": "<h3>Conditions tarifaires</h3><p><strong>La gratuité est accordée dans l'ensemble des piscines municipales :</strong><br />Pour bénéficier de la gratuité dans une piscine municipale, il faut être domicilié à Paris, vous présenter à la caisse muni de votre justificatif ouvrant droit à la gratuité (liste ci-dessous), d'un justificatif de domicile et d'une pièce d'identité.</p><ul><li>aux titulaires du Paris pass famille</li><li>aux titulaires du Navigo Émeraude- Améthyste, délivrée par le Centre d'action sociale de la Ville de Paris</li><li>aux guides d'aveugles et guides d'invalides de guerre, détenteurs de la carte blanche de pensionné à 100% (limité à un accompagnant par personne)</li><li>aux pensionnés militaires d'invalidité, titulaires d'une carte délivrée par l'Office national des anciens combattants et victimes de guerre ou de la carte blanche, délivrée par la direction interdépartementale des anciens combattants</li><li>aux demandeurs d'emploi et bénéficiaires du RSA domiciliés à Paris</li><li>aux bénéficiaires de l'allocation temporaire d'attente</li></ul><p><strong>Le tarif réduit est accordé pour les entrées individuelles ; les cartes de 10 entrées et l'abonnement de 3 mois :</strong><br />Pour bénéficier du tarif réduit dans une piscine municipale, il faut être domicilié à Paris, vous présenter à la caisse muni de votre justificatif ouvrant droit au tarif réduit (liste ci-dessous), d'un justificatif de domicile et d'une pièce d'identité.</p><ul><li>aux jeunes âgés de moins de 26 ans résidant à Paris</li><li>aux membres de familles nombreuses titulaires de la carte de réduction de la SNCF</li><li>aux personnes accompagnant des enfants de 8 ans et plus, sans utiliser elles-mêmes les bassins (valable dans les piscines dotées d'un espace visiteurs. Les enfants de moins de 8 ans doivent être accompagnés dans les bassins)</li><li>aux personnes âgées de 65 ans et plus</li><li>aux élèves gardiens de la paix et aux gardiens de la paix astreints à un entraînement et dans ce cadre</li><li>aux titulaires de la carte d'invalidité délivrée par la Maison départementale des personnes handicapées</li></ul>"
           }
         },
         {

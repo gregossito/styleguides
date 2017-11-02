@@ -41,7 +41,7 @@
 
   tr > td {
     color: $gray33;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 300;
     text-align: center;
 
@@ -62,9 +62,17 @@
     }
   }
 
+  // modifiers
   &.header-primary-color {
     tr > th {
       background-color: $color-primary;
+    }
+  }
+  &.text-align-left {
+    tr > th,
+    tr > td, {
+      padding: 1.5rem;
+      text-align: left;
     }
   }
 
