@@ -79,6 +79,10 @@
     list-style-type: disc;
   }
 
+  ul.without-bullets {
+    list-style-type: none;
+  }
+
   ul.list-cols {
     line-height: 2.5rem;
     list-style-type: none;
@@ -89,6 +93,10 @@
       margin: 0;
       padding: 1rem 0;
     }
+  }
+
+  img {
+    max-width: 100%;
   }
 
   a:not(.button) {

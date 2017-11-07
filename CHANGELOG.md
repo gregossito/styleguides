@@ -12,6 +12,7 @@ Let's take the `x.β.α` version number:
 * component `expandable` added
 * component `opening-hours`: changed data structure
 * component `rush-hours`: changed data structure
+* module `block-aside-access` removed
 * re-added default font size for body
 
 ## 1.9.4 (2017-10-10)

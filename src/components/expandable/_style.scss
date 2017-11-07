@@ -27,6 +27,7 @@
 .expandmore__button {
   @extend .button;
   @extend .button.secondary;
+  @extend .button.action;
 }
 .expandmore__button:before,
 .expandmore__button:before {
