@@ -12,12 +12,12 @@ require('./lib/url');
 // load our components
 require('../components/accordion/script');
 require('../components/districts/script');
+require('../components/expandable/script');
 require('../components/form/script');
 require('../components/gallery/script');
 require('../components/html/script');
 require('../components/jecoute/script');
 require('../components/news-push/script');
-require('../components/opening-hours/script');
 require('../components/video/script');
 
 // load our layouts

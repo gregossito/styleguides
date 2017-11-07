@@ -1,4 +1,5 @@
 include ../../modules/button/button
+include ../../components/expandable/expandable
 
 mixin opening-hours(data)
   .component.component-opening-hours(class=data.modifiers)
@@ -28,20 +29,17 @@ mixin opening-hours(data)
           ul
             for item in data.planned_closures.items
               li= item
-    if data.button
-      - button = JSON.parse(JSON.stringify(data.button)) // clone the data object
-      // - button.modifiers = ["action", "secondary", "small"] // overwrite the modifiers
-      // +button(button)
-      .js-expandmore= button.text
-    if data.other_hours
-      .opening-hours-other.js-to_expand
-        h3.opening-hours-other-title= data.other_hours.title
-        for item in data.other_hours.items
-          table(summary=item.summary)
-            if item.caption
-              caption= item.caption
-            if item.items
-              for i in item.items
-                tr
-                  th= i.title
-                  td= i.text
+    if data.button && data.other_hours
+      - data_expandable = {button: data.button}
+      +expandable(data_expandable)
+        .opening-hours-other
+          h3.opening-hours-other-title= data.other_hours.title
+          for item in data.other_hours.items
+            table(summary=item.summary)
+              if item.caption
+                caption= item.caption
+              if item.items
+                for i in item.items
+                  tr
+                    th= i.title
+                    td= i.text

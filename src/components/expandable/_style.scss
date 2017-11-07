@@ -1,0 +1,40 @@
+.component-expandable {
+  .expandable-button {
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+
+  .expandable-content {
+  }
+
+  @include large-and-medium {
+    .expandable-content {
+      border: 0.1rem solid $grayEE;
+      max-height: 40rem;
+      overflow: auto;
+      padding: 0 1.5rem;
+    }
+  }
+}
+
+// Styles for van11y-accessible-hide-show-aria
+// https://github.com/nico3333fr/van11y-accessible-hide-show-aria#how-to-use-it
+.js-to_expand[aria-hidden=true],
+.js-to_expand[data-hidden=true] {
+  display: none;
+}
+
+.expandmore__button {
+  @extend .button;
+  @extend .button.secondary;
+}
+.expandmore__button:before,
+.expandmore__button:before {
+  @include icon-font;
+  content: map-get($icons, 'arrow-bottom');
+  margin-right: 1rem;
+}
+.expandmore__button[aria-expanded=true]:before,
+.expandmore__button[data-expanded=true]:before {
+  content: map-get($icons, 'arrow-top');
+}
