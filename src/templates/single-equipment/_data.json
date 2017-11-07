@@ -339,7 +339,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2 class=\"anchor\" id=\"activites\">Activités <a href=\"#\" target=\"_blank\"><img src=\"logo-que-faire.png\" alt=\"Que Faire à Paris\" /></a></h2>"
+            "block": "<h2 class=\"anchor\" id=\"activites\">Activités <a href=\"#\" target=\"_blank\"><img src=\"logo-qfap.svg\" alt=\"Que Faire à Paris\" /></a></h2>"
           }
         },
         {
@@ -441,7 +441,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2 class=\"anchor\" id=\"evenements\">Évènements <a href=\"#\" target=\"_blank\"><img src=\"logo-que-faire.png\" alt=\"Que Faire à Paris\" /></a></h2>"
+            "block": "<h2 class=\"anchor\" id=\"evenements\">Évènements <a href=\"#\" target=\"_blank\"><img src=\"logo-qfap.svg\" alt=\"Que Faire à Paris\" /></a></h2>"
           }
         },
         {
