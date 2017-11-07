@@ -5,6 +5,7 @@
   }
 
   .expandable-content {
+    @extend %component-text;
   }
 
   @include large-and-medium {
