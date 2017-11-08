@@ -150,6 +150,10 @@
               {
                 "href": "#presentation",
                 "text": "Présentation"
+              },
+              {
+                "href": "#telechargements",
+                "text": "Liens et téléchargements"
               }
             ]
           }
@@ -475,7 +479,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Liens et téléchargements</h2>"
+            "block": "<h2 class=\"anchor\" id=\"telechargements\">Liens et téléchargements</h2>"
           }
         },
         {
