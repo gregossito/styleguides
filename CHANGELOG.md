@@ -9,6 +9,8 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+* component `card`: changed data structure (removed `src` in `img`)
+* component `events` added
 * component `expandable` added
 * component `opening-hours`: changed data structure
 * component `rush-hours`: changed data structure

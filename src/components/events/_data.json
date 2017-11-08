@@ -1,0 +1,144 @@
+{
+  "index": {
+    "type": "events",
+    "description": "",
+    "examples": [
+      {
+        "title": "Standard (plus de 3 items)",
+        "description": "",
+        "attrs": {
+          "style": "max-width: 770px"
+        },
+        "data": {
+          "title": {
+            "text": "Évènements",
+            "link": {
+              "href": "#",
+              "text": "Tous les évènements"
+            },
+            "logo": {
+              "href": "#",
+              "target": "_blank",
+              "src": "../../templates/single-equipment/logo-qfap.svg",
+              "alt": "Que Faire à Paris"
+            }
+          },
+          "items": [
+            {
+              "href": "#",
+              "target": "_blank",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Concert",
+              "title": "Les vendredis du conservatoire",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "#",
+              "target": "_blank",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Festivité",
+              "title": "Spectacle de danse moderne au Conservatoire Frédéric Chopin",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "#",
+              "target": "_blank",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Actualité",
+              "title": "Parcours de découverte du théâtre (entre 11 et 15 ans)",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "#",
+              "target": "_blank",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Actualité",
+              "title": "Découvrez la filière voix",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "#",
+              "target": "_blank",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Sélection",
+              "title": "Les ateliers inter conservatoires",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "#",
+              "target": "_blank",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Concert",
+              "title": "Vibrez au son des percussions",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": "Moins de 3 items",
+        "description": "",
+        "attrs": {
+          "style": "max-width: 770px"
+        },
+        "data": {
+          "title": {
+            "text": "Évènements",
+            "link": {
+              "href": "#",
+              "text": "Tous les évènements"
+            },
+            "logo": {
+              "href": "#",
+              "target": "_blank",
+              "src": "../../templates/single-equipment/logo-qfap.svg",
+              "alt": "Que Faire à Paris"
+            }
+          },
+          "items": [
+            {
+              "href": "#",
+              "target": "_blank",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Concert",
+              "title": "Les vendredis du conservatoire",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "#",
+              "target": "_blank",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Actualité",
+              "title": "Parcours de découverte du théâtre (entre 11 et 15 ans)",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

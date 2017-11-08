@@ -256,19 +256,89 @@
           }
         },
         {
-          "type": "text",
+          "type": "events",
           "data": {
-            "block": "<h2 class=\"anchor\" id=\"evenements\">Évènements <a href=\"#\" target=\"_blank\"><img src=\"logo-qfap.svg\" alt=\"Que Faire à Paris\" style=\"width: 9rem;\" /></a></h2>"
-          }
-        },
-        {
-          "type": "card",
-          "data": {
-            "href": "#",
-            "category": "Spectacles et Concert",
-            "title": "Programme du kiosque à musique du parc Montsouris",
-            "text": "Samedi 05 septembre 2015<br />de 15h00 à 18h00",
-            "image": {"src": "../../components/card/1.jpg"}
+            "title": {
+              "text": "Évènements",
+              "link": {
+                "href": "#",
+                "text": "Tous les évènements"
+              },
+              "logo": {
+                "href": "#",
+                "target": "_blank",
+                "src": "logo-qfap.svg",
+                "alt": "Que Faire à Paris"
+              }
+            },
+            "items": [
+              {
+                "href": "#",
+                "target": "_blank",
+                "image": "../../modules/news-card/image.jpg",
+                "category": "Concert",
+                "title": "Les vendredis du conservatoire",
+                "counters": {
+                  "facebook": [5, "j'aime"],
+                  "twitter": [12, "retweets"]
+                }
+              },
+              {
+                "href": "#",
+                "target": "_blank",
+                "image": "../../modules/news-card/image.jpg",
+                "category": "Festivité",
+                "title": "Spectacle de danse moderne au Conservatoire Frédéric Chopin",
+                "counters": {
+                  "facebook": [5, "j'aime"],
+                  "twitter": [12, "retweets"]
+                }
+              },
+              {
+                "href": "#",
+                "target": "_blank",
+                "image": "../../modules/news-card/image.jpg",
+                "category": "Actualité",
+                "title": "Parcours de découverte du théâtre (entre 11 et 15 ans)",
+                "counters": {
+                  "facebook": [5, "j'aime"],
+                  "twitter": [12, "retweets"]
+                }
+              },
+              {
+                "href": "#",
+                "target": "_blank",
+                "image": "../../modules/news-card/image.jpg",
+                "category": "Actualité",
+                "title": "Découvrez la filière voix",
+                "counters": {
+                  "facebook": [5, "j'aime"],
+                  "twitter": [12, "retweets"]
+                }
+              },
+              {
+                "href": "#",
+                "target": "_blank",
+                "image": "../../modules/news-card/image.jpg",
+                "category": "Sélection",
+                "title": "Les ateliers inter conservatoires",
+                "counters": {
+                  "facebook": [5, "j'aime"],
+                  "twitter": [12, "retweets"]
+                }
+              },
+              {
+                "href": "#",
+                "target": "_blank",
+                "image": "../../modules/news-card/image.jpg",
+                "category": "Concert",
+                "title": "Vibrez au son des percussions",
+                "counters": {
+                  "facebook": [5, "j'aime"],
+                  "twitter": [12, "retweets"]
+                }
+              }
+            ]
           }
         },
         {

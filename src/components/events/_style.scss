@@ -1,0 +1,106 @@
+.component-events {
+  clear: both;
+
+  h2 {
+    color: $gray1A;
+    float: left;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 3.2rem;
+
+    img {
+      margin: 0 1rem;
+      max-height: 5rem;
+      position: relative;
+      top: 0.2rem;
+      vertical-align: bottom;
+      width: 9rem;
+    }
+  }
+  @include small {
+    h2 {
+      font-size: 3rem;
+      line-height: 3.8rem;
+    }
+  }
+  &:first-child h2 {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .events-heading {
+    border-top: 7px solid $grayF2;
+    overflow: hidden;
+    margin-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  .events-title-links {
+    font-size: 1.5rem;
+
+    > a {
+      border-bottom: 1px solid $gray4D;
+      color: $gray4D;
+      display: inline-block;
+      line-height: 2rem;
+      padding-bottom: 2px;
+      position: relative;
+      text-decoration: none;
+      transition: all 0.35s ease;
+
+      &:after {
+        background-color: $color-primary;
+        bottom: -1px;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transition: width 0.35s ease;
+        width: 0;
+      }
+
+      &:hover {
+        color: $color-primary;
+        &:after {width: 100%;}
+      }
+    }
+  }
+}
+
+@include small {
+  .component-events {
+    .events-title-links {
+      clear: both;
+    }
+  }
+}
+
+@include medium-and-small {
+  .component-events {
+    overflow-x: auto;
+    position: relative;
+    width: 100%;
+  }
+}
+
+
+@include large-and-medium {
+  .component-events {
+    h2 {
+      font-size: 3.4rem;
+      line-height: 4rem;
+      margin: 0 20px 0 0;
+    }
+
+    .events-title-links {
+      line-height: 5.5rem;
+    }
+  }
+}
+
+@include large {
+  .component-events {
+  }
+}
