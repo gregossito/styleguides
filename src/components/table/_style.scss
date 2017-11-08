@@ -93,6 +93,12 @@
     overflow-x: auto;
     position: relative;
     width: 100%;
+
+    &.no-scroll-on-mobile {
+      table {
+        width: auto;
+      }
+    }
   }
 }
 

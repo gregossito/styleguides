@@ -385,7 +385,7 @@
         {
           "type": "table",
           "data": {
-            "modifiers": ["text-align-left", "small-margin-top"],
+            "modifiers": ["text-align-left", "small-margin-top", "no-scroll-on-mobile"],
             "block": "<tbody><tr><th scope=\"col\">Entrées</th><th scope=\"col\">Tarifs</th></tr><tr><td>Entrée à l'unité</td><td>3,00 €</td></tr><tr><td>Carte de 10 entrées</td><td>24,00 €</td></tr><tr><td>Abonnement de 3 mois</td><td>37,00 €</td></tr></tbody>"
           }
         },
