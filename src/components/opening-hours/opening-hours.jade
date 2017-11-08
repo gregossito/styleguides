@@ -10,7 +10,7 @@ mixin opening-hours(data)
           a(href=data.title.link.href)= data.title.link.text
     if data.status
       p.opening-hours-status(class=data.status.open ? "is-open" : "is-closed")
-        i.icon.icon-alert
+        i.icon.icon-clock
         = data.status.text
     if data.current_hours
       table(summary=data.current_hours.summary)
