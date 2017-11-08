@@ -124,6 +124,10 @@
                 "text": "Accès"
               },
               {
+                "href": "#evenements",
+                "text": "Évènements"
+              },
+              {
                 "href": "#activites",
                 "text": "Activités"
               },
@@ -142,10 +146,6 @@
               {
                 "href": "#photos",
                 "text": "Photos"
-              },
-              {
-                "href": "#evenements",
-                "text": "Évènements"
               },
               {
                 "href": "#presentation",
@@ -258,6 +258,22 @@
         {
           "type": "text",
           "data": {
+            "block": "<h2 class=\"anchor\" id=\"evenements\">Évènements <a href=\"#\" target=\"_blank\"><img src=\"logo-qfap.svg\" alt=\"Que Faire à Paris\" /></a></h2>"
+          }
+        },
+        {
+          "type": "card",
+          "data": {
+            "href": "#",
+            "category": "Spectacles et Concert",
+            "title": "Programme du kiosque à musique du parc Montsouris",
+            "text": "Samedi 05 septembre 2015<br />de 15h00 à 18h00",
+            "image": {"src": "../../components/card/1.jpg"}
+          }
+        },
+        {
+          "type": "text",
+          "data": {
             "block": "<h2 class=\"anchor\" id=\"activites\">Activités <a href=\"#\" target=\"_blank\"><img src=\"logo-qfap.svg\" alt=\"Que Faire à Paris\" /></a></h2>"
           }
         },
@@ -355,22 +371,6 @@
               {"src": "../../components/gallery/2.jpg"},
               {"src": "../../components/gallery/3.jpg"}
             ]
-          }
-        },
-        {
-          "type": "text",
-          "data": {
-            "block": "<h2 class=\"anchor\" id=\"evenements\">Évènements <a href=\"#\" target=\"_blank\"><img src=\"logo-qfap.svg\" alt=\"Que Faire à Paris\" /></a></h2>"
-          }
-        },
-        {
-          "type": "card",
-          "data": {
-            "href": "#",
-            "category": "Spectacles et Concert",
-            "title": "Programme du kiosque à musique du parc Montsouris",
-            "text": "Samedi 05 septembre 2015<br />de 15h00 à 18h00",
-            "image": {"src": "../../components/card/1.jpg"}
           }
         },
         {
