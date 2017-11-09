@@ -4,9 +4,8 @@ mixin rush-hours(data)
     .hidden-on-small
       +rush-hours-table(data)
     .only-on-small
-      +rush-hours-table(data, 0, 3)
-      +rush-hours-table(data, 3, 6)
-      +rush-hours-table(data, 6, 8)
+      +rush-hours-table(data, 0, 4)
+      +rush-hours-table(data, 4, 8)
     if data.text
       p.rush-hours-text!= data.text
 
@@ -20,7 +19,9 @@ mixin rush-hours-table(data, beginning, end)
     tr
       th
       for day in data.days.slice(beginning, end)
-        th(scope='col')= day
+        th(scope='col')
+          .hidden-on-small= day
+          .only-on-small(aria-hidden="true")= day.slice(0, 3)
     if data.items
       for item in data.items
         tr

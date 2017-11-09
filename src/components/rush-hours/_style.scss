@@ -139,6 +139,7 @@
     }
 
     tr > th {
+      font-size: 1.4rem;
       text-align: left;
 
       &[colspan="2"] {
@@ -151,16 +152,13 @@
       text-align: center;
     }
 
-
     tr > td {
-      height: 44px;
-      width: 50%;
+      height: 3.6rem;
     }
 
-    tbody {
-      tr:first-child > th {
-        // text-align: left;
-      }
+    .rush-hours-traffic-icon {
+      font-size: 2rem;
+      line-height: 1rem;
     }
   }
 }
