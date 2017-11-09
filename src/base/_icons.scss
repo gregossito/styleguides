@@ -1,11 +1,11 @@
 /* Font icons */
 @font-face {
   font-family: 'paris-icons';
-  src:url('../fonts/paris-icons.eot?3m8bh5');
-  src:url('../fonts/paris-icons.eot?#iefix3m8bh5') format('embedded-opentype'),
-    url('../fonts/paris-icons.woff?3m8bh5') format('woff'),
-    url('../fonts/paris-icons.ttf?3m8bh5') format('truetype'),
-    url('../fonts/paris-icons.svg?3m8bh5#paris-icons') format('svg');
+  src:url('../fonts/paris-icons.eot?2l3zn0');
+  src:url('../fonts/paris-icons.eot?#iefix2l3zn0') format('embedded-opentype'),
+    url('../fonts/paris-icons.woff?2l3zn0') format('woff'),
+    url('../fonts/paris-icons.ttf?2l3zn0') format('truetype'),
+    url('../fonts/paris-icons.svg?2l3zn0#paris-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -80,7 +80,8 @@ $icons: (
   swimming-pool: "\e910",
   text: "\e901",
   tramway: "\e925",
-  twitter: "\e60a"
+  twitter: "\e60a",
+  velib: "\e91a"
 );
 
 @mixin icon($name) {
