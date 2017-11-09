@@ -4,6 +4,7 @@ require('./externals/bootstrap');
 // load our librairies
 require('./lib/events');
 require('./lib/i18n');
+require('./lib/maps');
 require('./lib/requestanimationframe');
 require('./lib/responsive');
 require('./lib/scroll');
@@ -17,6 +18,7 @@ require('../components/form/script');
 require('../components/gallery/script');
 require('../components/html/script');
 require('../components/jecoute/script');
+require('../components/map/script');
 require('../components/news-push/script');
 require('../components/video/script');
 

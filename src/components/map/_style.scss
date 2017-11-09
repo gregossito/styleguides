@@ -1,0 +1,46 @@
+.component-map {
+  position: relative;
+
+  &-map {
+    background-color: $grayF2;
+    overflow: hidden;
+    width: 100%;
+
+    > .layout-wrapper {
+      bottom: 0;
+      height: 0;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      z-index: 101;
+    }
+
+    .leaflet-bottom,
+    .leaflet-top {
+      z-index: 100;
+    }
+  }
+
+  .leaflet-container .leaflet-control-attribution {
+    border-top-left-radius: 0.5rem;
+    a {
+      color: $gray99;
+      &:hover {
+        color: $gray66;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @include small {
+    &-map {
+      height: 60vh;
+    }
+  }
+
+  @include large-and-medium {
+    &-map {
+      height: 24vw;
+    }
+  }
+}

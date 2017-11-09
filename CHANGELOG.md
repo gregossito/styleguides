@@ -12,6 +12,7 @@ Let's take the `x.β.α` version number:
 * component `card`: changed data structure (removed `src` in `img`)
 * component `events` added
 * component `expandable` added
+* component `map` added
 * component `opening-hours`: changed data structure
 * component `rush-hours`: changed data structure
 * component `text`: fixed font size in lists (same as paragraphs)
