@@ -16,6 +16,9 @@ Paris.responsive.sizes = {
   "small": {
     mediaQuery: "(max-width: 767px)"
   },
+  "medium-large": {
+    mediaQuery: "(min-width: 768px)"
+  },
   "large": {
     mediaQuery: "(min-width: 1160px)"
   }
