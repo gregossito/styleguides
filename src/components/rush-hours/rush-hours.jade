@@ -25,7 +25,10 @@ mixin rush-hours-table(data, beginning, end)
     if data.items
       for item in data.items
         tr
-          th= item.title
+          th
+            .rush-hours-interval
+              = item.from
+              .hidden-accessibly= " - " + item.to
           for t in item.traffic.slice(beginning, end)
             +rush-hours-td(t)
 
