@@ -1,0 +1,18 @@
+{
+  "index": {
+    "type": "expandable",
+    "description": "Ce composant permet d'afficher un bloc de contenu au clic sur un bouton. Il accepte un bloc (ou un paramètre <code>block</code>) contenant du code HTML.",
+    "examples": [
+      {
+        "title": "Standard",
+        "description": "",
+        "data": {
+          "button": {
+            "text": "Voir le contenu"
+          },
+          "block": "<p>Voici le contenu</p>"
+        }
+      }
+    ]
+  }
+}
