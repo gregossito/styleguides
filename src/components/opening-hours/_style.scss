@@ -4,9 +4,10 @@
   h2 {
     border-top: 7px solid $grayF2;
     color: $gray1A;
-    font-size: 3.4rem;
+    float: left;
+    font-size: 2.6rem;
     font-weight: 700;
-    line-height: 4.2rem;
+    line-height: 3.2rem;
     margin-bottom: 20px;
     padding-top: 40px;
   }
@@ -16,17 +17,100 @@
       line-height: 3.8rem;
     }
   }
+  &:first-child h2 {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
 
-  .opening-hours-text {
-    color: $color-primary;
+  .opening-hours-heading {
+    overflow: hidden;
+  }
+
+  .opening-hours-status,
+  .opening-hours-planned-closures,
+  table,
+  > .button {
+    margin-bottom: 3rem;
+  }
+
+  .opening-hours-status {
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    .icon {
+      margin-right: 1rem;
+    }
+
+    &.is-open {
+      color: $green2;
+    }
+
+    &.is-closed {
+      color: $color-primary;
+    }
+  }
+
+  .opening-hours-title-links {
+    font-size: 1.5rem;
+
+    > a {
+      border-bottom: 1px solid $gray4D;
+      color: $gray4D;
+      display: inline-block;
+      line-height: 2rem;
+      padding-bottom: 2px;
+      position: relative;
+      text-decoration: none;
+      transition: all 0.35s ease;
+
+      &:after {
+        background-color: $color-primary;
+        bottom: -1px;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transition: width 0.35s ease;
+        width: 0;
+      }
+
+      &:hover {
+        color: $color-primary;
+        &:after {width: 100%;}
+      }
+    }
+  }
+
+  .opening-hours-planned-closures {
+    line-height: 2.4rem;
+
+    .icon {
+      color: $color-primary;
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding-left: 3rem;
+    }
+  }
+
+  .opening-hours-other {
+    &-title {
+      color: $color-secondary;
+      margin-bottom: 2rem;
+    }
   }
 
   caption {
     caption-side: top;
-    color: $gray33;
-    font-size: 1.4rem;
-    font-weight: 300;
-    padding-bottom: 15px;
+    color: $gray1A;
+    font-size: 1.6rem;
+    font-weight: 700;
     text-align: left;
   }
 
@@ -46,16 +130,16 @@
 
   tr > th {
     border-right: 25px solid $white;
-    color: $gray4D;
-    font-size: 1.5rem;
-    font-weight: 700;
+    color: $gray1A;
+    font-size: 1.6rem;
+    font-weight: normal;
     min-width: 115px;
     text-align: left;
   }
 
   tr > td {
-    color: $gray33;
-    font-size: 1.4rem;
+    color: $gray4D;
+    font-size: 1.6rem;
     font-weight: 300;
     text-align: left;
 
@@ -71,31 +155,12 @@
     tr {background-color: transparent;}
     tr > td {text-align: left;}
   }
-
-  .opening-hours-buttons {
-    list-style: none;
-    margin-top: 40px;
-    padding: 0;
-
-    li {
-      display: inline-block;
-      + li {margin-left: 10px;}
-    }
-  }
 }
 
 @include small {
   .component-opening-hours {
-
-    .opening-hours-buttons {
-      li {
-        display: inline-block;
-        + li {
-          display: block;
-          margin-left: 0;
-          margin-top: 10px;
-        }
-      }
+    .opening-hours-title-links {
+      clear: both;
     }
   }
 }
@@ -105,6 +170,33 @@
     overflow-x: auto;
     position: relative;
     width: 100%;
+  }
+}
+
+
+@include large-and-medium {
+  .component-opening-hours {
+    h2 {
+      font-size: 3.4rem;
+      line-height: 4rem;
+      margin: 0 20px 0 0;
+    }
+
+    .opening-hours-title-links {
+      line-height: 4rem;
+    }
+
+    .opening-hours-other {
+      table {
+        float: left;
+        margin: 0 2rem 4rem 0;
+        min-width: calc(50% - 2rem);
+
+        &:nth-child(2n) {
+          clear: left;
+        }
+      }
+    }
   }
 }
 

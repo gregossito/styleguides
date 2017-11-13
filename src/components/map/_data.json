@@ -1,6 +1,6 @@
 {
   "index": {
-    "type": "my-component",
+    "type": "map",
     "description": "",
     "cssTheme": "",
     "bodyAttributes": {},
@@ -9,7 +9,13 @@
         "title": "Standard",
         "description": "",
         "attrs": {},
-        "data": {}
+        "data": {
+          "attributes": {
+            "data-lat": 48.895556,
+            "data-lon": 2.388056,
+            "data-zoom": 15
+          }
+        }
       }
     ]
   }

@@ -49,6 +49,10 @@
 }
 
 
+@include small {
+  .anchors-list-title {margin-bottom: 2rem;}
+}
+
 
 @include medium {
   .anchors-list {width: 240px;}

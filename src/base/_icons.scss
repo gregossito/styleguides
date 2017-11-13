@@ -1,16 +1,17 @@
 /* Font icons */
 @font-face {
   font-family: 'paris-icons';
-  src:url('../fonts/paris-icons.eot?elgujd');
-  src:url('../fonts/paris-icons.eot?#iefixelgujd') format('embedded-opentype'),
-    url('../fonts/paris-icons.woff?elgujd') format('woff'),
-    url('../fonts/paris-icons.ttf?elgujd') format('truetype'),
-    url('../fonts/paris-icons.svg?elgujd#icomoon') format('svg');
+  src:url('../fonts/paris-icons.eot?2l3zn0');
+  src:url('../fonts/paris-icons.eot?#iefix2l3zn0') format('embedded-opentype'),
+    url('../fonts/paris-icons.woff?2l3zn0') format('woff'),
+    url('../fonts/paris-icons.ttf?2l3zn0') format('truetype'),
+    url('../fonts/paris-icons.svg?2l3zn0#paris-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @mixin icon-font {
-  font-family: 'paris-icons';
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'paris-icons' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -43,7 +44,8 @@ $icons: (
   bell-outline: "\e912",
   bell: "\e61c",
   bicycle: "\e60f",
-  bus: "\e60e",
+  bus: "\e919",
+  clock: "\e918",
   city-hall: "\e904",
   close-rounded: "\e613",
   close: "\e612",
@@ -65,6 +67,7 @@ $icons: (
   mail: "\e609",
   marker: "\e60c",
   market: "\e90b",
+  metro: "\e923",
   museum: "\e90c",
   nf: "\e90d",
   park: "\e90e",
@@ -72,11 +75,13 @@ $icons: (
   pdf: "\e602",
   play: "\e611",
   profile: "\e60b",
+  rer: "\e924",
   search: "\e60d",
-  subway: "\e610",
   swimming-pool: "\e910",
   text: "\e901",
-  twitter: "\e60a"
+  tramway: "\e925",
+  twitter: "\e60a",
+  velib: "\e91a"
 );
 
 @mixin icon($name) {

@@ -4,6 +4,7 @@ require('./externals/bootstrap');
 // load our librairies
 require('./lib/events');
 require('./lib/i18n');
+require('./lib/maps');
 require('./lib/requestanimationframe');
 require('./lib/responsive');
 require('./lib/scroll');
@@ -12,10 +13,12 @@ require('./lib/url');
 // load our components
 require('../components/accordion/script');
 require('../components/districts/script');
+require('../components/expandable/script');
 require('../components/form/script');
 require('../components/gallery/script');
 require('../components/html/script');
 require('../components/jecoute/script');
+require('../components/map/script');
 require('../components/news-push/script');
 require('../components/video/script');
 

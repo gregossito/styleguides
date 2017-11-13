@@ -15,11 +15,6 @@
             "attributes": {"data-action": "close"}
           },
           "block": "Le site Paris.fr utilise des cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. En poursuivant votre navigation sur ce site, vous acceptez leur utilisation. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
-        },
-        "content": {
-          "id": "notice_content",
-          "modifiers": ["orange", "alert"],
-          "block": "Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod."
         }
       },
       "rheader": {
@@ -93,46 +88,7 @@
       },
       "heading": {
         "image": "document-heading.jpg",
-        "text": "Piscine Didot",
-        "icons": [
-          {
-            "action": {
-              "type": "favorite",
-              "id": 1
-            },
-            "icon": [
-              "favorites-outline",
-              "favorites"
-            ],
-            "label": [
-              "Ajouter aux favoris",
-              "Enlever des favoris"
-            ]
-          },
-          {
-            "action": {
-              "type": "alert",
-              "id": 1,
-              "fallback_link": "https://connect.paris.fr/alertes"
-            },
-            "icon": [
-              "bell-outline",
-              "bell"
-            ],
-            "label": [
-              "S'inscrire aux alertes",
-              "Se désinscrire des alertes"
-            ]
-          }
-        ],
-        "tags" : [
-          {
-            "text": "XIVe arrondissement"
-          },
-          {
-            "text": "Ouvert jusqu'à 19h"
-          }
-        ]
+        "text": "Piscine Didot"
       },
       "breadcrumbs": {
         "items": [
@@ -142,19 +98,11 @@
           },
           {
             "href": "#",
-            "text": "Services et infos pratiques"
+            "text": "Équipements"
           },
           {
             "href": "#",
-            "text": "Sports"
-          },
-          {
-            "href": "#",
-            "text": "Où faire du sport ?"
-          },
-          {
-            "href": "#",
-            "text": "Liste des piscines"
+            "text": "Piscines"
           },
           {
             "text": "Piscine Didot"
@@ -163,115 +111,49 @@
       },
       "aside": [
         {
-          "type": "share",
+          "type": "anchors-list",
           "data": {
-            "modifiers": ["circles"],
+            "title": "Sommaire de la page",
             "items": [
               {
-                "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
-                "icon": "facebook",
-                "title": "Partager sur Facebook"
+                "href": "#horaires",
+                "text": "Horaires"
               },
               {
-                "href": "https://twitter.com/intent/tweet?text=Ça glisse sur la patinoire de l’hôtel de ville http://www.paris.fr",
-                "icon": "twitter",
-                "title": "Partager sur Twitter"
+                "href": "#acces",
+                "text": "Accès"
               },
               {
-                "href": "mailto:?subject=Ça glisse sur la patinoire de l’hôtel de ville&body=http://www.paris.fr",
-                "icon": "mail",
-                "title": "Partager par courriel"
-              }
-            ]
-          }
-        },
-        {
-          "type": "block-aside-contact",
-          "data": {
-            "map": {
-              "href": "http://maps.google.com/?q=48.8242657,2.3095736",
-              "target": "_blank",
-              "src": "https://api.mapbox.com/v4/mapbox.streets/pin-m+0C518A%282.3095736,48.8242657%29/2.3095736,48.8242657,16/280x200.png?access_token=pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw"
-            },
-            "items": [
-              {
-                "hcard_properties": ["street-address", "p-street-address"],
-                "text": "22, avenue Georges Lafenestre"
+                "href": "#evenements",
+                "text": "Évènements"
               },
               {
-                "hcard_properties": ["postal-code", "p-postal-code"],
-                "text": "75014"
+                "href": "#activites",
+                "text": "Activités"
               },
               {
-                "hcard_properties": ["locality", "p-locality"],
-                "text": "Paris"
-              }
-            ]
-          }
-        },
-        {
-          "type": "block-aside-access",
-          "data": {
-            "title": "Accès",
-            "items": [
-              {
-                "icon": "subway",
-                "modifiers": ["acces-icon"],
-                "title": "Métro",
-                "text": "Porte de Vanves, ligne 13"
+                "href": "#services",
+                "text": "Services"
               },
               {
-                "icon": "bus",
-                "modifiers": ["acces-icon"],
-                "title": "Bus",
-                "text": "Station n°T3"
+                "href": "#tarifs",
+                "text": "Tarifs"
               },
               {
-                "icon": "bicycle",
-                "modifiers": ["acces-icon"],
-                "title": "Vélib'",
-                "text": ["Station N°14023", "76 Station N°14106", "face 58 avenue Marc Sangnier", "Station N° 14122", "1 rue du colonel Monteil"]
-              }
-            ]
-          }
-        },
-        {
-          "type": "block-aside-access",
-          "data": {
-            "title": "Accessibilité",
-            "text": "Espace dont l'accessibilité est limitée à certaines zones pour les personnes : ",
-            "items": [
-              {
-                "icon": "handicap-mobility",
-                "text": "à mobilité réduite"
+                "href": "#affluence",
+                "text": "Affluence"
               },
               {
-                "icon": "handicap-visually-impaired",
-                "text": "non ou mal voyantes"
+                "href": "#photos",
+                "text": "Photos"
               },
               {
-                "icon": "handicap-hearing-impair",
-                "text": "sourdes ou malentendantes"
-              }
-            ]
-          }
-        },
-        {
-          "type": "block-aside-contact",
-          "data": {
-            "title": "Contact",
-            "items": [
-              {
-                "title": "Tél.",
-                "hcard_properties": ["tel", "p-tel"],
-                "text": "01 45 39 89 29",
-                "href": "tel:+33145398929"
+                "href": "#presentation",
+                "text": "Présentation"
               },
               {
-                "title": "Courriel",
-                "hcard_properties": ["email", "u-email"],
-                "text": "mapiscine@paris.fr",
-                "href": "mailto:mapiscine@paris.fr"
+                "href": "#telechargements",
+                "text": "Liens et téléchargements"
               }
             ]
           }
@@ -279,47 +161,203 @@
       ],
       "components": [
         {
-          "type": "text",
-          "data": {
-            "block": "<h2>Présentation</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p>"
-          }
-        },
-        {
-          "type": "text",
-          "data": {
-            "block": "<h2>Bassin</h2><p>Température de l'eau : <em class='light'>28° en moyenne</em><br />Longueur : <em class='light'>25m</em><br />Largeur : <em class='light'>12,50m</em><br />Profondeur minimum : <em class='light'>0,80m</em><br />Profondeur maximum : <em class='light'>3,50m</em></p>"
-          }
-        },
-        {
-          "type": "text",
-          "data": {
-            "block": "<h2>Services</h2><ul class=\"list-cols\"><li>Football : <em class='light'>2</em></li><li>Manèges : <em class='light'>1</em></li><li>Promenade à poney : <em class='light'>1</em></li><li>Restaurant : <em class='light'>1</em></li><li>Snack : <em class='light'>2</em></li><li>Ping-pong : <em class='light'>1</em></li><li>Toilettes publiques : <em class='light'>2</em></li><li>Wi-fi : <em class='light'>3</em></li><li>Chiens admis : <em class='light'>1</em></li><li>Points d’eau : <em class='light'>5</em></li><li>Guignol : <em class='light'>1</em></li><li>Label QualiPARIS : <em class='light'>1</em></li><li>Aire de jeux : <em class='light'>3</em></li><li>Basket : <em class='light'>1</em></li></ul>"
-          }
-        },
-        {
           "type": "opening-hours",
           "data": {
-            "title": "Horaires",
-            "text": "Fermeture prévue du 23 février 2015 au 1er mars 2015 (vidange)",
+            "title": {
+              "id": "horaires",
+              "text": "Horaires",
+              "link": {
+                "href": "#",
+                "text": "Retrouver tous les horaires des piscines sur une carte"
+              }
+            },
+            "status": {
+              "open": false,
+              "text": "Fermée en ce moment - Réouverture demain à 07h00"
+            },
+            "current_hours": {
+              "caption": "Période scolaire",
+              "items": [
+                {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                {"title": "Samedi", "text": "07h à 18h00 (sans interruption)"},
+                {"title": "Dimanche", "text": "07h à 18h00 (sans interruption)"}
+              ]
+            },
+            "other_hours": {
+              "title": "Horaires spécifiques",
+              "items": [
+                {
+                  "caption": "Du 1er octobre au 31 décembre 2017",
+                  "items": [
+                    {"title": "Lundi", "text": "07h à 8h30"},
+                    {"title": "Mardi", "text": "07h à 8h30"},
+                    {"title": "Mercredi", "text": "07h à 8h30"},
+                    {"title": "Jeudi", "text": "07h à 8h30"},
+                    {"title": "Vendredi", "text": "07h à 8h30"},
+                    {"title": "Samedi", "text": "fermé"},
+                    {"title": "Dimanche", "text": "07h à 18h00"}
+                  ]
+                },
+                {
+                  "caption": "Du 29 octobre au 28 février 2018",
+                  "items": [
+                    {"title": "Lundi", "text": "07h à 8h30"},
+                    {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                    {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                    {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                    {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                    {"title": "Samedi", "text": "fermé"},
+                    {"title": "Dimanche", "text": "07h à 18h00"}
+                  ]
+                },
+                {
+                  "caption": "Du 1er octobre au 31 décembre 2017",
+                  "items": [
+                    {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                    {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                    {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                    {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                    {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                    {"title": "Samedi", "text": "fermé"},
+                    {"title": "Dimanche", "text": "07h à 18h00"}
+                  ]
+                },
+                {
+                  "caption": "Du 29 octobre au 28 février 2018",
+                  "items": [
+                    {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                    {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                    {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                    {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                    {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                    {"title": "Samedi", "text": "fermé"},
+                    {"title": "Dimanche", "text": "07h à 18h00"}
+                  ]
+                }
+              ]
+            },
+            "planned_closures": {
+              "text": "Fermetures prévues :",
+              "items": [
+                "le 1er novembre 2017",
+                "du 27 décembre 2017 au 04 janvier 2018"
+              ]
+            },
+            "button": {
+              "text": "Tous les horaires",
+              "title": ""
+            }
+          }
+        },
+        {
+          "type": "text",
+          "data": {
+            "block": "<h2 class=\"anchor\" id=\"acces\">Accès</h2>"
+          }
+        },
+        {
+          "type": "map",
+          "data": {
+            "modifiers": ["small-margin-top"],
+            "attributes": {
+              "data-lat": 48.8242657,
+              "data-lon": 2.3095736,
+              "data-zoom": 16
+            }
+          }
+        },
+        {
+          "type": "text",
+          "data": {
+            "block": "<p>22, avenue Georges Lafenestre<br />75014 Paris</p><h3>Complément d'adresse</h3><p>Pour accèder à la piscine :</p><ul><li>M° Saint Philippe du Roule (ligne 9) : Remonter la rue du Faubourg St Honoré jusqu'au n° 206 - 210</li><li>M° Courcelles (ligne 2) : Remonter la rue de Courcelles jusqu'au n° 51</li></ul><h3>Transports</h3><p><h4><i class=\"icon icon-metro\"></i> Métro</h4><ul><li>Courcelles, ligne 2</li></ul><h4><i class=\"icon icon-rer\"></i> RER</h4><ul><li>Arrêt, ligne 26</li></ul><h4><i class=\"icon icon-tramway\"></i> Tram</h4><ul><li>Arrêt, ligne 26</li></ul><h4><i class=\"icon icon-bus\"></i> Bus</h4><ul><li>Arrêt, ligne 26</li></ul><h4><i class=\"icon icon-velib\"></i> Velib'</h4><ul><li>Station N° 8034, 49 rue de berri</li><li>Station N° 8044, 2 rue alfred de vigny</li><li>Station N° 8036, 39 rue de lisbonne</li></ul><h3>Labels</h3><p><a href=\"#\" target=\"_blank\"><img src=\"qualiparis.png\" alt=\"Qualiparis\"></a> <a href=\"#\" target=\"_blank\"><img src=\"qualiparis.png\" alt=\"Qualiparis\"></a></p><h3>Accessibilité</h3><p>Espace dont l'accessibilité est limitée à certaines zones pour les personnes :</p><ul class=\"without-bullets\"><li><i class=\"icon icon-handicap-mobility\"></i> A mobilité réduite</li></ul><h3>Contact</h3><p>Tél. : 01 45 39 89 29<br />Courriel : <a href=\"mailto:mapiscine@paris.fr\">mapiscine@paris.fr</a></p>"
+          }
+        },
+        {
+          "type": "events",
+          "data": {
+            "title": {
+              "text": "Évènements",
+              "link": {
+                "href": "#",
+                "text": "Tous les évènements"
+              },
+              "logo": {
+                "href": "#",
+                "target": "_blank",
+                "src": "logo-qfap.svg",
+                "alt": "Que Faire à Paris"
+              }
+            },
             "items": [
-              {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
-              {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
-              {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
-              {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
-              {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
-              {"title": "Samedi", "text": "07h à 18h00 (sans interruption)"},
-              {"title": "Dimanche", "text": "07h à 18h00 (sans interruption)"}
-            ],
-            "buttons": [
               {
                 "href": "#",
-                "text": "Voir les horaires de toutes les piscines",
-                "title": "Titre"
+                "target": "_blank",
+                "image": "../../modules/news-card/image.jpg",
+                "category": "Concert",
+                "title": "Les vendredis du conservatoire",
+                "counters": {
+                  "facebook": [5, "j'aime"],
+                  "twitter": [12, "retweets"]
+                }
               },
               {
                 "href": "#",
-                "text": "Voir la fréquentation",
-                "title": "Titre"
+                "target": "_blank",
+                "image": "../../modules/news-card/image.jpg",
+                "category": "Festivité",
+                "title": "Spectacle de danse moderne au Conservatoire Frédéric Chopin",
+                "counters": {
+                  "facebook": [5, "j'aime"],
+                  "twitter": [12, "retweets"]
+                }
+              },
+              {
+                "href": "#",
+                "target": "_blank",
+                "image": "../../modules/news-card/image.jpg",
+                "category": "Actualité",
+                "title": "Parcours de découverte du théâtre (entre 11 et 15 ans)",
+                "counters": {
+                  "facebook": [5, "j'aime"],
+                  "twitter": [12, "retweets"]
+                }
+              },
+              {
+                "href": "#",
+                "target": "_blank",
+                "image": "../../modules/news-card/image.jpg",
+                "category": "Actualité",
+                "title": "Découvrez la filière voix",
+                "counters": {
+                  "facebook": [5, "j'aime"],
+                  "twitter": [12, "retweets"]
+                }
+              },
+              {
+                "href": "#",
+                "target": "_blank",
+                "image": "../../modules/news-card/image.jpg",
+                "category": "Sélection",
+                "title": "Les ateliers inter conservatoires",
+                "counters": {
+                  "facebook": [5, "j'aime"],
+                  "twitter": [12, "retweets"]
+                }
+              },
+              {
+                "href": "#",
+                "target": "_blank",
+                "image": "../../modules/news-card/image.jpg",
+                "category": "Concert",
+                "title": "Vibrez au son des percussions",
+                "counters": {
+                  "facebook": [5, "j'aime"],
+                  "twitter": [12, "retweets"]
+                }
               }
             ]
           }
@@ -327,20 +365,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Tarifs</h2>"
-          }
-        },
-        {
-          "type": "table",
-          "data": {
-            "modifiers": ["header-primary-color", "small-margin-top"],
-            "block": "<tbody><tr><th scope=\"col\">Entrées</th><th scope=\"col\">Plein tarif</th><th scope=\"col\">Tarif réduit*</th></tr><tr><td>Entrée à l'unité</td><td>3,00 €</td><td>1,70 €</td></tr><tr><td>Carte de 10 entrées</td><td>24,00 €</td><td>14,00 €</td></tr><tr><td>Abonnement de 3 mois</td><td>37,00 €</td><td>19,00 €</td></tr></tbody>"
-          }
-        },
-        {
-          "type": "text",
-          "data": {
-            "block": "<h2>Activités <a href=\"#\" target=\"_blank\"><img src=\"logo-que-faire.png\" alt=\"Que Faire à Paris\" /></a></h2>"
+            "block": "<h2 class=\"anchor\" id=\"activites\">Activités <a href=\"#\" target=\"_blank\"><img src=\"logo-qfap.svg\" alt=\"Que Faire à Paris\" style=\"width: 9rem;\" /></a></h2>"
           }
         },
         {
@@ -363,36 +388,69 @@
           }
         },
         {
+          "type": "text",
+          "data": {
+            "block": "<h2 class=\"anchor\" id=\"services\">Services</h2><ul class=\"list-cols\"><li>Football : <em class='light'>2</em></li><li>Manèges : <em class='light'>1</em></li><li>Promenade à poney : <em class='light'>1</em></li><li>Restaurant : <em class='light'>1</em></li><li>Snack : <em class='light'>2</em></li><li>Ping-pong : <em class='light'>1</em></li><li>Toilettes publiques : <em class='light'>2</em></li><li>Wi-fi : <em class='light'>3</em></li><li>Chiens admis : <em class='light'>1</em></li><li>Points d’eau : <em class='light'>5</em></li><li>Guignol : <em class='light'>1</em></li><li>Label QualiPARIS : <em class='light'>1</em></li><li>Aire de jeux : <em class='light'>3</em></li><li>Basket : <em class='light'>1</em></li></ul><h3>Bassin</h3><p><strong>Température de l'eau :</strong> 28° en moyenne<br /><strong>Longueur :</strong> 25m<br /><strong>Largeur :</strong> 12,50m<br /><strong>Profondeur minimum :</strong> 0,80m<br /><strong>Profondeur maximum :</strong> 3,50m</p><h3>Les extras</h3><h4>Distributeurs d’accessoires</h4><p>Sont en vente : bonnets, lunettes et maillots</p><h4>Leçons et brevets de natation</h4><ul><li>1 leçon de natation 1 à 3 personnes (30 mn) : 13 €</li><li>6 leçons de natation 1 à 3 personnes (30 mn) : 56 €</li><li>1 leçon de natation 4 à 16 personnes (40 mn) : 16 €</li></ul><p>Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a></p>"
+          }
+        },
+        {
+          "type": "text",
+          "data": {
+            "block": "<h2 class=\"anchor\" id=\"tarifs\">Tarifs</h2>"
+          }
+        },
+        {
+          "type": "table",
+          "data": {
+            "modifiers": ["text-align-left", "small-margin-top", "no-scroll-on-mobile"],
+            "block": "<tbody><tr><th scope=\"col\">Entrées</th><th scope=\"col\">Tarifs</th></tr><tr><td>Entrée à l'unité</td><td>3,00 €</td></tr><tr><td>Carte de 10 entrées</td><td>24,00 €</td></tr><tr><td>Abonnement de 3 mois</td><td>37,00 €</td></tr></tbody>"
+          }
+        },
+        {
+          "type": "expandable",
+          "data": {
+            "button": {
+              "text": "Voir les conditions tarifaires"
+            },
+            "block": "<p><strong>La gratuité est accordée dans l'ensemble des piscines municipales :</strong><br />Pour bénéficier de la gratuité dans une piscine municipale, il faut être domicilié à Paris, vous présenter à la caisse muni de votre justificatif ouvrant droit à la gratuité (liste ci-dessous), d'un justificatif de domicile et d'une pièce d'identité.</p><ul><li>aux titulaires du Paris pass famille</li><li>aux titulaires du Navigo Émeraude- Améthyste, délivrée par le Centre d'action sociale de la Ville de Paris</li><li>aux guides d'aveugles et guides d'invalides de guerre, détenteurs de la carte blanche de pensionné à 100% (limité à un accompagnant par personne)</li><li>aux pensionnés militaires d'invalidité, titulaires d'une carte délivrée par l'Office national des anciens combattants et victimes de guerre ou de la carte blanche, délivrée par la direction interdépartementale des anciens combattants</li><li>aux demandeurs d'emploi et bénéficiaires du RSA domiciliés à Paris</li><li>aux bénéficiaires de l'allocation temporaire d'attente</li></ul><p><strong>Le tarif réduit est accordé pour les entrées individuelles ; les cartes de 10 entrées et l'abonnement de 3 mois :</strong><br />Pour bénéficier du tarif réduit dans une piscine municipale, il faut être domicilié à Paris, vous présenter à la caisse muni de votre justificatif ouvrant droit au tarif réduit (liste ci-dessous), d'un justificatif de domicile et d'une pièce d'identité.</p><ul><li>aux jeunes âgés de moins de 26 ans résidant à Paris</li><li>aux membres de familles nombreuses titulaires de la carte de réduction de la SNCF</li><li>aux personnes accompagnant des enfants de 8 ans et plus, sans utiliser elles-mêmes les bassins (valable dans les piscines dotées d'un espace visiteurs. Les enfants de moins de 8 ans doivent être accompagnés dans les bassins)</li><li>aux personnes âgées de 65 ans et plus</li><li>aux élèves gardiens de la paix et aux gardiens de la paix astreints à un entraînement et dans ce cadre</li><li>aux titulaires de la carte d'invalidité délivrée par la Maison départementale des personnes handicapées</li></ul>"
+          }
+        },
+        {
           "type": "rush-hours",
           "data": {
-            "title": "Affluence",
-            "timeslots": [
-              "7h-8h30",
-              "8h30-12h",
-              "12h-14h",
-              "14h-18h"
+            "title": {
+              "id": "affluence",
+              "text": "Affluence"
+            },
+            "days": [
+              "Lundi",
+              "Mardi",
+              "Mercredi",
+              "Jeudi",
+              "Vendredi",
+              "Samedi",
+              "Dimanche"
             ],
             "items": [
-              {"title": "Lundi", "traffic": [1, 0, 3, 0]},
-              {"title": "Mardi", "traffic": [2, 0, 1, 0]},
-              {"title": "Mercredi", "traffic": [2, 0, 2, 0]},
-              {"title": "Jeudi", "traffic": [1, 0, 2, 0]},
-              {"title": "Vendredi", "traffic": [2, 0, 3, 0]},
-              {"title": "Samedi", "traffic": [1, 1, 2, 1]},
-              {"title": "Dimanche", "traffic": [1, 2, 3, 2]}
-            ]
+              {"from": "8h", "to": "9h", "traffic": [1, 1, 0, 1, 0, 1, 0]},
+              {"from": "9h", "to": "10h", "traffic": [2, 2, 0, 2, 0, 2, 0]},
+              {"from": "10h", "to": "11h", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+              {"from": "11h", "to": "12h", "traffic": [3, 3, 0, 3, 0, 3, 0]},
+              {"from": "12h", "to": "13h", "traffic": [3, 3, 0, 3, 0, 3, 0]},
+              {"from": "13h", "to": "14h", "traffic": [1, 1, 0, 0, 0, 0, 0]},
+              {"from": "14h", "to": "15h", "traffic": [2, 2, 1, 0, 1, 0, 1]},
+              {"from": "15h", "to": "16h", "traffic": [2, 2, 2, 1, 2, 1, 2]},
+              {"from": "16h", "to": "17h", "traffic": [3, 3, 0, 2, 0, 2, 0]},
+              {"from": "17h", "to": "18h", "traffic": [3, 3, 3, 0, 3, 0, 3]},
+              {"from": "18h", "to": "19h", "traffic": [0, 0, 3, 0, 3, 0, 3]}
+            ],
+            "text": "Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a>"
           }
         },
         {
           "type": "text",
           "data": {
-            "block": "<h2>Équipements</h2><h3>Distributeurs d’accessoires</h3><p>Sont en vente : bonnets, lunettes et maillots</p><h3>Leçons et brevets de natation</h3><ul><li>1 leçon de natation 1 à 3 personnes (30 mn) : 13 €</li><li>6 leçons de natation 1 à 3 personnes (30 mn) : 56 €</li><li>1 leçon de natation 4 à 16 personnes (40 mn) : 16 €</li></ul>"
-          }
-        },
-        {
-          "type": "text",
-          "data": {
-            "block": "<h2>Photos</h2>"
+            "block": "<h2 class=\"anchor\" id=\"photos\">Photos</h2>"
           }
         },
         {
@@ -409,113 +467,84 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Évènements <a href=\"#\" target=\"_blank\"><img src=\"logo-que-faire.png\" alt=\"Que Faire à Paris\" /></a></h2>"
+            "block": "<h2 class=\"anchor\" id=\"presentation\">Présentation</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p>"
           }
         },
         {
-          "type": "card",
+          "type": "accordion",
           "data": {
-            "href": "#",
-            "category": "Spectacles et Concert",
-            "title": "Programme du kiosque à musique du parc Montsouris",
-            "text": "Samedi 05 septembre 2015<br />de 15h00 à 18h00",
-            "image": {"src": "../../components/card/1.jpg"}
+            "items": [
+              {
+                "title": "Texte simple",
+                "content": "Ceci est un texte simple."
+              },
+              {
+                "title": "Texte mis en forme",
+                "content": "Ceci est un texte en <strong>gras</strong> et en <em>italique</em>, avec un <a href=\"#\">lien</a>."
+              },
+              {
+                "title": "Listes",
+                "content": "<ul><li>Élément de liste</li><li>Élément de liste</li><li>Élément de liste long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;<a href=\"#\">lien d'exemple</a> dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</li></ul><ol><li>Élément de liste numérotée</li><li>Élément de liste numérotée</li><li>Élément de liste numérotée long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;<a href=\"#\">lien d'exemple</a> dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</li></ol>"
+              },
+              {
+                "title": "Texte long (plusieurs paragraphes) accompagné d'un titre plutôt long lui aussi",
+                "content": "<p>Incenderat autem audaces usque ad insaniam homines ad haec, quae nefariis egere conatibus, Luscus quidam curator urbis subito visus: eosque ut heiulans baiolorum praecentor ad expediendum quod orsi sunt incitans vocibus crebris. qui haut longe postea ideo vivus exustus est.</p><p>Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum.</p>"
+              }
+            ]
           }
         },
         {
           "type": "text",
           "data": {
-            "block": "<h2>Questions fréquentes</h2><p>Regardez dans les questions suivantes si la vôtre n’y figure pas déjà :</p>"
+            "block": "<h2 class=\"anchor\" id=\"telechargements\">Liens et téléchargements</h2>"
           }
         },
         {
-          "type": "faq",
+          "type": "links",
           "data": {
             "modifiers": ["small-margin-top"],
             "items": [
               {
-                "title": "Maecenas sed diam eget risus varius blandit sit amet non magna ?",
-                "slug": "titre1",
-                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+                "href": "#",
+                "text": "Lien vers un fichier PDF",
+                "filetype": "PDF",
+                "filesize": "2,4 Mo",
+                "modifiers": ["links-item-pdf"]
               },
               {
-                "title": "Cras mattis consectetur purus sit amet fermentum ?",
-                "slug": "titre2",
-                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+                "href": "#",
+                "text": "Lien vers un fichier",
+                "filesize": "300 Ko",
+                "modifiers": ["links-item-file"]
               },
               {
-                "title": "Nullam quis risus eget urna mollis ornare vel eu leo ?",
-                "slug": "titre3",
-                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+                "href": "#",
+                "text": "Lien externe"
+              },
+              {
+                "href": "http://www.paris.fr",
+                "text": "Lien externe",
+                "target": "_blank",
+                "target_text": "nouvelle fenêtre"
               }
             ]
           }
+        },
+        {
+          "type": "demande",
+          "data": {
+            "title": "Vous avez une demande ?",
+            "text": "Contactez le service concerné en utilisant ce formulaire :",
+            "button": {
+              "text": "Accéder au formulaire",
+              "title": "Formulaire de contact",
+              "href": "https://sollicitations.paris.fr",
+              "target": "_blank",
+              "modifiers": ["secondary", "action"]
+            }
+          }
         }
       ],
-      "jecoute": {
-        "title": "Paris j'écoute",
-        "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
-        "form": {
-          "action": "#",
-          "method": "post"
-        },
-        "textarea": {
-          "placeholder": "Quelle information cherchiez-vous dans cette rubrique ?",
-          "name": "question"
-        },
-        "email": {
-          "placeholder": "Votre adresse e-mail"
-        },
-        "button": {
-          "text": "Valider",
-          "title": "Valider votre question à Paris j'écoute"
-        },
-        "thanks": "Merci, votre question a bien été transmise."
-      },
-      "related": {
-        "heading": {
-          "title": "À lire aussi",
-          "link": {
-            "href": "../subhome-news",
-            "text": "Voir toutes les actualités"
-          }
-        },
-        "news": {
-          "modifiers": ["news-cards"],
-          "items": [
-            {
-              "href": "../single-news",
-              "image": "../../modules/news-card/image.jpg",
-              "category": "Mobilité",
-              "title": "Bruno Julliard salue le maintien du spectacle Exhibit B",
-              "counters": {
-                "facebook": 5,
-                "twitter": 12
-              }
-            },
-            {
-              "href": "../single-news",
-              "image": "../../modules/news-card/image.jpg",
-              "category": "Culture et patrimoine",
-              "title": "Bruno Julliard annonce la création du Conseil Parisien de la Musique",
-              "counters": {
-                "facebook": 9,
-                "twitter": 12
-              }
-            },
-            {
-              "href": "../single-news",
-              "image": "../../modules/news-card/image.jpg",
-              "category": "Environnement",
-              "title": "Bruno Julliard lance l'expérimentation de panneaux vitrés dans le VIè",
-              "counters": {
-                "facebook": 5,
-                "twitter": 24
-              }
-            }
-          ]
-        }
-      },
       "connected": {
         "heading": {
           "title": "Restez connecté",

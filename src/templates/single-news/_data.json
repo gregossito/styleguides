@@ -293,7 +293,7 @@
             "title": "Patinoire de l'Hôtel de Ville",
             "address": "Parvis de l'Hôtel de Ville",
             "items": [
-              {"icon": "subway", "text": "Métro Hôtel de Ville"}
+              {"icon": "metro", "text": "Métro Hôtel de Ville"}
             ],
             "button": {"href": "#", "text": "Voir la fiche"}
           }
