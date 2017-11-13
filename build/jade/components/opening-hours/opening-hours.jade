@@ -1,20 +1,45 @@
 include ../../modules/button/button
+include ../../components/expandable/expandable
 
 mixin opening-hours(data)
   .component.component-opening-hours(class=data.modifiers)
-    h2= data.title
-    p.opening-hours-text= data.text
-    table(summary=data.summary)
-      if data.caption
-        caption= data.caption
-      if data.items
-        for item in data.items
-          tr
-            th= item.title
-            td= item.text
-    ul.opening-hours-buttons
-      each button in data.buttons
-        - button = JSON.parse(JSON.stringify(button)) // clone the data object
-        - button.modifiers = ["action", "secondary", "small"] // overwrite the modifiers
-        li
-          +button(button)
+    .opening-hours-heading
+      h2.anchor(id=data.title.id)= data.title.text
+      if data.title.link
+        .opening-hours-title-links
+          a(href=data.title.link.href)= data.title.link.text
+    if data.status
+      p.opening-hours-status(class=data.status.open ? "is-open" : "is-closed")
+        i.icon.icon-clock
+        = data.status.text
+    if data.current_hours
+      table(summary=data.current_hours.summary)
+        if data.current_hours.caption
+          caption= data.current_hours.caption
+        if data.current_hours.items
+          for item in data.current_hours.items
+            tr
+              th= item.title
+              td= item.text
+    if data.planned_closures
+      .opening-hours-planned-closures
+        i.icon.icon-alert
+        = data.planned_closures.text
+        if data.planned_closures.items
+          ul
+            for item in data.planned_closures.items
+              li= item
+    if data.button && data.other_hours
+      - data_expandable = {button: data.button}
+      +expandable(data_expandable)
+        .opening-hours-other
+          h3.opening-hours-other-title= data.other_hours.title
+          for item in data.other_hours.items
+            table(summary=item.summary)
+              if item.caption
+                caption= item.caption
+              if item.items
+                for i in item.items
+                  tr
+                    th= i.title
+                    td= i.text

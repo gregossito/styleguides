@@ -1,0 +1,22 @@
+{
+  "index": {
+    "type": "map",
+    "description": "",
+    "cssTheme": "",
+    "bodyAttributes": {},
+    "examples": [
+      {
+        "title": "Standard",
+        "description": "",
+        "attrs": {},
+        "data": {
+          "attributes": {
+            "data-lat": 48.895556,
+            "data-lon": 2.388056,
+            "data-zoom": 15
+          }
+        }
+      }
+    ]
+  }
+}

@@ -108,6 +108,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
   font-weight: 300;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -138,14 +139,15 @@ input:focus, textarea:focus {
 /* Font icons */
 @font-face {
   font-family: 'paris-icons';
-  src: url("../fonts/paris-icons.eot?elgujd");
-  src: url("../fonts/paris-icons.eot?#iefixelgujd") format("embedded-opentype"), url("../fonts/paris-icons.woff?elgujd") format("woff"), url("../fonts/paris-icons.ttf?elgujd") format("truetype"), url("../fonts/paris-icons.svg?elgujd#icomoon") format("svg");
+  src: url("../fonts/paris-icons.eot?2l3zn0");
+  src: url("../fonts/paris-icons.eot?#iefix2l3zn0") format("embedded-opentype"), url("../fonts/paris-icons.woff?2l3zn0") format("woff"), url("../fonts/paris-icons.ttf?2l3zn0") format("truetype"), url("../fonts/paris-icons.svg?2l3zn0#paris-icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: 'paris-icons';
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'paris-icons' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -214,7 +216,10 @@ input:focus, textarea:focus {
   content: ""; }
 
 .icon-bus:before {
-  content: ""; }
+  content: ""; }
+
+.icon-clock:before {
+  content: ""; }
 
 .icon-city-hall:before {
   content: ""; }
@@ -279,6 +284,9 @@ input:focus, textarea:focus {
 .icon-market:before {
   content: ""; }
 
+.icon-metro:before {
+  content: ""; }
+
 .icon-museum:before {
   content: ""; }
 
@@ -300,11 +308,11 @@ input:focus, textarea:focus {
 .icon-profile:before {
   content: ""; }
 
+.icon-rer:before {
+  content: ""; }
+
 .icon-search:before {
   content: ""; }
-
-.icon-subway:before {
-  content: ""; }
 
 .icon-swimming-pool:before {
   content: ""; }
@@ -312,8 +320,14 @@ input:focus, textarea:focus {
 .icon-text:before {
   content: ""; }
 
+.icon-tramway:before {
+  content: ""; }
+
 .icon-twitter:before {
   content: ""; }
+
+.icon-velib:before {
+  content: ""; }
 
 .hidden-accessibly {
   position: absolute !important;
@@ -730,6 +744,10 @@ th {
   text-decoration: none;
   z-index: 1; }
 
+@media (max-width: 767px) {
+  .anchors-list-title {
+    margin-bottom: 2rem; } }
+
 @media (min-width: 768px) and (max-width: 1159px) {
   .anchors-list {
     width: 240px; } }
@@ -770,39 +788,6 @@ th {
     z-index: 0;
     -webkit-transition: width 0.1s ease-in-out;
             transition: width 0.1s ease-in-out; } }
-
-.block-aside-access .block-aside-access-items {
-  color: #4D4D4D;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
-  list-style-type: none;
-  padding: 0;
-  overflow: hidden;
-  text-decoration: none; }
-
-.block-aside-access .block-aside-access-item {
-  position: relative;
-  margin-bottom: 18px; }
-  .block-aside-access .block-aside-access-item > i {
-    color: #0C518A;
-    position: absolute;
-    font-size: 2.5rem;
-    left: 0;
-    top: 0; }
-
-.block-aside-access .acces-item-text {
-  display: block;
-  margin-left: 45px; }
-  .block-aside-access .acces-item-text h4 {
-    margin: 5px 0; }
-  .block-aside-access .acces-item-text p {
-    margin: 0; }
-
-.block-aside-access .acces-icon {
-  border-bottom: 1px solid #CCC;
-  padding-bottom: 18px; }
-  .block-aside-access .acces-icon:last-child {
-    border: none; }
 
 .block-aside-checkboxes.two-cols .block-aside-items {
   -webkit-columns: 2;
@@ -1140,7 +1125,7 @@ th {
   font-size: 1.4rem; }
   .block-content-newsletter .block-content-link {
     margin-top: 15px; }
-  .block-content-newsletter .button {
+  .block-content-newsletter .button, .block-content-newsletter .expandmore__button {
     height: 45px;
     padding-top: 1px;
     padding-bottom: 1px;
@@ -1293,11 +1278,11 @@ th {
 
 .block-content {
   max-width: 600px; }
-  .block-content a:not(.button) {
+  .block-content a:not(.button):not(.expandmore__button) {
     color: inherit;
     border-color: inherit;
     text-decoration: none; }
-    .block-content a:not(.button):hover {
+    .block-content a:not(.button):not(.expandmore__button):hover {
       border-color: transparent; }
   .block-content.color-secondary-background {
     color: #FFF; }
@@ -1370,7 +1355,8 @@ th {
   font-weight: 300;
   margin-right: 10px; }
   .breadcrumbs-item + .breadcrumbs-item:before {
-    font-family: 'paris-icons';
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'paris-icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -1420,7 +1406,7 @@ th {
   .breadcrumbs {
     white-space: nowrap; } }
 
-.button {
+.button, .expandmore__button {
   background-color: #DF225A;
   border: none;
   border-radius: 5px;
@@ -1439,7 +1425,7 @@ th {
           transition: color 0.35s ease;
   vertical-align: middle;
   z-index: 1; }
-  .button:after {
+  .button:after, .expandmore__button:after {
     background-color: #b41a48;
     border-radius: 5px;
     content: "";
@@ -1452,69 +1438,69 @@ th {
             transition: width 0.35s ease;
     width: 0;
     z-index: -1; }
-  .button:hover:after, .button:focus:after, .button[disabled]:after, .button.disabled:after {
+  .button:hover:after, .expandmore__button:hover:after, .button:focus:after, .expandmore__button:focus:after, .button[disabled]:after, [disabled].expandmore__button:after, .button.disabled:after, .disabled.expandmore__button:after {
     width: 100%; }
-  .button[disabled], .button.disabled {
+  .button[disabled], [disabled].expandmore__button, .button.disabled, .disabled.expandmore__button {
     opacity: 0.5;
     pointer-events: none; }
-  .button.secondary {
+  .button.secondary, .expandmore__button {
     background-color: #0C518A;
     padding: 15px; }
-    .button.secondary:after {
+    .button.secondary:after, .expandmore__button:after {
       background-color: #08355b; }
-  .button.tertiary {
+  .button.tertiary, .tertiary.expandmore__button {
     background-color: #F8E273;
     color: #1A1A1A;
     padding: 15px; }
-    .button.tertiary:after {
+    .button.tertiary:after, .tertiary.expandmore__button:after {
       background-color: #f6d842; }
-  .button.white {
+  .button.white, .white.expandmore__button {
     background-color: #FFF;
     color: #000; }
-    .button.white:after {
+    .button.white:after, .white.expandmore__button:after {
       background-color: #F2F2F2; }
-  .button.stateful {
+  .button.stateful, .stateful.expandmore__button {
     background-color: #F8E273;
     color: #0C518A;
     padding: 15px;
     outline: 0; }
-    .button.stateful:after {
+    .button.stateful:after, .stateful.expandmore__button:after {
       background-color: #0C518A; }
-    .button.stateful:hover, .button.stateful:focus, .button.stateful.active {
+    .button.stateful:hover, .stateful.expandmore__button:hover, .button.stateful:focus, .stateful.expandmore__button:focus, .button.stateful.active, .stateful.active.expandmore__button {
       color: #FFF; }
-      .button.stateful:hover:after, .button.stateful:focus:after, .button.stateful.active:after {
+      .button.stateful:hover:after, .stateful.expandmore__button:hover:after, .button.stateful:focus:after, .stateful.expandmore__button:focus:after, .button.stateful.active:after, .stateful.active.expandmore__button:after {
         width: 100%; }
-    .button.stateful[disabled], .button.stateful.disabled {
+    .button.stateful[disabled], .stateful[disabled].expandmore__button, .button.stateful.disabled, .stateful.disabled.expandmore__button {
       background-color: transparent;
       border: 1px solid #333;
       color: #333; }
-      .button.stateful[disabled]:after, .button.stateful.disabled:after {
+      .button.stateful[disabled]:after, .stateful[disabled].expandmore__button:after, .button.stateful.disabled:after, .stateful.disabled.expandmore__button:after {
         background-color: transparent; }
-  .button.wide {
+  .button.wide, .wide.expandmore__button {
     padding: 15px 60px; }
-  .button.small {
+  .button.small, .small.expandmore__button {
     font-size: 1.1rem;
     padding: 12px; }
-  .button.action {
+  .button.action, .expandmore__button {
     font-size: 1.3rem;
     text-transform: uppercase; }
-  .button.icon .icon {
+  .button.icon .icon, .icon.expandmore__button .icon {
     font-weight: 12px;
     margin-right: 10px; }
-  .button.marker {
+  .button.marker, .marker.expandmore__button {
     background-color: #43B57E;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 5rem; }
-    .button.marker:after {
+    .button.marker:after, .marker.expandmore__button:after {
       background-color: #359064; }
-    .button.marker .icon {
+    .button.marker .icon, .marker.expandmore__button .icon {
       font-size: 3rem;
       margin-right: 5px;
       vertical-align: middle; }
 
 @media (min-width: 1160px) {
-  .button {
+  .button, .expandmore__button {
     white-space: nowrap; } }
 
 .button-top {
@@ -1967,11 +1953,11 @@ th {
     line-height: 2.8rem;
     margin: 0 auto 15px;
     max-width: 260px; }
-  .get-involved-nav-item .button {
+  .get-involved-nav-item .button, .get-involved-nav-item .expandmore__button {
     background-color: #A51B50;
     color: #FAE46A;
     font-weight: 700; }
-    .get-involved-nav-item .button:after {
+    .get-involved-nav-item .button:after, .get-involved-nav-item .expandmore__button:after {
       background-color: #8b1743; }
 
 .get-involved-list-items {
@@ -2726,7 +2712,8 @@ html.no-cssanimations .jumbotron-slider {
   color: white;
   font-size: 1.8rem; }
   .links-group-item-icon:before {
-    font-family: 'paris-icons';
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'paris-icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -2831,7 +2818,7 @@ html.no-cssanimations .jumbotron-slider {
 
 .municipal-site-list li {
   display: inline-block; }
-  .municipal-site-list li .button {
+  .municipal-site-list li .button, .municipal-site-list li .expandmore__button {
     background: #F2F2F2;
     color: #0C518A;
     font-size: 1.6rem;
@@ -2842,9 +2829,9 @@ html.no-cssanimations .jumbotron-slider {
     min-height: 6.4rem;
     min-width: 6.4rem;
     padding: 0 1rem; }
-    .municipal-site-list li .button:after {
+    .municipal-site-list li .button:after, .municipal-site-list li .expandmore__button:after {
       background: #0C518A; }
-    .municipal-site-list li .button:hover, .municipal-site-list li .button:focus {
+    .municipal-site-list li .button:hover, .municipal-site-list li .expandmore__button:hover, .municipal-site-list li .button:focus, .municipal-site-list li .expandmore__button:focus {
       color: #FFF; }
 
 @media (max-width: 767px) {
@@ -3481,7 +3468,8 @@ html.no-touchevents .news-card-counter {
     margin-right: 20px;
     margin-top: 18px; }
     .notice .close:before {
-      font-family: 'paris-icons';
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'paris-icons' !important;
       speak: none;
       font-style: normal;
       font-weight: normal;
@@ -3501,7 +3489,8 @@ html.no-touchevents .news-card-counter {
     .notice .close:hover {
       opacity: 0.8; }
   .notice.alert .notice-content:before {
-    font-family: 'paris-icons';
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'paris-icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -3748,15 +3737,15 @@ html.no-touchevents .news-card-counter {
 
 .person-block-button {
   text-align: right; }
-  .person-block-button .button.icon .icon {
+  .person-block-button .button.icon .icon, .person-block-button .icon.expandmore__button .icon {
     display: none;
     font-size: 2.8rem;
     margin-right: 0; }
 
 @media (max-width: 767px) {
-  .person-block-button .button.icon {
+  .person-block-button .button.icon, .person-block-button .icon.expandmore__button {
     padding: 10px 12px; }
-    .person-block-button .button.icon .icon {
+    .person-block-button .button.icon .icon, .person-block-button .icon.expandmore__button .icon {
       display: inline-block; }
   .person-block-button .button-text {
     position: absolute !important;
@@ -4065,7 +4054,7 @@ html.no-touchevents .news-card-counter {
   .quick-access-buttons {
     padding-bottom: 20px;
     text-align: center; }
-    .quick-access-buttons .button {
+    .quick-access-buttons .button, .quick-access-buttons .expandmore__button {
       display: block;
       margin-bottom: 10px;
       white-space: normal; }
@@ -4203,7 +4192,8 @@ html.no-touchevents .news-card-counter {
     width: 50px;
     z-index: 2; }
     .quick-access-close-search:before {
-      font-family: 'paris-icons';
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'paris-icons' !important;
       speak: none;
       font-style: normal;
       font-weight: normal;
@@ -4895,7 +4885,8 @@ body.rheader-mobile-nav-open {
   text-align: center;
   width: 100%; }
   .search-push:after {
-    font-family: 'paris-icons';
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'paris-icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -5214,7 +5205,8 @@ body.rheader-mobile-nav-open {
       .sections-list-button.more html.no-touchevents:hover:after {
         color: #F2F2F2; }
       .sections-list-button.more:after {
-        font-family: 'paris-icons';
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'paris-icons' !important;
         speak: none;
         font-style: normal;
         font-weight: normal;
@@ -5513,7 +5505,8 @@ body.rheader-mobile-nav-open {
       .sections-list-picto-button.more html.no-touchevents:hover:after {
         color: #F2F2F2; }
       .sections-list-picto-button.more:after {
-        font-family: 'paris-icons';
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'paris-icons' !important;
         speak: none;
         font-style: normal;
         font-weight: normal;
@@ -5591,7 +5584,8 @@ body.rheader-mobile-nav-open {
       cursor: default;
       pointer-events: none; }
     .sections-panel-nav-items a:after {
-      font-family: 'paris-icons';
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'paris-icons' !important;
       speak: none;
       font-style: normal;
       font-weight: normal;
@@ -5715,7 +5709,8 @@ body.rheader-mobile-nav-open {
     top: 0;
     width: 30px; }
     .sections-panel-back:before {
-      font-family: 'paris-icons';
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'paris-icons' !important;
       speak: none;
       font-style: normal;
       font-weight: normal;
@@ -6059,11 +6054,11 @@ body.rheader-mobile-nav-open {
       color: #000;
       padding: 20px;
       text-align: center; }
-      .video-cover.with-block .video-cover-placeholder a:not(.button) {
+      .video-cover.with-block .video-cover-placeholder a:not(.button):not(.expandmore__button) {
         color: #DF225A; }
-      .video-cover.with-block .video-cover-placeholder .button {
+      .video-cover.with-block .video-cover-placeholder .button, .video-cover.with-block .video-cover-placeholder .expandmore__button {
         padding: 15px 20px; }
-  .video-cover .button {
+  .video-cover .button, .video-cover .expandmore__button {
     margin: 0 auto;
     padding-left: 40px;
     padding-right: 40px; }
@@ -6548,10 +6543,10 @@ body.rheader-mobile-nav-open {
     padding-bottom: 12px; }
     .component-accordion .accordion-content-wrapper > :last-child {
       margin-bottom: 0; }
-    .component-accordion .accordion-content-wrapper a:not(.button) {
+    .component-accordion .accordion-content-wrapper a:not(.button):not(.expandmore__button) {
       color: #DD275C;
       text-decoration: underline; }
-      .component-accordion .accordion-content-wrapper a:not(.button):hover {
+      .component-accordion .accordion-content-wrapper a:not(.button):not(.expandmore__button):hover {
         text-decoration: none; }
     .component-accordion .accordion-content-wrapper ul, .component-accordion .accordion-content-wrapper ol, .component-accordion .accordion-content-wrapper p {
       color: #333;
@@ -6624,7 +6619,7 @@ body.rheader-mobile-nav-open {
 @media (max-width: 450px) {
   .component-buttons .buttons-items > li {
     display: block; }
-    .component-buttons .buttons-items > li .button {
+    .component-buttons .buttons-items > li .button, .component-buttons .buttons-items > li .expandmore__button {
       width: 100%; } }
 
 .component-card {
@@ -6705,7 +6700,7 @@ body.rheader-mobile-nav-open {
     padding-left: 0; }
     .component-districts ul.districts-items-wrapper li {
       display: inline-block; }
-      .component-districts ul.districts-items-wrapper li .button {
+      .component-districts ul.districts-items-wrapper li .button, .component-districts ul.districts-items-wrapper li .expandmore__button {
         font-size: 1.6rem;
         margin-right: 5px;
         margin-bottom: 5px;
@@ -6733,10 +6728,10 @@ body.rheader-mobile-nav-open {
       padding: 0 12px 12px 12px; }
       .component-districts .districts-panel .districts-item-content > :last-child {
         margin-bottom: 0; }
-      .component-districts .districts-panel .districts-item-content a:not(.button) {
+      .component-districts .districts-panel .districts-item-content a:not(.button):not(.expandmore__button) {
         color: #DD275C;
         text-decoration: underline; }
-        .component-districts .districts-panel .districts-item-content a:not(.button):hover {
+        .component-districts .districts-panel .districts-item-content a:not(.button):not(.expandmore__button):hover {
           text-decoration: none; }
       .component-districts .districts-panel .districts-item-content ul, .component-districts .districts-panel .districts-item-content ol, .component-districts .districts-panel .districts-item-content p {
         color: #333;
@@ -6753,12 +6748,121 @@ body.rheader-mobile-nav-open {
         list-style-type: disc; }
 
 @media (max-width: 767px) {
-  .component-districts ul.districts-items-wrapper li .button {
+  .component-districts ul.districts-items-wrapper li .button, .component-districts ul.districts-items-wrapper li .expandmore__button {
     background-color: #F2F2F2;
     min-height: 50px;
     min-width: 50px; }
-    .component-districts ul.districts-items-wrapper li .button[disabled] {
+    .component-districts ul.districts-items-wrapper li .button[disabled], .component-districts ul.districts-items-wrapper li [disabled].expandmore__button {
       display: none; } }
+
+.component-events {
+  clear: both; }
+  .component-events h2 {
+    color: #1A1A1A;
+    float: left;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 3.2rem; }
+    .component-events h2 img {
+      margin: 0 1rem;
+      max-height: 5rem;
+      position: relative;
+      top: 0.2rem;
+      vertical-align: bottom;
+      width: 9rem; }
+  @media (max-width: 767px) {
+    .component-events h2 {
+      font-size: 3rem;
+      line-height: 3.8rem; } }
+  .component-events:first-child h2 {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0; }
+  .component-events .events-heading {
+    border-top: 7px solid #F2F2F2;
+    overflow: hidden;
+    margin-bottom: 40px;
+    padding-top: 40px; }
+  .component-events .events-title-links {
+    font-size: 1.5rem; }
+    .component-events .events-title-links > a {
+      border-bottom: 1px solid #4D4D4D;
+      color: #4D4D4D;
+      display: inline-block;
+      line-height: 2rem;
+      padding-bottom: 2px;
+      position: relative;
+      text-decoration: none;
+      -webkit-transition: all 0.35s ease;
+              transition: all 0.35s ease; }
+      .component-events .events-title-links > a:after {
+        background-color: #DF225A;
+        bottom: -1px;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        -webkit-transition: width 0.35s ease;
+                transition: width 0.35s ease;
+        width: 0; }
+      .component-events .events-title-links > a:hover {
+        color: #DF225A; }
+        .component-events .events-title-links > a:hover:after {
+          width: 100%; }
+
+@media (max-width: 767px) {
+  .component-events .events-title-links {
+    clear: both; } }
+
+@media (max-width: 1159px) {
+  .component-events {
+    overflow-x: auto;
+    position: relative;
+    width: 100%; } }
+
+@media (min-width: 768px) {
+  .component-events h2 {
+    font-size: 3.4rem;
+    line-height: 4rem;
+    margin: 0 20px 0 0; }
+  .component-events .events-title-links {
+    line-height: 5.5rem; } }
+
+.component-expandable .expandable-button {
+  display: inline-block;
+  margin-bottom: 2rem; }
+
+@media (min-width: 768px) {
+  .component-expandable .expandable-content {
+    border: 0.1rem solid #EEE;
+    max-height: 40rem;
+    overflow: auto;
+    padding: 0 1.5rem; } }
+
+.js-to_expand[aria-hidden=true],
+.js-to_expand[data-hidden=true] {
+  display: none; }
+
+.expandmore__button:before,
+.expandmore__button:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'paris-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "";
+  margin-right: 1rem; }
+
+.expandmore__button[aria-expanded=true]:before,
+.expandmore__button[data-expanded=true]:before {
+  content: ""; }
 
 .component-form {
   clear: both;
@@ -6789,7 +6893,8 @@ body.rheader-mobile-nav-open {
     color: #43B57E; }
   .component-form .form-item .form-item-label:after,
   .component-form .form-item-matrix .matrix-item .matrix-item-text:after {
-    font-family: 'paris-icons';
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'paris-icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -6867,10 +6972,10 @@ body.rheader-mobile-nav-open {
   .component-form .form-item-radio input {
     cursor: pointer;
     margin: 2px 10px 2px 0; }
-  .component-form .form-item-cgu label a:not(.button) {
+  .component-form .form-item-cgu label a:not(.button):not(.expandmore__button) {
     color: #DD275C;
     text-decoration: underline; }
-    .component-form .form-item-cgu label a:not(.button):hover {
+    .component-form .form-item-cgu label a:not(.button):not(.expandmore__button):hover {
       text-decoration: none; }
   .component-form .form-item-matrix .form-item-label {
     max-width: none; }
@@ -6892,7 +6997,7 @@ body.rheader-mobile-nav-open {
 
 .component-frame {
   clear: both; }
-  .component-frame a:not(.button) {
+  .component-frame a:not(.button):not(.expandmore__button) {
     color: #DD275C; }
   .component-frame fieldset {
     border: 5px solid #DF225A;
@@ -7063,10 +7168,10 @@ http://flickity.metafizzy.co
   .component-gallery .gallery-caption {
     padding: 10px;
     text-align: center; }
-    .component-gallery .gallery-caption a:not(.button) {
+    .component-gallery .gallery-caption a:not(.button):not(.expandmore__button) {
       color: #DD275C;
       text-decoration: underline; }
-      .component-gallery .gallery-caption a:not(.button):hover {
+      .component-gallery .gallery-caption a:not(.button):not(.expandmore__button):hover {
         text-decoration: none; }
   .component-gallery .gallery-title + .gallery-credit {
     margin-top: 5px; }
@@ -7086,10 +7191,10 @@ http://flickity.metafizzy.co
     color: #000;
     padding: 20px;
     text-align: center; }
-    .component-html .html-placeholder a:not(.button) {
+    .component-html .html-placeholder a:not(.button):not(.expandmore__button) {
       color: #DF225A;
       text-decoration: underline; }
-      .component-html .html-placeholder a:not(.button):hover {
+      .component-html .html-placeholder a:not(.button):not(.expandmore__button):hover {
         text-decoration: none; }
 
 .component-image {
@@ -7179,10 +7284,10 @@ http://flickity.metafizzy.co
       color: #4D4D4D;
       font-size: 1.5rem;
       line-height: 2.2rem; }
-      .component-jecoute .jecoute-form p a:not(.button) {
+      .component-jecoute .jecoute-form p a:not(.button):not(.expandmore__button) {
         color: #0C518A;
         text-decoration: underline; }
-        .component-jecoute .jecoute-form p a:not(.button):hover {
+        .component-jecoute .jecoute-form p a:not(.button):not(.expandmore__button):hover {
           text-decoration: none; }
     .component-jecoute .jecoute-form > textarea,
     .component-jecoute .jecoute-form > input {
@@ -7242,7 +7347,8 @@ http://flickity.metafizzy.co
         font-size: 1.6rem;
         line-height: 2.5rem; }
         .component-jecoute .jecoute-form > .jecoute-upload output .output-item:before {
-          font-family: 'paris-icons';
+          /* use !important to prevent issues with browser extensions that change fonts */
+          font-family: 'paris-icons' !important;
           speak: none;
           font-style: normal;
           font-weight: normal;
@@ -7314,7 +7420,8 @@ http://flickity.metafizzy.co
       .component-links .links-item > a:hover .links-item-filesize {
         text-decoration: none; }
   .component-links .links-item:before {
-    font-family: 'paris-icons';
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'paris-icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -7330,7 +7437,8 @@ http://flickity.metafizzy.co
     padding: 13px 20px 0 0;
     pointer-events: none; }
   .component-links .links-item.links-item-pdf:before {
-    font-family: 'paris-icons';
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'paris-icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -7342,7 +7450,8 @@ http://flickity.metafizzy.co
     -moz-osx-font-smoothing: grayscale;
     content: ""; }
   .component-links .links-item.links-item-file:before {
-    font-family: 'paris-icons';
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'paris-icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -7375,6 +7484,37 @@ http://flickity.metafizzy.co
       content: ", "; }
     .component-links .links-item-attributes > *:last-child:after {
       content: ""; }
+
+.component-map {
+  position: relative; }
+  .component-map-map {
+    background-color: #F2F2F2;
+    overflow: hidden;
+    width: 100%; }
+    .component-map-map > .layout-wrapper {
+      bottom: 0;
+      height: 0;
+      left: 50%;
+      position: absolute;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      z-index: 101; }
+    .component-map-map .leaflet-bottom,
+    .component-map-map .leaflet-top {
+      z-index: 100; }
+  .component-map .leaflet-container .leaflet-control-attribution {
+    border-top-left-radius: 0.5rem; }
+    .component-map .leaflet-container .leaflet-control-attribution a {
+      color: #999; }
+      .component-map .leaflet-container .leaflet-control-attribution a:hover {
+        color: #666;
+        text-decoration: none; }
+  @media (max-width: 767px) {
+    .component-map-map {
+      height: 60vh; } }
+  @media (min-width: 768px) {
+    .component-map-map {
+      height: 24vw; } }
 
 .component-news-push {
   clear: both;
@@ -7457,7 +7597,8 @@ http://flickity.metafizzy.co
       -webkit-transition: left 0.35s ease;
               transition: left 0.35s ease; }
       .component-news-push .news-push-link > span:after {
-        font-family: 'paris-icons';
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'paris-icons' !important;
         speak: none;
         font-style: normal;
         font-weight: normal;
@@ -7519,23 +7660,82 @@ http://flickity.metafizzy.co
   .component-opening-hours h2 {
     border-top: 7px solid #F2F2F2;
     color: #1A1A1A;
-    font-size: 3.4rem;
+    float: left;
+    font-size: 2.6rem;
     font-weight: 700;
-    line-height: 4.2rem;
+    line-height: 3.2rem;
     margin-bottom: 20px;
     padding-top: 40px; }
   @media (max-width: 767px) {
     .component-opening-hours h2 {
       font-size: 3rem;
       line-height: 3.8rem; } }
-  .component-opening-hours .opening-hours-text {
-    color: #DF225A; }
+  .component-opening-hours:first-child h2 {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0; }
+  .component-opening-hours .opening-hours-heading {
+    overflow: hidden; }
+  .component-opening-hours .opening-hours-status,
+  .component-opening-hours .opening-hours-planned-closures,
+  .component-opening-hours table,
+  .component-opening-hours > .button,
+  .component-opening-hours > .expandmore__button {
+    margin-bottom: 3rem; }
+  .component-opening-hours .opening-hours-status {
+    font-size: 1.8rem;
+    font-weight: 700; }
+    .component-opening-hours .opening-hours-status .icon {
+      margin-right: 1rem; }
+    .component-opening-hours .opening-hours-status.is-open {
+      color: #237C4D; }
+    .component-opening-hours .opening-hours-status.is-closed {
+      color: #DF225A; }
+  .component-opening-hours .opening-hours-title-links {
+    font-size: 1.5rem; }
+    .component-opening-hours .opening-hours-title-links > a {
+      border-bottom: 1px solid #4D4D4D;
+      color: #4D4D4D;
+      display: inline-block;
+      line-height: 2rem;
+      padding-bottom: 2px;
+      position: relative;
+      text-decoration: none;
+      -webkit-transition: all 0.35s ease;
+              transition: all 0.35s ease; }
+      .component-opening-hours .opening-hours-title-links > a:after {
+        background-color: #DF225A;
+        bottom: -1px;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        -webkit-transition: width 0.35s ease;
+                transition: width 0.35s ease;
+        width: 0; }
+      .component-opening-hours .opening-hours-title-links > a:hover {
+        color: #DF225A; }
+        .component-opening-hours .opening-hours-title-links > a:hover:after {
+          width: 100%; }
+  .component-opening-hours .opening-hours-planned-closures {
+    line-height: 2.4rem; }
+    .component-opening-hours .opening-hours-planned-closures .icon {
+      color: #DF225A;
+      font-size: 2rem;
+      margin-right: 1rem; }
+    .component-opening-hours .opening-hours-planned-closures ul {
+      list-style: none;
+      margin: 0;
+      padding-left: 3rem; }
+  .component-opening-hours .opening-hours-other-title {
+    color: #0C518A;
+    margin-bottom: 2rem; }
   .component-opening-hours caption {
     caption-side: top;
-    color: #333;
-    font-size: 1.4rem;
-    font-weight: 300;
-    padding-bottom: 15px;
+    color: #1A1A1A;
+    font-size: 1.6rem;
+    font-weight: 700;
     text-align: left; }
   .component-opening-hours table {
     width: auto; }
@@ -7550,47 +7750,49 @@ http://flickity.metafizzy.co
       border-left: none; }
   .component-opening-hours tr > th {
     border-right: 25px solid #FFF;
-    color: #4D4D4D;
-    font-size: 1.5rem;
-    font-weight: 700;
+    color: #1A1A1A;
+    font-size: 1.6rem;
+    font-weight: normal;
     min-width: 115px;
     text-align: left; }
   .component-opening-hours tr > td {
-    color: #333;
-    font-size: 1.4rem;
+    color: #4D4D4D;
+    font-size: 1.6rem;
     font-weight: 300;
     text-align: left; }
-    .component-opening-hours tr > td a:not(.button) {
+    .component-opening-hours tr > td a:not(.button):not(.expandmore__button) {
       color: #DD275C;
       text-decoration: underline; }
-      .component-opening-hours tr > td a:not(.button):hover {
+      .component-opening-hours tr > td a:not(.button):not(.expandmore__button):hover {
         text-decoration: none; }
   .component-opening-hours tfoot tr {
     background-color: transparent; }
   .component-opening-hours tfoot tr > td {
     text-align: left; }
-  .component-opening-hours .opening-hours-buttons {
-    list-style: none;
-    margin-top: 40px;
-    padding: 0; }
-    .component-opening-hours .opening-hours-buttons li {
-      display: inline-block; }
-      .component-opening-hours .opening-hours-buttons li + li {
-        margin-left: 10px; }
 
 @media (max-width: 767px) {
-  .component-opening-hours .opening-hours-buttons li {
-    display: inline-block; }
-    .component-opening-hours .opening-hours-buttons li + li {
-      display: block;
-      margin-left: 0;
-      margin-top: 10px; } }
+  .component-opening-hours .opening-hours-title-links {
+    clear: both; } }
 
 @media (max-width: 1159px) {
   .component-opening-hours {
     overflow-x: auto;
     position: relative;
     width: 100%; } }
+
+@media (min-width: 768px) {
+  .component-opening-hours h2 {
+    font-size: 3.4rem;
+    line-height: 4rem;
+    margin: 0 20px 0 0; }
+  .component-opening-hours .opening-hours-title-links {
+    line-height: 4rem; }
+  .component-opening-hours .opening-hours-other table {
+    float: left;
+    margin: 0 2rem 4rem 0;
+    min-width: calc(50% - 2rem); }
+    .component-opening-hours .opening-hours-other table:nth-child(2n) {
+      clear: left; } }
 
 .component-place {
   background-color: #F2F2F2;
@@ -7622,14 +7824,14 @@ http://flickity.metafizzy.co
     font-size: 2rem;
     margin-right: 15px;
     vertical-align: middle; }
-  .component-place > .button {
+  .component-place > .button, .component-place > .expandmore__button {
     margin-bottom: 20px; }
 
 @media (min-width: 768px) {
   .component-place .place-content {
     float: left;
     padding-bottom: 20px; }
-  .component-place > .button {
+  .component-place > .button, .component-place > .expandmore__button {
     float: right; } }
 
 .component-postit {
@@ -7651,7 +7853,7 @@ http://flickity.metafizzy.co
     top: 0;
     width: 50px; }
   .component-postit h2,
-  .component-postit a:not(.button) {
+  .component-postit a:not(.button):not(.expandmore__button) {
     color: #F77F68; }
   .component-postit h2 .icon,
   .component-postit .share {
@@ -7678,10 +7880,8 @@ http://flickity.metafizzy.co
     font-weight: 300;
     padding-bottom: 15px;
     text-align: left; }
-  .component-rush-hours table {
-    max-width: 625px; }
-    .component-rush-hours table p {
-      margin: 0; }
+  .component-rush-hours table p {
+    margin: 0; }
   .component-rush-hours tr > th,
   .component-rush-hours tr > td {
     border: none; }
@@ -7691,12 +7891,16 @@ http://flickity.metafizzy.co
   .component-rush-hours tr > th {
     background-color: white;
     color: #333;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 500;
-    text-align: left; }
+    text-align: center; }
+    .component-rush-hours tr > th:first-child {
+      text-align: left; }
+  .component-rush-hours .rush-hours-interval {
+    padding-right: 1rem; }
   .component-rush-hours tr > td {
-    border-bottom: 10px solid white;
-    border-right: 10px solid white;
+    border-bottom: 0.7rem solid white;
+    border-right: 0.7rem solid white;
     color: #333;
     font-size: 1.4rem;
     font-weight: 300;
@@ -7704,10 +7908,10 @@ http://flickity.metafizzy.co
     text-align: center; }
     .component-rush-hours tr > td:last-child {
       border-right: none; }
-    .component-rush-hours tr > td a:not(.button) {
+    .component-rush-hours tr > td a:not(.button):not(.expandmore__button) {
       color: #DD275C;
       text-decoration: underline; }
-      .component-rush-hours tr > td a:not(.button):hover {
+      .component-rush-hours tr > td a:not(.button):not(.expandmore__button):hover {
         text-decoration: none; }
     .component-rush-hours tr > td.traffic-0 {
       background-color: #F2F2F2; }
@@ -7723,12 +7927,8 @@ http://flickity.metafizzy.co
     background-color: white; }
   .component-rush-hours tbody tr:last-child > td {
     border-bottom: none; }
-  .component-rush-hours tbody tr:first-child > th:first-child {
-    width: 16%; }
   .component-rush-hours tbody tr:first-child > th {
-    padding: 15px 0;
-    text-align: center;
-    width: 21%; }
+    padding: 1rem 0; }
   .component-rush-hours tfoot tr {
     background-color: transparent; }
   .component-rush-hours tfoot tr > td {
@@ -7736,14 +7936,15 @@ http://flickity.metafizzy.co
 
 .rush-hours-traffic-icon {
   color: black;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   letter-spacing: -0.6rem;
   opacity: 0.2;
   pointer-events: none;
   text-align: center;
   vertical-align: middle; }
   .rush-hours-traffic-icon:before {
-    font-family: 'paris-icons';
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'paris-icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -7755,6 +7956,14 @@ http://flickity.metafizzy.co
     -moz-osx-font-smoothing: grayscale;
     content: ""; }
 
+.rush-hours-text {
+  margin-top: 4rem; }
+  .rush-hours-text a:not(.button):not(.expandmore__button) {
+    color: #DD275C;
+    text-decoration: underline; }
+    .rush-hours-text a:not(.button):not(.expandmore__button):hover {
+      text-decoration: none; }
+
 @media (max-width: 1159px) {
   .component-rush-hours {
     overflow-x: auto;
@@ -7763,27 +7972,26 @@ http://flickity.metafizzy.co
     .component-rush-hours tr > th {
       padding-right: 10px; }
     .component-rush-hours tr:first-child > th:first-child {
-      padding: 0; } }
+      padding-top: 0; } }
 
 @media (max-width: 767px) {
   .component-rush-hours table {
     max-width: 350px; }
+  .component-rush-hours table + table {
+    margin-top: 2rem; }
   .component-rush-hours tr > th {
-    padding-right: 0; }
-  .component-rush-hours tr:nth-child(5n+1) {
-    display: block;
-    padding-top: 35px; }
-    .component-rush-hours tr:nth-child(5n+1) > th {
-      font-weight: 700; }
+    font-size: 1.4rem;
+    text-align: left; }
+    .component-rush-hours tr > th[colspan="2"] {
+      font-weight: 700;
+      padding: 1rem 0; }
+  .component-rush-hours tr:first-child > th {
+    text-align: center; }
   .component-rush-hours tr > td {
-    height: 44px;
-    width: 50%; }
-  .component-rush-hours tbody tr:first-child > th {
-    text-align: left; } }
-
-@media (min-width: 1160px) {
-  .component-rush-hours table {
-    width: 100%; } }
+    height: 3.6rem; }
+  .component-rush-hours .rush-hours-traffic-icon {
+    font-size: 2rem;
+    line-height: 1rem; } }
 
 .component-sharelines {
   border-left: 7px solid #F2F2F2;
@@ -7853,7 +8061,7 @@ http://flickity.metafizzy.co
       text-align: left; }
   .component-table tr > td {
     color: #333;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 300;
     text-align: center; }
     .component-table tr > td.emphasis {
@@ -7863,13 +8071,17 @@ http://flickity.metafizzy.co
       font-weight: 500;
       padding: 10px 30px;
       text-align: left; }
-    .component-table tr > td a:not(.button) {
+    .component-table tr > td a:not(.button):not(.expandmore__button) {
       color: #DD275C;
       text-decoration: underline; }
-      .component-table tr > td a:not(.button):hover {
+      .component-table tr > td a:not(.button):not(.expandmore__button):hover {
         text-decoration: none; }
   .component-table.header-primary-color tr > th {
     background-color: #DF225A; }
+  .component-table.text-align-left tr > th,
+  .component-table.text-align-left tr > td {
+    padding: 1.5rem;
+    text-align: left; }
   .component-table tbody tr:nth-child(even) {
     background-color: #F2F2F2; }
   .component-table tbody tr:nth-child(odd) {
@@ -7885,104 +8097,115 @@ http://flickity.metafizzy.co
   .component-table {
     overflow-x: auto;
     position: relative;
-    width: 100%; } }
+    width: 100%; }
+    .component-table.no-scroll-on-mobile table {
+      width: auto; } }
 
 @media (min-width: 768px) {
   .component-table table {
     width: 100%; } }
 
-.component-demande h1, .component-frame h1, .component-postit h1, .component-text h1, .component-demande h2, .component-frame h2, .component-postit h2, .component-text h2, .component-demande h3, .component-frame h3, .component-postit h3, .component-text h3, .component-demande h4, .component-frame h4, .component-postit h4, .component-text h4, .component-demande ul, .component-frame ul, .component-postit ul, .component-text ul, .component-demande ol, .component-frame ol, .component-postit ol, .component-text ol, .component-demande p, .component-frame p, .component-postit p, .component-text p {
+.component-demande h1, .component-expandable .expandable-content h1, .component-frame h1, .component-postit h1, .component-text h1, .component-demande h2, .component-expandable .expandable-content h2, .component-frame h2, .component-postit h2, .component-text h2, .component-demande h3, .component-expandable .expandable-content h3, .component-frame h3, .component-postit h3, .component-text h3, .component-demande h4, .component-expandable .expandable-content h4, .component-frame h4, .component-postit h4, .component-text h4, .component-demande ul, .component-expandable .expandable-content ul, .component-frame ul, .component-postit ul, .component-text ul, .component-demande ol, .component-expandable .expandable-content ol, .component-frame ol, .component-postit ol, .component-text ol, .component-demande p, .component-expandable .expandable-content p, .component-frame p, .component-postit p, .component-text p {
   margin: 0;
   padding: 0; }
 
-.component-demande h1, .component-frame h1, .component-postit h1, .component-text h1 {
+.component-demande h1, .component-expandable .expandable-content h1, .component-frame h1, .component-postit h1, .component-text h1 {
   font-size: 4.4rem;
   font-weight: 700; }
 
-.component-demande h2, .component-frame h2, .component-postit h2, .component-text h2 {
+.component-demande h2, .component-expandable .expandable-content h2, .component-frame h2, .component-postit h2, .component-text h2 {
   font-size: 3.4rem;
   font-weight: 700;
   line-height: 4.2rem;
-  margin-bottom: 20px;
-  padding-top: 40px; }
-  .component-demande h2 img, .component-frame h2 img, .component-postit h2 img, .component-text h2 img {
-    margin: 0 10px;
-    max-height: 60px;
+  margin-bottom: 2rem;
+  padding-top: 4rem; }
+  .component-demande h2 img, .component-expandable .expandable-content h2 img, .component-frame h2 img, .component-postit h2 img, .component-text h2 img {
+    margin: 0 1rem;
+    max-height: 5rem;
     position: relative;
-    top: 5px;
+    top: 0.2rem;
     vertical-align: bottom; }
 
 @media (max-width: 767px) {
-  .component-demande h2, .component-frame h2, .component-postit h2, .component-text h2 {
+  .component-demande h2, .component-expandable .expandable-content h2, .component-frame h2, .component-postit h2, .component-text h2 {
     font-size: 3rem;
     line-height: 3.8rem; } }
 
-.component-demande h3, .component-frame h3, .component-postit h3, .component-text h3 {
+.component-demande h3, .component-expandable .expandable-content h3, .component-frame h3, .component-postit h3, .component-text h3 {
   color: #1A1A1A;
   font-size: 2.7rem;
   font-weight: 500;
   line-height: 3rem;
-  margin-bottom: 20px; }
+  margin: 3rem 0 2rem; }
 
-.component-demande h4, .component-frame h4, .component-postit h4, .component-text h4 {
+.component-demande h4, .component-expandable .expandable-content h4, .component-frame h4, .component-postit h4, .component-text h4 {
   color: #0C518A;
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 2.8rem;
-  margin-bottom: 10px; }
+  margin-bottom: 1rem; }
 
-.component-demande ul, .component-frame ul, .component-postit ul, .component-text ul, .component-demande ol, .component-frame ol, .component-postit ol, .component-text ol, .component-demande p, .component-frame p, .component-postit p, .component-text p {
+.component-demande ul, .component-expandable .expandable-content ul, .component-frame ul, .component-postit ul, .component-text ul, .component-demande ol, .component-expandable .expandable-content ol, .component-frame ol, .component-postit ol, .component-text ol, .component-demande p, .component-expandable .expandable-content p, .component-frame p, .component-postit p, .component-text p {
   color: #333;
-  margin: 0 0 20px;
+  margin: 0 0 2rem;
   padding: 0; }
 
-.component-demande p, .component-frame p, .component-postit p, .component-text p {
+.component-demande p, .component-expandable .expandable-content p, .component-frame p, .component-postit p, .component-text p {
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 3rem; }
-  .component-demande p:last-child, .component-frame p:last-child, .component-postit p:last-child, .component-text p:last-child {
+  .component-demande p:last-child, .component-expandable .expandable-content p:last-child, .component-frame p:last-child, .component-postit p:last-child, .component-text p:last-child {
     margin-bottom: 0; }
 
-.component-demande ul, .component-frame ul, .component-postit ul, .component-text ul, .component-demande ol, .component-frame ol, .component-postit ol, .component-text ol {
-  font-size: 1.6rem;
+.component-demande ul, .component-expandable .expandable-content ul, .component-frame ul, .component-postit ul, .component-text ul, .component-demande ol, .component-expandable .expandable-content ol, .component-frame ol, .component-postit ol, .component-text ol {
+  font-size: 1.8rem;
   font-weight: 300;
-  line-height: 2.4rem;
+  line-height: 3rem;
   list-style-position: inside; }
-  .component-demande ul li + li, .component-frame ul li + li, .component-postit ul li + li, .component-text ul li + li, .component-demande ol li + li, .component-frame ol li + li, .component-postit ol li + li, .component-text ol li + li {
-    margin-top: 10px; }
+  .component-demande ul li + li, .component-expandable .expandable-content ul li + li, .component-frame ul li + li, .component-postit ul li + li, .component-text ul li + li, .component-demande ol li + li, .component-expandable .expandable-content ol li + li, .component-frame ol li + li, .component-postit ol li + li, .component-text ol li + li {
+    margin-top: 1rem; }
 
-.component-demande ul, .component-frame ul, .component-postit ul, .component-text ul {
+.component-demande ul, .component-expandable .expandable-content ul, .component-frame ul, .component-postit ul, .component-text ul {
   list-style-type: disc; }
 
-.component-demande ul.list-cols, .component-frame ul.list-cols, .component-postit ul.list-cols, .component-text ul.list-cols {
+.component-demande ul.without-bullets, .component-expandable .expandable-content ul.without-bullets, .component-frame ul.without-bullets, .component-postit ul.without-bullets, .component-text ul.without-bullets {
+  list-style-type: none; }
+
+.component-demande ul.list-cols, .component-expandable .expandable-content ul.list-cols, .component-frame ul.list-cols, .component-postit ul.list-cols, .component-text ul.list-cols {
   line-height: 2.5rem;
   list-style-type: none;
   -webkit-columns: 3;
      -moz-columns: 3;
           columns: 3; }
-  .component-demande ul.list-cols li, .component-frame ul.list-cols li, .component-postit ul.list-cols li, .component-text ul.list-cols li {
-    border-bottom: 1px solid #EEE;
+  .component-demande ul.list-cols li, .component-expandable .expandable-content ul.list-cols li, .component-frame ul.list-cols li, .component-postit ul.list-cols li, .component-text ul.list-cols li {
+    border-bottom: 0.1rem solid #EEE;
     margin: 0;
-    padding: 10px 0; }
+    padding: 1rem 0; }
 
-.component-demande a:not(.button), .component-frame a:not(.button), .component-postit a:not(.button), .component-text a:not(.button) {
+.component-demande img, .component-expandable .expandable-content img, .component-frame img, .component-postit img, .component-text img {
+  max-width: 100%; }
+
+.component-demande a:not(.button):not(.expandmore__button), .component-expandable .expandable-content a:not(.button):not(.expandmore__button), .component-frame a:not(.button):not(.expandmore__button), .component-postit a:not(.button):not(.expandmore__button), .component-text a:not(.button):not(.expandmore__button) {
   text-decoration: underline; }
-  .component-demande a:not(.button):hover, .component-frame a:not(.button):hover, .component-postit a:not(.button):hover, .component-text a:not(.button):hover {
+  .component-demande a:not(.button):not(.expandmore__button):hover, .component-expandable .expandable-content a:not(.button):not(.expandmore__button):hover, .component-frame a:not(.button):not(.expandmore__button):hover, .component-postit a:not(.button):not(.expandmore__button):hover, .component-text a:not(.button):not(.expandmore__button):hover {
     text-decoration: none; }
 
-.component-demande em.light, .component-frame em.light, .component-postit em.light, .component-text em.light {
+.component-demande strong, .component-expandable .expandable-content strong, .component-frame strong, .component-postit strong, .component-text strong {
+  color: #0C518A; }
+
+.component-demande em.light, .component-expandable .expandable-content em.light, .component-frame em.light, .component-postit em.light, .component-text em.light {
   color: #999;
   font-style: normal; }
 
 .component-text h2 {
-  border-top: 7px solid #F2F2F2;
+  border-top: 0.7rem solid #F2F2F2;
   color: #1A1A1A; }
 
 .component-text:first-child h2 {
   border-top: none;
   padding-top: 0; }
 
-.component-text a:not(.button) {
+.component-text a:not(.button):not(.expandmore__button) {
   color: #DD275C; }
 
 .component-postit + .component-text > p:first-child,
@@ -7994,7 +8217,7 @@ http://flickity.metafizzy.co
   position: relative; }
 
 .component-text .icon-switch {
-  margin-left: 10px; }
+  margin-left: 1rem; }
 
 .component-text.intro-primary + .component-text h2 {
   border-top: 0; }
@@ -8006,11 +8229,11 @@ http://flickity.metafizzy.co
   .component-text.intro-primary p:after {
     display: block;
     content: " ";
-    width: 70px;
-    height: 10px;
+    width: 7rem;
+    height: 1rem;
     background: #DF225A;
     position: relative;
-    bottom: -20px; }
+    bottom: -2rem; }
 
 @media (max-width: 1159px) {
   .component-text ul.list-cols {
@@ -8077,7 +8300,7 @@ http://flickity.metafizzy.co
     color: #000;
     padding: 20px;
     text-align: center; }
-    .component-video .video-placeholder a:not(.button) {
+    .component-video .video-placeholder a:not(.button):not(.expandmore__button) {
       color: #DF225A; }
   .component-video .video-wrapper {
     display: inline-block;
@@ -8102,10 +8325,10 @@ http://flickity.metafizzy.co
         content: "";
         height: 100%;
         width: 100%; }
-  .component-video a:not(.button) {
+  .component-video a:not(.button):not(.expandmore__button) {
     color: #DD275C;
     text-decoration: underline; }
-    .component-video a:not(.button):hover {
+    .component-video a:not(.button):not(.expandmore__button):hover {
       text-decoration: none; }
 
 .layout-stack {

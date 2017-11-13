@@ -1,0 +1,8 @@
+mixin expandable(data)
+  .component.component-expandable(class=data.modifiers)
+    .expandable-button.js-expandmore= data.button.text
+    .expandable-content.js-to_expand
+      if block
+        block
+      else if data.block
+        != data.block
