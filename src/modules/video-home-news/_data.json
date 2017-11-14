@@ -9,7 +9,7 @@
         "items": [
           {
             "href": "#",
-            "image": "large.jpg",
+            "image": "background.jpg",
             "title": "À voir en ce moment",
             "text": "Conduisez un bateau sans permis au bassin de la Villette !",
             "duration": "01:53",
@@ -17,14 +17,14 @@
           },
           {
             "href": "#",
-            "image": "small1.jpg",
+            "image": "background.jpg",
             "text": "Découvrez Paris depuis le Petit Palais en Timelapse",
             "duration": "02:55",
             "modifiers":["small"]
           },
           {
             "href": "#",
-            "image": "small2.jpg",
+            "image": "background.jpg",
             "text": "Pour la première fois, Paris accueille une baignade surveillée en eau libre",
             "duration": "02:05",
             "modifiers":["small"]
