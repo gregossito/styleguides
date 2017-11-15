@@ -8,28 +8,29 @@
       "data": {
         "items": [
           {
-            "href": "#",
+            "href": "http://www.dailymotion.com/video/x6655m1",
+            "embed_url": "http://www.dailymotion.com/embed/video/x6655m1",
             "image": "background.jpg",
             "title": "À voir en ce moment",
             "text": "Conduisez un bateau sans permis au bassin de la Villette !",
-            "duration": "01:53",
-            "modifiers":["large"]
+            "duration": "01:53"
           },
           {
             "href": "#",
+            "embed_url": "#",
             "image": "background.jpg",
             "text": "Découvrez Paris depuis le Petit Palais en Timelapse",
-            "duration": "02:55",
-            "modifiers":["small"]
+            "duration": "02:55"
           },
           {
             "href": "#",
+            "embed_url": "#",
             "image": "background.jpg",
             "text": "Pour la première fois, Paris accueille une baignade surveillée en eau libre",
-            "duration": "02:05",
-            "modifiers":["small"]
+            "duration": "02:05"
           }
-        ]
+        ],
+        "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher cette vidéo."
       }
     }]
   }
