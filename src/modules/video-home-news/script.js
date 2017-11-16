@@ -6,53 +6,76 @@ var Cookies = require('js-cookie');
 
 var Paris = window.Paris || {};
 
-Paris.videoHomeNews = (function(){
+Paris.videoHomeNews = (function() {
 
-  function videoHomeNews(selector){
-    var $el     = $(selector),
-      $placeholder,
-      $embed;
+  function videoHomeNews(selector) {
+    var $el = $(selector);
+    var $items;
+    var $modal;
+    var $iframe;
+    var $placeholder;
+    var url;
 
-    function init(){
-      $el.find('a.video-home-item').on('click', function(event){
-        event.preventDefault();
-        var $embed = $(this).find('.video-home-embed').html();
-        var $placeholder = $('.video-home-placeholder').html();
-        var autoplay = "&autoplay=1";
+    function init() {
 
-        if(Cookies.get(Paris.config.cookies.cnil.name) !== Paris.config.cookies.cnil.value) {
-          $('.video-home-modal .video-home-modal-body').empty().append($placeholder);
-        }
-        else {
-          $('.video-home-modal .video-home-modal-body').empty().append($embed);
-        }
+      $items = $el.find('a.video-card');
+      $modal = $el.find('.video-modal');
+      $iframe = $modal.find('.video-modal-wrapper iframe');
+      $placeholder = $modal.find('.video-modal-placeholder')
 
-        $('.video-home-modal a[data-action="allow_cookies"]').on('click', onClickAllowCookies);
-        PubSub.subscribe('cookies.updated', function(){
-          $('.video-home-modal .video-home-modal-body').empty().append($embed);
-        });
-
-        var url = $('.video-home-modal .video-home-modal-body .embed-container iframe').attr('src');
-        url = url+autoplay;
-        url = url.replace(/^http:/, 'https:');
-        
-        $('.video-home-modal .video-home-modal-body .embed-container iframe').attr('src', url);
-        $('.video-home-modal').show();
-      });
-
-      $('.video-home-close, .video-home-modal').on('click', function(){
-        $('.video-home-modal .video-home-modal-body').empty();
-        $('.video-home-modal').hide();
-      });
-
-      function onClickAllowCookies(e){
+      $items.on('click', function(e) {
         e.preventDefault();
-        PubSub.publish('cookies.allow');
-      }
 
+        if ($modal.hasClass('is-open')) {
+          return;
+        }
+
+        url = $(this).data('url');
+        url = url.replace(/^http:/, 'https:');
+        url += '?autoplay=1&ui-logo=0';
+
+        e.stopPropagation();
+        openModal();
+      });
+
+      $modal.on('click', closeModal);
+
+      $placeholder.on('click', 'a[data-action="allow_cookies"]', onClickAllowCookies);
     }
 
+    function openModal() {
+      if ($modal.hasClass('is-open')) {
+        return;
+      }
 
+      $modal.addClass('is-open');
+
+      if (Cookies.get(Paris.config.cookies.cnil.name) !== Paris.config.cookies.cnil.value) {
+        $placeholder.show();
+        return;
+      }
+
+      renderEmbed();
+    }
+
+    function closeModal() {
+      $modal.removeClass('is-open');
+      $iframe.attr('src', '');
+      url = undefined;
+    }
+
+    function renderEmbed() {
+      $placeholder.hide();
+      $iframe.attr('src', url);
+    }
+
+    function onClickAllowCookies(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      PubSub.publish('cookies.allow');
+      renderEmbed();
+    }
 
     init();
 

@@ -1,29 +1,19 @@
 mixin video-home-news(data)
-  .video-home-modal
-    .video-home-modal-content
-      .video-home-modal-header
-        span.video-home-close
-      .video-home-modal-body
-  .video-home-placeholder!= data.placeholder
-  ul.video-home-news
-    li.video-home-list-item(class=data.items[0].modifiers)
-      a.video-home-item(href=data.items[0].href)
-        .video-home-wrapper
-          .video-home-embed
-            != data.items[0].embed_html
-          .video-home-image(style=data.items[0].image && 'background-image: url(#{data.items[0].image});')
-          .video-home-content
-            .video-home-title= data.items[0].text
-                .video-home-duration= data.items[0].duration
-      li.video-home-list-wrapper
-        each item in data.items
-          if item.modifiers && item.modifiers.indexOf("small") != -1
-            .video-home-list-item(class=item.modifiers)
-              a.video-home-item(href=item.href)
-                .video-home-wrapper
-                  .video-home-embed
-                    != item.embed_html
-                  .video-home-image(style=item.image && 'background-image: url(#{item.image});')
-                  .video-home-content
-                    .video-home-title= item.text
-                        .video-home-duration= item.duration
+  .video-home-news
+    ul.video-home-news-items
+      each item in data.items
+        li.video-home-news-item(class=item.modifiers)
+          a.video-card(href=item.href target="_blank" data-url=item.embed_url)
+            .video-card-image(style=item.image && "background-image: url(#{item.image})")
+              span.video-card-play(class="icon-play")
+              span.video-card-duration= item.duration
+            .video-card-content
+              if item.title
+                h3.video-card-title= item.title
+              .video-card-text= item.text
+    .video-modal
+      .video-modal-wrapper
+        iframe(width="100%" height="100%" scrolling="no" frameborder="no" allowfullscreen)
+        if data.placeholder
+          .video-modal-placeholder!= data.placeholder
+        span.video-modal-close(class="icon-close")
