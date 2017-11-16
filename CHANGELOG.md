@@ -9,6 +9,11 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.9.6 (2017-11-16)
+
+* base `icons`: fix backward compatibility on subway/metro icon
+* module `video-home-news`: graphically reworked
+
 ## 1.9.5 (2017-11-13)
 
 * component `card`: changed data structure (removed `src` in `img`)
