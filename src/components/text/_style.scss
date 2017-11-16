@@ -14,14 +14,14 @@
     font-size: 3.4rem;
     font-weight: 700;
     line-height: 4.2rem;
-    margin-bottom: 20px;
-    padding-top: 40px;
+    margin-bottom: 2rem;
+    padding-top: 4rem;
 
     img {
-      margin: 0 10px;
-      max-height: 60px;
+      margin: 0 1rem;
+      max-height: 5rem;
       position: relative;
-      top: 5px;
+      top: 0.2rem;
       vertical-align: bottom;
     }
   }
@@ -37,7 +37,7 @@
     font-size: 2.7rem;
     font-weight: 500;
     line-height: 3rem;
-    margin-bottom: 20px;
+    margin: 3rem 0 2rem;
   }
 
   h4 {
@@ -45,12 +45,12 @@
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 2.8rem;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
   }
 
   ul, ol, p {
     color: $gray33;
-    margin: 0 0 20px;
+    margin: 0 0 2rem;
     padding: 0;
   }
 
@@ -65,18 +65,22 @@
   }
 
   ul, ol {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 300;
-    line-height: 2.4rem;
+    line-height: 3rem;
     list-style-position: inside;
 
     li + li {
-      margin-top: 10px;
+      margin-top: 1rem;
     }
   }
 
   ul {
     list-style-type: disc;
+  }
+
+  ul.without-bullets {
+    list-style-type: none;
   }
 
   ul.list-cols {
@@ -85,15 +89,23 @@
     columns: 3;
 
     li {
-      border-bottom: 1px solid $grayEE;
+      border-bottom: 0.1rem solid $grayEE;
       margin: 0;
-      padding: 10px 0;
+      padding: 1rem 0;
     }
+  }
+
+  img {
+    max-width: 100%;
   }
 
   a:not(.button) {
     text-decoration: underline;
     &:hover {text-decoration: none;}
+  }
+
+  strong {
+    color: $color-secondary;
   }
 
   em.light {
@@ -107,7 +119,7 @@
   @extend %component-text;
 
   h2 {
-    border-top: 7px solid $grayF2;
+    border-top: 0.7rem solid $grayF2;
     color: $gray1A;
   }
   &:first-child h2 {
@@ -130,7 +142,7 @@
   }
 
   .icon-switch {
-    margin-left: 10px;
+    margin-left: 1rem;
   }
 
   &.intro-primary {
@@ -146,11 +158,11 @@
       &:after {
         display: block;
         content: " ";
-        width: 70px;
-        height: 10px;
+        width: 7rem;
+        height: 1rem;
         background: $color-primary;
         position: relative;
-        bottom: -20px;
+        bottom: -2rem;
       }
     }
   }

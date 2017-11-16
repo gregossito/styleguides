@@ -93,6 +93,7 @@
       "bicycle",
       "bus",
       "city-hall",
+      "clock",
       "close",
       "close-big",
       "close-rounded",
@@ -115,6 +116,7 @@
       "mail",
       "marker",
       "market",
+      "metro",
       "museum",
       "nef",
       "park",
@@ -122,12 +124,14 @@
       "pdf",
       "play",
       "profile",
+      "rer",
       "search",
-      "subway",
       "swimming-pool",
       "tennis",
       "text",
-      "twitter"
+      "tramway",
+      "twitter",
+      "velib"
     ]
   }
 }

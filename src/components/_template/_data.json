@@ -1,12 +1,12 @@
 {
   "index": {
-    "type": "",
+    "type": "my-component",
     "description": "",
     "cssTheme": "",
     "bodyAttributes": {},
     "examples": [
       {
-        "title": "",
+        "title": "Standard",
         "description": "",
         "attrs": {},
         "data": {}

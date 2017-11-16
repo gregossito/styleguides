@@ -84,9 +84,9 @@ Paris.listEquipments = (function(){
       // Mapbox widget
       var mapboxWidget = Paris.instantsearch.widgets.mapbox({
         container: '#map',
-        mapBoxAccessToken: Paris.config.mapbox.access_token,
+        mapBoxAccessToken: Paris.config.mapbox.accessToken,
         mapbox: {
-          style: 'mapbox://styles/parisnumerique/cis1rkqoj000khinpthppoaqd',
+          style: Paris.config.mapbox.styleLayer,
           trackResize: true,
           zoom: 11,
           minZoom: 10,
@@ -216,7 +216,7 @@ Paris.listEquipments = (function(){
                categories.push('categories:' + category);
             });
           }
-          index.search(query, { 
+          index.search(query, {
             hitsPerPage: 8,
             facetFilters: ((categories && categories.length > 0) ? [categories] : '*'),
             attributesToRetrieve: "*"
@@ -308,7 +308,7 @@ Paris.listEquipments = (function(){
 
         if (options.mobileMediaQuery.matches) {
           // Carousel doest not support dom changes so it conflicts with instantsearch. Init once search is done
-          initCarousel(); 
+          initCarousel();
           $('.block-search-results').css('opacity', 1); // fix blinking bug
         }
       });

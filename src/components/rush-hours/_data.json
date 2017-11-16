@@ -7,25 +7,34 @@
         "title": "Standard",
         "description": "",
         "data": {
-          "title": "Affluence",
-          "timeslots": [
-            "7h-8h30",
-            "8h30-12h",
-            "12h-14h",
-            "14h-18h"
+          "title": {
+            "text": "Affluence"
+          },
+          "days": [
+            "Lundi",
+            "Mardi",
+            "Mercredi",
+            "Jeudi",
+            "Vendredi",
+            "Samedi",
+            "Dimanche"
           ],
           "items": [
-            {"title": "Lundi", "traffic": [1, 0, 3, 0]},
-            {"title": "Mardi", "traffic": [2, 0, 1, 0]},
-            {"title": "Mercredi", "traffic": [2, 0, 2, 0]},
-            {"title": "Jeudi", "traffic": [1, 0, 2, 0]},
-            {"title": "Vendredi", "traffic": [2, 0, 3, 0]},
-            {"title": "Samedi", "traffic": [1, 1, 2, 1]},
-            {"title": "Dimanche", "traffic": [1, 2, 3, 2]}
-          ]
+            {"from": "8h", "to": "9h", "traffic": [1, 1, 0, 1, 0, 1, 0]},
+            {"from": "9h", "to": "10h", "traffic": [2, 2, 0, 2, 0, 2, 0]},
+            {"from": "10h", "to": "11h", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+            {"from": "11h", "to": "12h", "traffic": [3, 3, 0, 3, 0, 3, 0]},
+            {"from": "12h", "to": "13h", "traffic": [3, 3, 0, 3, 0, 3, 0]},
+            {"from": "13h", "to": "14h", "traffic": [1, 1, 0, 0, 0, 0, 0]},
+            {"from": "14h", "to": "15h", "traffic": [2, 2, 1, 0, 1, 0, 1]},
+            {"from": "15h", "to": "16h", "traffic": [2, 2, 2, 1, 2, 1, 2]},
+            {"from": "16h", "to": "17h", "traffic": [3, 3, 0, 2, 0, 2, 0]},
+            {"from": "17h", "to": "18h", "traffic": [3, 3, 3, 0, 3, 0, 3]},
+            {"from": "18h", "to": "19h", "traffic": [0, 0, 3, 0, 3, 0, 3]}
+          ],
+          "text": "Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a>"
         }
       }
     ]
   }
 }
-

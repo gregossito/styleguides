@@ -1,0 +1,22 @@
+include ../../components/card/card
+include ../../modules/button/button
+include ../../modules/news-list/news-list
+
+mixin events(data)
+  .component.component-events(class=data.modifiers)
+    .events-heading
+      h2.anchor(id=data.title.id)
+        = data.title.text
+        if data.title.logo
+          a(href=data.title.logo.href target=data.title.logo.target)
+            img(src=data.title.logo.src alt=data.title.logo.alt)
+      if data.title.link
+        .events-title-links
+          a(href=data.title.link.href)= data.title.link.text
+    if data.items
+      if data.items.length >= 3
+        - var news_list_data = {"modifiers": ["news-cards", "gallery"], "items": data.items}
+        +news-list(news_list_data)
+      else
+        each item in data.items
+          +card(item)

@@ -1,0 +1,17 @@
+include expandable
+
+include ../../helpers/preview
+
+//- for examples with block
+append elements
+  h2.lsg-example-title Avec un bloc
+
+  .lsg-elem
+    +expandable({"button": {"text": "Voir le contenu du bloc"}})
+      p Voici le contenu du bloc
+
+  +code("jade").
+    include expandable
+
+    +expandable({"button": {"text": "Voir le contenu du bloc"}})
+      p Voici le contenu du bloc
