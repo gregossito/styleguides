@@ -35,10 +35,11 @@
 	max-width: calc(100% - 65px);
 
 	label {
+    align-items: center;
+    display: flex;
 		text-transform: uppercase;
 		font-size: 12px;
 		font-weight: 400;
-		color: $green1;
 
 		input {
 			display: inline-block;
