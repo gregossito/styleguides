@@ -3827,6 +3827,28 @@ templatizer["heading"]["heading"] = function tmpl_heading_heading(data) {
     return buf.join("");
 };
 
+// icon-switch.jade compiled template
+templatizer["icon-switch"] = function tmpl_icon_switch(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// icon-switch.jade:icon-switch compiled template
+templatizer["icon-switch"]["icon-switch"] = function tmpl_icon_switch_icon_switch(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    var modifiers = data.modifiers || [];
+    if (data.action.type) {
+        modifiers.push("icon-switch-" + data.action.type);
+    }
+    if (data.active === true) {
+        modifiers.push("active");
+    }
+    buf.push("<div" + jade.attr("data-action", data.action.type, true, false) + jade.attr("data-action-id", data.action.id, true, false) + jade.attr("data-action-fallback-link", data.action.fallback_link, true, false) + jade.cls([ "icon-switch", modifiers ], [ null, true ]) + "><button" + jade.attr("data-href", data.href, true, false) + jade.attr("title", data.label[0], true, false) + ' type="button" class="icon-switch-on"><span' + jade.cls([ "icon", "icon-" + data.icon[0] + "" ], [ null, true ]) + '></span><span class="hidden-accessibly">' + jade.escape(null == (jade_interp = data.label[0]) ? "" : jade_interp) + "</span></button><button" + jade.attr("data-href", data.href, true, false) + jade.attr("title", data.label[1], true, false) + ' type="button" class="icon-switch-off"><span' + jade.cls([ "icon", "icon-" + data.icon[1] + "" ], [ null, true ]) + '></span><span class="hidden-accessibly">' + jade.escape(null == (jade_interp = data.label[1]) ? "" : jade_interp) + "</span></button></div>");
+    return buf.join("");
+};
+
 // hub-heading.jade compiled template
 templatizer["hub-heading"] = function tmpl_hub_heading(locals) {
     var buf = [];
@@ -3847,28 +3869,6 @@ templatizer["hub-heading"]["hub-heading"] = function tmpl_hub_heading_hub_headin
         buf.push("<h1>" + (null == (jade_interp = data.text) ? "" : jade_interp) + "</h1>");
     }
     buf.push("</div></div></div>");
-    return buf.join("");
-};
-
-// icon-switch.jade compiled template
-templatizer["icon-switch"] = function tmpl_icon_switch(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// icon-switch.jade:icon-switch compiled template
-templatizer["icon-switch"]["icon-switch"] = function tmpl_icon_switch_icon_switch(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    var modifiers = data.modifiers || [];
-    if (data.action.type) {
-        modifiers.push("icon-switch-" + data.action.type);
-    }
-    if (data.active === true) {
-        modifiers.push("active");
-    }
-    buf.push("<div" + jade.attr("data-action", data.action.type, true, false) + jade.attr("data-action-id", data.action.id, true, false) + jade.attr("data-action-fallback-link", data.action.fallback_link, true, false) + jade.cls([ "icon-switch", modifiers ], [ null, true ]) + "><button" + jade.attr("data-href", data.href, true, false) + jade.attr("title", data.label[0], true, false) + ' type="button" class="icon-switch-on"><span' + jade.cls([ "icon", "icon-" + data.icon[0] + "" ], [ null, true ]) + '></span><span class="hidden-accessibly">' + jade.escape(null == (jade_interp = data.label[0]) ? "" : jade_interp) + "</span></button><button" + jade.attr("data-href", data.href, true, false) + jade.attr("title", data.label[1], true, false) + ' type="button" class="icon-switch-off"><span' + jade.cls([ "icon", "icon-" + data.icon[1] + "" ], [ null, true ]) + '></span><span class="hidden-accessibly">' + jade.escape(null == (jade_interp = data.label[1]) ? "" : jade_interp) + "</span></button></div>");
     return buf.join("");
 };
 
@@ -7224,28 +7224,36 @@ templatizer["video-home-news"] = function tmpl_video_home_news(locals) {
 // video-home-news.jade:video-home-news compiled template
 templatizer["video-home-news"]["video-home-news"] = function tmpl_video_home_news_video_home_news(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<div class="video-home-modal"><div class="video-home-modal-content"><div class="video-home-modal-header"><span class="video-home-close"></span></div><div class="video-home-modal-body"></div></div></div><div class="video-home-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + '</div><ul class="video-home-news"><li' + jade.cls([ "video-home-list-item", data.items[0].modifiers ], [ null, true ]) + "><a" + jade.attr("href", data.items[0].href, true, false) + ' class="video-home-item"><div class="video-home-wrapper"><div class="video-home-embed">' + (null == (jade_interp = data.items[0].embed_html) ? "" : jade_interp) + "</div><div" + jade.attr("style", data.items[0].image && "background-image: url(" + data.items[0].image + ");", true, false) + ' class="video-home-image"></div><div class="video-home-content"><div class="video-home-title">' + jade.escape(null == (jade_interp = data.items[0].text) ? "" : jade_interp) + '<div class="video-home-duration">' + jade.escape(null == (jade_interp = data.items[0].duration) ? "" : jade_interp) + '</div></div></div></div></a><li class="video-home-list-wrapper">');
+    buf.push('<div class="video-home-news"><ul class="video-home-news-items">');
     (function() {
         var $$obj = data.items;
         if ("number" == typeof $$obj.length) {
             for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
                 var item = $$obj[$index];
-                if (item.modifiers && item.modifiers.indexOf("small") != -1) {
-                    buf.push("<div" + jade.cls([ "video-home-list-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ' class="video-home-item"><div class="video-home-wrapper"><div class="video-home-embed">' + (null == (jade_interp = item.embed_html) ? "" : jade_interp) + "</div><div" + jade.attr("style", item.image && "background-image: url(" + item.image + ");", true, false) + ' class="video-home-image"></div><div class="video-home-content"><div class="video-home-title">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + '<div class="video-home-duration">' + jade.escape(null == (jade_interp = item.duration) ? "" : jade_interp) + "</div></div></div></div></a></div>");
+                buf.push("<li" + jade.cls([ "video-home-news-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ' target="_blank"' + jade.attr("data-url", item.embed_url, true, false) + ' class="video-card"><div' + jade.attr("style", item.image && "background-image: url(" + item.image + ")", true, false) + ' class="video-card-image"><span class="video-card-play icon-play"></span><span class="video-card-duration">' + jade.escape(null == (jade_interp = item.duration) ? "" : jade_interp) + '</span></div><div class="video-card-content">');
+                if (item.title) {
+                    buf.push('<h3 class="video-card-title">' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</h3>");
                 }
+                buf.push('<div class="video-card-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a></li>");
             }
         } else {
             var $$l = 0;
             for (var $index in $$obj) {
                 $$l++;
                 var item = $$obj[$index];
-                if (item.modifiers && item.modifiers.indexOf("small") != -1) {
-                    buf.push("<div" + jade.cls([ "video-home-list-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ' class="video-home-item"><div class="video-home-wrapper"><div class="video-home-embed">' + (null == (jade_interp = item.embed_html) ? "" : jade_interp) + "</div><div" + jade.attr("style", item.image && "background-image: url(" + item.image + ");", true, false) + ' class="video-home-image"></div><div class="video-home-content"><div class="video-home-title">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + '<div class="video-home-duration">' + jade.escape(null == (jade_interp = item.duration) ? "" : jade_interp) + "</div></div></div></div></a></div>");
+                buf.push("<li" + jade.cls([ "video-home-news-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ' target="_blank"' + jade.attr("data-url", item.embed_url, true, false) + ' class="video-card"><div' + jade.attr("style", item.image && "background-image: url(" + item.image + ")", true, false) + ' class="video-card-image"><span class="video-card-play icon-play"></span><span class="video-card-duration">' + jade.escape(null == (jade_interp = item.duration) ? "" : jade_interp) + '</span></div><div class="video-card-content">');
+                if (item.title) {
+                    buf.push('<h3 class="video-card-title">' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</h3>");
                 }
+                buf.push('<div class="video-card-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a></li>");
             }
         }
     }).call(this);
-    buf.push("</li></li></ul>");
+    buf.push('</ul><div class="video-modal"><div class="video-modal-wrapper"><iframe width="100%" height="100%" scrolling="no" frameborder="no" allowfullscreen="allowfullscreen"></iframe>');
+    if (data.placeholder) {
+        buf.push('<div class="video-modal-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div>");
+    }
+    buf.push('<span class="video-modal-close icon-close"></span></div></div></div>');
     return buf.join("");
 };
 
