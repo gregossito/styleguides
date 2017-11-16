@@ -75,6 +75,7 @@
     display: block;
     height: 15vw;
     overflow: hidden;
+    perspective: 1px; // fix border-radius + overflow hidden Chrome bug
     position: relative;
     transition: border-radius .6s ease;
     width: 100%;
