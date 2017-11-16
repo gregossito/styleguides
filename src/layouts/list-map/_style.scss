@@ -66,24 +66,28 @@
               background-color: $grayF2;
 
               input {
+                  padding: 5px 10px;
                   width: calc(100% - 15px);
+
+                  &:focus {background-color: $white;}
               }
           }
 
           .filters-list {
-              padding: 30px;
+              padding: 10px 15px;
               max-height: calc(100vh - 225px);
               overflow: auto;
               -webkit-overflow-scrolling: touch;
               z-index: 1;
 
               label {
+                  align-items: center;
+                  display: flex;
 
                   & > * {
                     pointer-events: none;
                   }
 
-                  display: block;
                   padding: 15px;
                   border-bottom: 1px solid $grayF2;
                   position: relative;
@@ -94,8 +98,8 @@
                   }
 
                   span.label-txt {
+                    font-size: 1.3rem;
                     padding-left: 10px;
-                    padding-top: 15px;
                     z-index: 2;
                     position: relative;
                   }
@@ -104,17 +108,13 @@
                       z-index: 2;
 
                       &:checked + span.label-bg {
-                        background-color: $green1;
+                        background-color: $grayF2;
                         position: absolute;
                         top: 0;
                         bottom: 0;
                         left: 0;
                         right: 0;
                         z-index: 1;
-                      }
-
-                      &:checked ~ span.label-txt {
-                        color: $white;
                       }
                   }
               }

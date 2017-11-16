@@ -499,7 +499,7 @@ function renderSelectedFacetFilters() {
   });
   content += Paris.templates['button']['button']({
     text: Paris.i18n.t('list_equipments/confirm'),
-    modifiers: ["confirm", "action"]
+    modifiers: ["secondary", "action"]
   });
   content += '</div>';
   content += '</div>';
@@ -601,7 +601,7 @@ function renderPopup() {
   });
   content += Paris.templates['button']['button']({
     text: Paris.i18n.t('list_equipments/confirm'),
-    modifiers: ["confirm", "action"]
+    modifiers: ["secondary", "action"]
   });
   content += '</div>';
 
