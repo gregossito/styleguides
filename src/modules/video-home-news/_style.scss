@@ -74,6 +74,7 @@
     color: $white;
     display: block;
     height: 15vw;
+    max-height: 20rem;
     overflow: hidden;
     perspective: 1px; // fix border-radius + overflow hidden Chrome bug
     position: relative;
@@ -169,12 +170,14 @@
   }
 
   &-wrapper {
-    margin: 0 auto;
-    margin-top: 10rem;
+    height: 75vh;
+    left: 50%;
     max-width: $large-grid-width;
     min-height: 30rem;
-    height: 75vh;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
   }
 
   &-close {
@@ -221,6 +224,7 @@
 
           &-image {
             height: 33vw;
+            max-height: 41rem;
           }
 
           &-text {
