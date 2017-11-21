@@ -6,6 +6,7 @@
       "title": "Standard",
       "description": "",
       "data": {
+        "modifiers": ["has-icons"],
         "items": [
           {
             "href": "#",
@@ -29,13 +30,8 @@
           },
           {
             "href": "#",
-            "title": "Emploi & formations",
-            "text": "Concours de la ville, formations, cours municipaux, aides à l'emploi..."
-          },
-          {
-            "href": "#",
             "title": "Environnement & espaces verts",
-            "text": "Parcs et jardins, déchets, propreté, lutte contre la pollution"
+            "text": "Parcs et jardins, biodiversité, lutte contre la pollution"
           },
           {
             "href": "#",
@@ -49,6 +45,11 @@
           },
           {
             "href": "#",
+            "title": "Insertion, emploi & formations",
+            "text": "Concours de la ville, formations, cours municipaux, aides à l'emploi..."
+          },
+          {
+            "href": "#",
             "title": "Logement",
             "text": "Logement social, aides pour se loger, travaux, rénovation..."
           },
@@ -56,6 +57,16 @@
             "href": "#",
             "title": "Prévention et sécurité",
             "text": "Lutte contre les incivilités, prévention des risques majeurs..."
+          },
+          {
+            "href": "#",
+            "title": "Propreté",
+            "text": "Propreté, tri, gestion des déchets, eau et assainissement"
+          },
+          {
+            "href": "#",
+            "title": "Rénovations, travaux et aménagements",
+            "text": "Aménagements, chantiers de voirie, rénovation énergétique..."
           },
           {
             "href": "#",
@@ -74,13 +85,8 @@
           },
           {
             "href": "#",
-            "title": "Travaux et aménagements",
-            "text": "Aménagements, chantiers, voirie..."
-          },
-          {
-            "href": "#",
-            "title": "Urbanisme et architecture",
-            "text": "Projets urbains, P.L.U., demandes d'autorisations..."
+            "title": "Urbanisme et équipements publics",
+            "text": "Carte des projets urbains, P.L.U., rénovations, demandes d'autorisations..."
           },
           {
             "href": "#",
