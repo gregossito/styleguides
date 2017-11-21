@@ -2801,7 +2801,7 @@ html.no-cssanimations .jumbotron-slider {
   font-size: 1.8rem;
   font-weight: 300;
   margin-top: 0;
-  max-width: 30rem; }
+  max-width: 28rem; }
 
 .municipal-site-list-items {
   list-style: none;
@@ -2843,6 +2843,8 @@ html.no-cssanimations .jumbotron-slider {
     margin-left: 40%; } }
 
 @media (min-width: 1160px) {
+  .municipal-site-list-intro {
+    max-width: 30rem; }
   .municipal-site-list-items {
     margin-left: 30%; } }
 
@@ -5006,6 +5008,24 @@ body.rheader-mobile-nav-open {
       font-size: 1.3rem;
       font-weight: 500;
       vertical-align: middle; }
+  .sections-list-button-title, .sections-list-button-text {
+    transition: 0.2s ease-in-out color;
+    z-index: 2; }
+  .sections-list-button-title {
+    color: #333;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.7rem;
+    vertical-align: middle;
+    width: 100%;
+    margin-bottom: 5px; }
+  .sections-list-button-text {
+    color: #4D4D4D;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+    min-height: 60px; }
   html.no-js .sections-list-button:before,
   html.no-touchevents .sections-list-button:before {
     bottom: 0px;
@@ -5021,28 +5041,6 @@ body.rheader-mobile-nav-open {
   html.no-js .sections-list-button:hover:before,
   html.no-touchevents .sections-list-button:hover:before {
     width: 100%; }
-
-.sections-list-button-title,
-.sections-list-button-text {
-  transition: 0.2s ease-in-out color;
-  z-index: 2; }
-
-.sections-list-button-title {
-  color: #333;
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.7rem;
-  vertical-align: middle;
-  width: 100%;
-  margin-bottom: 5px; }
-
-.sections-list-button-text {
-  color: #4D4D4D;
-  font-size: 1.4rem;
-  font-weight: 300;
-  line-height: 1.8rem;
-  min-height: 60px; }
 
 @media (min-width: 768px) {
   .sections-list {
@@ -5065,47 +5063,155 @@ body.rheader-mobile-nav-open {
     html.no-touchevents .sections-list-button:before {
       border-radius: 5px; }
   /* Home categories colors */
-  .sections-list-item .sections-list-button {
+  .sections-list:not(.has-icons) .sections-list-item .sections-list-button {
     background-color: rgba(215, 237, 242, 0.7); }
-    html.no-js .sections-list-item .sections-list-button:before,
-    html.no-touchevents .sections-list-item .sections-list-button:before {
+    html.no-js .sections-list:not(.has-icons) .sections-list-item .sections-list-button:before,
+    html.no-touchevents .sections-list:not(.has-icons) .sections-list-item .sections-list-button:before {
       background-color: #D7EDF2; }
-    .sections-list-item .sections-list-button .sections-list-button-text {
+    .sections-list:not(.has-icons) .sections-list-item .sections-list-button .sections-list-button-text {
       color: #4D4D4D; }
-  .sections-list-item:nth-child(1) .sections-list-button, .sections-list-item:nth-child(7) .sections-list-button, .sections-list-item:nth-child(10) .sections-list-button {
+  .sections-list:not(.has-icons) .sections-list-item:nth-child(1) .sections-list-button, .sections-list:not(.has-icons) .sections-list-item:nth-child(7) .sections-list-button, .sections-list:not(.has-icons) .sections-list-item:nth-child(10) .sections-list-button {
     background-color: rgba(233, 87, 86, 0.7); }
-    html.no-js .sections-list-item:nth-child(1) .sections-list-button:before,
-    html.no-touchevents .sections-list-item:nth-child(1) .sections-list-button:before, html.no-js .sections-list-item:nth-child(7) .sections-list-button:before,
-    html.no-touchevents .sections-list-item:nth-child(7) .sections-list-button:before, html.no-js .sections-list-item:nth-child(10) .sections-list-button:before,
-    html.no-touchevents .sections-list-item:nth-child(10) .sections-list-button:before {
+    html.no-js .sections-list:not(.has-icons) .sections-list-item:nth-child(1) .sections-list-button:before,
+    html.no-touchevents .sections-list:not(.has-icons) .sections-list-item:nth-child(1) .sections-list-button:before, html.no-js .sections-list:not(.has-icons) .sections-list-item:nth-child(7) .sections-list-button:before,
+    html.no-touchevents .sections-list:not(.has-icons) .sections-list-item:nth-child(7) .sections-list-button:before, html.no-js .sections-list:not(.has-icons) .sections-list-item:nth-child(10) .sections-list-button:before,
+    html.no-touchevents .sections-list:not(.has-icons) .sections-list-item:nth-child(10) .sections-list-button:before {
       background-color: #E95756; }
-    .sections-list-item:nth-child(1) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(7) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(10) .sections-list-button .sections-list-button-text {
+    .sections-list:not(.has-icons) .sections-list-item:nth-child(1) .sections-list-button .sections-list-button-text, .sections-list:not(.has-icons) .sections-list-item:nth-child(7) .sections-list-button .sections-list-button-text, .sections-list:not(.has-icons) .sections-list-item:nth-child(10) .sections-list-button .sections-list-button-text {
       color: #FFF; }
-  .sections-list-item:nth-child(2) .sections-list-button, .sections-list-item:nth-child(11) .sections-list-button, .sections-list-item:nth-child(13) .sections-list-button {
+  .sections-list:not(.has-icons) .sections-list-item:nth-child(2) .sections-list-button, .sections-list:not(.has-icons) .sections-list-item:nth-child(11) .sections-list-button, .sections-list:not(.has-icons) .sections-list-item:nth-child(13) .sections-list-button {
     background-color: rgba(62, 194, 222, 0.7); }
-    html.no-js .sections-list-item:nth-child(2) .sections-list-button:before,
-    html.no-touchevents .sections-list-item:nth-child(2) .sections-list-button:before, html.no-js .sections-list-item:nth-child(11) .sections-list-button:before,
-    html.no-touchevents .sections-list-item:nth-child(11) .sections-list-button:before, html.no-js .sections-list-item:nth-child(13) .sections-list-button:before,
-    html.no-touchevents .sections-list-item:nth-child(13) .sections-list-button:before {
+    html.no-js .sections-list:not(.has-icons) .sections-list-item:nth-child(2) .sections-list-button:before,
+    html.no-touchevents .sections-list:not(.has-icons) .sections-list-item:nth-child(2) .sections-list-button:before, html.no-js .sections-list:not(.has-icons) .sections-list-item:nth-child(11) .sections-list-button:before,
+    html.no-touchevents .sections-list:not(.has-icons) .sections-list-item:nth-child(11) .sections-list-button:before, html.no-js .sections-list:not(.has-icons) .sections-list-item:nth-child(13) .sections-list-button:before,
+    html.no-touchevents .sections-list:not(.has-icons) .sections-list-item:nth-child(13) .sections-list-button:before {
       background-color: #3EC2DE; }
-    .sections-list-item:nth-child(2) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(11) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(13) .sections-list-button .sections-list-button-text {
+    .sections-list:not(.has-icons) .sections-list-item:nth-child(2) .sections-list-button .sections-list-button-text, .sections-list:not(.has-icons) .sections-list-item:nth-child(11) .sections-list-button .sections-list-button-text, .sections-list:not(.has-icons) .sections-list-item:nth-child(13) .sections-list-button .sections-list-button-text {
       color: #FFF; }
-  .sections-list-item:nth-child(3) .sections-list-button, .sections-list-item:nth-child(9) .sections-list-button, .sections-list-item:nth-child(15) .sections-list-button {
+  .sections-list:not(.has-icons) .sections-list-item:nth-child(3) .sections-list-button, .sections-list:not(.has-icons) .sections-list-item:nth-child(9) .sections-list-button, .sections-list:not(.has-icons) .sections-list-item:nth-child(15) .sections-list-button {
     background-color: rgba(66, 167, 105, 0.7); }
-    html.no-js .sections-list-item:nth-child(3) .sections-list-button:before,
-    html.no-touchevents .sections-list-item:nth-child(3) .sections-list-button:before, html.no-js .sections-list-item:nth-child(9) .sections-list-button:before,
-    html.no-touchevents .sections-list-item:nth-child(9) .sections-list-button:before, html.no-js .sections-list-item:nth-child(15) .sections-list-button:before,
-    html.no-touchevents .sections-list-item:nth-child(15) .sections-list-button:before {
+    html.no-js .sections-list:not(.has-icons) .sections-list-item:nth-child(3) .sections-list-button:before,
+    html.no-touchevents .sections-list:not(.has-icons) .sections-list-item:nth-child(3) .sections-list-button:before, html.no-js .sections-list:not(.has-icons) .sections-list-item:nth-child(9) .sections-list-button:before,
+    html.no-touchevents .sections-list:not(.has-icons) .sections-list-item:nth-child(9) .sections-list-button:before, html.no-js .sections-list:not(.has-icons) .sections-list-item:nth-child(15) .sections-list-button:before,
+    html.no-touchevents .sections-list:not(.has-icons) .sections-list-item:nth-child(15) .sections-list-button:before {
       background-color: #42A769; }
-    .sections-list-item:nth-child(3) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(9) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(15) .sections-list-button .sections-list-button-text {
+    .sections-list:not(.has-icons) .sections-list-item:nth-child(3) .sections-list-button .sections-list-button-text, .sections-list:not(.has-icons) .sections-list-item:nth-child(9) .sections-list-button .sections-list-button-text, .sections-list:not(.has-icons) .sections-list-item:nth-child(15) .sections-list-button .sections-list-button-text {
       color: #FFF; }
-  .sections-list-item:nth-child(5) .sections-list-button, .sections-list-item:nth-child(8) .sections-list-button, .sections-list-item:nth-child(14) .sections-list-button {
+  .sections-list:not(.has-icons) .sections-list-item:nth-child(5) .sections-list-button, .sections-list:not(.has-icons) .sections-list-item:nth-child(8) .sections-list-button, .sections-list:not(.has-icons) .sections-list-item:nth-child(14) .sections-list-button {
     background-color: rgba(248, 194, 67, 0.7); }
-    html.no-js .sections-list-item:nth-child(5) .sections-list-button:before,
-    html.no-touchevents .sections-list-item:nth-child(5) .sections-list-button:before, html.no-js .sections-list-item:nth-child(8) .sections-list-button:before,
-    html.no-touchevents .sections-list-item:nth-child(8) .sections-list-button:before, html.no-js .sections-list-item:nth-child(14) .sections-list-button:before,
-    html.no-touchevents .sections-list-item:nth-child(14) .sections-list-button:before {
-      background-color: #F8C243; } }
+    html.no-js .sections-list:not(.has-icons) .sections-list-item:nth-child(5) .sections-list-button:before,
+    html.no-touchevents .sections-list:not(.has-icons) .sections-list-item:nth-child(5) .sections-list-button:before, html.no-js .sections-list:not(.has-icons) .sections-list-item:nth-child(8) .sections-list-button:before,
+    html.no-touchevents .sections-list:not(.has-icons) .sections-list-item:nth-child(8) .sections-list-button:before, html.no-js .sections-list:not(.has-icons) .sections-list-item:nth-child(14) .sections-list-button:before,
+    html.no-touchevents .sections-list:not(.has-icons) .sections-list-item:nth-child(14) .sections-list-button:before {
+      background-color: #F8C243; }
+  /* With icons */
+  .sections-list.has-icons .sections-list-button {
+    background-color: rgba(215, 237, 242, 0.7); }
+    .sections-list.has-icons .sections-list-button-wrapper:before {
+      background-image: url(../modules/sections-list/services-icons.svg);
+      background-position-y: 0;
+      background-repeat: no-repeat;
+      background-size: 1018px 186px;
+      content: "";
+      display: block;
+      float: left;
+      height: 88px;
+      margin: 0 10px 0 -10px;
+      width: 45px; }
+    .sections-list.has-icons .sections-list-button-title {
+      font-size: 1.4rem; }
+    .sections-list.has-icons .sections-list-button-text {
+      color: #4D4D4D;
+      line-height: 1.6rem; }
+    html.no-js .sections-list.has-icons .sections-list-button:before,
+    html.no-touchevents .sections-list.has-icons .sections-list-button:before {
+      background-color: #FFF; }
+  .sections-list.has-icons .sections-list-item:nth-child(1) .sections-list-button, .sections-list.has-icons .sections-list-item:nth-child(8) .sections-list-button, .sections-list.has-icons .sections-list-item:nth-child(10) .sections-list-button {
+    background-color: rgba(233, 87, 86, 0.9); }
+    html.no-js .sections-list.has-icons .sections-list-item:nth-child(1) .sections-list-button:before,
+    html.no-touchevents .sections-list.has-icons .sections-list-item:nth-child(1) .sections-list-button:before, html.no-js .sections-list.has-icons .sections-list-item:nth-child(8) .sections-list-button:before,
+    html.no-touchevents .sections-list.has-icons .sections-list-item:nth-child(8) .sections-list-button:before, html.no-js .sections-list.has-icons .sections-list-item:nth-child(10) .sections-list-button:before,
+    html.no-touchevents .sections-list.has-icons .sections-list-item:nth-child(10) .sections-list-button:before {
+      background-color: #FFF; }
+    .sections-list.has-icons .sections-list-item:nth-child(1) .sections-list-button .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(8) .sections-list-button .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(10) .sections-list-button .sections-list-button-text {
+      color: #FFF; }
+    .sections-list.has-icons .sections-list-item:nth-child(1) .sections-list-button:hover .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(8) .sections-list-button:hover .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(10) .sections-list-button:hover .sections-list-button-text {
+      color: #4D4D4D; }
+  .sections-list.has-icons .sections-list-item:nth-child(2) .sections-list-button, .sections-list.has-icons .sections-list-item:nth-child(4) .sections-list-button, .sections-list.has-icons .sections-list-item:nth-child(7) .sections-list-button, .sections-list.has-icons .sections-list-item:nth-child(15) .sections-list-button {
+    background-color: rgba(62, 194, 222, 0.9); }
+    html.no-js .sections-list.has-icons .sections-list-item:nth-child(2) .sections-list-button:before,
+    html.no-touchevents .sections-list.has-icons .sections-list-item:nth-child(2) .sections-list-button:before, html.no-js .sections-list.has-icons .sections-list-item:nth-child(4) .sections-list-button:before,
+    html.no-touchevents .sections-list.has-icons .sections-list-item:nth-child(4) .sections-list-button:before, html.no-js .sections-list.has-icons .sections-list-item:nth-child(7) .sections-list-button:before,
+    html.no-touchevents .sections-list.has-icons .sections-list-item:nth-child(7) .sections-list-button:before, html.no-js .sections-list.has-icons .sections-list-item:nth-child(15) .sections-list-button:before,
+    html.no-touchevents .sections-list.has-icons .sections-list-item:nth-child(15) .sections-list-button:before {
+      background-color: #FFF; }
+    .sections-list.has-icons .sections-list-item:nth-child(2) .sections-list-button .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(4) .sections-list-button .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(7) .sections-list-button .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(15) .sections-list-button .sections-list-button-text {
+      color: #FFF; }
+    .sections-list.has-icons .sections-list-item:nth-child(2) .sections-list-button:hover .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(4) .sections-list-button:hover .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(7) .sections-list-button:hover .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(15) .sections-list-button:hover .sections-list-button-text {
+      color: #4D4D4D; }
+  .sections-list.has-icons .sections-list-item:nth-child(5) .sections-list-button, .sections-list.has-icons .sections-list-item:nth-child(11) .sections-list-button, .sections-list.has-icons .sections-list-item:nth-child(13) .sections-list-button {
+    background-color: rgba(66, 167, 105, 0.9); }
+    html.no-js .sections-list.has-icons .sections-list-item:nth-child(5) .sections-list-button:before,
+    html.no-touchevents .sections-list.has-icons .sections-list-item:nth-child(5) .sections-list-button:before, html.no-js .sections-list.has-icons .sections-list-item:nth-child(11) .sections-list-button:before,
+    html.no-touchevents .sections-list.has-icons .sections-list-item:nth-child(11) .sections-list-button:before, html.no-js .sections-list.has-icons .sections-list-item:nth-child(13) .sections-list-button:before,
+    html.no-touchevents .sections-list.has-icons .sections-list-item:nth-child(13) .sections-list-button:before {
+      background-color: #FFF; }
+    .sections-list.has-icons .sections-list-item:nth-child(5) .sections-list-button .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(11) .sections-list-button .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(13) .sections-list-button .sections-list-button-text {
+      color: #FFF; }
+    .sections-list.has-icons .sections-list-item:nth-child(5) .sections-list-button:hover .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(11) .sections-list-button:hover .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(13) .sections-list-button:hover .sections-list-button-text {
+      color: #4D4D4D; }
+  .sections-list.has-icons .sections-list-item:nth-child(3) .sections-list-button, .sections-list.has-icons .sections-list-item:nth-child(6) .sections-list-button, .sections-list.has-icons .sections-list-item:nth-child(14) .sections-list-button {
+    background-color: rgba(248, 194, 67, 0.9); }
+    html.no-js .sections-list.has-icons .sections-list-item:nth-child(3) .sections-list-button:before,
+    html.no-touchevents .sections-list.has-icons .sections-list-item:nth-child(3) .sections-list-button:before, html.no-js .sections-list.has-icons .sections-list-item:nth-child(6) .sections-list-button:before,
+    html.no-touchevents .sections-list.has-icons .sections-list-item:nth-child(6) .sections-list-button:before, html.no-js .sections-list.has-icons .sections-list-item:nth-child(14) .sections-list-button:before,
+    html.no-touchevents .sections-list.has-icons .sections-list-item:nth-child(14) .sections-list-button:before {
+      background-color: #FFF; }
+    .sections-list.has-icons .sections-list-item:nth-child(3) .sections-list-button .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(6) .sections-list-button .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(14) .sections-list-button .sections-list-button-text {
+      color: #FFF; }
+    .sections-list.has-icons .sections-list-item:nth-child(3) .sections-list-button:hover .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(6) .sections-list-button:hover .sections-list-button-text, .sections-list.has-icons .sections-list-item:nth-child(14) .sections-list-button:hover .sections-list-button-text {
+      color: #4D4D4D; }
+  .sections-list.has-icons .sections-list-item:nth-child(1) .sections-list-button-wrapper:before {
+    background-position-x: 0; }
+  .sections-list.has-icons .sections-list-item:nth-child(2) .sections-list-button-wrapper:before {
+    background-position-x: -65px; }
+  .sections-list.has-icons .sections-list-item:nth-child(3) .sections-list-button-wrapper:before {
+    background-position-x: -130px; }
+  .sections-list.has-icons .sections-list-item:nth-child(4) .sections-list-button-wrapper:before {
+    background-position-x: -195px; }
+  .sections-list.has-icons .sections-list-item:nth-child(5) .sections-list-button-wrapper:before {
+    background-position-x: -260px; }
+  .sections-list.has-icons .sections-list-item:nth-child(6) .sections-list-button-wrapper:before {
+    background-position-x: -325px; }
+  .sections-list.has-icons .sections-list-item:nth-child(7) .sections-list-button-wrapper:before {
+    background-position-x: -390px; }
+  .sections-list.has-icons .sections-list-item:nth-child(8) .sections-list-button-wrapper:before {
+    background-position-x: -452px;
+    width: 49px; }
+  .sections-list.has-icons .sections-list-item:nth-child(9) .sections-list-button-wrapper:before {
+    background-position-x: -516px;
+    width: 51px; }
+  .sections-list.has-icons .sections-list-item:nth-child(10) .sections-list-button-wrapper:before {
+    background-position-x: -584px; }
+  .sections-list.has-icons .sections-list-item:nth-child(11) .sections-list-button-wrapper:before {
+    background-position-x: -650px; }
+  .sections-list.has-icons .sections-list-item:nth-child(12) .sections-list-button-wrapper:before {
+    background-position-x: -715px; }
+  .sections-list.has-icons .sections-list-item:nth-child(13) .sections-list-button-wrapper:before {
+    background-position-x: -780px; }
+  .sections-list.has-icons .sections-list-item:nth-child(14) .sections-list-button-wrapper:before {
+    background-position-x: -838px;
+    width: 56px; }
+  .sections-list.has-icons .sections-list-item:nth-child(15) .sections-list-button-wrapper:before {
+    background-position-x: -910px; }
+  .sections-list.has-icons .sections-list-item:nth-child(16) .sections-list-button-wrapper:before {
+    background-position-x: -973px; }
+  html.no-js .sections-list.has-icons .sections-list-button:before,
+  html.no-touchevents .sections-list.has-icons .sections-list-button:before {
+    background-color: #FFF; }
+  html.no-js .sections-list.has-icons .sections-list-button:hover .sections-list-button-wrapper:before,
+  html.no-touchevents .sections-list.has-icons .sections-list-button:hover .sections-list-button-wrapper:before {
+    background-position-y: -120px; } }
 
 @media (min-width: 768px) {
   .home .sections-list {
@@ -5184,301 +5290,6 @@ body.rheader-mobile-nav-open {
                 transform: translateY(-50%);
         transition: 0.2s ease-in-out color; }
       .sections-list-button.more .sections-list-button-text {
-        font-size: 1.6rem;
-        font-weight: 700;
-        line-height: 2.2rem;
-        max-width: 200px; } }
-
-.sections-list-picto {
-  list-style: none;
-  padding: 0; }
-
-.sections-list-picto-button {
-  border: none;
-  cursor: pointer;
-  display: block;
-  margin-bottom: 20px;
-  overflow: hidden;
-  padding: 8px 20px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  vertical-align: middle;
-  white-space: normal;
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  /* modifier "more" */ }
-  .sections-list-picto-button.more {
-    background: yellow;
-    color: #000;
-    display: table;
-    padding: 12px 18px; }
-    .sections-list-picto-button.more .sections-list-picto-button-text {
-      display: table-cell;
-      font-size: 1.3rem;
-      font-weight: 500;
-      vertical-align: middle; }
-  html.no-js .sections-list-picto-button:before,
-  html.no-touchevents .sections-list-picto-button:before {
-    bottom: 0px;
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0px;
-    position: absolute;
-    top: 0px;
-    transition: 0.2s ease-in-out width;
-    width: 0%;
-    z-index: -1; }
-  html.no-js .sections-list-picto-button:hover:before,
-  html.no-touchevents .sections-list-picto-button:hover:before {
-    width: 100%; }
-  html.no-js .sections-list-picto-button:hover .sections-list-picto-icon:before,
-  html.no-touchevents .sections-list-picto-button:hover .sections-list-picto-icon:before {
-    background-image: url(../images/home-modules/services-icons-hover.svg); }
-
-.sections-list-picto-button-title,
-.sections-list-picto-button-text {
-  transition: 0.2s ease-in-out color;
-  z-index: 2; }
-
-.sections-list-picto-button-title {
-  color: #333;
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1.7rem;
-  vertical-align: middle;
-  width: 100%;
-  margin-bottom: 5px; }
-
-.sections-list-picto-button-text {
-  color: #4D4D4D;
-  font-size: 1.4rem;
-  font-weight: 300;
-  line-height: 1.6rem;
-  min-height: 60px; }
-
-@media (min-width: 768px) {
-  .sections-list-picto {
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto; }
-    .sections-list-picto:after {
-      content: " ";
-      display: block;
-      clear: both; }
-  .sections-list-picto-button {
-    border-radius: 5px;
-    height: 120px; }
-    .sections-list-picto-button.more {
-      text-transform: uppercase;
-      text-align: center; }
-      .sections-list-picto-button.more:after {
-        display: none; }
-    html.no-js .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-button:before {
-      border-radius: 5px; }
-  /* Home categories colors */
-  .sections-list-picto-item .sections-list-picto-icon:before {
-    transition: .3s ease-out 0.2s; }
-  .sections-list-picto-item:hover .sections-list-picto-icon:before {
-    transition: .3s ease-out 0s; }
-  .sections-list-picto-item .sections-list-picto-button {
-    background-color: rgba(215, 237, 242, 0.9); }
-    html.no-js .sections-list-picto-item .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-item .sections-list-picto-button:before {
-      background-color: #D7EDF2;
-      background-color: #FFF; }
-    .sections-list-picto-item .sections-list-picto-button .sections-list-picto-button-text {
-      color: #4D4D4D; }
-  .sections-list-picto-item:nth-child(1) .sections-list-picto-button, .sections-list-picto-item:nth-child(8) .sections-list-picto-button, .sections-list-picto-item:nth-child(10) .sections-list-picto-button {
-    background-color: rgba(233, 87, 86, 0.9); }
-    html.no-js .sections-list-picto-item:nth-child(1) .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-item:nth-child(1) .sections-list-picto-button:before, html.no-js .sections-list-picto-item:nth-child(8) .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-item:nth-child(8) .sections-list-picto-button:before, html.no-js .sections-list-picto-item:nth-child(10) .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-item:nth-child(10) .sections-list-picto-button:before {
-      background-color: #E95756;
-      background-color: #FFF; }
-    .sections-list-picto-item:nth-child(1) .sections-list-picto-button .sections-list-picto-button-text, .sections-list-picto-item:nth-child(8) .sections-list-picto-button .sections-list-picto-button-text, .sections-list-picto-item:nth-child(10) .sections-list-picto-button .sections-list-picto-button-text {
-      color: #FFF; }
-    .sections-list-picto-item:nth-child(1) .sections-list-picto-button:hover .sections-list-picto-button-text, .sections-list-picto-item:nth-child(8) .sections-list-picto-button:hover .sections-list-picto-button-text, .sections-list-picto-item:nth-child(10) .sections-list-picto-button:hover .sections-list-picto-button-text {
-      color: #000; }
-  .sections-list-picto-item:nth-child(2) .sections-list-picto-button, .sections-list-picto-item:nth-child(4) .sections-list-picto-button, .sections-list-picto-item:nth-child(7) .sections-list-picto-button, .sections-list-picto-item:nth-child(15) .sections-list-picto-button {
-    background-color: rgba(62, 194, 222, 0.9); }
-    html.no-js .sections-list-picto-item:nth-child(2) .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-item:nth-child(2) .sections-list-picto-button:before, html.no-js .sections-list-picto-item:nth-child(4) .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-item:nth-child(4) .sections-list-picto-button:before, html.no-js .sections-list-picto-item:nth-child(7) .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-item:nth-child(7) .sections-list-picto-button:before, html.no-js .sections-list-picto-item:nth-child(15) .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-item:nth-child(15) .sections-list-picto-button:before {
-      background-color: #3EC2DE;
-      background-color: #FFF; }
-    .sections-list-picto-item:nth-child(2) .sections-list-picto-button .sections-list-picto-button-text, .sections-list-picto-item:nth-child(4) .sections-list-picto-button .sections-list-picto-button-text, .sections-list-picto-item:nth-child(7) .sections-list-picto-button .sections-list-picto-button-text, .sections-list-picto-item:nth-child(15) .sections-list-picto-button .sections-list-picto-button-text {
-      color: #FFF; }
-    .sections-list-picto-item:nth-child(2) .sections-list-picto-button:hover .sections-list-picto-button-text, .sections-list-picto-item:nth-child(4) .sections-list-picto-button:hover .sections-list-picto-button-text, .sections-list-picto-item:nth-child(7) .sections-list-picto-button:hover .sections-list-picto-button-text, .sections-list-picto-item:nth-child(15) .sections-list-picto-button:hover .sections-list-picto-button-text {
-      color: #000; }
-  .sections-list-picto-item:nth-child(5) .sections-list-picto-button, .sections-list-picto-item:nth-child(11) .sections-list-picto-button, .sections-list-picto-item:nth-child(13) .sections-list-picto-button {
-    background-color: rgba(66, 167, 105, 0.9); }
-    html.no-js .sections-list-picto-item:nth-child(5) .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-item:nth-child(5) .sections-list-picto-button:before, html.no-js .sections-list-picto-item:nth-child(11) .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-item:nth-child(11) .sections-list-picto-button:before, html.no-js .sections-list-picto-item:nth-child(13) .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-item:nth-child(13) .sections-list-picto-button:before {
-      background-color: #42A769;
-      background-color: #FFF; }
-    .sections-list-picto-item:nth-child(5) .sections-list-picto-button .sections-list-picto-button-text, .sections-list-picto-item:nth-child(11) .sections-list-picto-button .sections-list-picto-button-text, .sections-list-picto-item:nth-child(13) .sections-list-picto-button .sections-list-picto-button-text {
-      color: #FFF; }
-    .sections-list-picto-item:nth-child(5) .sections-list-picto-button:hover .sections-list-picto-button-text, .sections-list-picto-item:nth-child(11) .sections-list-picto-button:hover .sections-list-picto-button-text, .sections-list-picto-item:nth-child(13) .sections-list-picto-button:hover .sections-list-picto-button-text {
-      color: #000; }
-  .sections-list-picto-item:nth-child(3) .sections-list-picto-button, .sections-list-picto-item:nth-child(6) .sections-list-picto-button, .sections-list-picto-item:nth-child(14) .sections-list-picto-button {
-    background-color: rgba(248, 194, 67, 0.9); }
-    html.no-js .sections-list-picto-item:nth-child(3) .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-item:nth-child(3) .sections-list-picto-button:before, html.no-js .sections-list-picto-item:nth-child(6) .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-item:nth-child(6) .sections-list-picto-button:before, html.no-js .sections-list-picto-item:nth-child(14) .sections-list-picto-button:before,
-    html.no-touchevents .sections-list-picto-item:nth-child(14) .sections-list-picto-button:before {
-      background-color: #F8C243;
-      background-color: #FFF; }
-    .sections-list-picto-item:nth-child(3) .sections-list-picto-button .sections-list-picto-button-text, .sections-list-picto-item:nth-child(6) .sections-list-picto-button .sections-list-picto-button-text, .sections-list-picto-item:nth-child(14) .sections-list-picto-button .sections-list-picto-button-text {
-      color: #FFF; }
-    .sections-list-picto-item:nth-child(3) .sections-list-picto-button:hover .sections-list-picto-button-text, .sections-list-picto-item:nth-child(6) .sections-list-picto-button:hover .sections-list-picto-button-text, .sections-list-picto-item:nth-child(14) .sections-list-picto-button:hover .sections-list-picto-button-text {
-      color: #000; }
-  /* Pictos */
-  .sections-list-picto-icon:before {
-    content: "";
-    display: block;
-    float: left;
-    background-image: url(../images/home-modules/services-icons.svg);
-    background-repeat: no-repeat;
-    background-size: auto;
-    width: 45px;
-    height: 55px;
-    margin-left: -10px;
-    margin-right: 10px;
-    margin-bottom: 35px; }
-  .sections-list-picto-item:nth-child(1) .sections-list-picto-icon:before {
-    background-position: -23px -23px; }
-  .sections-list-picto-item:nth-child(2) .sections-list-picto-icon:before {
-    background-position: -93px -24px;
-    height: 57px; }
-  .sections-list-picto-item:nth-child(3) .sections-list-picto-icon:before {
-    background-position: -166px -24px; }
-  .sections-list-picto-item:nth-child(4) .sections-list-picto-icon:before {
-    background-position: -230px -8px;
-    height: 70px; }
-  .sections-list-picto-item:nth-child(5) .sections-list-picto-icon:before {
-    background-position: -25px -99px; }
-  .sections-list-picto-item:nth-child(6) .sections-list-picto-icon:before {
-    background-position: -94px -99px; }
-  .sections-list-picto-item:nth-child(7) .sections-list-picto-icon:before {
-    background-position: -166px -99px; }
-  .sections-list-picto-item:nth-child(8) .sections-list-picto-icon:before {
-    background-position: -229px -99px;
-    width: 50px; }
-  .sections-list-picto-item:nth-child(9) .sections-list-picto-icon:before {
-    background-position: -25px -173px;
-    width: 55px; }
-  .sections-list-picto-item:nth-child(10) .sections-list-picto-icon:before {
-    background-position: -93px -173px; }
-  .sections-list-picto-item:nth-child(11) .sections-list-picto-icon:before {
-    background-position: -166px -172px; }
-  .sections-list-picto-item:nth-child(12) .sections-list-picto-icon:before {
-    background-position: -229px -173px; }
-  .sections-list-picto-item:nth-child(13) .sections-list-picto-icon:before {
-    background-position: -25px -253px; }
-  .sections-list-picto-item:nth-child(14) .sections-list-picto-icon:before {
-    background-position: -93px -253px;
-    width: 65px; }
-  .sections-list-picto-item:nth-child(15) .sections-list-picto-icon:before {
-    background-position: -166px -253px;
-    width: 55px; }
-  .sections-list-picto-item:nth-child(16) .sections-list-picto-icon:before {
-    background-position: -232px -243px; } }
-
-@media (min-width: 768px) {
-  .home .sections-list-picto {
-    padding-bottom: 20px; } }
-
-@media (min-width: 1160px) {
-  .sections-list-picto-item {
-    width: 23.63636%;
-    float: left; }
-    .sections-list-picto-item:nth-child(4n + 1) {
-      margin-left: 0;
-      margin-right: -100%;
-      clear: both;
-      margin-left: 0; }
-    .sections-list-picto-item:nth-child(4n + 2) {
-      margin-left: 25.45455%;
-      margin-right: -100%;
-      clear: none; }
-    .sections-list-picto-item:nth-child(4n + 3) {
-      margin-left: 50.90909%;
-      margin-right: -100%;
-      clear: none; }
-    .sections-list-picto-item:nth-child(4n + 4) {
-      margin-left: 76.36364%;
-      margin-right: -100%;
-      clear: none; } }
-
-@media (min-width: 768px) and (max-width: 1159px) {
-  .sections-list-picto-item {
-    width: 31.70732%;
-    float: left; }
-    .sections-list-picto-item:nth-child(3n + 1) {
-      margin-left: 0;
-      margin-right: -100%;
-      clear: both;
-      margin-left: 0; }
-    .sections-list-picto-item:nth-child(3n + 2) {
-      margin-left: 34.14634%;
-      margin-right: -100%;
-      clear: none; }
-    .sections-list-picto-item:nth-child(3n + 3) {
-      margin-left: 68.29268%;
-      margin-right: -100%;
-      clear: none; } }
-
-@media (max-width: 767px) {
-  .sections-list-picto-button {
-    display: none;
-    width: 100%; }
-    .sections-list-picto-button:last-child {
-      margin-bottom: 0; }
-    .sections-list-picto-button.more {
-      display: none;
-      padding: 30px 30px; }
-      .sections-list-picto-button.more html.no-js:hover:after,
-      .sections-list-picto-button.more html.no-touchevents:hover:after {
-        color: #F2F2F2; }
-      .sections-list-picto-button.more:after {
-        /* use !important to prevent issues with browser extensions that change fonts */
-        font-family: 'paris-icons' !important;
-        speak: none;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        /* Better Font Rendering =========== */
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        content: "";
-        font-size: 2rem;
-        position: absolute;
-        right: 30px;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
-        transition: 0.2s ease-in-out color; }
-      .sections-list-picto-button.more .sections-list-picto-button-text {
         font-size: 1.6rem;
         font-weight: 700;
         line-height: 2.2rem;
@@ -6325,6 +6136,7 @@ body.rheader-mobile-nav-open {
     color: #FFF;
     display: block;
     height: 15vw;
+    max-height: 20rem;
     overflow: hidden;
     -webkit-perspective: 1px;
             perspective: 1px;
@@ -6399,12 +6211,15 @@ body.rheader-mobile-nav-open {
   .video-modal.is-open {
     display: block; }
   .video-modal-wrapper {
-    margin: 0 auto;
-    margin-top: 10rem;
+    height: 75vh;
+    left: 50%;
     max-width: 1100px;
     min-height: 30rem;
-    height: 75vh;
-    position: relative; }
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 100%; }
   .video-modal-close {
     cursor: pointer;
     font-size: 7rem;
@@ -6439,7 +6254,8 @@ body.rheader-mobile-nav-open {
       margin-right: 2.43902%;
       display: block; }
       .video-home-news-item:first-child .video-card-image {
-        height: 33vw; }
+        height: 33vw;
+        max-height: 41rem; }
       .video-home-news-item:first-child .video-card-text {
         font-size: 2.6rem;
         line-height: 3.2rem; } }
@@ -8407,6 +8223,7 @@ http://flickity.metafizzy.co
       position: relative;
       width: 280px; }
       .layout-left-col .layout-aside .aside-wrapper {
+        max-width: 260px;
         overflow-y: hidden;
         padding-top: 40px;
         transition: .4s ease padding-top; }

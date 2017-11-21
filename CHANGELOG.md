@@ -9,6 +9,13 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.9.7 (2017-11-21)
+
+* module `municipal-site-list`: fix diplay on 768px
+* module `video-home-news`: fix thumbnail size on > 1300px
+* layout `left-col`: set .aside-wrapper max-width to 260px
+* merge `sections-list-picto` module into `sections-list`
+
 ## 1.9.6 (2017-11-16)
 
 * base `icons`: fix backward compatibility on subway/metro icon
