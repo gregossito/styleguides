@@ -433,16 +433,16 @@
             ],
             "items": [
               {"from": "8h", "to": "9h", "traffic": [1, 1, 0, 1, 0, 1, 0]},
-              {"from": "9h", "to": "10h", "traffic": [2, 2, 0, 2, 0, 2, 0]},
-              {"from": "10h", "to": "11h", "traffic": [2, 0, 0, 2, 0, 2, 0]},
-              {"from": "11h", "to": "12h", "traffic": [3, 3, 0, 3, 0, 3, 0]},
-              {"from": "12h", "to": "13h", "traffic": [3, 3, 0, 3, 0, 3, 0]},
+              {"from": "9h", "to": "10h", "traffic": [1, 2, 0, 2, 0, 2, 0]},
+              {"from": "10h", "to": "11h", "traffic": [1, 0, 0, 2, 0, 2, 0]},
+              {"from": "11h", "to": "12h", "traffic": [1, 3, 0, 3, 0, 3, 0]},
+              {"from": "12h", "to": "13h", "traffic": [1, 3, 0, 3, 0, 3, 0]},
               {"from": "13h", "to": "14h", "traffic": [1, 1, 0, 0, 0, 0, 0]},
-              {"from": "14h", "to": "15h", "traffic": [2, 2, 1, 0, 1, 0, 1]},
-              {"from": "15h", "to": "16h", "traffic": [2, 2, 2, 1, 2, 1, 2]},
-              {"from": "16h", "to": "17h", "traffic": [3, 3, 0, 2, 0, 2, 0]},
-              {"from": "17h", "to": "18h", "traffic": [3, 3, 3, 0, 3, 0, 3]},
-              {"from": "18h", "to": "19h", "traffic": [0, 0, 3, 0, 3, 0, 3]}
+              {"from": "14h", "to": "15h", "traffic": [1, 2, 1, 0, 1, 0, 1]},
+              {"from": "15h", "to": "16h", "traffic": [1, 2, 2, 1, 2, 1, 2]},
+              {"from": "16h", "to": "17h", "traffic": [1, 3, 0, 2, 0, 2, 0]},
+              {"from": "17h", "to": "18h", "traffic": [1, 3, 3, 0, 3, 0, 3]},
+              {"from": "18h", "to": "19h", "traffic": [1, 0, 3, 0, 3, 0, 3]}
             ],
             "text": "Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a>"
           }

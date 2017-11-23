@@ -147,6 +147,7 @@
 
     tr > th {
       font-size: 1.4rem;
+      min-width: 50px;
       text-align: left;
 
       &[colspan="2"] {
@@ -170,7 +171,10 @@
   }
 }
 
-@include large {
+@include large-and-medium {
   .component-rush-hours {
+    tr > th {
+      min-width: 85px;
+    }
   }
 }
