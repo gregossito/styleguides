@@ -7,32 +7,54 @@ Paris.config = {
 
     // This API key should be created on Algolia, and have `search` permission on all the indexes below
     "api_key": "219f93ef781ffa09cdb6803f702cf6f1",
-    // TODO Remove after debug ?
-    "dev_mes_lieux_api_key": "850ba3330a69483fb4d56287a9e5eb06",
 
     // You can add any Algolia index here, to be able to use it in the quick-access module and search-results template
     "indexes": {
       "global": "recette_ParisFront",
       "persons": "recette_Elus",
-      "equipments": "Eqpt",
-      "dev_mes_lieux": "dev_MesLieux"
+      "equipments": "Service_production",
+      "dev_mes_lieux": "dev_MesLieux",
     },
-    "main_facets": ["Piscines", "Bibliothèques", "Parcs et jardins", "Marchés", "Ateliers Beaux-Arts", "Centres d'animation", "Conservatoires", "Mairies", "Maisons des assos", "Maisons entreprises et emploi", "Musées municipaux", "Tennis"],
+    "main_facets": ["Bibliothèques municipales de prêt et spécialisées", "Mairies d'arrondissement", "Principaux parcs, jardins et squares", "Piscines municipales", "Tennis"],
     "main_facets_icon": [
       {
-        facet: "Piscines",
+        facet: "Piscines municipales",
         icon: "swimming-pool"
       },
       {
-        facet: "Bibliothèques",
+        facet: "Piscines concédées",
+        icon: "swimming-pool"
+      },
+      {
+        facet: "Bibliothèques municipales de prêt et spécialisées",
         icon: "library"
       },
       {
-        facet: "Parcs et jardins",
+        facet: "Bibliothèques municipales spécialisées",
+        icon: "library"
+      },
+      {
+        facet: "Médiathèques et ludothèques",
+        icon: "library"
+      },
+      {
+        facet: "Principaux parcs, jardins et squares",
         icon: "park"
       },
       {
-        facet: "Marchés",
+        facet: "Jardins, mails, promenades",
+        icon: "park"
+      },
+      {
+        facet: "Squares",
+        icon: "park"
+      },
+      {
+        facet: "Marchés alimentaires et spécialisés",
+        icon: "market"
+      },
+      {
+        facet: "Marchés spécialisés",
         icon: "market"
       },
       {
@@ -40,23 +62,27 @@ Paris.config = {
         icon: "art-workshop"
       },
       {
-        facet: "Centres d'animation",
+        facet: "Centres Paris Anim",
         icon: "animation"
       },
       {
-        facet: "Conservatoires",
+        facet: "Conservatoires municipaux",
         icon: "conservatoire"
       },
       {
-        facet: "Mairies",
-        icon: "library"
+        facet: "Mairies d'arrondissement",
+        icon: "city-hall"
       },
       {
-        facet: "Maisons des assos",
+        facet: "Hôtel de Ville",
+        icon: "city-hall"
+      },
+      {
+        facet: "Maisons des associations",
         icon: "associations"
       },
       {
-        facet: "Maisons entreprises et emploi",
+        facet: "Point Paris Emploi",
         icon: "jobs"
       },
       {
@@ -64,12 +90,16 @@ Paris.config = {
         icon: "museum"
       },
       {
-        facet: "Mairies",
-        icon: "city-hall"
-      },
-      {
         facet: "Tennis",
         icon: "tennis"
+      },
+      {
+        facet: "Théàtres de la Ville et établissements soutenus",
+        icon: "culture"
+      },
+      {
+        facet: "Théàtres pour enfants",
+        icon: "culture"
       }
     ],
     "secondary_filters": [

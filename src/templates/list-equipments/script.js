@@ -38,7 +38,7 @@ Paris.listEquipments = (function(){
       // Init instantsearch
       var search = instantsearch({
         appId: Paris.config.algolia.id,
-        apiKey: Paris.config.algolia.dev_mes_lieux_api_key,
+        apiKey: Paris.config.algolia.api_key,
         indexName: Paris.config.algolia.indexes[options.index],
         searchParameters: options.searchParams
       });
@@ -205,7 +205,7 @@ Paris.listEquipments = (function(){
       });
 
       // Autocompletion is not an instantsearch feature. Must use algolia.js directly
-      var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.dev_mes_lieux_api_key);
+      var algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       var index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
 
       var equipementDataset = {
