@@ -11,6 +11,14 @@ Paris.accordion = (function(){
         api = {};
 
     function init(){
+      // fix equipement accordion ckeditor
+      if ($el.find('icon-arrow-top').length === 0) {
+        $el.find('.collapsible-item-title-link').append('<span class="icon icon-arrow-top"></span>');
+        $el.find('.panel-default.collapsible-item').addClass('accordion-item');
+        $el.find('.collapsible-item-title-link').addClass('accordion-item-title');
+        $el.find('.panel-collapse').addClass('accordion-item-content');
+      }
+
       $el.find('.accordion-item-content')
         .addClass('collapse')
         .data('toggle', false);

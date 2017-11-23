@@ -7463,6 +7463,9 @@ http://flickity.metafizzy.co
     font-size: 1.6rem;
     font-weight: 700;
     text-align: left; }
+    .component-opening-hours caption .other-hours-comment {
+      font-style: italic;
+      font-weight: normal; }
   .component-opening-hours table {
     width: auto; }
     .component-opening-hours table p {
