@@ -116,7 +116,7 @@ Paris.config = {
         "values": [
           {
             "id": "all",
-            "label": "Sans préférence"
+            "label": "Sans handicap"
           },
           {
             "id": "accessible aux personnes à mobilité réduite",
