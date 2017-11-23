@@ -1802,7 +1802,11 @@ templatizer["opening-hours"]["opening-hours"] = function tmpl_opening_hours_open
                             var item = $$obj[$index];
                             buf.push("<table" + jade.attr("summary", item.summary, true, false) + ">");
                             if (item.caption) {
-                                buf.push("<caption>" + jade.escape(null == (jade_interp = item.caption) ? "" : jade_interp) + "</caption>");
+                                buf.push("<caption>" + jade.escape(null == (jade_interp = item.caption) ? "" : jade_interp));
+                                if (item.comment) {
+                                    buf.push('<div class="other-hours-comment">' + jade.escape(null == (jade_interp = item.comment) ? "" : jade_interp) + "</div>");
+                                }
+                                buf.push("</caption>");
                             }
                             if (item.items) {
                                 (function() {
@@ -1831,7 +1835,11 @@ templatizer["opening-hours"]["opening-hours"] = function tmpl_opening_hours_open
                             var item = $$obj[$index];
                             buf.push("<table" + jade.attr("summary", item.summary, true, false) + ">");
                             if (item.caption) {
-                                buf.push("<caption>" + jade.escape(null == (jade_interp = item.caption) ? "" : jade_interp) + "</caption>");
+                                buf.push("<caption>" + jade.escape(null == (jade_interp = item.caption) ? "" : jade_interp));
+                                if (item.comment) {
+                                    buf.push('<div class="other-hours-comment">' + jade.escape(null == (jade_interp = item.comment) ? "" : jade_interp) + "</div>");
+                                }
+                                buf.push("</caption>");
                             }
                             if (item.items) {
                                 (function() {

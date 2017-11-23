@@ -112,7 +112,14 @@
     font-size: 1.6rem;
     font-weight: 700;
     text-align: left;
+
+    .other-hours-comment {
+      font-style: italic;
+      font-weight:normal;
+    }
   }
+
+
 
   table {
     width: auto;
