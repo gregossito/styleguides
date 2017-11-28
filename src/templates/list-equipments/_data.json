@@ -215,7 +215,8 @@
         },
         "block_search_results": {
           "title": "Résultats",
-          "modifiers": ["block-search-results"]
+          "modifiers": ["block-search-results"],
+          "title_id": "stats-container"
         },
         "block_favorites": {
           "title": "Mes favoris",

@@ -40,7 +40,8 @@ Paris.listEquipments = (function(){
         appId: Paris.config.algolia.id,
         apiKey: Paris.config.algolia.api_key,
         indexName: Paris.config.algolia.indexes[options.index],
-        searchParameters: options.searchParams
+        searchParameters: options.searchParams,
+        numberLocale: "fr"
       });
 
       // Search box widget
@@ -63,6 +64,17 @@ Paris.listEquipments = (function(){
         mainFacets: Paris.config.algolia.main_facets,
         mainFacetsIcons: Paris.config.algolia.main_facets_icon
       });
+
+      // Stats widget
+      search.addWidget(
+        instantsearch.widgets.stats({
+          container: '#stats-container',
+          templates: {
+            body: "{{#hasNoResults}}Aucun résultat{{/hasNoResults}}{{#hasOneResult}}Un résultat{{/hasOneResult}}{{#hasManyResults}}{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}} résultats{{/hasManyResults}}"
+          }
+        })
+      );
+
       // Search refinement list widget
       search.addWidget(refinementWidget);
 
