@@ -14,8 +14,7 @@ Paris.listEquipments = (function(){
 
   var defaultOptions = {
     // the Algolia index to use (should be defined in config.js)
-    // TODO: REMOVE DEV INDEX
-    index: 'dev_mes_lieux',
+    index: 'equipments',
     searchParams: {
       "attributesToRetrieve": "*"
     },
@@ -84,7 +83,7 @@ Paris.listEquipments = (function(){
           container: '#hits-container',
           templates: {
             empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '<br>' + Paris.templates['button']['button']({ text: 'Dézoomer', modifiers: ["secondary", "zoom-out-button"]}) + '</p>',
-            item: '<a href="#" class="card open cat-{{idcategories}} cat-{{icon}}" hitid="{{objectID}}" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address}}</span><br><span class="card-zipcode">{{zipCode}}</span> <span class="card-city">{{city}}</span></div><div class="card-hours {{#is_open}} open {{/is_open}} {{^is_open}} close {{/is_open}}" data-open="{{is_open}}">{{open_details}}</div><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div></a>'
+            item: '<a href="#" class="card open cat-{{idcategories}} cat-{{icon}}" hitid="{{objectID}}" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address_street}}</span><br><span class="card-zipcode">{{address_postcode}}</span> <span class="card-city">{{address_city}}</span></div><div class="card-hours {{#is_open}} open {{/is_open}} {{^is_open}} close {{/is_open}}" data-open="{{is_open}}">{{open_details}}</div><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div></a>'
           },
           cssClasses: {
             root: 'carousel',
@@ -168,9 +167,9 @@ Paris.listEquipments = (function(){
           var hit = {
             objectID: card.attr('hitid'),
             name: $(card).find('.card-title').html(),
-            address: $(card).find('.card-address').html(),
-            zipCode: $(card).find('.card-zipcode').html(),
-            city: $(card).find('.card-city').html(),
+            address_street: $(card).find('.card-address').html(),
+            address_postcode: $(card).find('.card-zipcode').html(),
+            address_city: $(card).find('.card-city').html(),
             open_details: $(card).find('.card-hours').html(),
             is_open: $(card).find('.card-hours').attr('data-open') == 'true'
           };
@@ -396,7 +395,7 @@ Paris.listEquipments = (function(){
       var is_open = hit.is_open ? 'open' : 'close';
       content += '<div class="card-content" hitid="'+hit.objectID+'">';
       content += '<h3 class="card-title">'+hit.name+'</h3>';
-      content += '<div class="card-text"><span class="card-address">'+hit.address+'</span><br><span class="card-zipcode">'+hit.zipCode+'</span> <span class="card-city">'+hit.city+'</span><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div>';
+      content += '<div class="card-text"><span class="card-address">'+hit.address_street+'</span><br><span class="card-zipcode">'+hit.address_postcode+'</span> <span class="card-city">'+hit.address_city+'</span><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div>';
       content += '<div class="card-hours '+ is_open +'">'+hit.open_details+'</div>';
       content += '<div class="buttons">';
       content += Paris.templates['button']['button']({
