@@ -83,7 +83,7 @@ Paris.listEquipments = (function(){
           container: '#hits-container',
           templates: {
             empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '<br>' + Paris.templates['button']['button']({ text: 'Dézoomer', modifiers: ["secondary", "zoom-out-button"]}) + '</p>',
-            item: '<a href="#" class="card open cat-{{idcategories}} cat-{{icon}}" hitid="{{objectID}}" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address_street}}</span><br><span class="card-zipcode">{{address_postcode}}</span> <span class="card-city">{{address_city}}</span></div><div class="card-hours {{#is_open}} open {{/is_open}} {{^is_open}} close {{/is_open}}" data-open="{{is_open}}">{{open_details}}</div><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div></a>'
+            item: '<a href="{{url}}" class="card open cat-{{idcategories}} cat-{{icon}}" hitid="{{objectID}}" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div style="background-image: url()" class="card-image {{^img}} no-img {{/img}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address_street}}</span><br><span class="card-zipcode">{{address_postcode}}</span> <span class="card-city">{{address_city}}</span></div><div class="card-hours {{#is_open}} open {{/is_open}} {{^is_open}} close {{/is_open}}" data-open="{{is_open}}">{{open_details}}</div><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div></a>'
           },
           cssClasses: {
             root: 'carousel',
@@ -397,8 +397,9 @@ Paris.listEquipments = (function(){
       content += '<h3 class="card-title">'+hit.name+'</h3>';
       content += '<div class="card-text"><span class="card-address">'+hit.address_street+'</span><br><span class="card-zipcode">'+hit.address_postcode+'</span> <span class="card-city">'+hit.address_city+'</span><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div>';
       content += '<div class="card-hours '+ is_open +'">'+hit.open_details+'</div>';
-      content += '<div class="buttons">';
+      content += '<div class="card-buttons">';
       content += Paris.templates['button']['button']({
+        href: hit.url,
         text: Paris.i18n.t('list_equipments/button_view'),
         modifiers: ["secondary", "small"]
       });

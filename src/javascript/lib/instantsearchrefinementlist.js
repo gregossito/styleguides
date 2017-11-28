@@ -37,16 +37,20 @@ var linkedFacets = [];
 // instantsearch.js custom widget with plain JavaScript
 // First, we add ourselves to the instantsearch.widgets namespace
 Paris.instantsearch.widgets.newrefinementList = function refinementList(options) {
-  
+
   return {
     getConfiguration: function(configuration) {
       if (options.operator === 'and') {
         widgetConfiguration = {
-          'facets': [options.attributeName, 'sections', 'pool_length', 'accessibility', 'is_open']
+          // TODO: re-enable all facets
+          // 'facets': [options.attributeName, 'sections', 'pool_length', 'accessibility', 'is_open']
+          'facets': [options.attributeName, 'accessibility', 'is_open']
         };
       } else {
         widgetConfiguration = {
-          'disjunctiveFacets': [options.attributeName, 'sections', 'pool_length', 'accessibility', 'is_open']
+          // TODO: re-enable all facets
+          // 'disjunctiveFacets': [options.attributeName, 'sections', 'pool_length', 'accessibility', 'is_open']
+          'disjunctiveFacets': [options.attributeName, 'accessibility', 'is_open']
         };
       }
 
@@ -492,7 +496,7 @@ function renderSelectedFacetFilters() {
   content += '<div class="popup-content">';
   content += '<div class="filters-buttons"></div>';
   // Add popup buttons
-  content += '<div class="buttons">';
+  content += '<div class="popup-buttons">';
   content += Paris.templates['button']['button']({
     text: Paris.i18n.t('list_equipments/cancel'),
     modifiers: ["discard", "action"]

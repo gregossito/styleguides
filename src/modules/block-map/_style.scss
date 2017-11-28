@@ -51,6 +51,7 @@
 .mapboxgl-popup {
 
 	.mapboxgl-popup-content {
+    max-width: 50rem;
 
 		.card-content {
 			padding: 10px;
@@ -86,6 +87,10 @@
 					color: $orange1;
 				}
 			}
+
+      .card-buttons {
+        margin-top: 10px;
+      }
 
 		}
 	}
