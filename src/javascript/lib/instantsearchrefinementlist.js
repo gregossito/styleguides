@@ -363,7 +363,7 @@ function renderEquipmentsFacetFilters() {
       text: facet,
       modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton'],
       attributes: {
-        'data-facet': 'categories',
+        'data-facet': 'category_names',
         'data-value': facet,
         'data-label': facet,
       }
@@ -376,8 +376,8 @@ function renderEquipmentsFacetFilters() {
     }
     // Check if the main facet is one of the selected values
     $.each(selectedFacets, function(i, el) {
-      if (el.facet == 'categories' && el.value == facet) {
-        data.modifiers.push('active'); 
+      if (el.facet == 'category_names' && el.value == facet) {
+        data.modifiers.push('active');
       }
     });
     content += Paris.templates['button']['button'](data);
@@ -388,8 +388,8 @@ function renderEquipmentsFacetFilters() {
 
     // Check if some selected values are not main filters.
     $.each(selectedFacets, function(i, facetFilter) {
-      // If a selected value is not already a rendered main facets and of type categories, append a new filter button
-      if ($.inArray(facetFilter.value, settings.mainFacets) < 0 && facetFilter.facet == 'categories') {
+      // If a selected value is not already a rendered main facets and of type category_names, append a new filter button
+      if ($.inArray(facetFilter.value, settings.mainFacets) < 0 && facetFilter.facet == 'category_names') {
         var data = {
           text: facetFilter.label,
           modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton', 'active'],
@@ -467,7 +467,7 @@ function renderSelectedFacetFilters() {
   var content = '';
   var buttonsHTML = '';
   content += '<div class="selected-filters-buttons-container">';
-  // Add categories
+  // Add category_names
   $.each(selectedFacets, function(i, facetFilter) {
     var data = {
       text: facetFilter.label,
@@ -589,11 +589,11 @@ function renderPopup() {
     var checked = '';
     // Check if the facet is one of the selected values
     $.each(selectedFacets, function(i, el) {
-      if (el.facet == 'categories' && el.value == facet) {
+      if (el.facet == 'category_names' && el.value == facet) {
         checked = 'checked="checked"';
       }
     });
-    content += '<label><input type="checkbox" name="categories[]" value="' + facet + '" ' + checked + ' data-facet="categories" data-value="'+facet+'" data-label="'+facet+'"><span class="label-bg"></span><span class="label-txt">' + facet + '</span></label>';
+    content += '<label><input type="checkbox" name="category_names[]" value="' + facet + '" ' + checked + ' data-facet="category_names" data-value="'+facet+'" data-label="'+facet+'"><span class="label-bg"></span><span class="label-txt">' + facet + '</span></label>';
   });
   content += '</div>';
 

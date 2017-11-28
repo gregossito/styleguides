@@ -29,13 +29,13 @@ Paris.listEquipments = (function(){
         options = $.extend({}, defaultOptions, userOptions),
         placeQuery = '',
         api = {},
-        search;
+        mainSearch;
 
     function init() {
       initOptions();
 
       // Init instantsearch
-      var search = instantsearch({
+      mainSearch = instantsearch({
         appId: Paris.config.algolia.id,
         apiKey: Paris.config.algolia.api_key,
         indexName: Paris.config.algolia.indexes[options.index],
@@ -44,7 +44,7 @@ Paris.listEquipments = (function(){
       });
 
       // Search box widget
-      search.addWidget(
+      mainSearch.addWidget(
         instantsearch.widgets.searchBox({
           container: '.block-search-field .search-field-input',
           searchOnEnterKeyPressOnly: true
@@ -65,7 +65,7 @@ Paris.listEquipments = (function(){
       });
 
       // Stats widget
-      search.addWidget(
+      mainSearch.addWidget(
         instantsearch.widgets.stats({
           container: '#stats-container',
           templates: {
@@ -75,10 +75,10 @@ Paris.listEquipments = (function(){
       );
 
       // Search refinement list widget
-      search.addWidget(refinementWidget);
+      mainSearch.addWidget(refinementWidget);
 
       // Search results widget
-      search.addWidget(
+      mainSearch.addWidget(
         instantsearch.widgets.hits({
           container: '#hits-container',
           templates: {
@@ -132,7 +132,7 @@ Paris.listEquipments = (function(){
       });
 
       // Search map widget
-      search.addWidget(mapboxWidget);
+      mainSearch.addWidget(mapboxWidget);
 
       // [mobile] On search input focus, add searching class
       $('form').on('focus', '.search-field-input', function(event) {
@@ -155,7 +155,7 @@ Paris.listEquipments = (function(){
 
       // Form submit button will reload the page. Instantsearch has not yet make it fully compatible with forms. So manually handle the submit action by triggering search
       $('form.search-field').on('click', '.search-field-submit', function(event) {
-        search.helper.search();
+        mainSearch.helper.search();
       });
 
       // Center map and open pin on list result click
@@ -221,15 +221,15 @@ Paris.listEquipments = (function(){
 
       var equipementDataset = {
         source: function(query, callback) {
-          var categories = [];
-          if (search.helper.state.disjunctiveFacetsRefinements && search.helper.state.disjunctiveFacetsRefinements.categories) {
-            $.each(search.helper.state.disjunctiveFacetsRefinements.categories, function(index, category) {
-               categories.push('categories:' + category);
+          var category_names = [];
+          if (mainSearch.helper.state.disjunctiveFacetsRefinements && mainSearch.helper.state.disjunctiveFacetsRefinements.category_names) {
+            $.each(mainSearch.helper.state.disjunctiveFacetsRefinements.category_names, function(index, category) {
+               category_names.push('category_names:' + category);
             });
           }
           index.search(query, {
             hitsPerPage: 8,
-            facetFilters: ((categories && categories.length > 0) ? [categories] : '*'),
+            facetFilters: ((category_names && category_names.length > 0) ? [category_names] : '*'),
             attributesToRetrieve: "*"
           }).then(function(answer) {
             callback(answer.hits);
@@ -265,7 +265,7 @@ Paris.listEquipments = (function(){
       ]).on('autocomplete:selected', function(event, suggestion, dataset) {
         if (dataset == 'places') {
           placeQuery = suggestion.value;
-          search.helper.setQuery(suggestion.value);
+          mainSearch.helper.setQuery(suggestion.value);
           setTimeout(function() {
             // Timeout fix a bug on android with keyboard toggle
             mapboxWidget.flyTo([suggestion.latlng.lng, suggestion.latlng.lat]);
@@ -273,18 +273,18 @@ Paris.listEquipments = (function(){
           $('.layout-content-list').removeClass('searching');
         } else {
           placeQuery = '';
-          search.helper.setQuery(suggestion.name);
-          search.helper.search();
+          mainSearch.helper.setQuery(suggestion.name);
+          mainSearch.helper.search();
           var content = renderMapPopupContent(suggestion);
           mapboxWidget.openHit(content, [suggestion._geoloc.lng, suggestion._geoloc.lat], suggestion.objectID);
         }
         $(this).blur();
       });
 
-      search.start();
+      mainSearch.start();
 
       // Use change event to detect facets reseting action
-      search.helper.on('change', function(state, lastResults) {
+      mainSearch.helper.on('change', function(state, lastResults) {
         var query = state.query
         if (query && placeQuery.indexOf(query) >= 0) {
           state.query = '';
@@ -292,7 +292,7 @@ Paris.listEquipments = (function(){
       });
 
       // On search
-      search.helper.on('search', function(state, lastResults) {
+      mainSearch.helper.on('search', function(state, lastResults) {
         // Remove inactive card
         $('#hits-container .card').removeClass('inactive');
         // Carousel doest not support dom changes so it conflicts with instantsearch. Destroy before hits gets refresh
@@ -305,7 +305,7 @@ Paris.listEquipments = (function(){
       });
 
       // On search result
-      search.helper.on('result', function(results, state) {
+      mainSearch.helper.on('result', function(results, state) {
 
         if ($('.layout-content-list').hasClass('searching')) {
           // This allow to display filters when we click on around me button
