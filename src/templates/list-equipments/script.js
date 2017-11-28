@@ -29,16 +29,30 @@ Paris.listEquipments = (function(){
         options = $.extend({}, defaultOptions, userOptions),
         placeQuery = '',
         api = {},
-        mainSearch;
+        mainSearch,
+        mapSearch;
 
     function init() {
       initOptions();
 
       // Init instantsearch
+      mapSearch = instantsearch({
+        appId: Paris.config.algolia.id,
+        apiKey: Paris.config.algolia.api_key,
+        indexName: Paris.config.algolia.indexes[options.index]
+      });
+
       mainSearch = instantsearch({
         appId: Paris.config.algolia.id,
         apiKey: Paris.config.algolia.api_key,
         indexName: Paris.config.algolia.indexes[options.index],
+        searchFunction: function(helper) {
+          var mainState = mainSearch.helper.getState();
+          mainState.hitsPerPage = 1000; // force display of 1k hits
+          mapSearch.helper.setState(mainState);
+          mapSearch.helper.search();
+          helper.search();
+        },
         searchParameters: options.searchParams,
         numberLocale: "fr"
       });
@@ -132,7 +146,7 @@ Paris.listEquipments = (function(){
       });
 
       // Search map widget
-      mainSearch.addWidget(mapboxWidget);
+      mapSearch.addWidget(mapboxWidget);
 
       // [mobile] On search input focus, add searching class
       $('form').on('focus', '.search-field-input', function(event) {
@@ -281,6 +295,7 @@ Paris.listEquipments = (function(){
         $(this).blur();
       });
 
+      mapSearch.start();
       mainSearch.start();
 
       // Use change event to detect facets reseting action
