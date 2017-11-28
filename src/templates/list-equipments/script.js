@@ -56,7 +56,7 @@ Paris.listEquipments = (function(){
         selectedFiltersContainer: '.block-search-filters-mobile',
         resetFiltersButtonContainer: '.block-search-filters .block-search-top-link',
         filtersPopupContainer: '.layout-content-filters-popup',
-        attributeName: 'categories',
+        attributeName: 'category_names',
         operator: 'or',
         sortBy: ['name:asc', 'count:desc'],
         numberOfFacets: 200,
