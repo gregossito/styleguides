@@ -426,7 +426,7 @@ function renderMap(geoJSON, sourceID) {
 
 
   geoJSON.features.forEach(function(feature) {
-    var symbol = feature.properties.icon;
+    var symbol = feature.properties.icon || "nef";
     var state = feature.properties.is_open ? "open" : "close";
     var layerID = 'ico-' + symbol + '-' + state;
 
