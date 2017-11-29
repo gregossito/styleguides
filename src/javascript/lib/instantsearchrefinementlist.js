@@ -495,15 +495,16 @@ function renderSelectedFacetFilters() {
   content += '<div class="popup-background"></div>';
   content += '<div class="popup-content">';
   content += '<div class="filters-buttons"></div>';
+
   // Add popup buttons
   content += '<div class="popup-buttons">';
   content += Paris.templates['button']['button']({
     text: Paris.i18n.t('list_equipments/cancel'),
-    modifiers: ["discard", "action"]
+    modifiers: ["discard", "action", "js-discard"]
   });
   content += Paris.templates['button']['button']({
     text: Paris.i18n.t('list_equipments/confirm'),
-    modifiers: ["secondary", "action"]
+    modifiers: ["secondary", "action", "js-confirm"]
   });
   content += '</div>';
   content += '</div>';
@@ -601,11 +602,11 @@ function renderPopup() {
   content += '<div class="buttons">';
   content += Paris.templates['button']['button']({
     text: Paris.i18n.t('list_equipments/cancel'),
-    modifiers: ["discard", "action"]
+    modifiers: ["discard", "action", "js-discard"]
   });
   content += Paris.templates['button']['button']({
     text: Paris.i18n.t('list_equipments/confirm'),
-    modifiers: ["secondary", "action"]
+    modifiers: ["secondary", "action", "js-confirm"]
   });
   content += '</div>';
 
@@ -649,12 +650,12 @@ function initSearchFiltersPopupEvents() {
   });
 
   // Discard popup
-  $(settings.filtersPopupContainer).on('click', '.discard', function(event) {
+  $(settings.filtersPopupContainer).on('click', '.js-discard', function(event) {
     $(settings.filtersPopupContainer).fadeOut();
   });
 
   // Confirm popup
-  $(settings.filtersPopupContainer).on('click', '.confirm', function(event) {
+  $(settings.filtersPopupContainer).on('click', '.js-confirm', function(event) {
 
     // To ease treatment reset everything upon applying filters
     resetFacets();
@@ -728,16 +729,16 @@ function initSelectedFiltersPopupEvents() {
   });
 
   // Discard popup
-  $(settings.selectedFiltersContainer).on('click', '.discard', function(event) {
+  $(settings.selectedFiltersContainer).on('click', '.js-discard', function(event) {
     // Close popup
     closeSelectedFiltersPopup();
   });
 
   // Confirm popup
   // UI click when apply and closing popup showing all selected facet filters (mobile only)
-  $(settings.selectedFiltersContainer).on('click', '.confirm', function(event) {
+  $(settings.selectedFiltersContainer).on('click', '.js-confirm', function(event) {
     var selectedFacetFilters = getSelectedValues($(settings.selectedFiltersContainer + ' .selected-facets-popup .filterButton.active'));
-    
+
     // To ease treatment reset everything upon applying filters
     resetFacets();
 

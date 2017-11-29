@@ -39,7 +39,19 @@ Paris.listEquipments = (function(){
       mapSearch = instantsearch({
         appId: Paris.config.algolia.id,
         apiKey: Paris.config.algolia.api_key,
-        indexName: Paris.config.algolia.indexes[options.index]
+        indexName: Paris.config.algolia.indexes[options.index],
+        // searchFunction: function(helper) {
+        //   var mapState = mapSearch.helper.getState();
+        //   if (mapState.insideBoundingBox) {
+        //     console.log(mapState.insideBoundingBox);
+        //     // mainSearch.helper.insideBoundingBox = mapState.insideBoundingBox;
+        //     // mainSearch.helper.search();
+        //   }
+        //   helper.search();
+        // },
+        searchParameters: {
+          hitsPerPage: 1000 // set it for the first search
+        }
       });
 
       mainSearch = instantsearch({
