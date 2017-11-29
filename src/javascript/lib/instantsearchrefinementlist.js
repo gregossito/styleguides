@@ -399,16 +399,15 @@ function renderEquipmentsFacetFilters() {
             'data-label': facetFilter.label
           }
         };
-        content += Paris.templates['button']['button'](data); 
+        content += Paris.templates['button']['button'](data);
       }
     });
 
-    // At the end append a more button
-    var data = {
-      text: Paris.i18n.t('list_equipments/more_filters'),
-      modifiers: ["secondary", "small", "more-filters-button"]
-    };
-    content += Paris.templates['button']['button'](data);
+    // At the end append a more button if it doesn't already exist
+    if ($container.next('.js-more-filters-button').length == 0) {
+      var button = '<button class="block-search-filters-more js-more-filters-button">' + Paris.i18n.t('list_equipments/more_filters') + '</button>';
+      $container.after(button);
+    }
   }
 
   $container.html(content);
@@ -481,13 +480,6 @@ function renderSelectedFacetFilters() {
     buttonsHTML += Paris.templates['button']['button'](data);
   });
   content += buttonsHTML;
-
-  // Add a more filters button
-  var data = {
-    text: Paris.i18n.t('list_equipments/more_filters'),
-    modifiers: ["secondary", "small", "more-filters-button"]
-  };
-  content += Paris.templates['button']['button'](data);
   content += '</div>';
 
   // Render popup
@@ -534,7 +526,7 @@ function selectedFacetsMoreButtonDisplay() {
   var maxWidth = $selectedFiltersContainer.width();
   var btnLeft = $selectedFiltersContainer.find('.selected-filters-buttons-container button.filterButton').length;
 
-  $selectedFiltersContainer.find('.selected-filters-buttons-container button.more-filters-button').hide();
+  $selectedFiltersContainer.find('.selected-filters-buttons-container button.js-more-filters-button').hide();
 
   setTimeout(function() {
     $selectedFiltersContainer.find('.selected-filters-buttons-container button.filterButton').each(function(i) {
@@ -543,17 +535,17 @@ function selectedFacetsMoreButtonDisplay() {
 
       // Set more filters button
       if (btnLeft > 1 ) {
-        $selectedFiltersContainer.find('.selected-filters-buttons-container button.more-filters-button').html(Paris.i18n.t("list_equipments/more_filters_nb", [btnLeft - 1])); 
-        $selectedFiltersContainer.find('.selected-filters-buttons-container button.more-filters-button').show();
-        moreButtonWidth = $selectedFiltersContainer.find('.selected-filters-buttons-container button.more-filters-button').width() + 20;
+        $selectedFiltersContainer.find('.selected-filters-buttons-container button.js-more-filters-button').html(Paris.i18n.t("list_equipments/more_filters_nb", [btnLeft - 1]));
+        $selectedFiltersContainer.find('.selected-filters-buttons-container button.js-more-filters-button').show();
+        moreButtonWidth = $selectedFiltersContainer.find('.selected-filters-buttons-container button.js-more-filters-button').width() + 20;
       } else if (totalWidth < maxWidth) {
-        $selectedFiltersContainer.find('.selected-filters-buttons-container button.more-filters-button').hide();
+        $selectedFiltersContainer.find('.selected-filters-buttons-container button.js-more-filters-button').hide();
         moreButtonWidth = 0;
       }
 
       if (totalWidth + moreButtonWidth > maxWidth) {
         $(this).addClass('hidden');
-        $selectedFiltersContainer.find('.selected-filters-buttons-container button.more-filters-button').html(Paris.i18n.t("list_equipments/more_filters_nb", [btnLeft])); 
+        $selectedFiltersContainer.find('.selected-filters-buttons-container button.js-more-filters-button').html(Paris.i18n.t("list_equipments/more_filters_nb", [btnLeft]));
         totalWidth += moreButtonWidth;
         return;
       } else {
@@ -622,7 +614,7 @@ function renderPopup() {
 
 
 function initView() {
-  $(settings.container).html('<div id="' + equipementFacetsWrapperID + '"></div><div id="' + secondaryFacetsWrapperID + '"></div>');
+  $(settings.container).html('<div class="block-search-filters-items" id="' + equipementFacetsWrapperID + '"></div><div id="' + secondaryFacetsWrapperID + '"></div>');
   $(settings.filtersPopupContainer).html(popupHTML);
 
   // Render facets filters
@@ -633,8 +625,8 @@ function initView() {
 // Init search filters popup events
 function initSearchFiltersPopupEvents() {
   // Open popup event
-  $(settings.container).on('click', '.more-filters-button', function(event) {
-    
+  $(settings.container).on('click', '.js-more-filters-button', function(event) {
+
     // Render popup with selected values
     renderPopup();
     // Show popup
@@ -717,8 +709,8 @@ function initSearchFiltersPopupEvents() {
 // Init selected filters popup events
 function initSelectedFiltersPopupEvents() {
   // Open popup event
-  $(settings.selectedFiltersContainer).on('click', '.more-filters-button', function(event) {
-    
+  $(settings.selectedFiltersContainer).on('click', '.js-more-filters-button', function(event) {
+
     // Set popup content
     var $button = $selectedFiltersContainer.find('.selected-filters-buttons-container button.filterButton').clone();
     $(settings.selectedFiltersContainer).find('.list-equipment-popup .filters-buttons').html($button);

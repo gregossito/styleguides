@@ -52,9 +52,10 @@
 .block-search-top-link a div,
 .block-search-bottom-links a {
   color: $gray33;
-  font-size: 14px;
+  font-size: 13px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $color-primary;
   }
 }
@@ -124,7 +125,7 @@
           padding: 10px;
           background-color: $white;
           text-align: center;
-          
+
           button.flickity-prev-next-button {
             display: none;
           }

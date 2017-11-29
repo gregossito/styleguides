@@ -2,8 +2,8 @@
 
   .block-search-content {
     .button {
-      margin-bottom: 10px;
-      margin-right: 10px;
+      margin-bottom: 5px;
+      margin-right: 5px;
     }
 
     .around-me-button {
@@ -12,14 +12,40 @@
       width: 100%;
     }
 
-    .more-filters-button {
-        display: inline-block;
+    .block-search-filters-more {
+      background: none;
+      border: 0;
+      color: $color-secondary;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 13px;
+      padding: 5px 0;
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        color: $color-primary;
+      }
     }
 
     .apply-filters-button {
-        display: none;
-        margin-top: 15px;
-        width: 100%;
+      display: none;
+      margin-top: 15px;
+      width: 100%;
+    }
+  }
+
+  .block-search-filters-items {
+    background-color: $white;
+    border-radius: 5px;
+    padding: 10px 10px 5px;
+
+    .button.white {
+      background-color: $grayF2;
+    }
+
+    & + button {
+      margin-top: 10px;
     }
   }
 

@@ -7,20 +7,19 @@ mixin block-search-filters(data)
   - data.modifiers = data.modifiers || []
   - data.modifiers.push("block-search-filters")
   +block-search(data)
-    if data.aroundMeButton
-      - data.aroundMeButton.modifiers = ["secondary", "around-me-button"]
-      +button(data.aroundMeButton)
-    if data.filter_items && data.filter_items.length
-      each item in data.filter_items
-        - item.modifiers = ["white", "small"]
-        +button(item)
-      if data.more
-        .more-filters-button
-          - data.more.modifiers = ["secondary", "small"]
-          +button(data.more)
-    if data.aroundMeButton
-      - data.applyFiltersButton.modifiers = ["apply-filters-button"]
-      +button(data.applyFiltersButton)
+    .block-search-filters-items
+      if data.aroundMeButton
+        - data.aroundMeButton.modifiers = ["secondary", "around-me-button"]
+        +button(data.aroundMeButton)
+      if data.filter_items && data.filter_items.length
+        each item in data.filter_items
+          - item.modifiers = ["white", "small"]
+          +button(item)
+      if data.aroundMeButton
+        - data.applyFiltersButton.modifiers = ["apply-filters-button"]
+        +button(data.applyFiltersButton)
+    if data.more
+      button.block-search-filters-more.js-more-filters-button= data.more.text
 
   .block-search-filters-mobile
     +block-search-filters-mobile(data)
