@@ -73,6 +73,30 @@
     }
   }
 
+  &.closable {
+    &.small {
+      padding-right: 32px;
+    }
+
+    &:before {
+      @include icon-font;
+      content: map-get($icons, "close");
+      font-size: 30px;
+      display: block;
+      position: absolute;
+      right: 3px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:hover,
+    &:focus {
+      &:before {
+        opacity: 0.5;
+      }
+    }
+  }
+
   &.stateful {
     background-color: $color-tertiary;
     color: $color-secondary;

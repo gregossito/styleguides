@@ -361,7 +361,7 @@ function renderEquipmentsFacetFilters() {
   $.each(settings.mainFacets, function(i, facet) {
     var data = {
       text: facet,
-      modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton'],
+      modifiers: ['closable', 'white', 'small', 'icon', 'filterButton'],
       attributes: {
         'data-facet': 'category_names',
         'data-value': facet,
@@ -392,7 +392,7 @@ function renderEquipmentsFacetFilters() {
       if ($.inArray(facetFilter.value, settings.mainFacets) < 0 && facetFilter.facet == 'category_names') {
         var data = {
           text: facetFilter.label,
-          modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton', 'active'],
+          modifiers: ['closable', 'white', 'small', 'icon', 'filterButton', 'active'],
           attributes: {
             'data-facet': facetFilter.facet,
             'data-value': facetFilter.value,
@@ -470,7 +470,7 @@ function renderSelectedFacetFilters() {
   $.each(selectedFacets, function(i, facetFilter) {
     var data = {
       text: facetFilter.label,
-      modifiers: ['stateful', 'white', 'small', 'icon', 'filterButton', 'active'],
+      modifiers: ['closable', 'white', 'small', 'icon', 'filterButton', 'active'],
       attributes: {
         'data-facet': facetFilter.facet,
         'data-value': facetFilter.value,

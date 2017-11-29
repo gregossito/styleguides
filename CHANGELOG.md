@@ -13,6 +13,8 @@ Let's take the `x.β.α` version number:
 * module `block-search` added
 * module `block-search-field` added
 * module `block-search-filters` added
+* module `button`:
+  * added closable button
 * module `card` added
 * module `search-field`: new modifier `block`
 * layout `list-map` added

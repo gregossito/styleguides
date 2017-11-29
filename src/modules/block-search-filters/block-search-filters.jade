@@ -13,7 +13,7 @@ mixin block-search-filters(data)
         +button(data.aroundMeButton)
       if data.filter_items && data.filter_items.length
         each item in data.filter_items
-          - item.modifiers = ["white", "small"]
+          - item.modifiers = ["closable", "white", "small"]
           +button(item)
       if data.aroundMeButton
         - data.applyFiltersButton.modifiers = ["apply-filters-button"]
