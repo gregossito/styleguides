@@ -15,22 +15,14 @@ Paris.config = {
       "equipments": "Service_production",
       "dev_mes_lieux": "dev_MesLieux",
     },
-    "main_facets": ["Bibliothèques municipales de prêt et spécialisées", "Mairies d'arrondissement", "Principaux parcs, jardins et squares", "Piscines municipales", "Tennis"],
+    "main_facets": ["Bibliothèques", "Mairies d'arrondissement", "Principaux parcs, jardins et squares", "Piscines", "Tennis"],
     "main_facets_icon": [
       {
-        facet: "Piscines municipales",
+        facet: "Piscines",
         icon: "swimming-pool"
       },
       {
-        facet: "Piscines concédées",
-        icon: "swimming-pool"
-      },
-      {
-        facet: "Bibliothèques municipales de prêt et spécialisées",
-        icon: "library"
-      },
-      {
-        facet: "Bibliothèques municipales spécialisées",
+        facet: "Bibliothèques",
         icon: "library"
       },
       {
