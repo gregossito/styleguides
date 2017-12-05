@@ -134,7 +134,7 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
 //////////////////////////
 
 // This function toggles a facet for Algolia and store the value in selectedFacets
-function toggletFacet(facetFilter, active = null) {
+function toggletFacet(facetFilter, active) {
   if (active === true) {
     helper.addDisjunctiveFacetRefinement(facetFilter.facet, facetFilter.value);
   } else if (active === false) {
