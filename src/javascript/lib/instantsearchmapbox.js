@@ -426,13 +426,20 @@ function renderMap(geoJSON, sourceID) {
 
 
   geoJSON.features.forEach(function(feature) {
+    var state = "unknown";
     var symbol = feature.properties.icon || "nef";
-    var state = feature.properties.is_open ? "open" : "close";
+    if (feature.properties.is_open === true) {
+      state = "open";
+    } else if (feature.properties.is_open === false) {
+      state = "closed";
+    }
     var layerID = 'ico-' + symbol + '-' + state;
 
     // Add a layer for this symbol type if it hasn't been added already.
     if (!map.getLayer(layerID)) {
       // Add layer for unclestered points
+      var is_open = feature.properties.is_open;
+      if (is_open === null) {is_open = "unknown";}
       map.addLayer({
         id: layerID,
         type: 'symbol',
@@ -443,7 +450,7 @@ function renderMap(geoJSON, sourceID) {
         filter: [
           "all",
           ["==", "icon", symbol],
-          ["==", "is_open", feature.properties.is_open]
+          ["==", "is_open", is_open]
         ]
       });
       layersID.push(layerID);

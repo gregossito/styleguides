@@ -191,13 +191,20 @@
 }
 
 .card-image {
-  border-radius: 5px;
   background: center center no-repeat;
+  background-color: $gray99;
   background-size: cover;
+  border-radius: 5px;
   height: 120px;
-  background-color: $green1;
   overflow: hidden;
   position: relative;
+
+  .is-open-true & {
+    background-color: $green1;
+  }
+  .is-open-false & {
+    background-color: $color-primary-variant;
+  }
 
   &.no-img {
 
