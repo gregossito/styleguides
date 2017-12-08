@@ -25,13 +25,17 @@
 	}
 }
 
+.map-caption,
 .map-refresh {
-	position: absolute;
-	top: 15px;
-	left: 15px;
-	padding: 10px;
 	background-color: $white;
 	border-radius: 2px;
+	left: 15px;
+	position: absolute;
+}
+
+.map-refresh {
+  padding: 10px;
+	top: 15px;
 	max-width: calc(100% - 65px);
 
 	label {
@@ -46,6 +50,32 @@
 			margin-right: 5px;
 		}
 	}
+}
+
+.map-caption {
+  align-items: center;
+  bottom: 25px;
+  font-size: 1.3rem;
+  display: flex;
+	padding: 1rem 2rem;
+
+  &-icon {
+    display: inline-block;
+    background: url('../modules/block-map/ico-nef-unknown.svg') center center no-repeat;
+    height: 5.5rem;
+    margin: 0 1.5rem 0 3rem;
+    width: 4.9rem;
+
+    &:first-child {margin-left: 0;}
+
+    // modifiers
+    &.is-open {
+      background-image: url('../modules/block-map/ico-nef-open.svg');
+    }
+    &.is-closed {
+      background-image: url('../modules/block-map/ico-nef-closed.svg');
+    }
+  }
 }
 
 .mapboxgl-popup {
