@@ -127,7 +127,7 @@
 }
 
 @include small {
-
+  .map-caption,
   .mapboxgl-popup {
   	display: none !important;
   }

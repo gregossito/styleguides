@@ -3,6 +3,10 @@
 .search-field {
   clear: both;
 
+  .ais-search-box {
+    max-width: none;
+  }
+
   // modifiers
   &.block {
     .search-field-input[type="text"],

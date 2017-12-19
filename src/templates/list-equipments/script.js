@@ -108,6 +108,7 @@ Paris.listEquipments = (function(){
       mainSearch.addWidget(
         instantsearch.widgets.toggle({
           attributeName: 'is_open',
+          autoHideContainer: false,
           container: '#js-facet-open',
           label: 'Ouvert maintenant',
           values: {
@@ -115,9 +116,7 @@ Paris.listEquipments = (function(){
           },
           templates: {
             header: 'Ouverture',
-            item: `<label class="{{cssClasses.label}}">
-  <input type="checkbox" class="{{cssClasses.checkbox}}" value="{{name}}" {{#isRefined}}checked{{/isRefined}} />{{name}}
-</label>`
+            item: '<label class="{{cssClasses.label}}"><input type="checkbox" class="{{cssClasses.checkbox}}" value="{{name}}" {{#isRefined}}checked{{/isRefined}} />{{name}}</label>'
           }
         })
       );
@@ -126,7 +125,6 @@ Paris.listEquipments = (function(){
       mainSearch.addWidget(
         instantsearch.widgets.menuSelect({
           attributeName: 'accessibility',
-          autoHideContainer: false,
           container: '#js-facet-accessibility',
           templates: {
             header: "Accessibilité",
