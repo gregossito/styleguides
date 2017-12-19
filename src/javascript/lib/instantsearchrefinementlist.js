@@ -57,12 +57,7 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
       settings = options;
 
       // Set initial main facets
-      $.each(settings.mainFacets, function(i, facet) {
-        helper.addDisjunctiveFacetRefinement(options.attributeName, facet);
-
-        // Add them to the selectedFacets
-        selectedFacets.push({facet: options.attributeName, label: facet, value: facet});
-      });
+      setInitialMainFacets();
 
       // Bind filter events
       $(options.container).on('click', '.filterButton', onClickFilterButton.bind(this));
@@ -146,6 +141,15 @@ function toggletFacet(facetFilter, active) {
   } else {
     selectedFacets.push(facetFilter);
   }
+}
+
+function setInitialMainFacets() {
+  $.each(settings.mainFacets, function(i, facet) {
+    helper.addDisjunctiveFacetRefinement(settings.attributeName, facet);
+
+    // Add them to the selectedFacets
+    selectedFacets.push({facet: settings.attributeName, label: facet, value: facet});
+  });
 }
 
 function resetFacets() {
