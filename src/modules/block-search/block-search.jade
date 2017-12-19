@@ -11,7 +11,3 @@ mixin block-search(data)
         block
       else if data.block
         != data.block
-    if data.bottom_links && data.bottom_links.length
-      ul.block-search-bottom-links
-        each link in data.bottom_links
-          li.block-search-bottom-links-item: a(href=link.href target=link.target title=link.title)= link.text

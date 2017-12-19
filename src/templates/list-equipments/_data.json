@@ -103,12 +103,6 @@
             "gray-background"
           ],
           "title": "Rechercher",
-          "bottom_links": [
-            {
-              "href": "#",
-              "text": "Mes favoris"
-            }
-          ],
           "search_field": {
             "action": "#",
             "modifiers": ["block"],
@@ -182,14 +176,6 @@
           "title": "Résultats",
           "modifiers": ["block-search-results"],
           "title_id": "stats-container"
-        },
-        "block_favorites": {
-          "title": "Mes favoris",
-          "modifiers": ["block-favorites"],
-          "top_link": {
-            "href": "#",
-            "text": "Revenir à la recherche"
-          }
         },
         "results": [
         ]

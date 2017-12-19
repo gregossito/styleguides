@@ -1,7 +1,6 @@
 extends ../../layouts/stack/stack
 
 include ../../modules/block-search/block-search
-include ../../modules/block-favorites/block-favorites
 include ../../modules/block-search-field/block-search-field
 include ../../modules/block-search-filters/block-search-filters
 include ../../modules/block-map/block-map
@@ -34,8 +33,6 @@ append content
                 each result in data.list.results
                   .carousel-cell
                     +card(result)
-        .favorites-container
-          +block-search(data.list.block_favorites)
       .layout-content-map
         +block-map(data.map)
 

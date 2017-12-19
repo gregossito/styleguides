@@ -139,7 +139,7 @@ Paris.listEquipments = (function(){
           container: '#hits-container',
           templates: {
             empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '<br>' + Paris.templates['button']['button']({ text: 'Dézoomer', modifiers: ["secondary", "zoom-out-button"]}) + '</p>',
-            item: '<a href="{{url}}" class="card is-open-{{is_open}} cat-{{icon}}" hitid="{{objectID}}" lat="{{_geoloc.lat}}" lng="{{_geoloc.lng}}"><div{{#smaller_header_image}} style="background-image: url({{smaller_header_image}})"{{/smaller_header_image}} class="card-image {{^smaller_header_image}}no-img {{/smaller_header_image}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address_street}}</span><br><span class="card-zipcode">{{address_postcode}}</span> <span class="card-city">{{address_city}}</span></div>{{#open_details}}<div class="card-hours {{#is_open}} open {{/is_open}} {{^is_open}} close {{/is_open}}" data-open="{{is_open}}">{{open_details}}</div>{{/open_details}}<span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div></a>'
+            item: '<a href="{{url}}" class="card is-open-{{is_open}} cat-{{icon}}" data-hitid="{{objectID}}" data-lat="{{_geoloc.lat}}" data-lng="{{_geoloc.lng}}"><div{{#smaller_header_image}} style="background-image: url({{smaller_header_image}})"{{/smaller_header_image}} class="card-image {{^smaller_header_image}}no-img {{/smaller_header_image}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address_street}}</span><br><span class="card-zipcode">{{address_postcode}}</span> <span class="card-city">{{address_city}}</span></div>{{#open_details}}<div class="card-hours {{#is_open}} open {{/is_open}} {{^is_open}} close {{/is_open}}" data-open="{{is_open}}">{{open_details}}</div>{{/open_details}}</div></a>'
           },
           cssClasses: {
             root: 'carousel',
@@ -170,15 +170,15 @@ Paris.listEquipments = (function(){
         },
         openedHit: function(hitID) {
           // [desktop] Add inactive class
-          var addClassDelay = ($('#hits-container .card[hitid="'+hitID+'"]').length > 0) ? 0 : 100;
+          var addClassDelay = ($('#hits-container .card[data-hitid="'+hitID+'"]').length > 0) ? 0 : 100;
           setTimeout(function() {
             $('#hits-container .card').addClass('inactive');
-            $('#hits-container .card[hitid="'+hitID+'"]').removeClass('inactive');
+            $('#hits-container .card[data-hitid="'+hitID+'"]').removeClass('inactive');
           }, addClassDelay);
 
           // [mobile] Go to slide
           if (flkyCarousel && flkyCarousel != undefined) {
-            var index = $('#hits-container .card[hitid="'+hitID+'"]').closest('.carousel-cell').prevAll().length;
+            var index = $('#hits-container .card[data-hitid="'+hitID+'"]').closest('.carousel-cell').prevAll().length;
             flkyCarousel.select(index);
           }
         },
@@ -218,24 +218,20 @@ Paris.listEquipments = (function(){
       $('#hits-container').on('click', '.card', function(event) {
         event.preventDefault();
         var card = $(event.target).closest('.card');
-        if ($(event.target).closest('.favorite-btn').length > 0) {
-          toggleFavorite(card.attr('hitid'));
-        } else {
-          var hit = {
-            objectID: card.attr('hitid'),
-            name: $(card).find('.card-title').html(),
-            address_street: $(card).find('.card-address').html(),
-            address_postcode: $(card).find('.card-zipcode').html(),
-            address_city: $(card).find('.card-city').html(),
-            open_details: $(card).find('.card-hours').html(),
-            is_open: $(card).find('.card-hours').attr('data-open') == 'true'
-          };
-          var content = renderMapPopupContent(hit);
-          mapboxWidget.openHit(content, [card.attr('lng'), card.attr('lat')], card.attr('hitid'));
+        var hit = {
+          objectID: card.data('hitid'),
+          name: $(card).find('.card-title').html(),
+          address_street: $(card).find('.card-address').html(),
+          address_postcode: $(card).find('.card-zipcode').html(),
+          address_city: $(card).find('.card-city').html(),
+          open_details: $(card).find('.card-hours').html(),
+          is_open: $(card).find('.card-hours').attr('data-open') == 'true'
+        };
+        var content = renderMapPopupContent(hit);
+        mapboxWidget.openHit(content, [card.data('lng'), card.data('lat')], card.data('hitid'));
 
-          $('#hits-container').addClass('inactive');
-          $(card).removeClass('inactive');
-        }
+        $('#hits-container').addClass('inactive');
+        $(card).removeClass('inactive');
       });
 
       // Handle click on map close popup button
@@ -245,12 +241,6 @@ Paris.listEquipments = (function(){
 
       $('.search-results-container').on('click', '.around-me-button', function(event) {
         mapboxWidget.geolocate();
-      });
-
-      // Handle click on map favorite button (popup)
-      $('#map').on('click', '.favorite-btn', function(event) {
-        var hitID = $(event.target).closest('.card-content').attr('hitid');
-        toggleFavorite(hitID);
       });
 
       // Handle click on zoom out button
@@ -382,16 +372,6 @@ Paris.listEquipments = (function(){
         }
       });
 
-      // Open favorites
-      $('.block-search-field .block-search-bottom-links a').click(function(event) {
-        openFavorites();
-      });
-
-      // Close favorites
-      $('.block-favorites .block-search-top-link a, .block-search-field h3.block-search-title').click(function(event) {
-        closeFavorites();
-      });
-
       // On resize
       $( window ).resize(function() {
         // Constantly check if carousel needs to be initialized depending on media query
@@ -405,27 +385,6 @@ Paris.listEquipments = (function(){
 
         $el.data('api', api);
       });
-    }
-
-    function openFavorites() {
-      $('.layout-list-map').addClass('favorites');
-      console.log('TODO: get favorites');
-      var favorites = [];
-      if (favorites && favorites.length > 0) {
-        // Render favorites
-        console.log('TODO: render favorites');
-      } else {
-        $('.block-favorites .block-search-content').html('<p class="no-favorites">' + Paris.i18n.t('list_equipments/no_favorite') + '</p>');
-      }
-    }
-
-    function closeFavorites() {
-      $('.layout-list-map').removeClass('favorites');
-    }
-
-    function toggleFavorite(hitID) {
-      $('#hits-container .card[hitid="'+hitID+'"]').find('.favorite-btn').toggleClass('selected');
-      $('#map .card-content[hitid="'+hitID+'"]').find('.favorite-btn').toggleClass('selected');
     }
 
     function initCarousel() {
@@ -451,9 +410,9 @@ Paris.listEquipments = (function(){
     function renderMapPopupContent(hit) {
       var content = '';
       var is_open = hit.is_open ? 'open' : 'close';
-      content += '<div class="card-content" hitid="'+hit.objectID+'">';
+      content += '<div class="card-content" data-hitid="'+hit.objectID+'">';
       content += '<h3 class="card-title">'+hit.name+'</h3>';
-      content += '<div class="card-text"><span class="card-address">'+hit.address_street+'</span><br><span class="card-zipcode">'+hit.address_postcode+'</span> <span class="card-city">'+hit.address_city+'</span><span class="ico-btn favorite-btn"><i class="icon-favorites"></i></span></div>';
+      content += '<div class="card-text"><span class="card-address">'+hit.address_street+'</span><br><span class="card-zipcode">'+hit.address_postcode+'</span> <span class="card-city">'+hit.address_city+'</span></div>';
       if (hit.is_open !== "unknown") {content += '<div class="card-hours '+ is_open +'">'+hit.open_details+'</div>';}
       content += '<div class="card-buttons">';
       content += Paris.templates['button']['button']({
@@ -462,8 +421,6 @@ Paris.listEquipments = (function(){
         modifiers: ["secondary", "small"]
       });
       content += '</div>';
-      var classes = ($('#hits-container .card[hitid="'+hit.objectID+'"] .favorite-btn.selected').length > 0 ? 'selected' : '');
-      content += '<span class="ico-btn favorite-btn '+classes+'"><i class="icon-favorites"></i></span>';
       content += '<span class="ico-btn close-popup-btn"><i class="icon-close-big"></i></span>';
       content += '</div>';
       return content;

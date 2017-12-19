@@ -1,17 +1,12 @@
 .block-search-field {
   position: relative;
 
-  .block-search-bottom-links {
-    display: none; // Hide favorites until it is ready
-  }
-  
   .search-field-input[type="text"]:focus {
     background-color: $white;
   }
 }
 
 @include small {
-
   .block-search-field {
     padding-bottom: 15px;
 
@@ -23,25 +18,6 @@
         float: none;
         width: 50%;
         text-align: center;
-      }
-    }
-
-    .block-search-bottom-links {
-
-      height: 0;
-      margin: 0;
-      
-      a {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        width: calc(50% - 15px);
-        text-align: center;
-        color: $color-secondary;
-        font-size: 18px;
-        margin: 0;
-        text-decoration: none;
-        font-weight: bold;
       }
     }
   }

@@ -1,7 +1,0 @@
-include ../block-search/block-search
-
-mixin block-favorites(data)
-  - data = JSON.parse(JSON.stringify(data)) // clone the data object
-  - data.modifiers = data.modifiers || []
-  - data.modifiers.push("block-search-field")
-  +block-search(data)

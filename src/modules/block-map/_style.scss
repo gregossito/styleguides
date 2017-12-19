@@ -100,22 +100,13 @@
 				margin-top: 15px;
 			}
 
-			.close-popup-btn,
-			.favorite-btn {
+			.close-popup-btn {
 				color: $gray99;
 				cursor: pointer;
 				position: absolute;
 				right: 5px;
 				top: 7px;
 				font-size: 20px;
-			}
-
-			.favorite-btn {
-				right: 30px;
-
-				&.selected {
-					color: $orange1;
-				}
 			}
 
       .card-buttons {

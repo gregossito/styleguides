@@ -49,8 +49,7 @@
 
 .block-search-top-link,
 .block-search-top-link a,
-.block-search-top-link a div,
-.block-search-bottom-links a {
+.block-search-top-link a div {
   color: $gray33;
   font-size: 13px;
 
@@ -62,20 +61,6 @@
 
 .block-search-top-link {
   float: right;
-}
-
-.block-search-bottom-links {
-  list-style: none;
-  margin: 10px 0 0;
-  padding: 0;
-}
-
-.block-search-bottom-links-item {
-  display: inline-block;
-
-  & + .block-search-bottom-links-item {
-    margin-left: 10px;
-  }
 }
 
 @include small {
