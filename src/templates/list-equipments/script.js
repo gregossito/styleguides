@@ -79,7 +79,7 @@ Paris.listEquipments = (function(){
       );
 
       var refinementWidget = Paris.instantsearch.widgets.newrefinementList({
-        container: '.block-search-filters .block-search-content',
+        container: '#js-refinementlist',
         selectedFiltersContainer: '.block-search-filters-mobile',
         resetFiltersButtonContainer: '.block-search-filters .block-search-top-link',
         filtersPopupContainer: '.layout-content-filters-popup',
@@ -108,7 +108,7 @@ Paris.listEquipments = (function(){
       mainSearch.addWidget(
         instantsearch.widgets.toggle({
           attributeName: 'is_open',
-          container: '#is_open-facet',
+          container: '#js-facet-open',
           label: 'Ouvert maintenant',
           values: {
             on: true,
@@ -127,7 +127,7 @@ Paris.listEquipments = (function(){
         instantsearch.widgets.menuSelect({
           attributeName: 'accessibility',
           autoHideContainer: false,
-          container: '#accessibility-facet',
+          container: '#js-facet-accessibility',
           templates: {
             header: "Accessibilité",
             seeAllOption: "Sans handicap"

@@ -50,6 +50,7 @@
   }
 
   .secondary-filters {
+    display: flex;
     margin-top: 5px;
 
     .secondary-filter {
@@ -58,7 +59,7 @@
       margin-right: 25px;
       text-align: left;
 
-      span.secondary-filter-title {
+      .ais-header {
         display: block;
         margin-bottom: 10px;
         color: $color-secondary;
@@ -70,10 +71,14 @@
         margin-right: 8px;
       }
 
+      select {
+        max-width: 20rem;
+      }
+
       label {
         display: flex;
         font-size: 1.3rem;
-        line-height: 17px;
+        line-height: 3.3rem;
       }
     }
   }
