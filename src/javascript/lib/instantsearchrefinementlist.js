@@ -155,6 +155,7 @@ function setInitialMainFacets() {
 function resetFacets() {
   helper.clearRefinements();
   selectedFacets = [];
+  setInitialMainFacets();
 }
 
 
@@ -211,6 +212,7 @@ function onClickSelectedFacetPopupFilterButton(e) {
 
 // UI click on reset filters button
 function onClickResetFiltersButton(e) {
+  e.preventDefault();
   resetFacets();
   helper.search();
   updateUI();
