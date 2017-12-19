@@ -7,7 +7,6 @@ var helper;
 var facets = [];
 // Internal selector ID for facet list html rendering
 var equipementFacetsWrapperID = 'equipement-facets-list-wrapper';
-var secondaryFacetsWrapperID = 'secondary-facets-list-wrapper';
 // Base HTML code for popup
 var popupHTML = '<div class="block-search-filters-popup"><div class="popup-background"></div><div class="popup-content"></div></div>';
 var settings;
@@ -26,11 +25,8 @@ var container, // DOM selector in which to add UI
     mainFacets, // Main facets filter
     mainFacetsIcons; // Main facets icons
 
-// Keep referance of facets selected via UI
+// Keep reference of facets selected via UI
 var selectedFacets = [];
-
-// Settings linked secondary facets (pool size, etc)
-var linkedFacets = [];
 
 // See more details in the documentation:
 // https://community.algolia.com/instantsearch.js/documentation/#custom-widgets
@@ -43,15 +39,11 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
     getConfiguration: function(configuration) {
       if (options.operator === 'and') {
         widgetConfiguration = {
-          // TODO: re-enable all facets
-          // facets: [options.attributeName, 'sections', 'pool_length', 'accessibility', 'is_open']
-          facets: [options.attributeName, 'accessibility', 'is_open']
+          facets: [options.attributeName]
         };
       } else {
         widgetConfiguration = {
-          // TODO: re-enable all facets
-          // disjunctiveFacets: [options.attributeName, 'sections', 'pool_length', 'accessibility', 'is_open']
-          disjunctiveFacets: [options.attributeName, 'accessibility', 'is_open']
+          disjunctiveFacets: [options.attributeName]
         };
       }
 
@@ -78,8 +70,6 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
       $(options.selectedFiltersContainer).on('click', '.selected-filters-buttons-container .filterButton', onClickSelectedFacetFilterButton.bind(this));
       $(options.selectedFiltersContainer).on('click', '.selected-facets-popup .filterButton', onClickSelectedFacetPopupFilterButton.bind(this));
       $(options.resetFiltersButtonContainer).on('click', 'a', onClickResetFiltersButton.bind(this));
-      $(options.container).on('change', 'select', onChangeSelectSecondaryFilter.bind(this));
-      $(options.container).on('change', 'input[type="checkbox"]', onCheckSecondaryFilter.bind(this));
 
       // Wait until window is done resizing to update some UI rendering
       var windowTimer;
@@ -101,11 +91,6 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
           // Store all possible facets values (We don't store the facet object because we need to simplify some array object search)
           $.each(content.getFacetValues(options.attributeName, {sortBy: options.sortBy}), function(i, facet) {
             facets.push(facet.name);
-          });
-
-          // Store secondary linked facets
-          $.each(Paris.config.algolia.secondary_filters, function(index, val) {
-            linkedFacets.push(val.linked_filter);
           });
 
           // cleanFacets();
@@ -161,69 +146,11 @@ function toggletFacet(facetFilter, active) {
   } else {
     selectedFacets.push(facetFilter);
   }
-
-  needsToDisplaySecondaryBindedFilters(facetFilter, facetExists);
-  needsToResetSecondaryFilter(facetFilter, facetExists);
-}
-
-// Check if a secondary filter needs to be displayed or hidden after a facet has been toggled
-function needsToDisplaySecondaryBindedFilters(facetFilter, removed) {
-
-  if (linkedFacets.indexOf(facetFilter.value) >= 0) {
-    var inputWrapper = $('.secondary-filter[data-linked-filter-id="' + facetFilter.value+'"]');
-    if (removed) {
-      inputWrapper.hide();
-      // Reset input value and refinement
-      var facet = inputWrapper.find('select').attr('name');
-      helper.clearRefinements(facet);
-
-      var index = -1;
-      // Check for attached filter
-      $.each(selectedFacets, function(i, el) {
-        if (el.facet == facet) {
-          index = i;
-          return;
-        }
-      });
-
-      // If attached remove
-      if (index >= 0) {
-        selectedFacets.splice(index, 1);
-      }
-
-      inputWrapper.find('select').val('all');
-
-    } else {
-      inputWrapper.show();
-    }
-  }
-}
-
-function needsToResetSecondaryFilter(facetFilter, removed) {
-  // For all secondary facet types check treatment
-  $.each(Paris.config.algolia.secondary_filters, function(i, el) {
-    if (facetFilter.facet == el.id) {
-      var inputWrapper = $('.secondary-filter[data-facet="'+ facetFilter.facet+'"]');
-      if (el.type == 'select') {
-        if (removed) {
-          inputWrapper.find('select').val('all');
-        } else {
-          inputWrapper.find('select').val(facetFilter.value);
-        }
-      } else if (el.type == 'checkbox') {
-        inputWrapper.find('input[type="checkbox"]').prop('checked', !removed);
-      }
-    }
-  });
 }
 
 function resetFacets() {
-  $.each(selectedFacets, function(i, el) {
-    needsToResetSecondaryFilter(el, true);
-  });
   helper.clearRefinements();
   selectedFacets = [];
-  hideSecondaryLinkedFilters();
 }
 
 
@@ -241,7 +168,7 @@ function onClickApplySearchButton(e) {
 }
 
 
-// Handle click on filter button. List displaying main facets + selected facets. No secondary facets here
+// Handle click on filter button. List displaying main facets + selected facets.
 function onClickFilterButton(e) {
   e.preventDefault();
 
@@ -276,19 +203,6 @@ function onClickSelectedFacetPopupFilterButton(e) {
   var button = $(e.target).closest('.button');
   var removedFacet = $(button).attr('data-value');
   button.remove();
-
-  if (linkedFacets.indexOf(removedFacet) >= 0) {
-    // Check for attached filter
-    var selectedButtons = $(settings.selectedFiltersContainer + ' .selected-facets-popup .filterButton');
-    $.each(selectedButtons, function(i, el) {
-      var facet = $(el).attr('data-facet');
-      $.each(Paris.config.algolia.secondary_filters, function(index, val) {
-        if (val.linked_filter == removedFacet && facet == val.id) {
-          el.remove();
-        }
-      });
-    });
-  }
 }
 
 // UI click on reset filters button
@@ -298,52 +212,6 @@ function onClickResetFiltersButton(e) {
   updateUI();
 }
 
-
-// UI action when secondary filter of select type changes value
-function onChangeSelectSecondaryFilter(e) {
-
-  var facet = $(e.target).attr('name');
-  var value = $(e.target).val();
-  var label = $(e.target).find(':selected').text();
-
-  // Copy selectedValues array because it can be modified in each loop
-  var selectedValuesCopy = $.merge([], selectedFacets);
-  $.each(selectedValuesCopy, function(i, el) {
-    if (el.facet == facet) {
-      toggletFacet(el);
-    }
-  });
-
-  if (value != 'all') {
-    var facetFilter = {
-      facet: facet,
-      value: value,
-      label: label
-    };
-    toggletFacet(facetFilter);
-  }
-
-  // Trigger search with new facet refinement
-  if (!mediaQuery.mobileMediaQuery.matches) {
-    helper.search();
-  }
-}
-
-// UI Action when secondary filter of type checkbox is changed
-function onCheckSecondaryFilter(e) {
-
-  var facetFilter = {
-    facet: $(e.target).attr('name'),
-    value: "true",
-    label: $(e.target).next('span').html()
-  };
-  toggletFacet(facetFilter);
-
-  // Trigger search with new facet refinement
-  if (!mediaQuery.mobileMediaQuery.matches) {
-    helper.search();
-  }
-}
 
 
 
@@ -402,50 +270,6 @@ function renderEquipmentsFacetFilters() {
   }
 
   $container.html(content);
-}
-
-function renderSecondaryFacetFilters() {
-
-  var $container = $(settings.container + ' #' + secondaryFacetsWrapperID);
-
-  var content = '';
-  // Append secondary filters
-  content += '<div class="secondary-filters">';
-
-  $.each(Paris.config.algolia.secondary_filters, function(index, val) {
-
-    content += '<div class="secondary-filter" data-linked-filter-id="'+val.linked_filter+'" data-facet="'+val.id+'">';
-    content += '<span class="secondary-filter-title">'+val.title+'</span>';
-
-    if (val.type == 'checkbox') {
-      content += '<label>';
-      content += '<input type="checkbox" name="'+val.id+'">';
-      content += '<span>'+val.label+'</span>';
-      content += '</label>';
-    } else if (val.type == 'select') {
-      content += '<select name="'+val.id+'" data-linked-filter-id="'+(val.linked_filter ? val.linked_filter : '')+'">';
-      $.each(val.values, function(index, option) {
-        content += '<option value="'+option.id+'">'+option.label+'</option>';
-      });
-      content += '</select>';
-    }
-
-    content += '</div>';
-
-  });
-
-  content += '</div>';
-
-  // At the end append a apply button
-  var data = {
-    text: Paris.i18n.t('list_equipments/apply_filters'),
-    modifiers: ["apply-filters-button"]
-  };
-  content += Paris.templates['button']['button'](data);
-
-  $container.html(content);
-
-  hideSecondaryLinkedFilters();
 }
 
 // Render selected facets
@@ -547,15 +371,6 @@ function selectedFacetsMoreButtonDisplay() {
   }, 1);
 }
 
-// Hide secondary facets dom elements
-function hideSecondaryLinkedFilters() {
-  $.each(Paris.config.algolia.secondary_filters, function(index, val) {
-    if (val.linked_filter != undefined) {
-      $('.secondary-filter[data-facet="'+ val.id+'"]').hide();
-    }
-  });
-}
-
 function closeSelectedFiltersPopup() {
   $(settings.selectedFiltersContainer).find('.list-equipment-popup').fadeOut(400);
 }
@@ -605,12 +420,11 @@ function renderPopup() {
 
 
 function initView() {
-  $(settings.container).html('<div class="block-search-filters-items" id="' + equipementFacetsWrapperID + '"></div><div id="' + secondaryFacetsWrapperID + '"></div>');
+  $(settings.container).html('<div class="block-search-filters-items" id="' + equipementFacetsWrapperID + '"></div>');
   $(settings.filtersPopupContainer).html(popupHTML);
 
   // Render facets filters
   renderEquipmentsFacetFilters();
-  renderSecondaryFacetFilters();
 }
 
 // Init search filters popup events

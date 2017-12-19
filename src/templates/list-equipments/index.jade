@@ -28,6 +28,10 @@ append content
         .search-results-container
           +block-search-field(data.list.block_search_field)
           +block-search-filters(data.list.block_search_filters)
+          .secondary-facets-list-wrapper
+            .secondary-filters
+              #is_open-facet
+              #accessibility-facet
           +block-search(data.list.block_search_results)
             .block-search-cards#hits-container
               .carousel

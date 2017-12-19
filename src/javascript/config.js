@@ -13,7 +13,6 @@ Paris.config = {
       "global": "recette_ParisFront",
       "persons": "recette_Elus",
       "equipments": "Service_production",
-      "dev_mes_lieux": "dev_MesLieux",
     },
     "main_facets": ["Bibliothèques", "Mairies d'arrondissement", "Principaux parcs, jardins et squares", "Piscines", "Tennis"],
     "main_facets_icon": [
@@ -92,93 +91,6 @@ Paris.config = {
       {
         facet: "Théàtres pour enfants",
         icon: "culture"
-      }
-    ],
-    "secondary_filters": [
-      {
-        "title": "Ouverture",
-        "type": "checkbox",
-        "id": "is_open",
-        "label": "Ouvert maintenant"
-      },
-      {
-        "title": "Accessibilité",
-        "type": "select",
-        "id": "accessibility",
-        "values": [
-          {
-            "id": "all",
-            "label": "Sans handicap"
-          },
-          {
-            "id": "accessible aux personnes à mobilité réduite",
-            "label": "Handicap moteur"
-          },
-          {
-            "id": "accessible aux non-voyants et malvoyants",
-            "label": "Handicap visuel"
-          },
-          {
-            "id": "accessible aux sourds et malentendants",
-            "label": "Handicap auditif"
-          }
-        ]
-      },
-      {
-        "title": "Taille du bassin",
-        "type": "select",
-        "id": "pool_length",
-        "linked_filter": "Piscines",
-        "values": [
-          {
-            "id": "all",
-            "label": "Sans préférence"
-          },
-          {
-            "id": "25m",
-            "label": "25 m"
-          },
-          {
-            "id": "33m",
-            "label": "33 m"
-          },
-          {
-            "id": "50m",
-            "label": "50 m"
-          }
-        ]
-      },
-      {
-        "title": "Section",
-        "type": "select",
-        "id": "sections",
-        "linked_filter": "Bibliothèques",
-        "values": [
-          {
-            "id": "all",
-            "label": "Tous"
-          },
-          {
-            "id": "adulte",
-            "label": "Adulte"
-          },
-          {
-            "id": "bibliothèque spécialisée",
-            "label": "Bibliothèques spécialisées"
-          },
-          {
-            "id": "discothèque",
-            "label": "Discothèques"
-          },
-          {
-            "id": "jeunesse",
-            "label": "Jeunesse"
-          },
-          {
-            "id": "vidéothèque",
-            "label": "Vidéothèques"
-          }
-        ]
       }
     ],
     "url": {
