@@ -94,7 +94,8 @@ Paris.listEquipments = (function(){
           container: '#js-currentrefined',
           cssClasses: {
             root: "block-search-filters-items",
-            item: "button closable white small icon filterButton"
+            item: "block-search-filters-item",
+            link: "button closable white small icon"
           },
           clearAll: false,
           attributes: [
@@ -102,7 +103,7 @@ Paris.listEquipments = (function(){
           ],
           onlyListedAttributes: true,
           templates: {
-            item: '<i aria-hidden="true" class="icon icon-{{icon}}"></i> {{name}}'
+            item: '{{#icon}}<i aria-hidden="true" class="icon icon-{{icon}}"></i>{{/icon}}{{name}}'
           },
           transformData: function(item){
             // Add the icon if found in config

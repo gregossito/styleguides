@@ -8,20 +8,14 @@ mixin block-search-filters(data)
   +block-search(data)
     #js-currentrefined
     #js-refinementlist
-      //- .block-search-filters-items
-      //-   //- if data.aroundMeButton
-      //-   //-   - data.aroundMeButton.modifiers = ["secondary", "around-me-button"]
-      //-   //-   +button(data.aroundMeButton)
-      //-   if data.filter_items && data.filter_items.length
-      //-     each item in data.filter_items
-      //-       - item.modifiers = ["closable", "white", "small"]
-      //-       +button(item)
+      //- if data.aroundMeButton
+      //-   - data.aroundMeButton.modifiers = ["secondary", "around-me-button"]
+      //-   +button(data.aroundMeButton)
       if data.more
         button.block-search-filters-more.js-open-search-modal= data.more.text
-    .secondary-facets-list-wrapper
-      .secondary-filters
-        #js-facet-open.secondary-filter
-        #js-facet-accessibility.secondary-filter
+    .block-search-filters-secondary
+      #js-facet-open.block-search-filters-secondary-item
+      #js-facet-accessibility.block-search-filters-secondary-item
     if data.applyFiltersButton
       - data.applyFiltersButton.modifiers = ["apply-filters-button"]
       +button(data.applyFiltersButton)

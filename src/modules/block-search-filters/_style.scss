@@ -1,31 +1,9 @@
 .block-search-filters {
-
   .block-search-content {
-    .button {
-      margin-bottom: 5px;
-      margin-right: 5px;
-    }
-
     .around-me-button {
       display: none;
       margin-bottom: 15px;
       width: 100%;
-    }
-
-    .block-search-filters-more {
-      background: none;
-      border: 0;
-      color: $color-secondary;
-      cursor: pointer;
-      display: inline-block;
-      font-size: 13px;
-      padding: 5px 0;
-      text-decoration: underline;
-
-      &:hover,
-      &:focus {
-        color: $color-primary;
-      }
     }
 
     .apply-filters-button {
@@ -35,25 +13,44 @@
     }
   }
 
-  .block-search-filters-items {
+  &-items {
     background-color: $white;
     border-radius: 5px;
     padding: 10px 10px 5px;
+  }
 
-    .button.white {
+  &-item {
+    display: inline-block;
+
+    .button.small {
       background-color: $grayF2;
-    }
-
-    & + button {
-      margin-top: 10px;
+      margin-bottom: 5px;
+      margin-right: 5px;
     }
   }
 
-  .secondary-filters {
+  &-more {
+    background: none;
+    border: 0;
+    color: $color-secondary;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 10px;
+    padding: 5px 0;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $color-primary;
+    }
+  }
+
+  &-secondary {
     display: flex;
     margin-top: 5px;
 
-    .secondary-filter {
+    &-item {
       display: inline-block;
       padding: 10px 0;
       margin-right: 25px;
@@ -73,6 +70,7 @@
 
       select {
         max-width: 20rem;
+        width: 100%;
       }
 
       label {
@@ -82,11 +80,8 @@
       }
     }
   }
-}
 
-@include small {
-
-  .block-search-filters {
+  @include small {
     display: none;
 
     .block-search-header {
@@ -94,20 +89,26 @@
     }
 
     .block-search-content {
-      .apply-filters-button {
-        display: block;
-      }
-
+      .apply-filters-button,
       .around-me-button {
         display: block;
       }
     }
 
-    .secondary-filters {
-      .secondary-filter {
-        label {
-          line-height: 1;
-        }
+    &-item {
+      display: block;
+
+      .button.small {
+        display: block;
+        margin-right: 0;
+        padding: 8px;
+        text-align: left;
+      }
+    }
+
+    &-secondary-filter {
+      label {
+        line-height: 1;
       }
     }
   }
