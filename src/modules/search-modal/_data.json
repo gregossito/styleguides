@@ -1,0 +1,16 @@
+{
+  "index": {
+    "type": "search-modal",
+    "description": "",
+    "cssTheme": "",
+    "bodyAttributes": {},
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "attrs": {},
+      "data": {
+
+      }
+    }]
+  }
+}

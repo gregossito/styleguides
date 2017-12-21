@@ -41,6 +41,7 @@ require('../modules/person-block/script');
 require('../modules/poll/script');
 require('../modules/quick-access/script');
 require('../modules/rheader/script');
+require('../modules/search-modal/script');
 require('../modules/sections-panel/script');
 require('../modules/share/script');
 require('../modules/video-cover/script');

@@ -1,0 +1,9 @@
+mixin search-modal(data)
+  .search-modal
+    .search-modal-background
+    .search-modal-content
+      .search-modal-header
+        input.js-input-search-modal(type="text" name="search-filters" placeholder="Rechercher un filtre...")
+      .search-modal-list#js-popup-refinementlist
+      .search-modal-footer
+        +button({text: "Valider", modifiers: ["secondary", "action", "js-confirm-search-modal"]})

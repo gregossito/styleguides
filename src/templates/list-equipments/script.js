@@ -132,15 +132,6 @@ Paris.listEquipments = (function(){
         })
       );
 
-      // Custom refinement widget
-      var refinementWidget = Paris.instantsearch.widgets.newrefinementList({
-        container: '#js-refinementlist',
-        filtersPopupContainer: '.layout-content-filters-popup'
-      });
-
-      // Search refinement list widget
-      mainSearch.addWidget(refinementWidget);
-
       // Stats widget
       mainSearch.addWidget(
         instantsearch.widgets.stats({
@@ -402,10 +393,6 @@ Paris.listEquipments = (function(){
       // On search result
       mainSearch.helper.on('result', function(results, state) {
 
-        if ($('.layout-content-list').hasClass('searching')) {
-          // This allow to display filters when we click on around me button
-          refinementWidget.getAndRenderSelectedFacets();
-        }
         if (firstLoad === false) {
           $('.layout-content-list').removeClass('searching');
         }

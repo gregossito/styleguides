@@ -17,7 +17,7 @@ mixin block-search-filters(data)
       //-       - item.modifiers = ["closable", "white", "small"]
       //-       +button(item)
       if data.more
-        button.block-search-filters-more.js-more-filters-button= data.more.text
+        button.block-search-filters-more.js-open-search-modal= data.more.text
     .secondary-facets-list-wrapper
       .secondary-filters
         #js-facet-open.secondary-filter

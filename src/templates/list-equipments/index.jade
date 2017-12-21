@@ -7,6 +7,7 @@ include ../../modules/block-map/block-map
 include ../../modules/card/card
 include ../../modules/notice/notice
 include ../../modules/rheader/rheader
+include ../../modules/search-modal/search-modal
 include ../../modules/skip-links/skip-links
 
 append header
@@ -19,16 +20,7 @@ append header
 append content
   .layout-content
     .layout-list-map
-      .list-equipment-popup.layout-content-filters-popup
-        .block-search-filters-popup
-          .popup-background
-          .popup-content
-            .search-filters-container
-              input(type="text" name="search-filters" placeholder="Rechercher un filtre...")
-            .filters-list#js-popup-refinementlist
-            .buttons
-              +button({text: "Annuler", modifiers: ["discard", "action", "js-discard"]})
-              +button({text: "Valider", modifiers: ["secondary", "action", "js-confirm"]})
+      +search-modal
       .layout-content-list.searching
         span.back-search-btn
           i.icon-arrow-top
