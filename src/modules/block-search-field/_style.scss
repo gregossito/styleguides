@@ -13,12 +13,10 @@
     .block-search-header {
       padding-bottom: 15px;
       border-bottom: 1px solid $grayCC;
+    }
 
-      h3 {
-        float: none;
-        width: 50%;
-        text-align: center;
-      }
+    .block-search-title {
+      float: none;
     }
   }
 }

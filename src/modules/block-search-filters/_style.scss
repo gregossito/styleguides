@@ -94,7 +94,6 @@
     }
 
     .block-search-content {
-
       .apply-filters-button {
         display: block;
       }
@@ -102,7 +101,14 @@
       .around-me-button {
         display: block;
       }
+    }
 
+    .secondary-filters {
+      .secondary-filter {
+        label {
+          line-height: 1;
+        }
+      }
     }
   }
 }

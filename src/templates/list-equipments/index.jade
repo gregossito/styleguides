@@ -20,6 +20,15 @@ append content
   .layout-content
     .layout-list-map
       .list-equipment-popup.layout-content-filters-popup
+        .block-search-filters-popup
+          .popup-background
+          .popup-content
+            .search-filters-container
+              input(type="text" name="search-filters" placeholder="Rechercher un filtre...")
+            .filters-list#js-popup-refinementlist
+            .buttons
+              +button({text: "Annuler", modifiers: ["discard", "action", "js-discard"]})
+              +button({text: "Valider", modifiers: ["secondary", "action", "js-confirm"]})
       .layout-content-list.searching
         span.back-search-btn
           i.icon-arrow-top

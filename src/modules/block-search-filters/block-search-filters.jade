@@ -1,5 +1,4 @@
 include ../block-search/block-search
-include ../block-search-filters-mobile/block-search-filters-mobile
 include ../button/button
 
 mixin block-search-filters(data)
@@ -7,24 +6,22 @@ mixin block-search-filters(data)
   - data.modifiers = data.modifiers || []
   - data.modifiers.push("block-search-filters")
   +block-search(data)
+    #js-currentrefined
     #js-refinementlist
-      .block-search-filters-items
-        if data.aroundMeButton
-          - data.aroundMeButton.modifiers = ["secondary", "around-me-button"]
-          +button(data.aroundMeButton)
-        if data.filter_items && data.filter_items.length
-          each item in data.filter_items
-            - item.modifiers = ["closable", "white", "small"]
-            +button(item)
-        if data.aroundMeButton
-          - data.applyFiltersButton.modifiers = ["apply-filters-button"]
-          +button(data.applyFiltersButton)
+      //- .block-search-filters-items
+      //-   //- if data.aroundMeButton
+      //-   //-   - data.aroundMeButton.modifiers = ["secondary", "around-me-button"]
+      //-   //-   +button(data.aroundMeButton)
+      //-   if data.filter_items && data.filter_items.length
+      //-     each item in data.filter_items
+      //-       - item.modifiers = ["closable", "white", "small"]
+      //-       +button(item)
       if data.more
         button.block-search-filters-more.js-more-filters-button= data.more.text
     .secondary-facets-list-wrapper
       .secondary-filters
         #js-facet-open.secondary-filter
         #js-facet-accessibility.secondary-filter
-
-  .block-search-filters-mobile
-    +block-search-filters-mobile(data)
+    if data.applyFiltersButton
+      - data.applyFiltersButton.modifiers = ["apply-filters-button"]
+      +button(data.applyFiltersButton)

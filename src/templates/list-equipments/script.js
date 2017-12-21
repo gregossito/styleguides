@@ -78,9 +78,53 @@ Paris.listEquipments = (function(){
         })
       );
 
+      // Current refined values widget
+      mainSearch.addWidget(
+        instantsearch.widgets.currentRefinedValues({
+          container: '#js-currentrefined',
+          cssClasses: {
+            root: "block-search-filters-items",
+            item: "button closable white small icon filterButton"
+          },
+          clearAll: false,
+          attributes: [
+            {name: "category_names"}
+          ],
+          onlyListedAttributes: true,
+          templates: {
+            item: '<i aria-hidden="true" class="icon icon-{{icon}}"></i> {{name}}'
+          },
+          transformData: function(item){
+            // Add the icon if found in config
+            var icon = $.grep(Paris.config.algolia.main_facets_icon, function(facetIcon) {
+              return (facetIcon.facet == item.name);
+            });
+            if (icon.length) {
+              item.icon = icon[0].icon;
+            };
+            return item;
+          }
+        })
+      );
+
+      // Popup refinement list widget
+      mainSearch.addWidget(
+        instantsearch.widgets.refinementList({
+          container: "#js-popup-refinementlist",
+          attributeName: 'category_names',
+          operator: 'or',
+          limit: 200,
+          searchForFacetValues: false,
+          sortBy: ["name:asc"],
+          templates: {
+            item: '<label class="{{cssClasses.label}}"><input type="checkbox" class="{{cssClasses.checkbox}}" value="{{value}}" {{#isRefined}}checked{{/isRefined}} /><span class="label-bg"></span><span class="label-txt">{{{highlighted}}}</span></label>'
+          }
+        })
+      );
+
+      // Custom refinement widget
       var refinementWidget = Paris.instantsearch.widgets.newrefinementList({
         container: '#js-refinementlist',
-        selectedFiltersContainer: '.block-search-filters-mobile',
         resetFiltersButtonContainer: '.block-search-filters .block-search-top-link',
         filtersPopupContainer: '.layout-content-filters-popup',
         attributeName: 'category_names',
@@ -91,6 +135,9 @@ Paris.listEquipments = (function(){
         mainFacetsIcons: Paris.config.algolia.main_facets_icon
       });
 
+      // Search refinement list widget
+      mainSearch.addWidget(refinementWidget);
+
       // Stats widget
       mainSearch.addWidget(
         instantsearch.widgets.stats({
@@ -100,9 +147,6 @@ Paris.listEquipments = (function(){
           }
         })
       );
-
-      // Search refinement list widget
-      mainSearch.addWidget(refinementWidget);
 
       // Is open
       mainSearch.addWidget(
