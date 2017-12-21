@@ -6,6 +6,7 @@ require('./lib/events');
 require('./lib/i18n');
 require('./lib/instantsearchmapbox');
 require('./lib/instantsearchrefinementlist');
+require('./lib/instantsearchresetbutton');
 require('./lib/maps');
 require('./lib/requestanimationframe');
 require('./lib/responsive');

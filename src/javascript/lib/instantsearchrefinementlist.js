@@ -18,14 +18,7 @@ var settings;
 
 var container, // DOM selector in which to add UI
     // selectedFiltersContainer, // DOM selector in which to add selected filters
-    resetFiltersButtonContainer, // DOM selector for reset button
-    filtersPopupContainer, // DOM selector in which to add filters popup
-    attributeName, // Attribute name for facets
-    operator, // Facets operator
-    sortBy, // Facet ordering
-    numberOfFacets, // Expected number of facets (displayed in popup)
-    mainFacets, // Main facets filter
-    mainFacetsIcons; // Main facets icons
+    filtersPopupContainer; // DOM selector in which to add filters popup
 
 // See more details in the documentation:
 // https://community.algolia.com/instantsearch.js/documentation/#custom-widgets
@@ -35,35 +28,15 @@ var container, // DOM selector in which to add UI
 Paris.instantsearch.widgets.newrefinementList = function refinementList(options) {
 
   return {
-    getConfiguration: function(configuration) {
-      if (options.operator === 'and') {
-        widgetConfiguration = {
-          facets: [options.attributeName]
-        };
-      } else {
-        widgetConfiguration = {
-          disjunctiveFacets: [options.attributeName]
-        };
-      }
-
-      var currentMaxValuesPerFacet = configuration.maxValuesPerFacet || 0;
-      widgetConfiguration.maxValuesPerFacet = Math.max(currentMaxValuesPerFacet, options.mainFacets.length);
-
-      return widgetConfiguration;
-    },
     init: function(params) {
       helper = params.helper;
       settings = options;
-
-      // Set initial main facets
-      setInitialMainFacets();
 
       // Bind filter events
       // $(options.container).on('click', '.filterButton', onClickFilterButton.bind(this));
       $(options.container).on('click', '.apply-filters-button', onClickApplySearchButton.bind(this));
       // $(options.selectedFiltersContainer).on('click', '.selected-filters-buttons-container .filterButton', onClickSelectedFacetFilterButton.bind(this));
       // $(options.selectedFiltersContainer).on('click', '.selected-facets-popup .filterButton', onClickSelectedFacetPopupFilterButton.bind(this));
-      $(options.resetFiltersButtonContainer).on('click', 'a', onClickResetFiltersButton.bind(this));
 
       // Wait until window is done resizing to update some UI rendering
       // PubSub.subscribe('responsive.resize', onResize);
@@ -141,23 +114,6 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
 //   console.log('facetExists', facetExists, selectedFacets);
 // }
 
-function setInitialMainFacets() {
-  $.each(settings.mainFacets, function(i, facet) {
-    // Add them to the helper
-    helper.addDisjunctiveFacetRefinement(settings.attributeName, facet);
-
-    // Add them to the selectedFacets
-    // selectedFacets.push({facet: settings.attributeName, label: facet, value: facet});
-  });
-}
-
-function resetFacets() {
-  helper.clearRefinements();
-  // selectedFacets = [];
-  setInitialMainFacets();
-}
-
-
 
 ////////////////////
 //// UI Actions ////
@@ -208,14 +164,6 @@ function onClickApplySearchButton(e) {
 //   var removedFacet = $(button).attr('data-value');
 //   button.remove();
 // }
-
-// UI click on reset filters button
-function onClickResetFiltersButton(e) {
-  e.preventDefault();
-  resetFacets();
-  helper.search();
-  // updateUI();
-}
 
 ///////////////////////
 //// UI Rendering  ////

@@ -5,7 +5,7 @@ var algoliasearch = require('algoliasearch');
 var instantsearch = require('instantsearch.js');
 var Flickity = require('flickity-imagesloaded');
 var autocomplete = require('autocomplete.js');
-var places =  require('places.js');
+var places = require('places.js');
 var placesAutocompleteDataset =  require('places.js/autocompleteDataset');
 
 var Paris = window.Paris || {};
@@ -78,6 +78,16 @@ Paris.listEquipments = (function(){
         })
       );
 
+      // Custom reset button widget
+      mainSearch.addWidget(
+        Paris.instantsearch.widgets.resetButton({
+          container: '#js-resetbutton',
+          attributeName: 'category_names',
+          operator: 'or',
+          defaultFacets: Paris.config.algolia.main_facets
+        })
+      );
+
       // Current refined values widget
       mainSearch.addWidget(
         instantsearch.widgets.currentRefinedValues({
@@ -125,14 +135,7 @@ Paris.listEquipments = (function(){
       // Custom refinement widget
       var refinementWidget = Paris.instantsearch.widgets.newrefinementList({
         container: '#js-refinementlist',
-        resetFiltersButtonContainer: '.block-search-filters .block-search-top-link',
-        filtersPopupContainer: '.layout-content-filters-popup',
-        attributeName: 'category_names',
-        operator: 'or',
-        sortBy: ['name:asc', 'count:desc'],
-        numberOfFacets: 200,
-        mainFacets: Paris.config.algolia.main_facets,
-        mainFacetsIcons: Paris.config.algolia.main_facets_icon
+        filtersPopupContainer: '.layout-content-filters-popup'
       });
 
       // Search refinement list widget

@@ -120,6 +120,7 @@
           "modifiers": ["gray-background"],
           "title": "Filtrer",
           "top_link": {
+            "id": "js-resetbutton",
             "href": "#",
             "text": "Réinitialiser"
           },
