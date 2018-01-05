@@ -6,13 +6,14 @@ mixin block-search-filters(data)
   - data.modifiers = data.modifiers || []
   - data.modifiers.push("block-search-filters")
   +block-search(data)
-    #js-currentrefined
-    #js-refinementlist
+    .block-search-filters-items-wrapper
+      #js-currentrefined
+      #js-refinementlist.block-search-filters-autocomplete
       //- if data.aroundMeButton
       //-   - data.aroundMeButton.modifiers = ["secondary", "around-me-button"]
       //-   +button(data.aroundMeButton)
-      if data.more
-        button.block-search-filters-more.js-open-search-modal= data.more.text
+    if data.more
+      button.block-search-filters-more.js-open-search-modal= data.more.text
     .block-search-filters-secondary
       #js-facet-open.block-search-filters-secondary-item
       #js-facet-accessibility.block-search-filters-secondary-item

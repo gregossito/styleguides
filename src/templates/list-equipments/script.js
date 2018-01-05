@@ -28,7 +28,6 @@ Paris.listEquipments = (function(){
     var $el = $(selector),
         options = $.extend({}, defaultOptions, userOptions),
         placeQuery = '',
-        api = {},
         mainSearch,
         mapSearch;
 
@@ -113,6 +112,36 @@ Paris.listEquipments = (function(){
             if (icon.length) {
               item.icon = icon[0].icon;
             };
+            return item;
+          }
+        })
+      );
+
+      // Refinement list widget
+      // We use this widget as an autocomplete for categories (hence the "weird" config).
+      mainSearch.addWidget(
+        instantsearch.widgets.refinementList({
+          container: "#js-refinementlist",
+          attributeName: 'category_names',
+          operator: 'or',
+          limit: 5,
+          searchForFacetValues: {
+            placeholder: "Saisir une catégorie...",
+            isAlwaysActive: true,
+            templates: {
+              noResults: '<label class="block-search-filters-autocomplete-item is-disabled">Aucune catégorie trouvée.</label>'
+            }
+          },
+          sortBy: ["refined:desc", "name:asc"],
+          cssClasses: {
+            label: "block-search-filters-autocomplete-item"
+          },
+          templates: {
+            item: '<label class="{{cssClasses.label}}">{{{highlighted}}}</label>',
+          },
+          transformData: function(item){
+            var isSearching = $(".sbx-sffv__input").val() != '';
+            if (!isSearching || item.isRefined) return {};
             return item;
           }
         })
@@ -393,9 +422,11 @@ Paris.listEquipments = (function(){
 
       // On search result
       mainSearch.helper.on('result', function(results, state) {
-
         if (firstLoad === false) {
           $('.layout-content-list').removeClass('searching');
+        } else {
+          // Trick to hide the searchForFacetValues items on first load
+          $('#js-refinementlist .ais-refinement-list--item').remove();
         }
 
         firstLoad = false;
@@ -417,8 +448,6 @@ Paris.listEquipments = (function(){
           // [desktop] Destroy carousel
           destroyCarousel();
         }
-
-        $el.data('api', api);
       });
     }
 

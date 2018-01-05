@@ -11,12 +11,33 @@
       margin-top: 15px;
       width: 100%;
     }
+
+    .sbx-sffv {
+      &__wrapper {
+        height: auto;
+      }
+
+      &__input {
+        @include input-color-placeholder($gray4D);
+        box-shadow: none;
+        font-size: 1.3rem;
+        padding: 5px;
+      }
+
+      &__submit {
+        @include hidden-accessibly;
+      }
+
+      &__reset {
+        right: 10px;
+      }
+    }
   }
 
-  &-items {
+  &-items-wrapper {
     background-color: $white;
     border-radius: 5px;
-    padding: 10px 10px 5px;
+    padding: 10px;
   }
 
   &-item {
@@ -26,6 +47,31 @@
       background-color: $grayF2;
       margin-bottom: 5px;
       margin-right: 5px;
+    }
+  }
+
+  &-autocomplete {
+    &:focus {
+      background-color: $white;
+    }
+
+    &-item {
+      background-color: $white;
+      cursor: pointer;
+      display: block;
+      font-size: 1.3rem;
+      padding: 5px;
+
+      &:hover,
+      &:focus {
+        color: $color-primary;
+      }
+
+      &.is-disabled {
+        color: $black;
+        cursor: default;
+        font-style: italic;
+      }
     }
   }
 
