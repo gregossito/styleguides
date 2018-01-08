@@ -60,7 +60,7 @@ var defaults = {
   mapbox: {},
   cluster: {
     cluster: true,
-    clusterMaxZoom: 14,
+    clusterMaxZoom: 15,
     clusterRadius: 50
   },
   templates: {
