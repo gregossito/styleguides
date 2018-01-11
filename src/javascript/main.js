@@ -4,7 +4,8 @@ require('./externals/bootstrap');
 // load our librairies
 require('./lib/events');
 require('./lib/i18n');
-require('./lib/instantsearchmapbox');
+// require('./lib/instantsearchmapbox');
+require('./lib/instantsearchleaflet');
 require('./lib/instantsearchrefinementlist');
 require('./lib/instantsearchresetbutton');
 require('./lib/maps');

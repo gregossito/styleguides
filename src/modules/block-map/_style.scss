@@ -1,29 +1,5 @@
-@import "../../node_modules/mapbox-gl/dist/mapbox-gl";
-
-.mapboxgl-ctrl-compass {
-	display: none !important;
-}
-
-.mapbox-gl-user-marker {
-	display: block;
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-	background-color: $color-secondary;
-	position: relative;
-
-	&:after {
-		content: "";
-		position: absolute;
-		top: -4px;
-		left: -4px;
-		right: -4px;
-		bottom: -4px;
-		background-color: $color-secondary;
-		opacity: 0.5;
-		border-radius: 50%;
-	}
-}
+@import "../../node_modules/leaflet/dist/leaflet";
+@import "../../node_modules/leaflet.markercluster/dist/MarkerCluster";
 
 .map-caption,
 .map-refresh {
@@ -78,48 +54,64 @@
   }
 }
 
-.mapboxgl-popup {
-
-	.mapboxgl-popup-content {
-    max-width: 50rem;
-
-		.card-content {
-			padding: 10px;
-			padding-right: 60px;
-			font-family: 'Montserrat',sans-serif;
-			font-weight: 300;
-			font-size: 16px;
-			line-height: 20px;
-
-			h3,
-			.card-text {
-				min-height: 0;
-			}
-
-			button {
-				margin-top: 15px;
-			}
-
-			.close-popup-btn {
-				color: $gray99;
-				cursor: pointer;
-				position: absolute;
-				right: 5px;
-				top: 7px;
-				font-size: 20px;
-			}
-
-      .card-buttons {
-        margin-top: 10px;
-      }
-
-		}
-	}
-}
+// .mapboxgl-popup {
+//
+// 	.mapboxgl-popup-content {
+//     max-width: 50rem;
+//
+// 		.card-content {
+// 			padding: 10px;
+// 			padding-right: 60px;
+// 			font-family: 'Montserrat',sans-serif;
+// 			font-weight: 300;
+// 			font-size: 16px;
+// 			line-height: 20px;
+//
+// 			h3,
+// 			.card-text {
+// 				min-height: 0;
+// 			}
+//
+// 			button {
+// 				margin-top: 15px;
+// 			}
+//
+// 			.close-popup-btn {
+// 				color: $gray99;
+// 				cursor: pointer;
+// 				position: absolute;
+// 				right: 5px;
+// 				top: 7px;
+// 				font-size: 20px;
+// 			}
+//
+//       .card-buttons {
+//         margin-top: 10px;
+//       }
+//
+// 		}
+// 	}
+// }
 
 @include small {
-  .map-caption,
-  .mapboxgl-popup {
+  .map-caption {
   	display: none !important;
   }
 }
+
+.marker-cluster {
+	background-clip: padding-box;
+	}
+.marker-cluster div {
+  background-color: $color-secondary;
+  color: $white;
+	width: 40px;
+	height: 40px;
+
+	text-align: center;
+	border-radius: 20px;
+	font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	}
+.marker-cluster span {
+	line-height: 40px;
+	}
