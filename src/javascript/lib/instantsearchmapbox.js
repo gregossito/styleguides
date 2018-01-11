@@ -57,10 +57,12 @@ userMarkerEl.innerHTML = '<span class="mapbox-gl-user-marker"></span>';
  */
 var defaults = {
   mapBoxAccessToken: 'YOUR-ACCESS-TOKEN',
-  mapbox: {},
+  mapbox: {
+    maxZoom: 18
+  },
   cluster: {
     cluster: true,
-    clusterMaxZoom: 15,
+    clusterMaxZoom: 20,
     clusterRadius: 50
   },
   templates: {
