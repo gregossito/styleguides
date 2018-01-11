@@ -203,7 +203,7 @@ Paris.listEquipments = (function(){
 
       // Search results widget
       mainSearch.addWidget(
-        instantsearch.widgets.hits({
+        instantsearch.widgets.infiniteHits({
           container: '#hits-container',
           templates: {
             empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '<br>' + Paris.templates['button']['button']({ text: 'Dézoomer', modifiers: ["secondary", "zoom-out-button"]}) + '</p>',
