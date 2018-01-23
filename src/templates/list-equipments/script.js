@@ -28,41 +28,42 @@ Paris.listEquipments = (function(){
     var $el = $(selector),
         options = $.extend({}, defaultOptions, userOptions),
         placeQuery = '',
-        mainSearch;
+        mainSearch,
+        mapSearch;
 
     function init() {
       initOptions();
 
       // Init instantsearch
-      // mapSearch = instantsearch({
-      //   appId: Paris.config.algolia.id,
-      //   apiKey: Paris.config.algolia.api_key,
-      //   indexName: Paris.config.algolia.indexes[options.index],
-      //   // searchFunction: function(helper) {
-      //   //   var mapState = mapSearch.helper.getState();
-      //   //   if (mapState.insideBoundingBox) {
-      //   //     console.log(mapState.insideBoundingBox);
-      //   //     // mainSearch.helper.insideBoundingBox = mapState.insideBoundingBox;
-      //   //     // mainSearch.helper.search();
-      //   //   }
-      //   //   helper.search();
-      //   // },
-      //   searchParameters: {
-      //     hitsPerPage: 1000 // set it for the first search
-      //   }
-      // });
+      mapSearch = instantsearch({
+        appId: Paris.config.algolia.id,
+        apiKey: Paris.config.algolia.api_key,
+        indexName: Paris.config.algolia.indexes[options.index],
+        // searchFunction: function(helper) {
+        //   var mapState = mapSearch.helper.getState();
+        //   if (mapState.insideBoundingBox) {
+        //     console.log(mapState.insideBoundingBox);
+        //     // mainSearch.helper.insideBoundingBox = mapState.insideBoundingBox;
+        //     // mainSearch.helper.search();
+        //   }
+        //   helper.search();
+        // },
+        searchParameters: {
+          hitsPerPage: 1000 // set it for the first search
+        }
+      });
 
       mainSearch = instantsearch({
         appId: Paris.config.algolia.id,
         apiKey: Paris.config.algolia.api_key,
         indexName: Paris.config.algolia.indexes[options.index],
-        // searchFunction: function(helper) {
-        //   var mainState = mainSearch.helper.getState();
-        //   mainState.hitsPerPage = 1000; // force display of 1k hits
-        //   mapSearch.helper.setState(mainState);
-        //   mapSearch.helper.search();
-        //   helper.search();
-        // },
+        searchFunction: function(helper) {
+          var mainState = mainSearch.helper.getState();
+          mainState.hitsPerPage = 1000; // force display of 1k hits
+          mapSearch.helper.setState(mainState);
+          mapSearch.helper.search();
+          helper.search();
+        },
         searchParameters: options.searchParams,
         numberLocale: "fr"
       });
@@ -217,10 +218,13 @@ Paris.listEquipments = (function(){
 
       // Leaflet widget
       var leafletWidget = Paris.instantsearch.widgets.leaflet({
-        container: '#map'
+        container: '#map',
+        popupHTMLForHit: function(hit) {
+          return renderMapPopupContent(hit);
+        }
       });
 
-      mainSearch.addWidget(leafletWidget);
+      mapSearch.addWidget(leafletWidget);
 
       // Mapbox widget
       // var mapboxWidget = Paris.instantsearch.widgets.mapbox({
@@ -402,7 +406,7 @@ Paris.listEquipments = (function(){
         $(this).blur();
       });
 
-      // mapSearch.start();
+      mapSearch.start();
       mainSearch.start();
 
       // Use change event to detect facets reseting action
@@ -491,7 +495,7 @@ Paris.listEquipments = (function(){
         modifiers: ["secondary", "small"]
       });
       content += '</div>';
-      content += '<span class="ico-btn close-popup-btn"><i class="icon-close-big"></i></span>';
+      // content += '<span class="ico-btn close-popup-btn"><i class="icon-close-big"></i></span>';
       content += '</div>';
       return content;
     }

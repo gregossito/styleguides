@@ -22,6 +22,9 @@ Paris.map = (function(){
     function init(){
       $map = $el.find('.component-map-map');
 
+      // TODO change it to use leaflet, and remove return
+      return;
+
       map = L.mapbox.map($map.get(0), null, {
         center: [options.lat, options.lon],
         hoverToWake: false,

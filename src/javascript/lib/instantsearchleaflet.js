@@ -4,7 +4,7 @@ var Paris = window.Paris || {};
 
 Paris.instantsearch = Paris.instantsearch || {widgets: {}};
 
-var leaflet = require('leaflet');
+var L = require('leaflet');
 require('leaflet.markercluster');
 
 /**
@@ -26,7 +26,11 @@ var defaults = {
     sleep: false,
     zoom: 12,
     maxZoom: 18
-  }
+  },
+  markerClusterGroup: {
+    showCoverageOnHover: false
+  },
+  popupHTMLForHit: function(hit) {},
 };
 
  // instantsearch.js custom widget with plain JavaScript
@@ -45,7 +49,7 @@ Paris.instantsearch.widgets.leaflet = function leaflet(options) {
       //   - templatesConfig: the configuration of the templates
 
       settings = $.extend(true, {}, defaults, options);
-      initMap(options.container);
+      initMap(settings.container);
     },
     render: function(params) {
       // params contains four keys:
@@ -82,11 +86,20 @@ function renderMap() {
     map.removeLayer(markers);
   }
 
-  markers = L.markerClusterGroup();
-  geojsonLayer = L.geoJSON(geojson);
+  markers = L.markerClusterGroup(settings.markerClusterGroup);
+  geojsonLayer = L.geoJSON(geojson, {
+    pointToLayer: function(point, latlng) {
+      var layer = L.marker(latlng, {
+        icon: getIconForPoint(point)
+      });
+      var popupHTML = settings.popupHTMLForHit(point.properties);
+      layer.bindPopup(popupHTML);
+      return layer;
+    }
+  });
 
   markers.addLayer(geojsonLayer);
-  map.fitBounds(markers.getBounds());
+  // map.fitBounds(markers.getBounds());
 
   map.addLayer(markers);
 }
@@ -122,4 +135,15 @@ function hitsToGeoJSON(hits) {
 
   geoJSON.features = features;
   return geoJSON;
+}
+
+function getIconForPoint(point) {
+  var open = point.properties.is_open ? 'open' : 'closed';
+  var icon = L.icon({
+    iconUrl: '../../modules/block-map/ico-' + point.properties.icon + '-' + open + '.svg',
+    iconSize: [49, 55],
+    iconAnchor: [19, 54],
+    popupAnchor: [5, -45]
+  });
+  return icon;
 }

@@ -7,6 +7,7 @@
 	border-radius: 2px;
 	left: 15px;
 	position: absolute;
+	z-index: 1000;
 }
 
 .map-refresh {
@@ -54,44 +55,47 @@
   }
 }
 
-// .mapboxgl-popup {
-//
-// 	.mapboxgl-popup-content {
-//     max-width: 50rem;
-//
-// 		.card-content {
-// 			padding: 10px;
-// 			padding-right: 60px;
-// 			font-family: 'Montserrat',sans-serif;
-// 			font-weight: 300;
-// 			font-size: 16px;
-// 			line-height: 20px;
-//
-// 			h3,
-// 			.card-text {
-// 				min-height: 0;
-// 			}
-//
-// 			button {
-// 				margin-top: 15px;
-// 			}
-//
-// 			.close-popup-btn {
-// 				color: $gray99;
-// 				cursor: pointer;
-// 				position: absolute;
-// 				right: 5px;
-// 				top: 7px;
-// 				font-size: 20px;
-// 			}
-//
-//       .card-buttons {
-//         margin-top: 10px;
-//       }
-//
-// 		}
-// 	}
-// }
+.leaflet-popup {
+	.leaflet-popup-content {
+    max-width: 50rem;
+
+		.card-content {
+			padding: 10px;
+			padding-right: 60px;
+			font-family: 'Montserrat',sans-serif;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 20px;
+
+			h3,
+			.card-text {
+				min-height: 0;
+			}
+
+			button {
+				margin-top: 15px;
+			}
+
+      .card-buttons {
+        margin-top: 10px;
+
+        a {color: white;}
+      }
+		}
+	}
+
+  a.leaflet-popup-close-button {
+    color: $gray99;
+    cursor: pointer;
+    height: auto;
+    font-size: 24px;
+    padding: 12px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: auto;
+  }
+}
 
 @include small {
   .map-caption {
@@ -101,7 +105,7 @@
 
 .marker-cluster {
 	background-clip: padding-box;
-	}
+}
 .marker-cluster div {
   background-color: $color-secondary;
   color: $white;
@@ -111,7 +115,13 @@
 	text-align: center;
 	border-radius: 20px;
 	font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
-	}
+  transform: background-color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $color-secondary-variant;
+  }
+}
 .marker-cluster span {
 	line-height: 40px;
-	}
+}
