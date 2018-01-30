@@ -27,6 +27,8 @@ Paris.map = (function(){
 
       map = L.map($map.get(0), {
         center: [options.lat, options.lon],
+        minZoom: Paris.config.leaflet.minZoom,
+        maxBounds: Paris.config.leaflet.maxBounds,
         hoverToWake: false,
         sleepNote: false,
         sleepOpacity: 1,

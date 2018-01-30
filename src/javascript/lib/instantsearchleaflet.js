@@ -23,6 +23,8 @@ var map,
 var defaults = {
   map: {
     center: [Paris.config.search.paris_coordinates.lat, Paris.config.search.paris_coordinates.lng],
+    minZoom: Paris.config.leaflet.minZoom,
+    maxBounds: Paris.config.leaflet.maxBounds,
     sleep: false,
     zoom: 12,
     maxZoom: 18
