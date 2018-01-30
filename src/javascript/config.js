@@ -125,7 +125,7 @@ Paris.config = {
     "accessToken": "pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw",
     "defaultCenter": {"lat": 48.856578, "lon": 2.351828},
     "minZoom": 11,
-    "maxBounds": [[49.062169, 2.763061], [48.700931, 1.939086]],
+    "maxBounds": [[48.9328056,2.4806104], [48.7645268,2.1119488]],
     "tileLayer": "http://filer.paris.fr/leaflet/paris2/{z}/{x}/{y}.png",
     "tileLayerAttribution": "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
   },
