@@ -60,6 +60,7 @@ Paris.listEquipments = (function(){
         searchFunction: function(helper) {
           var mainState = mainSearch.helper.getState();
           mainState.hitsPerPage = 1000; // force display of 1k hits
+          mainState.page = 0; // force displaying only first page
           mapSearch.helper.setState(mainState);
           mapSearch.helper.search();
           helper.search();

@@ -72,8 +72,8 @@ Paris.instantsearch.widgets.leaflet = function leaflet(options) {
 function initMap(container){
   map = L.map('map', settings.map);
 
-  L.tileLayer('http://filer.paris.fr/leaflet/paris2/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  L.tileLayer(Paris.config.leaflet.tileLayer, {
+    attribution: Paris.config.leaflet.tileLayerAttribution
   }).addTo(map);
 }
 
@@ -81,7 +81,6 @@ function initMap(container){
  * Display pin on the map based on current geoJSON
  */
 function renderMap() {
-
   if (map.hasLayer(markers)) {
     map.removeLayer(markers);
   }
@@ -137,10 +136,17 @@ function hitsToGeoJSON(hits) {
   return geoJSON;
 }
 
-function getIconForPoint(point) {
-  var open = point.properties.is_open ? 'open' : 'closed';
+function getIconForPoint(feature) {
+  var symbol = feature.properties.icon || "nef";
+  var state = "unknown";
+  if (feature.properties.is_open === true) {
+    state = "open";
+  } else if (feature.properties.is_open === false) {
+    state = "closed";
+  }
+  var iconName = 'ico-' + symbol + '-' + state;
   var icon = L.icon({
-    iconUrl: '../../modules/block-map/ico-' + point.properties.icon + '-' + open + '.svg',
+    iconUrl: '../../modules/block-map/' + iconName + '.svg',
     iconSize: [49, 55],
     iconAnchor: [19, 54],
     popupAnchor: [5, -45]
