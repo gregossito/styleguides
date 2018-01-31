@@ -12,7 +12,7 @@ Paris.config = {
     "indexes": {
       "global": "recette_ParisFront",
       "persons": "recette_Elus",
-      "equipments": "Service_production",
+      "equipments": "Service_recette",
     },
     "main_facets": ["Bibliothèques", "Mairies d'arrondissement", "Principaux parcs, jardins et squares", "Piscines", "Tennis"],
     "main_facets_icon": [
@@ -121,11 +121,13 @@ Paris.config = {
   "captcha": {
     "key": "6Lf2DQoTAAAAAKmk3wEFCZuK3FqG00SlQM3o6Yvp"
   },
-  "mapbox": {
+  "leaflet": {
     "accessToken": "pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw",
     "defaultCenter": {"lat": 48.856578, "lon": 2.351828},
-    "defaultBounds": [[48.902157, 2.46976], [48.815575, 2.224122]],
-    "styleLayer": "mapbox://styles/parisnumerique/cis1rkqoj000khinpthppoaqd"
+    "minZoom": 11,
+    "maxBounds": [[48.9328056,2.4806104], [48.7645268,2.1119488]],
+    "tileLayer": "http://filer.paris.fr/leaflet/paris2/{z}/{x}/{y}.png",
+    "tileLayerAttribution": "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
   },
   "search": {
     "paris_coordinates" : {

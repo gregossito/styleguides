@@ -24,7 +24,7 @@
 }
 
 .block-search-cards {
-  .ais-hits {
+  .ais-infinite-hits {
     @include container;
 
     button.zoom-out-button {
@@ -33,7 +33,7 @@
     }
   }
 
-  .ais-hits--item {
+  .ais-infinite-hits--item {
     @include gallery(6 of 12);
     margin-bottom: gutter(12);
     bottom: 0;
@@ -106,7 +106,7 @@
           }
         }
 
-        &.ais-hits__empty {
+        &.ais-infinite-hits__empty {
           padding: 10px;
           background-color: $white;
           text-align: center;
@@ -116,7 +116,7 @@
           }
         }
 
-        .ais-hits--item {
+        .ais-infinite-hits--item {
           margin: 0;
           margin-bottom: 10px;
           margin-top: 10px;

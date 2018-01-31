@@ -70,6 +70,9 @@ Paris.i18n.locales = {
     "active": "actif",
     "inactive": "inactif",
     "new_window": "nouvelle fenêtre",
-    "close_nav": "fermer le menu \"{0}\""
+    "close_nav": "fermer le menu \"{0}\"",
+    "leaflet": {
+      "sleep_button": "désactiver la carte"
+    }
   }
 };
