@@ -307,7 +307,7 @@ Paris.listEquipments = (function(){
           is_open: $(card).find('.card-hours').attr('data-open') == 'true'
         };
         var content = renderMapPopupContent(hit);
-        // mapboxWidget.openHit(content, [card.data('lng'), card.data('lat')], card.data('hitid'));
+        leafletWidget.openHit(content, [card.data('lat'), card.data('lng')], card.data('hitid'));
 
         $('#hits-container').addClass('inactive');
         $(card).removeClass('inactive');
@@ -394,7 +394,7 @@ Paris.listEquipments = (function(){
           mainSearch.helper.setQuery(suggestion.value);
           setTimeout(function() {
             // Timeout fix a bug on android with keyboard toggle
-            // mapboxWidget.flyTo([suggestion.latlng.lng, suggestion.latlng.lat]);
+            leafletWidget.flyTo([suggestion.latlng.lat, suggestion.latlng.lng]);
           }, 500);
           $('.layout-content-list').removeClass('searching');
         } else {
@@ -402,7 +402,7 @@ Paris.listEquipments = (function(){
           mainSearch.helper.setQuery(suggestion.name);
           mainSearch.helper.search();
           var content = renderMapPopupContent(suggestion);
-          // mapboxWidget.openHit(content, [suggestion._geoloc.lng, suggestion._geoloc.lat], suggestion.objectID);
+          leafletWidget.openHit(content, [suggestion._geoloc.lat, suggestion._geoloc.lng], suggestion.objectID);
         }
         $(this).blur();
       });

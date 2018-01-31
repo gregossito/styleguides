@@ -63,7 +63,16 @@ Paris.instantsearch.widgets.leaflet = function leaflet(options) {
       // Convert results to geoJSON and render
       geojson = hitsToGeoJSON(params.results.hits);
       renderMap();
-    }
+    },
+    // Used for example to open a hit from a list outside the map
+    openHit: function(html, coordinates, hitID) {
+      map.flyTo(coordinates, 17);
+      showPopup(html, coordinates);
+      // settings.openedHit(hitID);
+    },
+    flyTo: function(coordinates) {
+      map.flyTo(coordinates, 16);
+    },
   };
 };
 
@@ -154,4 +163,22 @@ function getIconForPoint(feature) {
     popupAnchor: [5, -45]
   });
   return icon;
+}
+
+/**
+ * Display a popup on the map
+ * @param  {String} html        Html to show
+ * @param  {[Coordinates]} coordinates Point coordinates
+ */
+function showPopup(html, coordinates) {
+  if (!html) return;
+
+  var popup = L.popup({
+    offset: [5, -40]
+  }).setLatLng(coordinates)
+    .setContent(html);
+
+  map.once("zoomend", function(){
+    map.openPopup(popup);
+  });
 }
