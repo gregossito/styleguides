@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.9.9 (2017-01-31)
+
+* component `image`: add link on image
+
 ## 1.9.8 (2017-11-23)
 
 * component `opening-hours`: add comment field + scripts
