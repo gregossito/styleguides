@@ -21,6 +21,19 @@ Let's take the `x.β.α` version number:
 * template `list-equipments` added
 * `config.js`: added `equipments` Algolia index
 
+## 1.9.7 (2017-11-21)
+
+* module `municipal-site-list`: fix diplay on 768px
+* module `video-home-news`: fix thumbnail size on > 1300px
+* layout `left-col`: set .aside-wrapper max-width to 260px
+* merge `sections-list-picto` module into `sections-list`
+
+## 1.9.6 (2017-11-16)
+
+* base `icons`: fix backward compatibility on subway/metro icon
+* module `video-home-news`: graphically reworked
+>>>>>>> CHANGELOG.md
+
 ## 1.9.5 (2017-11-13)
 
 * component `card`: changed data structure (removed `src` in `img`)

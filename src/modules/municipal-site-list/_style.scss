@@ -7,7 +7,7 @@
     font-size: 1.8rem;
     font-weight: 300;
     margin-top: 0;
-    max-width: 30rem;
+    max-width: 28rem;
   }
 
   &-items {
@@ -73,6 +73,11 @@
 @include large {
 
   .municipal-site-list {
+
+    &-intro {
+      max-width: 30rem;
+    }
+
     &-items {
       margin-left: 30%;
     }

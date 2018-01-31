@@ -35,6 +35,31 @@
     }
   }
 
+  &-title,
+  &-text {
+    transition: 0.2s ease-in-out color;
+    z-index: 2;
+  }
+
+  &-title {
+    color: $gray33;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.7rem;
+    vertical-align: middle;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  &-text {
+    color: $gray4D;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+    min-height: 60px;
+  }
+
   html.no-js &,
   html.no-touchevents & {
     &:before {
@@ -57,38 +82,14 @@
       }
     }
   }
-
-}
-
-.sections-list-button-title,
-.sections-list-button-text {
-  transition: 0.2s ease-in-out color;
-  z-index: 2;
-}
-
-.sections-list-button-title {
-  color: $gray33;
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.7rem;
-  vertical-align: middle;
-  width: 100%;
-  margin-bottom: 5px;
-}
-
-.sections-list-button-text {
-  color: $gray4D;
-  font-size: 1.4rem;
-  font-weight: 300;
-  line-height: 1.8rem;
-  min-height: 60px;
 }
 
 @include large-and-medium {
+
   .sections-list {
     @include container;
   }
+
   .sections-list-button {
     border-radius: 5px;
     height: 120px;
@@ -111,96 +112,315 @@
   }
 
   /* Home categories colors */
-  .sections-list-item {
+  .sections-list:not(.has-icons) {
+
+    .sections-list-item {
+
+      .sections-list-button {
+        background-color: transparentize($home-cat-blue2, 0.3);
+
+        html.no-js &,
+        html.no-touchevents & {
+          &:before {
+            background-color: $home-cat-blue2;
+          }
+        }
+
+        .sections-list-button-text {
+          color: $gray4D;
+        }
+      }
+
+      &:nth-child(1),
+      &:nth-child(7),
+      &:nth-child(10) {
+
+        .sections-list-button {
+          background-color: transparentize($home-cat-red, 0.3);
+
+          html.no-js &,
+          html.no-touchevents & {
+            &:before {
+              background-color: $home-cat-red;
+            }
+          }
+
+          .sections-list-button-text {
+            color: $white;
+          }
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(11),
+      &:nth-child(13) {
+
+        .sections-list-button {
+          background-color: transparentize($home-cat-blue1, 0.3);
+
+          html.no-js &,
+          html.no-touchevents & {
+            &:before {
+              background-color: $home-cat-blue1;
+            }
+          }
+
+          .sections-list-button-text {
+            color: $white;
+          }
+        }
+      }
+
+      &:nth-child(3),
+      &:nth-child(9),
+      &:nth-child(15) {
+
+        .sections-list-button {
+          background-color: transparentize($home-cat-green, 0.3);
+
+          html.no-js &,
+          html.no-touchevents & {
+            &:before {
+              background-color: $home-cat-green;
+            }
+          }
+
+          .sections-list-button-text {
+            color: $white;
+          }
+        }
+      }
+
+      &:nth-child(5),
+      &:nth-child(8),
+      &:nth-child(14) {
+
+        .sections-list-button {
+          background-color: transparentize($home-cat-yellow, 0.3);
+
+          html.no-js &,
+          html.no-touchevents & {
+            &:before {
+              background-color: $home-cat-yellow;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* With icons */
+  .sections-list.has-icons {
 
     .sections-list-button {
       background-color: transparentize($home-cat-blue2, 0.3);
 
+      &-wrapper {
+        &:before {
+          background-image: url(../modules/sections-list/services-icons.svg);
+          background-position-y: 0;
+          background-repeat: no-repeat;
+          background-size: 1018px 186px;
+          content: "";
+          display: block;
+          float: left;
+          height: 88px;
+          margin: 0 10px 0 -10px;
+          width: 45px;
+        }
+      }
+
+      &-title {
+        font-size: 1.4rem;
+      }
+
+      &-text {
+        color: $gray4D;
+        line-height: 1.6rem;
+      }
+
       html.no-js &,
       html.no-touchevents & {
         &:before {
-          background-color: $home-cat-blue2;
-        }
-      }
-
-      .sections-list-button-text {
-        color: $gray4D;
-      }
-    }
-
-    &:nth-child(1),
-    &:nth-child(7),
-    &:nth-child(10) {
-
-      .sections-list-button {
-        background-color: transparentize($home-cat-red, 0.3);
-
-        html.no-js &,
-        html.no-touchevents & {
-          &:before {
-            background-color: $home-cat-red;
-          }
-        }
-
-        .sections-list-button-text {
-          color: $white;
-        }
-
-      }
-    }
-
-    &:nth-child(2),
-    &:nth-child(11),
-    &:nth-child(13) {
-
-      .sections-list-button {
-        background-color: transparentize($home-cat-blue1, 0.3);
-
-        html.no-js &,
-        html.no-touchevents & {
-          &:before {
-            background-color: $home-cat-blue1;
-          }
-        }
-
-        .sections-list-button-text {
-          color: $white;
+          background-color: $white;
         }
       }
     }
 
-    &:nth-child(3),
-    &:nth-child(9),
-    &:nth-child(15) {
+    .sections-list-item {
 
-      .sections-list-button {
-        background-color: transparentize($home-cat-green, 0.3);
+      &:nth-child(1),
+      &:nth-child(8),
+      &:nth-child(10) {
+        .sections-list-button {
+          background-color: transparentize($home-cat-red, 0.1);
 
-        html.no-js &,
-        html.no-touchevents & {
-          &:before {
-            background-color: $home-cat-green;
+          html.no-js &,
+          html.no-touchevents & {
+            &:before {
+              background-color: $white;
+            }
+          }
+
+          .sections-list-button-text {
+            color: $white;
+          }
+
+          &:hover {
+            .sections-list-button-text {
+              color: $gray4D;
+            }
           }
         }
+      }
 
-        .sections-list-button-text {
-          color: $white;
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(7),
+      &:nth-child(15) {
+
+        .sections-list-button {
+          background-color: transparentize($home-cat-blue1, 0.1);
+
+          html.no-js &,
+          html.no-touchevents & {
+            &:before {
+              background-color: $white;
+            }
+          }
+
+          .sections-list-button-text {
+            color: $white;
+          }
+
+          &:hover {
+            .sections-list-button-text {
+              color: $gray4D;
+            }
+          }
         }
+      }
+
+      &:nth-child(5),
+      &:nth-child(11),
+      &:nth-child(13) {
+
+        .sections-list-button {
+          background-color: transparentize($home-cat-green, 0.1);
+
+          html.no-js &,
+          html.no-touchevents & {
+            &:before {
+              background-color: $white;
+            }
+          }
+
+          .sections-list-button-text {
+            color: $white;
+          }
+
+          &:hover {
+            .sections-list-button-text {
+              color: $gray4D;
+            }
+          }
+        }
+      }
+
+      &:nth-child(3),
+      &:nth-child(6),
+      &:nth-child(14) {
+
+        .sections-list-button {
+          background-color: transparentize($home-cat-yellow, 0.1);
+
+          html.no-js &,
+          html.no-touchevents & {
+            &:before {
+              background-color: $white;
+            }
+          }
+
+          .sections-list-button-text {
+            color: $white;
+          }
+
+          &:hover {
+            .sections-list-button-text {
+              color: $gray4D;
+            }
+          }
+        }
+      }
+
+      &:nth-child(1) .sections-list-button-wrapper:before {
+        background-position-x: 0;
+      }
+      &:nth-child(2) .sections-list-button-wrapper:before {
+        background-position-x: -65px;
+      }
+      &:nth-child(3) .sections-list-button-wrapper:before {
+        background-position-x: -130px;
+      }
+      &:nth-child(4) .sections-list-button-wrapper:before {
+        background-position-x: -195px;
+      }
+      &:nth-child(5) .sections-list-button-wrapper:before {
+        background-position-x: -260px;
+      }
+      &:nth-child(6) .sections-list-button-wrapper:before {
+        background-position-x: -325px;
+      }
+      &:nth-child(7) .sections-list-button-wrapper:before {
+        background-position-x: -390px;
+      }
+      &:nth-child(8) .sections-list-button-wrapper:before {
+        background-position-x: -452px;
+        width: 49px;
+      }
+      &:nth-child(9) .sections-list-button-wrapper:before {
+        background-position-x: -516px;
+        width: 51px;
+      }
+      &:nth-child(10) .sections-list-button-wrapper:before {
+        background-position-x: -584px;
+      }
+      &:nth-child(11) .sections-list-button-wrapper:before {
+        background-position-x: -650px;
+      }
+      &:nth-child(12) .sections-list-button-wrapper:before {
+        background-position-x: -715px;
+      }
+      &:nth-child(13) .sections-list-button-wrapper:before {
+        background-position-x: -780px;
+      }
+      &:nth-child(14) .sections-list-button-wrapper:before {
+        background-position-x: -838px;
+        width: 56px;
+      }
+      &:nth-child(15) .sections-list-button-wrapper:before {
+        background-position-x: -910px;
+      }
+      &:nth-child(16) .sections-list-button-wrapper:before {
+        background-position-x: -973px;
       }
     }
 
-    &:nth-child(5),
-    &:nth-child(8),
-    &:nth-child(14) {
+    html.no-js &,
+    html.no-touchevents & {
 
       .sections-list-button {
-        background-color: transparentize($home-cat-yellow, 0.3);
+        &:before {
+          background-color: $white;
+        }
 
-        html.no-js &,
-        html.no-touchevents & {
-          &:before {
-            background-color: $home-cat-yellow;
-          }
+        &:hover {
+
+          .sections-list-button-wrapper {
+             &:before {
+              background-position-y: -120px;
+             }
+           }
         }
       }
     }
