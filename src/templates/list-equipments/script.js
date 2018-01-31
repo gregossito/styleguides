@@ -220,54 +220,26 @@ Paris.listEquipments = (function(){
       // Leaflet widget
       var leafletWidget = Paris.instantsearch.widgets.leaflet({
         container: '#map',
+        openedHit: function(hitID) {
+          // // [desktop] Add inactive class
+          // var addClassDelay = ($('#hits-container .card[data-hitid="'+hitID+'"]').length > 0) ? 0 : 100;
+          // setTimeout(function() {
+          //   $('#hits-container .card').addClass('inactive');
+          //   $('#hits-container .card[data-hitid="'+hitID+'"]').removeClass('inactive');
+          // }, addClassDelay);
+          //
+          // // [mobile] Go to slide
+          // if (flkyCarousel && flkyCarousel != undefined) {
+          //   var index = $('#hits-container .card[data-hitid="'+hitID+'"]').closest('.carousel-cell').prevAll().length;
+          //   flkyCarousel.select(index);
+          // }
+        },
         popupHTMLForHit: function(hit) {
           return renderMapPopupContent(hit);
         }
       });
 
       mapSearch.addWidget(leafletWidget);
-
-      // Mapbox widget
-      // var mapboxWidget = Paris.instantsearch.widgets.mapbox({
-      //   container: '#map',
-      //   mapBoxAccessToken: Paris.config.mapbox.accessToken,
-      //   mapbox: {
-      //     style: Paris.config.mapbox.styleLayer,
-      //     trackResize: true,
-      //     zoom: 11,
-      //     minZoom: 10,
-      //     center: [Paris.config.search.paris_coordinates.lng, Paris.config.search.paris_coordinates.lat],
-      //     maxBounds:
-      //     [
-      //       [2.021942, 48.731991], // SW coordinates
-      //       [2.698162, 48.985029]  // NE coordinates
-      //     ]
-      //   },
-      //   cluster: {
-      //     circleColor: '#f89cd3',
-      //     circleRadius: 15
-      //   },
-      //   openedHit: function(hitID) {
-      //     // [desktop] Add inactive class
-      //     var addClassDelay = ($('#hits-container .card[data-hitid="'+hitID+'"]').length > 0) ? 0 : 100;
-      //     setTimeout(function() {
-      //       $('#hits-container .card').addClass('inactive');
-      //       $('#hits-container .card[data-hitid="'+hitID+'"]').removeClass('inactive');
-      //     }, addClassDelay);
-      //
-      //     // [mobile] Go to slide
-      //     if (flkyCarousel && flkyCarousel != undefined) {
-      //       var index = $('#hits-container .card[data-hitid="'+hitID+'"]').closest('.carousel-cell').prevAll().length;
-      //       flkyCarousel.select(index);
-      //     }
-      //   },
-      //   popupHTMLForHit: function(hit) {
-      //     return renderMapPopupContent(hit);
-      //   }
-      // });
-
-      // Search map widget
-      // mapSearch.addWidget(mapboxWidget);
 
       // [mobile] On search input focus, add searching class
       $('form').on('focus', '.search-field-input', function(event) {
@@ -313,19 +285,10 @@ Paris.listEquipments = (function(){
         $(card).removeClass('inactive');
       });
 
-      // // Handle click on map close popup button
-      // $('#map').on('click', '.close-popup-btn', function(event) {
-      //   mapboxWidget.removePopup();
-      // });
-      //
-      // $('.search-results-container').on('click', '.around-me-button', function(event) {
-      //   mapboxWidget.geolocate();
-      // });
-      //
-      // // Handle click on zoom out button
-      // $('#hits-container').on('click', 'button.zoom-out-button', function(event) {
-      //   mapboxWidget.zoomOut();
-      // });
+      // Handle click on zoom out button
+      $('#hits-container').on('click', 'button.zoom-out-button', function(event) {
+        leafletWidget.zoomOut();
+      });
 
       // Handle click on go back to search button
       $('.layout-content-list').scroll(function(event) {
@@ -496,7 +459,6 @@ Paris.listEquipments = (function(){
         modifiers: ["secondary", "small"]
       });
       content += '</div>';
-      // content += '<span class="ico-btn close-popup-btn"><i class="icon-close-big"></i></span>';
       content += '</div>';
       return content;
     }

@@ -20,6 +20,13 @@ var map,
   geojsonLayer,
   markers;
 
+  /**
+   * Widget options
+   * @param {Object} map map options passed to the L.map instance, see http://leafletjs.com/reference-1.3.0.html#map-option for details
+   * @param {Object} markerClusterGroup markerClusterGroup options. See https://github.com/Leaflet/Leaflet.markercluster#options
+   * @param {Function} openedHit Function called when a hit has been opened on map. Useful to update some UI.
+   * @param {Function} popupHTMLForHit Function called to retrieve html to display when a hit is opened
+   */
 var defaults = {
   map: {
     center: [Paris.config.search.paris_coordinates.lat, Paris.config.search.paris_coordinates.lng],
@@ -32,6 +39,7 @@ var defaults = {
   markerClusterGroup: {
     showCoverageOnHover: false
   },
+  openedHit: function() {},
   popupHTMLForHit: function(hit) {},
 };
 
@@ -68,10 +76,13 @@ Paris.instantsearch.widgets.leaflet = function leaflet(options) {
     openHit: function(html, coordinates, hitID) {
       map.flyTo(coordinates, 17);
       showPopup(html, coordinates);
-      // settings.openedHit(hitID);
+      settings.openedHit(hitID);
     },
     flyTo: function(coordinates) {
       map.flyTo(coordinates, 16);
+    },
+    zoomOut: function() {
+      map.zoomOut();
     },
   };
 };
@@ -109,7 +120,7 @@ function renderMap() {
   });
 
   markers.addLayer(geojsonLayer);
-  // map.fitBounds(markers.getBounds());
+  map.fitBounds(markers.getBounds());
 
   map.addLayer(markers);
 }
