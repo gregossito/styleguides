@@ -34,6 +34,9 @@ Paris.map = (function(){
         sleepOpacity: 1,
         sleepTime: 750,
         wakeTime: 1000,
+        sleepButton: function(){
+          return new L.Control.SleepMapControl({ prompt: Paris.i18n.t("leaflet/sleep_button") });
+        },
         zoom: options.zoom
       });
 
