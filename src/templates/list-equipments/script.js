@@ -210,6 +210,7 @@ Paris.listEquipments = (function(){
             empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '<br>' + Paris.templates['button']['button']({ text: 'Dézoomer', modifiers: ["secondary", "zoom-out-button"]}) + '</p>',
             item: '<a href="{{url}}" class="card is-open-{{is_open}} cat-{{icon}}" data-hitid="{{objectID}}" data-lat="{{_geoloc.lat}}" data-lng="{{_geoloc.lng}}"><div{{#smaller_header_image}} style="background-image: url({{smaller_header_image}})"{{/smaller_header_image}} class="card-image {{^smaller_header_image}}no-img {{/smaller_header_image}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address_street}}</span><br><span class="card-zipcode">{{address_postcode}}</span> <span class="card-city">{{address_city}}</span></div>{{#open_details}}<div class="card-hours {{#is_open}} open {{/is_open}} {{^is_open}} close {{/is_open}}" data-open="{{is_open}}">{{open_details}}</div>{{/open_details}}</div></a>'
           },
+          showMoreLabel: Paris.i18n.t('search_results/more'),
           cssClasses: {
             root: 'carousel',
             item: 'carousel-cell'

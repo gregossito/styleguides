@@ -38,6 +38,16 @@
     margin-bottom: gutter(12);
     bottom: 0;
   }
+
+  .ais-infinite-hits--showmore {
+    text-align: center;
+
+    button {
+      @extend .button;
+      @extend .button.secondary;
+      @extend .button.action;
+    }
+  }
 }
 
 .block-search-title {
