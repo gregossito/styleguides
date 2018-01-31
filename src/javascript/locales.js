@@ -36,7 +36,6 @@ Paris.i18n.locales = {
       "reset_filters": "Réinitialiser",
       "more_filters": "Afficher la liste complète",
       "more_filters_nb": "Et {0} de plus",
-      "apply_filters": "Appliquer",
       "search_filter": "Rechercher un filtre...",
       "around_me": "Autour de moi",
       "equipements": "Équipements",

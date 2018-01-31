@@ -1,9 +1,7 @@
 'use strict';
-require('velocity-animate');
 
 var algoliasearch = require('algoliasearch');
 var instantsearch = require('instantsearch.js');
-var Flickity = require('flickity-imagesloaded');
 var autocomplete = require('autocomplete.js');
 var places = require('places.js');
 var placesAutocompleteDataset =  require('places.js/autocompleteDataset');
@@ -21,7 +19,6 @@ Paris.listEquipments = (function(){
     mobileMediaQuery: window.matchMedia("(max-width: 767px)")
   };
 
-  var flkyCarousel;
   var firstLoad = true;
 
   function listEquipments(selector, userOptions) {
@@ -210,11 +207,7 @@ Paris.listEquipments = (function(){
             empty: '<p>' + Paris.i18n.t('list_equipments/no_result') + '<br>' + Paris.templates['button']['button']({ text: 'Dézoomer', modifiers: ["secondary", "zoom-out-button"]}) + '</p>',
             item: '<a href="{{url}}" class="card is-open-{{is_open}} cat-{{icon}}" data-hitid="{{objectID}}" data-lat="{{_geoloc.lat}}" data-lng="{{_geoloc.lng}}"><div{{#smaller_header_image}} style="background-image: url({{smaller_header_image}})"{{/smaller_header_image}} class="card-image {{^smaller_header_image}}no-img {{/smaller_header_image}}"></div><div class="card-content"><h3 class="card-title">{{name}}</h3><div class="card-text"><span class="card-address">{{address_street}}</span><br><span class="card-zipcode">{{address_postcode}}</span> <span class="card-city">{{address_city}}</span></div>{{#open_details}}<div class="card-hours {{#is_open}} open {{/is_open}} {{^is_open}} close {{/is_open}}" data-open="{{is_open}}">{{open_details}}</div>{{/open_details}}</div></a>'
           },
-          showMoreLabel: Paris.i18n.t('search_results/more'),
-          cssClasses: {
-            root: 'carousel',
-            item: 'carousel-cell'
-          }
+          showMoreLabel: Paris.i18n.t('search_results/more')
         })
       );
 
@@ -222,18 +215,7 @@ Paris.listEquipments = (function(){
       var leafletWidget = Paris.instantsearch.widgets.leaflet({
         container: '#map',
         openedHit: function(hitID) {
-          // // [desktop] Add inactive class
-          // var addClassDelay = ($('#hits-container .card[data-hitid="'+hitID+'"]').length > 0) ? 0 : 100;
-          // setTimeout(function() {
-          //   $('#hits-container .card').addClass('inactive');
-          //   $('#hits-container .card[data-hitid="'+hitID+'"]').removeClass('inactive');
-          // }, addClassDelay);
-          //
-          // // [mobile] Go to slide
-          // if (flkyCarousel && flkyCarousel != undefined) {
-          //   var index = $('#hits-container .card[data-hitid="'+hitID+'"]').closest('.carousel-cell').prevAll().length;
-          //   flkyCarousel.select(index);
-          // }
+          // do nothing special
         },
         popupHTMLForHit: function(hit) {
           return renderMapPopupContent(hit);
@@ -242,14 +224,8 @@ Paris.listEquipments = (function(){
 
       mapSearch.addWidget(leafletWidget);
 
-      // [mobile] On search input focus, add searching class
-      $('form').on('focus', '.search-field-input', function(event) {
-        $(this).closest('.layout-content-list').addClass('searching');
-      });
-
       // On search submit
       $('form.search-field').submit(function(event) {
-
         // [mobile] On search submit, blur input
         $(this).find('input').blur();
 
@@ -258,7 +234,6 @@ Paris.listEquipments = (function(){
 
         // Close autocomplete when submitting search
         autocomplete('close');
-
       });
 
       // Form submit button will reload the page. Instantsearch has not yet make it fully compatible with forms. So manually handle the submit action by triggering search
@@ -360,7 +335,6 @@ Paris.listEquipments = (function(){
             // Timeout fix a bug on android with keyboard toggle
             leafletWidget.flyTo([suggestion.latlng.lat, suggestion.latlng.lng]);
           }, 500);
-          $('.layout-content-list').removeClass('searching');
         } else {
           placeQuery = '';
           mainSearch.helper.setQuery(suggestion.name);
@@ -386,64 +360,17 @@ Paris.listEquipments = (function(){
       mainSearch.helper.on('search', function(state, lastResults) {
         // Remove inactive card
         $('#hits-container .card').removeClass('inactive');
-        // Carousel doest not support dom changes so it conflicts with instantsearch. Destroy before hits gets refresh
-        destroyCarousel();
-
-        if (options.mobileMediaQuery.matches) {
-          // [mobile] Destroy carousel
-          $('.block-search-results').css('opacity', 0); // fix blinking bug
-        }
       });
 
       // On search result
       mainSearch.helper.on('result', function(results, state) {
-        if (firstLoad === false) {
-          $('.layout-content-list').removeClass('searching');
-        } else {
+        if (firstLoad) {
           // Trick to hide the searchForFacetValues items on first load
           $('#js-refinementlist .ais-refinement-list--item').remove();
         }
 
         firstLoad = false;
-
-        if (options.mobileMediaQuery.matches) {
-          // Carousel doest not support dom changes so it conflicts with instantsearch. Init once search is done
-          initCarousel();
-          $('.block-search-results').css('opacity', 1); // fix blinking bug
-        }
       });
-
-      // On resize
-      $( window ).resize(function() {
-        // Constantly check if carousel needs to be initialized depending on media query
-        if (options.mobileMediaQuery.matches && !$('.layout-content-list').hasClass('searching')) {
-          // [mobile] Init carousel
-          initCarousel();
-        } else {
-          // [desktop] Destroy carousel
-          destroyCarousel();
-        }
-      });
-    }
-
-    function initCarousel() {
-      destroyCarousel();
-      // Since init carousel can be called a lot of times, make sure initialization happens only when necessary
-      if (flkyCarousel === undefined) {
-        flkyCarousel = new Flickity('.carousel', {
-          pageDots: false,
-          adaptiveHeight: true
-        });
-        $('.block-search-results').show();
-      }
-    }
-
-    function destroyCarousel() {
-      // Destroy carousel when necessary
-      if (flkyCarousel && flkyCarousel != undefined) {
-        flkyCarousel.destroy();
-        flkyCarousel = undefined;
-      }
     }
 
     function renderMapPopupContent(hit) {

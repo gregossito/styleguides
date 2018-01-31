@@ -74,7 +74,7 @@
 
 @include small {
   .layout-list-map {
-    height: calc(100vh - #{$rheader-height-small});
+    height: auto;
 
     .layout-content-list,
     .layout-content-map {
@@ -95,23 +95,10 @@
     .layout-content-list {
       height: auto;
       background-color: $grayF2;
-
-      &.searching {
-        height: inherit;
-
-        .block-search-filters {
-          display: block;
-        }
-
-        .block-search-results {
-          display: none !important;
-        }
-      }
-
     }
 
     .layout-content-map {
-      height: calc(100vh - #{$rheader-height-small} - 129px);
+      height: 70vh;
     }
   }
 }

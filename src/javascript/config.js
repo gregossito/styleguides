@@ -17,80 +17,80 @@ Paris.config = {
     "main_facets": ["Bibliothèques", "Mairies d'arrondissement", "Principaux parcs, jardins et squares", "Piscines", "Tennis"],
     "main_facets_icon": [
       {
-        facet: "Piscines",
-        icon: "swimming-pool"
+        "facet": "Piscines",
+        "icon": "swimming-pool"
       },
       {
-        facet: "Bibliothèques",
-        icon: "library"
+        "facet": "Bibliothèques",
+        "icon": "library"
       },
       {
-        facet: "Médiathèques et ludothèques",
-        icon: "library"
+        "facet": "Médiathèques et ludothèques",
+        "icon": "library"
       },
       {
-        facet: "Principaux parcs, jardins et squares",
-        icon: "park"
+        "facet": "Principaux parcs, jardins et squares",
+        "icon": "park"
       },
       {
-        facet: "Jardins, mails, promenades",
-        icon: "park"
+        "facet": "Jardins, mails, promenades",
+        "icon": "park"
       },
       {
-        facet: "Squares",
-        icon: "park"
+        "facet": "Squares",
+        "icon": "park"
       },
       {
-        facet: "Marchés alimentaires et spécialisés",
-        icon: "market"
+        "facet": "Marchés alimentaires et spécialisés",
+        "icon": "market"
       },
       {
-        facet: "Marchés spécialisés",
-        icon: "market"
+        "facet": "Marchés spécialisés",
+        "icon": "market"
       },
       {
-        facet: "Ateliers Beaux-Arts",
-        icon: "art-workshop"
+        "facet": "Ateliers Beaux-Arts",
+        "icon": "art-workshop"
       },
       {
-        facet: "Centres Paris Anim",
-        icon: "animation"
+        "facet": "Centres Paris Anim",
+        "icon": "animation"
       },
       {
-        facet: "Conservatoires municipaux",
-        icon: "conservatoire"
+        "facet": "Conservatoires municipaux",
+        "icon": "conservatoire"
       },
       {
-        facet: "Mairies d'arrondissement",
-        icon: "city-hall"
+        "facet": "Mairies d'arrondissement",
+        "icon": "city-hall"
       },
       {
-        facet: "Hôtel de Ville",
-        icon: "city-hall"
+        "facet": "Hôtel de Ville",
+        "icon": "city-hall"
       },
       {
-        facet: "Maisons des associations",
-        icon: "associations"
+        "facet": "Maisons des associations",
+        "icon": "associations"
       },
       {
-        facet: "Point Paris Emploi",
-        icon: "jobs"
+        "facet": "Point Paris Emploi",
+        "icon": "jobs"
       },
       {
-        facet: "Musées municipaux",
-        icon: "museum"
+        "facet": "Musées municipaux",
+        "icon": "museum"
       },
       {
-        facet: "Tennis",
-        icon: "tennis"
+        "facet": "Tennis",
+        "icon": "tennis"
       },
       {
-        facet: "Théàtres de la Ville et établissements soutenus",
-        icon: "culture"
+        "facet": "Théàtres de la Ville et établissements soutenus",
+        "icon": "culture"
       },
       {
-        facet: "Théàtres pour enfants",
-        icon: "culture"
+        "facet": "Théàtres pour enfants",
+        "icon": "culture"
       }
     ],
     "url": {
@@ -125,7 +125,7 @@ Paris.config = {
     "accessToken": "pk.eyJ1IjoicGFyaXNudW1lcmlxdWUiLCJhIjoiY2loZG1vMnYyMDAzNnY0a3FvNG1nNG55biJ9.MP1qcHkEecFGqSTs9gg7cw",
     "defaultCenter": {"lat": 48.856578, "lon": 2.351828},
     "minZoom": 11,
-    "maxBounds": [[48.9328056,2.4806104], [48.7645268,2.1119488]],
+    "maxBounds": [[49.2,2.56], [48.76,2.11]],
     "tileLayer": "http://filer.paris.fr/leaflet/paris2/{z}/{x}/{y}.png",
     "tileLayerAttribution": "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
   },

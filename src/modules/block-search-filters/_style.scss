@@ -6,12 +6,6 @@
       width: 100%;
     }
 
-    .apply-filters-button {
-      display: none;
-      margin-top: 15px;
-      width: 100%;
-    }
-
     .sbx-sffv {
       &__wrapper {
         height: auto;
@@ -129,14 +123,13 @@
   }
 
   @include small {
-    display: none;
+    // display: none;
 
-    .block-search-header {
-      display: none;
-    }
+    // .block-search-header {
+    //   display: none;
+    // }
 
     .block-search-content {
-      .apply-filters-button,
       .around-me-button {
         display: block;
       }
@@ -151,6 +144,10 @@
         padding: 8px;
         text-align: left;
       }
+    }
+
+    &-secondary {
+      display: block;
     }
 
     &-secondary-filter {

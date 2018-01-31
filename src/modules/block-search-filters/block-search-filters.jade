@@ -17,6 +17,3 @@ mixin block-search-filters(data)
     .block-search-filters-secondary
       #js-facet-open.block-search-filters-secondary-item
       #js-facet-accessibility.block-search-filters-secondary-item
-    if data.applyFiltersButton
-      - data.applyFiltersButton.modifiers = ["apply-filters-button"]
-      +button(data.applyFiltersButton)

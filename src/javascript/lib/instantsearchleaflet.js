@@ -39,6 +39,9 @@ var defaults = {
   markerClusterGroup: {
     showCoverageOnHover: false
   },
+  popupOptions: {
+    autoPanPaddingTopLeft: [50, 5]
+  },
   openedHit: function() {},
   popupHTMLForHit: function(hit) {},
 };
@@ -114,7 +117,7 @@ function renderMap() {
         icon: getIconForPoint(point)
       });
       var popupHTML = settings.popupHTMLForHit(point.properties);
-      layer.bindPopup(popupHTML);
+      layer.bindPopup(popupHTML, settings.popupOptions);
       return layer;
     }
   });
@@ -184,9 +187,13 @@ function getIconForPoint(feature) {
 function showPopup(html, coordinates) {
   if (!html) return;
 
-  var popup = L.popup({
-    offset: [5, -40]
-  }).setLatLng(coordinates)
+  var popupOptions = settings.popupOptions;
+
+  // Force specific offset
+  popupOptions.offset = [5, -40];
+
+  var popup = L.popup(popupOptions)
+    .setLatLng(coordinates)
     .setContent(html);
 
   map.once("zoomend", function(){

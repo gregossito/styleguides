@@ -18,18 +18,9 @@ Paris.instantsearch.widgets.newrefinementList = function refinementList(options)
     init: function(params) {
       helper = params.helper;
       settings = options;
-
-      // Bind filter events
-      $(options.container).on('click', '.apply-filters-button', onClickApplySearchButton.bind(this));
     },
     render: function(params) {
       // Nothing to re-render
     }
   };
 };
-
-function onClickApplySearchButton(e) {
-  helper.search();
-  // renderSelectedFacetFilters();
-  $(e.target).closest('.layout-content-list').removeClass('searching');
-}
