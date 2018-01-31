@@ -57,10 +57,12 @@ userMarkerEl.innerHTML = '<span class="mapbox-gl-user-marker"></span>';
  */
 var defaults = {
   mapBoxAccessToken: 'YOUR-ACCESS-TOKEN',
-  mapbox: {},
+  mapbox: {
+    maxZoom: 18
+  },
   cluster: {
     cluster: true,
-    clusterMaxZoom: 14,
+    clusterMaxZoom: 20,
     clusterRadius: 50
   },
   templates: {
@@ -437,7 +439,7 @@ function renderMap(geoJSON, sourceID) {
 
     // Add a layer for this symbol type if it hasn't been added already.
     if (!map.getLayer(layerID)) {
-      // Add layer for unclestered points
+      // Add layer for unclustered points
       var is_open = feature.properties.is_open;
       if (is_open === null) {is_open = "unknown";}
       map.addLayer({

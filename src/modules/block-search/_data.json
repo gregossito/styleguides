@@ -17,21 +17,7 @@
             "text": "Lien en haut",
             "target": null,
             "title": "Titre du lien"
-          },
-          "bottom_links": [
-            {
-              "href": "#",
-              "text": "Lien en bas #1",
-              "target": null,
-              "title": "Titre du lien"
-            },
-            {
-              "href": "#",
-              "text": "Lien en bas #2",
-              "target": null,
-              "title": "Titre du lien"
-            }
-          ]
+          }
         }
       },
       {
@@ -47,21 +33,7 @@
             "text": "Lien en haut",
             "target": null,
             "title": "Titre du lien"
-          },
-          "bottom_links": [
-            {
-              "href": "#",
-              "text": "Lien en bas #1",
-              "target": null,
-              "title": "Titre du lien"
-            },
-            {
-              "href": "#",
-              "text": "Lien en bas #2",
-              "target": null,
-              "title": "Titre du lien"
-            }
-          ]
+          }
         }
       }
     ]

@@ -24,7 +24,7 @@
 }
 
 .block-search-cards {
-  .ais-hits {
+  .ais-infinite-hits {
     @include container;
 
     button.zoom-out-button {
@@ -33,10 +33,20 @@
     }
   }
 
-  .ais-hits--item {
+  .ais-infinite-hits--item {
     @include gallery(6 of 12);
     margin-bottom: gutter(12);
     bottom: 0;
+  }
+
+  .ais-infinite-hits--showmore {
+    text-align: center;
+
+    button {
+      @extend .button;
+      @extend .button.secondary;
+      @extend .button.action;
+    }
   }
 }
 
@@ -49,8 +59,7 @@
 
 .block-search-top-link,
 .block-search-top-link a,
-.block-search-top-link a div,
-.block-search-bottom-links a {
+.block-search-top-link a div {
   color: $gray33;
   font-size: 13px;
 
@@ -62,20 +71,6 @@
 
 .block-search-top-link {
   float: right;
-}
-
-.block-search-bottom-links {
-  list-style: none;
-  margin: 10px 0 0;
-  padding: 0;
-}
-
-.block-search-bottom-links-item {
-  display: inline-block;
-
-  & + .block-search-bottom-links-item {
-    margin-left: 10px;
-  }
 }
 
 @include small {
@@ -121,7 +116,7 @@
           }
         }
 
-        &.ais-hits__empty {
+        &.ais-infinite-hits__empty {
           padding: 10px;
           background-color: $white;
           text-align: center;
@@ -131,7 +126,7 @@
           }
         }
 
-        .ais-hits--item {
+        .ais-infinite-hits--item {
           margin: 0;
           margin-bottom: 10px;
           margin-top: 10px;

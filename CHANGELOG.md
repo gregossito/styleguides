@@ -17,6 +17,7 @@ Let's take the `x.β.α` version number:
   * added closable button
 * module `card` added
 * module `search-field`: new modifier `block`
+* module `search-modal` added
 * layout `list-map` added
 * template `list-equipments` added
 * `config.js`: added `equipments` Algolia index

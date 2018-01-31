@@ -11,12 +11,6 @@
         "attrs": {},
         "data": {
           "title": "Titre",
-          "bottom_links": [
-            {
-              "href": "#",
-              "text": "Mes favoris"
-            }
-          ],
           "search_field": {
             "action": "#",
             "modifiers": ["small"],

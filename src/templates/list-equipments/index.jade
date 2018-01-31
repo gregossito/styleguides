@@ -1,13 +1,13 @@
 extends ../../layouts/stack/stack
 
 include ../../modules/block-search/block-search
-include ../../modules/block-favorites/block-favorites
 include ../../modules/block-search-field/block-search-field
 include ../../modules/block-search-filters/block-search-filters
 include ../../modules/block-map/block-map
 include ../../modules/card/card
 include ../../modules/notice/notice
 include ../../modules/rheader/rheader
+include ../../modules/search-modal/search-modal
 include ../../modules/skip-links/skip-links
 
 append header
@@ -20,8 +20,8 @@ append header
 append content
   .layout-content
     .layout-list-map
-      .list-equipment-popup.layout-content-filters-popup
-      .layout-content-list.searching
+      +search-modal
+      .layout-content-list
         span.back-search-btn
           i.icon-arrow-top
           span= data.list.block_search_field.back_search_btn
@@ -34,8 +34,6 @@ append content
                 each result in data.list.results
                   .carousel-cell
                     +card(result)
-        .favorites-container
-          +block-search(data.list.block_favorites)
       .layout-content-map
         +block-map(data.map)
 
