@@ -1,4 +1,5 @@
 'use strict';
+require('velocity-animate');
 
 var algoliasearch = require('algoliasearch');
 var instantsearch = require('instantsearch.js');
@@ -36,15 +37,6 @@ Paris.listEquipments = (function(){
         appId: Paris.config.algolia.id,
         apiKey: Paris.config.algolia.api_key,
         indexName: Paris.config.algolia.indexes[options.index],
-        // searchFunction: function(helper) {
-        //   var mapState = mapSearch.helper.getState();
-        //   if (mapState.insideBoundingBox) {
-        //     console.log(mapState.insideBoundingBox);
-        //     // mainSearch.helper.insideBoundingBox = mapState.insideBoundingBox;
-        //     // mainSearch.helper.search();
-        //   }
-        //   helper.search();
-        // },
         searchParameters: {
           hitsPerPage: 1000 // set it for the first search
         }
@@ -342,6 +334,8 @@ Paris.listEquipments = (function(){
           var content = renderMapPopupContent(suggestion);
           leafletWidget.openHit(content, [suggestion._geoloc.lat, suggestion._geoloc.lng], suggestion.objectID);
         }
+        // [mobile] scroll to the map
+        $('#map').velocity("scroll");
         $(this).blur();
       });
 
