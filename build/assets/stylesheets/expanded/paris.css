@@ -7710,6 +7710,7 @@ http://flickity.metafizzy.co
     margin-top: 2rem; }
   .component-rush-hours tr > th {
     font-size: 1.4rem;
+    min-width: 50px;
     text-align: left; }
     .component-rush-hours tr > th[colspan="2"] {
       font-weight: 700;
@@ -7721,6 +7722,10 @@ http://flickity.metafizzy.co
   .component-rush-hours .rush-hours-traffic-icon {
     font-size: 2rem;
     line-height: 1rem; } }
+
+@media (min-width: 768px) {
+  .component-rush-hours tr > th {
+    min-width: 85px; } }
 
 .component-sharelines {
   border-left: 7px solid #F2F2F2;
