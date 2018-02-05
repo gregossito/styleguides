@@ -1,8 +1,12 @@
 .block-search-field {
   position: relative;
 
-  .search-field-input[type="text"]:focus {
-    background-color: $white;
+  .search-field.block .search-field-input[type="text"] {
+    padding: 0 40px 0 10px;
+
+    &:focus {
+      background-color: $white;
+    }
   }
 
   .search-field-submit {
