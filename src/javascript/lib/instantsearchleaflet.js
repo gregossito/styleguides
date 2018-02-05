@@ -40,7 +40,7 @@ var defaults = {
     showCoverageOnHover: false
   },
   popupOptions: {
-    autoPanPaddingTopLeft: [50, 5]
+    autoPanPaddingTopLeft: [40, 5]
   },
   openedHit: function() {},
   popupHTMLForHit: function(hit) {},
