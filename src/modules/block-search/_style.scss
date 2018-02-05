@@ -1,0 +1,100 @@
+@import "../../stylesheets/lib/flickity";
+
+.block-search {
+  padding: 30px;
+
+  // modifiers
+  &.gray-background {
+    background-color: $grayF2;
+
+    & + .block-search.gray-background {
+      padding-top: 0;
+
+      .block-search-header {
+        border-top: 1px solid $grayCC;
+        padding-top: 30px;
+      }
+    }
+  }
+}
+
+.block-search-header {
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+.block-search-cards {
+  .ais-infinite-hits {
+    @include container;
+
+    button.zoom-out-button {
+      margin-top: 10px;
+      display: inline-block;
+    }
+  }
+
+  .ais-infinite-hits--item {
+    @include gallery(6 of 12);
+    margin-bottom: gutter(12);
+    bottom: 0;
+  }
+
+  .ais-infinite-hits--showmore {
+    text-align: center;
+
+    button {
+      @extend .button;
+      @extend .button.secondary;
+      @extend .button.action;
+    }
+  }
+}
+
+.block-search-title {
+  color: $color-secondary;
+  float: left;
+  font-size: 18px;
+  margin: 0;
+}
+
+.block-search-top-link,
+.block-search-top-link a,
+.block-search-top-link a div {
+  color: $gray33;
+  font-size: 13px;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+}
+
+.block-search-top-link {
+  float: right;
+}
+
+@include small {
+  .block-search {
+    padding: 15px;
+
+    &.gray-background + .block-search.gray-background {
+      .block-search-header {
+        padding-top: 20px;
+      }
+    }
+  }
+
+  .block-search-results {
+    padding-top: 0;
+
+    .block-search-header {
+      border-top: 1px solid $grayCC;
+      padding-top: 15px;
+      margin-bottom: 0;
+    }
+
+    .block-search-content {
+      display: none;
+    }
+  }
+}

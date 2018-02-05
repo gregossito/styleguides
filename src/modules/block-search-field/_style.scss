@@ -1,0 +1,35 @@
+.block-search-field {
+  position: relative;
+
+  .search-field.block .search-field-input[type="text"] {
+    padding: 0 40px 0 10px;
+
+    &:focus {
+      background-color: $white;
+    }
+  }
+
+  .search-field-submit {
+    float: right;
+  }
+
+  .ais-search-box--reset {
+    top: 17px;
+    right: 25px;
+  }
+}
+
+@include small {
+  .block-search-field {
+    padding-bottom: 15px;
+
+    .block-search-header {
+      padding-bottom: 15px;
+      border-bottom: 1px solid $grayCC;
+    }
+
+    .block-search-title {
+      float: none;
+    }
+  }
+}

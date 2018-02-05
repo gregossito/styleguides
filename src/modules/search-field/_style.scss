@@ -1,7 +1,37 @@
+@import "../../stylesheets/lib/instantsearch";
+
 .search-field {
-  overflow: hidden;
+  clear: both;
+
+  .ais-search-box {
+    max-width: none;
+  }
 
   // modifiers
+  &.block {
+    .search-field-input[type="text"],
+    .search-field-submit {
+      border-radius: 5px;
+      font-size: 13px;
+      height: 45px;
+      line-height: 45px;
+    }
+
+    .search-field-input[type="text"] {
+      margin-right: 10px;
+      padding: 0 10px;
+      width: calc(100% - 105px);
+    }
+
+    .search-field-submit {
+      background-color: $color-secondary;
+      color: $white;
+      text-transform: uppercase;
+      width: 95px;
+
+    }
+  }
+
   &.small {
     background-color: $white;
     border-radius: 5px;
@@ -62,11 +92,63 @@
   }
 }
 
+.algolia-autocomplete {
+  width: calc(100% - 105px);
+}
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+  width: calc(100% - 10px);
+}
+.algolia-autocomplete .aa-hint {
+  color: $gray99;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+  width: calc(100% - 10px);
+  background-color: $white;
+  border: 1px solid $grayCC;
+  border-radius: 0 0 5px 5px;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+  cursor: pointer;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-bottom: 1px solid $grayCC;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+  border-bottom: 0;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+  color: $color-primary;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.algolia-autocomplete .search-field-input[type="text"].aa-input {
+  width: calc(100% - 10px);
+}
+
+.algolia-autocomplete .ad-example-header {
+  background-color: $grayF2;
+  color: $color-secondary;
+  font-weight: 400;
+  padding: 10px;
+}
 
 @include small {
   .search-field-input[type="text"] {
     font-size: 1.2rem;
     width: calc(100% - 58px);
+  }
+  .block-search-field .search-field-submit {
+      display: none;
+  }
+  .algolia-autocomplete,
+  .algolia-autocomplete .search-field-input[type="text"].aa-input,
+  .algolia-autocomplete .aa-input,
+  .algolia-autocomplete .aa-hint,
+  .algolia-autocomplete .aa-dropdown-menu {
+    width: 100%;
   }
 }
 

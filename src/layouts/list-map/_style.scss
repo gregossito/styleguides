@@ -1,0 +1,105 @@
+.layout-list-map {
+  height: 800px;
+  height: calc(100vh - #{$rheader-height-large-extended});
+  width: 100%;
+
+  .layout-content-list,
+  .layout-content-map {
+    height: 100%,
+  }
+
+  .layout-content-list {
+    background-color: white;
+    float: left;
+    max-width: 560px;
+    overflow-x: auto;
+    width: 100%;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+
+    span.back-search-btn {
+      position: fixed;
+      top: calc(#{$rheader-height-medium} - 20px);
+      left: 0;
+      width: 100%;
+      max-width: 560px;
+      padding: 10px 30px;
+      z-index: 15;
+      background-color: $color-secondary;
+      color: $white;
+      cursor: pointer;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.2s ease all;
+
+      i {
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 5px;
+        vertical-align: top;
+        transform: rotate(180deg);
+        transform-origin: center center;
+        transition: 0.2s ease all;
+      }
+
+      &.visible {
+        opacity: 1;
+        top: $rheader-height-medium;
+        visibility: visible;
+
+        i {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+
+  .layout-content-map {
+    position: relative;
+    background-color: $grayF2;
+    float: right;
+    width: calc(100% - 560px);
+
+    #map {
+      height: 100%;
+    }
+  }
+}
+
+@include large-and-medium {
+  .layout-list-map {
+    height: calc(100vh - #{$rheader-height-medium});
+  }
+}
+
+@include small {
+  .layout-list-map {
+    height: auto;
+
+    .layout-content-list,
+    .layout-content-map {
+      float: none;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .layout-content-list {
+      position: inherit;
+      -webkit-overflow-scrolling: inherit;
+
+      span.back-search-btn {
+        display: none !important;
+      }
+    }
+
+    .layout-content-list {
+      height: auto;
+      background-color: $grayF2;
+    }
+
+    .layout-content-map {
+      height: 450px;
+      max-height: 70vh;
+    }
+  }
+}

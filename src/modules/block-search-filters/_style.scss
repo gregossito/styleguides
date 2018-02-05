@@ -1,0 +1,159 @@
+.block-search-filters {
+  .block-search-content {
+    .around-me-button {
+      display: none;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    .sbx-sffv {
+      &__wrapper {
+        height: auto;
+      }
+
+      &__input {
+        @include input-color-placeholder($gray4D);
+        box-shadow: none;
+        font-size: 1.3rem;
+        padding: 5px;
+      }
+
+      &__submit {
+        @include hidden-accessibly;
+      }
+
+      &__reset {
+        right: 10px;
+      }
+    }
+  }
+
+  &-items-wrapper {
+    background-color: $white;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  &-item {
+    display: inline-block;
+
+    .button.small {
+      background-color: $grayF2;
+      margin-bottom: 5px;
+      margin-right: 5px;
+    }
+  }
+
+  &-autocomplete {
+    &:focus {
+      background-color: $white;
+    }
+
+    &-item {
+      background-color: $white;
+      cursor: pointer;
+      display: block;
+      font-size: 1.3rem;
+      padding: 5px;
+
+      &:hover,
+      &:focus {
+        color: $color-primary;
+      }
+
+      &.is-disabled {
+        color: $black;
+        cursor: default;
+        font-style: italic;
+      }
+    }
+  }
+
+  &-more {
+    background: none;
+    border: 0;
+    color: $color-secondary;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 10px;
+    padding: 5px 0;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $color-primary;
+    }
+  }
+
+  &-secondary {
+    display: flex;
+    margin-top: 5px;
+
+    &-item {
+      display: inline-block;
+      padding: 10px 0;
+      margin-right: 25px;
+      text-align: left;
+
+      .ais-header {
+        display: block;
+        margin-bottom: 10px;
+        color: $color-secondary;
+        font-weight: 400;
+      }
+
+      input[type="checkbox"] {
+        display: inline-block;
+        margin-right: 8px;
+      }
+
+      select {
+        max-width: 20rem;
+        width: 100%;
+      }
+
+      label {
+        align-items: center;
+        display: flex;
+        font-size: 1.3rem;
+        line-height: 3.3rem;
+      }
+    }
+  }
+
+  @include small {
+    // display: none;
+
+    // .block-search-header {
+    //   display: none;
+    // }
+
+    .block-search-content {
+      .around-me-button {
+        display: block;
+      }
+    }
+
+    &-item {
+      display: block;
+
+      .button.small {
+        display: block;
+        margin-right: 0;
+        padding: 8px;
+        text-align: left;
+      }
+    }
+
+    &-secondary {
+      display: block;
+    }
+
+    &-secondary-filter {
+      label {
+        line-height: 1;
+      }
+    }
+  }
+}

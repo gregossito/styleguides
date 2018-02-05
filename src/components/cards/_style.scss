@@ -1,6 +1,10 @@
 .component-card {
   clear: both;
 
+  .card + .card {
+    margin-top: 20px;
+  }
+
   > a {
     background-color: $grayF2;
     border-radius: 5px;

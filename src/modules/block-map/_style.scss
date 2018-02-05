@@ -1,0 +1,141 @@
+@import "../../node_modules/leaflet/dist/leaflet";
+@import "../../node_modules/leaflet.markercluster/dist/MarkerCluster";
+
+.map-caption,
+.map-refresh {
+  background-color: $white;
+  border-radius: 2px;
+  left: 15px;
+  position: absolute;
+  z-index: 600;
+}
+
+.map-refresh {
+  padding: 10px;
+  top: 15px;
+  max-width: calc(100% - 65px);
+
+  label {
+    align-items: center;
+    display: flex;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+
+    input {
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+}
+
+.map-caption {
+  align-items: center;
+  bottom: 25px;
+  font-size: 1.3rem;
+  display: flex;
+  padding: 1rem 2rem;
+
+  &-icon {
+    display: inline-block;
+    background: url('../modules/block-map/ico-nef-unknown.svg') center center no-repeat;
+    height: 5.5rem;
+    margin: 0 1.5rem 0 3rem;
+    width: 4.9rem;
+
+    &:first-child {margin-left: 0;}
+
+    // modifiers
+    &.is-open {
+      background-image: url('../modules/block-map/ico-nef-open.svg');
+    }
+    &.is-closed {
+      background-image: url('../modules/block-map/ico-nef-closed.svg');
+    }
+  }
+}
+
+.leaflet-popup {
+  .leaflet-popup-content {
+    max-width: 50rem;
+
+    .card-content {
+      padding: 10px 0;
+      font-family: 'Montserrat',sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+
+      h3,
+      .card-text {
+        min-height: 0;
+      }
+
+      button {
+        margin-top: 15px;
+      }
+
+      .card-buttons {
+        margin-top: 10px;
+
+        a {color: white;}
+      }
+    }
+  }
+
+  a.leaflet-popup-close-button {
+    color: $gray99;
+    cursor: pointer;
+    height: auto;
+    font-size: 24px;
+    padding: 12px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: auto;
+  }
+}
+
+.marker-cluster {
+  background-clip: padding-box;
+}
+.marker-cluster div {
+  background-color: $color-secondary;
+  color: $white;
+  width: 40px;
+  height: 40px;
+
+  text-align: center;
+  border-radius: 20px;
+  font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  transform: background-color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $color-secondary-variant;
+  }
+}
+.marker-cluster span {
+  line-height: 40px;
+}
+
+@include small {
+  .map-caption {
+    display: none !important;
+  }
+
+  .leaflet-pane.leaflet-popup-pane {
+    z-index: 1100;
+  }
+
+  .leaflet-popup {
+    .leaflet-popup-content {
+      max-width: calc(100vw - 90px);
+    }
+
+    a.leaflet-popup-close-button {
+      right: 0;
+      top: 0;
+    }
+  }
+}

@@ -9,6 +9,19 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+* component `cards`: renamed (formerly `card`)
+* module `block-search` added
+* module `block-search-field` added
+* module `block-search-filters` added
+* module `button`:
+  * added closable button
+* module `card` added
+* module `search-field`: new modifier `block`
+* module `search-modal` added
+* layout `list-map` added
+* template `list-equipments` added
+* `config.js`: added `equipments` Algolia index
+
 ## 1.9.9 (2017-01-31)
 
 * component `image`: add link on image
@@ -29,6 +42,7 @@ Let's take the `x.β.α` version number:
 
 * base `icons`: fix backward compatibility on subway/metro icon
 * module `video-home-news`: graphically reworked
+>>>>>>> CHANGELOG.md
 
 ## 1.9.5 (2017-11-13)
 
@@ -326,6 +340,7 @@ Let's take the `x.β.α` version number:
 
 * all components now accept `modifiers`
 * component `card` added
+* component `opening-hours` added
 * component `rush-hours` added
 * module `block-aside-access` added
 * module `block-aside-contact`: added minimap
@@ -333,9 +348,9 @@ Let's take the `x.β.α` version number:
 * module `icon-switch` added
 * module `notice`: improved text wrapping on small screens
 * layout `left-col`: fix affix bug when there is no `anchors-list`
-* template `single-equipment` added (based on `generic`)
 * template `faq` is now based on `generic`
 * template `generic`: `aside` data is now an array (same behavior as `components`)
+* template `single-equipment` added (based on `generic`)
 * accessibility: improved modules `document-heading`, `rheader`, `sections-panel`
 * DEPRECATED: removed favorite icon from `document-heading` (affects all templates based on `generic`)
 * DEPRECATED: removed `share` from anchors (in component `text`)

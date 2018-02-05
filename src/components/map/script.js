@@ -2,13 +2,15 @@
 
 var Paris = window.Paris || {};
 
+var L = require('leaflet');
+require('leaflet-sleep');
+
 Paris.map = (function(){
 
   var defaultOptions = {
-    lat: Paris.config.mapbox.defaultCenter.lat,
-    lon: Paris.config.mapbox.defaultCenter.lon,
-    zoom: 15,
-    geojson: false // URL of the GeoJSON to display on the map
+    lat: Paris.config.leaflet.defaultCenter.lat,
+    lon: Paris.config.leaflet.defaultCenter.lon,
+    zoom: 15
   };
 
   function map(selector, userOptions){
@@ -17,28 +19,38 @@ Paris.map = (function(){
       $map,
       map,
       defaultHeight,
-      featureLayer;
+      marker,
+      icon;
 
     function init(){
       $map = $el.find('.component-map-map');
 
-      map = L.mapbox.map($map.get(0), null, {
+      map = L.map($map.get(0), {
         center: [options.lat, options.lon],
+        minZoom: Paris.config.leaflet.minZoom,
+        maxBounds: Paris.config.leaflet.maxBounds,
         hoverToWake: false,
         sleepNote: false,
         sleepOpacity: 1,
         sleepTime: 750,
         wakeTime: 1000,
+        sleepButton: function(){
+          return new L.Control.SleepMapControl({ prompt: Paris.i18n.t("leaflet/sleep_button") });
+        },
         zoom: options.zoom
       });
 
       defaultHeight = $el.outerHeight();
 
-      // Add custom style tiles
-      L.mapbox.styleLayer(Paris.config.mapbox.styleLayer).addTo(map);
+      icon = L.icon({
+        iconUrl: '../../modules/block-map/ico-nef-open.svg',
+        iconSize: [49, 55],
+        iconAnchor: [19, 54],
+        popupAnchor: [5, -45]
+      });
 
-      featureLayer = L.mapbox.featureLayer(null, {
-        sanitizer: function(data){return data;} // prevent from removing href
+      L.tileLayer(Paris.config.leaflet.tileLayer, {
+        attribution: Paris.config.leaflet.tileLayerAttribution
       }).addTo(map);
 
       addMarker();
@@ -51,21 +63,9 @@ Paris.map = (function(){
     }
 
     function addMarker(){
-      featureLayer.setGeoJSON({
-        // this feature is in the GeoJSON format: see geojson.org
-        // for the full specification
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          // coordinates here are in longitude, latitude order because
-          // x, y is the standard for GeoJSON and many formats
-          coordinates: [options.lon, options.lat]
-        },
-        properties: {
-          'marker-size': 'large',
-          'marker-color': options.color || '#0C518A'
-        }
-      });
+      marker = L.marker([options.lat, options.lon], {
+        icon: icon
+      }).addTo(map);
     }
 
     initOptions();

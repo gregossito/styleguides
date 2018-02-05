@@ -1,14 +1,16 @@
 {
   "index": {
-    "type": "",
+    "type": "my-module",
     "description": "",
     "cssTheme": "",
     "bodyAttributes": {},
     "examples": [{
-      "title": "",
+      "title": "Standard",
       "description": "",
       "attrs": {},
-      "data": {}
+      "data": {
+
+      }
     }]
   }
 }

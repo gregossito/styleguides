@@ -4,7 +4,10 @@ require('./externals/bootstrap');
 // load our librairies
 require('./lib/events');
 require('./lib/i18n');
-require('./lib/maps');
+// require('./lib/instantsearchmapbox');
+require('./lib/instantsearchleaflet');
+// require('./lib/instantsearchrefinementlist');
+require('./lib/instantsearchresetbutton');
 require('./lib/requestanimationframe');
 require('./lib/responsive');
 require('./lib/scroll');
@@ -38,6 +41,7 @@ require('../modules/person-block/script');
 require('../modules/poll/script');
 require('../modules/quick-access/script');
 require('../modules/rheader/script');
+require('../modules/search-modal/script');
 require('../modules/sections-panel/script');
 require('../modules/share/script');
 require('../modules/video-cover/script');
@@ -47,6 +51,7 @@ require('../modules/video-home-news/script');
 // load our templates
 require('../templates/document/script');
 require('../templates/hub/script');
+require('../templates/list-equipments/script');
 require('../templates/list-persons/script');
 require('../templates/search/script');
 

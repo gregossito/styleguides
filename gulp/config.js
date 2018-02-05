@@ -31,6 +31,7 @@ module.exports = {
       'anchors-list',
       'block-aside-checkboxes',
       'breadcrumbs',
+      'button',
       'buttons',
       'hub-heading',
       'icon-switch',

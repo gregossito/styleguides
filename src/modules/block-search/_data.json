@@ -1,0 +1,41 @@
+{
+  "index": {
+    "type": "block-search",
+    "description": "",
+    "cssTheme": "",
+    "bodyAttributes": {},
+    "examples": [
+      {
+        "title": "Standard",
+        "description": "",
+        "attrs": {},
+        "data": {
+          "title": "Titre",
+          "block": "<strong>salut</strong>",
+          "top_link": {
+            "href": "#",
+            "text": "Lien en haut",
+            "target": null,
+            "title": "Titre du lien"
+          }
+        }
+      },
+      {
+        "title": "Avec fond gris",
+        "description": "",
+        "attrs": {},
+        "data": {
+          "modifiers": ["gray-background"],
+          "title": "Titre",
+          "block": "<strong>salut</strong>",
+          "top_link": {
+            "href": "#",
+            "text": "Lien en haut",
+            "target": null,
+            "title": "Titre du lien"
+          }
+        }
+      }
+    ]
+  }
+}

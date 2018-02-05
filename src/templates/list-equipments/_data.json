@@ -1,0 +1,189 @@
+{
+  "index": {
+    "data": {
+      "title": "Equipements",
+      "bodyModifiers": ["fixed-nav", "list-equipments"],
+      "skip_links": {
+        "items": [
+          {"href": "#content", "text": "Aller au contenu"},
+          {"href": "#navigation", "text": "Aller à la navigation"},
+          {"href": "#search", "text": "Aller à la recherche"}
+        ]
+      },
+      "notices": {
+        "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+        "cnil": {
+          "id": "notice_cnil",
+          "modifiers": ["bottom", "transparent", "fixed", "closed"],
+          "closable": {
+            "href": "#",
+            "text": "Accepter",
+            "modifiers": ["action"],
+            "attributes": {"data-action": "close"}
+          },
+          "block": "Le site Paris.fr utilise des cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. En poursuivant votre navigation sur ce site, vous acceptez leur utilisation. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
+        }
+      },
+      "rheader": {
+        "modifiers": ["fixed"],
+        "logo": {
+          "href": "../home/",
+          "text": "Paris",
+          "title": "Retour à l’accueil – Paris"
+        },
+        "locales": [
+          {"href": "#fr", "lang": "fr", "text": "français", "current": true},
+          {"href": "#en", "lang": "en", "text": "English"},
+          {"href": "#es", "lang": "es", "text": "español"}
+        ],
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi",
+            "current": true
+          },
+          "menu": {
+            "href": "../nav/",
+            "text": "Menu"
+          }
+        },
+        "navigation_label": "navigation principale",
+        "items": [
+          {"href": "../hub/", "text": "Services et infos pratiques"},
+          {"href": "../subhome-news/", "text": "Actualités"},
+          {"href": "#", "text": "Entreprises"},
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
+          },
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
+          }
+        ],
+        "quick_access": {
+          "search": {
+            "action": "../search",
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Valider la recherche sur le site",
+              "icon": true
+            },
+            "around": {
+              "href": "http://meslieux.paris.fr",
+              "text": "Autour de moi",
+              "target": "_blank"
+            },
+            "close_label": "Fermer le moteur de recherche"
+          },
+          "results": {
+            "button": {
+              "href": "../search",
+              "text": "Voir tous les résultats"
+            }
+          }
+        }
+      },
+      "list": {
+        "block_search_field": {
+          "modifiers": [
+            "gray-background"
+          ],
+          "title": "Rechercher",
+          "search_field": {
+            "action": "#",
+            "modifiers": ["block"],
+            "input": {
+              "placeholder": "Equipement, adresse, métro, arrondissement…"
+            },
+            "submit": {
+              "text": "Valider",
+              "title": "Valider la recherche"
+            }
+          },
+          "back_search_btn": "Revenir à la recherche"
+        },
+        "block_search_filters": {
+          "modifiers": ["gray-background"],
+          "title": "Filtrer",
+          "top_link": {
+            "id": "js-resetbutton",
+            "href": "#",
+            "text": "Réinitialiser"
+          },
+          "popup_links": [
+            {
+              "href": "#",
+              "text": "Annuler"
+            },
+            {
+              "href": "#",
+              "text": "Valider"
+            }
+          ],
+          "popup_search_placeholder": "Rechercher un filtre...",
+          "filter_items": [
+            {
+              "href": "#",
+              "icon": "library",
+              "text": "Bibliothèques"
+            },
+            {
+              "href": "#",
+              "icon": "city-hall",
+              "text": "Mairies d'arrondissement"
+            },
+            {
+              "href": "#",
+              "icon": "park",
+              "text": "Principaux parcs, jardins et squares"
+            },
+            {
+              "href": "#",
+              "icon": "swimming-pool",
+              "text": "Piscines"
+            },
+            {
+              "href": "#",
+              "icon": "tennis",
+              "text": "Tennis"
+            }
+          ],
+          "more": {
+            "href": "#",
+            "text": "Afficher la liste complète"
+          },
+          "aroundMeButton": {
+            "text": "Autour de moi"
+          }
+        },
+        "block_search_results": {
+          "title": "Résultats",
+          "modifiers": ["block-search-results"],
+          "title_id": "stats-container"
+        },
+        "results": [
+        ]
+      },
+      "map": {
+        "refresh_map_title": "Rechercher quand je déplace la carte"
+      },
+      "button_top": {
+        "accessibility_label": "retour en haut de la page"
+      }
+    }
+  }
+}

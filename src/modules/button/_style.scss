@@ -26,7 +26,7 @@
     left: 0;
     position: absolute;
     top: 0;
-    transition: width 0.35s ease;
+    transition: width 0.35s ease, background 0.35s ease;
     width: 0;
     z-index: -1;
   }
@@ -64,6 +64,37 @@
     background-color: $white;
     color: $black;
     &:after {background-color: $grayF2}
+
+    &.stateful {
+      &:hover, &:focus {color: $black;}
+      &:after {background-color: $grayEE;}
+      &.active {color: $white;}
+      &.active:after {background-color: $green1;}
+    }
+  }
+
+  &.closable {
+    &.small {
+      padding-right: 32px;
+    }
+
+    &:before {
+      @include icon-font;
+      content: map-get($icons, "close");
+      font-size: 30px;
+      display: block;
+      position: absolute;
+      right: 3px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:hover,
+    &:focus {
+      &:before {
+        opacity: 0.5;
+      }
+    }
   }
 
   &.stateful {
@@ -71,7 +102,8 @@
     color: $color-secondary;
     padding: 15px;
     outline: 0;
-    &:after {background-color: $color-secondary;}
+    &:after {background-color: $color-tertiary-variant;}
+    &.active:after {background-color: $color-secondary;}
 
     &:hover, &:focus, &.active {
       color: $white;
@@ -101,8 +133,9 @@
 
   &.icon {
     .icon {
-      font-weight: 12px;
+      font-size: 18px;
       margin-right: 10px;
+      vertical-align: top;
     }
   }
 
@@ -117,6 +150,34 @@
       margin-right: 5px;
       vertical-align: middle;
     }
+  }
+
+  &.white {
+    background-color: $white;
+    color: $black;
+    &:after {background-color: $grayF2}
+  }
+
+  &.wide {
+    padding: 15px 60px;
+  }
+
+  &.small {
+    font-size: 13px;
+    font-weight: 300;
+    padding: 12px 10px;
+  }
+
+  &.confirm {
+    background-color: $green1;
+    color: $white;
+    &:after {background-color: darken($green1, 10%);}
+  }
+
+  &.discard {
+    background-color: $gray4D;
+    color: $white;
+    &:after {background-color: darken($gray4D, 10%);}
   }
 }
 

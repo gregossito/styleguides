@@ -45,7 +45,10 @@ function disableSize(size) {
 }
 
 $(document).ready(function(){
-  attachFastClick(document.body);
+  // Disable FastClick on list-equipements to prevent conflicts with autocomplete and mapbox
+  if (!$('body').hasClass('list-equipments')) {
+    attachFastClick(document.body);
+  }
   defer(onResize);
   $(window).on('resize', throttle(onResize, 1000));
 });

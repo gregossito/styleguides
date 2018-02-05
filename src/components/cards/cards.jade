@@ -1,0 +1,9 @@
+include ../../modules/card/card
+
+mixin cards(data)
+  .component.component-cards(class=data.modifiers)
+    each card in data.items
+      - card = JSON.parse(JSON.stringify(card)) // clone the data object
+      - card.modifiers = card.modifiers || []
+      - card.modifiers.push('large')
+      +card(card)

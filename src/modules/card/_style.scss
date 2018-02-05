@@ -1,0 +1,303 @@
+.card {
+  background-color: $grayF2;
+  border-radius: 5px;
+  color: $gray33;
+  display: block;
+  max-width: 230px;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: background 0.35s ease;
+  transition: color 0.35s ease;
+  width: 100%;
+
+  &.inactive {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    color: $black;
+    .card-image:after {opacity: 0;}
+  }
+
+  // modifiers
+  &.large {
+    background-color: $grayF2;
+    color: $gray33;
+    display: block;
+    max-width: 100%;
+    min-height: 220px;
+    position: relative;
+    text-decoration: none;
+    transition: background 0.35s ease;
+
+    .card-title {
+      margin-top: 10px;
+      max-width: 320px;
+    }
+
+    .card-text {
+      font-size: 15px;
+    }
+  }
+
+  .card-image {
+
+    &.no-img {
+
+      &:before {
+          content: "";
+          @include icon-font;
+          color: $white;
+          text-align: center;
+          font-size: 40px;
+          opacity: 0.5;
+          line-height: 120px;
+      }
+    }
+  }
+
+  &.cat-animation {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-art-workshop {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-library {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-conservatoire {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-jobs {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-city-hall {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-market {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-museum {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-park {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-swimming-pool {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+  &.cat-tennis {
+
+    .card-image {
+
+      &.no-img {
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+.card-image {
+  background: center center no-repeat;
+  background-color: $gray99;
+  background-size: cover;
+  border-radius: 5px;
+  height: 120px;
+  overflow: hidden;
+  position: relative;
+
+  .is-open-true & {
+    background-color: $green1;
+  }
+  .is-open-false & {
+    background-color: $color-primary-variant;
+  }
+
+  &.no-img {
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &:after {
+    background: $black;
+    content: "";
+    display: block;
+    height: 100%;
+    opacity: 0.1;
+    transition: opacity 0.35s ease;
+    width: 100%;
+  }
+}
+
+.card-content {
+  position: relative;
+  padding: 20px;
+
+  .open {color: $green1;}
+  .close {color: $color-primary-variant;}
+}
+
+.card-category {
+  color: $color-secondary;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  min-height: 48px;
+  width: calc(100% - 25px);
+}
+
+.card-text {
+  min-height: 38px;
+  margin-bottom: 5px;
+  color: $gray99;
+}
+
+
+@include small {
+
+  .card {
+
+    // modifiers
+    &.large {
+      .card-image {
+        height: 150px;
+        height: 30vh;
+        width: 100%;
+      }
+    }
+
+    &.inactive {
+      opacity: 1;
+    }
+  }
+}
+
+@include large-and-medium {
+  .card {
+
+    // modifiers
+    &.large {
+      .card-image {
+        height: 100%;
+        left: 0;
+        max-width: 400px;
+        position: absolute;
+        top: 0;
+        width: 45%;
+      }
+
+      .card-content {
+        margin-left: 45%;
+        width: 55%;
+      }
+    }
+  }
+}
