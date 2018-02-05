@@ -13,4 +13,8 @@ mixin image(data)
           sizes="(min-width: 1160px) 770px, 100vw"
           alt=data.alt title=title)
     else
-      img(src=data.src alt=data.alt title=title)
+      if data.href
+        a(href=data.href)
+          img(src=data.src alt=data.alt title=title)
+      else
+        img(src=data.src alt=data.alt title=title)

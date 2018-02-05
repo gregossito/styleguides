@@ -35,6 +35,7 @@
             "items": [
               {
                 "caption": "Du 1er octobre au 31 décembre 2017",
+                "comment": "Commentaire pertinent sur les horaires",
                 "items": [
                   {"title": "Lundi", "text": "07h à 8h30"},
                   {"title": "Mardi", "text": "07h à 8h30"},
@@ -47,6 +48,7 @@
               },
               {
                 "caption": "Du 29 octobre au 28 février 2018",
+                "comment": "Commentaire pertinent sur les horaires",
                 "items": [
                   {"title": "Lundi", "text": "07h à 8h30"},
                   {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
@@ -59,6 +61,7 @@
               },
               {
                 "caption": "Du 1er octobre au 31 décembre 2017",
+                "comment": "Commentaire pertinent sur les horaires",
                 "items": [
                   {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
                   {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
@@ -71,6 +74,7 @@
               },
               {
                 "caption": "Du 29 octobre au 28 février 2018",
+                "comment": "Commentaire pertinent sur les horaires",
                 "items": [
                   {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
                   {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},

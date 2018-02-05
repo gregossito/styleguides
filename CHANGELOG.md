@@ -9,6 +9,15 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.9.9 (2017-01-31)
+
+* component `image`: add link on image
+
+## 1.9.8 (2017-11-23)
+
+* component `opening-hours`: add comment field + scripts
+* component `accordion`: fix ckeditor equipement classes
+
 ## 1.9.7 (2017-11-21)
 
 * module `municipal-site-list`: fix diplay on 768px
