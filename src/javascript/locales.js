@@ -32,16 +32,9 @@ Paris.i18n.locales = {
     },
     "list_equipments": {
       "no_result": "Aucun résultat ne correspond à votre recherche, modifiez votre zone de recherche ou retirez un filtre.",
-      "no_favorite": "Vous n'avez pas encore de favoris, cliquez sur l'étoile pour ajouter un équipement.",
-      "reset_filters": "Réinitialiser",
-      "more_filters": "Afficher la liste complète",
-      "more_filters_nb": "Et {0} de plus",
-      "search_filter": "Rechercher un filtre...",
-      "around_me": "Autour de moi",
       "equipements": "Équipements",
       "addresses": "Adresses",
       "button_view": "Voir la fiche complète",
-      "cancel": "Annuler",
       "confirm": "Valider"
     },
     "person_block": {
