@@ -38,6 +38,8 @@ mixin opening-hours(data)
             table(summary=item.summary)
               if item.caption
                 caption= item.caption
+                  if item.comment
+                    div.other-hours-comment= item.comment
               if item.items
                 for i in item.items
                   tr
