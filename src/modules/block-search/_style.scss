@@ -76,10 +76,20 @@
 @include small {
   .block-search {
     padding: 15px;
+
+    &.gray-background + .block-search.gray-background {
+      .block-search-header {
+        padding-top: 20px;
+      }
+    }
   }
 
   .block-search-results {
+    padding-top: 0;
+
     .block-search-header {
+      border-top: 1px solid $grayCC;
+      padding-top: 15px;
       margin-bottom: 0;
     }
 
