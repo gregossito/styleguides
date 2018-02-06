@@ -56,137 +56,38 @@
     }
   }
 
-  &.cat-animation {
-
-    .card-image {
-
-      &.no-img {
-
-        &:before {
-          content: "";
-        }
-      }
-    }
+  &.cat-animation .card-image.no-img:before {
+    content: map-get($icons, "animation");
   }
-  &.cat-art-workshop {
-
-    .card-image {
-
-      &.no-img {
-
-        &:before {
-          content: "";
-        }
-      }
-    }
+  &.cat-art-workshop .card-image.no-img:before {
+    content: map-get($icons, "art-workshop");
   }
-  &.cat-library {
-
-    .card-image {
-
-      &.no-img {
-
-        &:before {
-          content: "";
-        }
-      }
-    }
+  &.cat-library .card-image.no-img:before {
+    content: map-get($icons, "library");
   }
-  &.cat-conservatoire {
-
-    .card-image {
-
-      &.no-img {
-
-        &:before {
-          content: "";
-        }
-      }
-    }
+  &.cat-conservatoire .card-image.no-img:before {
+    content: map-get($icons, "conservatoire");
   }
-  &.cat-jobs {
-
-    .card-image {
-
-      &.no-img {
-
-        &:before {
-          content: "";
-        }
-      }
-    }
+  &.cat-jobs .card-image.no-img:before {
+    content: map-get($icons, "jobs");
   }
-  &.cat-city-hall {
-
-    .card-image {
-
-      &.no-img {
-
-        &:before {
-          content: "";
-        }
-      }
-    }
+  &.cat-city-hall .card-image.no-img:before {
+    content: map-get($icons, "city-hall");
   }
-  &.cat-market {
-
-    .card-image {
-
-      &.no-img {
-
-        &:before {
-          content: "";
-        }
-      }
-    }
+  &.cat-market .card-image.no-img:before {
+    content: map-get($icons, "market");
   }
-  &.cat-museum {
-
-    .card-image {
-
-      &.no-img {
-
-        &:before {
-          content: "";
-        }
-      }
-    }
+  &.cat-museum .card-image.no-img:before {
+    content: map-get($icons, "museum");
   }
-  &.cat-park {
-
-    .card-image {
-
-      &.no-img {
-
-        &:before {
-          content: "";
-        }
-      }
-    }
+  &.cat-park .card-image.no-img:before {
+    content: map-get($icons, "park");
   }
-  &.cat-swimming-pool {
-
-    .card-image {
-
-      &.no-img {
-
-        &:before {
-          content: "";
-        }
-      }
-    }
+  &.cat-swimming-pool .card-image.no-img:before {
+    content: map-get($icons, "swimming-pool");
   }
-  &.cat-tennis {
-
-    .card-image {
-
-      &.no-img {
-
-        &:before {
-          content: "";
-        }
-      }
-    }
+  &.cat-tennis .card-image.no-img:before {
+    content: map-get($icons, "tennis");
   }
 }
 
