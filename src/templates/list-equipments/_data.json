@@ -102,7 +102,7 @@
           "modifiers": [
             "gray-background"
           ],
-          "title": "Rechercher",
+          "title": "Rechercher un équipement",
           "search_field": {
             "action": "#",
             "modifiers": ["block"],
@@ -118,7 +118,7 @@
         },
         "block_search_filters": {
           "modifiers": ["gray-background"],
-          "title": "Filtrer",
+          "title": "Filtrer par catégorie",
           "top_link": {
             "id": "js-resetbutton",
             "href": "#",

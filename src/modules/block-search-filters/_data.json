@@ -11,7 +11,7 @@
         "attrs": {},
         "data": {
           "modifiers": ["gray-background"],
-          "title": "Filtrer",
+          "title": "Filtrer par catégorie",
           "top_link": {
             "href": "#",
             "text": "Réinitialiser"
