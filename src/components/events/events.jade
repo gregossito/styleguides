@@ -1,4 +1,4 @@
-include ../../components/card/card
+include ../../modules/card/card
 include ../../modules/button/button
 include ../../modules/news-list/news-list
 
@@ -19,4 +19,5 @@ mixin events(data)
         +news-list(news_list_data)
       else
         each item in data.items
+          - item.modifiers = ["large"]
           +card(item)

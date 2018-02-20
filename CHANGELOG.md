@@ -9,7 +9,7 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
-* component `cards`: renamed (formerly `card`)
+* component `card` removed
 * module `block-search` added
 * module `block-search-field` added
 * module `block-search-filters` added
@@ -42,7 +42,6 @@ Let's take the `x.β.α` version number:
 
 * base `icons`: fix backward compatibility on subway/metro icon
 * module `video-home-news`: graphically reworked
->>>>>>> CHANGELOG.md
 
 ## 1.9.5 (2017-11-13)
 

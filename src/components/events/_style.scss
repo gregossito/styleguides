@@ -67,6 +67,10 @@
       }
     }
   }
+
+  .card.large + .card.large {
+    margin-top: 2rem;
+  }
 }
 
 @include small {
