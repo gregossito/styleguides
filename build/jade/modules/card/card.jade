@@ -1,0 +1,11 @@
+mixin card(data)
+  a.card(href=data.href class=data.modifiers)
+    .card-image(style="background-image: url(#{data.image.src})")
+    .card-content
+      if data.category
+        .card-category= data.category
+      h3.card-title= data.title
+      if data.text
+        .card-text!= data.text
+      if data.hours
+        .card-hours(class=data.modifiers)= data.hours

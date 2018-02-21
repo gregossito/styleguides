@@ -1,0 +1,29 @@
+{
+  "index": {
+    "type": "block-search-field",
+    "description": "",
+    "cssTheme": "",
+    "bodyAttributes": {},
+    "examples": [
+      {
+        "title": "Standard",
+        "description": "",
+        "attrs": {},
+        "data": {
+          "title": "Titre",
+          "search_field": {
+            "action": "#",
+            "modifiers": ["small"],
+            "input": {
+              "placeholder": "Rechercher un nom..."
+            },
+            "submit": {
+              "text": "Ok",
+              "title": "Valider la recherche par nom"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

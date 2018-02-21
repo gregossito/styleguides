@@ -1,0 +1,13 @@
+mixin block-search(data)
+  .block-search(class=data.modifiers)
+    .block-search-header
+      h3.block-search-title(id=data.title_id)= data.title
+      - var top_link = data.top_link || {};
+      if top_link.href
+        span.block-search-top-link
+          a(href=top_link.href title=top_link.text id=top_link.id)= top_link.text
+    .block-search-content
+      if block
+        block
+      else if data.block
+        != data.block

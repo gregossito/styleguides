@@ -1,0 +1,75 @@
+{
+  "index": {
+    "type": "block-search-filters",
+    "description": "",
+    "cssTheme": "",
+    "bodyAttributes": {},
+    "examples": [
+      {
+        "title": "Standard",
+        "description": "",
+        "attrs": {},
+        "data": {
+          "modifiers": ["gray-background"],
+          "title": "Filtrer par catégorie",
+          "top_link": {
+            "href": "#",
+            "text": "Réinitialiser"
+          },
+          "filter_items": [
+            {
+              "href": "#",
+              "icon": "swimming-pool",
+              "text": "Piscines"
+            },
+            {
+              "href": "#",
+              "icon": "museum",
+              "text": "Musées municipaux"
+            },
+            {
+              "href": "#",
+              "icon": "park",
+              "text": "Parcs et jardins"
+            },
+            {
+              "href": "#",
+              "icon": "library",
+              "text": "Bibliothèques"
+            },
+            {
+              "href": "#",
+              "icon": "association-house",
+              "text": "Maisons des assos"
+            },
+            {
+              "href": "#",
+              "icon": "conservatoire",
+              "text": "Conservatoires"
+            },
+            {
+              "href": "#",
+              "icon": "cultural",
+              "text": "Centres d'animation"
+            },
+            {
+              "href": "#",
+              "icon": "market",
+              "text": "Marchés"
+            },
+            {
+              "href": "#",
+              "icon": "city-hall",
+              "text": "Mairies"
+            },
+            {
+              "href": "#",
+              "icon": "art-studio",
+              "text": "Ateliers des Beaux-Arts"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
