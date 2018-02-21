@@ -1,0 +1,9 @@
+include ../block-search/block-search
+include ../search-field/search-field
+
+mixin block-search-field(data)
+  - data = JSON.parse(JSON.stringify(data)) // clone the data object
+  - data.modifiers = data.modifiers || []
+  - data.modifiers.push("block-search-field")
+  +block-search(data)
+    +search-field(data.search_field)

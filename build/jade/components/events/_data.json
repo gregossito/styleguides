@@ -117,7 +117,7 @@
             {
               "href": "#",
               "target": "_blank",
-              "image": "../../modules/news-card/image.jpg",
+              "image": {"src": "../../modules/card/1.jpg"},
               "category": "Concert",
               "title": "Les vendredis du conservatoire",
               "counters": {
@@ -128,7 +128,7 @@
             {
               "href": "#",
               "target": "_blank",
-              "image": "../../modules/news-card/image.jpg",
+              "image": {"src": "../../modules/card/1.jpg"},
               "category": "Actualité",
               "title": "Parcours de découverte du théâtre (entre 11 et 15 ans)",
               "counters": {

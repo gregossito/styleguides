@@ -30,6 +30,13 @@ Paris.i18n.locales = {
     "list_persons": {
       "no_result": "Personne ne correspond à votre recherche."
     },
+    "list_equipments": {
+      "no_result": "Aucun résultat ne correspond à votre recherche, modifiez votre zone de recherche ou retirez un filtre.",
+      "equipements": "Équipements",
+      "addresses": "Adresses",
+      "button_view": "Voir la fiche complète",
+      "confirm": "Valider"
+    },
     "person_block": {
       "button_view": "Voir la fiche"
     },
@@ -55,6 +62,9 @@ Paris.i18n.locales = {
     "active": "actif",
     "inactive": "inactif",
     "new_window": "nouvelle fenêtre",
-    "close_nav": "fermer le menu \"{0}\""
+    "close_nav": "fermer le menu \"{0}\"",
+    "leaflet": {
+      "sleep_button": "désactiver la carte"
+    }
   }
 };
