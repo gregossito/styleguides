@@ -1,9 +1,40 @@
-.image-texte{
-	background: red;
-	display: flex;
-	align-items: stretch;
+$image-texte-breakpoint: 680px;
 
-	.flex{
-		flex: 1 auto;
+.image-texte{
+	display: flex;
+
+	.image-content-img{
+		@media (min-width: $image-texte-breakpoint) and (max-width: 900px){
+			max-width: 300px;
+		}
 	}
+
+	.text-content{
+		padding-left: 40px;
+
+		&-title{
+			font-weight: bold;
+			margin: 0;
+			padding: 0;
+		}
+
+		&-subtitle{
+			font-weight: bold;
+		}
+	}
+}
+
+@media (max-width: $image-texte-breakpoint) {
+	.image-texte{
+		flex-direction : column;
+		
+		.image-content-img{
+			max-width: 100%;
+		}
+
+		.text-content{
+			padding: 20px 0 0 0;
+		}
+
+	}			
 }

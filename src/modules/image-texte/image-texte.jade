@@ -1,7 +1,8 @@
 mixin image-texte(data)
 	.image-texte
 		.image-content
-			img.image-content-img(src= data.img.src alt="")
-		.texte-content
-			h3.image-content-title= data.title
-			p.image-content-text= data.text
+			img.image-content-img(src= data.img.src)
+		.text-content.component-text
+			h3.text-content-title= data.title
+			p.text-content-subtitle= data.subtitle
+			p.text-content-text= data.text
