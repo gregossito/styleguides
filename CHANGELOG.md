@@ -7,6 +7,10 @@ Let's take the `x.β.α` version number:
 * `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
 * `x` is for major release involving a more careful integration of the styleguide
 
+## 1.10.2 (2017-02-22)
+
+* component `block-search` remove temporaly button extend css
+
 ## 1.10.1 (2017-02-22)
 
 * component `block-search` remove temporaly button extend css
