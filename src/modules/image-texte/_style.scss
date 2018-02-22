@@ -1,11 +1,19 @@
-$image-texte-breakpoint: 680px;
-
 .image-texte{
 	display: flex;
 
+	/* modifiers */
+	&.align-right{
+		.image-content{
+			order: 1;
+		}
+		.text-content{
+			padding: 0 40px 0 0;
+		}	
+	}
+	
 	.image-content-img{
-		@media (min-width: $image-texte-breakpoint) and (max-width: 900px){
-			max-width: 300px;
+		@media (min-width: 768px) and (max-width: 900px){
+			width: 45vw;
 		}
 	}
 
@@ -24,17 +32,22 @@ $image-texte-breakpoint: 680px;
 	}
 }
 
-@media (max-width: $image-texte-breakpoint) {
+@include small{
 	.image-texte{
-		flex-direction : column;
-		
-		.image-content-img{
-			max-width: 100%;
-		}
+		&.align-left,
+		&.align-right{
+			flex-direction : column;
+			.image-content{
+				order: 0;		
+				.image-content-img{
+					max-width: 100%;
+				}
+			}
 
-		.text-content{
-			padding: 20px 0 0 0;
+			.text-content{
+				order: 1;
+				padding: 20px 0 0 0;
+			}
 		}
-
 	}			
 }
