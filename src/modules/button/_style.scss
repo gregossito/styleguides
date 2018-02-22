@@ -1,4 +1,4 @@
-.button {
+%button {
   background-color: $color-primary;
   border: none;
   border-radius: 5px;
@@ -45,12 +45,25 @@
     opacity: 0.5;
     pointer-events: none;
   }
+}
+
+%button-secondary {
+  background-color: $color-secondary;
+  padding: 15px;
+  &:after {background-color: darken($color-secondary, 10%);}
+}
+
+%button-action {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.button {
+  @extend %button;
 
   // modifiers
   &.secondary {
-    background-color: $color-secondary;
-    padding: 15px;
-    &:after {background-color: darken($color-secondary, 10%);}
+    @extend %button-secondary;
   }
 
   &.tertiary {
@@ -127,8 +140,7 @@
   }
 
   &.action {
-    font-size: 1.3rem;
-    text-transform: uppercase;
+    @extend %button-secondary;
   }
 
   &.icon {

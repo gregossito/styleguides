@@ -42,11 +42,11 @@
   .ais-infinite-hits--showmore {
     text-align: center;
 
-    /*    button {
-      @extend .button;
-      @extend .button.secondary;
-      @extend .button.action;
-    }*/
+    button {
+      @extend %button;
+      @extend %button-secondary;
+      @extend %button-action;
+    }
   }
 }
 
