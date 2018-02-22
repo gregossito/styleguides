@@ -1129,7 +1129,7 @@ th {
   font-size: 1.4rem; }
   .block-content-newsletter .block-content-link {
     margin-top: 15px; }
-  .block-content-newsletter .button, .block-content-newsletter .expandmore__button {
+  .block-content-newsletter .button, .block-content-newsletter .block-search-cards .ais-infinite-hits--showmore button, .block-search-cards .ais-infinite-hits--showmore .block-content-newsletter button, .block-content-newsletter .expandmore__button {
     height: 45px;
     padding-top: 1px;
     padding-bottom: 1px;
@@ -1280,11 +1280,11 @@ th {
 
 .block-content {
   max-width: 600px; }
-  .block-content a:not(.button):not(.expandmore__button) {
+  .block-content a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
     color: inherit;
     border-color: inherit;
     text-decoration: none; }
-    .block-content a:not(.button):not(.expandmore__button):hover {
+    .block-content a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover {
       border-color: transparent; }
   .block-content.color-secondary-background {
     color: #FFF; }
@@ -2218,12 +2218,7 @@ http://flickity.metafizzy.co
     clear: none; }
 
 .block-search-cards .ais-infinite-hits--showmore {
-  text-align: center;
-  /*    button {
-      @extend .button;
-      @extend .button.secondary;
-      @extend .button.action;
-    }*/ }
+  text-align: center; }
 
 .block-search-title {
   color: #0C518A;
@@ -2327,7 +2322,7 @@ http://flickity.metafizzy.co
 
 .block-search-filters-item {
   display: inline-block; }
-  .block-search-filters-item .button.small, .block-search-filters-item .small.expandmore__button {
+  .block-search-filters-item .button.small, .block-search-filters-item .block-search-cards .ais-infinite-hits--showmore button.small, .block-search-cards .ais-infinite-hits--showmore .block-search-filters-item button.small, .block-search-filters-item .small.expandmore__button {
     background-color: #F2F2F2;
     margin-bottom: 5px;
     margin-right: 5px; }
@@ -2397,7 +2392,7 @@ http://flickity.metafizzy.co
     display: block; }
   .block-search-filters-item {
     display: block; }
-    .block-search-filters-item .button.small, .block-search-filters-item .small.expandmore__button {
+    .block-search-filters-item .button.small, .block-search-filters-item .block-search-cards .ais-infinite-hits--showmore button.small, .block-search-cards .ais-infinite-hits--showmore .block-search-filters-item button.small, .block-search-filters-item .small.expandmore__button {
       display: block;
       margin-right: 0;
       padding: 8px;
@@ -2472,7 +2467,7 @@ http://flickity.metafizzy.co
   .breadcrumbs {
     white-space: nowrap; } }
 
-.button, .expandmore__button {
+.button, .block-search-cards .ais-infinite-hits--showmore button, .expandmore__button {
   background-color: #DF225A;
   border: none;
   border-radius: 5px;
@@ -2490,7 +2485,7 @@ http://flickity.metafizzy.co
   transition: color 0.35s ease;
   vertical-align: middle;
   z-index: 1; }
-  .button:after, .expandmore__button:after {
+  .button:after, .block-search-cards .ais-infinite-hits--showmore button:after, .expandmore__button:after {
     background-color: #b41a48;
     border-radius: 5px;
     content: "";
@@ -2502,38 +2497,38 @@ http://flickity.metafizzy.co
     transition: width 0.35s ease, background 0.35s ease;
     width: 0;
     z-index: -1; }
-  .button:hover:after, .expandmore__button:hover:after, .button:focus:after, .expandmore__button:focus:after, .button[disabled]:after, [disabled].expandmore__button:after, .button.disabled:after, .disabled.expandmore__button:after {
+  .button:hover:after, .block-search-cards .ais-infinite-hits--showmore button:hover:after, .expandmore__button:hover:after, .button:focus:after, .block-search-cards .ais-infinite-hits--showmore button:focus:after, .expandmore__button:focus:after, .button[disabled]:after, .block-search-cards .ais-infinite-hits--showmore button[disabled]:after, [disabled].expandmore__button:after, .button.disabled:after, .block-search-cards .ais-infinite-hits--showmore button.disabled:after, .disabled.expandmore__button:after {
     width: 100%; }
-  .button[disabled], [disabled].expandmore__button, .button.disabled, .disabled.expandmore__button {
+  .button[disabled], .block-search-cards .ais-infinite-hits--showmore button[disabled], [disabled].expandmore__button, .button.disabled, .block-search-cards .ais-infinite-hits--showmore button.disabled, .disabled.expandmore__button {
     opacity: 0.5;
     pointer-events: none; }
-  .button.secondary, .expandmore__button {
+  .button.secondary, .block-search-cards .ais-infinite-hits--showmore button, .expandmore__button {
     background-color: #0C518A;
     padding: 15px; }
-    .button.secondary:after, .expandmore__button:after {
+    .button.secondary:after, .block-search-cards .ais-infinite-hits--showmore button:after, .expandmore__button:after {
       background-color: #08355b; }
-  .button.tertiary, .tertiary.expandmore__button {
+  .button.tertiary, .block-search-cards .ais-infinite-hits--showmore button.tertiary, .tertiary.expandmore__button {
     background-color: #F8E273;
     color: #1A1A1A;
     padding: 15px; }
-    .button.tertiary:after, .tertiary.expandmore__button:after {
+    .button.tertiary:after, .block-search-cards .ais-infinite-hits--showmore button.tertiary:after, .tertiary.expandmore__button:after {
       background-color: #f6d842; }
-  .button.white, .white.expandmore__button {
+  .button.white, .block-search-cards .ais-infinite-hits--showmore button.white, .white.expandmore__button {
     background-color: #FFF;
     color: #000; }
-    .button.white:after, .white.expandmore__button:after {
+    .button.white:after, .block-search-cards .ais-infinite-hits--showmore button.white:after, .white.expandmore__button:after {
       background-color: #F2F2F2; }
-    .button.white.stateful:hover, .white.stateful.expandmore__button:hover, .button.white.stateful:focus, .white.stateful.expandmore__button:focus {
+    .button.white.stateful:hover, .block-search-cards .ais-infinite-hits--showmore button.white.stateful:hover, .white.stateful.expandmore__button:hover, .button.white.stateful:focus, .block-search-cards .ais-infinite-hits--showmore button.white.stateful:focus, .white.stateful.expandmore__button:focus {
       color: #000; }
-    .button.white.stateful:after, .white.stateful.expandmore__button:after {
+    .button.white.stateful:after, .block-search-cards .ais-infinite-hits--showmore button.white.stateful:after, .white.stateful.expandmore__button:after {
       background-color: #EEE; }
-    .button.white.stateful.active, .white.stateful.active.expandmore__button {
+    .button.white.stateful.active, .block-search-cards .ais-infinite-hits--showmore button.white.stateful.active, .white.stateful.active.expandmore__button {
       color: #FFF; }
-    .button.white.stateful.active:after, .white.stateful.active.expandmore__button:after {
+    .button.white.stateful.active:after, .block-search-cards .ais-infinite-hits--showmore button.white.stateful.active:after, .white.stateful.active.expandmore__button:after {
       background-color: #43B57E; }
-  .button.closable.small, .closable.small.expandmore__button {
+  .button.closable.small, .block-search-cards .ais-infinite-hits--showmore button.closable.small, .closable.small.expandmore__button {
     padding-right: 32px; }
-  .button.closable:before, .closable.expandmore__button:before {
+  .button.closable:before, .block-search-cards .ais-infinite-hits--showmore button.closable:before, .closable.expandmore__button:before {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'paris-icons' !important;
     speak: none;
@@ -2553,74 +2548,74 @@ http://flickity.metafizzy.co
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); }
-  .button.closable:hover:before, .closable.expandmore__button:hover:before, .button.closable:focus:before, .closable.expandmore__button:focus:before {
+  .button.closable:hover:before, .block-search-cards .ais-infinite-hits--showmore button.closable:hover:before, .closable.expandmore__button:hover:before, .button.closable:focus:before, .block-search-cards .ais-infinite-hits--showmore button.closable:focus:before, .closable.expandmore__button:focus:before {
     opacity: 0.5; }
-  .button.stateful, .stateful.expandmore__button {
+  .button.stateful, .block-search-cards .ais-infinite-hits--showmore button.stateful, .stateful.expandmore__button {
     background-color: #F8E273;
     color: #0C518A;
     padding: 15px;
     outline: 0; }
-    .button.stateful:after, .stateful.expandmore__button:after {
+    .button.stateful:after, .block-search-cards .ais-infinite-hits--showmore button.stateful:after, .stateful.expandmore__button:after {
       background-color: #D8C045; }
-    .button.stateful.active:after, .stateful.active.expandmore__button:after {
+    .button.stateful.active:after, .block-search-cards .ais-infinite-hits--showmore button.stateful.active:after, .stateful.active.expandmore__button:after {
       background-color: #0C518A; }
-    .button.stateful:hover, .stateful.expandmore__button:hover, .button.stateful:focus, .stateful.expandmore__button:focus, .button.stateful.active, .stateful.active.expandmore__button {
+    .button.stateful:hover, .block-search-cards .ais-infinite-hits--showmore button.stateful:hover, .stateful.expandmore__button:hover, .button.stateful:focus, .block-search-cards .ais-infinite-hits--showmore button.stateful:focus, .stateful.expandmore__button:focus, .button.stateful.active, .block-search-cards .ais-infinite-hits--showmore button.stateful.active, .stateful.active.expandmore__button {
       color: #FFF; }
-      .button.stateful:hover:after, .stateful.expandmore__button:hover:after, .button.stateful:focus:after, .stateful.expandmore__button:focus:after, .button.stateful.active:after, .stateful.active.expandmore__button:after {
+      .button.stateful:hover:after, .block-search-cards .ais-infinite-hits--showmore button.stateful:hover:after, .stateful.expandmore__button:hover:after, .button.stateful:focus:after, .block-search-cards .ais-infinite-hits--showmore button.stateful:focus:after, .stateful.expandmore__button:focus:after, .button.stateful.active:after, .block-search-cards .ais-infinite-hits--showmore button.stateful.active:after, .stateful.active.expandmore__button:after {
         width: 100%; }
-    .button.stateful[disabled], .stateful[disabled].expandmore__button, .button.stateful.disabled, .stateful.disabled.expandmore__button {
+    .button.stateful[disabled], .block-search-cards .ais-infinite-hits--showmore button.stateful[disabled], .stateful[disabled].expandmore__button, .button.stateful.disabled, .block-search-cards .ais-infinite-hits--showmore button.stateful.disabled, .stateful.disabled.expandmore__button {
       background-color: transparent;
       border: 1px solid #333;
       color: #333; }
-      .button.stateful[disabled]:after, .stateful[disabled].expandmore__button:after, .button.stateful.disabled:after, .stateful.disabled.expandmore__button:after {
+      .button.stateful[disabled]:after, .block-search-cards .ais-infinite-hits--showmore button.stateful[disabled]:after, .stateful[disabled].expandmore__button:after, .button.stateful.disabled:after, .block-search-cards .ais-infinite-hits--showmore button.stateful.disabled:after, .stateful.disabled.expandmore__button:after {
         background-color: transparent; }
-  .button.wide, .wide.expandmore__button {
+  .button.wide, .block-search-cards .ais-infinite-hits--showmore button.wide, .wide.expandmore__button {
     padding: 15px 60px; }
-  .button.small, .small.expandmore__button {
+  .button.small, .block-search-cards .ais-infinite-hits--showmore button.small, .small.expandmore__button {
     font-size: 1.1rem;
     padding: 12px; }
-  .button.action, .expandmore__button {
+  .button.action, .block-search-cards .ais-infinite-hits--showmore button, .expandmore__button {
     font-size: 1.3rem;
     text-transform: uppercase; }
-  .button.icon .icon, .icon.expandmore__button .icon {
+  .button.icon .icon, .block-search-cards .ais-infinite-hits--showmore button.icon .icon, .icon.expandmore__button .icon {
     font-size: 18px;
     margin-right: 10px;
     vertical-align: top; }
-  .button.marker, .marker.expandmore__button {
+  .button.marker, .block-search-cards .ais-infinite-hits--showmore button.marker, .marker.expandmore__button {
     background-color: #43B57E;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 5rem; }
-    .button.marker:after, .marker.expandmore__button:after {
+    .button.marker:after, .block-search-cards .ais-infinite-hits--showmore button.marker:after, .marker.expandmore__button:after {
       background-color: #359064; }
-    .button.marker .icon, .marker.expandmore__button .icon {
+    .button.marker .icon, .block-search-cards .ais-infinite-hits--showmore button.marker .icon, .marker.expandmore__button .icon {
       font-size: 3rem;
       margin-right: 5px;
       vertical-align: middle; }
-  .button.white, .white.expandmore__button {
+  .button.white, .block-search-cards .ais-infinite-hits--showmore button.white, .white.expandmore__button {
     background-color: #FFF;
     color: #000; }
-    .button.white:after, .white.expandmore__button:after {
+    .button.white:after, .block-search-cards .ais-infinite-hits--showmore button.white:after, .white.expandmore__button:after {
       background-color: #F2F2F2; }
-  .button.wide, .wide.expandmore__button {
+  .button.wide, .block-search-cards .ais-infinite-hits--showmore button.wide, .wide.expandmore__button {
     padding: 15px 60px; }
-  .button.small, .small.expandmore__button {
+  .button.small, .block-search-cards .ais-infinite-hits--showmore button.small, .small.expandmore__button {
     font-size: 13px;
     font-weight: 300;
     padding: 12px 10px; }
-  .button.confirm, .confirm.expandmore__button {
+  .button.confirm, .block-search-cards .ais-infinite-hits--showmore button.confirm, .confirm.expandmore__button {
     background-color: #43B57E;
     color: #FFF; }
-    .button.confirm:after, .confirm.expandmore__button:after {
+    .button.confirm:after, .block-search-cards .ais-infinite-hits--showmore button.confirm:after, .confirm.expandmore__button:after {
       background-color: #359064; }
-  .button.discard, .discard.expandmore__button {
+  .button.discard, .block-search-cards .ais-infinite-hits--showmore button.discard, .discard.expandmore__button {
     background-color: #4D4D4D;
     color: #FFF; }
-    .button.discard:after, .discard.expandmore__button:after {
+    .button.discard:after, .block-search-cards .ais-infinite-hits--showmore button.discard:after, .discard.expandmore__button:after {
       background-color: #343434; }
 
 @media (min-width: 1160px) {
-  .button, .expandmore__button {
+  .button, .block-search-cards .ais-infinite-hits--showmore button, .expandmore__button {
     white-space: nowrap; } }
 
 .button-top {
@@ -3215,11 +3210,11 @@ http://flickity.metafizzy.co
     line-height: 2.8rem;
     margin: 0 auto 15px;
     max-width: 260px; }
-  .get-involved-nav-item .button, .get-involved-nav-item .expandmore__button {
+  .get-involved-nav-item .button, .get-involved-nav-item .block-search-cards .ais-infinite-hits--showmore button, .block-search-cards .ais-infinite-hits--showmore .get-involved-nav-item button, .get-involved-nav-item .expandmore__button {
     background-color: #A51B50;
     color: #FAE46A;
     font-weight: 700; }
-    .get-involved-nav-item .button:after, .get-involved-nav-item .expandmore__button:after {
+    .get-involved-nav-item .button:after, .get-involved-nav-item .block-search-cards .ais-infinite-hits--showmore button:after, .block-search-cards .ais-infinite-hits--showmore .get-involved-nav-item button:after, .get-involved-nav-item .expandmore__button:after {
       background-color: #8b1743; }
 
 .get-involved-list-items {
@@ -4067,7 +4062,7 @@ html.no-cssanimations .jumbotron-slider {
 
 .municipal-site-list li {
   display: inline-block; }
-  .municipal-site-list li .button, .municipal-site-list li .expandmore__button {
+  .municipal-site-list li .button, .municipal-site-list li .block-search-cards .ais-infinite-hits--showmore button, .block-search-cards .ais-infinite-hits--showmore .municipal-site-list li button, .municipal-site-list li .expandmore__button {
     background: #F2F2F2;
     color: #0C518A;
     font-size: 1.6rem;
@@ -4078,9 +4073,9 @@ html.no-cssanimations .jumbotron-slider {
     min-height: 6.4rem;
     min-width: 6.4rem;
     padding: 0 1rem; }
-    .municipal-site-list li .button:after, .municipal-site-list li .expandmore__button:after {
+    .municipal-site-list li .button:after, .municipal-site-list li .block-search-cards .ais-infinite-hits--showmore button:after, .block-search-cards .ais-infinite-hits--showmore .municipal-site-list li button:after, .municipal-site-list li .expandmore__button:after {
       background: #0C518A; }
-    .municipal-site-list li .button:hover, .municipal-site-list li .expandmore__button:hover, .municipal-site-list li .button:focus, .municipal-site-list li .expandmore__button:focus {
+    .municipal-site-list li .button:hover, .municipal-site-list li .block-search-cards .ais-infinite-hits--showmore button:hover, .block-search-cards .ais-infinite-hits--showmore .municipal-site-list li button:hover, .municipal-site-list li .expandmore__button:hover, .municipal-site-list li .button:focus, .municipal-site-list li .block-search-cards .ais-infinite-hits--showmore button:focus, .block-search-cards .ais-infinite-hits--showmore .municipal-site-list li button:focus, .municipal-site-list li .expandmore__button:focus {
       color: #FFF; }
 
 @media (max-width: 767px) {
@@ -4973,15 +4968,15 @@ html.no-touchevents .news-card-counter {
 
 .person-block-button {
   text-align: right; }
-  .person-block-button .button.icon .icon, .person-block-button .icon.expandmore__button .icon {
+  .person-block-button .button.icon .icon, .person-block-button .block-search-cards .ais-infinite-hits--showmore button.icon .icon, .block-search-cards .ais-infinite-hits--showmore .person-block-button button.icon .icon, .person-block-button .icon.expandmore__button .icon {
     display: none;
     font-size: 2.8rem;
     margin-right: 0; }
 
 @media (max-width: 767px) {
-  .person-block-button .button.icon, .person-block-button .icon.expandmore__button {
+  .person-block-button .button.icon, .person-block-button .block-search-cards .ais-infinite-hits--showmore button.icon, .block-search-cards .ais-infinite-hits--showmore .person-block-button button.icon, .person-block-button .icon.expandmore__button {
     padding: 10px 12px; }
-    .person-block-button .button.icon .icon, .person-block-button .icon.expandmore__button .icon {
+    .person-block-button .button.icon .icon, .person-block-button .block-search-cards .ais-infinite-hits--showmore button.icon .icon, .block-search-cards .ais-infinite-hits--showmore .person-block-button button.icon .icon, .person-block-button .icon.expandmore__button .icon {
       display: inline-block; }
   .person-block-button .button-text {
     position: absolute !important;
@@ -5287,7 +5282,7 @@ html.no-touchevents .news-card-counter {
   .quick-access-buttons {
     padding-bottom: 20px;
     text-align: center; }
-    .quick-access-buttons .button, .quick-access-buttons .expandmore__button {
+    .quick-access-buttons .button, .quick-access-buttons .block-search-cards .ais-infinite-hits--showmore button, .block-search-cards .ais-infinite-hits--showmore .quick-access-buttons button, .quick-access-buttons .expandmore__button {
       display: block;
       margin-bottom: 10px;
       white-space: normal; }
@@ -6934,9 +6929,9 @@ body.rheader-mobile-nav-open {
     left: 0;
     right: 0;
     z-index: 5; }
-    .search-modal-footer .button, .search-modal-footer .expandmore__button {
+    .search-modal-footer .button, .search-modal-footer .block-search-cards .ais-infinite-hits--showmore button, .block-search-cards .ais-infinite-hits--showmore .search-modal-footer button, .search-modal-footer .expandmore__button {
       margin-right: 10px; }
-      .search-modal-footer .button:last-of-type, .search-modal-footer .expandmore__button:last-of-type {
+      .search-modal-footer .button:last-of-type, .search-modal-footer .block-search-cards .ais-infinite-hits--showmore button:last-of-type, .block-search-cards .ais-infinite-hits--showmore .search-modal-footer button:last-of-type, .search-modal-footer .expandmore__button:last-of-type {
         margin-right: 0; }
   @media (max-width: 767px) {
     .search-modal-header {
@@ -7926,11 +7921,11 @@ body.rheader-mobile-nav-open {
       color: #000;
       padding: 20px;
       text-align: center; }
-      .video-cover.with-block .video-cover-placeholder a:not(.button):not(.expandmore__button) {
+      .video-cover.with-block .video-cover-placeholder a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
         color: #DF225A; }
-      .video-cover.with-block .video-cover-placeholder .button, .video-cover.with-block .video-cover-placeholder .expandmore__button {
+      .video-cover.with-block .video-cover-placeholder .button, .video-cover.with-block .video-cover-placeholder .block-search-cards .ais-infinite-hits--showmore button, .block-search-cards .ais-infinite-hits--showmore .video-cover.with-block .video-cover-placeholder button, .video-cover.with-block .video-cover-placeholder .expandmore__button {
         padding: 15px 20px; }
-  .video-cover .button, .video-cover .expandmore__button {
+  .video-cover .button, .video-cover .block-search-cards .ais-infinite-hits--showmore button, .block-search-cards .ais-infinite-hits--showmore .video-cover button, .video-cover .expandmore__button {
     margin: 0 auto;
     padding-left: 40px;
     padding-right: 40px; }
@@ -8420,10 +8415,10 @@ body.rheader-mobile-nav-open {
     padding-bottom: 12px; }
     .component-accordion .accordion-content-wrapper > :last-child {
       margin-bottom: 0; }
-    .component-accordion .accordion-content-wrapper a:not(.button):not(.expandmore__button) {
+    .component-accordion .accordion-content-wrapper a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
       color: #DD275C;
       text-decoration: underline; }
-      .component-accordion .accordion-content-wrapper a:not(.button):not(.expandmore__button):hover {
+      .component-accordion .accordion-content-wrapper a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover {
         text-decoration: none; }
     .component-accordion .accordion-content-wrapper ul, .component-accordion .accordion-content-wrapper ol, .component-accordion .accordion-content-wrapper p {
       color: #333;
@@ -8493,7 +8488,7 @@ body.rheader-mobile-nav-open {
 @media (max-width: 450px) {
   .component-buttons .buttons-items > li {
     display: block; }
-    .component-buttons .buttons-items > li .button, .component-buttons .buttons-items > li .expandmore__button {
+    .component-buttons .buttons-items > li .button, .component-buttons .buttons-items > li .block-search-cards .ais-infinite-hits--showmore button, .block-search-cards .ais-infinite-hits--showmore .component-buttons .buttons-items > li button, .component-buttons .buttons-items > li .expandmore__button {
       width: 100%; } }
 
 .component-demande h2 {
@@ -8513,7 +8508,7 @@ body.rheader-mobile-nav-open {
     padding-left: 0; }
     .component-districts ul.districts-items-wrapper li {
       display: inline-block; }
-      .component-districts ul.districts-items-wrapper li .button, .component-districts ul.districts-items-wrapper li .expandmore__button {
+      .component-districts ul.districts-items-wrapper li .button, .component-districts ul.districts-items-wrapper li .block-search-cards .ais-infinite-hits--showmore button, .block-search-cards .ais-infinite-hits--showmore .component-districts ul.districts-items-wrapper li button, .component-districts ul.districts-items-wrapper li .expandmore__button {
         font-size: 1.6rem;
         margin-right: 5px;
         margin-bottom: 5px;
@@ -8541,10 +8536,10 @@ body.rheader-mobile-nav-open {
       padding: 0 12px 12px 12px; }
       .component-districts .districts-panel .districts-item-content > :last-child {
         margin-bottom: 0; }
-      .component-districts .districts-panel .districts-item-content a:not(.button):not(.expandmore__button) {
+      .component-districts .districts-panel .districts-item-content a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
         color: #DD275C;
         text-decoration: underline; }
-        .component-districts .districts-panel .districts-item-content a:not(.button):not(.expandmore__button):hover {
+        .component-districts .districts-panel .districts-item-content a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover {
           text-decoration: none; }
       .component-districts .districts-panel .districts-item-content ul, .component-districts .districts-panel .districts-item-content ol, .component-districts .districts-panel .districts-item-content p {
         color: #333;
@@ -8561,11 +8556,11 @@ body.rheader-mobile-nav-open {
         list-style-type: disc; }
 
 @media (max-width: 767px) {
-  .component-districts ul.districts-items-wrapper li .button, .component-districts ul.districts-items-wrapper li .expandmore__button {
+  .component-districts ul.districts-items-wrapper li .button, .component-districts ul.districts-items-wrapper li .block-search-cards .ais-infinite-hits--showmore button, .block-search-cards .ais-infinite-hits--showmore .component-districts ul.districts-items-wrapper li button, .component-districts ul.districts-items-wrapper li .expandmore__button {
     background-color: #F2F2F2;
     min-height: 50px;
     min-width: 50px; }
-    .component-districts ul.districts-items-wrapper li .button[disabled], .component-districts ul.districts-items-wrapper li [disabled].expandmore__button {
+    .component-districts ul.districts-items-wrapper li .button[disabled], .component-districts ul.districts-items-wrapper li .block-search-cards .ais-infinite-hits--showmore button[disabled], .block-search-cards .ais-infinite-hits--showmore .component-districts ul.districts-items-wrapper li button[disabled], .component-districts ul.districts-items-wrapper li [disabled].expandmore__button {
       display: none; } }
 
 .component-events {
@@ -8782,10 +8777,10 @@ body.rheader-mobile-nav-open {
   .component-form .form-item-radio input {
     cursor: pointer;
     margin: 2px 10px 2px 0; }
-  .component-form .form-item-cgu label a:not(.button):not(.expandmore__button) {
+  .component-form .form-item-cgu label a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
     color: #DD275C;
     text-decoration: underline; }
-    .component-form .form-item-cgu label a:not(.button):not(.expandmore__button):hover {
+    .component-form .form-item-cgu label a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover {
       text-decoration: none; }
   .component-form .form-item-matrix .form-item-label {
     max-width: none; }
@@ -8807,7 +8802,7 @@ body.rheader-mobile-nav-open {
 
 .component-frame {
   clear: both; }
-  .component-frame a:not(.button):not(.expandmore__button) {
+  .component-frame a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
     color: #DD275C; }
   .component-frame fieldset {
     border: 5px solid #DF225A;
@@ -8978,10 +8973,10 @@ http://flickity.metafizzy.co
   .component-gallery .gallery-caption {
     padding: 10px;
     text-align: center; }
-    .component-gallery .gallery-caption a:not(.button):not(.expandmore__button) {
+    .component-gallery .gallery-caption a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
       color: #DD275C;
       text-decoration: underline; }
-      .component-gallery .gallery-caption a:not(.button):not(.expandmore__button):hover {
+      .component-gallery .gallery-caption a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover {
         text-decoration: none; }
   .component-gallery .gallery-title + .gallery-credit {
     margin-top: 5px; }
@@ -9001,10 +8996,10 @@ http://flickity.metafizzy.co
     color: #000;
     padding: 20px;
     text-align: center; }
-    .component-html .html-placeholder a:not(.button):not(.expandmore__button) {
+    .component-html .html-placeholder a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
       color: #DF225A;
       text-decoration: underline; }
-      .component-html .html-placeholder a:not(.button):not(.expandmore__button):hover {
+      .component-html .html-placeholder a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover {
         text-decoration: none; }
 
 .component-image {
@@ -9094,10 +9089,10 @@ http://flickity.metafizzy.co
       color: #4D4D4D;
       font-size: 1.5rem;
       line-height: 2.2rem; }
-      .component-jecoute .jecoute-form p a:not(.button):not(.expandmore__button) {
+      .component-jecoute .jecoute-form p a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
         color: #0C518A;
         text-decoration: underline; }
-        .component-jecoute .jecoute-form p a:not(.button):not(.expandmore__button):hover {
+        .component-jecoute .jecoute-form p a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover {
           text-decoration: none; }
     .component-jecoute .jecoute-form > textarea,
     .component-jecoute .jecoute-form > input {
@@ -9482,7 +9477,8 @@ http://flickity.metafizzy.co
   .component-opening-hours .opening-hours-status,
   .component-opening-hours .opening-hours-planned-closures,
   .component-opening-hours table,
-  .component-opening-hours > .button,
+  .component-opening-hours > .button, .block-search-cards .ais-infinite-hits--showmore
+  .component-opening-hours > button,
   .component-opening-hours > .expandmore__button {
     margin-bottom: 3rem; }
   .component-opening-hours .opening-hours-status {
@@ -9564,10 +9560,10 @@ http://flickity.metafizzy.co
     font-size: 1.6rem;
     font-weight: 300;
     text-align: left; }
-    .component-opening-hours tr > td a:not(.button):not(.expandmore__button) {
+    .component-opening-hours tr > td a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
       color: #DD275C;
       text-decoration: underline; }
-      .component-opening-hours tr > td a:not(.button):not(.expandmore__button):hover {
+      .component-opening-hours tr > td a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover {
         text-decoration: none; }
   .component-opening-hours tfoot tr {
     background-color: transparent; }
@@ -9628,14 +9624,14 @@ http://flickity.metafizzy.co
     font-size: 2rem;
     margin-right: 15px;
     vertical-align: middle; }
-  .component-place > .button, .component-place > .expandmore__button {
+  .component-place > .button, .block-search-cards .ais-infinite-hits--showmore .component-place > button, .component-place > .expandmore__button {
     margin-bottom: 20px; }
 
 @media (min-width: 768px) {
   .component-place .place-content {
     float: left;
     padding-bottom: 20px; }
-  .component-place > .button, .component-place > .expandmore__button {
+  .component-place > .button, .block-search-cards .ais-infinite-hits--showmore .component-place > button, .component-place > .expandmore__button {
     float: right; } }
 
 .component-postit {
@@ -9657,7 +9653,7 @@ http://flickity.metafizzy.co
     top: 0;
     width: 50px; }
   .component-postit h2,
-  .component-postit a:not(.button):not(.expandmore__button) {
+  .component-postit a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
     color: #F77F68; }
   .component-postit h2 .icon,
   .component-postit .share {
@@ -9712,10 +9708,10 @@ http://flickity.metafizzy.co
     text-align: center; }
     .component-rush-hours tr > td:last-child {
       border-right: none; }
-    .component-rush-hours tr > td a:not(.button):not(.expandmore__button) {
+    .component-rush-hours tr > td a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
       color: #DD275C;
       text-decoration: underline; }
-      .component-rush-hours tr > td a:not(.button):not(.expandmore__button):hover {
+      .component-rush-hours tr > td a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover {
         text-decoration: none; }
     .component-rush-hours tr > td.traffic-0 {
       background-color: #F2F2F2; }
@@ -9762,10 +9758,10 @@ http://flickity.metafizzy.co
 
 .rush-hours-text {
   margin-top: 4rem; }
-  .rush-hours-text a:not(.button):not(.expandmore__button) {
+  .rush-hours-text a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
     color: #DD275C;
     text-decoration: underline; }
-    .rush-hours-text a:not(.button):not(.expandmore__button):hover {
+    .rush-hours-text a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover {
       text-decoration: none; }
 
 @media (max-width: 1159px) {
@@ -9880,10 +9876,10 @@ http://flickity.metafizzy.co
       font-weight: 500;
       padding: 10px 30px;
       text-align: left; }
-    .component-table tr > td a:not(.button):not(.expandmore__button) {
+    .component-table tr > td a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
       color: #DD275C;
       text-decoration: underline; }
-      .component-table tr > td a:not(.button):not(.expandmore__button):hover {
+      .component-table tr > td a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover {
         text-decoration: none; }
   .component-table.header-primary-color tr > th {
     background-color: #DF225A; }
@@ -9994,9 +9990,9 @@ http://flickity.metafizzy.co
 .component-demande img, .component-expandable .expandable-content img, .component-frame img, .component-postit img, .component-text img {
   max-width: 100%; }
 
-.component-demande a:not(.button):not(.expandmore__button), .component-expandable .expandable-content a:not(.button):not(.expandmore__button), .component-frame a:not(.button):not(.expandmore__button), .component-postit a:not(.button):not(.expandmore__button), .component-text a:not(.button):not(.expandmore__button) {
+.component-demande a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button), .component-expandable .expandable-content a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button), .component-frame a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button), .component-postit a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button), .component-text a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
   text-decoration: underline; }
-  .component-demande a:not(.button):not(.expandmore__button):hover, .component-expandable .expandable-content a:not(.button):not(.expandmore__button):hover, .component-frame a:not(.button):not(.expandmore__button):hover, .component-postit a:not(.button):not(.expandmore__button):hover, .component-text a:not(.button):not(.expandmore__button):hover {
+  .component-demande a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover, .component-expandable .expandable-content a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover, .component-frame a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover, .component-postit a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover, .component-text a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover {
     text-decoration: none; }
 
 .component-demande strong, .component-expandable .expandable-content strong, .component-frame strong, .component-postit strong, .component-text strong {
@@ -10014,7 +10010,7 @@ http://flickity.metafizzy.co
   border-top: none;
   padding-top: 0; }
 
-.component-text a:not(.button):not(.expandmore__button) {
+.component-text a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
   color: #DD275C; }
 
 .component-postit + .component-text > p:first-child,
@@ -10109,7 +10105,7 @@ http://flickity.metafizzy.co
     color: #000;
     padding: 20px;
     text-align: center; }
-    .component-video .video-placeholder a:not(.button):not(.expandmore__button) {
+    .component-video .video-placeholder a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
       color: #DF225A; }
   .component-video .video-wrapper {
     display: inline-block;
@@ -10134,10 +10130,10 @@ http://flickity.metafizzy.co
         content: "";
         height: 100%;
         width: 100%; }
-  .component-video a:not(.button):not(.expandmore__button) {
+  .component-video a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button) {
     color: #DD275C;
     text-decoration: underline; }
-    .component-video a:not(.button):not(.expandmore__button):hover {
+    .component-video a:not(.button):not(.block-search-cards .ais-infinite-hits--showmore button):not(.expandmore__button):hover {
       text-decoration: none; }
 
 .layout-stack {
