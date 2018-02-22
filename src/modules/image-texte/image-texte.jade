@@ -1,0 +1,7 @@
+mixin image-texte(data)
+	.image-texte
+		.image-content
+			img.image-content-img(src= data.img.src alt="")
+		.texte-content
+			h3.image-content-title= data.title
+			p.image-content-text= data.text

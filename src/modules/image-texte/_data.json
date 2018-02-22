@@ -1,0 +1,20 @@
+{
+  "index": {
+    "type": "image-texte",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "data": {
+        "img": {
+          "src": "image.jpg",
+          "alt": "Portrait"
+        },
+        "title": "Catherine",
+        "subtitle": "Assure des « Gardes éveillées » pour les Talents d’Alphons",
+        "text": "« Ce qui m’a plu dans ce projet c’est le fait de mettre en relation des séniors avec des plus jeunes, au sein d’un même quartier. Je suis artiste et j’ai beaucoup travaillé dans le théâtre ainsi je pense que je peux transmettre des choses aux enfants: que les mots sont plus audibles en parlant qu’en criant, par exemple. Je leur fais aussi travailler leur imaginaire, on invente des contes ou on fait des travaux manuels. Comme j’ai peu d’enfant à la fois (1 à 3) et qu’ils sont chez eux, la relation est facilitée. Ils se livrent plus et cela créé un lien plus individualisé. Par ailleurs, je ne suis pas retraitée mais en recherche d’emploi et cette activité me permet de rester active...»",
+        "link":""
+      }
+    }]
+  }
+}

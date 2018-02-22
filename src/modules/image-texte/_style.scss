@@ -1,0 +1,9 @@
+.image-texte{
+	background: red;
+	display: flex;
+	align-items: stretch;
+
+	.flex{
+		flex: 1 auto;
+	}
+}
