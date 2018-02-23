@@ -1,0 +1,42 @@
+{
+  "index": {
+    "type": "image-texte",
+    "description": "",
+    "examples": [{
+      "title": "Image ferrée à gauche",
+      "description": "",
+      "data": {
+        "img": {
+          "src": "image.jpg",
+          "alt": "Portrait"
+        },
+        "title": "Catherine",
+        "subtitle": "Assure des « Gardes éveillées » pour les Talents d’Alphons",
+        "text": "« Nous souhaitons faire un véritable travail de réappropriation des fleurs et végétaux de saison. On voudrait que les gens comprennent que les roses pour la St valentin ce n’est pas tout à fait normal les roses c’est en juin ! Et puis notre ambition est de récréer un lien avec des producteurs locaux. Nous ne travaillons qu’avec des producteurs d’île de France. Il y a 30 ans il y en avait 200, aujourd’hui il n’y en a plus qu’une trentaine. Et nous avons une ambition nationale de travailler avec des fleuristes en province qui retisseraient à leur tour le tissu local en travaillant au plus proche de chez eux avec des producteurs de leur région. Nous nous inscrivons dans l’Economie sociale et solidaire car le but est de maintenir l’horticulture française et aussi de faire travailler des personnes en insertion.»",
+        "link": {
+          "href": "#",
+          "text": "Lire la suite"
+        },
+        "modifiers": "align-left"
+      }
+    },
+    {
+      "title": "Image ferrée à droite",
+      "description": "",
+      "data": {
+        "img": {
+          "src": "image.jpg",
+          "alt": "Portrait"
+        },
+        "title": "Catherine",
+        "subtitle": "Assure des « Gardes éveillées » pour les Talents d’Alphons",
+        "text": "« Ce qui m’a plu dans ce projet c’est le fait de mettre en relation des séniors avec des plus jeunes, au sein d’un même quartier. Je suis artiste et j’ai beaucoup travaillé dans le théâtre ainsi je pense que je peux transmettre des choses aux enfants: que les mots sont plus audibles en parlant qu’en criant, par exemple. Je leur fais aussi travailler leur imaginaire, on invente des contes ou on fait des travaux manuels. Comme j’ai peu d’enfant à la fois (1 à 3) et qu’ils sont chez eux, la relation est facilitée. Ils se livrent plus et cela créé un lien plus individualisé. Par ailleurs, je ne suis pas retraitée mais en recherche d’emploi et cette activité me permet de rester active...»",
+        "link": {
+          "href": "#",
+          "text": "Lire la suite"
+        },
+        "modifiers": "align-right"
+      }
+    }]
+  }
+}
