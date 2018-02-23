@@ -3684,9 +3684,11 @@ http://flickity.metafizzy.co
             order: 1; }
   .image-texte.align-right .text-content {
     padding: 0 40px 0 0; }
-  @media (min-width: 768px) and (max-width: 900px) {
-    .image-texte .image-content-img {
-      width: 45vw; } }
+  .image-texte .image-content-img {
+    max-width: 400px; }
+    @media (min-width: 768px) and (max-width: 900px) {
+      .image-texte .image-content-img {
+        width: 45vw; } }
   .image-texte .text-content {
     padding-left: 40px; }
     .image-texte .text-content-title {
