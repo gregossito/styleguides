@@ -3673,7 +3673,49 @@ http://flickity.metafizzy.co
   .icon-switch + .icon-switch {
     margin-left: 10px; }
 
+.image-texte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* modifiers */ }
+  .image-texte.align-right .image-content {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+  .image-texte.align-right .text-content {
+    padding: 0 40px 0 0; }
+  @media (min-width: 768px) and (max-width: 900px) {
+    .image-texte .image-content-img {
+      width: 45vw; } }
+  .image-texte .text-content {
+    padding-left: 40px; }
+    .image-texte .text-content-title {
+      font-weight: bold;
+      margin: 0;
+      padding: 0; }
+    .image-texte .text-content-subtitle {
+      font-weight: bold; }
+
+@media (max-width: 767px) {
+  .image-texte.align-left, .image-texte.align-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .image-texte.align-left .image-content, .image-texte.align-right .image-content {
+      -webkit-box-ordinal-group: 1;
+          -ms-flex-order: 0;
+              order: 0; }
+      .image-texte.align-left .image-content .image-content-img, .image-texte.align-right .image-content .image-content-img {
+        max-width: 100%; }
+    .image-texte.align-left .text-content, .image-texte.align-right .text-content {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      padding: 20px 0 0 0; } }
+
 .intro-text {
+  background: red;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 3rem;
