@@ -5,5 +5,5 @@ mixin image-texte(data)
 		.text-content.component-text
 			h3.text-content-title= data.title
 			p.text-content-subtitle= data.subtitle
-			p.text-content-text= data.text
+			.text-content-text!= data.text
 			a.text-content-link(href=data.link.href)= data.link.text
