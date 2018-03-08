@@ -1,9 +1,0 @@
-mixin image-texte(data)
-	.image-texte(class=data.modifiers)
-		.image-content
-			img.image-content-img(src= data.img.src)
-		.text-content.component-text
-			h3.text-content-title= data.title
-			p.text-content-subtitle= data.subtitle
-			.text-content-text!= data.text
-			a.text-content-link(href=data.link.href)= data.link.text

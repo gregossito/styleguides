@@ -17,7 +17,7 @@ Let's take the `x.β.α` version number:
 
 ## 1.10.3 (2017-02-22)
 
-* component `block-search` fix extend @extend %button 
+* component `block-search` fix extend @extend %button
 
 ## 1.10.2 (2017-02-22)
 
@@ -27,7 +27,7 @@ Let's take the `x.β.α` version number:
 
 * component `block-search` remove temporaly button extend css
 
-## 1.10.0 (coming soon)
+## 1.10.0 (2017-02-21)
 
 * component `card` removed
 * module `block-search` added
