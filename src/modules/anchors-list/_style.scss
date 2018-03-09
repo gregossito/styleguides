@@ -53,12 +53,6 @@
   .anchors-list-title {margin-bottom: 2rem;}
 }
 
-
-@include medium {
-  .anchors-list {width: 240px;}
-}
-
-
 @include large-and-medium {
   .anchors-list {
     top: 0;
@@ -85,13 +79,6 @@
       transform: none;
     }
   }
-}
-
-
-@include large {
-  .anchors-list {
-    width: 260px;
-  }
 
   .anchors-list-progress {
     background-color: $color-tertiary;
@@ -102,5 +89,21 @@
     width: 0%;
     z-index: 0;
     transition: width 0.1s ease-in-out;
+  }
+}
+
+@include medium {
+  .anchors-list {
+    width: 240px;
+  }
+
+  .anchors-list-title {
+    left: -20px;
+  }
+}
+
+@include large {
+  .anchors-list {
+    width: 260px;
   }
 }

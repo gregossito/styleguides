@@ -20,7 +20,7 @@ Paris.anchors = (function(){
     noticeTopSelector: '#notice_home_top',
     contentEl: '.layout-left-col',
     anchorTopBorder: 7, // border-top of the .anchor elements, in pixels
-    breakpoint: 'large',
+    breakpoint: 'medium-large',
     scrollDuration: 1500
   };
 
@@ -171,6 +171,7 @@ Paris.anchors = (function(){
       if (typeof scrollTop === 'undefined') {
         var scrollTop = $(window).scrollTop();
       }
+
       each(items, function(item) {
         var $progress = $el.find('[href="'+item.href+'"]' + ' + ' + options.anchorsProgressSelector);
 
