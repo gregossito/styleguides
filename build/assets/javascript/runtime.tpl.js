@@ -4154,18 +4154,27 @@ templatizer["icon-switch"]["icon-switch"] = function tmpl_icon_switch_icon_switc
     return buf.join("");
 };
 
-// image-texte.jade compiled template
-templatizer["image-texte"] = function tmpl_image_texte(locals) {
+// image-text.jade compiled template
+templatizer["image-text"] = function tmpl_image_text(locals) {
     var buf = [];
     var jade_mixins = {};
     var jade_interp;
     return buf.join("");
 };
 
-// image-texte.jade:image-texte compiled template
-templatizer["image-texte"]["image-texte"] = function tmpl_image_texte_image_texte(data) {
+// image-text.jade:image-text compiled template
+templatizer["image-text"]["image-text"] = function tmpl_image_text_image_text(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "image-texte", data.modifiers ], [ null, true ]) + '><div class="image-content"><img' + jade.attr("src", data.img.src, true, false) + ' class="image-content-img"/></div><div class="text-content component-text"><h3 class="text-content-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + '</h3><p class="text-content-subtitle">' + jade.escape(null == (jade_interp = data.subtitle) ? "" : jade_interp) + '</p><div class="text-content-text">' + (null == (jade_interp = data.text) ? "" : jade_interp) + "</div><a" + jade.attr("href", data.link.href, true, false) + ' class="text-content-link">' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></div></div>");
+    buf.push("<div" + jade.cls([ "image-text", data.modifiers ], [ null, true ]) + ">");
+    var title = [ data.title ];
+    if (data.img && data.img.credit) {
+        title.push("(" + data.img.credit + ")");
+    }
+    buf.push('<div class="image-text-img"><img' + jade.attr("src", data.img.src, true, false) + jade.attr("alt", data.img.alt, true, false) + jade.attr("title", title.join(" "), true, false) + '/></div><div class="image-text-wrapper"><h3><span class="image-text-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + '</span><small class="image-text-subtitle">' + jade.escape(null == (jade_interp = data.subtitle) ? "" : jade_interp) + '</small></h3><div class="image-text-content">' + (null == (jade_interp = data.text) ? "" : jade_interp) + "</div>");
+    if (data.link && data.link.href && data.link.text) {
+        buf.push("<a" + jade.attr("href", data.link.href, true, false) + ' class="image-text-link">' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a>");
+    }
+    buf.push("</div></div>");
     return buf.join("");
 };
 

@@ -1,0 +1,14 @@
+mixin image-text(data)
+  .image-text(class=data.modifiers)
+    - var title = [data.title]
+    if data.img && data.img.credit
+      - title.push("(" + data.img.credit + ")")
+    .image-text-img
+      img(src= data.img.src alt=data.img.alt title=title.join(" "))
+    .image-text-wrapper
+      h3
+        span.image-text-title= data.title
+        small.image-text-subtitle= data.subtitle
+      .image-text-content!= data.text
+      if data.link && data.link.href && data.link.text
+        a.image-text-link(href=data.link.href)= data.link.text
