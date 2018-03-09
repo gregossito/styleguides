@@ -333,8 +333,7 @@ img, video {
 
 .block-content-question,
 .block-content-answer {
-  -webkit-transform: none !important;
-          transform: none !important; }
+  transform: none !important; }
 
 canvas {
   display: none !important; }
