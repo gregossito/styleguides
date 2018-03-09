@@ -171,6 +171,7 @@ Paris.anchors = (function(){
       if (typeof scrollTop === 'undefined') {
         var scrollTop = $(window).scrollTop();
       }
+
       each(items, function(item) {
         var $progress = $el.find('[href="'+item.href+'"]' + ' + ' + options.anchorsProgressSelector);
 
