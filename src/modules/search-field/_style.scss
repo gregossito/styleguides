@@ -3,6 +3,11 @@
 .search-field {
   clear: both;
 
+  // clearfix
+  & { *zoom: 1; }
+  &:before, &:after { content: ""; display: table; }
+  &:after { clear: both; }
+
   .ais-search-box {
     max-width: none;
   }
