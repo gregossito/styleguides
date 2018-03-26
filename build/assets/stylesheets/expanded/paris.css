@@ -6651,6 +6651,13 @@ body.rheader-mobile-nav-open {
   display: inline; }
 .search-field {
   clear: both; }
+  .search-field {
+    *zoom: 1; }
+  .search-field:before, .search-field:after {
+    content: "";
+    display: table; }
+  .search-field:after {
+    clear: both; }
   .search-field .ais-search-box {
     max-width: none; }
   .search-field.block .search-field-input[type="text"],
