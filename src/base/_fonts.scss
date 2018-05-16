@@ -3,7 +3,7 @@
 @font-face {
   font-family: 'Avenir';
   src: url('../fonts/AvenirNextLTPro-Regular.eot');
-  src: local('☺'), url('../fonts/AvenirNextLTPro-Regular.woff') format('woff'), url('../fonts/AvenirNextLTPro-Regular.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-Regular.svg') format('svg');
+  src: local('☺'), url('../fonts/AvenirNextLTPro-Regular.woff') format('woff'), url('../fonts/AvenirNextLTPro-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -11,7 +11,7 @@
 @font-face {
   font-family: 'Avenir';
   src: url('../fonts/AvenirNextLTPro-Demi.eot');
-  src: local('☺'), url('../fonts/AvenirNextLTPro-Demi.woff') format('woff'), url('../fonts/AvenirNextLTPro-Demi.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-Demi.svg') format('svg');
+  src: local('☺'), url('../fonts/AvenirNextLTPro-Demi.woff') format('woff'), url('../fonts/AvenirNextLTPro-Demi.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
@@ -19,7 +19,7 @@
 @font-face {
   font-family: 'Avenir';
   src: url('../fonts/AvenirNextLTPro-Bold.eot');
-  src: local('☺'), url('../fonts/AvenirNextLTPro-Bold.woff') format('woff'), url('../fonts/AvenirNextLTPro-Bold.ttf') format('truetype'), url('../fonts/AvenirNextLTPro-Bold.svg') format('svg');
+  src: local('☺'), url('../fonts/AvenirNextLTPro-Bold.woff') format('woff'), url('../fonts/AvenirNextLTPro-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
@@ -30,8 +30,7 @@
   src: url('../fonts/Montserrat-Light-webfont.eot?#iefix') format('embedded-opentype'),
   url('../fonts/Montserrat-Light-webfont.woff2') format('woff2'),
   url('../fonts/Montserrat-Light-webfont.woff') format('woff'),
-  url('../fonts/Montserrat-Light-webfont.ttf') format('truetype'),
-  url('../fonts/Montserrat-Light-webfont.svg#montserratlight') format('svg');
+  url('../fonts/Montserrat-Light-webfont.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
@@ -42,8 +41,7 @@
   src: url('../fonts/Montserrat-Regular-webfont.eot?#iefix') format('embedded-opentype'),
   url('../fonts/Montserrat-Regular-webfont.woff2') format('woff2'),
   url('../fonts/Montserrat-Regular-webfont.woff') format('woff'),
-  url('../fonts/Montserrat-Regular-webfont.ttf') format('truetype'),
-  url('../fonts/Montserrat-Regular-webfont.svg#montserratregular') format('svg');
+  url('../fonts/Montserrat-Regular-webfont.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
@@ -54,8 +52,7 @@
   src: url('../fonts/Montserrat-Bold-webfont.eot?#iefix') format('embedded-opentype'),
   url('../fonts/Montserrat-Bold-webfont.woff2') format('woff2'),
   url('../fonts/Montserrat-Bold-webfont.woff') format('woff'),
-  url('../fonts/Montserrat-Bold-webfont.ttf') format('truetype'),
-  url('../fonts/Montserrat-Bold-webfont.svg#montserratbold') format('svg');
+  url('../fonts/Montserrat-Bold-webfont.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
