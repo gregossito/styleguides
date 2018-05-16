@@ -34,7 +34,7 @@
         "title": "Accès",
         "items": [
           {
-            "icon": "subway",
+            "icon": "metro",
             "modifiers": ["acces-icon"],
             "title": "Métro",
             "text": "Porte de Vanves, ligne 13"

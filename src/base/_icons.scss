@@ -1,11 +1,10 @@
 /* Font icons */
 @font-face {
   font-family: 'paris-icons';
-  src:url('../fonts/paris-icons.eot?2l3zn0');
-  src:url('../fonts/paris-icons.eot?#iefix2l3zn0') format('embedded-opentype'),
-    url('../fonts/paris-icons.woff?2l3zn0') format('woff'),
-    url('../fonts/paris-icons.ttf?2l3zn0') format('truetype'),
-    url('../fonts/paris-icons.svg?2l3zn0#paris-icons') format('svg');
+  src:url('../fonts/paris-icons.eot?utnu50');
+  src:url('../fonts/paris-icons.eot?#iefixutnu50') format('embedded-opentype'),
+    url('../fonts/paris-icons.woff?utnu50') format('woff'),
+    url('../fonts/paris-icons.ttf?utnu50') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -42,8 +41,8 @@ $icons: (
   art-workshop: "\e902",
   associations: "\e904",
   avatar: "\e61a",
-  bell-outline: "\e912",
   bell: "\e61c",
+  bell-outline: "\e912",
   bicycle: "\e60f",
   bus: "\e919",
   city-hall: "\e905",
@@ -56,8 +55,8 @@ $icons: (
   dailymotion: "\e620",
   dl: "\e61b",
   facebook: "\e608",
-  favorites-outline: "\e911",
   favorites: "\e600",
+  favorites-outline: "\e911",
   file: "\e900",
   handicap-hearing: "\e907",
   handicap-mobility: "\e908",
@@ -80,7 +79,6 @@ $icons: (
   profile: "\e60b",
   rer: "\e924",
   search: "\e60d",
-  subway: "\e923",
   swimming-pool: "\e910",
   tennis: "\e916",
   text: "\e901",
