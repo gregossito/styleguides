@@ -119,6 +119,7 @@
         "block_search_filters": {
           "modifiers": ["gray-background"],
           "title": "Filtrer par catégorie",
+          "name_categorie": "",
           "top_link": {
             "id": "js-resetbutton",
             "href": "#",

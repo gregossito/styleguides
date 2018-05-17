@@ -1,7 +1,10 @@
 mixin block-search(data)
   .block-search(class=data.modifiers)
     .block-search-header
+      if data.name_categorie
+        div.block-search-categorie= data.name_categorie
       h3.block-search-title(id=data.title_id)= data.title
+
       - var top_link = data.top_link || {};
       if top_link.href
         span.block-search-top-link

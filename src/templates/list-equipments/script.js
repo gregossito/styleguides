@@ -68,12 +68,13 @@ Paris.listEquipments = (function(){
       );
 
       // Custom reset button widget
+      var categorie = ($('.block-search-categorie').length > 0) ? [$('.block-search-categorie').text()] : Paris.config.algolia.main_facets;
       mainSearch.addWidget(
         Paris.instantsearch.widgets.resetButton({
           container: '#js-resetbutton',
           attributeName: 'category_names',
           operator: 'or',
-          defaultFacets: Paris.config.algolia.main_facets
+          defaultFacets: categorie
         })
       );
 

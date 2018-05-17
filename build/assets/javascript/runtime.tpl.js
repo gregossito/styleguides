@@ -3129,6 +3129,26 @@ templatizer["block-content"]["block-content"] = function tmpl_block_content_bloc
     return buf.join("");
 };
 
+// block-map.jade compiled template
+templatizer["block-map"] = function tmpl_block_map(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    var locals_for_with = locals || {};
+    (function(JSON) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined);
+    return buf.join("");
+};
+
+// block-map.jade:block-map compiled template
+templatizer["block-map"]["block-map"] = function tmpl_block_map_block_map(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    data = JSON.parse(JSON.stringify(data));
+    data.modifiers = data.modifiers || [];
+    data.modifiers.push("block-map");
+    buf.push('<div id="map"></div><div class="map-caption"><div class="map-caption-icon is-open"></div>' + jade.escape(null == (jade_interp = "Équipement ouvert") ? "" : jade_interp) + '<div class="map-caption-icon is-closed"></div>' + jade.escape(null == (jade_interp = "Équipement fermé") ? "" : jade_interp) + '<div class="map-caption-icon is-unknown"></div>' + jade.escape(null == (jade_interp = "Horaires non renseignés") ? "" : jade_interp) + "</div>");
+    return buf.join("");
+};
+
 // block-search-field.jade compiled template
 templatizer["block-search-field"] = function tmpl_block_search_field(locals) {
     var buf = [];
@@ -3142,7 +3162,11 @@ templatizer["block-search-field"] = function tmpl_block_search_field(locals) {
 // block-search-field.jade:block-search compiled template
 templatizer["block-search-field"]["block-search"] = function tmpl_block_search_field_block_search(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "block-search", data.modifiers ], [ null, true ]) + '><div class="block-search-header"><h3' + jade.attr("id", data.title_id, true, false) + ' class="block-search-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
+    buf.push("<div" + jade.cls([ "block-search", data.modifiers ], [ null, true ]) + '><div class="block-search-header">');
+    if (data.name_categorie) {
+        buf.push('<div class="block-search-categorie">' + jade.escape(null == (jade_interp = data.name_categorie) ? "" : jade_interp) + "</div>");
+    }
+    buf.push("<h3" + jade.attr("id", data.title_id, true, false) + ' class="block-search-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
     var top_link = data.top_link || {};
     if (top_link.href) {
         buf.push('<span class="block-search-top-link"><a' + jade.attr("href", top_link.href, true, false) + jade.attr("title", top_link.text, true, false) + jade.attr("id", top_link.id, true, false) + ">" + jade.escape(null == (jade_interp = top_link.text) ? "" : jade_interp) + "</a></span>");
@@ -3243,26 +3267,6 @@ templatizer["block-search-field"]["block-search-field"] = function tmpl_block_se
     return buf.join("");
 };
 
-// block-map.jade compiled template
-templatizer["block-map"] = function tmpl_block_map(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    var locals_for_with = locals || {};
-    (function(JSON) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined);
-    return buf.join("");
-};
-
-// block-map.jade:block-map compiled template
-templatizer["block-map"]["block-map"] = function tmpl_block_map_block_map(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    data = JSON.parse(JSON.stringify(data));
-    data.modifiers = data.modifiers || [];
-    data.modifiers.push("block-map");
-    buf.push('<div id="map"></div><div class="map-caption"><div class="map-caption-icon is-open"></div>' + jade.escape(null == (jade_interp = "Équipement ouvert") ? "" : jade_interp) + '<div class="map-caption-icon is-closed"></div>' + jade.escape(null == (jade_interp = "Équipement fermé") ? "" : jade_interp) + '<div class="map-caption-icon is-unknown"></div>' + jade.escape(null == (jade_interp = "Horaires non renseignés") ? "" : jade_interp) + "</div>");
-    return buf.join("");
-};
-
 // block-search-filters.jade compiled template
 templatizer["block-search-filters"] = function tmpl_block_search_filters(locals) {
     var buf = [];
@@ -3276,7 +3280,11 @@ templatizer["block-search-filters"] = function tmpl_block_search_filters(locals)
 // block-search-filters.jade:block-search compiled template
 templatizer["block-search-filters"]["block-search"] = function tmpl_block_search_filters_block_search(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "block-search", data.modifiers ], [ null, true ]) + '><div class="block-search-header"><h3' + jade.attr("id", data.title_id, true, false) + ' class="block-search-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
+    buf.push("<div" + jade.cls([ "block-search", data.modifiers ], [ null, true ]) + '><div class="block-search-header">');
+    if (data.name_categorie) {
+        buf.push('<div class="block-search-categorie">' + jade.escape(null == (jade_interp = data.name_categorie) ? "" : jade_interp) + "</div>");
+    }
+    buf.push("<h3" + jade.attr("id", data.title_id, true, false) + ' class="block-search-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
     var top_link = data.top_link || {};
     if (top_link.href) {
         buf.push('<span class="block-search-top-link"><a' + jade.attr("href", top_link.href, true, false) + jade.attr("title", top_link.text, true, false) + jade.attr("id", top_link.id, true, false) + ">" + jade.escape(null == (jade_interp = top_link.text) ? "" : jade_interp) + "</a></span>");
@@ -3368,7 +3376,11 @@ templatizer["block-search"] = function tmpl_block_search(locals) {
 // block-search.jade:block-search compiled template
 templatizer["block-search"]["block-search"] = function tmpl_block_search_block_search(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "block-search", data.modifiers ], [ null, true ]) + '><div class="block-search-header"><h3' + jade.attr("id", data.title_id, true, false) + ' class="block-search-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
+    buf.push("<div" + jade.cls([ "block-search", data.modifiers ], [ null, true ]) + '><div class="block-search-header">');
+    if (data.name_categorie) {
+        buf.push('<div class="block-search-categorie">' + jade.escape(null == (jade_interp = data.name_categorie) ? "" : jade_interp) + "</div>");
+    }
+    buf.push("<h3" + jade.attr("id", data.title_id, true, false) + ' class="block-search-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
     var top_link = data.top_link || {};
     if (top_link.href) {
         buf.push('<span class="block-search-top-link"><a' + jade.attr("href", top_link.href, true, false) + jade.attr("title", top_link.text, true, false) + jade.attr("id", top_link.id, true, false) + ">" + jade.escape(null == (jade_interp = top_link.text) ? "" : jade_interp) + "</a></span>");
