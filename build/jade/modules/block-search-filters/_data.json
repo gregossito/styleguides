@@ -12,6 +12,7 @@
         "data": {
           "modifiers": ["gray-background"],
           "title": "Filtrer par catégorie",
+          "name_categorie": "",
           "top_link": {
             "href": "#",
             "text": "Réinitialiser"

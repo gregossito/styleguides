@@ -11,6 +11,7 @@
         "attrs": {},
         "data": {
           "title": "Titre",
+          "name_categorie": "",
           "block": "<strong>salut</strong>",
           "top_link": {
             "href": "#",
@@ -27,6 +28,7 @@
         "data": {
           "modifiers": ["gray-background"],
           "title": "Titre",
+          "name_categorie": "",
           "block": "<strong>salut</strong>",
           "top_link": {
             "href": "#",

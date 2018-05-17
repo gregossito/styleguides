@@ -2210,6 +2210,9 @@ http://flickity.metafizzy.co
         border-top: 1px solid #CCC;
         padding-top: 30px; }
 
+.block-search-categorie {
+  display: none; }
+
 .block-search-header {
   overflow: auto;
   margin-bottom: 10px; }

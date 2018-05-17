@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.11.3 (2018-05-17)
+
+* module `block-search`: add name_categorie
+
 ## 1.11.2 (2018-05-17)
 
 * Fix icon font + remove SVG fonts
