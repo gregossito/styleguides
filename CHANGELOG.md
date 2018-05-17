@@ -9,6 +9,12 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.11.2 (2018-05-17)
+
+* Fix icon font + remove SVG fonts
+
+## 1.11.1 (2018-05)
+
 * module `search-field`: clearfix it
 
 ## 1.11.0 (2017-03-09)
