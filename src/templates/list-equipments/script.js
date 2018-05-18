@@ -176,6 +176,17 @@ Paris.listEquipments = (function(){
           templates: {
             header: 'Ouverture',
             item: '<label class="{{cssClasses.label}}"><input type="checkbox" class="{{cssClasses.checkbox}}" value="{{name}}" {{#isRefined}}checked{{/isRefined}} />{{name}}</label>'
+          },
+          transformData: function(item){
+            if(firstLoad){
+              if(item.isRefined===false && window.location.href.split('?open=')[1]==="true"){
+                item.isRefined = true;
+              }
+              else {
+                item.isRefined = false;
+              }
+            }
+            return item;
           }
         })
       );
