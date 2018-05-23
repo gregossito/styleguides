@@ -167,26 +167,15 @@ Paris.listEquipments = (function(){
       mainSearch.addWidget(
         instantsearch.widgets.toggle({
           attributeName: 'is_open',
-          autoHideContainer: false,
+          autoHideContainer: true,
           container: '#js-facet-open',
           label: 'Ouvert maintenant',
           values: {
-            on: true,
+            on: true
           },
           templates: {
             header: 'Ouverture',
             item: '<label class="{{cssClasses.label}}"><input type="checkbox" class="{{cssClasses.checkbox}}" value="{{name}}" {{#isRefined}}checked{{/isRefined}} />{{name}}</label>'
-          },
-          transformData: function(item){
-            if(firstLoad){
-              if(item.isRefined===false && window.location.href.split('?open=')[1]==="true"){
-                item.isRefined = true;
-              }
-              else {
-                item.isRefined = false;
-              }
-            }
-            return item;
           }
         })
       );
@@ -256,6 +245,7 @@ Paris.listEquipments = (function(){
           address_postcode: $(card).find('.card-zipcode').html(),
           address_city: $(card).find('.card-city').html(),
           open_details: $(card).find('.card-hours').html(),
+          url: $(card).attr('href'),
           is_open: $(card).find('.card-hours').attr('data-open') == 'true'
         };
         var content = renderMapPopupContent(hit);
@@ -418,4 +408,11 @@ Paris.listEquipments = (function(){
 
 $(document).ready(function(){
   Paris.listEquipments('body.list-equipments');
+  // Piscines ouvertes 
+  if(window.location.href.split('?open=')[1]==="1"){
+    setTimeout(function() {
+      $('#js-facet-open input').attr('checked','checked');
+      $('#js-facet-open input').click();
+    }, 100);
+  }
 });
