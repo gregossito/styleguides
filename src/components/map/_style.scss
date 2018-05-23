@@ -1,6 +1,6 @@
 .component-map {
   position: relative;
-
+  z-index:1;
   &-map {
     background-color: $grayF2;
     overflow: hidden;

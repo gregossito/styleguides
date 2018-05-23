@@ -9371,7 +9371,8 @@ http://flickity.metafizzy.co
       content: ""; }
 
 .component-map {
-  position: relative; }
+  position: relative;
+  z-index: 1; }
   .component-map-map {
     background-color: #F2F2F2;
     overflow: hidden;

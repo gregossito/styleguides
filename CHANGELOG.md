@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.11.6 (2018-05-23)
+
+* component `map`: fix z-index  
+
 ## 1.11.5 (2018-05-23)
 
 * template `list-equipments`: fix `script.js` 
