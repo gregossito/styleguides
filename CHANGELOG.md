@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.11.5 (2018-05-23)
+
+* template `list-equipments`: fix `script.js` 
+
 ## 1.11.4 (2018-05-18)
 
 * template `list-equipments`: fix `script.js` piscines ouvertes toggle 
