@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.11.7 (2018-05-25)
+
+* module `rheader`: add equipements link to rheader 
+
 ## 1.11.6 (2018-05-23)
 
 * component `map`: fix z-index  

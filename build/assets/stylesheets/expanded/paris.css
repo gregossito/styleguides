@@ -5616,9 +5616,7 @@ html.no-touchevents .news-card-counter {
   font-size: 2rem;
   left: 0; }
 
-.rheader-button-around {
-  display: none; }
-
+/*.rheader-button-around {display: none;}*/
 .rheader-button-menu {
   background-color: #DF225A;
   right: 0;
@@ -5756,6 +5754,8 @@ body.rheader-mobile-nav-open {
         pointer-events: none; } }
 
 @media (max-width: 1160px) {
+  .rheader-button-around {
+    display: none; }
   .rheader-mobile-nav {
     background-color: #DF225A;
     display: block;
@@ -5821,6 +5821,8 @@ body.rheader-mobile-nav-open {
   .rheader,
   .rheader-logo {
     height: 60px; }
+  .rheader-button-around {
+    display: none; }
   .rheader-logo {
     width: 238px; }
   .rheader-logo-nef {
@@ -5839,6 +5841,8 @@ body.rheader-mobile-nav-open {
     .rheader-button-menu .rheader-button-text {
       left: 20px;
       top: 30px; }
+  .rheader-button-around {
+    display: none; }
   .rheader-nav {
     display: none; }
   .rheader-mobile-nav .rheader-nav {
@@ -5848,6 +5852,8 @@ body.rheader-mobile-nav-open {
     margin-right: 70px; } }
 
 @media (min-width: 1161px) {
+  .rheader-button-around {
+    display: none; }
   .rheader {
     overflow: hidden;
     text-align: right; }
@@ -6000,6 +6006,8 @@ body.rheader-mobile-nav-open {
     width: 100%; } }
 
 @media (min-width: 1370px) {
+  .rheader-button-around {
+    display: none; }
   .rheader.extended .rheader-logo {
     height: 60px; }
   .rheader-logo {
@@ -6043,6 +6051,8 @@ body.rheader-mobile-nav-open {
     padding-top: 120px; } }
 
 @media (min-width: 1161px) {
+  .rheader-button-around {
+    display: none; }
   .rheader.fixed.extended + .layout-main > .layout-content:first-child,
   .rheader.extended + .quick-access + .layout-main > .layout-content:first-child {
     padding-top: 80px; }
@@ -6059,6 +6069,8 @@ body.rheader-mobile-nav-open {
     margin-top: 120px; } }
 
 @media (min-width: 768px) {
+  .rheader-button-around {
+    display: none; }
   .rheader.fixed + .layout-main > .layout-content:first-child,
   .rheader + .quick-access + .layout-main > .layout-content:first-child {
     background-color: #DF225A;
