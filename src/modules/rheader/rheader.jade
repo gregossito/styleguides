@@ -24,7 +24,7 @@ mixin rheader(data)
       if search
         a.rheader-button.rheader-button-search(href=search.href title=search.text target=search.target aria-controls="rheader-search" role="button" class=search.current ? 'active' : null)
           if search.icon
-            i.rheader-button-icon(class="icon-#{search.icon}")
+            i.rheader-button-icon(class="icon-#{search.icon}")      
       if around
         a.rheader-button.rheader-button-around(href=around.href title=around.text target=around.target role="button" class=around.current ? 'active' : null)
           if around.icon

@@ -124,7 +124,7 @@
   left: 0;
 }
 
-.rheader-button-around {display: none;}
+/*.rheader-button-around {display: none;}*/
 
 .rheader-button-menu {
   background-color: $color-primary;
@@ -303,7 +303,9 @@ body.rheader-mobile-nav-open {
 
 
 @media (max-width: $rheader-medium-max) {
-
+  .rheader-button-around {
+    display:none;
+  }
   .rheader-mobile-nav {
     background-color: $color-primary;
     display: block;
@@ -391,6 +393,9 @@ body.rheader-mobile-nav-open {
     height: $rheader-height-medium;
   }
 
+  .rheader-button-around {
+    display:none;
+  }
   .rheader-logo {
     width: 238px;
   }
@@ -417,6 +422,10 @@ body.rheader-mobile-nav-open {
     }
   }
 
+  .rheader-button-around {
+    display: none;
+  }
+
   .rheader-nav {
     display: none;
   }
@@ -432,6 +441,9 @@ body.rheader-mobile-nav-open {
 
 
 @media (min-width: $rheader-large-min) {
+  .rheader-button-around {
+    display:none;
+  }
   .rheader {
     overflow: hidden;
     text-align: right;
@@ -637,7 +649,9 @@ body.rheader-mobile-nav-open {
 
 
 @media (min-width: $rheader-large-max) {
-
+  .rheader-button-around {
+    display:none;
+  }
   .rheader.extended {
     .rheader-logo {
       height: $rheader-height-large;
@@ -716,6 +730,9 @@ body.rheader-mobile-nav-open {
 }
 
 @media (min-width: $rheader-large-min) {
+  .rheader-button-around {
+    display:none;
+  }
   .rheader.fixed.extended + .layout-main > .layout-content:first-child,
   .rheader.extended + .quick-access + .layout-main > .layout-content:first-child {
     padding-top: $rheader-height-medium + 20px;
@@ -742,6 +759,9 @@ body.rheader-mobile-nav-open {
 }
 
 @media (min-width: $rheader-medium-min) {
+  .rheader-button-around {
+    display:none;
+  }
   .rheader.fixed + .layout-main > .layout-content:first-child,
   .rheader + .quick-access + .layout-main > .layout-content:first-child {
     background-color: $color-primary; // to prevent a white area below header (edge case)
