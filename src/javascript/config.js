@@ -12,7 +12,7 @@ Paris.config = {
     "indexes": {
       "global": "recette_ParisFront",
       "persons": "recette_Elus",
-      "equipments": "Service_recette",
+      "equipments": "Service_preprod",
     },
     "main_facets": ["Bibliothèques", "Mairies d'arrondissement", "Principaux parcs, jardins et squares", "Piscines", "Tennis"],
     "main_facets_icon": [
