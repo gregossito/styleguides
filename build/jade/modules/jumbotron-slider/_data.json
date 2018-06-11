@@ -9,7 +9,10 @@
         "href": "#",
         "image": "journees-olympiques.jpg",
         "title": "Journées Olympiques",
-        "text": "Du 23 au 24 juin, paris.fr se met aux couleurs des J.O."
+        "text": "Du 23 au 24 juin, paris.fr se met aux couleurs des J.O.",
+        "bgimage": "#22567c",
+        "bgnotice": "#ffffff",
+        "colorlink": "#22567c"
       }
     }]
   }

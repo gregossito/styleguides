@@ -1,8 +1,8 @@
 mixin jumbotron-slider(data)
   - var tag = (data.href) ? 'a' : 'div'
-  #{tag}.jumbotron-slider(class=data.modifiers href=data.href)
-    .jumbotron-slider-content(style="background-image: url(#{data.image});")
-    .jumbotron-slider-notice
+  #{tag}.jumbotron-slider(class=data.modifiers href=data.href style="color:#{data.colorlink};")
+    .jumbotron-slider-content(style="background-color:#{data.bgimage};background-image: url(#{data.image});")
+    .jumbotron-slider-notice(style="background-color:#{data.bgnotice};")
       p.jumbotron-slider-notice-content
         span.jumbotron-slider-notice-content-wrapper
           span.jumbotron-slider-notice-title= data.title
