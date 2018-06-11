@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.11.10 (2018-06-10)
+
+* module `jumbotron-slider`: add inline styles
+
 ## 1.11.9 (2018-05-29)
 
 * module `document-heading`: fix `background-image`
