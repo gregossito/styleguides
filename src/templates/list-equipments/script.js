@@ -187,7 +187,7 @@ Paris.listEquipments = (function(){
           container: '#js-facet-accessibility',
           templates: {
             header: "Accessibilité",
-            seeAllOption: "Sans handicap"
+            seeAllOption: ""
           }
         })
       );

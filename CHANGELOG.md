@@ -9,9 +9,14 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.11.12 (2018-07-06)
+
+* template `list-equipments`: remove sans handicaps
+* module `rheader`: change z-index to 1300
+
 ## 1.11.11 (2018-07-06)
 
-* template `search`: check anchors `script.js
+* template `search`: check anchors `script.js`
 
 ## 1.11.10 (2018-06-10)
 
