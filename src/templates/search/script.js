@@ -204,7 +204,7 @@ Paris.search = (function(){
           if (hit[options.fields.primary] === 1) {modifiers.push("primary");}
 
           // Parse the anchors if they exist
-          if (hit[options.fields.anchors].length != 0) {
+          if (hit[options.fields.anchors]) {
             anchors = JSON.parse(hit[options.fields.anchors]);
 
             // Concatenate hit href and anchor href
