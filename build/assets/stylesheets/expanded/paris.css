@@ -5524,7 +5524,7 @@ html.no-touchevents .news-card-counter {
   height: 60px;
   position: relative;
   width: 100%;
-  z-index: 300; }
+  z-index: 1300; }
   .rheader.static {
     position: relative !important; }
     .rheader.static + .layout-main > .layout-content:first-child,
