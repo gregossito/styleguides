@@ -375,7 +375,7 @@ Paris.listEquipments = (function(){
       content += '<div class="card-content" data-hitid="'+hit.objectID+'">';
       content += '<h3 class="card-title">'+hit.name+'</h3>';
       content += '<div class="card-text"><span class="card-address">'+hit.address_street+'</span><br><span class="card-zipcode">'+hit.address_postcode+'</span> <span class="card-city">'+hit.address_city+'</span></div>';
-      if (hit.is_open !== "unknown") {content += '<div class="card-hours '+ is_open +'">'+hit.open_details+'</div>';}
+      if (hit.is_open !== "unknown" && hit.open_details !== undefined) {content += '<div class="card-hours '+ is_open +'">'+hit.open_details+'</div>';}
       content += '<div class="card-buttons">';
       content += Paris.templates['button']['button']({
         href: hit.url,
