@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.11.13 (2018-07-09)
+
+* template `list-equipments`: remove undefined hours
+
 ## 1.11.12 (2018-07-06)
 
 * template `list-equipments`: remove sans handicaps

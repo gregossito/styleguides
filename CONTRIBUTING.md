@@ -79,9 +79,9 @@ Thanks for your contribution!
 
 ## Release a new version
 
-Create the release branch, `1.11.12` being your new version number
+Create the release branch, `X.X.X` being your new version number
 
-    $ git checkout -b release-1.11.12 master
+    $ git checkout -b release-X.X.X master
 
 Check that all changes from previous version are documented in `CHANGELOG.md`
 
@@ -97,20 +97,20 @@ Build the styleguide:
 
     $ npm run build
 
-Then add everything and commit (`1.11.12` being your new version number):
+Then add everything and commit (`X.X.X` being your new version number):
 
     $ git add .
-    $ git commit -m "New build 1.11.12"
+    $ git commit -m "New build X.X.X"
 
 Merge it to master and tag it
 
     $ git checkout master
-    $ git merge --no-ff release-1.11.12
-    $ git tag -a 1.11.12
+    $ git merge --no-ff release-X.X.X
+    $ git tag -a X.X.X
 
 Then delete the release branch
 
-    $ git branch -d release-1.11.12
+    $ git branch -d release-X.X.X
 
 Push it!
 
