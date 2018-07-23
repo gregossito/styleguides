@@ -117,7 +117,7 @@ Paris.listEquipments = (function(){
           operator: 'or',
           limit: 5,
           searchForFacetValues: {
-            placeholder: "Saisir une catégorie...",
+            placeholder: "exemple : Piscines, Bibliothèques",
             isAlwaysActive: true,
             templates: {
               noResults: '<label class="block-search-filters-autocomplete-item is-disabled">Aucune catégorie trouvée.</label>'
