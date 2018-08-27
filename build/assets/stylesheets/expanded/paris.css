@@ -8406,7 +8406,7 @@ body.rheader-mobile-nav-open {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; }
+  z-index: 1400; }
   .video-modal.is-open {
     display: block; }
   .video-modal-wrapper {
