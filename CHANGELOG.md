@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.11.16 (2018-08-29)
+
+* module `block-map` add ico-conservatoire
+
 ## 1.11.15 (2018-08-27)
 
 * module `video-home-news` fix z-index video-modal
