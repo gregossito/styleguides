@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.11.17 (2018-08-31)
+
+* module `block-map` add ico-jobs
+
 ## 1.11.16 (2018-08-29)
 
 * module `block-map` add ico-conservatoire
