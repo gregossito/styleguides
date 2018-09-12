@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.12.2 (2018-09-12)
+
+* module `jumbotron-slider` hide arrow on small screens
+
 ## 1.12.1 (2018-09-12)
 
 * module `rheader` fix padding-top if we have jumbotron-slider activated

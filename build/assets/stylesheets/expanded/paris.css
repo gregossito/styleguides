@@ -3930,6 +3930,9 @@ html.no-touchevents .jumbotron:not(.no-overlay):not(.home):hover .jumbotron-wrap
       padding: 0;
       font-size: 3.4em;
       transition: right 0.2s; }
+      @media (max-width: 767px) {
+        .jumbotron-slider-notice i {
+          display: none; } }
   @media (max-width: 767px) {
     .jumbotron-slider {
       display: none; } }
