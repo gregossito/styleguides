@@ -6073,7 +6073,7 @@ body.rheader-mobile-nav-open {
     padding-top: 60px; }
   .notice.top.fixed + .rheader.fixed + .layout-main > .layout-content:first-child,
   .notice.top.fixed + .rheader + .quick-access + .layout-main > .layout-content:first-child {
-    padding-top: 120px; } }
+    padding-top: 80px; } }
 
 @media (min-width: 1161px) {
   .rheader-button-around {
@@ -6087,7 +6087,7 @@ body.rheader-mobile-nav-open {
     margin-top: 60px; }
   .notice.top.fixed + .rheader.fixed.extended + .layout-main > .layout-content:first-child,
   .notice.top.fixed + .rheader.extended + .quick-access + .layout-main > .layout-content:first-child {
-    padding-top: 140px; }
+    padding-top: 100px; }
   .notice.top.fixed + .rheader.extended + .quick-access {
     margin-top: 140px; }
   .notice.top.fixed + .rheader + .quick-access {
@@ -6106,7 +6106,7 @@ body.rheader-mobile-nav-open {
     background: #F94F4F; }
   .notice.top.fixed + .rheader.fixed + .layout-main > .layout-content:first-child,
   .notice.top.fixed + .rheader + .quick-access + .layout-main > .layout-content:first-child {
-    padding-top: 120px; } }
+    padding-top: 80px; } }
 
 /*! instantsearch.js 2.3.3 | © Algolia Inc. and other contributors; Licensed MIT | github.com/algolia/instantsearch.js */
 .ais-search-box {
