@@ -80,6 +80,9 @@
       padding: 0;
       font-size: 3.4em;
       transition: right 0.2s;
+      @include small {
+        display:none;
+      }
     }
   }
 
