@@ -3893,12 +3893,12 @@ html.no-touchevents .jumbotron:not(.no-overlay):not(.home):hover .jumbotron-wrap
 .jumbotron-slider {
   background-color: white;
   color: #000;
-  display: block;
+  display: none;
   position: absolute;
   text-decoration: none;
   top: 0;
   width: 100%;
-  z-index: 750;
+  z-index: 1750;
   -webkit-animation: 2s ease-out 3s 1 forwards close;
           animation: 2s ease-out 3s 1 forwards close; }
   .jumbotron-slider.closed {
