@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.12.0(2018-09-12)
+
+* module `jumbotron-slider` everywhere + add 7 days expires with LocalStorage
+
 ## 1.11.17 (2018-08-31)
 
 * module `block-map` add ico-jobs

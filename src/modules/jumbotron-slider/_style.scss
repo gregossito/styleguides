@@ -1,12 +1,12 @@
 .jumbotron-slider {
   background-color: white;
   color: $black;
-  display: block;
+  display: none;
   position: absolute;
   text-decoration: none;
   top: 0;
   width: 100%;
-  z-index: 750;
+  z-index: 1750;
 
   &.closed {
     top: -43rem;
