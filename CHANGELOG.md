@@ -9,7 +9,11 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
-## 1.12.0(2018-09-12)
+## 1.12.1 (2018-09-12)
+
+* module `rheader` fix padding-top if we have jumbotron-slider activated
+
+## 1.12.0 (2018-09-12)
 
 * module `jumbotron-slider` everywhere + add 7 days expires with LocalStorage
 
