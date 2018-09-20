@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.12.3 (2018-09-20)
+
+* module `sections-list` add new icon
+
 ## 1.12.2 (2018-09-12)
 
 * module `jumbotron-slider` hide arrow on small screens

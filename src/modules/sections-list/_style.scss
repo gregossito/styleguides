@@ -277,7 +277,7 @@
       &:nth-child(2),
       &:nth-child(4),
       &:nth-child(7),
-      &:nth-child(15) {
+      &:nth-child(16) {
 
         .sections-list-button {
           background-color: transparentize($home-cat-blue1, 0.1);
@@ -302,8 +302,8 @@
       }
 
       &:nth-child(5),
-      &:nth-child(11),
-      &:nth-child(13) {
+      &:nth-child(12),
+      &:nth-child(14) {
 
         .sections-list-button {
           background-color: transparentize($home-cat-green, 0.1);
@@ -329,7 +329,7 @@
 
       &:nth-child(3),
       &:nth-child(6),
-      &:nth-child(14) {
+      &:nth-child(15) {
 
         .sections-list-button {
           background-color: transparentize($home-cat-yellow, 0.1);
@@ -357,52 +357,58 @@
         background-position-x: 0;
       }
       &:nth-child(2) .sections-list-button-wrapper:before {
-        background-position-x: -65px;
+        background-position-x: -60px;
       }
       &:nth-child(3) .sections-list-button-wrapper:before {
-        background-position-x: -130px;
+        background-position-x: -120px;
       }
       &:nth-child(4) .sections-list-button-wrapper:before {
-        background-position-x: -195px;
+        background-position-x: -185px;
       }
       &:nth-child(5) .sections-list-button-wrapper:before {
-        background-position-x: -260px;
+        background-position-x: -240px;
       }
       &:nth-child(6) .sections-list-button-wrapper:before {
-        background-position-x: -325px;
+        background-position-x: -305px;
       }
       &:nth-child(7) .sections-list-button-wrapper:before {
-        background-position-x: -390px;
+        background-position-x: -365px;
       }
       &:nth-child(8) .sections-list-button-wrapper:before {
-        background-position-x: -452px;
+        background-position-x: -420px;
         width: 49px;
       }
       &:nth-child(9) .sections-list-button-wrapper:before {
-        background-position-x: -516px;
+        background-position-x: -480px;
         width: 51px;
       }
       &:nth-child(10) .sections-list-button-wrapper:before {
-        background-position-x: -584px;
+        background-position-x: -540px;
+        width: 70px;
+        background-position-y: -110px;
       }
       &:nth-child(11) .sections-list-button-wrapper:before {
-        background-position-x: -650px;
+        background-position-x: -610px;
       }
       &:nth-child(12) .sections-list-button-wrapper:before {
-        background-position-x: -715px;
+        background-position-x: -670px;
       }
       &:nth-child(13) .sections-list-button-wrapper:before {
-        background-position-x: -780px;
+        background-position-x: -733px;
       }
       &:nth-child(14) .sections-list-button-wrapper:before {
-        background-position-x: -838px;
+        background-position-x: -785px;
         width: 56px;
       }
       &:nth-child(15) .sections-list-button-wrapper:before {
-        background-position-x: -910px;
+        background-position-x: -850px;
+        width: 60px;
       }
       &:nth-child(16) .sections-list-button-wrapper:before {
-        background-position-x: -973px;
+        background-position-x: -915px;
+      }
+      &:nth-child(17) .sections-list-button-wrapper:before {
+        background-position-x: -975px;
       }
     }
 
@@ -418,7 +424,7 @@
 
           .sections-list-button-wrapper {
              &:before {
-              background-position-y: -120px;
+              background-position-y: -110px;
              }
            }
         }
