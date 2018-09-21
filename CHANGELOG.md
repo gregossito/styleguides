@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.12.4 (2018-09-21)
+
+* templates `list-persons` fix pluriel mandats
+
 ## 1.12.3 (2018-09-20)
 
 * module `sections-list` add new icon
