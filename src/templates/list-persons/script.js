@@ -66,6 +66,18 @@ Paris.listPersons = (function(){
       // Add mandatory facet filters
       if (options.addFacetFilterJson) {
         $.each(options.addFacetFilterJson, function(index, facetFilter) {
+        if(facetFilter.facetValue === 'Adjoints à la Maire'){
+          facetFilter.facetValue = 'Adjoint à la Maire';
+        }
+        if(facetFilter.facetValue==='Conseillers de Paris'){
+          facetFilter.facetValue = 'Conseiller de Paris';
+        }
+        if(facetFilter.facetValue==='Maires d\'arrondissement'){
+          facetFilter.facetValue = 'Maire d\'arrondissement';
+        }
+        if(facetFilter.facetValue==='Conseillers métropolitain'){
+          facetFilter.facetValue = 'Conseiller métropolitain';
+        }
           helper.addRefine(facetFilter.facetName, facetFilter.facetValue);
         });
       }
