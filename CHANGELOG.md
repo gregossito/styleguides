@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.12.5 (2018-09-24)
+
+* module `sections-list` fix icon Prévention des risques majeurs
+
 ## 1.12.4 (2018-09-21)
 
 * templates `list-persons` fix pluriel mandats

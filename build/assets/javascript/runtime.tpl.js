@@ -4228,6 +4228,21 @@ templatizer["jumbotron-slider"]["jumbotron-slider"] = function tmpl_jumbotron_sl
     return buf.join("");
 };
 
+// last-update.jade compiled template
+templatizer["last-update"] = function tmpl_last_update(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// last-update.jade:last-update compiled template
+templatizer["last-update"]["last-update"] = function tmpl_last_update_last_update(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push('<div class="last-update">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</div>");
+    return buf.join("");
+};
+
 // jumbotron.jade compiled template
 templatizer["jumbotron"] = function tmpl_jumbotron(locals) {
     var buf = [];
@@ -4301,21 +4316,6 @@ templatizer["jumbotron"]["jumbotron"] = function tmpl_jumbotron_jumbotron(data) 
         buf.push("</div>");
     }
     buf.push("</div></div></a>");
-    return buf.join("");
-};
-
-// last-update.jade compiled template
-templatizer["last-update"] = function tmpl_last_update(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// last-update.jade:last-update compiled template
-templatizer["last-update"]["last-update"] = function tmpl_last_update_last_update(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<div class="last-update">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</div>");
     return buf.join("");
 };
 
