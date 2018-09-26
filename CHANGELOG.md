@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.12.7 (2018-09-26)
+
+* template `list-equipments`: fix filter postcode
+
 ## 1.12.6 (2018-09-26)
 
 * template `list-equipments`: add filter postcode
