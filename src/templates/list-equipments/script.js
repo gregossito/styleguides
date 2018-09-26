@@ -169,7 +169,7 @@ Paris.listEquipments = (function(){
           attributeName: 'is_open',
           autoHideContainer: true,
           container: '#js-facet-open',
-          label: 'Ouvert maintenant',
+          label: 'Ouvert',
           values: {
             on: true
           },
@@ -200,7 +200,7 @@ Paris.listEquipments = (function(){
           limit: 200,
           templates: {
             header: "Arrondissement",
-            seeAllOption: "Code postal"
+            seeAllOption: "Trier par code postal"
           }
         })
       );
@@ -251,21 +251,27 @@ Paris.listEquipments = (function(){
       $('#hits-container').on('click', '.card', function(event) {
         event.preventDefault();
         var card = $(event.target).closest('.card');
-        var hit = {
-          objectID: card.data('hitid'),
-          name: $(card).find('.card-title').html(),
-          address_street: $(card).find('.card-address').html(),
-          address_postcode: $(card).find('.card-zipcode').html(),
-          address_city: $(card).find('.card-city').html(),
-          open_details: $(card).find('.card-hours').html(),
-          url: $(card).attr('href'),
-          is_open: $(card).find('.card-hours').attr('data-open') == 'true'
-        };
-        var content = renderMapPopupContent(hit);
-        leafletWidget.openHit(content, [card.data('lat'), card.data('lng')], card.data('hitid'));
 
-        $('#hits-container').addClass('inactive');
-        $(card).removeClass('inactive');
+        if(window.matchMedia("(max-width: 767px)").matches){
+          document.location.href = $(card).attr('href');
+        }
+        else {
+            var hit = {
+            objectID: card.data('hitid'),
+            name: $(card).find('.card-title').html(),
+            address_street: $(card).find('.card-address').html(),
+            address_postcode: $(card).find('.card-zipcode').html(),
+            address_city: $(card).find('.card-city').html(),
+            open_details: $(card).find('.card-hours').html(),
+            url: $(card).attr('href'),
+            is_open: $(card).find('.card-hours').attr('data-open') == 'true'
+          };
+          var content = renderMapPopupContent(hit);
+          leafletWidget.openHit(content, [card.data('lat'), card.data('lng')], card.data('hitid'));
+
+          $('#hits-container').addClass('inactive');
+          $(card).removeClass('inactive');
+        }
       });
 
       // Handle click on zoom out button
