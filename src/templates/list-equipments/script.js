@@ -192,6 +192,19 @@ Paris.listEquipments = (function(){
         })
       );
 
+     // Arrondissement
+      mainSearch.addWidget(
+        instantsearch.widgets.menuSelect({
+          attributeName: 'address_postcode',
+          container: '#js-facet-address_postcode',
+          limit: 200,
+          templates: {
+            header: "Arrondissement",
+            seeAllOption: "Code postal"
+          }
+        })
+      );
+
       // Search results widget
       mainSearch.addWidget(
         instantsearch.widgets.infiniteHits({

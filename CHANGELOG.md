@@ -9,6 +9,11 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.12.6 (2018-09-26)
+
+* template `list-equipments`: add filter postcode
+* module `block-search-filters` add filter postcode
+
 ## 1.12.5 (2018-09-24)
 
 * module `sections-list` fix icon Prévention des risques majeurs
