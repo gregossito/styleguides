@@ -324,37 +324,52 @@ Paris.listEquipments = (function(){
         }
       };
 
-      var placesDataset = placesAutocompleteDataset({
-        algoliasearch: algoliasearch,
-        templates: {
-          header: '<div class="ad-example-header">'+Paris.i18n.t('list_equipments/addresses')+'</div>',
-          suggestion: function(suggestion) {
-            return '<span class="autocomplete-name">' + suggestion.value + '</span>';
-          },
-          footer : ''
-        },
-        hitsPerPage: 2,
-        aroundLatLng: Paris.config.search.paris_coordinates.lat + ',' + Paris.config.search.paris_coordinates.lng,
-        aroundRadius: 22000,
-        style: false
-      });
+      // var placesDataset = placesAutocompleteDataset({
+      //   algoliasearch: algoliasearch,
+      //   templates: {
+      //     header: '<div class="ad-example-header">'+Paris.i18n.t('list_equipments/addresses')+'</div>',
+      //     suggestion: function(suggestion) {
+      //       return '<span class="autocomplete-name">' + suggestion.value + '</span>';
+      //     },
+      //     footer : ''
+      //   },
+      //   hitsPerPage: 2,
+      //   aroundLatLng: Paris.config.search.paris_coordinates.lat + ',' + Paris.config.search.paris_coordinates.lng,
+      //   aroundRadius: 22000,
+      //   style: false
+      // });
+
+      // autocomplete('.layout-list-map .search-field-input', { hint: false }, [
+      //   placesDataset, equipementDataset
+      // ]).on('autocomplete:selected', function(event, suggestion, dataset) {
+      //   if (dataset == 'places') {
+      //     placeQuery = suggestion.value;
+      //     mainSearch.helper.setQuery(suggestion.value);
+      //     setTimeout(function() {
+      //       // Timeout fix a bug on android with keyboard toggle
+      //       leafletWidget.flyTo([suggestion.latlng.lat, suggestion.latlng.lng]);
+      //     }, 500);
+      //   } else {
+      //     placeQuery = '';
+      //     mainSearch.helper.setQuery(suggestion.name);
+      //     mainSearch.helper.search();
+      //     var content = renderMapPopupContent(suggestion);
+      //     leafletWidget.openHit(content, [suggestion._geoloc.lat, suggestion._geoloc.lng], suggestion.objectID);
+      //   }
+      //   // [mobile] scroll to the map
+      //   $('#map').velocity("scroll");
+      //   $(this).blur();
+      // });
       autocomplete('.layout-list-map .search-field-input', { hint: false }, [
-        placesDataset, equipementDataset
+        equipementDataset
       ]).on('autocomplete:selected', function(event, suggestion, dataset) {
-        if (dataset == 'places') {
-          placeQuery = suggestion.value;
-          mainSearch.helper.setQuery(suggestion.value);
-          setTimeout(function() {
-            // Timeout fix a bug on android with keyboard toggle
-            leafletWidget.flyTo([suggestion.latlng.lat, suggestion.latlng.lng]);
-          }, 500);
-        } else {
-          placeQuery = '';
-          mainSearch.helper.setQuery(suggestion.name);
-          mainSearch.helper.search();
-          var content = renderMapPopupContent(suggestion);
-          leafletWidget.openHit(content, [suggestion._geoloc.lat, suggestion._geoloc.lng], suggestion.objectID);
-        }
+
+        placeQuery = '';
+        mainSearch.helper.setQuery(suggestion.name);
+        mainSearch.helper.search();
+        var content = renderMapPopupContent(suggestion);
+        leafletWidget.openHit(content, [suggestion._geoloc.lat, suggestion._geoloc.lng], suggestion.objectID);
+
         // [mobile] scroll to the map
         $('#map').velocity("scroll");
         $(this).blur();
@@ -394,7 +409,8 @@ Paris.listEquipments = (function(){
       content += '<div class="card-content" data-hitid="'+hit.objectID+'">';
       content += '<h3 class="card-title">'+hit.name+'</h3>';
       content += '<div class="card-text"><span class="card-address">'+hit.address_street+'</span><br><span class="card-zipcode">'+hit.address_postcode+'</span> <span class="card-city">'+hit.address_city+'</span></div>';
-      if (hit.is_open !== "unknown" && hit.open_details !== undefined) {content += '<div class="card-hours '+ is_open +'">'+hit.open_details+'</div>';}
+      var open_details = hit.open_details ? hit.open_details : '';
+      if (hit.is_open !== "unknown" && hit.open_details !== undefined) {content += '<div class="card-hours '+ is_open +'">'+open_details+'</div>';}
       content += '<div class="card-buttons">';
       content += Paris.templates['button']['button']({
         href: hit.url,
