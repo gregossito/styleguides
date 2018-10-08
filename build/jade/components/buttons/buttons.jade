@@ -5,7 +5,7 @@ mixin buttons(data)
     if data.title
       - var title_tag = data.title_tag || 'h2'
       #{title_tag}.buttons-title= data.title
-    ul.buttons-items
+    ul.buttons-items(class=data.activeCenter)
       each item in data.items
         li
           +button(item)

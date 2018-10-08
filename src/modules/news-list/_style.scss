@@ -176,5 +176,65 @@
     font-size: 2rem;
     line-height: 2.4rem;
   }
+  
+  // agenda
+  .news-list-agenda {
+    width:33%;
+    margin-right:2rem;
+    border:1px solid $gray99;
+    padding:2rem;
+    height:400px;
+    float:left;
+
+    .news-list-agenda-nav {
+      height:6rem;
+      text-align: center;
+
+      .news-list-agenda-nav-prev {
+        display:inline-block;
+        font-size: 3rem;   
+        margin-right: 1rem;
+      }
+      .news-list-agenda-nav-month {
+        display:inline-block;
+        font-size: 2.5rem;
+        min-width:180px;
+      }
+      .news-list-agenda-nav-next {
+        display:inline-block;
+        font-size: 3rem;
+        margin-left: 1rem;
+      }
+    }
+
+    .news-list-agenda-arrondissement-change {
+      display: inline-block;
+      margin: 1rem;
+      background: $color-primary; 
+      padding: 0.5rem 1rem;
+      color:white;
+      opacity: .1;
+      border:3px solid $color-primary;
+      &.have-actus {
+        opacity: 1;
+        cursor: pointer;
+      }
+      &.active {
+        border:3px solid black;
+      }
+    }
+  }
+  
+  .news-list.agenda {
+    float:left;
+    .news-agenda-card-item {
+      float:left;
+      margin:10px;
+    }
+  }
+
+  .agenda-clear {
+    clear:both;
+  }
 
 }

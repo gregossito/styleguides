@@ -1,8 +1,11 @@
 mixin heading(data)
   .heading(class=data.modifiers)
-    h2.heading-title= data.title
-    if (data.link)
-      .heading-links
-        if (data.link.external)
-          span.icon-dailymotion 
-        a(href=data.link.href onclick=data.link.onclick)= data.link.text
+    if data.anchor && data.activeAnchor
+      h2.heading-title(id=data.anchor)= data.title
+    else
+      h2.heading-title= data.title
+      if (data.link)
+        .heading-links
+          if (data.link.external)
+            span.icon-dailymotion 
+          a(href=data.link.href onclick=data.link.onclick)= data.link.text

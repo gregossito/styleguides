@@ -37,6 +37,7 @@ require('../modules/button-top/script');
 require('../modules/gallery-ugc/script');
 require('../modules/icon-switch/script');
 require('../modules/jumbotron-slider/script');
+require('../modules/news-list/script');
 require('../modules/notice/script');
 require('../modules/person-block/script');
 require('../modules/poll/script');

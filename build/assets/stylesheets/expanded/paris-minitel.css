@@ -4392,6 +4392,9 @@ html.no-cssanimations .jumbotron-slider {
   margin-top: 1rem;
   position: relative; }
 
+.news-card-arrondissement {
+  display: none; }
+
 .news-card-counters {
   display: none; }
 
@@ -4773,7 +4776,49 @@ html.no-touchevents .news-card-counter {
     padding: 25px 0 40px; }
   .news-item-title {
     font-size: 2rem;
-    line-height: 2.4rem; } }
+    line-height: 2.4rem; }
+  .news-list-agenda {
+    width: 33%;
+    margin-right: 2rem;
+    border: 1px solid #999;
+    padding: 2rem;
+    height: 400px;
+    float: left; }
+    .news-list-agenda .news-list-agenda-nav {
+      height: 6rem;
+      text-align: center; }
+      .news-list-agenda .news-list-agenda-nav .news-list-agenda-nav-prev {
+        display: inline-block;
+        font-size: 3rem;
+        margin-right: 1rem; }
+      .news-list-agenda .news-list-agenda-nav .news-list-agenda-nav-month {
+        display: inline-block;
+        font-size: 2.5rem;
+        min-width: 180px; }
+      .news-list-agenda .news-list-agenda-nav .news-list-agenda-nav-next {
+        display: inline-block;
+        font-size: 3rem;
+        margin-left: 1rem; }
+    .news-list-agenda .news-list-agenda-arrondissement-change {
+      display: inline-block;
+      margin: 1rem;
+      background: #fd28fc;
+      padding: 0.5rem 1rem;
+      color: white;
+      opacity: .1;
+      border: 3px solid #fd28fc; }
+      .news-list-agenda .news-list-agenda-arrondissement-change.have-actus {
+        opacity: 1;
+        cursor: pointer; }
+      .news-list-agenda .news-list-agenda-arrondissement-change.active {
+        border: 3px solid black; }
+  .news-list.agenda {
+    float: left; }
+    .news-list.agenda .news-agenda-card-item {
+      float: left;
+      margin: 10px; }
+  .agenda-clear {
+    clear: both; } }
 
 .notice {
   background-color: #000;
@@ -8610,6 +8655,8 @@ body.rheader-mobile-nav-open {
   .component-buttons .buttons-items > li {
     display: inline-block;
     margin: 0 10px 10px 0; }
+  .component-buttons .buttons-items.center {
+    text-align: center; }
 
 @media (max-width: 450px) {
   .component-buttons .buttons-items > li {
