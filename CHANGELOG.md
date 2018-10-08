@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.12.8 (2018-10-08)
+
+* template `list-equipments`: remove algolia places addresses 
+
 ## 1.12.7 (2018-09-26)
 
 * template `list-equipments`: fix filter postcode
