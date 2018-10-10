@@ -3,35 +3,37 @@ include ../news-card/news-card
 mixin news-list(data)
   if data.agenda
     div.news-list-agenda
-      div.news-list-agenda-nav
-        div.news-list-agenda-nav-prev.icon-arrow-left
-        div.news-list-agenda-nav-month
-        div.news-list-agenda-nav-next.icon-arrow-right
+      div.news-list-agenda-filters.component-form
+        div.form-item.form-item-select
+          select
+            option(value="month") Filtrer par mois 
+            option(value="arr") Filtrer par arrondissement 
+      div.news-list-agenda-nav-month
       div.news-list-agenda-arrondissement
-        div.news-list-agenda-arrondissement-change= 1
-        div.news-list-agenda-arrondissement-change= 2
-        div.news-list-agenda-arrondissement-change= 3
-        div.news-list-agenda-arrondissement-change= 4
-        div.news-list-agenda-arrondissement-change= 5
-        div.news-list-agenda-arrondissement-change= 6
-        div.news-list-agenda-arrondissement-change= 7
-        div.news-list-agenda-arrondissement-change= 8
-        div.news-list-agenda-arrondissement-change= 9
-        div.news-list-agenda-arrondissement-change= 10
-        div.news-list-agenda-arrondissement-change= 11
-        div.news-list-agenda-arrondissement-change= 12
-        div.news-list-agenda-arrondissement-change= 13
-        div.news-list-agenda-arrondissement-change= 14
-        div.news-list-agenda-arrondissement-change= 15
-        div.news-list-agenda-arrondissement-change= 16
-        div.news-list-agenda-arrondissement-change= 17
-        div.news-list-agenda-arrondissement-change= 18
-        div.news-list-agenda-arrondissement-change= 19
-        div.news-list-agenda-arrondissement-change= 20
+        span.news-list-agenda-arrondissement-change= 1
+        span.news-list-agenda-arrondissement-change= 2
+        span.news-list-agenda-arrondissement-change= 3
+        span.news-list-agenda-arrondissement-change= 4
+        span.news-list-agenda-arrondissement-change= 5
+        span.news-list-agenda-arrondissement-change= 6
+        span.news-list-agenda-arrondissement-change= 7
+        span.news-list-agenda-arrondissement-change= 8
+        span.news-list-agenda-arrondissement-change= 9
+        span.news-list-agenda-arrondissement-change= 10
+        span.news-list-agenda-arrondissement-change= 11
+        span.news-list-agenda-arrondissement-change= 12
+        span.news-list-agenda-arrondissement-change= 13
+        span.news-list-agenda-arrondissement-change= 14
+        span.news-list-agenda-arrondissement-change= 15
+        span.news-list-agenda-arrondissement-change= 16
+        span.news-list-agenda-arrondissement-change= 17
+        span.news-list-agenda-arrondissement-change= 18
+        span.news-list-agenda-arrondissement-change= 19
+        span.news-list-agenda-arrondissement-change= 20
 
   if data.modifiers && data.modifiers.indexOf("news-cards") !== -1
     if data.modifiers.indexOf("large-first-child") !== -1
-      ul.news-list(class=data.modifiers+" "+data.agenda)
+      ul.news-list(class=data.modifiers)
         each item, index in data.items.slice(0, 5)
           li.news-list-card-item
             if index === 0
@@ -43,8 +45,9 @@ mixin news-list(data)
     else
       ul.news-list.gallery(class=data.modifiers+" "+data.agenda)
         each item in data.items
-          li.news-agenda-card-item
+          li.news-list-card-item
             +news-card(item)
+      ul.news-list.gallery(class=data.modifiers+" agenda-clone")
       div.agenda-clear
   else
     ul.news-list.gallery(class=data.modifiers+" "+data.agenda)

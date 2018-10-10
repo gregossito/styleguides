@@ -15,21 +15,41 @@ Paris.newsList = (function(){
     function init(){
       initOptions();
 
-      $listMonths = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
-      $prev = $('.news-list-agenda-nav-prev');
-      $next = $('.news-list-agenda-nav-next');
-      $date =  $('.news-list-agenda-nav-month');
-       
+      $listMonths = ['Jan.', 'Févr.', 'Mars', 'Avr.', 'Mai', 'Juin', 'Juill.', 'Août', 'Sept.', 'Oct.', 'Nov.', 'Déc.'];
+      $date =  $('.news-list-agenda-nav-month'); 
+      $arrondissements = $('.news-list-agenda-arrondissement');
       var current_month = new Date().getMonth();
-      $date.append($listMonths[current_month]);
-      $date.data('year', new Date().getFullYear());
-      $date.data('month', current_month);
-      $arrondissements = $('.news-list-agenda-arrondissement-change');
-      monthActusArr(new Date().getMonth(), new Date().getFullYear());
 
-      $prev.on('click', onClickPrev);
-      $next.on('click', onClickNext);
-      $arrondissements.on('click', onClickArrondissement);
+      // List of months, start with current month
+      for (var i = current_month; i < 12; i++) {
+        var m = i+1;
+        $date.append('<span data-month="' + m + '" data-year="' + new Date().getFullYear() + '">' + $listMonths[i]+ '</span>');
+      }
+      for (var i = 0; i < current_month; i++) {
+        var m = i+1;
+        var y = parseInt(new Date().getFullYear())+1;
+        $date.append('<span data-month="' + m + '" data-year="' + y + '">' + $listMonths[i]+ '</span>');
+      }
+
+      // Filters action
+      $('.news-list-agenda-filters select').change(function () {
+        $( ".news-list-agenda-filters select option:selected" ).each(function() {
+          if($(this).val() == 'arr'){
+            $date.hide();
+            $arrondissements.show();
+          }
+          else {
+            $date.show();
+            $arrondissements.hide();
+          }
+        });
+        displayAllNews();
+      })
+      .change();
+
+      $date.children('span').on('click', monthFilters);
+      $arrondissements.children('span').on('click', arrFilters);
+      initHaveActus()
     }
 
     function initOptions() {
@@ -38,65 +58,66 @@ Paris.newsList = (function(){
       });
     }
 
-    // met en surbrillance les arrondissements qui ont une actu en fonction du mois et de l'année
-    function monthActusArr(m,y) {
-      $('.news-list-agenda-arrondissement-change').removeClass('active');
-      $('.news-list-agenda-arrondissement-change').removeClass('have-actus');
-      $('.agenda .news-agenda-card-item').hide();
-      $('.agenda .news-agenda-card-item').each(function(){
+    // En surbrillance les arrondissements et les mois qui ont une actu 
+    function initHaveActus() {
+      $('.agenda .news-list-card-item').each(function(){
         var date = $(this).find('.news-card-date span').text();
         date = date.split('/');
-        if(m == parseInt(date[1]-1) && y == parseInt(date[2])) {
-          var arr = $(this).find('.news-card-arrondissement span').text();
-          $('.news-list-agenda-arrondissement-change').eq(arr-1).addClass('have-actus');
-          $(this).show();
-        }
+        var arr = $(this).find('.news-card-arrondissement span').text();
+        $('.news-list-agenda-arrondissement-change').eq(arr-1).addClass('have-actus');
+        $(".news-list-agenda-nav-month span[data-month="+parseInt(date[1])+"][data-year="+parseInt(date[2])+"]").addClass('have-actus');
       });
     }
 
-    function onClickPrev(e){
-      var m = $date.data('month')-1;
-      var y = $date.data('year');
-      if(m<0){ m = 11; y=y--;}
-      $date.html($listMonths[m]);
-      $date.data('year', y);
-      $date.data('month', m);
-      monthActusArr(m,y);
-    }
 
-    function onClickNext(e){
-      var m = $date.data('month')+1;
-      var y = $date.data('year');
-      if(m>11){ m = 0; y=y++;}
-      monthActusArr(m,y)
-      $date.html($listMonths[m]);
-      $date.data('year', y);
-      $date.data('month', m);
-      monthActusArr(m,y);
-    }
-
-    function onClickArrondissement(e){
-      var m = $date.data('month');
-      var y = $date.data('year');
-      var a = $(this).text();
+    // Click on arrondissement
+    function arrFilters(arr) {
       var that = $(this);
-      $('.news-list-agenda-arrondissement-change').removeClass('active');
-      if($(this).hasClass('have-actus')) {
-        $('.agenda .news-agenda-card-item').hide();
-        $('.agenda .news-agenda-card-item').each(function(){
-          var date = $(this).find('.news-card-date span').text();
+      if (that.hasClass('active')) {
+        displayAllNews();
+      }
+      else {
+        $('.news-list-agenda-arrondissement-change').removeClass('active');
+        that.addClass('active');
+        var a = that.text();
+        $('.agenda').hide();
+        $('.agenda-clone').empty();
+        $('.agenda .news-list-card-item').each(function(){
           var arr = $(this).find('.news-card-arrondissement span').text();
-          date = date.split('/');
-          if(m == parseInt(date[1]-1) && y == parseInt(date[2]) && parseInt(a) == parseInt(arr)) {
-            that.addClass('active');
-            $(this).show();
+          if(parseInt(a) == parseInt(arr)) {
+            $('.agenda-clone').append('<li class="news-list-card-item">' + $(this).html() + '</li>');
           }
         });
       }
-    }
+    } 
 
-    function newsFilters(arrondissement,month) {
+    // Click on month
+    function monthFilters(month) {
+      var that = $(this);
+      if (that.hasClass('active')) {
+        displayAllNews();
+      }
+      else {
+        $('.news-list-agenda-nav-month span').removeClass('active');
+        that.addClass('active');
+        var m = that.data('month');
+        var y = that.data('year');
+        $('.agenda').hide();
+        $('.agenda-clone').empty();
+        $('.agenda .news-list-card-item').each(function(){
+          var date = $(this).find('.news-card-date span').text();
+          date = date.split('/');
+          if(m == parseInt(date[1]) && y == parseInt(date[2])) {
+            $('.agenda-clone').append('<li class="news-list-card-item">' + $(this).html() + '</li>');
+          }
+        });
+      }
+    } 
 
+    function displayAllNews() {
+      $('.agenda-clone').empty();
+      $('.agenda').fadeIn();
+      $('.news-list-agenda-nav-month span').removeClass('active');
     }
 
     init();

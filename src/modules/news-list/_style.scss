@@ -177,7 +177,7 @@
     line-height: 2.4rem;
   }
   
-  // agenda
+/*  // agenda Mode Calendrier
   .news-list-agenda {
     width:33%;
     margin-right:2rem;
@@ -231,7 +231,61 @@
       float:left;
       margin:10px;
     }
+  }*/
+  .news-list-agenda {
+    .news-list-agenda-nav-month {
+      margin: 2rem 0 2rem 0;
+      height: 4rem;
+      span {
+        background:$grayF2;
+        color:$color-secondary-variant;
+        padding:1.5rem 1.9rem;
+        opacity:.2;
+        &:hover {
+          background:$color-secondary-variant;
+          color:white;
+        }
+        &.active {
+          background:$color-secondary-variant;
+          color:white;
+          font-weight:bold;
+        }
+        &.have-actus {
+          opacity:1;
+          cursor:pointer;
+        }
+      }
+    }
+    .news-list-agenda-arrondissement {
+      margin:2rem 0 2rem 0;
+      height:4rem;
+      display:none;
+      .news-list-agenda-arrondissement-change {
+        background:$grayF2;
+        color:$color-secondary-variant;
+        padding:1.5rem 1.9rem;
+        opacity:.2;
+        &:hover {
+          background:$color-secondary-variant;
+          color:white;
+        }
+        &.active {
+          background:$color-secondary-variant;
+          color:white;
+          font-weight:bold;
+        }
+        &.have-actus {
+          opacity:1;
+          cursor:pointer;
+        }
+      }
+    }
   }
+  .news-list{
+    &.agenda {
+    }
+  }
+
 
   .agenda-clear {
     clear:both;
