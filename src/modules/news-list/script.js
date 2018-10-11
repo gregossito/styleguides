@@ -47,6 +47,7 @@ Paris.newsList = (function(){
       })
       .change();
 
+      sortNews();
       $date.children('span').on('click', monthFilters);
       $arrondissements.children('span').on('click', arrFilters);
       initHaveActus()
@@ -118,6 +119,19 @@ Paris.newsList = (function(){
       $('.agenda-clone').empty();
       $('.agenda').fadeIn();
       $('.news-list-agenda-nav-month span').removeClass('active');
+    }
+
+    function sortNews() {
+      $('.agenda .news-list-card-item').each(function(){
+        var date = $(this).find('.news-card-date span').text();
+        date = date.split('/');
+        $(this).attr('data-date', date[2] + date[1] + date[0]);
+      })
+      $('.agenda').each(function(){
+        $(this).html($(this).children('li').sort(function(a, b){
+          return ($(b).data('date')) < ($(a).data('date')) ? 1 : -1;
+        }));
+      });
     }
 
     init();
