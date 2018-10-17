@@ -9,6 +9,14 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.12.9 (2018-10-17)
+
+* module `news-card`: add data arrondissement
+* module `news-list`: add script for mode agenda
+* module `heading`: add anchor name
+* components `buttons`: add center class
+* components `form`: fix success message
+
 ## 1.12.8 (2018-10-08)
 
 * template `list-equipments`: remove algolia places addresses 

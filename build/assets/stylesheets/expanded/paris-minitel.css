@@ -4796,7 +4796,7 @@ html.no-touchevents .news-card-counter {
     .news-list-agenda .news-list-agenda-nav-month span {
       background: #F2F2F2;
       color: #0A4770;
-      padding: 1.5rem 1.9rem;
+      padding: 1.5rem 0rem 1.5rem 2.5rem;
       opacity: .2; }
       .news-list-agenda .news-list-agenda-nav-month span:hover {
         background: #0A4770;
@@ -4804,10 +4804,23 @@ html.no-touchevents .news-card-counter {
       .news-list-agenda .news-list-agenda-nav-month span.active {
         background: #0A4770;
         color: white;
-        font-weight: bold; }
+        font-weight: bold;
+        border-radius: 5px; }
+        .news-list-agenda .news-list-agenda-nav-month span.active:after {
+          content: "";
+          border-right: 0px solid #CCC;
+          padding: 0 2rem 0 1rem; }
       .news-list-agenda .news-list-agenda-nav-month span.have-actus {
         opacity: 1;
         cursor: pointer; }
+      .news-list-agenda .news-list-agenda-nav-month span:first-child {
+        border-radius: 5px 0px 0 5px; }
+      .news-list-agenda .news-list-agenda-nav-month span:last-child {
+        border-radius: 0px 5px 5px 0px; }
+      .news-list-agenda .news-list-agenda-nav-month span:after {
+        content: "";
+        border-right: 1px solid #CCC;
+        padding: 0 2rem 0 1rem; }
   .news-list-agenda .news-list-agenda-arrondissement {
     margin: 2rem 0 2rem 0;
     height: 4rem;
@@ -4815,18 +4828,31 @@ html.no-touchevents .news-card-counter {
     .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change {
       background: #F2F2F2;
       color: #0A4770;
-      padding: 1.5rem 1.9rem;
+      padding: 1.5rem 0rem 1.5rem 2.5rem;
       opacity: .2; }
+      .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change:first-child {
+        border-radius: 5px 0px 0 5px; }
+      .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change:last-child {
+        border-radius: 0px 5px 5px 0px; }
       .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change:hover {
         background: #0A4770;
         color: white; }
       .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change.active {
         background: #0A4770;
         color: white;
-        font-weight: bold; }
+        font-weight: bold;
+        border-radius: 5px; }
+        .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change.active:after {
+          content: "";
+          border-right: 0px solid #CCC;
+          padding: 0 2rem 0 1rem; }
       .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change.have-actus {
         opacity: 1;
         cursor: pointer; }
+      .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change:after {
+        content: "";
+        border-right: 1px solid #CCC;
+        padding: 0 1rem 0 0rem; }
   .agenda-clear {
     clear: both; } }
 
@@ -8880,7 +8906,11 @@ body.rheader-mobile-nav-open {
   .component-form .form-message.error {
     color: #fd28fc; }
   .component-form .form-message.success {
-    color: #43B57E; }
+    background-color: #43B57E;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 5px; }
   .component-form .form-item .form-item-label:after,
   .component-form .form-item-matrix .matrix-item .matrix-item-text:after {
     /* use !important to prevent issues with browser extensions that change fonts */
