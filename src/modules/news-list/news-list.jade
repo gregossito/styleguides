@@ -1,6 +1,37 @@
 include ../news-card/news-card
 
 mixin news-list(data)
+  if data.agenda
+    div.news-list-agenda
+      div.news-list-agenda-filters.component-form
+        label= "Filtrer par"
+        div.form-item.form-item-select
+          select
+            option(value="month") Mois 
+            option(value="arr") Arrondissement 
+      div.news-list-agenda-nav-month
+      div.news-list-agenda-arrondissement
+        span.news-list-agenda-arrondissement-change= 1
+        span.news-list-agenda-arrondissement-change= 2
+        span.news-list-agenda-arrondissement-change= 3
+        span.news-list-agenda-arrondissement-change= 4
+        span.news-list-agenda-arrondissement-change= 5
+        span.news-list-agenda-arrondissement-change= 6
+        span.news-list-agenda-arrondissement-change= 7
+        span.news-list-agenda-arrondissement-change= 8
+        span.news-list-agenda-arrondissement-change= 9
+        span.news-list-agenda-arrondissement-change= 10
+        span.news-list-agenda-arrondissement-change= 11
+        span.news-list-agenda-arrondissement-change= 12
+        span.news-list-agenda-arrondissement-change= 13
+        span.news-list-agenda-arrondissement-change= 14
+        span.news-list-agenda-arrondissement-change= 15
+        span.news-list-agenda-arrondissement-change= 16
+        span.news-list-agenda-arrondissement-change= 17
+        span.news-list-agenda-arrondissement-change= 18
+        span.news-list-agenda-arrondissement-change= 19
+        span.news-list-agenda-arrondissement-change= 20
+
   if data.modifiers && data.modifiers.indexOf("news-cards") !== -1
     if data.modifiers.indexOf("large-first-child") !== -1
       ul.news-list(class=data.modifiers)
@@ -13,12 +44,14 @@ mixin news-list(data)
             else
               +news-card(item)
     else
-      ul.news-list.gallery(class=data.modifiers)
+      ul.news-list.gallery(class=data.modifiers+" "+data.agenda)
         each item in data.items
           li.news-list-card-item
             +news-card(item)
+      ul.news-list.gallery(class=data.modifiers+" agenda-clone")
+      div.agenda-clear
   else
-    ul.news-list.gallery(class=data.modifiers)
+    ul.news-list.gallery(class=data.modifiers+" "+data.agenda)
       each item in data.items
         li.news-list-item
           a.news-item(href=item.href onclick=item.onclick)

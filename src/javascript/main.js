@@ -37,6 +37,7 @@ require('../modules/button-top/script');
 require('../modules/gallery-ugc/script');
 require('../modules/icon-switch/script');
 require('../modules/jumbotron-slider/script');
+require('../modules/news-list/script');
 require('../modules/notice/script');
 require('../modules/person-block/script');
 require('../modules/poll/script');
@@ -62,5 +63,9 @@ require('./lib/egg');
 require('./lib/3975');
 
 var Paris = window.Paris || {};
+<<<<<<< HEAD
 Paris.version = "1.12.8";
+=======
+Paris.version = "1.12.9";
+>>>>>>> features-gf-planclimat
 Paris.templates = require('./client.tpl');

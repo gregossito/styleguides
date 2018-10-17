@@ -22,6 +22,9 @@
       display: inline-block;
       margin: 0 10px 10px 0;
     }
+    &.center {
+      text-align:center;
+    }
   }
 
   @media (max-width: 450px) {

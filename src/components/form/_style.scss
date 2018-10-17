@@ -29,7 +29,13 @@
 
   .form-message {
     &.error {color: $color-primary;}
-    &.success {color: $green1;}
+    &.success {
+      background-color:$green1;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 5px;
+    }
   }
 
   // error

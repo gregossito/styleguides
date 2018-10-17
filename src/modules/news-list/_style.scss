@@ -176,5 +176,117 @@
     font-size: 2rem;
     line-height: 2.4rem;
   }
+  
+// agenda Mode Calendrier
+  .news-list-agenda {
+    .news-list-agenda-filters  {
+      padding-bottom:2rem;
+      label,
+      .form-item-select {
+        display: inline-block;
+      }
+      label {
+        margin-right:2rem;
+        font-size:2.4rem;
+        font-weight:bold;
+        color:#000;
+      }
+      select {
+        font-size:1.7rem !important;
+        color:#000;
+      }
+    }
+
+    .news-list-agenda-nav-month {
+      margin: 2rem 0 2rem 0;
+      height: 4rem;
+      span {
+        background:$grayF2;
+        color:$color-secondary-variant;
+        padding: 1.5rem 0rem 1.5rem 2.5rem;
+        opacity:.2;
+        &:hover {
+          background:$color-secondary-variant;
+          color:white;
+        }
+        &.active {
+          background:$color-secondary-variant;
+          color:white;
+          font-weight:bold;
+          border-radius:5px;
+          &:after {
+            content: "";
+            border-right:0px solid $grayCC;
+            padding:0 2rem 0 1rem;
+          }
+        }
+        &.have-actus {
+          opacity:1;
+          cursor:pointer;
+        }
+        &:first-child {
+          border-radius: 5px 0px 0 5px;
+        }
+        &:last-child {
+          border-radius: 0px 5px 5px 0px;
+        }
+        &:after {
+          content: "";
+          border-right:1px solid $grayCC;
+          padding:0 2rem 0 1rem;
+        }
+      }
+    }
+    .news-list-agenda-arrondissement {
+      margin:2rem 0 2rem 0;
+      height:4rem;
+      display:none;
+      .news-list-agenda-arrondissement-change {
+        &:first-child {
+          border-radius: 5px 0px 0 5px;
+        }
+        &:last-child {
+          border-radius: 0px 5px 5px 0px;
+        }
+        background:$grayF2;
+        color:$color-secondary-variant;
+        padding: 1.5rem 0rem 1.5rem 2.5rem;
+        opacity:.2;
+        &:hover {
+          background:$color-secondary-variant;
+          color:white;
+        }
+        &.active {
+          background:$color-secondary-variant;
+          color:white;
+          font-weight:bold;
+          border-radius:5px;
+          &:after {
+            content: "";
+            border-right:0px solid $grayCC;
+            padding:0 2rem 0 1rem;
+          }
+        }
+        &.have-actus {
+          opacity:1;
+          cursor:pointer;
+        }
+        &:after {
+          content: "";
+          border-right:1px solid $grayCC;
+          padding:0 1rem 0 0rem;
+        }
+      }
+    }
+  }
+  .news-list{
+    &.agenda {
+    }
+  }
+
+
+  .agenda-clear {
+    clear:both;
+  }
 
 }

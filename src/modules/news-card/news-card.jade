@@ -11,6 +11,9 @@ mixin news-card(data)
         if data.date
           .news-card-date
             span= data.date
+        if data.arrondissement
+          .news-card-arrondissement
+            span= data.arrondissement
         if data.counters
           .news-card-counters
             .news-card-counter.facebook-counter

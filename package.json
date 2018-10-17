@@ -1,6 +1,10 @@
 {
   "name": "paris-styleguide",
+<<<<<<< HEAD
   "version": "1.12.8",
+=======
+  "version": "1.12.9",
+>>>>>>> features-gf-planclimat
   "description": "Paris Living Style Guide",
   "author": "Hans Lemuet <hans@etaminstudio.com>",
   "contributors": [
