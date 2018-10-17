@@ -63,9 +63,5 @@ require('./lib/egg');
 require('./lib/3975');
 
 var Paris = window.Paris || {};
-<<<<<<< HEAD
-Paris.version = "1.12.8";
-=======
-Paris.version = "1.12.9";
->>>>>>> features-gf-planclimat
+Paris.version = "1.12.10";
 Paris.templates = require('./client.tpl');
