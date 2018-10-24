@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.12.11 (2018-10-24)
+
+* components `buttons`: add script smooth scroll to anchor
+
 ## 1.12.9 (2018-10-17)
 
 * module `news-card`: add data arrondissement
