@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.13.0 (2018-10-26)
+
+* components `rush-half-hours` : add Affluence half hours
+
 ## 1.12.11 (2018-10-24)
 
 * components `buttons`: add script smooth scroll to anchor

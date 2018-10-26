@@ -9872,6 +9872,132 @@ http://flickity.metafizzy.co
   .component-postit .share {
     display: none; }
 
+.component-rush-half-hours {
+  clear: both; }
+  .component-rush-half-hours h2 {
+    border-top: 7px solid #F2F2F2;
+    color: #1A1A1A;
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 4.2rem;
+    margin-bottom: 20px;
+    padding-top: 40px; }
+  @media (max-width: 767px) {
+    .component-rush-half-hours h2 {
+      font-size: 3rem;
+      line-height: 3.8rem; } }
+  .component-rush-half-hours caption {
+    caption-side: top;
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-bottom: 15px;
+    text-align: left; }
+  .component-rush-half-hours table p {
+    margin: 0; }
+  .component-rush-half-hours tr > th,
+  .component-rush-half-hours tr > td {
+    border: none; }
+    .component-rush-half-hours tr > th:first-child,
+    .component-rush-half-hours tr > td:first-child {
+      border-left: none; }
+  .component-rush-half-hours tr > th {
+    background-color: white;
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center; }
+    .component-rush-half-hours tr > th:first-child {
+      text-align: left; }
+  .component-rush-half-hours .rush-half-hours-interval {
+    padding-right: 1rem; }
+  .component-rush-half-hours tr:nth-child(even) > td {
+    font-size: 1.1rem !important; }
+  .component-rush-half-hours tr > td {
+    border-right: 0.1rem solid white;
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-right: 0;
+    text-align: center;
+    vertical-align: bottom; }
+    .component-rush-half-hours tr > td:last-child {
+      border-right: none; }
+    .component-rush-half-hours tr > td a:not(.button):not(.expandmore__button) {
+      color: #DD275C;
+      text-decoration: underline; }
+      .component-rush-half-hours tr > td a:not(.button):not(.expandmore__button):hover {
+        text-decoration: none; }
+    .component-rush-half-hours tr > td div.rush-hour-bar {
+      width: 2.8rem;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem; }
+    .component-rush-half-hours tr > td div.rush-hour-label {
+      min-height: 2rem; }
+    .component-rush-half-hours tr > td.traffic-0 div.rush-hour-bar {
+      height: 1rem;
+      background-color: #F2F2F2; }
+    .component-rush-half-hours tr > td.traffic-1 div.rush-hour-bar {
+      height: 3rem;
+      background-color: #29BB9C; }
+    .component-rush-half-hours tr > td.traffic-2 div.rush-hour-bar {
+      height: 6rem;
+      background-color: #F3C872; }
+    .component-rush-half-hours tr > td.traffic-3 div.rush-hour-bar {
+      background-color: #DB4928;
+      height: 12rem; }
+  .component-rush-half-hours tbody tr.info {
+    background-color: #D1E0E5; }
+  .component-rush-half-hours tbody tr:first-child {
+    background-color: white; }
+  .component-rush-half-hours tbody tr:last-child > td {
+    border-bottom: none; }
+  .component-rush-half-hours tbody tr:first-child > th {
+    padding: 1rem 0; }
+  .component-rush-half-hours tfoot tr {
+    background-color: transparent; }
+  .component-rush-half-hours tfoot tr > td {
+    text-align: left; }
+
+.rush-half-hours-text {
+  margin-top: 4rem; }
+  .rush-half-hours-text a:not(.button):not(.expandmore__button) {
+    color: #DD275C;
+    text-decoration: underline; }
+    .rush-half-hours-text a:not(.button):not(.expandmore__button):hover {
+      text-decoration: none; }
+
+@media (max-width: 1159px) {
+  .component-rush-half-hours {
+    overflow-x: auto;
+    position: relative;
+    width: 100%; }
+    .component-rush-half-hours tr > th {
+      padding-right: 10px; }
+    .component-rush-half-hours tr:first-child > th:first-child {
+      padding-top: 0; } }
+
+@media (max-width: 767px) {
+  .component-rush-half-hours table {
+    max-width: 350px; }
+  .component-rush-half-hours table + table {
+    margin-top: 2rem; }
+  .component-rush-half-hours tr > th {
+    font-size: 1.4rem;
+    min-width: 50px;
+    text-align: left; }
+    .component-rush-half-hours tr > th[colspan="2"] {
+      font-weight: 700;
+      padding: 1rem 0; }
+  .component-rush-half-hours tr:first-child > th {
+    text-align: center; }
+  .component-rush-half-hours tr > td {
+    height: 3.6rem; } }
+
+@media (min-width: 768px) {
+  .component-rush-half-hours tr > th {
+    min-width: 85px; } }
+
 .component-rush-hours {
   clear: both; }
   .component-rush-hours h2 {
