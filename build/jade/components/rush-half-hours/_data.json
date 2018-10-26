@@ -1,0 +1,49 @@
+{
+  "index": {
+    "type": "rush-half-hours",
+    "description": "",
+    "examples": [
+      {
+        "title": "Standard",
+        "description": "",
+        "data": {
+          "title": {
+            "text": "Affluence"
+          },
+          "days": [
+            "Lundi",
+            "Mardi",
+            "Mercredi",
+            "Jeudi",
+            "Vendredi",
+            "Samedi",
+            "Dimanche"
+          ],
+          "items": [
+            {"from": "8h", "to": "8h30", "traffic": [1, 1, 0, 1, 0, 1, 0]},
+            {"from": "8h30", "to": "9h", "traffic": [1, 1, 0, 1, 0, 1, 0]},
+            {"from": "9h", "to": "9h30", "traffic": [2, 2, 0, 2, 0, 2, 0]},
+            {"from": "9h30", "to": "10h", "traffic": [2, 2, 0, 2, 0, 2, 0]},
+            {"from": "10h", "to": "10h30", "traffic": [2, 2, 0, 2, 0, 2, 0]},
+            {"from": "10h30", "to": "11h", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+            {"from": "11h", "to": "11h30", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+            {"from": "11h30", "to": "12h", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+            {"from": "12h", "to": "12h30", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+            {"from": "12h30", "to": "13h", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+            {"from": "13h", "to": "13h30", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+            {"from": "13h30", "to": "14h", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+            {"from": "14h", "to": "14h30", "traffic": [3, 3, 0, 3, 0, 3, 0]},
+            {"from": "14h30", "to": "15h", "traffic": [3, 3, 0, 3, 0, 3, 0]},
+            {"from": "15h", "to": "15h30", "traffic": [1, 1, 0, 0, 0, 0, 0]},
+            {"from": "15h30", "to": "16h", "traffic": [2, 2, 1, 0, 1, 0, 1]},
+            {"from": "16h", "to": "16h30", "traffic": [2, 2, 2, 1, 2, 1, 2]},
+            {"from": "16h30", "to": "17h", "traffic": [3, 3, 0, 2, 0, 2, 0]},
+            {"from": "17h", "to": "17h30", "traffic": [3, 3, 3, 0, 3, 0, 3]},
+            {"from": "17h30", "to": "18h", "traffic": [0, 0, 3, 0, 3, 0, 3]}
+          ],
+          "text": "Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a>"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+mixin rush-half-hours(data)
+  .component.component-rush-half-hours(class=data.modifiers)
+    h2.anchor(id=data.title.id)= data.title.text
+    .hidden-on-small
+      +rush-half-hours-table(data)
+    .only-on-small
+      +rush-half-hours-table(data, 0, 4)
+      +rush-half-hours-table(data, 4, 8)
+    if data.text
+      p.rush-half-hours-text!= data.text
+
+mixin rush-half-hours-table(data, beginning, end)
+  - data = JSON.parse(JSON.stringify(data || {})); // clone the data object
+  - beginning = beginning || 0
+  - end = end || 100
+
+  each day, index in data.days.slice(beginning, end)
+    h4= day
+    table(summary=data.summary)
+      tr
+        each item, i in data.items
+          td(class="traffic-#{item.traffic[index]}")
+            div.rush-hour-bar 
+            div.rush-hour-label
+              if i % 2 == 0
+                = item.from
+
+mixin rush-half-hours-td(traffic)
+  td(class="traffic-#{traffic}")
+    - var icon = 0
+      while icon < traffic
+        i.rush-hours-traffic-icon(aria-hidden="true")
+        - icon++
+
+

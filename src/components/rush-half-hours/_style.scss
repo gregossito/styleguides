@@ -1,0 +1,199 @@
+.component-rush-half-hours {
+  clear: both;
+
+  h2 {
+    border-top: 7px solid $grayF2;
+    color: $gray1A;
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 4.2rem;
+    margin-bottom: 20px;
+    padding-top: 40px;
+  }
+  @include small {
+    h2 {
+      font-size: 3rem;
+      line-height: 3.8rem;
+    }
+  }
+
+  caption {
+    caption-side: top;
+    color: $gray33;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-bottom: 15px;
+    text-align: left;
+  }
+
+  table {
+    p {margin: 0;}
+  }
+
+
+  tr > th,
+  tr > td {
+    border: none;
+
+    &:first-child {border-left: none;}
+  }
+
+  tr > th {
+    background-color: white;
+    color: $gray33;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+
+    &:first-child {
+      text-align: left;
+    }
+  }
+
+  .rush-half-hours-interval {
+    padding-right: 1rem;
+  }
+
+  tr:nth-child(even) > td {
+    font-size:1.1rem !important;
+  }
+
+  tr > td {
+    border-right: 0.1rem solid white;
+    color: $gray33;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-right:0;
+    text-align: center;
+    vertical-align: bottom;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    a:not(.button) {
+      color: $red1;
+      text-decoration: underline;
+
+      &:hover {text-decoration: none;}
+    }
+    
+    // traffic
+    div.rush-hour-bar  {
+      width:2.8rem;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+
+    div.rush-hour-label {
+      min-height:2rem;
+    }
+
+    &.traffic-0 {
+      div.rush-hour-bar  {
+        height:1rem;
+        background-color: $grayF2;
+        
+      }
+    }
+
+    &.traffic-1 {
+      div.rush-hour-bar  {
+        height:3rem;
+        background-color: $rush-half-hours-green;
+      }
+    }
+
+    &.traffic-2 {
+      div.rush-hour-bar  {
+        height:6rem;
+        background-color: $rush-half-hours-yellow;
+      }
+    }
+
+    &.traffic-3 {
+      div.rush-hour-bar  {
+        background-color: $rush-half-hours-red;
+        height:12rem;
+      }
+    }
+  }
+
+  tbody {
+    tr.info {background-color: $light-blue;}
+    tr:first-child {background-color: white;}
+    tr:last-child > td {border-bottom: none;}
+    tr:first-child > th {
+      padding: 1rem 0;
+    }
+  }
+
+  tfoot {
+    tr {background-color: transparent;}
+    tr > td {text-align: left;}
+  }
+}
+
+.rush-half-hours-text {
+  margin-top: 4rem;
+
+  a:not(.button) {
+    color: $red1;
+    text-decoration: underline;
+    &:hover {text-decoration: none;}
+  }
+}
+
+@include medium-and-small {
+  .component-rush-half-hours {
+    overflow-x: auto;
+    position: relative;
+    width: 100%;
+
+    tr > th {
+      padding-right: 10px;
+    }
+
+    tr:first-child > th:first-child {padding-top: 0;}
+  }
+}
+
+@include small {
+  .component-rush-half-hours {
+
+    table {
+      max-width: 350px;
+    }
+
+    table + table {
+      margin-top: 2rem;
+    }
+
+    tr > th {
+      font-size: 1.4rem;
+      min-width: 50px;
+      text-align: left;
+
+      &[colspan="2"] {
+        font-weight: 700;
+        padding: 1rem 0;
+      }
+    }
+
+    tr:first-child > th {
+      text-align: center;
+    }
+
+    tr > td {
+      height: 3.6rem;
+    }
+  }
+}
+
+@include large-and-medium {
+  .component-rush-half-hours {
+    tr > th {
+      min-width: 85px;
+    }
+  }
+}
