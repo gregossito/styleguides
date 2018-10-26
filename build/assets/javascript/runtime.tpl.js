@@ -2040,7 +2040,7 @@ templatizer["rush-half-hours"]["rush-half-hours-table"] = function tmpl_rush_hal
                             var item = $$obj[i];
                             buf.push("<td" + jade.cls([ "traffic-" + item.traffic[index] + "" ], [ true ]) + '><div class="rush-hour-bar"> </div><div class="rush-hour-label">');
                             if (i % 2 == 0) {
-                                buf.push(jade.escape(null == (jade_interp = item.from) ? "" : jade_interp));
+                                buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 3)) ? "" : jade_interp));
                             }
                             buf.push("</div></td>");
                         }
@@ -2051,7 +2051,7 @@ templatizer["rush-half-hours"]["rush-half-hours-table"] = function tmpl_rush_hal
                             var item = $$obj[i];
                             buf.push("<td" + jade.cls([ "traffic-" + item.traffic[index] + "" ], [ true ]) + '><div class="rush-hour-bar"> </div><div class="rush-hour-label">');
                             if (i % 2 == 0) {
-                                buf.push(jade.escape(null == (jade_interp = item.from) ? "" : jade_interp));
+                                buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 3)) ? "" : jade_interp));
                             }
                             buf.push("</div></td>");
                         }
@@ -2072,7 +2072,7 @@ templatizer["rush-half-hours"]["rush-half-hours-table"] = function tmpl_rush_hal
                             var item = $$obj[i];
                             buf.push("<td" + jade.cls([ "traffic-" + item.traffic[index] + "" ], [ true ]) + '><div class="rush-hour-bar"> </div><div class="rush-hour-label">');
                             if (i % 2 == 0) {
-                                buf.push(jade.escape(null == (jade_interp = item.from) ? "" : jade_interp));
+                                buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 3)) ? "" : jade_interp));
                             }
                             buf.push("</div></td>");
                         }
@@ -2083,7 +2083,7 @@ templatizer["rush-half-hours"]["rush-half-hours-table"] = function tmpl_rush_hal
                             var item = $$obj[i];
                             buf.push("<td" + jade.cls([ "traffic-" + item.traffic[index] + "" ], [ true ]) + '><div class="rush-hour-bar"> </div><div class="rush-hour-label">');
                             if (i % 2 == 0) {
-                                buf.push(jade.escape(null == (jade_interp = item.from) ? "" : jade_interp));
+                                buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 3)) ? "" : jade_interp));
                             }
                             buf.push("</div></td>");
                         }
@@ -2239,30 +2239,6 @@ templatizer["rush-hours"]["rush-hours-td"] = function tmpl_rush_hours_rush_hours
     return buf.join("");
 };
 
-// table.jade compiled template
-templatizer["table"] = function tmpl_table(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// table.jade:table compiled template
-templatizer["table"]["table"] = function tmpl_table_table(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "component", "component-table", data.modifiers ], [ null, null, true ]) + "><table" + jade.attr("summary", data.summary, true, false) + ">");
-    if (data.caption) {
-        buf.push("<caption>" + jade.escape(null == (jade_interp = data.caption) ? "" : jade_interp) + "</caption>");
-    }
-    if (block) {
-        block && block(buf);
-    } else if (data.block) {
-        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-    }
-    buf.push("</table></div>");
-    return buf.join("");
-};
-
 // sharelines.jade compiled template
 templatizer["sharelines"] = function tmpl_sharelines(locals) {
     var buf = [];
@@ -2331,6 +2307,30 @@ templatizer["sharelines"]["sharelines"] = function tmpl_sharelines_sharelines(da
         }
     }).call(this);
     buf.push("</ul></div>");
+    return buf.join("");
+};
+
+// table.jade compiled template
+templatizer["table"] = function tmpl_table(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// table.jade:table compiled template
+templatizer["table"]["table"] = function tmpl_table_table(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "component", "component-table", data.modifiers ], [ null, null, true ]) + "><table" + jade.attr("summary", data.summary, true, false) + ">");
+    if (data.caption) {
+        buf.push("<caption>" + jade.escape(null == (jade_interp = data.caption) ? "" : jade_interp) + "</caption>");
+    }
+    if (block) {
+        block && block(buf);
+    } else if (data.block) {
+        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+    }
+    buf.push("</table></div>");
     return buf.join("");
 };
 

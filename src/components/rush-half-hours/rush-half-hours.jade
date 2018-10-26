@@ -23,7 +23,7 @@ mixin rush-half-hours-table(data, beginning, end)
             div.rush-hour-bar 
             div.rush-hour-label
               if i % 2 == 0
-                = item.from
+                = item.from.slice(0,3)
 
 mixin rush-half-hours-td(traffic)
   td(class="traffic-#{traffic}")

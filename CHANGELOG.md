@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.13.1 (2018-10-26)
+
+* components `rush-half-hours` : fix style
+
 ## 1.13.0 (2018-10-26)
 
 * components `rush-half-hours` : add Affluence half hours
