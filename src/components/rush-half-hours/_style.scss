@@ -80,9 +80,9 @@
     
     // traffic
     div.rush-hour-bar  {
-      width:2.6rem;
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem;
+      width:2.9rem;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
     }
 
     div.rush-hour-label {
@@ -114,7 +114,7 @@
     &.traffic-3 {
       div.rush-hour-bar  {
         background-color: $rush-half-hours-red;
-        height:12rem;
+        height:9rem;
       }
     }
   }

@@ -39,7 +39,16 @@
             {"from": "16h", "to": "16h30", "traffic": [2, 2, 2, 1, 2, 1, 2]},
             {"from": "16h30", "to": "17h", "traffic": [3, 3, 0, 2, 0, 2, 0]},
             {"from": "17h", "to": "17h30", "traffic": [3, 3, 3, 0, 3, 0, 3]},
-            {"from": "17h30", "to": "18h", "traffic": [0, 0, 3, 0, 3, 0, 3]}
+            {"from": "17h30", "to": "18h", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+            {"from": "18h", "to": "18h30", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+            {"from": "18h30", "to": "19h", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+            {"from": "19h", "to": "19h30", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+            {"from": "19h30", "to": "20h", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+            {"from": "20h", "to": "20h30", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+            {"from": "20h30", "to": "21h", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+            {"from": "21h", "to": "21h30", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+            {"from": "21h30", "to": "22h", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+            {"from": "22h", "to": "22h30", "traffic": [0, 0, 3, 0, 3, 0, 3]}
           ],
           "text": "Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a>"
         }

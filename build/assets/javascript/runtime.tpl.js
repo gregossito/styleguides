@@ -2026,7 +2026,7 @@ templatizer["rush-half-hours"]["rush-half-hours-table"] = function tmpl_rush_hal
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
     data = JSON.parse(JSON.stringify(data || {}));
     beginning = beginning || 0;
-    end = end || 100;
+    end = end || 500;
     (function() {
         var $$obj = data.days.slice(beginning, end);
         if ("number" == typeof $$obj.length) {

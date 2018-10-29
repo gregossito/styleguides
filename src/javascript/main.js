@@ -64,5 +64,5 @@ require('./lib/egg');
 require('./lib/3975');
 
 var Paris = window.Paris || {};
-Paris.version = "1.13.1";
+Paris.version = "1.13.2";
 Paris.templates = require('./client.tpl');

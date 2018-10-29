@@ -9929,9 +9929,9 @@ http://flickity.metafizzy.co
       .component-rush-half-hours tr > td a:not(.button):not(.expandmore__button):hover {
         text-decoration: none; }
     .component-rush-half-hours tr > td div.rush-hour-bar {
-      width: 2.6rem;
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem; }
+      width: 2.9rem;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
     .component-rush-half-hours tr > td div.rush-hour-label {
       min-height: 2rem; }
     .component-rush-half-hours tr > td.traffic-0 div.rush-hour-bar {
@@ -9945,7 +9945,7 @@ http://flickity.metafizzy.co
       background-color: #F3C872; }
     .component-rush-half-hours tr > td.traffic-3 div.rush-hour-bar {
       background-color: #DB4928;
-      height: 12rem; }
+      height: 9rem; }
   .component-rush-half-hours tbody tr.info {
     background-color: #D1E0E5; }
   .component-rush-half-hours tbody tr:first-child {
