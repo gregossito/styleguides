@@ -9,6 +9,11 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.13.3 (2018-11-05)
+
+* components `rush-half-hours` : fix hours 
+* module `image-full` : add module image-full for 13 photos template
+
 ## 1.13.2 (2018-10-29)
 
 * components `rush-half-hours` : fix style

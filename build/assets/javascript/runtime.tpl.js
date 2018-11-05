@@ -2040,7 +2040,12 @@ templatizer["rush-half-hours"]["rush-half-hours-table"] = function tmpl_rush_hal
                             var item = $$obj[i];
                             buf.push("<td" + jade.cls([ "traffic-" + item.traffic[index] + "" ], [ true ]) + '><div class="rush-hour-bar"> </div><div class="rush-hour-label">');
                             if (i % 2 == 0) {
-                                buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 3)) ? "" : jade_interp));
+                                if (item.from.slice(0, 1) != 1 && item.from.slice(0, 1) != 2) {
+                                    buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 2)) ? "" : jade_interp));
+                                }
+                                if (item.from.slice(0, 1) == 1 || item.from.slice(0, 1) == 2) {
+                                    buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 3)) ? "" : jade_interp));
+                                }
                             }
                             buf.push("</div></td>");
                         }
@@ -2051,7 +2056,12 @@ templatizer["rush-half-hours"]["rush-half-hours-table"] = function tmpl_rush_hal
                             var item = $$obj[i];
                             buf.push("<td" + jade.cls([ "traffic-" + item.traffic[index] + "" ], [ true ]) + '><div class="rush-hour-bar"> </div><div class="rush-hour-label">');
                             if (i % 2 == 0) {
-                                buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 3)) ? "" : jade_interp));
+                                if (item.from.slice(0, 1) != 1 && item.from.slice(0, 1) != 2) {
+                                    buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 2)) ? "" : jade_interp));
+                                }
+                                if (item.from.slice(0, 1) == 1 || item.from.slice(0, 1) == 2) {
+                                    buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 3)) ? "" : jade_interp));
+                                }
                             }
                             buf.push("</div></td>");
                         }
@@ -2072,7 +2082,12 @@ templatizer["rush-half-hours"]["rush-half-hours-table"] = function tmpl_rush_hal
                             var item = $$obj[i];
                             buf.push("<td" + jade.cls([ "traffic-" + item.traffic[index] + "" ], [ true ]) + '><div class="rush-hour-bar"> </div><div class="rush-hour-label">');
                             if (i % 2 == 0) {
-                                buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 3)) ? "" : jade_interp));
+                                if (item.from.slice(0, 1) != 1 && item.from.slice(0, 1) != 2) {
+                                    buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 2)) ? "" : jade_interp));
+                                }
+                                if (item.from.slice(0, 1) == 1 || item.from.slice(0, 1) == 2) {
+                                    buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 3)) ? "" : jade_interp));
+                                }
                             }
                             buf.push("</div></td>");
                         }
@@ -2083,7 +2098,12 @@ templatizer["rush-half-hours"]["rush-half-hours-table"] = function tmpl_rush_hal
                             var item = $$obj[i];
                             buf.push("<td" + jade.cls([ "traffic-" + item.traffic[index] + "" ], [ true ]) + '><div class="rush-hour-bar"> </div><div class="rush-hour-label">');
                             if (i % 2 == 0) {
-                                buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 3)) ? "" : jade_interp));
+                                if (item.from.slice(0, 1) != 1 && item.from.slice(0, 1) != 2) {
+                                    buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 2)) ? "" : jade_interp));
+                                }
+                                if (item.from.slice(0, 1) == 1 || item.from.slice(0, 1) == 2) {
+                                    buf.push(jade.escape(null == (jade_interp = item.from.slice(0, 3)) ? "" : jade_interp));
+                                }
                             }
                             buf.push("</div></td>");
                         }
@@ -3253,6 +3273,26 @@ templatizer["block-content"]["block-content"] = function tmpl_block_content_bloc
     return buf.join("");
 };
 
+// block-map.jade compiled template
+templatizer["block-map"] = function tmpl_block_map(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    var locals_for_with = locals || {};
+    (function(JSON) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined);
+    return buf.join("");
+};
+
+// block-map.jade:block-map compiled template
+templatizer["block-map"]["block-map"] = function tmpl_block_map_block_map(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    data = JSON.parse(JSON.stringify(data));
+    data.modifiers = data.modifiers || [];
+    data.modifiers.push("block-map");
+    buf.push('<div id="map"></div><div class="map-caption"><div class="map-caption-icon is-open"></div>' + jade.escape(null == (jade_interp = "Équipement ouvert") ? "" : jade_interp) + '<div class="map-caption-icon is-closed"></div>' + jade.escape(null == (jade_interp = "Équipement fermé") ? "" : jade_interp) + '<div class="map-caption-icon is-unknown"></div>' + jade.escape(null == (jade_interp = "Horaires non renseignés") ? "" : jade_interp) + "</div>");
+    return buf.join("");
+};
+
 // block-search-field.jade compiled template
 templatizer["block-search-field"] = function tmpl_block_search_field(locals) {
     var buf = [];
@@ -3368,26 +3408,6 @@ templatizer["block-search-field"]["block-search-field"] = function tmpl_block_se
             buf.push(templatizer["block-search-field"]["search-field"](data.search_field));
         }
     }, data));
-    return buf.join("");
-};
-
-// block-map.jade compiled template
-templatizer["block-map"] = function tmpl_block_map(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    var locals_for_with = locals || {};
-    (function(JSON) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined);
-    return buf.join("");
-};
-
-// block-map.jade:block-map compiled template
-templatizer["block-map"]["block-map"] = function tmpl_block_map_block_map(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    data = JSON.parse(JSON.stringify(data));
-    data.modifiers = data.modifiers || [];
-    data.modifiers.push("block-map");
-    buf.push('<div id="map"></div><div class="map-caption"><div class="map-caption-icon is-open"></div>' + jade.escape(null == (jade_interp = "Équipement ouvert") ? "" : jade_interp) + '<div class="map-caption-icon is-closed"></div>' + jade.escape(null == (jade_interp = "Équipement fermé") ? "" : jade_interp) + '<div class="map-caption-icon is-unknown"></div>' + jade.escape(null == (jade_interp = "Horaires non renseignés") ? "" : jade_interp) + "</div>");
     return buf.join("");
 };
 
@@ -4302,6 +4322,81 @@ templatizer["icon-switch"]["icon-switch"] = function tmpl_icon_switch_icon_switc
         modifiers.push("active");
     }
     buf.push("<div" + jade.attr("data-action", data.action.type, true, false) + jade.attr("data-action-id", data.action.id, true, false) + jade.attr("data-action-fallback-link", data.action.fallback_link, true, false) + jade.cls([ "icon-switch", modifiers ], [ null, true ]) + "><button" + jade.attr("data-href", data.href, true, false) + jade.attr("title", data.label[0], true, false) + ' type="button" class="icon-switch-on"><span' + jade.cls([ "icon", "icon-" + data.icon[0] + "" ], [ null, true ]) + '></span><span class="hidden-accessibly">' + jade.escape(null == (jade_interp = data.label[0]) ? "" : jade_interp) + "</span></button><button" + jade.attr("data-href", data.href, true, false) + jade.attr("title", data.label[1], true, false) + ' type="button" class="icon-switch-off"><span' + jade.cls([ "icon", "icon-" + data.icon[1] + "" ], [ null, true ]) + '></span><span class="hidden-accessibly">' + jade.escape(null == (jade_interp = data.label[1]) ? "" : jade_interp) + "</span></button></div>");
+    return buf.join("");
+};
+
+// image-full.jade compiled template
+templatizer["image-full"] = function tmpl_image_full(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    var locals_for_with = locals || {};
+    (function(JSON) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined);
+    return buf.join("");
+};
+
+// image-full.jade:button compiled template
+templatizer["image-full"]["button"] = function tmpl_image_full_button(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    var data = JSON.parse(JSON.stringify(data || {}));
+    var attributes = data.attributes || {};
+    var modifiers = data.modifiers || [];
+    if (data.icon) {
+        modifiers.push("icon");
+    }
+    if (data.href) {
+        if (attributes.disabled) {
+            delete attributes.disabled;
+            modifiers.push("disabled");
+        }
+        buf.push("<a" + jade.attrs(jade.merge([ {
+            href: jade.escape(data.href),
+            onclick: jade.escape(data.onclick),
+            title: jade.escape(data.title),
+            target: jade.escape(data.target),
+            "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
+                return jade_interp[i] ? jade.escape(cls) : cls;
+            })))
+        }, attributes ]), false) + ">");
+        if (modifiers && modifiers.indexOf("marker") !== -1) {
+            buf.push('<i aria-hidden="true" class="icon icon-marker"></i>');
+        } else if (data.icon) {
+            buf.push('<i aria-hidden="true"' + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
+        }
+        buf.push('<span class="button-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</span></a>");
+    } else {
+        buf.push("<button" + jade.attrs(jade.merge([ {
+            title: jade.escape(data.title),
+            "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
+                return jade_interp[i] ? jade.escape(cls) : cls;
+            })))
+        }, attributes ]), false) + ">");
+        if (modifiers && modifiers.indexOf("marker") !== -1) {
+            buf.push('<i aria-hidden="true" class="icon icon-marker"></i>');
+        } else if (data.icon) {
+            buf.push('<i aria-hidden="true"' + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
+        }
+        buf.push('<span class="button-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</span></button>");
+    }
+    return buf.join("");
+};
+
+
+// image-full.jade:image-full compiled template
+templatizer["image-full"]["image-full"] = function tmpl_image_full_image_full(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<a" + jade.attr("href", data.href, true, false) + jade.attr("onclick", data.onclick, true, false) + jade.attr("style", "background-image: url(" + data.image + ");", true, false) + jade.attr("id", data.id, true, false) + jade.cls([ "image-full", data.modifiers ], [ null, true ]) + '><div class="image-full-wrapper"><div class="layout-wrapper image-full-content layout-outside">');
+    var tag = data.tag || "h2";
+    buf.push("<" + tag + ' class="image-full-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</" + tag + '><div class="image-full-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</div>");
+    if (data.credit) {
+        buf.push('<div class="image-full-credit">' + jade.escape(null == (jade_interp = data.credit) ? "" : jade_interp) + "</div>");
+    }
+    if (block) {
+        buf.push('<div class="image-full-block">');
+        block && block(buf);
+        buf.push("</div>");
+    }
+    buf.push("</div></div></a>");
     return buf.join("");
 };
 
