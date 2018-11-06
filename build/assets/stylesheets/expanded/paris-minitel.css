@@ -10031,13 +10031,13 @@ http://flickity.metafizzy.co
     .component-rush-half-hours tr > th:first-child {
       text-align: left; }
   .component-rush-half-hours .rush-half-hours-interval {
-    padding-right: 1rem; }
+    padding-right: 1.1rem; }
   .component-rush-half-hours tr:nth-child(even) > td {
     font-size: 1.1rem !important; }
   .component-rush-half-hours tr > td {
-    border-right: 0.1rem solid white;
+    border-right: 0.2rem solid white;
     color: #333;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 300;
     padding-right: 0;
     text-align: center;
@@ -10050,23 +10050,23 @@ http://flickity.metafizzy.co
       .component-rush-half-hours tr > td a:not(.button):not(.expandmore__button):hover {
         text-decoration: none; }
     .component-rush-half-hours tr > td div.rush-hour-bar {
-      width: 2.9rem;
+      width: 1.9rem;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px; }
     .component-rush-half-hours tr > td div.rush-hour-label {
       min-height: 2rem; }
     .component-rush-half-hours tr > td.traffic-0 div.rush-hour-bar {
-      height: 1rem;
+      height: 2.5rem;
       background-color: #F2F2F2; }
     .component-rush-half-hours tr > td.traffic-1 div.rush-hour-bar {
-      height: 3rem;
+      height: 2.5rem;
       background-color: #29BB9C; }
     .component-rush-half-hours tr > td.traffic-2 div.rush-hour-bar {
-      height: 6rem;
+      height: 2.5rem;
       background-color: #F3C872; }
     .component-rush-half-hours tr > td.traffic-3 div.rush-hour-bar {
       background-color: #DB4928;
-      height: 9rem; }
+      height: 2.5rem; }
   .component-rush-half-hours tbody tr.info {
     background-color: #D1E0E5; }
   .component-rush-half-hours tbody tr:first-child {
