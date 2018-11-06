@@ -10035,7 +10035,7 @@ http://flickity.metafizzy.co
   .component-rush-half-hours tr:nth-child(even) > td {
     font-size: 1.1rem !important; }
   .component-rush-half-hours tr > td {
-    border-right: 0.2rem solid white;
+    border-right: 0.5rem solid white;
     color: #333;
     font-size: 1.1rem;
     font-weight: 300;
