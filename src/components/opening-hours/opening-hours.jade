@@ -29,6 +29,9 @@ mixin opening-hours(data)
           ul
             for item in data.planned_closures.items
               li= item
+    if data.text_piscine
+      .opening-hours-text-piscine
+        = data.text_piscine.text
     if data.button && data.other_hours
       - data_expandable = {button: data.button}
       +expandable(data_expandable)

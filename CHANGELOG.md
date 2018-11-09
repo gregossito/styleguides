@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.13.6 (2018-11-09)
+
+* components `opening-hours` : add text piscine
+
 ## 1.13.5 (2018-11-06)
 
 * components `rush-half-hours` : fix style
