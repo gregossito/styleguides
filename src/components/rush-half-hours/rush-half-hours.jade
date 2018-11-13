@@ -1,4 +1,15 @@
+include ../../modules/button/button
+include ../../components/expandable/expandable
+
 mixin rush-half-hours(data)
+  if data.button
+    - data_expandable = {button: data.button}
+    +expandable(data_expandable)
+      +rush-half-hours-block(data)
+  else
+    +rush-half-hours-block(data)
+
+mixin rush-half-hours-block(data)
   .component.component-rush-half-hours(class=data.modifiers)
     h2.anchor(id=data.title.id)= data.title.text
     .hidden-on-small
@@ -20,7 +31,7 @@ mixin rush-half-hours-table(data, beginning, end)
       tr
         each item, i in data.items
           td(class="traffic-#{item.traffic[index]}")
-            div.rush-hour-bar 
+            div.rush-hour-bar
             div.rush-hour-label
               if i % 2 == 0
                 if item.from.slice(0,1) != 1 && item.from.slice(0,1) != 2
