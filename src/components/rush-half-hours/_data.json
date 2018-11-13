@@ -50,7 +50,11 @@
             {"from": "21h30", "to": "22h", "traffic": [0, 0, 3, 0, 3, 0, 3]},
             {"from": "22h", "to": "22h30", "traffic": [0, 0, 3, 0, 3, 0, 3]}
           ],
-          "text": "Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a>"
+          "text": "Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a>",
+          "button": {
+            "text": "Affluence",
+            "title": ""
+          }
         }
       }
     ]
