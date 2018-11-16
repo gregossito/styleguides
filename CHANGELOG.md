@@ -9,6 +9,11 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.13.8 (2018-11-16)
+
+* modules `links-group` : add anchor id
+* modules `news-list` : fix agenda filter old news
+
 ## 1.13.7 (2018-11-13)
 
 * components `rush-half-hours` : add button toggle

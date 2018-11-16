@@ -4949,31 +4949,20 @@ html.no-touchevents .news-card-counter {
     .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change {
       background: #F2F2F2;
       color: #0A4770;
-      padding: 1.5rem 0rem 1.5rem 2.5rem;
-      opacity: .2; }
-      .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change:first-child {
-        border-radius: 5px 0px 0 5px; }
-      .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change:last-child {
-        border-radius: 0px 5px 5px 0px; }
+      padding: 1.5rem;
+      margin: 0rem .2rem;
+      opacity: .2;
+      border-radius: 6px; }
       .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change:hover {
         background: #0A4770;
         color: white; }
       .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change.active {
         background: #0A4770;
         color: white;
-        font-weight: bold;
-        border-radius: 5px; }
-        .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change.active:after {
-          content: "";
-          border-right: 0px solid #CCC;
-          padding: 0 2rem 0 1rem; }
+        font-weight: bold; }
       .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change.have-actus {
         opacity: 1;
         cursor: pointer; }
-      .news-list-agenda .news-list-agenda-arrondissement .news-list-agenda-arrondissement-change:after {
-        content: "";
-        border-right: 1px solid #CCC;
-        padding: 0 1rem 0 0rem; }
   .agenda-clear {
     clear: both; } }
 

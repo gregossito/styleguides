@@ -2,7 +2,14 @@ include ../../modules/intro-text/intro-text
 
 mixin links-group(data)
   .links-group(class=data.modifiers)
-    if data.title
+    if data.anchor && data.activeAnchor
+      h2.links-group-header(id=data.anchor)
+        a(href=data.href style= data.background ? 'background-image: url(#{data.background});' : null)
+          .links-group-header-wrapper
+            .links-group-title= data.title
+            if data.subtitle
+              .links-group-subtitle= data.subtitle
+    else if data.title
       h2.links-group-header
         a(href=data.href style= data.background ? 'background-image: url(#{data.background});' : null)
           .links-group-header-wrapper
