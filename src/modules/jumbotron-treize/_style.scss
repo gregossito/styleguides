@@ -1,0 +1,86 @@
+.jumbotron-treize {
+  background-color: $white;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  display: block;
+  width: 640px;
+  max-width:640px;
+  height:auto;
+  margin:0 auto;
+  min-height:400px;
+
+  .jumbotron-treize-wrapper {
+    padding: 30px;
+    text-align: center;
+    /*display: table-cell;*/
+    overflow: hidden;/*
+    position: relative;*/
+    vertical-align: middle;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    min-height:400px;
+    background-size: contain;
+
+    .jumbotron-treize-content {
+      border: none;
+      padding: 0;
+      text-align: center;
+      z-index: 1;
+      min-height:400px;
+      position:relative;
+
+      & > * {
+        margin: 0 auto;
+      }
+
+      .jumbotron-treize-title {
+        font-size: 1.5rem !important;
+        font-weight: 700;
+        margin-bottom: 5px;
+        color: $black;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .jumbotron-treize-text {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 2.8rem;
+        margin: 0 auto 8px auto;
+        color: $black;
+        font-family: 'Playfair Display', serif;
+      }
+
+      .treize-credit {
+        font-family: 'Poppins', sans-serif;
+        font-style: italic;
+      }
+
+      .button.black {
+        position: absolute;
+        left: 50%;
+        bottom: 10rem;
+        z-index: 2;
+        font-family: 'Poppins', sans-serif;
+      }
+    }
+  }
+}
+
+@include large-and-medium {
+  .jumbotron-treize {
+ 
+  }
+
+  .jumbotron-treize-title {
+    font-size: 1.8rem !important;
+    margin-bottom: 12px;
+  }
+
+  .jumbotron-treize-text {
+    font-size: 4rem;
+    line-height: 4.4rem;
+    margin: 0 0 14px;
+  }
+}

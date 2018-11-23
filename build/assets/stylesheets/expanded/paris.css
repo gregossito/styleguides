@@ -2511,6 +2511,19 @@ http://flickity.metafizzy.co
   .block-search-cards .ais-infinite-hits--showmore button:after, .button.secondary:after, .expandmore__button:after {
     background-color: #08355b; }
 
+.button.black, .black.expandmore__button {
+  background-color: transparent;
+  padding: 15px;
+  border-radius: 0;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  border: 1.4px solid black;
+  color: #000; }
+  .button.black:after, .black.expandmore__button:after {
+    background-color: #1a1a1a;
+    border-radius: 0; }
+
 .block-search-cards .ais-infinite-hits--showmore button, .button.action, .expandmore__button {
   font-size: 1.3rem;
   text-transform: uppercase; }
@@ -4061,6 +4074,68 @@ html.no-touchevents .jumbotron:not(.no-overlay):not(.home):hover .jumbotron-wrap
 html.no-cssanimations .jumbotron-slider {
   top: -43rem;
   position: fixed; }
+
+.jumbotron-treize {
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  display: block;
+  width: 640px;
+  max-width: 640px;
+  height: auto;
+  margin: 0 auto;
+  min-height: 400px; }
+  .jumbotron-treize .jumbotron-treize-wrapper {
+    padding: 30px;
+    text-align: center;
+    /*display: table-cell;*/
+    overflow: hidden;
+    /*
+    position: relative;*/
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; }
+    .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content {
+      border: none;
+      padding: 0;
+      text-align: center;
+      z-index: 1;
+      min-height: 400px;
+      position: relative; }
+      .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content > * {
+        margin: 0 auto; }
+      .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content .jumbotron-treize-title {
+        font-size: 1.5rem !important;
+        font-weight: 700;
+        margin-bottom: 5px;
+        color: #000;
+        font-family: 'Poppins', sans-serif; }
+      .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content .jumbotron-treize-text {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 2.8rem;
+        margin: 0 auto 8px auto;
+        color: #000;
+        font-family: 'Playfair Display', serif; }
+      .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content .treize-credit {
+        font-family: 'Poppins', sans-serif; }
+      .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content .button.black, .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content .black.expandmore__button {
+        position: absolute;
+        left: 50%;
+        bottom: 10rem;
+        z-index: 2;
+        font-family: 'Poppins', sans-serif; }
+
+@media (min-width: 768px) {
+  .jumbotron-treize-title {
+    font-size: 1.8rem !important;
+    margin-bottom: 12px; }
+  .jumbotron-treize-text {
+    font-size: 4rem;
+    line-height: 4.4rem;
+    margin: 0 0 14px; } }
 
 .last-update {
   color: #999;
@@ -8171,6 +8246,45 @@ body.rheader-mobile-nav-open {
     color: inherit; }
     .tags a:hover {
       color: #DF225A; }
+
+a.treize-card {
+  text-decoration: none;
+  color: #000; }
+  a.treize-card .treize-card-image {
+    width: 500px;
+    height: 250px;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-size: cover; }
+  a.treize-card .treize-card-content > * {
+    margin: 1.5rem 0; }
+  a.treize-card .treize-card-content .treize-card-date {
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif; }
+  a.treize-card .treize-card-content .treize-card-title {
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif; }
+  a.treize-card .treize-card-content .treize-card-credit {
+    font-style: italic;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif; }
+
+ul.treize-list {
+  border-top: 2px solid black;
+  padding: 5rem 0 0 0;
+  margin: 5rem 0 0 0; }
+  ul.treize-list li.treize-list-card-item {
+    width: 50%;
+    float: left;
+    display: inline;
+    min-height: 400px;
+    text-align: center;
+    padding: 0; }
+  ul.treize-list:after {
+    clear: both; }
 
 .video-cover {
   background-position: center center;

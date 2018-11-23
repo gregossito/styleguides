@@ -1,0 +1,104 @@
+{
+  "index": {
+    "type": "treize-card",
+    "description": "",
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "attrs": {
+        "style": "max-width: 350px"
+      },
+      "data": {
+        "href": "#",
+        "image": "image.jpg",
+        "category": "Catégorie",
+        "title": "Titre",
+        "counters": {
+          "facebook": [5, "j'aime"],
+          "twitter": [12, "retweets"]
+        }
+      }
+    }, {
+      "title": "Test avec valeurs longues",
+      "description": "",
+      "attrs": {
+        "style": "max-width: 350px"
+      },
+      "data": {
+        "href": "#",
+        "image": "image.jpg",
+        "category": "Longue catégorie avec de nombreux mots",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra nisi fermentum nulla consequat",
+        "counters": {
+          "facebook": [12345, "j'aime"],
+          "twitter": [67890, "retweets"]
+        }
+      }
+    }, {
+      "title": "Avec une indication de dates",
+      "description": "",
+      "attrs": {
+        "style": "max-width: 350px"
+      },
+      "data": {
+        "href": "#",
+        "image": "image.jpg",
+        "category": "Catégorie",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra nisi fermentum",
+        "date": "Du xx/xx/xxxx au xx/xx/xxxx"
+      }
+    }, {
+      "title": "Large",
+      "description": "",
+      "attrs": {
+        "style": "max-width: 350px"
+      },
+      "data": {
+        "modifiers": ["large"],
+        "href": "#",
+        "image": "image.jpg",
+        "category": "Catégorie",
+        "title": "Titre",
+        "counters": {
+          "facebook": [5, "j'aime"],
+          "twitter": [12, "retweets"]
+        }
+      }
+    }, {
+      "title": "Pas d'image",
+      "description": "",
+      "attrs": {
+        "style": "max-width: 350px"
+      },
+      "data": {
+        "href": "#",
+        "image": "",
+        "category": "Catégorie",
+        "title": "Titre",
+        "counters": {
+          "facebook": [5, "j'aime"],
+          "twitter": [12, "retweets"]
+        }
+      }
+    }, {
+      "title": "QFAP",
+      "description": "",
+      "attrs": {
+        "class": "red-background",
+        "style": "max-width: 350px"
+      },
+      "data": {
+        "modifiers": ["qfap"],
+        "href": "#",
+        "image": "",
+        "category": "Catégorie",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "target": "_blank",
+        "counters": {
+          "facebook": [5, "j'aime"],
+          "twitter": [12, "retweets"]
+        }
+      }
+    }]
+  }
+}

@@ -1,0 +1,12 @@
+mixin treize-card(data)
+  a.treize-card(href=data.href onclick=data.onclick class=data.modifiers target=data.target)
+    .treize-card-wrapper
+      .treize-card-image(style=data.image && 'background-image: url(#{data.image});')
+      .treize-card-content
+        .treize-card-date
+            span= data.date
+        .treize-card-title
+          if (data.target === "_blank")
+            span.icon-link-external
+          = data.title
+        .treize-card-credit: span= data.credit

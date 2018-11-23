@@ -1,0 +1,22 @@
+ul.treize-list {
+  border-top:2px solid black;
+  padding:5rem 0 0 0;
+  margin:5rem 0 0 0; 
+  li.treize-list-card-item {
+    width: 50%;
+    float: left;
+    display: inline;
+    min-height: 400px;
+    text-align:center;
+    padding: 0;
+    &:nth-child(even) {
+     
+    }
+    &:nth-child(odd) {
+      
+    }
+  }
+  &:after {
+    clear:both;
+  }
+} 

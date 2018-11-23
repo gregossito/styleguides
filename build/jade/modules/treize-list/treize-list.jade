@@ -1,0 +1,7 @@
+include ../treize-card/treize-card
+
+mixin treize-list(data)
+  ul.treize-list(class=data.modifiers)
+    each item in data.items
+      li.treize-list-card-item
+        +treize-card(item)

@@ -53,6 +53,21 @@
   &:after {background-color: darken($color-secondary, 10%);}
 }
 
+%button-black {
+  background-color: transparent;
+  padding: 15px;
+  border-radius:0;
+  letter-spacing:.5rem;
+  text-transform:uppercase;
+  font-size:1.1rem;
+  border:1.4px solid black;
+  color:$black;
+  &:after {
+    background-color: darken(#333, 10%);
+    border-radius:0;
+  }
+}
+
 %button-action {
   font-size: 1.3rem;
   text-transform: uppercase;
@@ -64,6 +79,10 @@
   // modifiers
   &.secondary {
     @extend %button-secondary;
+  }
+
+  &.black {
+    @extend %button-black;
   }
 
   &.tertiary {
