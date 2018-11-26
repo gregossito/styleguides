@@ -4093,6 +4093,61 @@ templatizer["gallery-ugc"]["gallery-ugc"] = function tmpl_gallery_ugc_gallery_ug
     return buf.join("");
 };
 
+// get-involved.jade compiled template
+templatizer["get-involved"] = function tmpl_get_involved(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// get-involved.jade:heading compiled template
+templatizer["get-involved"]["heading"] = function tmpl_get_involved_heading(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "heading", data.modifiers ], [ null, true ]) + ">");
+    if (data.anchor && data.activeAnchor) {
+        buf.push("<h2" + jade.attr("id", data.anchor, true, false) + ' class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
+    } else {
+        buf.push('<h2 class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
+        if (data.link) {
+            buf.push('<div class="heading-links">');
+            if (data.link.external) {
+                buf.push('<span class="icon-dailymotion"> </span>');
+            }
+            buf.push("<a" + jade.attr("href", data.link.href, true, false) + jade.attr("onclick", data.link.onclick, true, false) + ">" + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></div>");
+        }
+    }
+    buf.push("</div>");
+    return buf.join("");
+};
+
+
+// get-involved.jade:get-involved compiled template
+templatizer["get-involved"]["get-involved"] = function tmpl_get_involved_get_involved(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push('<div class="get-involved"><div class="layout-wrapper">');
+    buf.push(templatizer["get-involved"]["heading"](data.heading));
+    buf.push('<ul class="get-involved-items">');
+    (function() {
+        var $$obj = data.items;
+        if ("number" == typeof $$obj.length) {
+            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                var item = $$obj[$index];
+                buf.push('<li class="get-involved-item"><a' + jade.attr("href", item.href, true, false) + jade.attr("onclick", item.onclick, true, false) + jade.attr("style", "background-image: url(" + item.image.src + ");", true, false) + jade.cls([ "get-involved-card", item.modifiers ], [ null, true ]) + '><div class="get-involved-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></a></li>");
+            }
+        } else {
+            var $$l = 0;
+            for (var $index in $$obj) {
+                $$l++;
+                var item = $$obj[$index];
+                buf.push('<li class="get-involved-item"><a' + jade.attr("href", item.href, true, false) + jade.attr("onclick", item.onclick, true, false) + jade.attr("style", "background-image: url(" + item.image.src + ");", true, false) + jade.cls([ "get-involved-card", item.modifiers ], [ null, true ]) + '><div class="get-involved-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></a></li>");
+            }
+        }
+    }).call(this);
+    buf.push("</ul></div></div>");
+    return buf.join("");
+};
+
 // get-involved-list.jade compiled template
 templatizer["get-involved-list"] = function tmpl_get_involved_list(locals) {
     var buf = [];
@@ -4254,61 +4309,6 @@ templatizer["get-involved-list"]["get-involved-list"] = function tmpl_get_involv
         }
     }).call(this);
     buf.push("</ul></div>");
-    return buf.join("");
-};
-
-// get-involved.jade compiled template
-templatizer["get-involved"] = function tmpl_get_involved(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// get-involved.jade:heading compiled template
-templatizer["get-involved"]["heading"] = function tmpl_get_involved_heading(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "heading", data.modifiers ], [ null, true ]) + ">");
-    if (data.anchor && data.activeAnchor) {
-        buf.push("<h2" + jade.attr("id", data.anchor, true, false) + ' class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
-    } else {
-        buf.push('<h2 class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
-        if (data.link) {
-            buf.push('<div class="heading-links">');
-            if (data.link.external) {
-                buf.push('<span class="icon-dailymotion"> </span>');
-            }
-            buf.push("<a" + jade.attr("href", data.link.href, true, false) + jade.attr("onclick", data.link.onclick, true, false) + ">" + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></div>");
-        }
-    }
-    buf.push("</div>");
-    return buf.join("");
-};
-
-
-// get-involved.jade:get-involved compiled template
-templatizer["get-involved"]["get-involved"] = function tmpl_get_involved_get_involved(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<div class="get-involved"><div class="layout-wrapper">');
-    buf.push(templatizer["get-involved"]["heading"](data.heading));
-    buf.push('<ul class="get-involved-items">');
-    (function() {
-        var $$obj = data.items;
-        if ("number" == typeof $$obj.length) {
-            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                var item = $$obj[$index];
-                buf.push('<li class="get-involved-item"><a' + jade.attr("href", item.href, true, false) + jade.attr("onclick", item.onclick, true, false) + jade.attr("style", "background-image: url(" + item.image.src + ");", true, false) + jade.cls([ "get-involved-card", item.modifiers ], [ null, true ]) + '><div class="get-involved-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></a></li>");
-            }
-        } else {
-            var $$l = 0;
-            for (var $index in $$obj) {
-                $$l++;
-                var item = $$obj[$index];
-                buf.push('<li class="get-involved-item"><a' + jade.attr("href", item.href, true, false) + jade.attr("onclick", item.onclick, true, false) + jade.attr("style", "background-image: url(" + item.image.src + ");", true, false) + jade.cls([ "get-involved-card", item.modifiers ], [ null, true ]) + '><div class="get-involved-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></a></li>");
-            }
-        }
-    }).call(this);
-    buf.push("</ul></div></div>");
     return buf.join("");
 };
 
@@ -4606,8 +4606,8 @@ templatizer["jumbotron-treize"]["button"] = function tmpl_jumbotron_treize_butto
 templatizer["jumbotron-treize"]["jumbotron-treize"] = function tmpl_jumbotron_treize_jumbotron_treize(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
     buf.push("<div" + jade.attr("style", "background-image: url(" + data.image + ");", true, false) + jade.attr("id", data.id, true, false) + jade.cls([ "jumbotron-treize", data.modifiers ], [ null, true ]) + "><div" + jade.attr("style", "background-image: url(" + data.masque + ");", true, false) + ' class="jumbotron-treize-wrapper"><div class="jumbotron-treize-content">');
-    var tag = data.tag || "h2";
-    buf.push("<" + tag + ' class="jumbotron-treize-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</" + tag + '><div class="jumbotron-treize-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + '</div><div class="treize-credit">' + jade.escape(null == (jade_interp = data.credit) ? "" : jade_interp) + "</div>");
+    var tag = data.tag || "h3";
+    buf.push("<" + tag + ' class="jumbotron-treize-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</" + tag + '><h2 class="jumbotron-treize-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + '</h2><div class="treize-credit">' + jade.escape(null == (jade_interp = data.credit) ? "" : jade_interp) + "</div>");
     if (data.button) {
         var button = JSON.parse(JSON.stringify(data.button));
         buf.push(templatizer["jumbotron-treize"]["button"](button));

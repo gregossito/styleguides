@@ -47,6 +47,7 @@ require('../modules/rheader/script');
 require('../modules/search-modal/script');
 require('../modules/sections-panel/script');
 require('../modules/share/script');
+require('../modules/treize-list/script');
 require('../modules/video-cover/script');
 require('../modules/video-home/script');
 require('../modules/video-home-news/script');

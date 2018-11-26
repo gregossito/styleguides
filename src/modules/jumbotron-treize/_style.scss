@@ -7,7 +7,7 @@
   max-width:640px;
   height:auto;
   margin:0 auto;
-  min-height:400px;
+  min-height:410px;
 
   .jumbotron-treize-wrapper {
     padding: 30px;
@@ -18,51 +18,62 @@
     vertical-align: middle;
     background-repeat:no-repeat;
     background-position:50% 50%;
-    min-height:400px;
+    min-height:410px;
     background-size: contain;
-
+    
     .jumbotron-treize-content {
       border: none;
       padding: 0;
       text-align: center;
       z-index: 1;
-      min-height:400px;
       position:relative;
+      background-color: rgba(255,255,255,0.6);
+      min-height: 370px;
 
       & > * {
         margin: 0 auto;
       }
 
       .jumbotron-treize-title {
-        font-size: 1.5rem !important;
-        font-weight: 700;
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding-top:12rem;
         margin-bottom: 5px;
-        color: $black;
-        font-family: 'Poppins', sans-serif;
+        color: #000;
+        letter-spacing: .8rem;
+        font-family: 'Poppins',sans-serif;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 20px white;
       }
 
-      .jumbotron-treize-text {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 2.4rem;
+      h2.jumbotron-treize-text {
+        padding:0;
+        font-size: 4rem;
         font-weight: 700;
-        line-height: 2.8rem;
-        margin: 0 auto 8px auto;
-        color: $black;
-        font-family: 'Playfair Display', serif;
+        line-height: 4rem;
+        margin: 2rem auto 2rem auto;
+        color: #000;
+        font-family: 'Playfair Display',serif;
+        text-shadow: 1px 1px 20px white;
       }
 
       .treize-credit {
         font-family: 'Poppins', sans-serif;
         font-style: italic;
+        font-size: 1.3rem;
+        text-shadow: 1px 1px 10px white;
       }
 
       .button.black {
-        position: absolute;
-        left: 50%;
-        bottom: 10rem;
-        z-index: 2;
-        font-family: 'Poppins', sans-serif;
+        margin: 5rem auto 0 auto;
+        font-family: 'Poppins',sans-serif;
+        display: block;
+        letter-spacing: .8rem;
+        font-weight: 700;
+        padding: 1rem 2.5rem;
+        &:hover{
+          color:$white;
+        };
       }
     }
   }

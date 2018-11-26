@@ -66,6 +66,9 @@
     background-color: darken(#333, 10%);
     border-radius:0;
   }
+  &:hover{
+    color:$white;
+  }
 }
 
 %button-action {

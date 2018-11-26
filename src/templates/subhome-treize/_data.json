@@ -1,7 +1,7 @@
 {
   "index": {
     "data": {
-      "title": "Actualité",
+      "title": "13 photos",
       "bodyModifiers": ["fixed-nav"],
       "skip_links": {
         "items": [
@@ -267,6 +267,20 @@
         "treize": {
           "modifiers": ["treize-cards"],
           "items": [
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "credit": "Une série de Ludovic Patrimoine",
+              "title": "Expulsions : début de la trêve hivernale",
+              "image": "../../modules/treize-card/image.jpg"
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "credit": "Une série de Ludovic Patrimoine",
+              "title": "Expulsions : début de la trêve hivernale",
+              "image": "../../modules/news-card/image.jpg"
+            },
             {
               "href": "../single-news",
               "date": "10 janvier 2015",

@@ -27,7 +27,7 @@ append content
   .layout-content
 
 append content
-  .layout-content
+  .layout-content.layout-adjacent-before
     if data.heading
       +hub-heading(data.heading)
     else
@@ -35,15 +35,12 @@ append content
 
 append content
   if data.archive
-    .layout-content
+    .layout-content.layout-adjacent-before
       .layout-wrapper
         +treize-list(data.archive.treize)
 
-append content
-  if data.pagination
-    .layout-content
-      .layout-wrapper
-        +pagination(data.pagination)
+append content   
+  .layout-content(style="clear:both") 
 
 append footer
   .layout-content.layout-adjacent-before

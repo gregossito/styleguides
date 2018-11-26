@@ -2548,6 +2548,8 @@ http://flickity.metafizzy.co
   .button.black:after, .black.expandmore__button:after {
     background-color: #1a1a1a;
     border-radius: 0; }
+  .button.black:hover, .black.expandmore__button:hover {
+    color: #FFF; }
 
 .block-search-cards .ais-infinite-hits--showmore button, .button.action, .expandmore__button {
   font-size: 1.3rem;
@@ -4109,7 +4111,7 @@ html.no-cssanimations .jumbotron-slider {
   max-width: 640px;
   height: auto;
   margin: 0 auto;
-  min-height: 400px; }
+  min-height: 410px; }
   .jumbotron-treize .jumbotron-treize-wrapper {
     padding: 30px;
     text-align: center;
@@ -4119,39 +4121,52 @@ html.no-cssanimations .jumbotron-slider {
     position: relative;*/
     vertical-align: middle;
     background-repeat: no-repeat;
-    background-position: 50% 50%; }
+    background-position: 50% 50%;
+    min-height: 410px;
+    background-size: contain; }
     .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content {
       border: none;
       padding: 0;
       text-align: center;
       z-index: 1;
-      min-height: 400px;
-      position: relative; }
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.6);
+      min-height: 370px; }
       .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content > * {
         margin: 0 auto; }
       .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content .jumbotron-treize-title {
-        font-size: 1.5rem !important;
-        font-weight: 700;
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding-top: 12rem;
         margin-bottom: 5px;
         color: #000;
-        font-family: 'Poppins', sans-serif; }
-      .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content .jumbotron-treize-text {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 2.4rem;
+        letter-spacing: .8rem;
+        font-family: 'Poppins',sans-serif;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 20px white; }
+      .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content h2.jumbotron-treize-text {
+        padding: 0;
+        font-size: 4rem;
         font-weight: 700;
-        line-height: 2.8rem;
-        margin: 0 auto 8px auto;
+        line-height: 4rem;
+        margin: 2rem auto 2rem auto;
         color: #000;
-        font-family: 'Playfair Display', serif; }
+        font-family: 'Playfair Display',serif;
+        text-shadow: 1px 1px 20px white; }
       .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content .treize-credit {
-        font-family: 'Poppins', sans-serif; }
+        font-family: 'Poppins', sans-serif;
+        font-style: italic;
+        font-size: 1.3rem;
+        text-shadow: 1px 1px 10px white; }
       .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content .button.black, .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content .black.expandmore__button {
-        position: absolute;
-        left: 50%;
-        bottom: 10rem;
-        z-index: 2;
-        font-family: 'Poppins', sans-serif; }
+        margin: 5rem auto 0 auto;
+        font-family: 'Poppins',sans-serif;
+        display: block;
+        letter-spacing: .8rem;
+        font-weight: 700;
+        padding: 1rem 2.5rem; }
+        .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content .button.black:hover, .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content .black.expandmore__button:hover {
+          color: #FFF; }
 
 @media (min-width: 768px) {
   .jumbotron-treize-title {
@@ -8276,7 +8291,7 @@ a.treize-card {
   text-decoration: none;
   color: #000; }
   a.treize-card .treize-card-image {
-    width: 500px;
+    width: 525px;
     height: 250px;
     overflow: hidden;
     background-position: 50% 50%;
@@ -8298,7 +8313,7 @@ a.treize-card {
     font-family: 'Playfair Display', serif; }
 
 ul.treize-list {
-  border-top: 2px solid black;
+  border-top: 4px solid black;
   padding: 5rem 0 0 0;
   margin: 5rem 0 0 0; }
   ul.treize-list li.treize-list-card-item {
@@ -8307,9 +8322,21 @@ ul.treize-list {
     display: inline;
     min-height: 400px;
     text-align: center;
-    padding: 0; }
+    padding: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    opacity: 0;
+    visibility: hidden; }
+    ul.treize-list li.treize-list-card-item:nth-child(even) .treize-card-wrapper {
+      float: right; }
   ul.treize-list:after {
     clear: both; }
+
+#treize-more {
+  margin: 0 auto;
+  text-align: center;
+  clear: both;
+  border-top: 4px solid black;
+  padding-top: 5rem; }
 
 .video-cover {
   background-position: center center;
