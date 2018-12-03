@@ -1,0 +1,235 @@
+.agenda-block {
+  list-style: none;
+  padding: 0;
+}
+
+.news-item {
+  border-bottom: 1px solid $grayEE;
+  color: $gray4D;
+  display: block;
+  min-height: 100px;
+  padding: 25px 0;
+  text-decoration: none;
+  transition: background 0.15s ease;
+  position: relative;
+
+  .agenda-item:first-child &,
+  .agenda-item:nth-child(2) & {
+    border-top: 1px solid $grayEE;
+  }
+
+  html.no-js &,
+  html.no-touchevents & {
+    &:hover,
+    &:focus {
+      background-color: $color-secondary;
+      transition: none;
+      &,
+      .news-item-category,
+      .news-item-title {
+        color: $white;
+      }
+      .news-item-meta,
+      .news-item-title {
+        transform: translateX(20px);
+      }
+      .news-item-title {
+        transform: translateX(20px);
+      }
+
+      .social-counters {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.news-item-meta {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  transition: transform 0.35s ease;
+  transform: translateX(0);
+}
+
+.news-item-date,
+.news-item-category {
+  display: inline;
+}
+
+.news-item-date + .news-item-category:before {
+  content: "—";
+  margin: 0 5px;
+}
+
+.news-item-category {
+  color: $color-secondary;
+}
+
+.news-item-title {
+  color: $gray33;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.2rem;
+  min-width: 200px;
+  transition: transform 0.35s ease;
+  transform: translateX(0);
+  width: 80%;
+}
+
+
+@include large-and-medium {
+
+  .agenda-block {
+    @include container;
+
+    // mode gallery
+    &.gallery {
+      .agenda-card-item {
+        @include gallery(4 of 12);
+      }
+
+      .agenda-item {
+        @include gallery(8 of 16);
+      }
+    }
+
+    // mode large-first-child
+    &.large-first-child {
+      .agenda-card-item {
+        @include span(4 of 12);
+
+        &:nth-child(3),
+        &:nth-child(5) {
+          @include last;
+        }
+      }
+    }
+
+    // modifier secondary
+    &.secondary {
+      .news-card {
+        &.large {
+          .news-card-image {
+            &:after {
+              background: $color-secondary; /* Old browsers */
+              background: -moz-linear-gradient(left, $color-secondary 0%, transparent 100%); /* FF3.6+ */
+              background: -webkit-gradient(linear, left top, right top, color-stop(0%, $color-secondary), color-stop(100%, transparent)); /* Chrome,Safari4+ */
+              background: -webkit-linear-gradient(left, $color-secondary 0%, transparent 100%); /* Chrome10+,Safari5.1+ */
+              background: -o-linear-gradient(left, $color-secondary 0%, transparent 100%); /* Opera 11.10+ */
+              background: -ms-linear-gradient(left, $color-secondary 0%, transparent 100%); /* IE10+ */
+              background: linear-gradient(to right, $color-secondary 0%, transparent 100%); /* W3C */
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color-secondary', endColorstr='transparent', GradientType=1); /* IE6-8 */
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .news-item {
+    min-height: 140px;
+    padding: 25px 0 40px;
+  }
+
+  .news-item-title {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+  
+// agenda Mode Calendrier
+  .agenda-agenda {
+    .agenda-agenda-filters  {
+      padding-bottom:2rem;
+      label,
+      .form-item-select {
+        display: inline-block;
+      }
+      label {
+        margin-right:2rem;
+        font-size:2.4rem;
+        font-weight:bold;
+        color:#000;
+      }
+      select {
+        font-size:1.7rem !important;
+        color:#000;
+      }
+    }
+
+    .agenda-agenda-nav-month {
+      margin: 2rem 0 2rem 0;
+      height: 4rem;
+      span {
+        background:$grayF2;
+        color:$color-secondary-variant;
+        padding: 1.5rem 0rem 1.5rem 2.5rem;
+        opacity:.2;
+        &:hover {
+          background:$color-secondary-variant;
+          color:white;
+        }
+        &.active {
+          background:$color-secondary-variant;
+          color:white;
+          font-weight:bold;
+          border-radius:5px;
+          &:after {
+            content: "";
+            border-right:0px solid $grayCC;
+            padding:0 2rem 0 1rem;
+          }
+        }
+        &.have-actus {
+          opacity:1;
+          cursor:pointer;
+        }
+        &:first-child {
+          border-radius: 5px 0px 0 5px;
+        }
+        &:last-child {
+          border-radius: 0px 5px 5px 0px;
+        }
+        &:after {
+          content: "";
+          border-right:1px solid $grayCC;
+          padding:0 2rem 0 1rem;
+        }
+      }
+    }
+    .agenda-agenda-arrondissement {
+      margin:2rem 0 2rem 0;
+      height:4rem;
+      display:none;
+      .agenda-agenda-arrondissement-change {
+        background:$grayF2;
+        color:$color-secondary-variant;
+        padding: 1.5rem;
+        margin: 0rem .2rem;
+        opacity:.2;
+        border-radius:6px;
+        &:hover {
+          background:$color-secondary-variant;
+          color:white;
+        }
+        &.active {
+          background:$color-secondary-variant;
+          color:white;
+          font-weight:bold;
+        }
+        &.have-actus {
+          opacity:1;
+          cursor:pointer;
+        }
+      }
+    }
+  }
+
+
+  .agenda-clear {
+    clear:both;
+  }
+
+}

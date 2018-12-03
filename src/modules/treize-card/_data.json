@@ -1,0 +1,21 @@
+{
+  "index": {
+    "type": "treize-card",
+    "description": "",
+    "examples": [{
+      "title": "Avec une indication de dates",
+      "description": "",
+      "attrs": {
+        "style": "max-width: 525px"
+      },
+      "data": {
+        "href": "#",
+        "image": "image.jpg",
+        "category": "Catégorie",
+        "title": "font-family: 'Playfair Display', serif;font-family: 'Poppins', sans-serif;",
+        "date": "21/12/2019",
+        "credit": "Crédit Mairie de Paris"
+      }
+    }]
+  }
+}

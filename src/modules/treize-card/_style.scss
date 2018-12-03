@@ -1,0 +1,43 @@
+a.treize-card {
+  text-decoration:none;
+  color:$black;
+  text-align:center;
+  .treize-card-image {
+    width: 525px;
+    height: 250px;
+    overflow: hidden;
+    background-position:50% 50%;
+    background-size: cover;
+  }
+  .treize-card-content {
+    & > * {
+      margin:1.5rem 0;
+    }
+    .treize-card-date {
+      letter-spacing:.5rem;
+      text-transform:uppercase;
+      font-size:1.3rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight:normal;
+    }
+    .treize-card-title {
+      font-weight:bold;
+      font-size:2.4rem;
+      font-family: 'Playfair Display', serif;
+    }
+    .treize-card-credit {
+      font-style:italic;
+      font-size:1.2rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: normal;
+    }
+  }
+}
+
+@include small {
+  a.treize-card {
+    .treize-card-image {
+      width: 100%;
+    }
+  }
+}

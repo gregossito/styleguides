@@ -3,34 +3,23 @@
     "type": "image-full",
     "description": "",
     "examples": [{
-      "title": "Standard",
-      "description": "",
+      "title": "Image au sein de 13 photos",
       "data": {
+        "modifiers": [""],
         "href": "#",
         "image": "image.jpg",
-        "tag": "h1",
         "title": "Titre",
         "text": "Texte"
       }
-    }, {
-      "title": "Test avec image claire",
-      "description": "",
+    },
+    {
+      "title": "Image au sein de 13 photos",
       "data": {
-        "href": "#",
-        "image": "image-white.jpg",
-        "title": "Titre",
-        "text": "Texte",
-        "credit": "Lorsque j'ai commencé à éditer mes images pour le livre, j'ai cessé de me rendre à ces ventes et je n'y suis plus allé depuis le printemps 2016. On m'a souvent demandé pourquoi je n’y allais plus. Je réponds toujours que j'ai déjà exprimé dans le livre ce que je voulais dire."
-      }
-    }, {
-      "title": "jumbotron home",
-      "description": "",
-      "data": {
+        "modifiers": [""],
         "href": "#",
         "image": "image-home.jpg",
-        "modifiers": ["home"],
-        "title": "À la une",
-        "text": "10 raisons de surtout pas piétonniser les Berges Rive droite"
+        "title": "Titre",
+        "text": "Texte"
       }
     }]
   }

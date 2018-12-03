@@ -1,0 +1,970 @@
+{
+  "index": {
+    "data": {
+      "title": "13 photos",
+      "bodyModifiers": ["fixed-nav"],
+      "skip_links": {
+        "items": [
+          {"href": "#content", "text": "Aller au contenu"},
+          {"href": "#navigation", "text": "Aller à la navigation"},
+          {"href": "#search", "text": "Aller à la recherche"}
+        ]
+      },
+      "notices": {
+        "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+        "cnil": {
+          "id": "notice_cnil",
+          "modifiers": ["bottom", "transparent", "fixed", "closed"],
+          "closable": {
+            "href": "#",
+            "text": "Accepter",
+            "modifiers": ["action"],
+            "attributes": {"data-action": "close"}
+          },
+          "block": "Le site Paris.fr utilise des cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. En poursuivant votre navigation sur ce site, vous acceptez leur utilisation. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
+        }
+      },
+      "rheader": {
+        "modifiers": ["fixed"],
+        "logo": {
+          "href": "../home/",
+          "text": "Paris",
+          "title": "Retour à l’accueil – Paris"
+        },
+        "locales": [
+          {"href": "#fr", "lang": "fr", "text": "français", "current": true},
+          {"href": "#en", "lang": "en", "text": "English"},
+          {"href": "#es", "lang": "es", "text": "español"}
+        ],
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "../nav/",
+            "text": "Menu"
+          }
+        },
+        "navigation_label": "navigation principale",
+        "items": [
+          {"href": "../hub/", "text": "Services et infos pratiques"},
+          {"href": "../subhome-news/", "text": "Actualités", "current": true},
+          {"href": "#", "text": "Entreprises"},
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
+          },
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
+          }
+        ],
+        "quick_access": {
+          "search": {
+            "action": "../search",
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Valider la recherche sur le site",
+              "icon": true
+            },
+            "around": {
+              "href": "http://meslieux.paris.fr",
+              "text": "Autour de moi",
+              "target": "_blank"
+            },
+            "close_label": "Fermer le moteur de recherche"
+          },
+          "results": {
+            "button": {
+              "href": "#",
+              "text": "Voir tous les résultats"
+            }
+          }
+        }
+      },
+      "jumbotron_treize": {
+        "href": "../13-photos",
+        "image": "../../modules/jumbotron-treize/image-home.jpg",
+        "title": "13 photos",
+        "masque": "../../modules/jumbotron-treize/13-masque.png",
+        "text": "Bonjour à tous c'est 13 photos",
+        "credit": "Une série de Jean-Baptiste Gurliat",
+        "button": {
+          "text": "Découvrir",
+          "modifiers": ["black"]
+        }
+      },
+      "breadcrumbs": {
+        "items": [
+          {
+            "href": "../home",
+            "text": "Accueil"
+          },
+          {
+            "text": "Actualité"
+          }
+        ]
+      },
+      "today": {
+        "heading": {
+          "title": "Aujourd'hui"
+        },
+        "news": {
+          "modifiers": ["news-cards", "large-first-child"],
+          "items": [
+            {
+              "href": "../single-news",
+              "image": "large-news-1.jpg",
+              "category": "Mobilité",
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Mobilité",
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Environnement",
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Culture et patrimoine",
+              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Environnement",
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            }
+          ]
+        }
+      },
+      "currently": {
+        "heading": {
+          "title": "En ce moment"
+        },
+        "news": {
+          "modifiers": ["news-cards", "large-first-child", "secondary"],
+          "items": [
+            {
+              "href": "../single-news",
+              "image": "large-news-2.jpg",
+              "category": "International",
+              "title": "Visite de John Kerry à l'Hôtel de Ville de Paris",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Mobilité",
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Environnement",
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Culture et patrimoine",
+              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Environnement",
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            }
+          ]
+        }
+      },
+      "video": {
+        "block": {
+          "title": "Paris en vidéo",
+          "modifiers": ["color-secondary-background"]
+        },
+        "cover": {
+          "placeholder": "Le site Paris.fr utilise des cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. En poursuivant votre navigation sur ce site, vous acceptez leur utilisation. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>.<br /><br /><a href=\"#\" data-action=\"allow_cookies\" class=\"button action\">accepter</a>",
+          "block": "<iframe id=\"dm_jukebox_iframe\" allowfullscreen=\"true\" allowtransparency=\"true\" style=\"overflow:hidden; margin:0; padding:0; width: 100%; height: 100%;\" marginwidth=\"0\" marginheight=\"0\" src=\"http://www.dailymotion.com/widget/jukebox?list[]=%2Fuser%2Fmairiedeparis%2F1&&autoplay=0&automute=0\" align=\"middle\" width=\"100%\" frameborder=\"0\"></iframe>"
+        }
+      },
+      "newsletter": {
+        "title": "L’essentiel de Paris",
+        "modifiers": ["color-secondary-background"],
+        "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+        "button": {
+          "href": "#",
+          "text": "Je m'abonne",
+          "target": "_blank"
+        },
+        "link": {
+          "href": "#",
+          "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
+        }
+      },
+      "archive": {
+        "treize": {
+          "modifiers": ["treize-cards"],
+          "items": [
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "credit": "Une série de Ludovic Patrimoine",
+              "title": "Expulsions : début de la trêve hivernale",
+              "image": "../../modules/treize-card/image.jpg"
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "credit": "Une série de Ludovic Patrimoine",
+              "title": "Expulsions : début de la trêve hivernale",
+              "image": "../../modules/news-card/image.jpg"
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "credit": "Une série de Ludovic Patrimoine",
+              "title": "Expulsions : début de la trêve hivernale",
+              "image": "../../modules/treize-card/image.jpg"
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "credit": "Une série de Ludovic Patrimoine",
+              "title": "Expulsions : début de la trêve hivernale",
+              "image": "../../modules/news-card/image.jpg"
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "credit": "Une série de Ludovic Patrimoine",
+              "title": "Expulsions : début de la trêve hivernale",
+              "image": "../../modules/treize-card/image.jpg"
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "credit": "Une série de Ludovic Patrimoine",
+              "title": "Expulsions : début de la trêve hivernale",
+              "image": "../../modules/news-card/image.jpg"
+            }
+          ]
+        }
+      },
+      "pagination": {
+        "text": {
+          "label": "Pagination des résultats",
+          "prev": "Page précédente",
+          "next": "Page suivante",
+          "link_title": "Aller à la page ${page}"
+        },
+        "base_url": "../subhome-news",
+        "url": "page${page}.html",
+        "current": 1,
+        "total": 10
+      },
+      "search_push": {
+        "title": "Vous n’avez pas trouvé ce que vous cherchez ?",
+        "button": {
+          "href": "../search",
+          "text": "Rechercher",
+          "title": "Rechercher sur le site"
+        }
+      },
+      "get_involved": {
+        "heading": {
+          "title": "Participez !",
+          "link": {
+            "href": "#",
+            "text": "Accéder à l’espace participatif"
+          }
+        },
+        "items": [
+          {
+            "href": "#",
+            "image": {
+              "src": "../../modules/get-involved/hands.png",
+              "title": "Titre",
+              "credit": "Mairie de Paris / DICOM"
+            },
+            "text": "Votez pour le budget participatif"
+          },
+          {
+            "href": "#",
+            "image": {
+              "src": "../../modules/get-involved/cards.png",
+              "title": "Titre",
+              "credit": "Mairie de Paris / DICOM"
+            },
+            "text": "E-pétition, prenez la main"
+          }
+        ]
+      },
+      "connected": {
+        "newsletter": {
+          "title": "L’essentiel de Paris",
+          "modifiers": ["color-secondary-background"],
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "button": {
+            "href": "#",
+            "text": "Je m'abonne",
+            "target": "_blank"
+          },
+          "link": {
+            "href": "#",
+            "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
+          }
+        },
+        "jecoute": {
+          "title": "Paris j'écoute",
+          "modifiers": ["color-secondary-background"],
+          "items": [
+            {
+              "question": {
+                "user": "@juliechanal",
+                "time": "9h30",
+                "text": "Bonjour, est-ce que la piscine Joséphine Baker sera ouverte cet été ?"
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "10h11",
+                "text": "Oui, la piscine reste ouverte cet été."
+              }
+            },
+            {
+              "question": {
+                "user": "@JuliePetrucci",
+                "time": "10h20",
+                "text": "Bjr, je loue un local commercial. Quelles sont les démarches pour peindre la façade d'une autre couleur et y peindre le logo ?"
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "10h50",
+                "text": "bjr, il faut déposer une déclaration préalable au 6 promenade Claude Lévi-Strauss dans le 13e <a href=\"http://t.co/h2uYPqkEOx\">http://t.co/h2uYPqkEOx</a>"
+              }
+            },
+            {
+              "question": {
+                "user": "@billy141512",
+                "time": "11h02",
+                "text": "Bonjour, à propos du plan qualité air à Paris, les motos de 2012 (donc 3*) seront-elles autorisées en 2020 ? Pas clair."
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "11h14",
+                "text": "bonjour, les motos de classe 3 étoiles seront bien concernées par ces mesures de restriction."
+              }
+            }
+          ],
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
+          },
+          "pause": {
+            "label": [
+              "Mettre en pause le défilement",
+              "Relancer le défilement"
+            ]
+          }
+        },
+        "social": {
+          "title": "Restez connecté",
+          "modifiers": ["color-secondary-background"],
+          "items": [
+            {
+              "icon": "twitter",
+              "count": "219 000",
+              "unit": "abonnés",
+              "link": {
+                "href": "#",
+                "text": "Twitter",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": "facebook",
+              "count": "2 508 576",
+              "unit": "abonnés",
+              "link": {
+                "href": "#",
+                "text": "Facebook",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": "instagram",
+              "count": "16 449",
+              "unit": "abonnés",
+              "link": {
+                "href": "#",
+                "text": "Instagram",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": "dailymotion",
+              "count": "5 442",
+              "unit": "abonnés",
+              "link": {
+                "href": "#",
+                "text": "Dailymotion",
+                "target": "_blank"
+              }
+            }
+          ],
+          "link": {
+            "href": "#",
+            "text": "Voir tous les réseaux sociaux"
+          }
+        }
+      },
+      "button_top": {
+        "accessibility_label": "retour en haut de la page"
+      },
+      "footer": {
+        "logo": {
+          "href": "../home",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "retour à l'accueil – Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "lang": "en", "target": "_blank", "modifiers": ["strong"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
+      }
+    }
+  },
+  "page2": {
+    "data": {
+      "title": "Actualité",
+      "bodyModifiers": ["fixed-nav"],
+      "skip_links": {
+        "items": [
+          {"href": "#content", "text": "Aller au contenu"},
+          {"href": "#navigation", "text": "Aller à la navigation"},
+          {"href": "#search", "text": "Aller à la recherche"}
+        ]
+      },
+      "notices": {
+        "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+        "cnil": {
+          "id": "notice_cnil",
+          "modifiers": ["bottom", "transparent", "fixed", "closed"],
+          "closable": {
+            "href": "#",
+            "text": "Accepter",
+            "modifiers": ["action"],
+            "attributes": {"data-action": "close"}
+          },
+          "block": "Le site Paris.fr utilise des cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. En poursuivant votre navigation sur ce site, vous acceptez leur utilisation. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
+        }
+      },
+      "rheader": {
+        "modifiers": ["fixed"],
+        "logo": {
+          "href": "../home/",
+          "text": "Paris",
+          "title": "Retour à l’accueil – Paris"
+        },
+        "locales": [
+          {"href": "#fr", "lang": "fr", "text": "français", "current": true},
+          {"href": "#en", "lang": "en", "text": "English"},
+          {"href": "#es", "lang": "es", "text": "español"}
+        ],
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "../nav/",
+            "text": "Menu"
+          }
+        },
+        "navigation_label": "navigation principale",
+        "items": [
+          {"href": "../hub/", "text": "Services et infos pratiques"},
+          {"href": "../subhome-news/", "text": "Actualités", "current": true},
+          {"href": "#", "text": "Entreprises"},
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
+          },
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
+          }
+        ],
+        "quick_access": {
+          "search": {
+            "action": "../search",
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Valider la recherche sur le site",
+              "icon": true
+            },
+            "around": {
+              "href": "http://meslieux.paris.fr",
+              "text": "Autour de moi",
+              "target": "_blank"
+            },
+            "close_label": "Fermer le moteur de recherche"
+          },
+          "results": {
+            "button": {
+              "href": "../search",
+              "text": "Voir tous les résultats"
+            }
+          }
+        }
+      },
+      "jumbotron_treize": {
+        "href": "../13-photos",
+        "image": "../../modules/jumbotron-treize/image-home.jpg",
+        "title": "13 photos",
+        "masque": "../../modules/jumbotron-treize/13-masque.png",
+        "text": "Bonjour à tous c'est 13 photos",
+        "button": {
+          "text": "En savoir plus",
+          "modifiers": ["black"]
+        }
+      },
+      "latest": {
+        "heading": {
+          "title": "9 janvier 2015"
+        },
+        "news": {
+          "modifiers": ["news-cards", "large-first-child"],
+          "items": [
+            {
+              "href": "../single-news",
+              "image": "large-news-1.jpg",
+              "category": "Mobilité",
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Mobilité",
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Environnement",
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Culture et patrimoine",
+              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Environnement",
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            }
+          ]
+        }
+      },
+      "archive": {
+        "heading": {
+          "title": "Les autres actus"
+        },
+        "treize": {
+          "items": [
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "category": "Logement",
+              "title": "Expulsions : début de la trêve hivernale",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "category": "Logement",
+              "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "category": "Logement",
+              "title": "Le point sur les nouveaux logements à Paris",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "category": "Culture et patrimoine",
+              "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "category": "Environnement",
+              "title": "Donec sed odio dui",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "category": "Culture et patrimoine",
+              "title": "Maecenas sed diam eget risus varius blandit sit amet non magna",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "category": "Mobilité",
+              "title": "Sed posuere consectetur est at lobortis",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "category": "International",
+              "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "category": "Culture et patrimoine",
+              "title": "Aenean lacinia bibendum nulla sed consectetur",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            },
+            {
+              "href": "../single-news",
+              "date": "10 janvier 2015",
+              "category": "Environnement",
+              "title": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor",
+              "counters": {
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
+              }
+            }
+          ]
+        }
+      },
+      "pagination": {
+        "text": {
+          "label": "Pagination des résultats",
+          "prev": "Page précédente",
+          "next": "Page suivante",
+          "link_title": "Aller à la page ${page}"
+        },
+        "base_url": "../subhome-news",
+        "url": "page${page}.html",
+        "current": 2,
+        "total": 10
+      },
+      "search_push": {
+        "title": "Vous n’avez pas trouvé ce que vous cherchez ?",
+        "button": {
+          "href": "../search",
+          "text": "Rechercher",
+          "title": "Rechercher sur le site"
+        }
+      },
+      "get_involved": {
+        "heading": {
+          "title": "Participez !",
+          "link": {
+            "href": "#",
+            "text": "Accéder à l’espace participatif"
+          }
+        },
+        "items": [
+          {
+            "href": "#",
+            "image": {
+              "src": "../../modules/get-involved/hands.png",
+              "title": "Titre",
+              "credit": "Mairie de Paris / DICOM"
+            },
+            "text": "Votez pour le budget participatif"
+          },
+          {
+            "href": "#",
+            "image": {
+              "src": "../../modules/get-involved/cards.png",
+              "title": "Titre",
+              "credit": "Mairie de Paris / DICOM"
+            },
+            "text": "E-pétition, prenez la main"
+          }
+        ]
+      },
+      "connected": {
+        "newsletter": {
+          "title": "L’essentiel de Paris",
+          "modifiers": ["color-secondary-background"],
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "button": {
+            "href": "#",
+            "text": "Je m'abonne",
+            "target": "_blank"
+          },
+          "link": {
+            "href": "#",
+            "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
+          }
+        },
+        "jecoute": {
+          "title": "Paris j'écoute",
+          "modifiers": ["color-secondary-background"],
+          "items": [
+            {
+              "question": {
+                "user": "@juliechanal",
+                "time": "9h30",
+                "text": "Bonjour, est-ce que la piscine Joséphine Baker sera ouverte cet été ?"
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "10h11",
+                "text": "Oui, la piscine reste ouverte cet été."
+              }
+            },
+            {
+              "question": {
+                "user": "@JuliePetrucci",
+                "time": "10h20",
+                "text": "Bjr, je loue un local commercial. Quelles sont les démarches pour peindre la façade d'une autre couleur et y peindre le logo ?"
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "10h50",
+                "text": "bjr, il faut déposer une déclaration préalable au 6 promenade Claude Lévi-Strauss dans le 13e <a href=\"http://t.co/h2uYPqkEOx\">http://t.co/h2uYPqkEOx</a>"
+              }
+            },
+            {
+              "question": {
+                "user": "@billy141512",
+                "time": "11h02",
+                "text": "Bonjour, à propos du plan qualité air à Paris, les motos de 2012 (donc 3*) seront-elles autorisées en 2020 ? Pas clair."
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "11h14",
+                "text": "bonjour, les motos de classe 3 étoiles seront bien concernées par ces mesures de restriction."
+              }
+            }
+          ],
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
+          },
+          "pause": {
+            "label": [
+              "Mettre en pause le défilement",
+              "Relancer le défilement"
+            ]
+          }
+        },
+        "social": {
+          "title": "Restez connecté",
+          "modifiers": ["color-secondary-background"],
+          "items": [
+            {
+              "icon": "twitter",
+              "count": "219 000",
+              "unit": "abonnés",
+              "link": {
+                "href": "#",
+                "text": "Twitter",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": "facebook",
+              "count": "2 508 576",
+              "unit": "abonnés",
+              "link": {
+                "href": "#",
+                "text": "Facebook",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": "instagram",
+              "count": "16 449",
+              "unit": "abonnés",
+              "link": {
+                "href": "#",
+                "text": "Instagram",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": "dailymotion",
+              "count": "5 442",
+              "unit": "abonnés",
+              "link": {
+                "href": "#",
+                "text": "Dailymotion",
+                "target": "_blank"
+              }
+            }
+          ],
+          "link": {
+            "href": "#",
+            "text": "Voir tous les réseaux sociaux"
+          }
+        }
+      },
+      "button_top": {
+        "accessibility_label": "retour en haut de la page"
+      },
+      "footer": {
+        "logo": {
+          "href": "../home",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "retour à l'accueil – Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "lang": "en", "target": "_blank", "modifiers": ["strong"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
+      }
+    }
+  }
+}

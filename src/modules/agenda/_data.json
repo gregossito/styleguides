@@ -1,0 +1,56 @@
+{
+  "index": {
+    "type": "agenda",
+    "description": "",
+    "examples": [{
+      "title": "Liste d'actualités",
+      "description": "",
+      "data": {
+        "items": [
+          {
+            "href": "#",
+            "date": "10/01/2015",
+            "category": "Logement",
+            "title": "Expulsions : début de la trêve hivernale",
+            "arrondissement": "1"
+          },
+          {
+            "href": "#",
+            "date": "10/02/2015",
+            "category": "Logement",
+            "title": "Expulsions : début de la trêve hivernale",
+            "arrondissement": "3"
+          },
+          {
+            "href": "#",
+            "date": "10/03/2015",
+            "category": "Logement",
+            "title": "Expulsions : début de la trêve hivernale",
+            "arrondissement": "4"
+          },
+          {
+            "href": "#",
+            "date": "10/06/2015",
+            "category": "Environnement",
+            "title": "Donec sed odio dui",
+            "arrondissement": "4"
+          },
+          {
+            "href": "#",
+            "date": "10/06/2015",
+            "category": "Environnement",
+            "title": "Donec sed odio dui",
+            "arrondissement": "7"
+          },
+          {
+            "href": "#",
+            "date": "10/06/2015",
+            "category": "Environnement",
+            "title": "Donec sed odio dui",
+            "arrondissement": "19"
+          }
+        ]
+      }
+    }]
+  }
+}

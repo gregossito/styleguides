@@ -30,6 +30,7 @@ require('../components/video/script');
 require('../layouts/left-col/script');
 
 // load our modules
+require('../modules/agenda/script');
 require('../modules/anchors-list/script');
 require('../modules/block-content-jecoute/script');
 require('../modules/block-content-tweet/script');
@@ -37,8 +38,9 @@ require('../modules/block-content-newsletter/script');
 require('../modules/button-top/script');
 require('../modules/gallery-ugc/script');
 require('../modules/icon-switch/script');
+require('../modules/image-full/script');
 require('../modules/jumbotron-slider/script');
-require('../modules/news-list/script');
+// require('../modules/news-list/script');
 require('../modules/notice/script');
 require('../modules/person-block/script');
 require('../modules/poll/script');
@@ -47,6 +49,7 @@ require('../modules/rheader/script');
 require('../modules/search-modal/script');
 require('../modules/sections-panel/script');
 require('../modules/share/script');
+require('../modules/treize-list/script');
 require('../modules/video-cover/script');
 require('../modules/video-home/script');
 require('../modules/video-home-news/script');
@@ -64,5 +67,5 @@ require('./lib/egg');
 require('./lib/3975');
 
 var Paris = window.Paris || {};
-Paris.version = "1.13.8";
+Paris.version = "1.14.0";
 Paris.templates = require('./client.tpl');

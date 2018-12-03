@@ -1,0 +1,24 @@
+{
+  "index": {
+    "type": "jumbotron-treize",
+    "description": "",
+    "examples": [{
+      "title": "Treize photo ",
+      "description": "",
+      "data": {
+        "href": "#",
+        "image": "image-home.jpg",
+        "masque": "nef-masque.png",
+        "modifiers": ["home"],
+        "title": "Octobre 2018",
+        "text": "Les immeubles plats",
+        "credit": "Une série de Jean-Baptiste Gurliat",
+        "button": {
+          "text": "Découvrir",
+          "title": "En savoir plus sur cette actualité",
+          "modifiers": ["black"]
+        }
+      }
+    }]
+  }
+}

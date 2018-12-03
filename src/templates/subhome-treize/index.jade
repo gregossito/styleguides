@@ -1,0 +1,54 @@
+extends ../../layouts/stack/stack
+
+include ../../modules/block-content-jecoute/block-content-jecoute
+include ../../modules/block-content-newsletter/block-content-newsletter
+include ../../modules/block-content-social/block-content-social
+include ../../modules/block-content/block-content
+include ../../modules/button-top/button-top
+include ../../modules/footer/footer
+include ../../modules/heading/heading
+include ../../modules/hub-heading/hub-heading
+include ../../modules/jumbotron-treize/jumbotron-treize
+include ../../modules/treize-list/treize-list
+include ../../modules/notice/notice
+include ../../modules/pagination/pagination
+include ../../modules/rheader/rheader
+include ../../modules/search-push/search-push
+include ../../modules/skip-links/skip-links
+
+append header
+  if data.skip_links
+    +skip-links(data.skip_links)
+
+append header
+  +rheader(data.rheader)
+
+append content
+  .layout-content
+
+append content
+  .layout-content.layout-adjacent-before
+    if data.heading
+      +hub-heading(data.heading)
+    else
+      +jumbotron-treize(data.jumbotron_treize)
+
+append content
+  if data.archive
+    .layout-content.layout-adjacent-before
+      .layout-wrapper
+        +treize-list(data.archive.treize)
+
+append content   
+  .layout-content(style="clear:both") 
+
+append footer
+  .layout-content.layout-adjacent-before
+    +footer(data.footer)
+
+append footer
+  +button-top(data.button_top)
+
+append footer
+  if data.notices && data.notices.cnil
+    +notice(data.notices.cnil)

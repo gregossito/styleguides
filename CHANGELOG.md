@@ -9,6 +9,18 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.14.0 (2018-12-03)
+
+* modules `image-full` : Masonry + modal for 13 photos
+* modules `button` : Add button black modifier for 13 photos
+* modules `jumbotron-treize` : Album Cover + First image 13 photos 
+* modules `treize-card` : Card for 13 photos
+* modules `treize-list` : News-list for 13 photos
+* modules `news-list` : Remove agenda mode
+* modules `agenda` : Mode agenda for Grand-Format Plan Climat
+* templates `subhome-treize` : List 13 photos albums with treize-list and jumbotron-treize modules 
+* templates `single-treize` : Page with image-full modules (work on Front, to do data.json)
+
 ## 1.13.8 (2018-11-16)
 
 * modules `links-group` : add anchor id

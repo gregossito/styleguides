@@ -1,0 +1,121 @@
+{
+  "index": {
+    "type": "treize-list",
+    "description": "",
+    "examples": [{
+      "title": "3 actualités",
+      "description": "",
+      "data": {
+        "modifiers": ["treize-cards"],
+        "items": [
+          {
+            "href": "#",
+            "image": "../../modules/treize-card/image.jpg",
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+            "credit": "Mairie de Paris",
+            "date": "21/11/2019"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/treize-card/image.jpg",
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+            "credit": "Mairie de Paris",
+            "date": "21/11/2019"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/treize-card/image.jpg",
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+            "credit": "Mairie de Paris",
+            "date": "21/11/2019"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/treize-card/image.jpg",
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+            "credit": "Mairie de Paris",
+            "date": "21/11/2019"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/treize-card/image.jpg",
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+            "credit": "Mairie de Paris",
+            "date": "21/11/2019"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/treize-card/image.jpg",
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+            "credit": "Mairie de Paris",
+            "date": "21/11/2019"
+          }
+        ]
+      }
+    }, {
+      "title": "1 grande actualité + jusqu'à 4 petites actualités",
+      "description": "",
+      "data": {
+        "modifiers": ["treize-cards", "large-first-child"],
+        "items": [
+          {
+            "href": "#",
+            "image": "../../modules/treize-card/image.jpg",
+            "category": "Culture et patrimoine",
+            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
+            "counters": {
+              "facebook": [5, "j'aime"],
+              "twitter": [12, "retweets"]
+            }
+          },
+          {
+            "href": "#",
+            "image": "../../modules/treize-card/image.jpg",
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+            "counters": {
+              "facebook": [5, "j'aime"],
+              "twitter": [12, "retweets"]
+            }
+          },
+          {
+            "href": "#",
+            "image": "../../modules/treize-card/image.jpg",
+            "category": "Environnement",
+            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+            "counters": {
+              "facebook": [5, "j'aime"],
+              "twitter": [12, "retweets"]
+            }
+          },
+          {
+            "href": "#",
+            "image": "../../modules/treize-card/image.jpg",
+            "category": "Culture et patrimoine",
+            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
+            "counters": {
+              "facebook": [5, "j'aime"],
+              "twitter": [12, "retweets"]
+            }
+          },
+          {
+            "href": "#",
+            "image": "../../modules/treize-card/image.jpg",
+            "category": "Environnement",
+            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+            "counters": {
+              "facebook": [5, "j'aime"],
+              "twitter": [12, "retweets"]
+            }
+          }
+        ]
+      }
+    }]
+  }
+}
