@@ -13,59 +13,48 @@
             "image": "../../modules/treize-card/image.jpg",
             "category": "Mobilité",
             "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
+            "credit": "Mairie de Paris",
+            "date": "21/11/2019"
           },
           {
             "href": "#",
             "image": "../../modules/treize-card/image.jpg",
-            "category": "Culture et patrimoine",
-            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+            "credit": "Mairie de Paris",
+            "date": "21/11/2019"
           },
           {
             "href": "#",
             "image": "../../modules/treize-card/image.jpg",
-            "category": "Environnement",
-            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          }
-        ]
-      }
-    },{
-      "title": "3 appels à projets",
-      "description": "",
-      "data": {
-        "modifiers": ["treize-cards"],
-        "items": [
-          {
-            "href": "#",
-            "image": "../../modules/treize-card/image.jpg",
-            "category": "Environnement",
-            "title": "Trophées de l'Agriculture urbaine: postulez!",
-            "date": "du 26/06/17 au 31/12/2017"
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+            "credit": "Mairie de Paris",
+            "date": "21/11/2019"
           },
           {
             "href": "#",
             "image": "../../modules/treize-card/image.jpg",
-            "category": "Jeunes talents",
-            "title": "Talents #Paris2024, un appel à projets innovants pour les 16-25 ans",
-            "date": "du 26/06/17 au 31/12/2017"
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+            "credit": "Mairie de Paris",
+            "date": "21/11/2019"
           },
           {
             "href": "#",
             "image": "../../modules/treize-card/image.jpg",
-            "category": "Vie de quartier",
-            "title": "Appel à propositions pour un emplacement de commerce alimentaire square d’E. d’Orves (9e)",
-            "date": "à partir du 26/06/17"
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+            "credit": "Mairie de Paris",
+            "date": "21/11/2019"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/treize-card/image.jpg",
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+            "credit": "Mairie de Paris",
+            "date": "21/11/2019"
           }
         ]
       }
@@ -120,171 +109,6 @@
             "image": "../../modules/treize-card/image.jpg",
             "category": "Environnement",
             "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          }
-        ]
-      }
-    }, {
-      "title": "1 grande actualité + jusqu'à 4 petites actualités (secondaire)",
-      "description": "",
-      "data": {
-        "modifiers": ["treize-cards", "large-first-child", "secondary"],
-        "items": [
-          {
-            "href": "#",
-            "image": "../../modules/treize-card/image.jpg",
-            "category": "Culture et patrimoine",
-            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          },
-          {
-            "href": "#",
-            "image": "../../modules/treize-card/image.jpg",
-            "category": "Mobilité",
-            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          },
-          {
-            "href": "#",
-            "image": "../../modules/treize-card/image.jpg",
-            "category": "Environnement",
-            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          },
-          {
-            "href": "#",
-            "image": "../../modules/treize-card/image.jpg",
-            "category": "Culture et patrimoine",
-            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          },
-          {
-            "href": "#",
-            "image": "../../modules/treize-card/image.jpg",
-            "category": "Environnement",
-            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          }
-        ]
-      }
-    }, {
-      "title": "Liste d'actualités",
-      "description": "",
-      "data": {
-        "items": [
-          {
-            "href": "#",
-            "date": "10 janvier 2015",
-            "category": "Logement",
-            "title": "Expulsions : début de la trêve hivernale",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          },
-          {
-            "href": "#",
-            "date": "10 janvier 2015",
-            "category": "Logement",
-            "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          },
-          {
-            "href": "#",
-            "date": "10 janvier 2015",
-            "category": "Logement",
-            "title": "Le point sur les nouveaux logements à Paris",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          },
-          {
-            "href": "#",
-            "date": "10 janvier 2015",
-            "category": "Culture et patrimoine",
-            "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          },
-          {
-            "href": "#",
-            "date": "10 janvier 2015",
-            "category": "Environnement",
-            "title": "Donec sed odio dui",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          },
-          {
-            "href": "#",
-            "date": "10 janvier 2015",
-            "category": "Culture et patrimoine",
-            "title": "Maecenas sed diam eget risus varius blandit sit amet non magna",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          },
-          {
-            "href": "#",
-            "date": "10 janvier 2015",
-            "category": "Mobilité",
-            "title": "Sed posuere consectetur est at lobortis",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          },
-          {
-            "href": "#",
-            "date": "10 janvier 2015",
-            "category": "International",
-            "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          },
-          {
-            "href": "#",
-            "date": "10 janvier 2015",
-            "category": "Culture et patrimoine",
-            "title": "Aenean lacinia bibendum nulla sed consectetur",
-            "counters": {
-              "facebook": [5, "j'aime"],
-              "twitter": [12, "retweets"]
-            }
-          },
-          {
-            "href": "#",
-            "date": "10 janvier 2015",
-            "category": "Environnement",
-            "title": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor",
             "counters": {
               "facebook": [5, "j'aime"],
               "twitter": [12, "retweets"]

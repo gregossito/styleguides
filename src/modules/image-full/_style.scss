@@ -1,168 +1,295 @@
+
+/* IMAGE FULL */ 
 .image-full {
   background-color: $white;
-  background-repeat:no-repeat;
-  background-position:50% 50%;
-  background-size: cover;
-  display: table;
-  //height: 180px;
-  position: relative;
-  text-decoration: none;
-  width: 100%;
+  display:block;
+  .image-full-wrapper {
+    img {
+       width:28vw;
+       max-width: 350px;
+       cursor:zoom-in;
+    }
+    .image-full-text {
+      display:none;
+    }
+  }
+}
 
-  .layout-wrapper.image-full-content {
-    //border-left: 6px solid $color-tertiary;
+/* PRESENTATION */
+.treize-presentation {
+  width:80%;
+  text-align: center;
+  margin:7rem auto 4rem auto;
+
+  .treize-date {
+    color: $black;
+    font-weight: normal;
+    letter-spacing: .8rem;
+    font-size:1.5rem;
+    font-family: 'Poppins',sans-serif;
+    text-transform: uppercase;
+  }
+
+  h1.treize-title {
+    padding:0;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 6rem;
+    margin: 2rem auto 4rem auto;
+    color: $black;
+    font-family: 'Playfair Display',serif;
+  }
+
+  .treize-credit {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+  .treize-share {
+    background:$black;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    width: 17rem;
+    padding: 0 3rem 0 2rem;
+    text-align: left;
+    margin: 0 auto;
+    display: block;
+    border-radius: 2.3rem;
     color: $white;
-    padding: 5px 24px 3px 24px;
-    @include large-and-medium {
-      padding-left: 35px;
-    }
-  }
-
-  &:not(.no-overlay) {
-    .image-full-wrapper:after {
- 
-      content: "";
-      display: block;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      transform: translateX(0);
-      width: 150%;
-      z-index: 0;
-
-      // Target IE 10 and 11
-      @media screen\0 {
-        height: 200%;
+    margin: 3rem auto;
+    font-size: 1rem;
+    li {
+      display: inline;
+      margin-right: .6rem;
+      text-transform: uppercase;
+      a {
+        text-decoration: none;
+      }
+      &.treize-facebook {
+        background-color:$white;
+        padding: 0.1rem .3rem;
+        border-radius: 2rem;
+        font-size: 1.7rem;
+        cursor:pointer;
+      }
+      &.treize-twitter {
+        background-color:$white;
+        padding: 0.1rem .3rem;
+        border-radius: 2rem;
+        font-size: 1.7rem;
+        cursor:pointer;
+      }
+      &.treize-mail {
+        background-color:$white;
+        padding: 0.1rem .3rem;
+        border-radius: 2rem;
+        font-size: 1.7rem;
+        cursor:pointer;
+      }
+      i {
+        color:$black;
       }
     }
+    
   }
+}
 
-  &.home {
-    height: auto;
+/* MASONRY */
+.treize-masonry {
+  margin: 1.5rem 0;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+@media (min-width: 36.01rem) {
+  .treize-masonry {
+    -webkit-column-count: 2;
+            column-count: 2;
+  }
+}
+@media (min-width: 65.01rem) {
+  .treize-masonry {
+    -webkit-column-count: 3;
+            column-count: 3;
+  }
+}
+@media (min-width: 90.01rem) {
+/*  .treize-masonry {
+    -webkit-column-count: 4;
+            column-count: 4;
+  }*/
+}
+.treize-masonry > * {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 1.5rem;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
 
-    .layout-wrapper.image-full-content {
-      border: none;
-      padding: 0;
+.treize-masonry-wrapper {
+  max-width: 90rem;
+  margin: 3em auto;
+}
+
+.treize-masonry > * {
+  position: relative;
+  color: #333;
+  border-radius: 0.3rem;
+}
+.treize-masonry img {
+  transition: visibility 0s, opacity 0.5s linear;
+  opacity:0;
+  cursor:zoom-in;
+}
+.treize-masonry > :hover {
+  
+}
+.treize-masonry > p {
+  counter-reset: div;
+}
+.treize-masonry > * {
+  counter-increment: div;
+}
+.treize-masonry > * p:first-child::before {
+  display: inline;
+  content: counter(div) '/ ';
+}
+
+/* MODAL */
+.treize-modal-wrapper {
+  display:none;
+  //transition: visibility 0s, opacity 0.5s linear;
+  //opacity:0; 
+  position: fixed;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color:$white;
+  width: 100%;
+  height: 100%;
+  z-index: 1340;
+  margin:60px auto 0 auto;
+  text-align: center;
+
+  &:after{
+
+  }
+  
+  .treize-modal-content {
+    margin-top:8vh;
+    .treize-modal-position {
       text-align: center;
-
-      & > * {
-        margin: 0 auto;
-      }
+      font-size:2.1rem;
+      font-family: 'Poppins', sans-serif;
+      margin:1rem 0;
     }
-
-    .image-full-wrapper {
-      padding: 30px;
-
-      &:after {
-        background: black;
-        opacity: 0.25;
-
-        content: "";
-        display: block;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 0;
-
-        // Target IE 10 and 11
-        @media screen\0 {
-          height: 200%;
+    .treize-modal-prev {
+      width: 13rem;
+      cursor: pointer;
+      font-size: 7rem;
+      margin-top: 25vh;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .treize-modal-img {
+      display: inline-block;
+      min-width: 74vw;
+      img {
+        max-width: 74vw;
+        max-height:65vh;
+        cursor:zoom-out;
+        &.treize-modal-animation {
+          animation-name: modal;
+          animation-duration:.3s;
         }
       }
     }
-
-    .image-full-text {
-      padding-top: 10px;
-      padding-bottom: 10px;
+    .treize-modal-next {
+      width: 13rem;
+      font-size: 7rem;
+      cursor: pointer;
+      margin-top: 25vh;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .treize-modal-title {
+      color:$black;
+      clear:both;
+      text-align: center;
+      font-size:1.2rem;
+      font-family: 'Poppins', sans-serif;
+      margin-top:1.5rem;
+    }
+    .treize-modal-close {
+      position:absolute;
+      z-index:1350;
+      top:7vh;
+      right:6rem;
+      cursor:pointer;
+      font-size: 4rem;
     }
   }
 }
-
-.image-full-wrapper {
-  display: table-cell;
-  overflow: hidden;
-  position: relative;
-  vertical-align: bottom;
-}
-
-html.no-js,
-html.no-touchevents {
-  .image-full:not(.no-overlay):not(.home) {
-    .image-full-wrapper:after {
-      transition: transform 1s ease;
-      transform: translateX(-20%);
+@keyframes modal { 
+    0% { 
+        height:5vh;
+        opacity:0;
+        -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    } 
+    40% { 
+        height:20vh;
+        -webkit-transform: matrix(1, -0.4, 0, 1, 0, 0);
+        transform: matrix(1, -0.4, 0, 1, 0, 0);
+    } 
+    50% { 
+        height:30vh;
+        -webkit-transform: matrix(1, 0, 0.4, 1, 0, 0);
+        transform: matrix(1, 0, 0.4, 1, 0, 0);
+    }      
+    100% {
+      height:65vh;
+      opacity:1;
+       -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+       transform: matrix(1, 0, 0, 1, 0, 0);
     }
-
-    &:hover {
-      .image-full-wrapper:after {
-        transform: translateX(0);
-      }
+} 
+/* ARCHIVES LIST */
+.treize-archives {
+  .treize-list {
+    ul {
+      margin-top:2px;
     }
+    
   }
 }
 
-.image-full-content {
-  position: relative;
-  z-index: 1;
-  text-shadow: 1px 1px black;
-  padding-left: 35px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.image-full-title {
-  font-size: 1.3rem !important;
-  font-weight: 700;
-  margin-bottom: 5px;
-  max-width: 470px;
-}
-
-.image-full-text {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 2.8rem;
-  margin: 0 0 8px;
-  max-width: 470px;
-}
-
-.image-full-credit {
-  font-size:1.5rem;
-}
-
-.image-full-block {
-  float: left;
-}
-
-@include large-and-medium {
+@include small {
+  /* IMAGE FULL */ 
   .image-full {
-    min-height: 100vh;
-
-    &.home {
-      height: 350px;
-
+    text-decoration: none;
+    .image-full-wrapper {
+      img {
+         width:100vw;
+      }
       .image-full-text {
-        max-width: 740px;
-        padding: 15px 0;
+        display:block;
+        color:$black;
+        text-decoration: none;
+        margin-bottom:1.5rem;
+        font-family: 'Poppins', sans-serif;
       }
     }
   }
 
-  .image-full-title {
-    font-size: 1.8rem !important;
-    margin-bottom: 12px;
+  .treize-modal-wrapper {
+    .treize-modal-prev,
+    .treize-modal-next,
+    .treize-modal-close {
+      display:none;
+    }
   }
 
-  .image-full-text {
-    font-size: 4rem;
-    line-height: 4.4rem;
-    margin: 0 0 14px;
-  }
-
-  .image-full-block {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
 }

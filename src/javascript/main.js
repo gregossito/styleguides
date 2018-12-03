@@ -30,6 +30,7 @@ require('../components/video/script');
 require('../layouts/left-col/script');
 
 // load our modules
+require('../modules/agenda/script');
 require('../modules/anchors-list/script');
 require('../modules/block-content-jecoute/script');
 require('../modules/block-content-tweet/script');
@@ -37,8 +38,9 @@ require('../modules/block-content-newsletter/script');
 require('../modules/button-top/script');
 require('../modules/gallery-ugc/script');
 require('../modules/icon-switch/script');
+require('../modules/image-full/script');
 require('../modules/jumbotron-slider/script');
-require('../modules/news-list/script');
+// require('../modules/news-list/script');
 require('../modules/notice/script');
 require('../modules/person-block/script');
 require('../modules/poll/script');

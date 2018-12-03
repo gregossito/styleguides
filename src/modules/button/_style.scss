@@ -55,13 +55,14 @@
 
 %button-black {
   background-color: transparent;
-  padding: 15px;
+  padding:1rem 1.5rem;
   border-radius:0;
   letter-spacing:.5rem;
   text-transform:uppercase;
   font-size:1.1rem;
-  border:1.4px solid black;
+  border:0.2rem solid black;
   color:$black;
+  font-family: 'Poppins',sans-serif;
   &:after {
     background-color: darken(#333, 10%);
     border-radius:0;

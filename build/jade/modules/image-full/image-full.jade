@@ -1,14 +1,9 @@
 include ../button/button
 
 mixin image-full(data)
-  a.image-full(href=data.href onclick=data.onclick style="background-image: url(#{data.image});" id=data.id class=data.modifiers)
+  - var title = [data.title]
+  a.image-full(href=data.image class=data.modifiers)
     .image-full-wrapper
-      .layout-wrapper.image-full-content.layout-outside
-        - var tag = data.tag || 'h2'
-        #{tag}.image-full-title= data.title
-        .image-full-text= data.text
-        if data.credit
-          .image-full-credit= data.credit
-        if block
-          .image-full-block
-            block
+      img(src= data.image alt=data.alt title=title.join(" "))
+      .image-full-text= data.title
+       

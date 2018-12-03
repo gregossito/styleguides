@@ -1,0 +1,40 @@
+include ../news-card/news-card
+
+mixin agenda(data)
+  div.agenda-agenda
+    div.agenda-agenda-filters.component-form
+      label= "Filtrer par"
+      div.form-item.form-item-select
+        select
+          option(value="month") Mois 
+          option(value="arr") Arrondissement 
+    div.agenda-agenda-nav-month
+    div.agenda-agenda-arrondissement
+      span.agenda-agenda-arrondissement-change= "1er"
+      span.agenda-agenda-arrondissement-change= "2e"
+      span.agenda-agenda-arrondissement-change= "3e"
+      span.agenda-agenda-arrondissement-change= "4e"
+      span.agenda-agenda-arrondissement-change= "5e"
+      span.agenda-agenda-arrondissement-change= "6e"
+      span.agenda-agenda-arrondissement-change= "7e"
+      span.agenda-agenda-arrondissement-change= "8e"
+      span.agenda-agenda-arrondissement-change= "9e"
+      span.agenda-agenda-arrondissement-change= "10e"
+      span.agenda-agenda-arrondissement-change= "11e"
+      span.agenda-agenda-arrondissement-change= "12e"
+      span.agenda-agenda-arrondissement-change= "13e"
+      span.agenda-agenda-arrondissement-change= "14e"
+      span.agenda-agenda-arrondissement-change= "15e"
+      span.agenda-agenda-arrondissement-change= "16e"
+      span.agenda-agenda-arrondissement-change= "17e"
+      span.agenda-agenda-arrondissement-change= "18e"
+      span.agenda-agenda-arrondissement-change= "19e"
+      span.agenda-agenda-arrondissement-change= "20e"
+
+  ul.agenda-block.gallery(class=data.modifiers)
+    each item in data.items
+      li.agenda-card-item
+        +news-card(item)
+  ul.agenda-block.gallery(class=data.modifiers+" agenda-clone")
+  div.agenda-clear
+
