@@ -1,0 +1,41 @@
+include ../../modules/button/button
+//- TODO ceci est plutot une template qu'un component
+
+include ../opening-hours/opening-hours
+include ../rush-half-hours/rush-half-hours
+
+mixin pills(data)
+  - var activeIndex;
+  - var uuid = Math.random().toString(36).substr(2, 5)
+  .component.component-pills
+    h4.pills-heading= data.title
+    ul.pills-items-wrapper(role='tablist')
+      each item, index in data.components
+        - item = JSON.parse(JSON.stringify(item || {}));
+        - item.modifiers = item.modifiers || [];
+        - item.modifiers.push("secondary");
+        - item.attributes = item.attributes || {};
+        - item.attributes.type = 'button';
+        - if (typeof activeIndex === 'undefined') { activeIndex = index; item.modifiers.push("active"); }
+        - var slug = uuid + "-" + index;
+        - var attributes = {};
+        - attributes['id'] = 'h-' + slug;
+        - attributes['roles'] = 'tab';
+        - attributes['aria-controls'] = '#' + slug;
+        - attributes['aria-selected'] = (index === activeIndex) ? 'true' : 'false';
+        - attributes['class'] = 'pills-item';
+        li&attributes(attributes)
+          +button(item)
+
+    each item, index in data.components
+      - item = JSON.parse(JSON.stringify(item || {}));
+      - var slug = uuid + "-" + index;
+        - var attributes = {};
+        - attributes['id'] = slug;
+        - attributes['roles'] = 'tabpanel';
+        - attributes['aria-labelledby'] = 'h-' + slug;
+        - attributes['aria-hidden'] = (index === activeIndex) ? 'false' : 'true';
+        - attributes['class'] = { active: index === activeIndex };
+        .pills-panel&attributes(attributes)
+          +#{item.type}(item.data)
+

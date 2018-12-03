@@ -40,6 +40,7 @@ module.exports = {
       'pagination',
       'person-block',
       'postit',
+      'pills',
       'search-results-list',
       'sections-panel',
       'share'
