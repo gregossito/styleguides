@@ -4,25 +4,22 @@
     "description": "",
     "examples": [{
       "title": "Image au sein de 13 photos",
-      "description": "",
       "data": {
         "modifiers": [""],
         "href": "#",
         "image": "image.jpg",
-        "xlarge": "image.jpg",
         "title": "Titre",
         "text": "Texte"
       }
-    }, {
-      "title": "Image en plein écran avec flèches de navigation ",
-      "description": "",
+    },
+    {
+      "title": "Image au sein de 13 photos",
       "data": {
+        "modifiers": [""],
         "href": "#",
         "image": "image-home.jpg",
-        "xlarge": "image-home.jpg",
-        "modifiers": ["fullscreen"],
-        "title": "À la une",
-        "text": "10 raisons de surtout pas piétonniser les Berges Rive droite"
+        "title": "Titre",
+        "text": "Texte"
       }
     }]
   }

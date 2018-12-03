@@ -4500,6 +4500,19 @@ html.no-cssanimations .jumbotron-slider {
   .jumbotron-treize-title {
     font-size: 1.4rem !important; } }
 
+@media (max-width: 767px) {
+  .jumbotron-treize {
+    width: 100vw;
+    max-width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    min-height: 410px;
+    background: none !important; }
+    .jumbotron-treize .jumbotron-treize-wrapper {
+      background: none !important; }
+      .jumbotron-treize .jumbotron-treize-wrapper .jumbotron-treize-content h2.jumbotron-treize-text {
+        width: 100vw; } }
+
 .last-update {
   color: #999;
   font-size: 1.5rem;

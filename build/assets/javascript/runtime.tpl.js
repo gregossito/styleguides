@@ -1327,6 +1327,40 @@ templatizer["frame"]["frame"] = function tmpl_frame_frame(data) {
     return buf.join("");
 };
 
+// html.jade compiled template
+templatizer["html"] = function tmpl_html(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// html.jade:html compiled template
+templatizer["html"]["html"] = function tmpl_html_html(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "component", "component-html", data ? data.modifiers : [] ], [ null, null, true ]) + '><div class="html-wrapper">');
+    if (data.cookie === false) {
+        if (block) {
+            block && block(buf);
+        } else if (data.block) {
+            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+        }
+    } else {
+        if (data.placeholder) {
+            buf.push('<div class="html-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div>");
+        }
+        buf.push('<script type="text/html" class="html-embed">');
+        if (block) {
+            buf.push(null == (jade_interp = block) ? "" : jade_interp);
+        } else if (data.block) {
+            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+        }
+        buf.push("</script>");
+    }
+    buf.push("</div></div>");
+    return buf.join("");
+};
+
 // gallery.jade compiled template
 templatizer["gallery"] = function tmpl_gallery(locals) {
     var buf = [];
@@ -1377,40 +1411,6 @@ templatizer["gallery"]["gallery"] = function tmpl_gallery_gallery(data) {
             }
         }
     }).call(this);
-    buf.push("</div></div>");
-    return buf.join("");
-};
-
-// html.jade compiled template
-templatizer["html"] = function tmpl_html(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// html.jade:html compiled template
-templatizer["html"]["html"] = function tmpl_html_html(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "component", "component-html", data ? data.modifiers : [] ], [ null, null, true ]) + '><div class="html-wrapper">');
-    if (data.cookie === false) {
-        if (block) {
-            block && block(buf);
-        } else if (data.block) {
-            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-        }
-    } else {
-        if (data.placeholder) {
-            buf.push('<div class="html-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div>");
-        }
-        buf.push('<script type="text/html" class="html-embed">');
-        if (block) {
-            buf.push(null == (jade_interp = block) ? "" : jade_interp);
-        } else if (data.block) {
-            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-        }
-        buf.push("</script>");
-    }
     buf.push("</div></div>");
     return buf.join("");
 };
@@ -1611,25 +1611,6 @@ templatizer["links"]["links"] = function tmpl_links_links(data) {
     return buf.join("");
 };
 
-// map.jade compiled template
-templatizer["map"] = function tmpl_map(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// map.jade:map compiled template
-templatizer["map"]["map"] = function tmpl_map_map(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.attrs(jade.merge([ {
-        "class": (jade_interp = [ null, null, true ], jade.joinClasses([ "component", "component-map", data.modifiers ].map(jade.joinClasses).map(function(cls, i) {
-            return jade_interp[i] ? jade.escape(cls) : cls;
-        })))
-    }, data.attributes ]), false) + '><div class="component-map-map"></div></div>');
-    return buf.join("");
-};
-
 // news-push.jade compiled template
 templatizer["news-push"] = function tmpl_news_push(locals) {
     var buf = [];
@@ -1651,6 +1632,25 @@ templatizer["news-push"]["news-push"] = function tmpl_news_push_news_push(data) 
         buf.push("<a" + jade.attr("href", data.link.href, true, false) + ' class="news-push-link"><span>' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</span></a>");
     }
     buf.push("</div>");
+    return buf.join("");
+};
+
+// map.jade compiled template
+templatizer["map"] = function tmpl_map(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// map.jade:map compiled template
+templatizer["map"]["map"] = function tmpl_map_map(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.attrs(jade.merge([ {
+        "class": (jade_interp = [ null, null, true ], jade.joinClasses([ "component", "component-map", data.modifiers ].map(jade.joinClasses).map(function(cls, i) {
+            return jade_interp[i] ? jade.escape(cls) : cls;
+        })))
+    }, data.attributes ]), false) + '><div class="component-map-map"></div></div>');
     return buf.join("");
 };
 
@@ -1871,6 +1871,32 @@ templatizer["opening-hours"]["opening-hours"] = function tmpl_opening_hours_open
     return buf.join("");
 };
 
+// postit.jade compiled template
+templatizer["postit"] = function tmpl_postit(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// postit.jade:postit compiled template
+templatizer["postit"]["postit"] = function tmpl_postit_postit(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "component", "component-postit", data ? data.modifiers : [] ], [ null, null, true ]) + ">");
+    if (data.title) {
+        buf.push('<h2 id="postit" class="anchor">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
+    }
+    if (block) {
+        block && block(buf);
+    } else if (data.block) {
+        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+    } else {
+        buf.push("<p>postit</p>");
+    }
+    buf.push("</div>");
+    return buf.join("");
+};
+
 // place.jade compiled template
 templatizer["place"] = function tmpl_place(locals) {
     var buf = [];
@@ -1963,32 +1989,6 @@ templatizer["place"]["place"] = function tmpl_place_place(data) {
         var button = JSON.parse(JSON.stringify(data.button));
         button.modifiers = [ "marker" ];
         buf.push(templatizer["place"]["button"](button));
-    }
-    buf.push("</div>");
-    return buf.join("");
-};
-
-// postit.jade compiled template
-templatizer["postit"] = function tmpl_postit(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// postit.jade:postit compiled template
-templatizer["postit"]["postit"] = function tmpl_postit_postit(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "component", "component-postit", data ? data.modifiers : [] ], [ null, null, true ]) + ">");
-    if (data.title) {
-        buf.push('<h2 id="postit" class="anchor">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
-    }
-    if (block) {
-        block && block(buf);
-    } else if (data.block) {
-        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-    } else {
-        buf.push("<p>postit</p>");
     }
     buf.push("</div>");
     return buf.join("");
@@ -3230,72 +3230,6 @@ templatizer["block-content-newsletter"]["block-content-newsletter"] = function t
     return buf.join("");
 };
 
-// block-content-social.jade compiled template
-templatizer["block-content-social"] = function tmpl_block_content_social(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    var locals_for_with = locals || {};
-    (function(JSON) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined);
-    return buf.join("");
-};
-
-// block-content-social.jade:block-content compiled template
-templatizer["block-content-social"]["block-content"] = function tmpl_block_content_social_block_content(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    var attributes = data.attributes || {};
-    buf.push("<div" + jade.attrs(jade.merge([ {
-        "class": (jade_interp = [ null, true ], jade.joinClasses([ "block-content", data.modifiers ].map(jade.joinClasses).map(function(cls, i) {
-            return jade_interp[i] ? jade.escape(cls) : cls;
-        })))
-    }, attributes ]), false) + '><h3 class="block-content-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + '</h3><div class="block-content-content">');
-    if (data.block) {
-        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-    }
-    if (block) {
-        block && block(buf);
-    }
-    buf.push("</div></div>");
-    return buf.join("");
-};
-
-
-// block-content-social.jade:block-content-social compiled template
-templatizer["block-content-social"]["block-content-social"] = function tmpl_block_content_social_block_content_social(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    var modifiers = JSON.parse(JSON.stringify(data.modifiers || []));
-    modifiers.push("block-content-social");
-    buf.push(templatizer["block-content-social"]["block-content"].call({
-        block: function(buf) {
-            buf.push('<ul class="block-content-items">');
-            (function() {
-                var $$obj = data.items;
-                if ("number" == typeof $$obj.length) {
-                    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                        var item = $$obj[$index];
-                        buf.push('<li class="block-content-item"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("onclick", item.link.onclick, true, false) + jade.attr("target", item.link.target, true, false) + '><div class="block-content-count"><i aria-hidden="true"' + jade.cls([ "block-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + "></i>" + jade.escape(null == (jade_interp = item.count) ? "" : jade_interp) + '<span class="block-content-unit">' + jade.escape(null == (jade_interp = " " + item.unit) ? "" : jade_interp) + '</span></div><div class="block-content-link">' + jade.escape(null == (jade_interp = item.link.text) ? "" : jade_interp) + "</div></a></li>");
-                    }
-                } else {
-                    var $$l = 0;
-                    for (var $index in $$obj) {
-                        $$l++;
-                        var item = $$obj[$index];
-                        buf.push('<li class="block-content-item"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("onclick", item.link.onclick, true, false) + jade.attr("target", item.link.target, true, false) + '><div class="block-content-count"><i aria-hidden="true"' + jade.cls([ "block-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + "></i>" + jade.escape(null == (jade_interp = item.count) ? "" : jade_interp) + '<span class="block-content-unit">' + jade.escape(null == (jade_interp = " " + item.unit) ? "" : jade_interp) + '</span></div><div class="block-content-link">' + jade.escape(null == (jade_interp = item.link.text) ? "" : jade_interp) + "</div></a></li>");
-                    }
-                }
-            }).call(this);
-            buf.push("</ul>");
-            if (data.link) {
-                buf.push("<a" + jade.attr("href", data.link.href, true, false) + jade.attr("onclick", data.link.onclick, true, false) + ' class="block-content-link">' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a>");
-            }
-        }
-    }, {
-        title: data.title,
-        modifiers: modifiers
-    }));
-    return buf.join("");
-};
-
 // block-content-tweet.jade compiled template
 templatizer["block-content-tweet"] = function tmpl_block_content_tweet(locals) {
     var buf = [];
@@ -3408,6 +3342,26 @@ templatizer["block-content"]["block-content"] = function tmpl_block_content_bloc
         block && block(buf);
     }
     buf.push("</div></div>");
+    return buf.join("");
+};
+
+// block-map.jade compiled template
+templatizer["block-map"] = function tmpl_block_map(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    var locals_for_with = locals || {};
+    (function(JSON) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined);
+    return buf.join("");
+};
+
+// block-map.jade:block-map compiled template
+templatizer["block-map"]["block-map"] = function tmpl_block_map_block_map(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    data = JSON.parse(JSON.stringify(data));
+    data.modifiers = data.modifiers || [];
+    data.modifiers.push("block-map");
+    buf.push('<div id="map"></div><div class="map-caption"><div class="map-caption-icon is-open"></div>' + jade.escape(null == (jade_interp = "Équipement ouvert") ? "" : jade_interp) + '<div class="map-caption-icon is-closed"></div>' + jade.escape(null == (jade_interp = "Équipement fermé") ? "" : jade_interp) + '<div class="map-caption-icon is-unknown"></div>' + jade.escape(null == (jade_interp = "Horaires non renseignés") ? "" : jade_interp) + "</div>");
     return buf.join("");
 };
 
@@ -3526,26 +3480,6 @@ templatizer["block-search-field"]["block-search-field"] = function tmpl_block_se
             buf.push(templatizer["block-search-field"]["search-field"](data.search_field));
         }
     }, data));
-    return buf.join("");
-};
-
-// block-map.jade compiled template
-templatizer["block-map"] = function tmpl_block_map(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    var locals_for_with = locals || {};
-    (function(JSON) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined);
-    return buf.join("");
-};
-
-// block-map.jade:block-map compiled template
-templatizer["block-map"]["block-map"] = function tmpl_block_map_block_map(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    data = JSON.parse(JSON.stringify(data));
-    data.modifiers = data.modifiers || [];
-    data.modifiers.push("block-map");
-    buf.push('<div id="map"></div><div class="map-caption"><div class="map-caption-icon is-open"></div>' + jade.escape(null == (jade_interp = "Équipement ouvert") ? "" : jade_interp) + '<div class="map-caption-icon is-closed"></div>' + jade.escape(null == (jade_interp = "Équipement fermé") ? "" : jade_interp) + '<div class="map-caption-icon is-unknown"></div>' + jade.escape(null == (jade_interp = "Horaires non renseignés") ? "" : jade_interp) + "</div>");
     return buf.join("");
 };
 
@@ -4066,6 +4000,72 @@ templatizer["footer"]["footer"] = function tmpl_footer_footer(data) {
     return buf.join("");
 };
 
+// block-content-social.jade compiled template
+templatizer["block-content-social"] = function tmpl_block_content_social(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    var locals_for_with = locals || {};
+    (function(JSON) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined);
+    return buf.join("");
+};
+
+// block-content-social.jade:block-content compiled template
+templatizer["block-content-social"]["block-content"] = function tmpl_block_content_social_block_content(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    var attributes = data.attributes || {};
+    buf.push("<div" + jade.attrs(jade.merge([ {
+        "class": (jade_interp = [ null, true ], jade.joinClasses([ "block-content", data.modifiers ].map(jade.joinClasses).map(function(cls, i) {
+            return jade_interp[i] ? jade.escape(cls) : cls;
+        })))
+    }, attributes ]), false) + '><h3 class="block-content-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + '</h3><div class="block-content-content">');
+    if (data.block) {
+        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+    }
+    if (block) {
+        block && block(buf);
+    }
+    buf.push("</div></div>");
+    return buf.join("");
+};
+
+
+// block-content-social.jade:block-content-social compiled template
+templatizer["block-content-social"]["block-content-social"] = function tmpl_block_content_social_block_content_social(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    var modifiers = JSON.parse(JSON.stringify(data.modifiers || []));
+    modifiers.push("block-content-social");
+    buf.push(templatizer["block-content-social"]["block-content"].call({
+        block: function(buf) {
+            buf.push('<ul class="block-content-items">');
+            (function() {
+                var $$obj = data.items;
+                if ("number" == typeof $$obj.length) {
+                    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                        var item = $$obj[$index];
+                        buf.push('<li class="block-content-item"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("onclick", item.link.onclick, true, false) + jade.attr("target", item.link.target, true, false) + '><div class="block-content-count"><i aria-hidden="true"' + jade.cls([ "block-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + "></i>" + jade.escape(null == (jade_interp = item.count) ? "" : jade_interp) + '<span class="block-content-unit">' + jade.escape(null == (jade_interp = " " + item.unit) ? "" : jade_interp) + '</span></div><div class="block-content-link">' + jade.escape(null == (jade_interp = item.link.text) ? "" : jade_interp) + "</div></a></li>");
+                    }
+                } else {
+                    var $$l = 0;
+                    for (var $index in $$obj) {
+                        $$l++;
+                        var item = $$obj[$index];
+                        buf.push('<li class="block-content-item"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("onclick", item.link.onclick, true, false) + jade.attr("target", item.link.target, true, false) + '><div class="block-content-count"><i aria-hidden="true"' + jade.cls([ "block-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + "></i>" + jade.escape(null == (jade_interp = item.count) ? "" : jade_interp) + '<span class="block-content-unit">' + jade.escape(null == (jade_interp = " " + item.unit) ? "" : jade_interp) + '</span></div><div class="block-content-link">' + jade.escape(null == (jade_interp = item.link.text) ? "" : jade_interp) + "</div></a></li>");
+                    }
+                }
+            }).call(this);
+            buf.push("</ul>");
+            if (data.link) {
+                buf.push("<a" + jade.attr("href", data.link.href, true, false) + jade.attr("onclick", data.link.onclick, true, false) + ' class="block-content-link">' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a>");
+            }
+        }
+    }, {
+        title: data.title,
+        modifiers: modifiers
+    }));
+    return buf.join("");
+};
+
 // gallery-ugc.jade compiled template
 templatizer["gallery-ugc"] = function tmpl_gallery_ugc(locals) {
     var buf = [];
@@ -4468,57 +4468,8 @@ templatizer["image-full"] = function tmpl_image_full(locals) {
     var buf = [];
     var jade_mixins = {};
     var jade_interp;
-    var locals_for_with = locals || {};
-    (function(JSON) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined);
     return buf.join("");
 };
-
-// image-full.jade:button compiled template
-templatizer["image-full"]["button"] = function tmpl_image_full_button(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    var data = JSON.parse(JSON.stringify(data || {}));
-    var attributes = data.attributes || {};
-    var modifiers = data.modifiers || [];
-    if (data.icon) {
-        modifiers.push("icon");
-    }
-    if (data.href) {
-        if (attributes.disabled) {
-            delete attributes.disabled;
-            modifiers.push("disabled");
-        }
-        buf.push("<a" + jade.attrs(jade.merge([ {
-            href: jade.escape(data.href),
-            onclick: jade.escape(data.onclick),
-            title: jade.escape(data.title),
-            target: jade.escape(data.target),
-            "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
-                return jade_interp[i] ? jade.escape(cls) : cls;
-            })))
-        }, attributes ]), false) + ">");
-        if (modifiers && modifiers.indexOf("marker") !== -1) {
-            buf.push('<i aria-hidden="true" class="icon icon-marker"></i>');
-        } else if (data.icon) {
-            buf.push('<i aria-hidden="true"' + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
-        }
-        buf.push('<span class="button-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</span></a>");
-    } else {
-        buf.push("<button" + jade.attrs(jade.merge([ {
-            title: jade.escape(data.title),
-            "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
-                return jade_interp[i] ? jade.escape(cls) : cls;
-            })))
-        }, attributes ]), false) + ">");
-        if (modifiers && modifiers.indexOf("marker") !== -1) {
-            buf.push('<i aria-hidden="true" class="icon icon-marker"></i>');
-        } else if (data.icon) {
-            buf.push('<i aria-hidden="true"' + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
-        }
-        buf.push('<span class="button-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</span></button>");
-    }
-    return buf.join("");
-};
-
 
 // image-full.jade:image-full compiled template
 templatizer["image-full"]["image-full"] = function tmpl_image_full_image_full(data) {
@@ -4564,29 +4515,6 @@ templatizer["intro-text"] = function tmpl_intro_text(locals) {
 templatizer["intro-text"]["intro-text"] = function tmpl_intro_text_intro_text(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
     buf.push('<p class="intro-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</p>");
-    return buf.join("");
-};
-
-// jumbotron-slider.jade compiled template
-templatizer["jumbotron-slider"] = function tmpl_jumbotron_slider(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// jumbotron-slider.jade:jumbotron-slider compiled template
-templatizer["jumbotron-slider"]["jumbotron-slider"] = function tmpl_jumbotron_slider_jumbotron_slider(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    var tag = data.href ? "a" : "div";
-    buf.push("<" + tag + jade.attr("href", data.href, true, false) + jade.attr("style", "color:" + data.colorlink + ";", true, false) + jade.cls([ "jumbotron-slider", data.modifiers ], [ null, true ]) + "><div" + jade.attr("style", "background-color:" + data.bgimage + ";background-image: url(" + data.image + ");", true, false) + ' class="jumbotron-slider-content"></div><div' + jade.attr("style", "background-color:" + data.bgnotice + ";", true, false) + ' class="jumbotron-slider-notice"><p class="jumbotron-slider-notice-content"><span class="jumbotron-slider-notice-content-wrapper"><span class="jumbotron-slider-notice-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</span>");
-    if (data.text) {
-        buf.push((null == (jade_interp = "&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;") ? "" : jade_interp) + '<span class="jumbotron-slider-notice-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</span>");
-    }
-    if (data.href) {
-        buf.push('<i class="icon-arrow-small-right"></i>');
-    }
-    buf.push("</span></p></div></" + tag + ">");
     return buf.join("");
 };
 
@@ -8165,6 +8093,29 @@ templatizer["video-home"]["video-home"] = function tmpl_video_home_video_home(da
         }
     }).call(this);
     buf.push("</ul>");
+    return buf.join("");
+};
+
+// jumbotron-slider.jade compiled template
+templatizer["jumbotron-slider"] = function tmpl_jumbotron_slider(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// jumbotron-slider.jade:jumbotron-slider compiled template
+templatizer["jumbotron-slider"]["jumbotron-slider"] = function tmpl_jumbotron_slider_jumbotron_slider(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    var tag = data.href ? "a" : "div";
+    buf.push("<" + tag + jade.attr("href", data.href, true, false) + jade.attr("style", "color:" + data.colorlink + ";", true, false) + jade.cls([ "jumbotron-slider", data.modifiers ], [ null, true ]) + "><div" + jade.attr("style", "background-color:" + data.bgimage + ";background-image: url(" + data.image + ");", true, false) + ' class="jumbotron-slider-content"></div><div' + jade.attr("style", "background-color:" + data.bgnotice + ";", true, false) + ' class="jumbotron-slider-notice"><p class="jumbotron-slider-notice-content"><span class="jumbotron-slider-notice-content-wrapper"><span class="jumbotron-slider-notice-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</span>");
+    if (data.text) {
+        buf.push((null == (jade_interp = "&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;") ? "" : jade_interp) + '<span class="jumbotron-slider-notice-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</span>");
+    }
+    if (data.href) {
+        buf.push('<i class="icon-arrow-small-right"></i>');
+    }
+    buf.push("</span></p></div></" + tag + ">");
     return buf.join("");
 };
 

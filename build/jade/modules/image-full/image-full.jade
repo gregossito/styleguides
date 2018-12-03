@@ -1,9 +1,6 @@
-include ../button/button
-
 mixin image-full(data)
   - var title = [data.title]
   a.image-full(href=data.image class=data.modifiers)
     .image-full-wrapper
       img(src= data.image alt=data.alt title=title.join(" "))
       .image-full-text= data.title
-       
