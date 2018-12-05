@@ -20,7 +20,6 @@
             "Dimanche"
           ],
           "items": [
-            {"from": "8h", "to": "8h30", "traffic": [1, 1, 0, 1, 0, 1, 0]},
             {"from": "8h30", "to": "9h", "traffic": [1, 1, 0, 1, 0, 1, 0]},
             {"from": "9h", "to": "9h30", "traffic": [2, 2, 0, 2, 0, 2, 0]},
             {"from": "9h30", "to": "10h", "traffic": [2, 2, 0, 2, 0, 2, 0]},
@@ -50,11 +49,7 @@
             {"from": "21h30", "to": "22h", "traffic": [0, 0, 3, 0, 3, 0, 3]},
             {"from": "22h", "to": "22h30", "traffic": [0, 0, 3, 0, 3, 0, 3]}
           ],
-          "text": "Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a>",
-          "button": {
-            "text": "Affluence",
-            "title": ""
-          }
+          "text": "Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a>"
         }
       }
     ]
