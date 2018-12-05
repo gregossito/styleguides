@@ -11,7 +11,7 @@ Let's take the `x.β.α` version number:
 
 ## 1.15.0 (coming soon)
 
-* modules `footer` : update for v2
+* updates for v2 in modules : `footer`, `news-card`, `rheader`, `sections-panel`
 
 ## 1.14.1 (2018-12-05)
 
