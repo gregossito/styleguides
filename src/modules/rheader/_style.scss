@@ -58,25 +58,15 @@
   z-index: 10;
 }
 
-.rheader-logo-nef {
-  background: url('../modules/rheader/nef.svg') center center no-repeat;
-  background-size: contain;
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  width: 25px;
-}
-
 .rheader-logo-paris {
-  background: url('../modules/rheader/paris.svg') center center no-repeat;
+  background: url('../modules/rheader/logo-paris.svg') center center no-repeat;
   background-size: contain;
   display: block;
   height: 100%;
   position: absolute;
   right: 0;
   text-indent: -9999px;
-  width: 106px;
+  width: 131px;
 }
 
 .rheader-locales {
@@ -420,7 +410,6 @@ body.rheader-mobile-nav-open {
   .rheader-logo {
     width: 238px;
   }
-  .rheader-logo-nef {width: 40px;}
   .rheader-logo-paris {width: 170px;}
 
   .rheader-wrapper {
@@ -517,7 +506,7 @@ body.rheader-mobile-nav-open {
       }
       &:hover,
       &.current {
-        background-color:green;
+        background-color:$green-v2;
         a {
           color:$light;
         }
@@ -526,7 +515,7 @@ body.rheader-mobile-nav-open {
     &:nth-child(2) {
       &:hover,
       &.current {
-        background-color:blue;
+        background-color:$yellow-v2;
         a {
           color:$light;
         }
@@ -535,7 +524,7 @@ body.rheader-mobile-nav-open {
     &:nth-child(3) {
       &:hover,
       &.current {
-        background-color:yellow;
+        background-color:$red-v2;
         a {
           color:$light;
         }
@@ -544,7 +533,7 @@ body.rheader-mobile-nav-open {
     &:nth-child(4) {
       &:hover,
       &.current {
-        background-color:red;
+        background-color:$teal-v2;
         a {
           color:$light;
         }
@@ -553,7 +542,7 @@ body.rheader-mobile-nav-open {
     &.get-involved {
       &:hover,
       &.current {
-        background-color:brown;
+        background-color:$orange-v2;
         a {
           color:$light;
         }
@@ -580,13 +569,9 @@ body.rheader-mobile-nav-open {
     position: absolute;
     width: 185px;
   }
-  .rheader-logo-nef {
-    background-position: 50% 60%;
-    width: 33px;
-  }
   .rheader-logo-paris {
     background-position: 50% 60%;
-    width: 140px;
+    width: 180px;
   }
 
   .rheader-locales {
