@@ -76,9 +76,16 @@ $home-cat-yellow  : #F8C243;
 // v2
 $dark      : #002542;
 $light     : $white;
-$yellow-v2 : #ffCD00;
 $blue-v2   : #354BCF;
-$red-v2    : #FB004A;
 $green-v2  : #3EFA93;
 $orange-v2 : #FF2C00;
+$red-v2    : #FB004A;
 $teal-v2   : #25DCCC;
+$yellow-v2 : #ffCD00;
+
+.color-v2-blue-background   {background-color: $blue-v2;}
+.color-v2-green-background  {background-color: $green-v2;}
+.color-v2-orange-background {background-color: $orange-v2;}
+.color-v2-red-background    {background-color: $red-v2;}
+.color-v2-teal-background   {background-color: $teal-v2;}
+.color-v2-yellow-background {background-color: $yellow-v2;}
