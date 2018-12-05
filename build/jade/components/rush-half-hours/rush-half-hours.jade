@@ -33,7 +33,7 @@ mixin rush-half-hours-table(data, beginning, end)
           td(class="traffic-#{item.traffic[index]}")
             div.rush-hour-bar
             div.rush-hour-label
-              if i % 2 == 0
+              if item.from.slice(item.from.indexOf("h") + 1 ) != 30
                 if item.from.slice(0,1) != 1 && item.from.slice(0,1) != 2
                   = item.from.slice(0,2)
                 if item.from.slice(0,1) == 1 || item.from.slice(0,1) == 2

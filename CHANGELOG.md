@@ -9,16 +9,20 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.14.1 (2018-12-05)
+
+* modules `rush-half-hours` : Fix bug when days starts at half hour
+
 ## 1.14.0 (2018-12-03)
 
 * modules `image-full` : Masonry + modal for 13 photos
 * modules `button` : Add button black modifier for 13 photos
-* modules `jumbotron-treize` : Album Cover + First image 13 photos 
+* modules `jumbotron-treize` : Album Cover + First image 13 photos
 * modules `treize-card` : Card for 13 photos
 * modules `treize-list` : News-list for 13 photos
 * modules `news-list` : Remove agenda mode
 * modules `agenda` : Mode agenda for Grand-Format Plan Climat
-* templates `subhome-treize` : List 13 photos albums with treize-list and jumbotron-treize modules 
+* templates `subhome-treize` : List 13 photos albums with treize-list and jumbotron-treize modules
 * templates `single-treize` : Page with image-full modules (work on Front, to do data.json)
 
 ## 1.13.8 (2018-11-16)
@@ -44,7 +48,7 @@ Let's take the `x.β.α` version number:
 
 ## 1.13.3 (2018-11-05)
 
-* components `rush-half-hours` : fix hours 
+* components `rush-half-hours` : fix hours
 * module `image-full` : add module image-full for 13 photos template
 
 ## 1.13.2 (2018-10-29)
@@ -73,7 +77,7 @@ Let's take the `x.β.α` version number:
 
 ## 1.12.8 (2018-10-08)
 
-* template `list-equipments`: remove algolia places addresses 
+* template `list-equipments`: remove algolia places addresses
 
 ## 1.12.7 (2018-09-26)
 
@@ -143,23 +147,23 @@ Let's take the `x.β.α` version number:
 
 ## 1.11.8 (2018-05-28)
 
-* template `list-equipments`: fix `script.js` remove background-image card 
+* template `list-equipments`: fix `script.js` remove background-image card
 
 ## 1.11.7 (2018-05-25)
 
-* module `rheader`: add equipements link to rheader 
+* module `rheader`: add equipements link to rheader
 
 ## 1.11.6 (2018-05-23)
 
-* component `map`: fix z-index  
+* component `map`: fix z-index
 
 ## 1.11.5 (2018-05-23)
 
-* template `list-equipments`: fix `script.js` 
+* template `list-equipments`: fix `script.js`
 
 ## 1.11.4 (2018-05-18)
 
-* template `list-equipments`: fix `script.js` piscines ouvertes toggle 
+* template `list-equipments`: fix `script.js` piscines ouvertes toggle
 
 ## 1.11.3 (2018-05-17)
 
