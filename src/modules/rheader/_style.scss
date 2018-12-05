@@ -371,12 +371,23 @@ body.rheader-mobile-nav-open {
         border-top: 0;
         text-align: center;
 
-        a {line-height: 8rem;color:$dark;}
+        a {
+          line-height: 8rem;
+          color:$dark;
+        }
+        &:hover {
+          a {
+            color:$light;
+          }
+        }
       }
 
       &.around {
         background-color: $green1;
         &:hover {background-color: darken($green1, 8);}
+      }
+      &.get-involved {
+        &:hover {background-color: $dark; }
       }
     }
 
