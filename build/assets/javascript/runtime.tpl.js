@@ -4148,112 +4148,6 @@ templatizer["gallery-ugc"]["gallery-ugc"] = function tmpl_gallery_ugc_gallery_ug
     return buf.join("");
 };
 
-// get-involved.jade compiled template
-templatizer["get-involved"] = function tmpl_get_involved(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// get-involved.jade:heading compiled template
-templatizer["get-involved"]["heading"] = function tmpl_get_involved_heading(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "heading", data.modifiers ], [ null, true ]) + ">");
-    if (data.anchor && data.activeAnchor) {
-        buf.push("<h2" + jade.attr("id", data.anchor, true, false) + ' class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
-    } else {
-        buf.push('<h2 class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
-        if (data.link) {
-            buf.push('<div class="heading-links">');
-            if (data.link.external) {
-                buf.push('<span class="icon-dailymotion"> </span>');
-            }
-            buf.push("<a" + jade.attr("href", data.link.href, true, false) + jade.attr("onclick", data.link.onclick, true, false) + ">" + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></div>");
-        }
-    }
-    buf.push("</div>");
-    return buf.join("");
-};
-
-
-// get-involved.jade:get-involved compiled template
-templatizer["get-involved"]["get-involved"] = function tmpl_get_involved_get_involved(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<div class="get-involved"><div class="layout-wrapper">');
-    buf.push(templatizer["get-involved"]["heading"](data.heading));
-    buf.push('<ul class="get-involved-items">');
-    (function() {
-        var $$obj = data.items;
-        if ("number" == typeof $$obj.length) {
-            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                var item = $$obj[$index];
-                buf.push('<li class="get-involved-item"><a' + jade.attr("href", item.href, true, false) + jade.attr("onclick", item.onclick, true, false) + jade.attr("style", "background-image: url(" + item.image.src + ");", true, false) + jade.cls([ "get-involved-card", item.modifiers ], [ null, true ]) + '><div class="get-involved-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></a></li>");
-            }
-        } else {
-            var $$l = 0;
-            for (var $index in $$obj) {
-                $$l++;
-                var item = $$obj[$index];
-                buf.push('<li class="get-involved-item"><a' + jade.attr("href", item.href, true, false) + jade.attr("onclick", item.onclick, true, false) + jade.attr("style", "background-image: url(" + item.image.src + ");", true, false) + jade.cls([ "get-involved-card", item.modifiers ], [ null, true ]) + '><div class="get-involved-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></a></li>");
-            }
-        }
-    }).call(this);
-    buf.push("</ul></div></div>");
-    return buf.join("");
-};
-
-// heading-qfap.jade compiled template
-templatizer["heading-qfap"] = function tmpl_heading_qfap(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// heading-qfap.jade:heading-qfap compiled template
-templatizer["heading-qfap"]["heading-qfap"] = function tmpl_heading_qfap_heading_qfap(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<div class="heading-qfap">');
-    if (data.logo) {
-        buf.push("<a" + jade.attr("href", data.logo.href, true, false) + ' target="_blank" class="heading-qfap-logo"><svg class="heading-qfap-logo-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 282.9 159.9" enable-background="new 0 0 282.9 159.9" xml:space="preserve">\n  <g class="heading-qfap-logo-quefaire" fill="#FFFFFF">\n    <path class="heading-qfap-logo-q" d="M54.2,79.4L46.5,69c2.8-3.2,5-7,6.1-11.5c3.5-14.3-5.2-28.8-19.5-32.3c-2.3-0.5-4.5-0.8-6.7-0.7 C14.5,24.6,3.8,32.7,0.8,44.7C-2.8,59,6,73.5,20.3,77c2.2,0.6,4.5,0.8,6.7,0.8c4,0,7.8-1,11.2-2.6l7.7,10.3c1.7,2.3,5,2.8,7.3,1.1 S56,81.6,54.2,79.4z M26.9,70.4c-1.6,0-3.2-0.2-4.8-0.6c-10.3-2.5-16.5-12.9-14-23.2c2.1-8.5,9.6-14.5,18.4-14.6 c1.6,0,3.2,0.2,4.8,0.6c10.3,2.5,16.5,12.9,14,23.2C43.2,64.3,35.6,70.3,26.9,70.4z"/>\n    <path d="M62.1,25.3l4.1,24.1c0.5,2.8,0.9,7.1,4.9,6.4c3.6-0.6,3.1-3.3,2.7-6.1l-4.4-25.6l7.3-1.3l4.6,27.1 c0.7,3.9,1.4,10.7-9.2,12.5c-6.9,1.2-11.5-1.3-12.7-8.3l-4.7-27.6L62.1,25.3z"/>\n    <path d="M96.6,19.5l1.2,6.9l-7.4,1.3l1.4,8.1l6.6-1.1l1.2,6.9l-6.6,1.1l1.4,8.4l7.5-1.3l1.2,6.9l-14.9,2.5L81.8,22 L96.6,19.5z"/>\n    <path d="M128,14.1l1.2,6.9l-7.5,1.3l1.4,7.9l6.8-1.2l1.2,6.9l-6.8,1.2l2.6,15.4l-7.3,1.3l-6.4-37.2L128,14.1z"/>\n    <path d="M144.9,11.2l15.3,35.6l-7.8,1.3l-2.5-6l-7.4,1.3l-0.3,6.5l-7.3,1.2l2.3-38.6L144.9,11.2z M144.3,26.9 l-1.8-5.5l-0.1,0l0.2,5.8l0.1,10.2l5.2-0.9L144.3,26.9z"/>\n    <path d="M164.2,7.9l6.4,37.2l-7.3,1.3l-6.4-37.2L164.2,7.9z"/>\n    <path d="M175.7,44.2L169.4,7l7.4-1.3c4.7-0.8,13.1-1.7,14.9,8.4c0.7,4.1-0.3,7.9-3.6,10.5l9.3,15.8l-7.7,1.3 l-9.4-16l-0.1,0l2.9,17.2L175.7,44.2z M179.5,21.7l1.3-0.2c3.4-0.6,4.3-3.1,3.8-6.1c-0.5-2.7-2.1-4.6-5.8-3.8l-1,0.2L179.5,21.7z"/>\n    <path d="M210.3,0l1.2,6.9L204,8.2l1.4,8.1l6.6-1.1l1.2,6.9l-6.6,1.1l1.4,8.4l7.5-1.3l1.2,6.9l-14.9,2.5l-6.4-37.2 L210.3,0z"/>\n  </g>\n\n  <g class="heading-qfap-logo-label">\n    <polygon fill="#FFFFFF" points="256.6,76.1 282.9,72.3 266.9,45.7 275.8,14.9 230,21.4 251.2,43.6 66.6,75.4 70.4,98.1 43.6,102.7 60.2,128.9 52.3,159.9 97.8,152.1 76.1,132.5 260.7,100.7 "/>\n    <g fill="#FFFFFF" fill-opacity="0.3">\n      <polygon points="94,129.4 97.8,152.1 76.1,132.5 "/>\n      <polygon points="251.2,43.6 230,21.4 234.2,46.6 "/>\n    </g>\n  </g>\n\n  <g class="heading-qfap-logo-aparis" fill="#F94F4F">\n    <path d="M95.3,107.4l-1.3,5.3l-3.9,0.7l6-23.7l3.8-0.7l13.4,20.4l-4,0.7l-3-4.6L95.3,107.4z M91.9,84.7l3.5-2.2 l4.1,4.1l-3.2,0.5L91.9,84.7z M98.6,93.3l-2.5,10.5l8.3-1.4L98.6,93.3z"/>\n    <path d="M129.5,83.9c5.6-0.9,9.2,1.3,10,6c0.9,5-1.8,8.4-7.4,9.4l-5.1,0.9l1.1,6.7l-3.7,0.6l-3.8-22.1L129.5,83.9z M126.4,96.9l4.9-0.8c3.4-0.6,5.1-2.4,4.6-5.4c-0.5-2.9-2.7-4-6.1-3.4l-4.9,0.8L126.4,96.9z"/>\n    <path d="M146.5,98.6l-1.3,5.3l-3.9,0.7l6-23.7l3.8-0.7l13.4,20.4l-4,0.7l-3-4.6L146.5,98.6z M149.9,84.6l-2.5,10.5 l8.3-1.4L149.9,84.6z"/>\n    <path d="M176.4,91.8c-0.3,0.1-0.7,0.1-1,0.2l-5.2,0.9l1.1,6.7l-3.7,0.6l-3.8-22.1l9-1.5c5.6-1,9.4,1.2,10.2,6 c0.6,3.5-0.6,6.3-3.3,7.9l6.2,6.5l-4.2,0.7L176.4,91.8z M174.8,88.6c3.4-0.6,5.1-2.4,4.6-5.4c-0.5-2.9-2.7-4-6.1-3.4l-5.2,0.9 l1.5,8.7L174.8,88.6z"/>\n    <path d="M190.4,96.3l-3.8-22.1l3.7-0.6l3.8,22.1L190.4,96.3z"/>\n    <path d="M211.5,72.1l-1,3.5c-2.6-1-5.1-1.2-6.8-0.9c-2.2,0.4-3.5,1.4-3.2,2.9c0.8,4.8,12.3,0.2,13.6,8.2 c0.7,3.9-2.4,7-7.2,7.8c-3.5,0.6-7-0.3-9.6-2l1.1-3.5c2.6,1.7,5.7,2.3,8,1.9c2.6-0.4,4-1.7,3.7-3.4c-0.8-4.9-12.3-0.1-13.6-8 c-0.6-3.8,2.2-6.7,7-7.5C206.2,70.7,209.2,71.1,211.5,72.1z"/>\n    <path d="M222.2,74.7c-0.6-4,1.5-6.7,5.5-7.4c3.8-0.6,6.6,0.8,7.2,4.2c0.9,5-4.1,6.1-3.4,10.3l-2.8,0.5 c-0.9-5.1,3.5-5.9,2.9-9.7c-0.3-1.8-1.8-2.5-3.7-2.2c-2,0.4-3.1,1.6-2.8,3.8L222.2,74.7z M233,87.1c0.2,1.2-0.5,2.3-1.6,2.5 c-1.1,0.2-2.1-0.5-2.3-1.8c-0.2-1.2,0.5-2.2,1.6-2.4S232.8,85.9,233,87.1z"/>\n  </g>\n</svg>\n<div class="heading-qfap-logo-text">' + jade.escape(null == (jade_interp = data.logo.text) ? "" : jade_interp) + "</div></a>");
-    }
-    buf.push('<div class="heading-qfap-title"><p>' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</p>");
-    if (data.link) {
-        buf.push('<p class="heading-qfap-title-link"><span class="icon-link-external"></span><a' + jade.attr("href", data.link.href, true, false) + ' target="_blank">' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></p>");
-    }
-    buf.push("</div></div>");
-    return buf.join("");
-};
-
-// heading.jade compiled template
-templatizer["heading"] = function tmpl_heading(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// heading.jade:heading compiled template
-templatizer["heading"]["heading"] = function tmpl_heading_heading(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "heading", data.modifiers ], [ null, true ]) + ">");
-    if (data.anchor && data.activeAnchor) {
-        buf.push("<h2" + jade.attr("id", data.anchor, true, false) + ' class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
-    } else {
-        buf.push('<h2 class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
-        if (data.link) {
-            buf.push('<div class="heading-links">');
-            if (data.link.external) {
-                buf.push('<span class="icon-dailymotion"> </span>');
-            }
-            buf.push("<a" + jade.attr("href", data.link.href, true, false) + jade.attr("onclick", data.link.onclick, true, false) + ">" + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></div>");
-        }
-    }
-    buf.push("</div>");
-    return buf.join("");
-};
-
 // get-involved-list.jade compiled template
 templatizer["get-involved-list"] = function tmpl_get_involved_list(locals) {
     var buf = [];
@@ -4415,6 +4309,112 @@ templatizer["get-involved-list"]["get-involved-list"] = function tmpl_get_involv
         }
     }).call(this);
     buf.push("</ul></div>");
+    return buf.join("");
+};
+
+// get-involved.jade compiled template
+templatizer["get-involved"] = function tmpl_get_involved(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// get-involved.jade:heading compiled template
+templatizer["get-involved"]["heading"] = function tmpl_get_involved_heading(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "heading", data.modifiers ], [ null, true ]) + ">");
+    if (data.anchor && data.activeAnchor) {
+        buf.push("<h2" + jade.attr("id", data.anchor, true, false) + ' class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
+    } else {
+        buf.push('<h2 class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
+        if (data.link) {
+            buf.push('<div class="heading-links">');
+            if (data.link.external) {
+                buf.push('<span class="icon-dailymotion"> </span>');
+            }
+            buf.push("<a" + jade.attr("href", data.link.href, true, false) + jade.attr("onclick", data.link.onclick, true, false) + ">" + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></div>");
+        }
+    }
+    buf.push("</div>");
+    return buf.join("");
+};
+
+
+// get-involved.jade:get-involved compiled template
+templatizer["get-involved"]["get-involved"] = function tmpl_get_involved_get_involved(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push('<div class="get-involved"><div class="layout-wrapper">');
+    buf.push(templatizer["get-involved"]["heading"](data.heading));
+    buf.push('<ul class="get-involved-items">');
+    (function() {
+        var $$obj = data.items;
+        if ("number" == typeof $$obj.length) {
+            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                var item = $$obj[$index];
+                buf.push('<li class="get-involved-item"><a' + jade.attr("href", item.href, true, false) + jade.attr("onclick", item.onclick, true, false) + jade.attr("style", "background-image: url(" + item.image.src + ");", true, false) + jade.cls([ "get-involved-card", item.modifiers ], [ null, true ]) + '><div class="get-involved-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></a></li>");
+            }
+        } else {
+            var $$l = 0;
+            for (var $index in $$obj) {
+                $$l++;
+                var item = $$obj[$index];
+                buf.push('<li class="get-involved-item"><a' + jade.attr("href", item.href, true, false) + jade.attr("onclick", item.onclick, true, false) + jade.attr("style", "background-image: url(" + item.image.src + ");", true, false) + jade.cls([ "get-involved-card", item.modifiers ], [ null, true ]) + '><div class="get-involved-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></a></li>");
+            }
+        }
+    }).call(this);
+    buf.push("</ul></div></div>");
+    return buf.join("");
+};
+
+// heading-qfap.jade compiled template
+templatizer["heading-qfap"] = function tmpl_heading_qfap(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// heading-qfap.jade:heading-qfap compiled template
+templatizer["heading-qfap"]["heading-qfap"] = function tmpl_heading_qfap_heading_qfap(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push('<div class="heading-qfap">');
+    if (data.logo) {
+        buf.push("<a" + jade.attr("href", data.logo.href, true, false) + ' target="_blank" class="heading-qfap-logo"><svg class="heading-qfap-logo-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 282.9 159.9" enable-background="new 0 0 282.9 159.9" xml:space="preserve">\n  <g class="heading-qfap-logo-quefaire" fill="#FFFFFF">\n    <path class="heading-qfap-logo-q" d="M54.2,79.4L46.5,69c2.8-3.2,5-7,6.1-11.5c3.5-14.3-5.2-28.8-19.5-32.3c-2.3-0.5-4.5-0.8-6.7-0.7 C14.5,24.6,3.8,32.7,0.8,44.7C-2.8,59,6,73.5,20.3,77c2.2,0.6,4.5,0.8,6.7,0.8c4,0,7.8-1,11.2-2.6l7.7,10.3c1.7,2.3,5,2.8,7.3,1.1 S56,81.6,54.2,79.4z M26.9,70.4c-1.6,0-3.2-0.2-4.8-0.6c-10.3-2.5-16.5-12.9-14-23.2c2.1-8.5,9.6-14.5,18.4-14.6 c1.6,0,3.2,0.2,4.8,0.6c10.3,2.5,16.5,12.9,14,23.2C43.2,64.3,35.6,70.3,26.9,70.4z"/>\n    <path d="M62.1,25.3l4.1,24.1c0.5,2.8,0.9,7.1,4.9,6.4c3.6-0.6,3.1-3.3,2.7-6.1l-4.4-25.6l7.3-1.3l4.6,27.1 c0.7,3.9,1.4,10.7-9.2,12.5c-6.9,1.2-11.5-1.3-12.7-8.3l-4.7-27.6L62.1,25.3z"/>\n    <path d="M96.6,19.5l1.2,6.9l-7.4,1.3l1.4,8.1l6.6-1.1l1.2,6.9l-6.6,1.1l1.4,8.4l7.5-1.3l1.2,6.9l-14.9,2.5L81.8,22 L96.6,19.5z"/>\n    <path d="M128,14.1l1.2,6.9l-7.5,1.3l1.4,7.9l6.8-1.2l1.2,6.9l-6.8,1.2l2.6,15.4l-7.3,1.3l-6.4-37.2L128,14.1z"/>\n    <path d="M144.9,11.2l15.3,35.6l-7.8,1.3l-2.5-6l-7.4,1.3l-0.3,6.5l-7.3,1.2l2.3-38.6L144.9,11.2z M144.3,26.9 l-1.8-5.5l-0.1,0l0.2,5.8l0.1,10.2l5.2-0.9L144.3,26.9z"/>\n    <path d="M164.2,7.9l6.4,37.2l-7.3,1.3l-6.4-37.2L164.2,7.9z"/>\n    <path d="M175.7,44.2L169.4,7l7.4-1.3c4.7-0.8,13.1-1.7,14.9,8.4c0.7,4.1-0.3,7.9-3.6,10.5l9.3,15.8l-7.7,1.3 l-9.4-16l-0.1,0l2.9,17.2L175.7,44.2z M179.5,21.7l1.3-0.2c3.4-0.6,4.3-3.1,3.8-6.1c-0.5-2.7-2.1-4.6-5.8-3.8l-1,0.2L179.5,21.7z"/>\n    <path d="M210.3,0l1.2,6.9L204,8.2l1.4,8.1l6.6-1.1l1.2,6.9l-6.6,1.1l1.4,8.4l7.5-1.3l1.2,6.9l-14.9,2.5l-6.4-37.2 L210.3,0z"/>\n  </g>\n\n  <g class="heading-qfap-logo-label">\n    <polygon fill="#FFFFFF" points="256.6,76.1 282.9,72.3 266.9,45.7 275.8,14.9 230,21.4 251.2,43.6 66.6,75.4 70.4,98.1 43.6,102.7 60.2,128.9 52.3,159.9 97.8,152.1 76.1,132.5 260.7,100.7 "/>\n    <g fill="#FFFFFF" fill-opacity="0.3">\n      <polygon points="94,129.4 97.8,152.1 76.1,132.5 "/>\n      <polygon points="251.2,43.6 230,21.4 234.2,46.6 "/>\n    </g>\n  </g>\n\n  <g class="heading-qfap-logo-aparis" fill="#F94F4F">\n    <path d="M95.3,107.4l-1.3,5.3l-3.9,0.7l6-23.7l3.8-0.7l13.4,20.4l-4,0.7l-3-4.6L95.3,107.4z M91.9,84.7l3.5-2.2 l4.1,4.1l-3.2,0.5L91.9,84.7z M98.6,93.3l-2.5,10.5l8.3-1.4L98.6,93.3z"/>\n    <path d="M129.5,83.9c5.6-0.9,9.2,1.3,10,6c0.9,5-1.8,8.4-7.4,9.4l-5.1,0.9l1.1,6.7l-3.7,0.6l-3.8-22.1L129.5,83.9z M126.4,96.9l4.9-0.8c3.4-0.6,5.1-2.4,4.6-5.4c-0.5-2.9-2.7-4-6.1-3.4l-4.9,0.8L126.4,96.9z"/>\n    <path d="M146.5,98.6l-1.3,5.3l-3.9,0.7l6-23.7l3.8-0.7l13.4,20.4l-4,0.7l-3-4.6L146.5,98.6z M149.9,84.6l-2.5,10.5 l8.3-1.4L149.9,84.6z"/>\n    <path d="M176.4,91.8c-0.3,0.1-0.7,0.1-1,0.2l-5.2,0.9l1.1,6.7l-3.7,0.6l-3.8-22.1l9-1.5c5.6-1,9.4,1.2,10.2,6 c0.6,3.5-0.6,6.3-3.3,7.9l6.2,6.5l-4.2,0.7L176.4,91.8z M174.8,88.6c3.4-0.6,5.1-2.4,4.6-5.4c-0.5-2.9-2.7-4-6.1-3.4l-5.2,0.9 l1.5,8.7L174.8,88.6z"/>\n    <path d="M190.4,96.3l-3.8-22.1l3.7-0.6l3.8,22.1L190.4,96.3z"/>\n    <path d="M211.5,72.1l-1,3.5c-2.6-1-5.1-1.2-6.8-0.9c-2.2,0.4-3.5,1.4-3.2,2.9c0.8,4.8,12.3,0.2,13.6,8.2 c0.7,3.9-2.4,7-7.2,7.8c-3.5,0.6-7-0.3-9.6-2l1.1-3.5c2.6,1.7,5.7,2.3,8,1.9c2.6-0.4,4-1.7,3.7-3.4c-0.8-4.9-12.3-0.1-13.6-8 c-0.6-3.8,2.2-6.7,7-7.5C206.2,70.7,209.2,71.1,211.5,72.1z"/>\n    <path d="M222.2,74.7c-0.6-4,1.5-6.7,5.5-7.4c3.8-0.6,6.6,0.8,7.2,4.2c0.9,5-4.1,6.1-3.4,10.3l-2.8,0.5 c-0.9-5.1,3.5-5.9,2.9-9.7c-0.3-1.8-1.8-2.5-3.7-2.2c-2,0.4-3.1,1.6-2.8,3.8L222.2,74.7z M233,87.1c0.2,1.2-0.5,2.3-1.6,2.5 c-1.1,0.2-2.1-0.5-2.3-1.8c-0.2-1.2,0.5-2.2,1.6-2.4S232.8,85.9,233,87.1z"/>\n  </g>\n</svg>\n<div class="heading-qfap-logo-text">' + jade.escape(null == (jade_interp = data.logo.text) ? "" : jade_interp) + "</div></a>");
+    }
+    buf.push('<div class="heading-qfap-title"><p>' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</p>");
+    if (data.link) {
+        buf.push('<p class="heading-qfap-title-link"><span class="icon-link-external"></span><a' + jade.attr("href", data.link.href, true, false) + ' target="_blank">' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></p>");
+    }
+    buf.push("</div></div>");
+    return buf.join("");
+};
+
+// heading.jade compiled template
+templatizer["heading"] = function tmpl_heading(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// heading.jade:heading compiled template
+templatizer["heading"]["heading"] = function tmpl_heading_heading(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "heading", data.modifiers ], [ null, true ]) + ">");
+    if (data.anchor && data.activeAnchor) {
+        buf.push("<h2" + jade.attr("id", data.anchor, true, false) + ' class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
+    } else {
+        buf.push('<h2 class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
+        if (data.link) {
+            buf.push('<div class="heading-links">');
+            if (data.link.external) {
+                buf.push('<span class="icon-dailymotion"> </span>');
+            }
+            buf.push("<a" + jade.attr("href", data.link.href, true, false) + jade.attr("onclick", data.link.onclick, true, false) + ">" + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></div>");
+        }
+    }
+    buf.push("</div>");
     return buf.join("");
 };
 

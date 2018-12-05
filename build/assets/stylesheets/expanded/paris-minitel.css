@@ -6151,8 +6151,7 @@ html.no-touchevents .news-card-counter {
     position: fixed;
     top: 0; }
   .rheader a {
-    color: #FFF;
-    color: #0924fa;
+    color: #002542;
     text-decoration: none; }
   .rheader ul, .rheader ol {
     list-style: none;
@@ -6163,9 +6162,8 @@ html.no-touchevents .news-card-counter {
     width: 100%; }
 
 .rheader-logo {
-  background-color: #fd28fc;
   background-color: #FFF;
-  border-bottom: 4px solid #29fd2e;
+  border-bottom: 4px solid #FFF;
   display: block;
   height: 60px;
   margin: 0 auto;
@@ -6239,7 +6237,7 @@ html.no-touchevents .news-card-counter {
   right: 0;
   z-index: 900; }
   .rheader-button-menu .rheader-button-text {
-    background-color: #FFF;
+    background-color: #002542;
     display: block;
     font-size: 0;
     height: 1px;
@@ -6254,7 +6252,7 @@ html.no-touchevents .news-card-counter {
         -ms-user-select: none;
             user-select: none; }
     .rheader-button-menu .rheader-button-text:before, .rheader-button-menu .rheader-button-text:after {
-      background-color: #FFF;
+      background-color: #002542;
       content: "";
       display: block;
       height: 1px;
@@ -6298,36 +6296,28 @@ body.rheader-mobile-nav-open {
       font-weight: normal; }
   .rheader-nav-item.get-involved {
     background-color: #FFF;
-    text-align: center; }
-    .rheader-nav-item.get-involved a {
-      font-weight: 700; }
-    .rheader-nav-item.get-involved .rheader-nav-item-text,
-    .rheader-nav-item.get-involved .rheader-nav-item-hover {
-      position: relative; }
-      .rheader-nav-item.get-involved .rheader-nav-item-text:after,
-      .rheader-nav-item.get-involved .rheader-nav-item-hover:after {
+    text-align: center;
+    /*    .rheader-nav-item-text,
+    .rheader-nav-item-hover {
+      position: relative;
+
+      &:after {
         bottom: -8px;
         content: "";
         display: block;
         height: 5px;
         left: 0;
         position: absolute;
-        width: 100%; }
+        width: 100%;
+      }
+    }*/ }
     .rheader-nav-item.get-involved .rheader-nav-item-back {
       display: none; }
-    .rheader-nav-item.get-involved .rheader-nav-item-text {
-      color: #29fd2e; }
-      .rheader-nav-item.get-involved .rheader-nav-item-text:after {
-        background-color: #29fd2e; }
-    .rheader-nav-item.get-involved .rheader-nav-item-hover {
-      color: #BF2257; }
-      .rheader-nav-item.get-involved .rheader-nav-item-hover:after {
-        background-color: #BF2257; }
   .rheader-nav-item.account a {
-    background-color: #0924fa;
+    background-color: #FFF;
     transition: background-color 0.3s ease; }
     .rheader-nav-item.account a:hover, .rheader-nav-item.account a:focus {
-      background-color: #0A4770; }
+      background-color: #002542; }
 
 .rheader-nav-item-icon,
 .rheader-button-icon {
@@ -6374,6 +6364,7 @@ body.rheader-mobile-nav-open {
     display: none; }
   .rheader-mobile-nav {
     background-color: #fd28fc;
+    background-color: #002542;
     display: block;
     height: 100%;
     position: fixed;
@@ -6411,13 +6402,15 @@ body.rheader-mobile-nav-open {
       .rheader-mobile-nav .rheader-nav-item a {
         display: block;
         line-height: 5rem;
-        padding: 0 20px; }
+        padding: 0 20px;
+        color: #FFF; }
       .rheader-mobile-nav .rheader-nav-item.get-involved, .rheader-mobile-nav .rheader-nav-item.around, .rheader-mobile-nav .rheader-nav-item.account {
         min-height: 80px;
         border-top: 0;
         text-align: center; }
         .rheader-mobile-nav .rheader-nav-item.get-involved a, .rheader-mobile-nav .rheader-nav-item.around a, .rheader-mobile-nav .rheader-nav-item.account a {
-          line-height: 8rem; }
+          line-height: 8rem;
+          color: #002542; }
       .rheader-mobile-nav .rheader-nav-item.around {
         background-color: #43B57E; }
         .rheader-mobile-nav .rheader-nav-item.around:hover {
@@ -6497,7 +6490,25 @@ body.rheader-mobile-nav-open {
     transition: height 0.2s ease; }
   .rheader-nav-item {
     height: 60px;
-    transition: background-color 0.3s ease, height 0.2s ease; }
+    transition: background-color 0.1s ease, height 0.1s ease; }
+    .rheader-nav-item:first-child .rheader-nav-item-text {
+      width: 140px;
+      line-height: 17px;
+      padding-top: 12px;
+      display: block;
+      text-align: center; }
+    .rheader-nav-item:first-child:hover {
+      background-color: green; }
+    .rheader-nav-item:nth-child(2):hover {
+      background-color: blue; }
+    .rheader-nav-item:nth-child(3):hover {
+      background-color: yellow; }
+    .rheader-nav-item:nth-child(4):hover {
+      background-color: red; }
+    .rheader-nav-item.get-involved:hover {
+      background-color: brown; }
+    .rheader-nav-item.account:hover {
+      background-color: #002542; }
   .rheader-logo,
   .rheader-locales {
     transition: -webkit-transform 0.2s ease;
@@ -6548,59 +6559,51 @@ body.rheader-mobile-nav-open {
     vertical-align: top; }
     .rheader-nav-item + .rheader-nav-item {
       margin-left: 20px; }
+    .rheader-nav-item:hover a  {
+      color: #FFF; }
     .rheader-nav-item a {
       display: inline-block;
       height: 60px;
       line-height: 60px;
-      transition: height 0.2s ease, line-height 0.2s ease; }
+      transition: height 0.2s ease, line-height 0.2s ease;
+      padding: 0 10px; }
     .rheader-nav-item.get-involved {
       margin-left: 22px;
-      -webkit-perspective: 1000px;
-              perspective: 1000px; }
-      .rheader-nav-item.get-involved:hover a,
-      .rheader-nav-item.get-involved a:focus,
-      .rheader-nav-item.get-involved.current a {
-        background-color: #29fd2e;
-        background-color: #FFF; }
-      .rheader-nav-item.get-involved a {
-        padding: 0 20px;
-        position: relative;
-        transition: background-color 0.3s ease;
-        width: 140px; }
-      .rheader-nav-item.get-involved .rheader-nav-item-front,
-      .rheader-nav-item.get-involved .rheader-nav-item-back {
-        -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
+      /*      .rheader-nav-item-front,
+      .rheader-nav-item-back {
+        backface-visibility: hidden;
         display: inline-block;
         left: 0;
         position: absolute;
         right: 0;
         text-align: center;
-        transition: -webkit-transform 0.5s ease;
         transition: transform 0.5s ease;
-        vertical-align: top; }
-      .rheader-nav-item.get-involved .rheader-nav-item-front,
-      .rheader-nav-item.get-involved:hover .rheader-nav-item-back,
-      .rheader-nav-item.get-involved a:focus .rheader-nav-item-back,
-      .rheader-nav-item.get-involved.current .rheader-nav-item-back {
-        -webkit-transform: rotateY(0deg);
-                transform: rotateY(0deg); }
-      .rheader-nav-item.get-involved .rheader-nav-item-back,
-      .rheader-nav-item.get-involved:hover .rheader-nav-item-front,
-      .rheader-nav-item.get-involved a:focus .rheader-nav-item-front,
-      .rheader-nav-item.get-involved.current .rheader-nav-item-front {
-        -webkit-transform: rotateY(180deg);
-                transform: rotateY(180deg); }
+        vertical-align: top;
+      }
+
+      .rheader-nav-item-front,
+      &:hover .rheader-nav-item-back,
+      & a:focus .rheader-nav-item-back,
+      &.current .rheader-nav-item-back {
+        transform: rotateY(0deg);
+      }
+      .rheader-nav-item-back,
+      &:hover .rheader-nav-item-front,
+      & a:focus .rheader-nav-item-front,
+      &.current .rheader-nav-item-front {
+        transform: rotateY(180deg);
+      }*/ }
+      .rheader-nav-item.get-involved a {
+        padding: 0 20px;
+        position: relative;
+        transition: background-color 0.3s ease;
+        width: 140px; }
     .rheader-nav-item.account {
       margin-left: 0; }
       .rheader-nav-item.account a {
         padding: 0 20px; }
-      .rheader-nav-item.account .rheader-nav-item-text {
-        display: none; }
-      .rheader-nav-item.account .rheader-nav-item-text:after {
-        display: none; }
       .rheader-nav-item.account .rheader-nav-item-icon {
-        margin-right: 0; }
+        margin-right: 10px; }
   .rheader-nav-item-icon {
     margin-right: 5px;
     position: relative;

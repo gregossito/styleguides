@@ -44,9 +44,10 @@
 }
 
 .rheader-logo {
-  background-color: $color-primary;
+  // background-color: $color-primary;
   background-color: $white;
-  border-bottom: 4px solid $color-tertiary;
+  // border-bottom: 4px solid $color-tertiary;
+  border-bottom: 4px solid $light;
   display: block;
   height: $rheader-height-small;
   margin: 0 auto;
@@ -141,7 +142,7 @@
   z-index: 900;
 
   .rheader-button-text {
-    background-color: $light;
+    background-color: $dark;
     display: block;
     font-size: 0;
     height: 1px;
@@ -156,7 +157,7 @@
 
     &:before,
     &:after {
-      background-color: $light;
+      background-color: $dark;
       content: "";
       display: block;
       height: 1px;
@@ -218,9 +219,11 @@ body.rheader-mobile-nav-open {
     background-color: $light; 
     text-align: center;
 
-    a {font-weight: 700;}
+    a {
+      // font-weight: 700;
+    }
 
-    .rheader-nav-item-text,
+/*    .rheader-nav-item-text,
     .rheader-nav-item-hover {
       position: relative;
 
@@ -233,28 +236,30 @@ body.rheader-mobile-nav-open {
         position: absolute;
         width: 100%;
       }
-    }
+    }*/
 
     .rheader-nav-item-back {display: none;}
 
     .rheader-nav-item-text {
-      color: $color-tertiary;
-      &:after {background-color: $color-tertiary;}
+      // color: $color-tertiary;
+      // &:after {background-color: $color-tertiary;}
     }
 
     .rheader-nav-item-hover {
-      color: $red3;
-      &:after {background-color: $red3;}
+      // color: $red3;
+      // &:after {background-color: $red3;}
     }
   }
 
   &.account a {
-    background-color: $color-secondary;
+    // background-color: $color-secondary;
+    background-color: $light;
     transition: background-color 0.3s ease;
 
     &:hover,
     &:focus {
-      background-color: $color-secondary-variant;
+      // background-color: $color-secondary-variant;
+      background-color: $dark;
     }
   }
 }
@@ -321,6 +326,7 @@ body.rheader-mobile-nav-open {
   }
   .rheader-mobile-nav {
     background-color: $color-primary;
+    background-color: $dark;
     display: block;
     height: 100%;
     position: fixed;
@@ -363,6 +369,7 @@ body.rheader-mobile-nav-open {
         display: block;
         line-height: 5rem;
         padding: 0 20px;
+        color:$light;
       }
 
       // modifiers
@@ -373,7 +380,7 @@ body.rheader-mobile-nav-open {
         border-top: 0;
         text-align: center;
 
-        a {line-height: 8rem;}
+        a {line-height: 8rem;color:$dark;}
       }
 
       &.around {
@@ -498,7 +505,44 @@ body.rheader-mobile-nav-open {
 
   .rheader-nav-item {
     height: $rheader-height-large;
-    transition: background-color 0.3s ease, height 0.2s ease;
+    transition: background-color 0.1s ease, height 0.1s ease;
+    &:first-child {
+      .rheader-nav-item-text {
+        width:140px;
+        line-height:17px;
+        padding-top:12px;
+        display: block;
+        text-align: center;
+      }
+      &:hover {
+        background-color:green;
+      }
+    }
+    &:nth-child(2) {
+      &:hover {
+        background-color:blue;
+      }
+    }
+    &:nth-child(3) {
+      &:hover {
+        background-color:yellow;
+      }
+    }
+    &:nth-child(4) {
+      &:hover {
+        background-color:red;
+      }
+    }
+    &.get-involved {
+      &:hover {
+        background-color:brown;
+      }
+    }
+    &.account {
+      &:hover {
+        background-color:$dark;
+      }
+    }
   }
 
   .rheader-logo,
@@ -568,23 +612,30 @@ body.rheader-mobile-nav-open {
       margin-left: 20px;
     }
 
+    &:hover {
+      a {
+        color:$light;
+      }
+    }
+
     a {
       display: inline-block;
       height: $rheader-height-large;
       line-height: $rheader-height-large;
       transition: height 0.2s ease, line-height 0.2s ease;
+      padding:0 10px;
     }
 
     // modifiers
     &.get-involved {
       margin-left: 22px;
-      perspective: 1000px;
+      // perspective: 1000px;
 
       &:hover a,
       & a:focus,
       &.current a {
-        background-color: $color-tertiary;
-        background-color: $white;
+        // background-color: $color-tertiary;
+        // background-color: $white;
       }
 
       a {
@@ -594,7 +645,7 @@ body.rheader-mobile-nav-open {
         width: 140px;
       }
 
-      .rheader-nav-item-front,
+/*      .rheader-nav-item-front,
       .rheader-nav-item-back {
         backface-visibility: hidden;
         display: inline-block;
@@ -617,16 +668,20 @@ body.rheader-mobile-nav-open {
       & a:focus .rheader-nav-item-front,
       &.current .rheader-nav-item-front {
         transform: rotateY(180deg);
-      }
+      }*/
     }
 
     &.account {
       margin-left: 0;
       a {padding: 0 20px;}
 
-      .rheader-nav-item-text {display: none;}
-      .rheader-nav-item-text:after {display: none;}
-      .rheader-nav-item-icon {margin-right: 0;}
+      .rheader-nav-item-text {
+        //display: none;
+      }
+      .rheader-nav-item-text:after {
+        //display: none;
+      }
+      .rheader-nav-item-icon {margin-right: 10px;}
     }
   }
 
