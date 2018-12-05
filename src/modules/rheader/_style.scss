@@ -260,6 +260,7 @@ body.rheader-mobile-nav-open {
     &:focus {
       // background-color: $color-secondary-variant;
       background-color: $dark;
+      color:$light;
     }
   }
 }
@@ -514,33 +515,57 @@ body.rheader-mobile-nav-open {
         display: block;
         text-align: center;
       }
-      &:hover {
+      &:hover,
+      &.current {
         background-color:green;
+        a {
+          color:$light;
+        }
       }
     }
     &:nth-child(2) {
-      &:hover {
+      &:hover,
+      &.current {
         background-color:blue;
+        a {
+          color:$light;
+        }
       }
     }
     &:nth-child(3) {
-      &:hover {
+      &:hover,
+      &.current {
         background-color:yellow;
+        a {
+          color:$light;
+        }
       }
     }
     &:nth-child(4) {
-      &:hover {
+      &:hover,
+      &.current {
         background-color:red;
+        a {
+          color:$light;
+        }
       }
     }
     &.get-involved {
-      &:hover {
+      &:hover,
+      &.current {
         background-color:brown;
+        a {
+          color:$light;
+        }
       }
     }
     &.account {
-      &:hover {
+      &:hover,
+      &.current {
         background-color:$dark;
+        a {
+          color:$light;
+        }
       }
     }
   }

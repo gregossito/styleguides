@@ -6292,7 +6292,8 @@ body.rheader-mobile-nav-open {
     background-color: #FFF;
     transition: background-color 0.3s ease; }
     .rheader-nav-item.account a:hover, .rheader-nav-item.account a:focus {
-      background-color: #002542; }
+      background-color: #002542;
+      color: #FFF; }
 
 .rheader-nav-item-icon,
 .rheader-button-icon {
@@ -6472,18 +6473,30 @@ body.rheader-mobile-nav-open {
       padding-top: 12px;
       display: block;
       text-align: center; }
-    .rheader-nav-item:first-child:hover {
+    .rheader-nav-item:first-child:hover, .rheader-nav-item:first-child.current {
       background-color: green; }
-    .rheader-nav-item:nth-child(2):hover {
+      .rheader-nav-item:first-child:hover a, .rheader-nav-item:first-child.current a {
+        color: #FFF; }
+    .rheader-nav-item:nth-child(2):hover, .rheader-nav-item:nth-child(2).current {
       background-color: blue; }
-    .rheader-nav-item:nth-child(3):hover {
+      .rheader-nav-item:nth-child(2):hover a, .rheader-nav-item:nth-child(2).current a {
+        color: #FFF; }
+    .rheader-nav-item:nth-child(3):hover, .rheader-nav-item:nth-child(3).current {
       background-color: yellow; }
-    .rheader-nav-item:nth-child(4):hover {
+      .rheader-nav-item:nth-child(3):hover a, .rheader-nav-item:nth-child(3).current a {
+        color: #FFF; }
+    .rheader-nav-item:nth-child(4):hover, .rheader-nav-item:nth-child(4).current {
       background-color: red; }
-    .rheader-nav-item.get-involved:hover {
+      .rheader-nav-item:nth-child(4):hover a, .rheader-nav-item:nth-child(4).current a {
+        color: #FFF; }
+    .rheader-nav-item.get-involved:hover, .rheader-nav-item.get-involved.current {
       background-color: brown; }
-    .rheader-nav-item.account:hover {
+      .rheader-nav-item.get-involved:hover a, .rheader-nav-item.get-involved.current a {
+        color: #FFF; }
+    .rheader-nav-item.account:hover, .rheader-nav-item.account.current {
       background-color: #002542; }
+      .rheader-nav-item.account:hover a, .rheader-nav-item.account.current a {
+        color: #FFF; }
   .rheader-logo,
   .rheader-locales {
     transition: -webkit-transform 0.2s ease;
