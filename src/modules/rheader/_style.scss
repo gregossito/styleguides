@@ -2,6 +2,7 @@
 
 .rheader {
   background-color: $color-primary;
+  background-color: $white;
   height: $rheader-height-small;
   position: relative;
   width: 100%;
@@ -24,6 +25,7 @@
 
   a {
     color: $white;
+    color: $color-secondary;
     text-decoration: none;
   }
 
@@ -43,6 +45,7 @@
 
 .rheader-logo {
   background-color: $color-primary;
+  background-color: $white;
   border-bottom: 4px solid $color-tertiary;
   display: block;
   height: $rheader-height-small;
@@ -83,7 +86,7 @@
   // line-height: 1.8rem;
   padding: 0;
   text-align: left;
-  text-transform: uppercase;
+  //text-transform: uppercase;
   z-index: 15;
 
   > li {
@@ -92,9 +95,13 @@
   }
 
   a {
-    color: transparentize($white, 0.4);
+    // color: transparentize($white, 0.4);
+    color: $dark;
     &:hover,
-    strong {color: $white;}
+    strong {
+      // color: $white;
+      color: $dark;
+    }
     strong {font-weight: normal;}
     &.current {cursor: default; pointer-events: none;}
   }
@@ -112,7 +119,8 @@
 
     &:hover,
     &.active {
-      background: $color-primary-variant;
+      // background: $color-primary-variant;
+      background: $light;
     }
   }
 }
@@ -127,12 +135,13 @@
 /*.rheader-button-around {display: none;}*/
 
 .rheader-button-menu {
-  background-color: $color-primary;
+  // background-color: $color-primary;
+  background-color: $light;
   right: 0;
   z-index: 900;
 
   .rheader-button-text {
-    background-color: $white;
+    background-color: $light;
     display: block;
     font-size: 0;
     height: 1px;
@@ -147,7 +156,7 @@
 
     &:before,
     &:after {
-      background-color: $white;
+      background-color: $light;
       content: "";
       display: block;
       height: 1px;
@@ -163,7 +172,10 @@
   }
 
   body.rheader-mobile-nav-open & {
-    &:hover {background: $color-primary;}
+    &:hover {
+      // background: $color-primary; 
+      background: $light;
+    }
 
     .rheader-button-text {
       background-color: transparent;
@@ -195,14 +207,15 @@ body.rheader-mobile-nav-open {
   a {
     font-size: 1.3rem;
     font-weight: 500;
-    text-transform: uppercase;
+    //text-transform: uppercase;
 
     strong {font-weight: normal;}
   }
 
   // modifiers
   &.get-involved {
-    background-color: $red3;
+    // background-color: $red3;
+    background-color: $light; 
     text-align: center;
 
     a {font-weight: 700;}
@@ -411,9 +424,11 @@ body.rheader-mobile-nav-open {
   }
   .rheader-button-search {
     border-right: 1px solid $red2;
-  }
+    border-right: 1px solid $white;
+  } 
   .rheader-button-menu {
     border-left: 1px solid $red2;
+    border-left: 1px solid $white;
     transition: border 0.2s;
 
     .rheader-button-text {
@@ -516,6 +531,7 @@ body.rheader-mobile-nav-open {
   .rheader-wrapper {
     > .rheader-button {
       border-right: 1px solid $red2;
+      border-right: 1px solid $white;
       display: inline-block;
       font-size: 2.6rem;
       height: $rheader-height-large;
@@ -531,6 +547,8 @@ body.rheader-mobile-nav-open {
     > .rheader-button-menu {display: none;}
     > .rheader-button-search {
       border-left: 1px solid $red2;
+      border-left: 1px solid $white;
+
     }
   }
 
@@ -566,6 +584,7 @@ body.rheader-mobile-nav-open {
       & a:focus,
       &.current a {
         background-color: $color-tertiary;
+        background-color: $white;
       }
 
       a {
@@ -623,7 +642,7 @@ body.rheader-mobile-nav-open {
     .rheader-nav-item-text {
       position: relative;
 
-      &:after {
+      /*&:after {
         display: block;
         content: "";
         height: 1px;
@@ -633,7 +652,7 @@ body.rheader-mobile-nav-open {
         bottom: -4px;
         background: $white;
         transition: width 0.3s ease;
-      }
+      }*/
     }
 
     .rheader-nav-item.current .rheader-nav-item-text:after,

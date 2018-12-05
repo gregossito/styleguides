@@ -3916,7 +3916,8 @@ http://flickity.metafizzy.co
     width: 28vw;
     max-width: 350px;
     cursor: zoom-in; }
-  .image-full .image-full-wrapper .image-full-text {
+  .image-full .image-full-wrapper .image-full-text,
+  .image-full .image-full-wrapper .image-presentation-text {
     display: none; }
 
 /* PRESENTATION */
@@ -3944,11 +3945,18 @@ http://flickity.metafizzy.co
     font-style: italic;
     font-size: 1.4rem;
     font-weight: normal; }
+  .treize-presentation .treize-text {
+    margin: 2rem auto 2rem auto;
+    color: #000;
+    font-family: 'Playfair Display',serif;
+    font-size: 1.4rem;
+    text-align: left;
+    max-wdith: 640px; }
   .treize-presentation .treize-share {
     background: #000;
     height: 3.5rem;
     line-height: 3.5rem;
-    width: 17rem;
+    width: 19rem;
     padding: 0 3rem 0 2rem;
     text-align: left;
     margin: 0 auto;
@@ -4132,10 +4140,14 @@ http://flickity.metafizzy.co
       text-decoration: none;
       margin-bottom: 1.5rem;
       font-family: 'Poppins', sans-serif; }
-  .treize-modal-wrapper .treize-modal-prev,
-  .treize-modal-wrapper .treize-modal-next,
-  .treize-modal-wrapper .treize-modal-close {
-    display: none; } }
+  .treize-modal-wrapper .treize-modal-content .treize-modal-prev,
+  .treize-modal-wrapper .treize-modal-content .treize-modal-next,
+  .treize-modal-wrapper .treize-modal-content .treize-modal-close {
+    display: none; }
+  .treize-presentation h1.treize-title {
+    font-size: 3rem;
+    line-height: 3.6rem;
+    margin-bottom: 2rem; } }
 
 .image-text {
   display: -ms-flexbox;

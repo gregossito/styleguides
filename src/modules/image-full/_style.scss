@@ -9,7 +9,8 @@
        max-width: 350px;
        cursor:zoom-in;
     }
-    .image-full-text {
+    .image-full-text,
+    .image-presentation-text {
       display:none;
     }
   }
@@ -46,11 +47,19 @@
     font-size: 1.4rem;
     font-weight: normal;
   }
+  .treize-text {
+    margin: 2rem auto 2rem auto;
+    color: $black;
+    font-family: 'Playfair Display',serif;
+    font-size: 1.4rem;
+    text-align: left;
+    max-wdith:640px;
+  }
   .treize-share {
     background:$black;
     height: 3.5rem;
     line-height: 3.5rem;
-    width: 17rem;
+    width: 19rem;
     padding: 0 3rem 0 2rem;
     text-align: left;
     margin: 0 auto;
@@ -283,13 +292,22 @@
       }
     }
   }
-
+  
   .treize-modal-wrapper {
-    .treize-modal-prev,
-    .treize-modal-next,
-    .treize-modal-close {
-      display:none;
+    .treize-modal-content {
+      .treize-modal-prev,
+      .treize-modal-next,
+      .treize-modal-close {
+        display:none;
+      }
     }
   }
 
+  .treize-presentation {
+      h1.treize-title {
+        font-size:3rem;
+        line-height: 3.6rem;
+        margin-bottom: 2rem;
+      }
+  }
 }
