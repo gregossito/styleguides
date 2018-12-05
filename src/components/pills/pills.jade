@@ -1,8 +1,4 @@
-include ../../modules/button/button
-//- TODO ceci est plutot une template qu'un component
-
-include ../opening-hours/opening-hours
-include ../rush-half-hours/rush-half-hours
+include ./components
 
 mixin pills(data)
   - var activeIndex;
@@ -16,7 +12,6 @@ mixin pills(data)
         - item.modifiers.push("secondary");
         - item.attributes = item.attributes || {};
         - item.attributes.type = 'button';
-        - if (typeof activeIndex === 'undefined') { activeIndex = index; item.modifiers.push("active"); }
         - var slug = uuid + "-" + index;
         - var attributes = {};
         - attributes['id'] = 'h-' + slug;

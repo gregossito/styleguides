@@ -1,0 +1,114 @@
+.component-pills {
+  clear: both;
+
+  h4.pills-heading {
+    color: $color-secondary;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  ul.pills-items-wrapper {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+
+      .button {
+        margin-right: 5px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .pills-panel {
+    background-color: $white;
+    border-radius: 4px;
+    display: none;
+    position: relative;
+    margin-top: 1rem;
+
+    &.active {
+      display: block;
+    }
+
+    .pills-item-title {
+      color: $color-secondary;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 2rem;
+      padding: 20px 40px 20px 12px;
+    }
+
+    .pills-item-content {
+      color: $gray33;
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 2.4rem;
+      padding: 0 12px 12px 12px;
+
+      > :last-child {
+        margin-bottom: 0;
+      }
+
+      a:not(.button) {
+        color: $red1;
+        text-decoration: underline;
+        &:hover {text-decoration: none;}
+      }
+
+      ul, ol, p {
+        color: $gray33;
+        margin: 0 0 20px;
+        padding: 0;
+      }
+
+      ul, ol {
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 2.4rem;
+        list-style-position: inside;
+
+        li + li {
+          margin-top: 10px;
+        }
+      }
+
+      ul {
+        list-style-type: disc;
+      }
+    }
+  }
+
+  & .component h2,
+  .component h3 {
+    border: none;
+    padding-top: 1rem;
+    margin-top: 0;
+  }
+
+  .button:before {
+    @include icon-font;
+    content: map-get($icons, 'arrow-top');
+    margin-right: 1rem;
+  }
+  .button.active:before {
+    content: map-get($icons, 'arrow-bottom');
+  }
+}
+
+@include small {
+  // override stateful button style
+  .component-pills {
+    ul.pills-items-wrapper li .button {
+      min-height: 50px;
+      min-width: 50px;
+
+      &[disabled] {
+        // display: none;
+      }
+    }
+  }
+}
