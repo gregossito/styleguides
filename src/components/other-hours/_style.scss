@@ -1,0 +1,117 @@
+.component-opening-hours-other {
+  clear: both;
+
+  table,
+  > .button {
+    margin-bottom: 3rem;
+  }
+
+
+  .opening-hours-other {
+    &-title {
+      color: $color-secondary;
+      margin-bottom: 2rem;
+    }
+  }
+
+  caption {
+    caption-side: top;
+    color: $gray1A;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: left;
+
+    .other-hours-comment {
+      font-style: italic;
+      font-weight:normal;
+    }
+  }
+
+
+  table {
+    width: auto;
+
+    p {margin: 0;}
+  }
+
+  tr > th,
+  tr > td {
+    border-bottom: 1px solid $grayEE;
+    padding: 15px 0 5px;
+
+    &:first-child {border-left: none;}
+  }
+
+  tr > th {
+    border-right: 25px solid $white;
+    color: $gray1A;
+    font-size: 1.6rem;
+    font-weight: normal;
+    min-width: 115px;
+    text-align: left;
+  }
+
+  tr > td {
+    color: $gray4D;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: left;
+
+    a:not(.button) {
+      color: $red1;
+      text-decoration: underline;
+
+      &:hover {text-decoration: none;}
+    }
+  }
+
+  tfoot {
+    tr {background-color: transparent;}
+    tr > td {text-align: left;}
+  }
+}
+
+@include small {
+  .component-opening-hours-other {
+    .opening-hours-title-links {
+      clear: both;
+    }
+  }
+}
+
+@include medium-and-small {
+  .component-opening-hours-other {
+    overflow-x: auto;
+    position: relative;
+    width: 100%;
+  }
+}
+
+
+@include large-and-medium {
+  .component-opening-hours-other {
+    h2 {
+      font-size: 3.4rem;
+      line-height: 4rem;
+      margin: 0 20px 0 0;
+    }
+
+    .opening-hours-other {
+      table {
+        float: left;
+        margin: 0 2rem 4rem 0;
+        min-width: calc(50% - 2rem);
+
+        &:nth-child(2n) {
+          clear: left;
+        }
+      }
+    }
+  }
+}
+
+@include large {
+  .component-opening-hours-other {
+  }
+}
+

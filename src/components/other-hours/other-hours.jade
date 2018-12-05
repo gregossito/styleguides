@@ -1,0 +1,15 @@
+mixin other-hours(data)
+  .component.component-opening-hours-other
+    .opening-hours-other
+      h3.opening-hours-other-title= data.title
+      for item in data.items
+        table(summary=item.summary)
+          if item.caption
+            caption= item.caption
+              if item.comment
+                div.other-hours-comment= item.comment
+          if item.items
+            for i in item.items
+              tr
+                th= i.title
+                td= i.text
