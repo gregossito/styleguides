@@ -62,6 +62,13 @@
           {"var": "$get-involved-blue1", "hex": "#3EC2DE", "rgb": "062, 194, 222"},
           {"var": "$get-involved-blue2", "hex": "#D7EDF2", "rgb": "215, 237, 242"}
         ]
+      },
+      {
+        "title": "v2",
+        "items": [
+          {"var": "$dark", "hex": "#002542", "rgb": "248, 194, 068"},
+          {"var": "$light", "hex": "#ffffff", "rgb": "255, 255, 255"}
+        ]
       }
     ]
   },
