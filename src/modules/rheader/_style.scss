@@ -501,12 +501,12 @@ body.rheader-mobile-nav-open {
   .rheader,
   .rheader-logo {
     height: $rheader-height-large;
-    transition: height 0.2s ease;
+    transition: height 0.3s ease;
   }
 
   .rheader-nav-item {
     height: $rheader-height-large;
-    transition: background-color 0.1s ease, height 0.1s ease;
+    transition: background-color 0.3s ease, height 0.3s ease;
     &:first-child {
       .rheader-nav-item-text {
         width:140px;
@@ -518,6 +518,7 @@ body.rheader-mobile-nav-open {
       &:hover,
       &.current {
         background-color:$green-v2;
+        background-color:$dark;
         a {
           color:$light;
         }
@@ -527,6 +528,7 @@ body.rheader-mobile-nav-open {
       &:hover,
       &.current {
         background-color:$yellow-v2;
+        background-color:$dark;
         a {
           color:$light;
         }
@@ -536,6 +538,7 @@ body.rheader-mobile-nav-open {
       &:hover,
       &.current {
         background-color:$red-v2;
+        background-color:$dark;
         a {
           color:$light;
         }
@@ -545,6 +548,7 @@ body.rheader-mobile-nav-open {
       &:hover,
       &.current {
         background-color:$teal-v2;
+        background-color:$dark;
         a {
           color:$light;
         }
@@ -554,6 +558,7 @@ body.rheader-mobile-nav-open {
       &:hover,
       &.current {
         background-color:$orange-v2;
+        background-color:$dark;
         a {
           color:$light;
         }
@@ -564,6 +569,7 @@ body.rheader-mobile-nav-open {
       &.current {
         background-color:$dark;
         a {
+          background-color:$dark;
           color:$light;
         }
       }
@@ -602,7 +608,7 @@ body.rheader-mobile-nav-open {
       height: $rheader-height-large;
       line-height: $rheader-height-large;
       position: static;
-      transition: background-color 0.3s ease, transform 0.4s ease, border 0.4s ease 0.2s;
+      transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease 0.3s;
       vertical-align: top;
       width: $rheader-height-large + 1px;
 
@@ -619,10 +625,10 @@ body.rheader-mobile-nav-open {
 
   .rheader-nav {
     display: inline-block;
-    padding: 0 0 0 25px;
+    padding: 0 0 0 5px;
     vertical-align: top;
 
-    > ul {display: inline-block;}
+    > ul {display: inline-block;padding-left:0;}
   }
 
   .rheader-nav-item {
@@ -630,7 +636,8 @@ body.rheader-mobile-nav-open {
     vertical-align: top;
 
     & + .rheader-nav-item {
-      margin-left: 20px;
+      padding-right:10px;
+      padding-left:10px;
     }
 
     &:hover {
@@ -643,13 +650,13 @@ body.rheader-mobile-nav-open {
       display: inline-block;
       height: $rheader-height-large;
       line-height: $rheader-height-large;
-      transition: height 0.2s ease, line-height 0.2s ease;
+      transition: height 0.3s ease, line-height 0.3s ease;
       padding:0 10px;
     }
 
     // modifiers
     &.get-involved {
-      margin-left: 22px;
+      // margin-left: 22px;
       // perspective: 1000px;
 
       &:hover a,
@@ -660,10 +667,10 @@ body.rheader-mobile-nav-open {
       }
 
       a {
-        padding: 0 20px;
+        padding: 0 10px;
         position: relative;
         transition: background-color 0.3s ease;
-        width: 140px;
+        // width: 140px;
       }
 
 /*      .rheader-nav-item-front,
@@ -694,7 +701,7 @@ body.rheader-mobile-nav-open {
 
     &.account {
       margin-left: 0;
-      a {padding: 0 20px;}
+      a {padding: 0 10px;}
 
       .rheader-nav-item-text {
         //display: none;
@@ -753,8 +760,8 @@ body.rheader-mobile-nav-open {
     }
   }
 
-  $rheader-nef-border-offset: 68px;
-  $rheader-logo-width: 285px;
+  $rheader-nef-border-offset: 0px;
+  $rheader-logo-width: 180px;
   $rheader-logo-paris-width: 180px;
   $rheader-logo-offset: $large-grid-width / 2 + $offset-heading + $rheader-nef-border-offset;
   $rheader-locales-offset: $rheader-logo-offset - $rheader-logo-width + $rheader-logo-paris-width;
@@ -763,6 +770,7 @@ body.rheader-mobile-nav-open {
     border-bottom: 0;
     left: 30px; /* fallback for browsers not supporting calc */
     left: calc(50% - #{$rheader-logo-offset});
+    left:30px;
     width: $rheader-logo-width;
   }
 
