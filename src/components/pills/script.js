@@ -11,7 +11,11 @@ Paris.pills = (function() {
     var $pillsItems = $el.find('.pills-item');
     var $pillsPanels = $el.find('.pills-panel');
 
-    function selectItem($item) {
+    var $item;
+    var $pillsItem;
+    var itemId;
+
+    function clearActive() {
       // clear active
       $pillsItems
         .attr('aria-selected', 'false')
@@ -19,25 +23,36 @@ Paris.pills = (function() {
       $pillsPanels
         .attr('aria-hidden', 'true')
         .removeClass('active');
+    }
 
-      // set new active
-      var $pillsItem = $item.parents('.pills-item');
-      var districtId = $pillsItem.attr('aria-controls');
-      $item.addClass('active');
-      $pillsItem.attr('aria-selected', 'true');
-      $(districtId).attr('aria-hidden', 'false').addClass('active');
+    function publishEvent() {
       PubSub.publish('pills:change');
     }
 
-    function init() {
-      // focus => change district on tab
-      // click => assure it triggers on touch
-      $('.pills-items-wrapper').on('click focus', '.button', function(e) {
-        var $item = $(this);
-        // avoid double action
-        if (e.type === 'click' && $item.hasClass('active')) return;
+    function loadItem() {
+      clearActive();
 
-        selectItem($item);
+      $item.addClass('active');
+      $pillsItem.attr('aria-selected', 'true');
+      $(itemId).attr('aria-hidden', 'false').addClass('active');
+      publishEvent();
+    }
+
+    function init() {
+      $('.pills-items-wrapper').on('click', '.button', function(e) {
+        $item = $(this);
+        var $activePanel = $el.find('.pills-panel.active');
+
+        $pillsItem = $item.closest('.pills-item');
+        itemId = $pillsItem.attr('aria-controls');
+
+        if ($item.hasClass('active') && '#' + $activePanel.attr('id') === itemId) {
+          clearActive();
+          publishEvent();
+          return;
+        }
+
+        loadItem();
       });
     }
 
