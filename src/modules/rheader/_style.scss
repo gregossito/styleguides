@@ -1,12 +1,16 @@
 @import "_variables";
 
 .rheader {
-  background-color: $color-primary;
+  // background-color: $color-primary;
   background-color: $white;
   height: $rheader-height-small;
   position: relative;
   width: 100%;
   z-index: 1300;
+  // border-bottom: 1px inset $dark;
+  -webkit-box-shadow: 0 8px 6px -10px $dark;
+     -moz-box-shadow: 0 8px 6px -10px $dark;
+          box-shadow: 0 8px 6px -10px $dark;
 
   &.static {
     position: relative !important;
@@ -63,10 +67,12 @@
   background-size: contain;
   display: block;
   height: 100%;
+  height: 40px;
+  margin-top: 10px;
   position: absolute;
   right: 0;
   text-indent: -9999px;
-  width: 131px;
+  width: 140px;
 }
 
 .rheader-locales {
