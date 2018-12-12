@@ -9,6 +9,7 @@
     line-height: 4.2rem;
     margin-bottom: 20px;
     padding-top: 40px;
+    float: none;
   }
   @include small {
     h2 {
@@ -77,7 +78,7 @@
 
       &:hover {text-decoration: none;}
     }
-    
+
     // traffic
     div.rush-hour-bar  {
       width:1.9rem;
@@ -93,7 +94,7 @@
       div.rush-hour-bar  {
         height:2.5rem;
         background-color: $grayF2;
-        
+
       }
     }
 
