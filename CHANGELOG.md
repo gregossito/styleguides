@@ -9,10 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
-<!-- numéro de version à corriger apres les releases à passer avant -->
-## 1.14.x (2018-12-07)
-* components `other-hours`
-* components `pills`
+## 1.14.2 (2018-12-12)
+* add component `other-hours`
+* add component `pills`
+* component `text`: add social network data in text
 
 ## 1.14.1 (2018-12-05)
 
