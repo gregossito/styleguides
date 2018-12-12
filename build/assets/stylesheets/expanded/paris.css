@@ -10149,6 +10149,79 @@ http://flickity.metafizzy.co
     .component-opening-hours .opening-hours-other table:nth-child(2n) {
       clear: left; } }
 
+.component-opening-hours-other {
+  clear: both; }
+  .component-opening-hours-other table,
+  .component-opening-hours-other > .button,
+  .component-opening-hours-other > .expandmore__button {
+    margin-bottom: 3rem; }
+  .component-opening-hours-other .opening-hours-other-title {
+    color: #0C518A;
+    margin-bottom: 2rem; }
+  .component-opening-hours-other caption {
+    caption-side: top;
+    color: #1A1A1A;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: left; }
+    .component-opening-hours-other caption .other-hours-comment {
+      font-style: italic;
+      font-weight: normal; }
+  .component-opening-hours-other table {
+    width: auto; }
+    .component-opening-hours-other table p {
+      margin: 0; }
+  .component-opening-hours-other tr > th,
+  .component-opening-hours-other tr > td {
+    border-bottom: 1px solid #EEE;
+    padding: 15px 0 5px; }
+    .component-opening-hours-other tr > th:first-child,
+    .component-opening-hours-other tr > td:first-child {
+      border-left: none; }
+  .component-opening-hours-other tr > th {
+    border-right: 25px solid #FFF;
+    color: #1A1A1A;
+    font-size: 1.6rem;
+    font-weight: normal;
+    min-width: 115px;
+    text-align: left; }
+  .component-opening-hours-other tr > td {
+    color: #4D4D4D;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: left; }
+    .component-opening-hours-other tr > td a:not(.button):not(.expandmore__button) {
+      color: #DD275C;
+      text-decoration: underline; }
+      .component-opening-hours-other tr > td a:not(.button):not(.expandmore__button):hover {
+        text-decoration: none; }
+  .component-opening-hours-other tfoot tr {
+    background-color: transparent; }
+  .component-opening-hours-other tfoot tr > td {
+    text-align: left; }
+
+@media (max-width: 767px) {
+  .component-opening-hours-other .opening-hours-title-links {
+    clear: both; } }
+
+@media (max-width: 1159px) {
+  .component-opening-hours-other {
+    overflow-x: auto;
+    position: relative;
+    width: 100%; } }
+
+@media (min-width: 768px) {
+  .component-opening-hours-other h2 {
+    font-size: 3.4rem;
+    line-height: 4rem;
+    margin: 0 20px 0 0; }
+  .component-opening-hours-other .opening-hours-other table {
+    float: left;
+    margin: 0 2rem 4rem 0;
+    min-width: calc(50% - 2rem); }
+    .component-opening-hours-other .opening-hours-other table:nth-child(2n) {
+      clear: left; } }
+
 .component-place {
   background-color: #F2F2F2;
   border-radius: 5px;
@@ -10214,6 +10287,89 @@ http://flickity.metafizzy.co
   .component-postit .share {
     display: none; }
 
+.component-pills {
+  clear: both; }
+  .component-pills h4.pills-heading {
+    color: #0C518A;
+    font-size: 1.6rem;
+    font-weight: 500; }
+  .component-pills ul.pills-items-wrapper {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0; }
+    .component-pills ul.pills-items-wrapper li {
+      display: inline-block; }
+      .component-pills ul.pills-items-wrapper li .button, .component-pills ul.pills-items-wrapper li .expandmore__button {
+        margin-right: 5px;
+        margin-bottom: 5px; }
+  .component-pills .pills-panel {
+    background-color: #FFF;
+    border-radius: 4px;
+    display: none;
+    position: relative;
+    margin-top: 1rem; }
+    .component-pills .pills-panel.active {
+      display: block; }
+    .component-pills .pills-panel .pills-item-title {
+      color: #0C518A;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 2rem;
+      padding: 20px 40px 20px 12px; }
+    .component-pills .pills-panel .pills-item-content {
+      color: #333;
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 2.4rem;
+      padding: 0 12px 12px 12px; }
+      .component-pills .pills-panel .pills-item-content > :last-child {
+        margin-bottom: 0; }
+      .component-pills .pills-panel .pills-item-content a:not(.button):not(.expandmore__button) {
+        color: #DD275C;
+        text-decoration: underline; }
+        .component-pills .pills-panel .pills-item-content a:not(.button):not(.expandmore__button):hover {
+          text-decoration: none; }
+      .component-pills .pills-panel .pills-item-content ul, .component-pills .pills-panel .pills-item-content ol, .component-pills .pills-panel .pills-item-content p {
+        color: #333;
+        margin: 0 0 20px;
+        padding: 0; }
+      .component-pills .pills-panel .pills-item-content ul, .component-pills .pills-panel .pills-item-content ol {
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 2.4rem;
+        list-style-position: inside; }
+        .component-pills .pills-panel .pills-item-content ul li + li, .component-pills .pills-panel .pills-item-content ol li + li {
+          margin-top: 10px; }
+      .component-pills .pills-panel .pills-item-content ul {
+        list-style-type: disc; }
+  .component-pills .component h2,
+  .component-pills .component h3 {
+    border: none;
+    padding-top: 1rem;
+    margin-top: 0; }
+  .component-pills .button:before, .component-pills .expandmore__button:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'paris-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+    margin-right: 1rem; }
+  .component-pills .button.active:before, .component-pills .active.expandmore__button:before {
+    content: ""; }
+
+@media (max-width: 767px) {
+  .component-pills ul.pills-items-wrapper li .button, .component-pills ul.pills-items-wrapper li .expandmore__button {
+    min-height: 50px;
+    min-width: 50px; } }
+
 .component-rush-half-hours {
   clear: both; }
   .component-rush-half-hours h2 {
@@ -10223,7 +10379,8 @@ http://flickity.metafizzy.co
     font-weight: 700;
     line-height: 4.2rem;
     margin-bottom: 20px;
-    padding-top: 40px; }
+    padding-top: 40px;
+    float: none; }
   @media (max-width: 767px) {
     .component-rush-half-hours h2 {
       font-size: 3rem;
@@ -10655,6 +10812,26 @@ http://flickity.metafizzy.co
 
 .image-text-wrapper ul.without-bullets, .component-demande ul.without-bullets, .component-expandable .expandable-content ul.without-bullets, .component-frame ul.without-bullets, .component-postit ul.without-bullets, .component-text ul.without-bullets {
   list-style-type: none; }
+
+.image-text-wrapper .social-link, .component-demande .social-link, .component-expandable .expandable-content .social-link, .component-frame .social-link, .component-postit .social-link, .component-text .social-link, .image-text-wrapper .social-icon-item.facebook, .component-demande .image-text-wrapper .social-icon-item.facebook, .image-text-wrapper .component-demande .social-icon-item.facebook, .component-expandable .expandable-content .image-text-wrapper .social-icon-item.facebook, .image-text-wrapper .component-expandable .expandable-content .social-icon-item.facebook, .component-frame .image-text-wrapper .social-icon-item.facebook, .image-text-wrapper .component-frame .social-icon-item.facebook, .component-postit .image-text-wrapper .social-icon-item.facebook, .image-text-wrapper .component-postit .social-icon-item.facebook, .component-text .image-text-wrapper .social-icon-item.facebook, .image-text-wrapper .component-text .social-icon-item.facebook, .image-text-wrapper .component-demande .social-icon-item.facebook, .component-demande .image-text-wrapper .social-icon-item.facebook, .component-demande .social-icon-item.facebook, .component-expandable .expandable-content .component-demande .social-icon-item.facebook, .component-demande .component-expandable .expandable-content .social-icon-item.facebook, .component-frame .component-demande .social-icon-item.facebook, .component-demande .component-frame .social-icon-item.facebook, .component-postit .component-demande .social-icon-item.facebook, .component-demande .component-postit .social-icon-item.facebook, .component-text .component-demande .social-icon-item.facebook, .component-demande .component-text .social-icon-item.facebook, .image-text-wrapper .component-expandable .expandable-content .social-icon-item.facebook, .component-expandable .expandable-content .image-text-wrapper .social-icon-item.facebook, .component-demande .component-expandable .expandable-content .social-icon-item.facebook, .component-expandable .expandable-content .component-demande .social-icon-item.facebook, .component-expandable .expandable-content .social-icon-item.facebook, .component-frame .component-expandable .expandable-content .social-icon-item.facebook, .component-expandable .expandable-content .component-frame .social-icon-item.facebook, .component-postit .component-expandable .expandable-content .social-icon-item.facebook, .component-expandable .expandable-content .component-postit .social-icon-item.facebook, .component-text .component-expandable .expandable-content .social-icon-item.facebook, .component-expandable .expandable-content .component-text .social-icon-item.facebook, .image-text-wrapper .component-frame .social-icon-item.facebook, .component-frame .image-text-wrapper .social-icon-item.facebook, .component-demande .component-frame .social-icon-item.facebook, .component-frame .component-demande .social-icon-item.facebook, .component-expandable .expandable-content .component-frame .social-icon-item.facebook, .component-frame .component-expandable .expandable-content .social-icon-item.facebook, .component-frame .social-icon-item.facebook, .component-postit .component-frame .social-icon-item.facebook, .component-frame .component-postit .social-icon-item.facebook, .component-text .component-frame .social-icon-item.facebook, .component-frame .component-text .social-icon-item.facebook, .image-text-wrapper .component-postit .social-icon-item.facebook, .component-postit .image-text-wrapper .social-icon-item.facebook, .component-demande .component-postit .social-icon-item.facebook, .component-postit .component-demande .social-icon-item.facebook, .component-expandable .expandable-content .component-postit .social-icon-item.facebook, .component-postit .component-expandable .expandable-content .social-icon-item.facebook, .component-frame .component-postit .social-icon-item.facebook, .component-postit .component-frame .social-icon-item.facebook, .component-postit .social-icon-item.facebook, .component-text .component-postit .social-icon-item.facebook, .component-postit .component-text .social-icon-item.facebook, .image-text-wrapper .component-text .social-icon-item.facebook, .component-text .image-text-wrapper .social-icon-item.facebook, .component-demande .component-text .social-icon-item.facebook, .component-text .component-demande .social-icon-item.facebook, .component-expandable .expandable-content .component-text .social-icon-item.facebook, .component-text .component-expandable .expandable-content .social-icon-item.facebook, .component-frame .component-text .social-icon-item.facebook, .component-text .component-frame .social-icon-item.facebook, .component-postit .component-text .social-icon-item.facebook, .component-text .component-postit .social-icon-item.facebook, .component-text .social-icon-item.facebook, .image-text-wrapper .social-icon-item.twitter, .component-demande .image-text-wrapper .social-icon-item.twitter, .image-text-wrapper .component-demande .social-icon-item.twitter, .component-expandable .expandable-content .image-text-wrapper .social-icon-item.twitter, .image-text-wrapper .component-expandable .expandable-content .social-icon-item.twitter, .component-frame .image-text-wrapper .social-icon-item.twitter, .image-text-wrapper .component-frame .social-icon-item.twitter, .component-postit .image-text-wrapper .social-icon-item.twitter, .image-text-wrapper .component-postit .social-icon-item.twitter, .component-text .image-text-wrapper .social-icon-item.twitter, .image-text-wrapper .component-text .social-icon-item.twitter, .image-text-wrapper .component-demande .social-icon-item.twitter, .component-demande .image-text-wrapper .social-icon-item.twitter, .component-demande .social-icon-item.twitter, .component-expandable .expandable-content .component-demande .social-icon-item.twitter, .component-demande .component-expandable .expandable-content .social-icon-item.twitter, .component-frame .component-demande .social-icon-item.twitter, .component-demande .component-frame .social-icon-item.twitter, .component-postit .component-demande .social-icon-item.twitter, .component-demande .component-postit .social-icon-item.twitter, .component-text .component-demande .social-icon-item.twitter, .component-demande .component-text .social-icon-item.twitter, .image-text-wrapper .component-expandable .expandable-content .social-icon-item.twitter, .component-expandable .expandable-content .image-text-wrapper .social-icon-item.twitter, .component-demande .component-expandable .expandable-content .social-icon-item.twitter, .component-expandable .expandable-content .component-demande .social-icon-item.twitter, .component-expandable .expandable-content .social-icon-item.twitter, .component-frame .component-expandable .expandable-content .social-icon-item.twitter, .component-expandable .expandable-content .component-frame .social-icon-item.twitter, .component-postit .component-expandable .expandable-content .social-icon-item.twitter, .component-expandable .expandable-content .component-postit .social-icon-item.twitter, .component-text .component-expandable .expandable-content .social-icon-item.twitter, .component-expandable .expandable-content .component-text .social-icon-item.twitter, .image-text-wrapper .component-frame .social-icon-item.twitter, .component-frame .image-text-wrapper .social-icon-item.twitter, .component-demande .component-frame .social-icon-item.twitter, .component-frame .component-demande .social-icon-item.twitter, .component-expandable .expandable-content .component-frame .social-icon-item.twitter, .component-frame .component-expandable .expandable-content .social-icon-item.twitter, .component-frame .social-icon-item.twitter, .component-postit .component-frame .social-icon-item.twitter, .component-frame .component-postit .social-icon-item.twitter, .component-text .component-frame .social-icon-item.twitter, .component-frame .component-text .social-icon-item.twitter, .image-text-wrapper .component-postit .social-icon-item.twitter, .component-postit .image-text-wrapper .social-icon-item.twitter, .component-demande .component-postit .social-icon-item.twitter, .component-postit .component-demande .social-icon-item.twitter, .component-expandable .expandable-content .component-postit .social-icon-item.twitter, .component-postit .component-expandable .expandable-content .social-icon-item.twitter, .component-frame .component-postit .social-icon-item.twitter, .component-postit .component-frame .social-icon-item.twitter, .component-postit .social-icon-item.twitter, .component-text .component-postit .social-icon-item.twitter, .component-postit .component-text .social-icon-item.twitter, .image-text-wrapper .component-text .social-icon-item.twitter, .component-text .image-text-wrapper .social-icon-item.twitter, .component-demande .component-text .social-icon-item.twitter, .component-text .component-demande .social-icon-item.twitter, .component-expandable .expandable-content .component-text .social-icon-item.twitter, .component-text .component-expandable .expandable-content .social-icon-item.twitter, .component-frame .component-text .social-icon-item.twitter, .component-text .component-frame .social-icon-item.twitter, .component-postit .component-text .social-icon-item.twitter, .component-text .component-postit .social-icon-item.twitter, .component-text .social-icon-item.twitter, .image-text-wrapper .social-icon-item.instagram, .component-demande .image-text-wrapper .social-icon-item.instagram, .image-text-wrapper .component-demande .social-icon-item.instagram, .component-expandable .expandable-content .image-text-wrapper .social-icon-item.instagram, .image-text-wrapper .component-expandable .expandable-content .social-icon-item.instagram, .component-frame .image-text-wrapper .social-icon-item.instagram, .image-text-wrapper .component-frame .social-icon-item.instagram, .component-postit .image-text-wrapper .social-icon-item.instagram, .image-text-wrapper .component-postit .social-icon-item.instagram, .component-text .image-text-wrapper .social-icon-item.instagram, .image-text-wrapper .component-text .social-icon-item.instagram, .image-text-wrapper .component-demande .social-icon-item.instagram, .component-demande .image-text-wrapper .social-icon-item.instagram, .component-demande .social-icon-item.instagram, .component-expandable .expandable-content .component-demande .social-icon-item.instagram, .component-demande .component-expandable .expandable-content .social-icon-item.instagram, .component-frame .component-demande .social-icon-item.instagram, .component-demande .component-frame .social-icon-item.instagram, .component-postit .component-demande .social-icon-item.instagram, .component-demande .component-postit .social-icon-item.instagram, .component-text .component-demande .social-icon-item.instagram, .component-demande .component-text .social-icon-item.instagram, .image-text-wrapper .component-expandable .expandable-content .social-icon-item.instagram, .component-expandable .expandable-content .image-text-wrapper .social-icon-item.instagram, .component-demande .component-expandable .expandable-content .social-icon-item.instagram, .component-expandable .expandable-content .component-demande .social-icon-item.instagram, .component-expandable .expandable-content .social-icon-item.instagram, .component-frame .component-expandable .expandable-content .social-icon-item.instagram, .component-expandable .expandable-content .component-frame .social-icon-item.instagram, .component-postit .component-expandable .expandable-content .social-icon-item.instagram, .component-expandable .expandable-content .component-postit .social-icon-item.instagram, .component-text .component-expandable .expandable-content .social-icon-item.instagram, .component-expandable .expandable-content .component-text .social-icon-item.instagram, .image-text-wrapper .component-frame .social-icon-item.instagram, .component-frame .image-text-wrapper .social-icon-item.instagram, .component-demande .component-frame .social-icon-item.instagram, .component-frame .component-demande .social-icon-item.instagram, .component-expandable .expandable-content .component-frame .social-icon-item.instagram, .component-frame .component-expandable .expandable-content .social-icon-item.instagram, .component-frame .social-icon-item.instagram, .component-postit .component-frame .social-icon-item.instagram, .component-frame .component-postit .social-icon-item.instagram, .component-text .component-frame .social-icon-item.instagram, .component-frame .component-text .social-icon-item.instagram, .image-text-wrapper .component-postit .social-icon-item.instagram, .component-postit .image-text-wrapper .social-icon-item.instagram, .component-demande .component-postit .social-icon-item.instagram, .component-postit .component-demande .social-icon-item.instagram, .component-expandable .expandable-content .component-postit .social-icon-item.instagram, .component-postit .component-expandable .expandable-content .social-icon-item.instagram, .component-frame .component-postit .social-icon-item.instagram, .component-postit .component-frame .social-icon-item.instagram, .component-postit .social-icon-item.instagram, .component-text .component-postit .social-icon-item.instagram, .component-postit .component-text .social-icon-item.instagram, .image-text-wrapper .component-text .social-icon-item.instagram, .component-text .image-text-wrapper .social-icon-item.instagram, .component-demande .component-text .social-icon-item.instagram, .component-text .component-demande .social-icon-item.instagram, .component-expandable .expandable-content .component-text .social-icon-item.instagram, .component-text .component-expandable .expandable-content .social-icon-item.instagram, .component-frame .component-text .social-icon-item.instagram, .component-text .component-frame .social-icon-item.instagram, .component-postit .component-text .social-icon-item.instagram, .component-text .component-postit .social-icon-item.instagram, .component-text .social-icon-item.instagram {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold; }
+  .image-text-wrapper .social-link:hover, .component-demande .social-link:hover, .component-expandable .expandable-content .social-link:hover, .component-frame .social-link:hover, .component-postit .social-link:hover, .component-text .social-link:hover, .image-text-wrapper .social-icon-item.facebook:hover, .component-demande .image-text-wrapper .social-icon-item.facebook:hover, .image-text-wrapper .component-demande .social-icon-item.facebook:hover, .component-expandable .expandable-content .image-text-wrapper .social-icon-item.facebook:hover, .image-text-wrapper .component-expandable .expandable-content .social-icon-item.facebook:hover, .component-frame .image-text-wrapper .social-icon-item.facebook:hover, .image-text-wrapper .component-frame .social-icon-item.facebook:hover, .component-postit .image-text-wrapper .social-icon-item.facebook:hover, .image-text-wrapper .component-postit .social-icon-item.facebook:hover, .component-text .image-text-wrapper .social-icon-item.facebook:hover, .image-text-wrapper .component-text .social-icon-item.facebook:hover, .image-text-wrapper .component-demande .social-icon-item.facebook:hover, .component-demande .image-text-wrapper .social-icon-item.facebook:hover, .component-demande .social-icon-item.facebook:hover, .component-expandable .expandable-content .component-demande .social-icon-item.facebook:hover, .component-demande .component-expandable .expandable-content .social-icon-item.facebook:hover, .component-frame .component-demande .social-icon-item.facebook:hover, .component-demande .component-frame .social-icon-item.facebook:hover, .component-postit .component-demande .social-icon-item.facebook:hover, .component-demande .component-postit .social-icon-item.facebook:hover, .component-text .component-demande .social-icon-item.facebook:hover, .component-demande .component-text .social-icon-item.facebook:hover, .image-text-wrapper .component-expandable .expandable-content .social-icon-item.facebook:hover, .component-expandable .expandable-content .image-text-wrapper .social-icon-item.facebook:hover, .component-demande .component-expandable .expandable-content .social-icon-item.facebook:hover, .component-expandable .expandable-content .component-demande .social-icon-item.facebook:hover, .component-expandable .expandable-content .social-icon-item.facebook:hover, .component-frame .component-expandable .expandable-content .social-icon-item.facebook:hover, .component-expandable .expandable-content .component-frame .social-icon-item.facebook:hover, .component-postit .component-expandable .expandable-content .social-icon-item.facebook:hover, .component-expandable .expandable-content .component-postit .social-icon-item.facebook:hover, .component-text .component-expandable .expandable-content .social-icon-item.facebook:hover, .component-expandable .expandable-content .component-text .social-icon-item.facebook:hover, .image-text-wrapper .component-frame .social-icon-item.facebook:hover, .component-frame .image-text-wrapper .social-icon-item.facebook:hover, .component-demande .component-frame .social-icon-item.facebook:hover, .component-frame .component-demande .social-icon-item.facebook:hover, .component-expandable .expandable-content .component-frame .social-icon-item.facebook:hover, .component-frame .component-expandable .expandable-content .social-icon-item.facebook:hover, .component-frame .social-icon-item.facebook:hover, .component-postit .component-frame .social-icon-item.facebook:hover, .component-frame .component-postit .social-icon-item.facebook:hover, .component-text .component-frame .social-icon-item.facebook:hover, .component-frame .component-text .social-icon-item.facebook:hover, .image-text-wrapper .component-postit .social-icon-item.facebook:hover, .component-postit .image-text-wrapper .social-icon-item.facebook:hover, .component-demande .component-postit .social-icon-item.facebook:hover, .component-postit .component-demande .social-icon-item.facebook:hover, .component-expandable .expandable-content .component-postit .social-icon-item.facebook:hover, .component-postit .component-expandable .expandable-content .social-icon-item.facebook:hover, .component-frame .component-postit .social-icon-item.facebook:hover, .component-postit .component-frame .social-icon-item.facebook:hover, .component-postit .social-icon-item.facebook:hover, .component-text .component-postit .social-icon-item.facebook:hover, .component-postit .component-text .social-icon-item.facebook:hover, .image-text-wrapper .component-text .social-icon-item.facebook:hover, .component-text .image-text-wrapper .social-icon-item.facebook:hover, .component-demande .component-text .social-icon-item.facebook:hover, .component-text .component-demande .social-icon-item.facebook:hover, .component-expandable .expandable-content .component-text .social-icon-item.facebook:hover, .component-text .component-expandable .expandable-content .social-icon-item.facebook:hover, .component-frame .component-text .social-icon-item.facebook:hover, .component-text .component-frame .social-icon-item.facebook:hover, .component-postit .component-text .social-icon-item.facebook:hover, .component-text .component-postit .social-icon-item.facebook:hover, .component-text .social-icon-item.facebook:hover, .image-text-wrapper .social-icon-item.twitter:hover, .component-demande .image-text-wrapper .social-icon-item.twitter:hover, .image-text-wrapper .component-demande .social-icon-item.twitter:hover, .component-expandable .expandable-content .image-text-wrapper .social-icon-item.twitter:hover, .image-text-wrapper .component-expandable .expandable-content .social-icon-item.twitter:hover, .component-frame .image-text-wrapper .social-icon-item.twitter:hover, .image-text-wrapper .component-frame .social-icon-item.twitter:hover, .component-postit .image-text-wrapper .social-icon-item.twitter:hover, .image-text-wrapper .component-postit .social-icon-item.twitter:hover, .component-text .image-text-wrapper .social-icon-item.twitter:hover, .image-text-wrapper .component-text .social-icon-item.twitter:hover, .image-text-wrapper .component-demande .social-icon-item.twitter:hover, .component-demande .image-text-wrapper .social-icon-item.twitter:hover, .component-demande .social-icon-item.twitter:hover, .component-expandable .expandable-content .component-demande .social-icon-item.twitter:hover, .component-demande .component-expandable .expandable-content .social-icon-item.twitter:hover, .component-frame .component-demande .social-icon-item.twitter:hover, .component-demande .component-frame .social-icon-item.twitter:hover, .component-postit .component-demande .social-icon-item.twitter:hover, .component-demande .component-postit .social-icon-item.twitter:hover, .component-text .component-demande .social-icon-item.twitter:hover, .component-demande .component-text .social-icon-item.twitter:hover, .image-text-wrapper .component-expandable .expandable-content .social-icon-item.twitter:hover, .component-expandable .expandable-content .image-text-wrapper .social-icon-item.twitter:hover, .component-demande .component-expandable .expandable-content .social-icon-item.twitter:hover, .component-expandable .expandable-content .component-demande .social-icon-item.twitter:hover, .component-expandable .expandable-content .social-icon-item.twitter:hover, .component-frame .component-expandable .expandable-content .social-icon-item.twitter:hover, .component-expandable .expandable-content .component-frame .social-icon-item.twitter:hover, .component-postit .component-expandable .expandable-content .social-icon-item.twitter:hover, .component-expandable .expandable-content .component-postit .social-icon-item.twitter:hover, .component-text .component-expandable .expandable-content .social-icon-item.twitter:hover, .component-expandable .expandable-content .component-text .social-icon-item.twitter:hover, .image-text-wrapper .component-frame .social-icon-item.twitter:hover, .component-frame .image-text-wrapper .social-icon-item.twitter:hover, .component-demande .component-frame .social-icon-item.twitter:hover, .component-frame .component-demande .social-icon-item.twitter:hover, .component-expandable .expandable-content .component-frame .social-icon-item.twitter:hover, .component-frame .component-expandable .expandable-content .social-icon-item.twitter:hover, .component-frame .social-icon-item.twitter:hover, .component-postit .component-frame .social-icon-item.twitter:hover, .component-frame .component-postit .social-icon-item.twitter:hover, .component-text .component-frame .social-icon-item.twitter:hover, .component-frame .component-text .social-icon-item.twitter:hover, .image-text-wrapper .component-postit .social-icon-item.twitter:hover, .component-postit .image-text-wrapper .social-icon-item.twitter:hover, .component-demande .component-postit .social-icon-item.twitter:hover, .component-postit .component-demande .social-icon-item.twitter:hover, .component-expandable .expandable-content .component-postit .social-icon-item.twitter:hover, .component-postit .component-expandable .expandable-content .social-icon-item.twitter:hover, .component-frame .component-postit .social-icon-item.twitter:hover, .component-postit .component-frame .social-icon-item.twitter:hover, .component-postit .social-icon-item.twitter:hover, .component-text .component-postit .social-icon-item.twitter:hover, .component-postit .component-text .social-icon-item.twitter:hover, .image-text-wrapper .component-text .social-icon-item.twitter:hover, .component-text .image-text-wrapper .social-icon-item.twitter:hover, .component-demande .component-text .social-icon-item.twitter:hover, .component-text .component-demande .social-icon-item.twitter:hover, .component-expandable .expandable-content .component-text .social-icon-item.twitter:hover, .component-text .component-expandable .expandable-content .social-icon-item.twitter:hover, .component-frame .component-text .social-icon-item.twitter:hover, .component-text .component-frame .social-icon-item.twitter:hover, .component-postit .component-text .social-icon-item.twitter:hover, .component-text .component-postit .social-icon-item.twitter:hover, .component-text .social-icon-item.twitter:hover, .image-text-wrapper .social-icon-item.instagram:hover, .component-demande .image-text-wrapper .social-icon-item.instagram:hover, .image-text-wrapper .component-demande .social-icon-item.instagram:hover, .component-expandable .expandable-content .image-text-wrapper .social-icon-item.instagram:hover, .image-text-wrapper .component-expandable .expandable-content .social-icon-item.instagram:hover, .component-frame .image-text-wrapper .social-icon-item.instagram:hover, .image-text-wrapper .component-frame .social-icon-item.instagram:hover, .component-postit .image-text-wrapper .social-icon-item.instagram:hover, .image-text-wrapper .component-postit .social-icon-item.instagram:hover, .component-text .image-text-wrapper .social-icon-item.instagram:hover, .image-text-wrapper .component-text .social-icon-item.instagram:hover, .image-text-wrapper .component-demande .social-icon-item.instagram:hover, .component-demande .image-text-wrapper .social-icon-item.instagram:hover, .component-demande .social-icon-item.instagram:hover, .component-expandable .expandable-content .component-demande .social-icon-item.instagram:hover, .component-demande .component-expandable .expandable-content .social-icon-item.instagram:hover, .component-frame .component-demande .social-icon-item.instagram:hover, .component-demande .component-frame .social-icon-item.instagram:hover, .component-postit .component-demande .social-icon-item.instagram:hover, .component-demande .component-postit .social-icon-item.instagram:hover, .component-text .component-demande .social-icon-item.instagram:hover, .component-demande .component-text .social-icon-item.instagram:hover, .image-text-wrapper .component-expandable .expandable-content .social-icon-item.instagram:hover, .component-expandable .expandable-content .image-text-wrapper .social-icon-item.instagram:hover, .component-demande .component-expandable .expandable-content .social-icon-item.instagram:hover, .component-expandable .expandable-content .component-demande .social-icon-item.instagram:hover, .component-expandable .expandable-content .social-icon-item.instagram:hover, .component-frame .component-expandable .expandable-content .social-icon-item.instagram:hover, .component-expandable .expandable-content .component-frame .social-icon-item.instagram:hover, .component-postit .component-expandable .expandable-content .social-icon-item.instagram:hover, .component-expandable .expandable-content .component-postit .social-icon-item.instagram:hover, .component-text .component-expandable .expandable-content .social-icon-item.instagram:hover, .component-expandable .expandable-content .component-text .social-icon-item.instagram:hover, .image-text-wrapper .component-frame .social-icon-item.instagram:hover, .component-frame .image-text-wrapper .social-icon-item.instagram:hover, .component-demande .component-frame .social-icon-item.instagram:hover, .component-frame .component-demande .social-icon-item.instagram:hover, .component-expandable .expandable-content .component-frame .social-icon-item.instagram:hover, .component-frame .component-expandable .expandable-content .social-icon-item.instagram:hover, .component-frame .social-icon-item.instagram:hover, .component-postit .component-frame .social-icon-item.instagram:hover, .component-frame .component-postit .social-icon-item.instagram:hover, .component-text .component-frame .social-icon-item.instagram:hover, .component-frame .component-text .social-icon-item.instagram:hover, .image-text-wrapper .component-postit .social-icon-item.instagram:hover, .component-postit .image-text-wrapper .social-icon-item.instagram:hover, .component-demande .component-postit .social-icon-item.instagram:hover, .component-postit .component-demande .social-icon-item.instagram:hover, .component-expandable .expandable-content .component-postit .social-icon-item.instagram:hover, .component-postit .component-expandable .expandable-content .social-icon-item.instagram:hover, .component-frame .component-postit .social-icon-item.instagram:hover, .component-postit .component-frame .social-icon-item.instagram:hover, .component-postit .social-icon-item.instagram:hover, .component-text .component-postit .social-icon-item.instagram:hover, .component-postit .component-text .social-icon-item.instagram:hover, .image-text-wrapper .component-text .social-icon-item.instagram:hover, .component-text .image-text-wrapper .social-icon-item.instagram:hover, .component-demande .component-text .social-icon-item.instagram:hover, .component-text .component-demande .social-icon-item.instagram:hover, .component-expandable .expandable-content .component-text .social-icon-item.instagram:hover, .component-text .component-expandable .expandable-content .social-icon-item.instagram:hover, .component-frame .component-text .social-icon-item.instagram:hover, .component-text .component-frame .social-icon-item.instagram:hover, .component-postit .component-text .social-icon-item.instagram:hover, .component-text .component-postit .social-icon-item.instagram:hover, .component-text .social-icon-item.instagram:hover {
+    text-decoration: underline; }
+
+.image-text-wrapper .social, .component-demande .social, .component-expandable .expandable-content .social, .component-frame .social, .component-postit .social, .component-text .social {
+  list-style-type: none;
+  color: #000; }
+  .image-text-wrapper .social-icon-item, .component-demande .social-icon-item, .component-expandable .expandable-content .social-icon-item, .component-frame .social-icon-item, .component-postit .social-icon-item, .component-text .social-icon-item {
+    display: inline-block;
+    padding-left: 3rem; }
+    .image-text-wrapper .social-icon-item.facebook, .component-demande .social-icon-item.facebook, .component-expandable .expandable-content .social-icon-item.facebook, .component-frame .social-icon-item.facebook, .component-postit .social-icon-item.facebook, .component-text .social-icon-item.facebook {
+      background: url("../components/text/icon-facebook.svg") left center no-repeat; }
+    .image-text-wrapper .social-icon-item.twitter, .component-demande .social-icon-item.twitter, .component-expandable .expandable-content .social-icon-item.twitter, .component-frame .social-icon-item.twitter, .component-postit .social-icon-item.twitter, .component-text .social-icon-item.twitter {
+      background: url("../components/text/icon-twitter.svg") left center no-repeat; }
+    .image-text-wrapper .social-icon-item.instagram, .component-demande .social-icon-item.instagram, .component-expandable .expandable-content .social-icon-item.instagram, .component-frame .social-icon-item.instagram, .component-postit .social-icon-item.instagram, .component-text .social-icon-item.instagram {
+      background: url("../components/text/icon-instagram.svg") left center no-repeat; }
 
 .image-text-wrapper ul.list-cols, .component-demande ul.list-cols, .component-expandable .expandable-content ul.list-cols, .component-frame ul.list-cols, .component-postit ul.list-cols, .component-text ul.list-cols {
   line-height: 2.5rem;

@@ -1,0 +1,66 @@
+{
+  "index": {
+    "type": "other-hours",
+    "description": "",
+    "title": "Standard",
+    "examples": [
+      {
+        "title": "Standard",
+        "description": "",
+        "data": {
+            "title": "Horaires spécifiques",
+            "items": [
+              {
+                "caption": "Du 1er octobre au 31 décembre 2017",
+                "items": [
+                  {"title": "Lundi", "text": "07h à 8h30"},
+                  {"title": "Mardi", "text": "07h à 8h30"},
+                  {"title": "Mercredi", "text": "07h à 8h30"},
+                  {"title": "Jeudi", "text": "07h à 8h30"},
+                  {"title": "Vendredi", "text": "07h à 8h30"},
+                  {"title": "Samedi", "text": "fermé"},
+                  {"title": "Dimanche", "text": "07h à 18h00"}
+                ]
+              },
+              {
+                "caption": "Du 29 octobre au 28 février 2018",
+                "items": [
+                  {"title": "Lundi", "text": "07h à 8h30"},
+                  {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Samedi", "text": "fermé"},
+                  {"title": "Dimanche", "text": "07h à 18h00"}
+                ]
+              },
+              {
+                "caption": "Du 1er octobre au 31 décembre 2017",
+                "items": [
+                  {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Samedi", "text": "fermé"},
+                  {"title": "Dimanche", "text": "07h à 18h00"}
+                ]
+              },
+              {
+                "caption": "Du 29 octobre au 28 février 2018",
+                "items": [
+                  {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                  {"title": "Samedi", "text": "fermé"},
+                  {"title": "Dimanche", "text": "07h à 18h00"}
+                ]
+              }
+            ]
+        }
+      }
+    ]
+  }
+}
