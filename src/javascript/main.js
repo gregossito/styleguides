@@ -24,6 +24,7 @@ require('../components/html/script');
 require('../components/jecoute/script');
 require('../components/map/script');
 require('../components/news-push/script');
+require('../components/pills/script');
 require('../components/video/script');
 
 // load our layouts

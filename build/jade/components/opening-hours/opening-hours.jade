@@ -1,4 +1,5 @@
 include ../../modules/button/button
+include ../../components/other-hours/other-hours
 include ../../components/expandable/expandable
 
 mixin opening-hours(data)
@@ -32,19 +33,10 @@ mixin opening-hours(data)
     if data.text_piscine
       .opening-hours-text-piscine
         = data.text_piscine.text
+    if data.pills
+      +pills(data.pills.data)
+
     if data.button && data.other_hours
       - data_expandable = {button: data.button}
       +expandable(data_expandable)
-        .opening-hours-other
-          h3.opening-hours-other-title= data.other_hours.title
-          for item in data.other_hours.items
-            table(summary=item.summary)
-              if item.caption
-                caption= item.caption
-                  if item.comment
-                    div.other-hours-comment= item.comment
-              if item.items
-                for i in item.items
-                  tr
-                    th= i.title
-                    td= i.text
+        +other-hours(data.other_hours)

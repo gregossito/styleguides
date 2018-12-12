@@ -187,59 +187,6 @@
                 {"title": "Dimanche", "text": "07h à 18h00 (sans interruption)"}
               ]
             },
-            "other_hours": {
-              "title": "Horaires spécifiques",
-              "items": [
-                {
-                  "caption": "Du 1er octobre au 31 décembre 2017",
-                  "items": [
-                    {"title": "Lundi", "text": "07h à 8h30"},
-                    {"title": "Mardi", "text": "07h à 8h30"},
-                    {"title": "Mercredi", "text": "07h à 8h30"},
-                    {"title": "Jeudi", "text": "07h à 8h30"},
-                    {"title": "Vendredi", "text": "07h à 8h30"},
-                    {"title": "Samedi", "text": "fermé"},
-                    {"title": "Dimanche", "text": "07h à 18h00"}
-                  ]
-                },
-                {
-                  "caption": "Du 29 octobre au 28 février 2018",
-                  "items": [
-                    {"title": "Lundi", "text": "07h à 8h30"},
-                    {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
-                    {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
-                    {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
-                    {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
-                    {"title": "Samedi", "text": "fermé"},
-                    {"title": "Dimanche", "text": "07h à 18h00"}
-                  ]
-                },
-                {
-                  "caption": "Du 1er octobre au 31 décembre 2017",
-                  "items": [
-                    {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
-                    {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
-                    {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
-                    {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
-                    {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
-                    {"title": "Samedi", "text": "fermé"},
-                    {"title": "Dimanche", "text": "07h à 18h00"}
-                  ]
-                },
-                {
-                  "caption": "Du 29 octobre au 28 février 2018",
-                  "items": [
-                    {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
-                    {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
-                    {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
-                    {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
-                    {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
-                    {"title": "Samedi", "text": "fermé"},
-                    {"title": "Dimanche", "text": "07h à 18h00"}
-                  ]
-                }
-              ]
-            },
             "planned_closures": {
               "text": "Fermetures prévues :",
               "items": [
@@ -247,9 +194,118 @@
                 "du 27 décembre 2017 au 04 janvier 2018"
               ]
             },
-            "button": {
-              "text": "Tous les horaires",
-              "title": ""
+            "pills": {
+              "data": {
+                "components": [
+                  {
+                    "type": "other-hours",
+                    "text": "Tous les horaires",
+                    "data": {
+                      "title": "Horaires spécifiques",
+                      "items": [
+                        {
+                          "caption": "Du 1er octobre au 31 décembre 2017",
+                          "items": [
+                            {"title": "Lundi", "text": "07h à 8h30"},
+                            {"title": "Mardi", "text": "07h à 8h30"},
+                            {"title": "Mercredi", "text": "07h à 8h30"},
+                            {"title": "Jeudi", "text": "07h à 8h30"},
+                            {"title": "Vendredi", "text": "07h à 8h30"},
+                            {"title": "Samedi", "text": "fermé"},
+                            {"title": "Dimanche", "text": "07h à 18h00"}
+                          ]
+                        },
+                        {
+                          "caption": "Du 29 octobre au 28 février 2018",
+                          "items": [
+                            {"title": "Lundi", "text": "07h à 8h30"},
+                            {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                            {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                            {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                            {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                            {"title": "Samedi", "text": "fermé"},
+                            {"title": "Dimanche", "text": "07h à 18h00"}
+                          ]
+                        },
+                        {
+                          "caption": "Du 1er octobre au 31 décembre 2017",
+                          "items": [
+                            {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                            {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                            {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                            {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                            {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                            {"title": "Samedi", "text": "fermé"},
+                            {"title": "Dimanche", "text": "07h à 18h00"}
+                          ]
+                        },
+                        {
+                          "caption": "Du 29 octobre au 28 février 2018",
+                          "items": [
+                            {"title": "Lundi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                            {"title": "Mardi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                            {"title": "Mercredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                            {"title": "Jeudi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                            {"title": "Vendredi", "text": "07h à 8h30 — 11h30 à 13h30"},
+                            {"title": "Samedi", "text": "fermé"},
+                            {"title": "Dimanche", "text": "07h à 18h00"}
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rush-half-hours",
+                    "text": "Affluence",
+                    "data": {
+                      "title": {
+                        "text": "Affluence"
+                      },
+                      "days": [
+                        "Lundi",
+                        "Mardi",
+                        "Mercredi",
+                        "Jeudi",
+                        "Vendredi",
+                        "Samedi",
+                        "Dimanche"
+                      ],
+                      "items": [
+                        {"from": "8h", "to": "8h30", "traffic": [1, 1, 0, 1, 0, 1, 0]},
+                        {"from": "8h30", "to": "9h", "traffic": [1, 1, 0, 1, 0, 1, 0]},
+                        {"from": "9h", "to": "9h30", "traffic": [2, 2, 0, 2, 0, 2, 0]},
+                        {"from": "9h30", "to": "10h", "traffic": [2, 2, 0, 2, 0, 2, 0]},
+                        {"from": "10h", "to": "10h30", "traffic": [2, 2, 0, 2, 0, 2, 0]},
+                        {"from": "10h30", "to": "11h", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+                        {"from": "11h", "to": "11h30", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+                        {"from": "11h30", "to": "12h", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+                        {"from": "12h", "to": "12h30", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+                        {"from": "12h30", "to": "13h", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+                        {"from": "13h", "to": "13h30", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+                        {"from": "13h30", "to": "14h", "traffic": [2, 0, 0, 2, 0, 2, 0]},
+                        {"from": "14h", "to": "14h30", "traffic": [3, 3, 0, 3, 0, 3, 0]},
+                        {"from": "14h30", "to": "15h", "traffic": [3, 3, 0, 3, 0, 3, 0]},
+                        {"from": "15h", "to": "15h30", "traffic": [1, 1, 0, 0, 0, 0, 0]},
+                        {"from": "15h30", "to": "16h", "traffic": [2, 2, 1, 0, 1, 0, 1]},
+                        {"from": "16h", "to": "16h30", "traffic": [2, 2, 2, 1, 2, 1, 2]},
+                        {"from": "16h30", "to": "17h", "traffic": [3, 3, 0, 2, 0, 2, 0]},
+                        {"from": "17h", "to": "17h30", "traffic": [3, 3, 3, 0, 3, 0, 3]},
+                        {"from": "17h30", "to": "18h", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+                        {"from": "18h", "to": "18h30", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+                        {"from": "18h30", "to": "19h", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+                        {"from": "19h", "to": "19h30", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+                        {"from": "19h30", "to": "20h", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+                        {"from": "20h", "to": "20h30", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+                        {"from": "20h30", "to": "21h", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+                        {"from": "21h", "to": "21h30", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+                        {"from": "21h30", "to": "22h", "traffic": [0, 0, 3, 0, 3, 0, 3]},
+                        {"from": "22h", "to": "22h30", "traffic": [0, 0, 3, 0, 3, 0, 3]}
+                      ],
+                      "text": "Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a>"
+                    }
+                  }
+                ]
+              }
             }
           }
         },
@@ -271,9 +327,41 @@
           }
         },
         {
+          "type": "rush-hours",
+          "data": {
+            "title": {
+              "id": "affluence",
+              "text": "Affluence"
+            },
+            "days": [
+              "Lundi",
+              "Mardi",
+              "Mercredi",
+              "Jeudi",
+              "Vendredi",
+              "Samedi",
+              "Dimanche"
+            ],
+            "items": [
+              {"from": "8h", "to": "9h", "traffic": [1, 1, 0, 1, 0, 1, 0]},
+              {"from": "9h", "to": "10h", "traffic": [1, 2, 0, 2, 0, 2, 0]},
+              {"from": "10h", "to": "11h", "traffic": [1, 0, 0, 2, 0, 2, 0]},
+              {"from": "11h", "to": "12h", "traffic": [1, 3, 0, 3, 0, 3, 0]},
+              {"from": "12h", "to": "13h", "traffic": [1, 3, 0, 3, 0, 3, 0]},
+              {"from": "13h", "to": "14h", "traffic": [1, 1, 0, 0, 0, 0, 0]},
+              {"from": "14h", "to": "15h", "traffic": [1, 2, 1, 0, 1, 0, 1]},
+              {"from": "15h", "to": "16h", "traffic": [1, 2, 2, 1, 2, 1, 2]},
+              {"from": "16h", "to": "17h", "traffic": [1, 3, 0, 2, 0, 2, 0]},
+              {"from": "17h", "to": "18h", "traffic": [1, 3, 3, 0, 3, 0, 3]},
+              {"from": "18h", "to": "19h", "traffic": [1, 0, 3, 0, 3, 0, 3]}
+            ],
+            "text": "Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a>"
+          }
+        },
+        {
           "type": "text",
           "data": {
-            "block": "<p>22, avenue Georges Lafenestre<br />75014 Paris</p><h3>Complément d'adresse</h3><p>Pour accèder à la piscine :</p><ul><li>M° Saint Philippe du Roule (ligne 9) : Remonter la rue du Faubourg St Honoré jusqu'au n° 206 - 210</li><li>M° Courcelles (ligne 2) : Remonter la rue de Courcelles jusqu'au n° 51</li></ul><h3>Transports</h3><p><h4><i class=\"icon icon-metro\"></i> Métro</h4><ul><li>Courcelles, ligne 2</li></ul><h4><i class=\"icon icon-rer\"></i> RER</h4><ul><li>Arrêt, ligne 26</li></ul><h4><i class=\"icon icon-tramway\"></i> Tram</h4><ul><li>Arrêt, ligne 26</li></ul><h4><i class=\"icon icon-bus\"></i> Bus</h4><ul><li>Arrêt, ligne 26</li></ul><h4><i class=\"icon icon-velib\"></i> Velib'</h4><ul><li>Station N° 8034, 49 rue de berri</li><li>Station N° 8044, 2 rue alfred de vigny</li><li>Station N° 8036, 39 rue de lisbonne</li></ul><h3>Labels</h3><p><a href=\"#\" target=\"_blank\"><img src=\"qualiparis.png\" alt=\"Qualiparis\"></a> <a href=\"#\" target=\"_blank\"><img src=\"qualiparis.png\" alt=\"Qualiparis\"></a></p><h3>Accessibilité</h3><p>Espace dont l'accessibilité est limitée à certaines zones pour les personnes :</p><ul class=\"without-bullets\"><li><i class=\"icon icon-handicap-mobility\"></i> A mobilité réduite</li></ul><h3>Contact</h3><p>Tél. : 01 45 39 89 29<br />Courriel : <a href=\"mailto:mapiscine@paris.fr\">mapiscine@paris.fr</a></p>"
+            "block": "<p>22, avenue Georges Lafenestre<br />75014 Paris</p><h3>Complément d'adresse</h3><p>Pour accèder à la piscine :</p><ul><li>M° Saint Philippe du Roule (ligne 9) : Remonter la rue du Faubourg St Honoré jusqu'au n° 206 - 210</li><li>M° Courcelles (ligne 2) : Remonter la rue de Courcelles jusqu'au n° 51</li></ul><h3>Transports</h3><p><h4><i class=\"icon icon-metro\"></i> Métro</h4><ul><li>Courcelles, ligne 2</li></ul><h4><i class=\"icon icon-rer\"></i> RER</h4><ul><li>Arrêt, ligne 26</li></ul><h4><i class=\"icon icon-tramway\"></i> Tram</h4><ul><li>Arrêt, ligne 26</li></ul><h4><i class=\"icon icon-bus\"></i> Bus</h4><ul><li>Arrêt, ligne 26</li></ul><h4><i class=\"icon icon-velib\"></i> Velib'</h4><ul><li>Station N° 8034, 49 rue de berri</li><li>Station N° 8044, 2 rue alfred de vigny</li><li>Station N° 8036, 39 rue de lisbonne</li></ul></p> <h3>Labels</h3><p><a href=\"#\" target=\"_blank\"><img src=\"qualiparis.png\" alt=\"Qualiparis\"></a> <a href=\"#\" target=\"_blank\"><img src=\"qualiparis.png\" alt=\"Qualiparis\"></a></p><h3>Accessibilité</h3><p>Espace dont l'accessibilité est limitée à certaines zones pour les personnes :</p><ul class=\"without-bullets\"><li><i class=\"icon icon-handicap-mobility\"></i> A mobilité réduite</li></ul><h3>Contact</h3><p>Tél. : 01 45 39 89 29<br />Courriel : <a href=\"mailto:mapiscine@paris.fr\">mapiscine@paris.fr</a></p><ul class=\"social\"><li class=\"social-icon\"><a class=\"social-icon-item facebook\" href=\"#\" target=\"_blank\">facebook</a></li><li class=\"social-icon\"><a class=\"social-icon-item twitter\" href=\"#\" target=\"_blank\">twitter</a></li><li class=\"social-icon\"><a class=\"social-icon-item instagram\" href=\"#\" target=\"_blank\">instagram</a></li></ul>"
           }
         },
         {
@@ -415,38 +503,7 @@
             "block": "<p><strong>La gratuité est accordée dans l'ensemble des piscines municipales :</strong><br />Pour bénéficier de la gratuité dans une piscine municipale, il faut être domicilié à Paris, vous présenter à la caisse muni de votre justificatif ouvrant droit à la gratuité (liste ci-dessous), d'un justificatif de domicile et d'une pièce d'identité.</p><ul><li>aux titulaires du Paris pass famille</li><li>aux titulaires du Navigo Émeraude- Améthyste, délivrée par le Centre d'action sociale de la Ville de Paris</li><li>aux guides d'aveugles et guides d'invalides de guerre, détenteurs de la carte blanche de pensionné à 100% (limité à un accompagnant par personne)</li><li>aux pensionnés militaires d'invalidité, titulaires d'une carte délivrée par l'Office national des anciens combattants et victimes de guerre ou de la carte blanche, délivrée par la direction interdépartementale des anciens combattants</li><li>aux demandeurs d'emploi et bénéficiaires du RSA domiciliés à Paris</li><li>aux bénéficiaires de l'allocation temporaire d'attente</li></ul><p><strong>Le tarif réduit est accordé pour les entrées individuelles ; les cartes de 10 entrées et l'abonnement de 3 mois :</strong><br />Pour bénéficier du tarif réduit dans une piscine municipale, il faut être domicilié à Paris, vous présenter à la caisse muni de votre justificatif ouvrant droit au tarif réduit (liste ci-dessous), d'un justificatif de domicile et d'une pièce d'identité.</p><ul><li>aux jeunes âgés de moins de 26 ans résidant à Paris</li><li>aux membres de familles nombreuses titulaires de la carte de réduction de la SNCF</li><li>aux personnes accompagnant des enfants de 8 ans et plus, sans utiliser elles-mêmes les bassins (valable dans les piscines dotées d'un espace visiteurs. Les enfants de moins de 8 ans doivent être accompagnés dans les bassins)</li><li>aux personnes âgées de 65 ans et plus</li><li>aux élèves gardiens de la paix et aux gardiens de la paix astreints à un entraînement et dans ce cadre</li><li>aux titulaires de la carte d'invalidité délivrée par la Maison départementale des personnes handicapées</li></ul>"
           }
         },
-        {
-          "type": "rush-hours",
-          "data": {
-            "title": {
-              "id": "affluence",
-              "text": "Affluence"
-            },
-            "days": [
-              "Lundi",
-              "Mardi",
-              "Mercredi",
-              "Jeudi",
-              "Vendredi",
-              "Samedi",
-              "Dimanche"
-            ],
-            "items": [
-              {"from": "8h", "to": "9h", "traffic": [1, 1, 0, 1, 0, 1, 0]},
-              {"from": "9h", "to": "10h", "traffic": [1, 2, 0, 2, 0, 2, 0]},
-              {"from": "10h", "to": "11h", "traffic": [1, 0, 0, 2, 0, 2, 0]},
-              {"from": "11h", "to": "12h", "traffic": [1, 3, 0, 3, 0, 3, 0]},
-              {"from": "12h", "to": "13h", "traffic": [1, 3, 0, 3, 0, 3, 0]},
-              {"from": "13h", "to": "14h", "traffic": [1, 1, 0, 0, 0, 0, 0]},
-              {"from": "14h", "to": "15h", "traffic": [1, 2, 1, 0, 1, 0, 1]},
-              {"from": "15h", "to": "16h", "traffic": [1, 2, 2, 1, 2, 1, 2]},
-              {"from": "16h", "to": "17h", "traffic": [1, 3, 0, 2, 0, 2, 0]},
-              {"from": "17h", "to": "18h", "traffic": [1, 3, 3, 0, 3, 0, 3]},
-              {"from": "18h", "to": "19h", "traffic": [1, 0, 3, 0, 3, 0, 3]}
-            ],
-            "text": "Plus d'informations sur <a href=\"http://piscineauriol.paris.fr\">piscineauriol.paris.fr</a>"
-          }
-        },
+
         {
           "type": "text",
           "data": {

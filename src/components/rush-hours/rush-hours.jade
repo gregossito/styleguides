@@ -1,4 +1,15 @@
+include ../../modules/button/button
+include ../../components/expandable/expandable
+
 mixin rush-hours(data)
+  if data.button
+    - data_expandable = { button: data.button }
+    +expandable(data_expandable)
+      +rush-hours-block(data)
+  else
+    +rush-hours-block(data)
+
+mixin rush-hours-block(data)
   .component.component-rush-hours(class=data.modifiers)
     h2.anchor(id=data.title.id)= data.title.text
     .hidden-on-small
