@@ -1,7 +1,7 @@
 .municipal-site-list {
 
   &-intro {
-    color: $gray33;
+    color: $dark;
     display: block;
     float: left;
     font-size: 1.8rem;
@@ -21,8 +21,8 @@
     display: inline-block;
 
     .button {
-      background: $grayF2;
-      color: $color-secondary;
+      background: $white;
+      color: $secondary-v2;
       font-size: 1.6rem;
       line-height: 6.4rem;
       margin-left: .25rem;
@@ -33,11 +33,12 @@
       padding: 0 1rem;
 
       &:after {
-        background: $color-secondary;
+        background: $secondary-v2;
       }
 
       &:hover, &:focus {
         color: $white;
+        background-color:$secondary-v2;
       }
     }
   }
