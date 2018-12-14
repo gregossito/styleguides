@@ -27,6 +27,7 @@ $offset-heading: 32px;
 
 .heading-title {
   color: $gray33;
+  color: $dark;
   font-size: 2.6rem;
   font-weight: 700;
   float: left;
@@ -80,7 +81,7 @@ $offset-heading: 32px;
 
 @include small {
   .heading-title {
-    border-left: 6px solid $color-tertiary;
+    border-left: 0px solid $color-tertiary;
     padding: 15px 10px 15px ($small-page-padding - 4px);
   }
   .heading-links {
@@ -91,7 +92,7 @@ $offset-heading: 32px;
 
 @include large-and-medium {
   .heading {
-    border-left: 6px solid $color-tertiary;
+    border-left: 0px solid $color-tertiary;
     overflow: auto;
     margin-bottom: 40px;
     padding: 20px 10px 20px 26px;
