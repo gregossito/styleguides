@@ -105,7 +105,7 @@ Paris.search = (function(){
         .velocity("stop")
         .velocity("scroll", {
           duration: 800,
-          offset: -8, // height of folded rheader
+          offset: 0, // height of folded rheader
           complete: function(){
             $searchFieldInput.trigger('blur');
           }

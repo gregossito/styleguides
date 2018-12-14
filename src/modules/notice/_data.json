@@ -97,6 +97,12 @@
         "modifiers": ["grey"]
       }
     }, {
+      "description": "light",
+      "data": {
+        "block": "Texte de la notice",
+        "modifiers": ["light"]
+      }
+    }, {
       "description": "transparent, peut être associé à une des couleurs ci-dessus",
       "data": {
         "block": "Texte de la notice",

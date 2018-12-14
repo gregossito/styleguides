@@ -66,8 +66,9 @@
       {
         "title": "v2",
         "items": [
-          {"var": "$dark", "hex": "#002542", "rgb": "248, 194, 068"},
-          {"var": "$light", "hex": "#ffffff", "rgb": "255, 255, 255"}
+          {"var": "$dark", "hex": "#071f32", "rgb": "7,31,50"},
+          {"var": "$light", "hex": "#fff", "rgb": "255,255,255"},
+          {"var": "$gray-v2", "hex": "#f0f0f0", "rgb": "240,240,240"}
         ]
       }
     ]
@@ -138,7 +139,9 @@
       "text",
       "tramway",
       "twitter",
-      "velib"
+      "velib",
+      "search-v2",
+      "marker-v2"
     ]
   }
 }

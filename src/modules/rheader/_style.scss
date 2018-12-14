@@ -2,15 +2,13 @@
 
 .rheader {
   // background-color: $color-primary;
-  background-color: $white;
+  background-color: $light;
   height: $rheader-height-small;
   position: relative;
   width: 100%;
   z-index: 1300;
   // border-bottom: 1px inset $dark;
-  -webkit-box-shadow: 0 8px 6px -10px $dark;
-     -moz-box-shadow: 0 8px 6px -10px $dark;
-          box-shadow: 0 8px 6px -10px $dark;
+  box-shadow: 0 8px 6px -10px $dark;
 
   &.static {
     position: relative !important;
@@ -49,7 +47,7 @@
 
 .rheader-logo {
   // background-color: $color-primary;
-  background-color: $white;
+  background-color: $light;
   // border-bottom: 4px solid $color-tertiary;
   border-bottom: 4px solid $light;
   display: block;
@@ -83,7 +81,7 @@
   // line-height: 1.8rem;
   padding: 0;
   text-align: left;
-  //text-transform: uppercase;
+  // text-transform: uppercase;
   z-index: 15;
 
   > li {
@@ -170,7 +168,7 @@
 
   body.rheader-mobile-nav-open & {
     &:hover {
-      // background: $color-primary; 
+      // background: $color-primary;
       background: $light;
     }
 
@@ -212,7 +210,7 @@ body.rheader-mobile-nav-open {
   // modifiers
   &.get-involved {
     // background-color: $red3;
-    background-color: $light; 
+    background-color: $light;
     text-align: center;
 
     a {
@@ -437,12 +435,10 @@ body.rheader-mobile-nav-open {
     }
   }
   .rheader-button-search {
-    border-right: 1px solid $red2;
-    border-right: 1px solid $white;
-  } 
+    // border-right: 1px solid $red2;
+  }
   .rheader-button-menu {
-    border-left: 1px solid $red2;
-    border-left: 1px solid $white;
+    // border-left: 1px solid $red2;
     transition: border 0.2s;
 
     .rheader-button-text {
@@ -607,8 +603,7 @@ body.rheader-mobile-nav-open {
 
   .rheader-wrapper {
     > .rheader-button {
-      border-right: 1px solid $red2;
-      border-right: 1px solid $white;
+      // border-right: 1px solid $red2;
       display: inline-block;
       font-size: 2.6rem;
       height: $rheader-height-large;
@@ -618,14 +613,12 @@ body.rheader-mobile-nav-open {
       vertical-align: top;
       width: $rheader-height-large + 1px;
 
-      .rheader-button-icon {font-size: 2.8rem;}
+      .rheader-button-icon {font-size: 2rem;}
     }
 
     > .rheader-button-menu {display: none;}
     > .rheader-button-search {
-      border-left: 1px solid $red2;
-      border-left: 1px solid $white;
-
+      // border-left: 1px solid $red2;
     }
   }
 
@@ -679,30 +672,30 @@ body.rheader-mobile-nav-open {
         // width: 140px;
       }
 
-/*      .rheader-nav-item-front,
-      .rheader-nav-item-back {
-        backface-visibility: hidden;
-        display: inline-block;
-        left: 0;
-        position: absolute;
-        right: 0;
-        text-align: center;
-        transition: transform 0.5s ease;
-        vertical-align: top;
-      }
+      // .rheader-nav-item-front,
+      // .rheader-nav-item-back {
+      //   backface-visibility: hidden;
+      //   display: inline-block;
+      //   left: 0;
+      //   position: absolute;
+      //   right: 0;
+      //   text-align: center;
+      //   transition: transform 0.5s ease;
+      //   vertical-align: top;
+      // }
 
-      .rheader-nav-item-front,
-      &:hover .rheader-nav-item-back,
-      & a:focus .rheader-nav-item-back,
-      &.current .rheader-nav-item-back {
-        transform: rotateY(0deg);
-      }
-      .rheader-nav-item-back,
-      &:hover .rheader-nav-item-front,
-      & a:focus .rheader-nav-item-front,
-      &.current .rheader-nav-item-front {
-        transform: rotateY(180deg);
-      }*/
+      // .rheader-nav-item-front,
+      // &:hover .rheader-nav-item-back,
+      // & a:focus .rheader-nav-item-back,
+      // &.current .rheader-nav-item-back {
+      //   transform: rotateY(0deg);
+      // }
+      // .rheader-nav-item-back,
+      // &:hover .rheader-nav-item-front,
+      // & a:focus .rheader-nav-item-front,
+      // &.current .rheader-nav-item-front {
+      //   transform: rotateY(180deg);
+      // }
     }
 
     &.account {
@@ -710,10 +703,10 @@ body.rheader-mobile-nav-open {
       a {padding: 0 10px;}
 
       .rheader-nav-item-text {
-        //display: none;
+        // display: none;
       }
       .rheader-nav-item-text:after {
-        //display: none;
+        // display: none;
       }
       .rheader-nav-item-icon {margin-right: 10px;}
     }
@@ -731,17 +724,17 @@ body.rheader-mobile-nav-open {
     .rheader-nav-item-text {
       position: relative;
 
-      /*&:after {
-        display: block;
-        content: "";
-        height: 1px;
-        width: 0%;
-        position: absolute;
-        left: 0px;
-        bottom: -4px;
-        background: $white;
-        transition: width 0.3s ease;
-      }*/
+      // &:after {
+      //   display: block;
+      //   content: "";
+      //   height: 1px;
+      //   width: 0%;
+      //   position: absolute;
+      //   left: 0px;
+      //   bottom: -4px;
+      //   background: $white;
+      //   transition: width 0.3s ease;
+      // }
     }
 
     .rheader-nav-item.current .rheader-nav-item-text:after,
@@ -758,7 +751,7 @@ body.rheader-mobile-nav-open {
 
 @media (min-width: $rheader-large-max) {
   .rheader-button-around {
-    display:none;
+    display: none;
   }
   .rheader.extended {
     .rheader-logo {
@@ -833,7 +826,11 @@ body.rheader-mobile-nav-open {
   .notice.top.fixed {
     & + .rheader.fixed + .layout-main > .layout-content:first-child,
     & + .rheader + .quick-access + .layout-main > .layout-content:first-child {
-      padding-top: $rheader-height-small + $notice-height - 40px;
+      padding-top: $rheader-height-small + $notice-height;
+    }
+
+    & + .rheader.folded {
+      transform: translateY(-$rheader-height-small - $notice-height);
     }
   }
 }
@@ -856,7 +853,7 @@ body.rheader-mobile-nav-open {
   .notice.top.fixed {
     & + .rheader.fixed.extended + .layout-main > .layout-content:first-child,
     & + .rheader.extended + .quick-access + .layout-main > .layout-content:first-child {
-      padding-top: $rheader-height-medium + $notice-height + 20px - 40px;
+      padding-top: $rheader-height-medium + $notice-height + 20px;
     }
     & + .rheader.extended + .quick-access {
       margin-top: $rheader-height-medium + $notice-height + 20px;
@@ -886,7 +883,7 @@ body.rheader-mobile-nav-open {
   .notice.top.fixed {
     & + .rheader.fixed + .layout-main > .layout-content:first-child,
     & + .rheader + .quick-access + .layout-main > .layout-content:first-child {
-      padding-top: $rheader-height-medium + $notice-height - 40px;
+      padding-top: $rheader-height-medium + $notice-height;
     }
   }
 }
