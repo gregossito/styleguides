@@ -156,7 +156,6 @@
       }
 
       &:nth-child(2),
-      &:nth-child(11),
       &:nth-child(13) {
 
         .sections-list-button {
@@ -257,7 +256,9 @@
 
       &:nth-child(1),
       &:nth-child(8),
-      &:nth-child(10) {
+      &:nth-child(10),
+      &:nth-child(11),
+      &:nth-child(13) {
         .sections-list-button {
           // background-color: transparentize($home-cat-red, 0.1);
 
@@ -265,6 +266,7 @@
           html.no-touchevents & {
             &:before {
               background-color: $white;
+              background-color: $red-v2;
             }
           }
 
@@ -294,6 +296,7 @@
           html.no-touchevents & {
             &:before {
               background-color: $white;
+              background-color: $teal-v2;
             }
           }
 
@@ -322,6 +325,7 @@
           html.no-touchevents & {
             &:before {
               background-color: $white;
+              background-color: $green-v2 ;
             }
           }
 
@@ -350,6 +354,7 @@
           html.no-touchevents & {
             &:before {
               background-color: $white;
+              background-color: $yellow-v2;
             }
           }
 
@@ -431,11 +436,13 @@
       .sections-list-button {
         &:before {
           background-color: $white;
+          background-color: $teal-v2;
         }
 
        .sections-list-button-wrapper {
            &:before {
-            background-position-y: -110px;
+            background-position-y: -112px;
+            transition: opacity 0.3s ease-in-out;
           }
         }
 
@@ -443,6 +450,8 @@
           .sections-list-button-wrapper {
              &:before {
               // background-position-y: -110px;
+              background-position-y: 0px;
+              opacity:1;
             }
           }
         }
