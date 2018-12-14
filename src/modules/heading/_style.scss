@@ -26,7 +26,7 @@ $offset-heading: 32px;
 }
 
 .heading-title {
-  color: $gray33;
+  // color: $gray33;
   color: $dark;
   font-size: 2.6rem;
   font-weight: 700;
@@ -81,8 +81,10 @@ $offset-heading: 32px;
 
 @include small {
   .heading-title {
-    border-left: 0px solid $color-tertiary;
-    padding: 15px 10px 15px ($small-page-padding - 4px);
+    // border-left: 6px solid $color-tertiary;
+    border-left: 6px solid transparent;
+    // padding: 15px 10px 15px ($small-page-padding - 4px);
+    padding: 15px 10px 0px ($small-page-padding - 4px);
   }
   .heading-links {
     clear: both;
@@ -92,10 +94,12 @@ $offset-heading: 32px;
 
 @include large-and-medium {
   .heading {
-    border-left: 0px solid $color-tertiary;
-    overflow: auto;
+    // border-left: 6px solid $color-tertiary;
+    border-left: 6px solid transparent;
+    // overflow: auto;
     margin-bottom: 40px;
-    padding: 20px 10px 20px 26px;
+    // padding: 20px 10px 40px 26px;
+    padding: 20px 10px 0px 26px;
   }
 
   .heading-title {
