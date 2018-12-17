@@ -243,26 +243,26 @@
 }
 @keyframes modal { 
     0% { 
-        height:5vh;
+        height:1vh;
         opacity:0;
-        -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-        transform: matrix(1, 0, 0, 1, 0, 0);
+       /* -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+        transform: matrix(1, 0, 0, 1, 0, 0);*/
     } 
     40% { 
-        height:20vh;
-        -webkit-transform: matrix(1, -0.4, 0, 1, 0, 0);
-        transform: matrix(1, -0.4, 0, 1, 0, 0);
+        height:40vh;
+        /*-webkit-transform: matrix(1, -0.4, 0, 1, 0, 0);
+        transform: matrix(1, -0.4, 0, 1, 0, 0);*/
     } 
-    50% { 
-        height:30vh;
-        -webkit-transform: matrix(1, 0, 0.4, 1, 0, 0);
-        transform: matrix(1, 0, 0.4, 1, 0, 0);
+    80% { 
+        height:60vh;
+        /*-webkit-transform: matrix(1, 0, 0.4, 1, 0, 0);
+        transform: matrix(1, 0, 0.4, 1, 0, 0);*/
     }      
     100% {
       height:65vh;
       opacity:1;
-       -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-       transform: matrix(1, 0, 0, 1, 0, 0);
+      /* -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+       transform: matrix(1, 0, 0, 1, 0, 0);*/
     }
 } 
 /* ARCHIVES LIST */
@@ -276,12 +276,18 @@
 }
 
 @include small {
+
+  .treize-masonry img {
+    cursor:default;
+  }
+
   /* IMAGE FULL */ 
   .image-full {
     text-decoration: none;
     .image-full-wrapper {
       img {
-         width:80vw;
+        width:80vw;
+        cursor:default;
       }
       .image-full-text {
         display:block;

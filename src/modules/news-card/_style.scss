@@ -20,7 +20,7 @@
 
       .news-card-content {
         &:before {
-          background-color: $orange-v2;
+          background-color: $secondary-v2;
           height: 100%;
         }
       }
@@ -95,7 +95,7 @@
 }
 
 .news-card-category {
-  color: $orange-v2;
+  color: $secondary-v2;
   font-size: 1.4rem;
   font-weight: 500;
   margin: 0 auto 5px;
@@ -109,7 +109,7 @@
 
     &:before,
     &:after{
-      border-bottom: 1px solid $orange-v2;
+      border-bottom: 1px solid $secondary-v2;
       content: "";
       display: flex;
       flex-grow: 1;
@@ -242,15 +242,7 @@ html.no-touchevents {
         z-index: 0;
 
         &:after {
-          background: $color-primary; /* Old browsers */
-          background: -moz-linear-gradient(left, $color-primary 0%, transparent 100%); /* FF3.6+ */
-          background: -webkit-gradient(linear, left top, right top, color-stop(0%,$color-primary), color-stop(100%,transparent)); /* Chrome,Safari4+ */
-          background: -webkit-linear-gradient(left, $color-primary 0%,transparent 100%); /* Chrome10+,Safari5.1+ */
-          background: -o-linear-gradient(left, $color-primary 0%,transparent 100%); /* Opera 11.10+ */
-          background: -ms-linear-gradient(left, $color-primary 0%,transparent 100%); /* IE10+ */
-          background: linear-gradient(to right, $color-primary 0%,transparent 100%); /* W3C */
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-primary', endColorstr='transparent',GradientType=1 ); /* IE6-8 */
-
+          background: $secondary-v2; 
           content: "";
           display: block;
           height: 100%;

@@ -1,7 +1,7 @@
 .notice {
-  background-color: $black;
-  color: white;
-  font-size: 1.3rem;
+  background-color: $grayEE;
+  color: $dark;
+  font-size: 1.2rem;
   font-weight: 500;
   // min-height: 60px;
   overflow: hidden;
@@ -130,7 +130,7 @@
   padding: 20px 0;
 
   a {
-    color: white;
+    color: $dark;
     text-transform: uppercase;
     text-decoration: underline;
 
@@ -190,6 +190,7 @@
   }
 
   .notice-content {
+    font-size:1rem;
     a.notice-content-link {
       i {
         display: none;
