@@ -251,7 +251,7 @@
           html.no-js &,
           html.no-touchevents & {
             &:before {
-              background-color: $red-v2;
+              background-color: $primary-v2;
             }
           }
 
@@ -374,7 +374,7 @@
       }
       &:nth-child(10) .sections-list-button-wrapper:before {
         background-position-x: -540px;
-        width: 70px; 
+        width: 70px;
       }
       &:nth-child(11) .sections-list-button-wrapper:before {
         background-position-x: -610px;

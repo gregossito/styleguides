@@ -1,5 +1,5 @@
 .notice {
-  background-color: $grayEE;
+  background-color: $gray-v2;
   color: $dark;
   font-size: 1.2rem;
   font-weight: 500;
@@ -59,18 +59,14 @@
     background-color: $color;
     &.transparent {background-color: transparentize($color, 0.2);}
   }
-  @include notice-color-modifier($black);
+  // @include notice-color-modifier($black);
   &.blue   {@include notice-color-modifier($notice-blue);}
   &.orange {@include notice-color-modifier($notice-orange);}
   &.yellow {@include notice-color-modifier($color-tertiary);}
   &.white  {@include notice-color-modifier(white);}
   &.grey   {@include notice-color-modifier($grayEE);}
-  &.light  {@include notice-color-modifier($gray-v2);}
   &.white, &.grey {
     &, a { color: $black; }
-  }
-  &.light{
-    &, a { color: $dark; }
   }
 
   // modifiers background-images
@@ -190,7 +186,8 @@
   }
 
   .notice-content {
-    font-size:1rem;
+    font-size: 1rem;
+
     a.notice-content-link {
       i {
         display: none;

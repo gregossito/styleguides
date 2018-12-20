@@ -1,5 +1,5 @@
 %button {
-  background-color: $red-v2;
+  background-color: $primary-v2;
   border: none;
   border-radius: 5px;
   color: $white;
@@ -18,7 +18,7 @@
   z-index: 1;
 
   &:after {
-    background-color: darken($red-v2, 10%);
+    background-color: darken($primary-v2, 10%);
     border-radius: 5px;
     content: "";
     display: block;
