@@ -9,35 +9,49 @@
   margin:0 auto;
   min-height:410px;
   background-size: cover;
+  margin-top:40px;
 
   .jumbotron-treize-wrapper {
     padding:0px;
     text-align: center;
-    overflow: hidden;
     vertical-align: middle;
-    // background-repeat:no-repeat;
-    // background-position:50% 0%;
     min-height: 410px;
     max-height: 410px;
     height: 410px;
-    // background-size: cover;
+    position: relative;
 
     &:after {
       text-transform:uppercase;
       color:$black;
       position:absolute;
-      top: 10rem;
-      left: 3.2rem;
+      top: 12rem;
+      left:0rem;
       width: auto;
-      padding: 1rem 2rem;
+      padding: 1rem 2rem 1rem 1rem;
       z-index: 2;
       border:2px solid $black;
-      content:"13 photos";
+      border-left:0;
+      content:"photos";
       letter-spacing: .4rem;
       font-weight: bold;
       font-family: 'Poppins',sans-serif;
     }
-    
+    &:before {
+      text-transform: uppercase;
+      color: #000;
+      position: absolute;
+      top: 12rem;
+      left: -5.4rem;
+      width: auto;
+      padding: 1rem 1rem 1rem 2rem;
+      z-index: 2;
+      border: 2px solid #000;
+      content: "13";
+      letter-spacing: .4rem;
+      font-weight: bold;
+      font-family: 'Poppins',sans-serif;
+    }
+
     .jumbotron-treize-content {
       border: none;
       padding: 0;

@@ -48,9 +48,9 @@
 }
 
 %button-secondary {
-  background-color: $secondary-v2 ;
+  background-color: $secondary-v2;
   padding: 15px;
-  &:after {background-color: darken($secondary-v2 , 10%);}
+  &:after {background-color: darken($secondary-v2, 10%);}
 }
 
 %button-black {
@@ -90,10 +90,10 @@
   }
 
   &.tertiary {
-    background-color: $color-tertiary;
+    background-color: $green-v2;
     color: $gray1A;
     padding: 15px;
-    &:after {background-color: darken($color-tertiary, 10%);}
+    &:after {background-color: darken($green-v2, 10%);}
   }
 
   &.white {
@@ -134,12 +134,12 @@
   }
 
   &.stateful {
-    background-color: $color-tertiary;
-    color: $color-secondary;
+    background-color: $green-v2;
+    color: $secondary-v2;
     padding: 15px;
     outline: 0;
     &:after {background-color: $color-tertiary-variant;}
-    &.active:after {background-color: $color-secondary;}
+    &.active:after {background-color: $secondary-v2;}
 
     &:hover, &:focus, &.active {
       color: $white;
