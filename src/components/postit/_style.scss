@@ -1,17 +1,17 @@
 .component-postit {
   @extend %component-text;
 
-  background-color: transparentize($orange1, 0.85);
-  border-bottom: 6px solid $orange1;
+  background-color: transparentize($orange-v2, 0.85);
+  border-bottom: 6px solid $orange-v2;
   clear: both;
   margin-top: -50px;
   padding: 10px 20px 40px 0;
   position: relative;
 
   &:before {
-    background-color: transparentize($orange1, 0.85);
-    border-bottom: 6px solid $orange1;
-    border-left: 6px solid $orange1;
+    background-color: transparentize($orange-v2, 0.85);
+    border-bottom: 6px solid $orange-v2;
+    border-left: 6px solid $orange-v2;
     content: " ";
     display: block;
     height: calc(100% + 6px);
@@ -23,7 +23,7 @@
 
   h2,
   a:not(.button) {
-    color: $orange1;
+    color: $orange-v2;
   }
 
   h2 .icon,
