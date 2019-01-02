@@ -7,7 +7,6 @@ mixin rheader(data)
     - var menu = data.buttons.menu // shortcut
     .rheader-wrapper
       a.rheader-logo#logo(href=data.logo.href title=data.logo.title)
-        .rheader-logo-nef
         if data.logo.h1
           h1.rheader-logo-paris= data.logo.text
         else

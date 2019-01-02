@@ -19,12 +19,12 @@
         "buttons": {
           "search": {
             "href": "#",
-            "icon": "search",
+            "icon": "search-v2",
             "text": "Recherche"
           },
           "around": {
             "href": "/equipements/",
-            "icon": "marker",
+            "icon": "marker-v2",
             "text": "Autour de moi"
           },
           "menu": {
