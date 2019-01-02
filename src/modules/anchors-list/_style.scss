@@ -25,13 +25,13 @@
   overflow: hidden;
 
   &:hover {
-    background-color: lighten($color-tertiary, 18%);
+    background-color: lighten($yellow-v2, 18%);
   }
 
   // modifiers
   &.anchor-postit {
     .anchors-list-link {
-      color: $orange1;
+      color: $orange-v2;
       font-weight: 700;
     }
   }
@@ -59,7 +59,7 @@
   }
 
   .anchors-list-title {
-    border-left: 6px solid $color-tertiary;
+    border-left: 6px solid transparent;
     transform: translateY(-200px);
     display: table;
     height: 80px;
@@ -81,7 +81,7 @@
   }
 
   .anchors-list-progress {
-    background-color: $color-tertiary;
+    background-color: $yellow-v2;
     display: block;
     height: 100%;
     position: absolute;

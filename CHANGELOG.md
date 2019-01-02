@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.15.0 (coming soon)
+
+* updates for v2 in modules : `block-content`, `footer`, `heading`, `news-card`, `pagination`, `rheader`, `sections-panel`, colors
+
 ## 1.14.2 (2018-12-12)
 * add component `other-hours`
 * add component `pills`

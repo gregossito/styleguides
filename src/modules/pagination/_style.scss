@@ -41,7 +41,7 @@
       &.previous, &.next {
         > a,
         > span {
-          background: $color-primary;
+          background: $orange-v2;
           color: $white;
         }
       }
@@ -68,7 +68,7 @@
       &:hover,
       &:focus {
         color: $white;
-        background-color: $color-secondary;
+        background-color: $dark;
       }
     }
 
@@ -77,7 +77,7 @@
       &,
       &:hover,
       &:focus {
-        background: $color-secondary;
+        background: $dark;
         color: $white;
         cursor: default;
         pointer-events: none;

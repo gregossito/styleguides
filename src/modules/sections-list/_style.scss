@@ -42,7 +42,7 @@
   }
 
   &-title {
-    color: $gray33;
+    color: $dark;
     display: block;
     font-size: 1.5rem;
     font-weight: 700;
@@ -53,7 +53,7 @@
   }
 
   &-text {
-    color: $gray4D;
+    color: $dark;
     font-size: 1.4rem;
     font-weight: 300;
     line-height: 1.8rem;
@@ -117,17 +117,16 @@
     .sections-list-item {
 
       .sections-list-button {
-        background-color: transparentize($home-cat-blue2, 0.3);
 
         html.no-js &,
         html.no-touchevents & {
           &:before {
-            background-color: $home-cat-blue2;
+
           }
         }
 
         .sections-list-button-text {
-          color: $gray4D;
+          color: $dark;
         }
       }
 
@@ -136,37 +135,34 @@
       &:nth-child(10) {
 
         .sections-list-button {
-          background-color: transparentize($home-cat-red, 0.3);
 
           html.no-js &,
           html.no-touchevents & {
             &:before {
-              background-color: $home-cat-red;
             }
           }
 
           .sections-list-button-text {
             color: $white;
+            color: $dark;
           }
         }
       }
 
       &:nth-child(2),
-      &:nth-child(11),
       &:nth-child(13) {
 
         .sections-list-button {
-          background-color: transparentize($home-cat-blue1, 0.3);
 
           html.no-js &,
           html.no-touchevents & {
             &:before {
-              background-color: $home-cat-blue1;
             }
           }
 
           .sections-list-button-text {
             color: $white;
+            color: $dark;
           }
         }
       }
@@ -176,12 +172,11 @@
       &:nth-child(15) {
 
         .sections-list-button {
-          background-color: transparentize($home-cat-green, 0.3);
 
           html.no-js &,
           html.no-touchevents & {
             &:before {
-              background-color: $home-cat-green;
+
             }
           }
 
@@ -196,12 +191,10 @@
       &:nth-child(14) {
 
         .sections-list-button {
-          background-color: transparentize($home-cat-yellow, 0.3);
 
           html.no-js &,
           html.no-touchevents & {
             &:before {
-              background-color: $home-cat-yellow;
             }
           }
         }
@@ -213,7 +206,6 @@
   .sections-list.has-icons {
 
     .sections-list-button {
-      background-color: transparentize($home-cat-blue2, 0.3);
 
       &-wrapper {
         &:before {
@@ -235,7 +227,7 @@
       }
 
       &-text {
-        color: $gray4D;
+        color: $dark;
         line-height: 1.6rem;
       }
 
@@ -251,24 +243,25 @@
 
       &:nth-child(1),
       &:nth-child(8),
-      &:nth-child(10) {
+      &:nth-child(10),
+      &:nth-child(11),
+      &:nth-child(13) {
         .sections-list-button {
-          background-color: transparentize($home-cat-red, 0.1);
 
           html.no-js &,
           html.no-touchevents & {
             &:before {
-              background-color: $white;
+              background-color: $primary-v2;
             }
           }
 
           .sections-list-button-text {
-            color: $white;
+            color: $dark;
           }
 
           &:hover {
             .sections-list-button-text {
-              color: $gray4D;
+              color: $dark;
             }
           }
         }
@@ -280,22 +273,21 @@
       &:nth-child(16) {
 
         .sections-list-button {
-          background-color: transparentize($home-cat-blue1, 0.1);
 
           html.no-js &,
           html.no-touchevents & {
             &:before {
-              background-color: $white;
+              background-color: $teal-v2;
             }
           }
 
           .sections-list-button-text {
-            color: $white;
+            color: $dark;
           }
 
           &:hover {
             .sections-list-button-text {
-              color: $gray4D;
+              color: $dark;
             }
           }
         }
@@ -306,22 +298,21 @@
       &:nth-child(14) {
 
         .sections-list-button {
-          background-color: transparentize($home-cat-green, 0.1);
 
           html.no-js &,
           html.no-touchevents & {
             &:before {
-              background-color: $white;
+              background-color: $green-v2 ;
             }
           }
 
           .sections-list-button-text {
-            color: $white;
+            color: $dark;
           }
 
           &:hover {
             .sections-list-button-text {
-              color: $gray4D;
+              color: $dark;
             }
           }
         }
@@ -332,22 +323,21 @@
       &:nth-child(15) {
 
         .sections-list-button {
-          background-color: transparentize($home-cat-yellow, 0.1);
 
           html.no-js &,
           html.no-touchevents & {
             &:before {
-              background-color: $white;
+              background-color: $yellow-v2;
             }
           }
 
           .sections-list-button-text {
-            color: $white;
+            color: $dark;
           }
 
           &:hover {
             .sections-list-button-text {
-              color: $gray4D;
+              color: $dark;
             }
           }
         }
@@ -384,7 +374,7 @@
       }
       &:nth-child(10) .sections-list-button-wrapper:before {
         background-position-x: -540px;
-        width: 70px; 
+        width: 70px;
       }
       &:nth-child(11) .sections-list-button-wrapper:before {
         background-position-x: -610px;
@@ -416,16 +406,23 @@
 
       .sections-list-button {
         &:before {
-          background-color: $white;
+          background-color: $teal-v2;
+        }
+
+       .sections-list-button-wrapper {
+           &:before {
+            background-position-y: -112px;
+            transition: opacity 0.3s ease-in-out;
+          }
         }
 
         &:hover {
-
           .sections-list-button-wrapper {
              &:before {
-              background-position-y: -110px;
-             }
-           }
+              background-position-y: 0px;
+              opacity:1;
+            }
+          }
         }
       }
     }
@@ -463,6 +460,7 @@
       html.no-touchevents {
         &:hover:after {
           color: $grayF2;
+          color: $dark;
         }
       }
 

@@ -62,6 +62,14 @@
           {"var": "$get-involved-blue1", "hex": "#3EC2DE", "rgb": "062, 194, 222"},
           {"var": "$get-involved-blue2", "hex": "#D7EDF2", "rgb": "215, 237, 242"}
         ]
+      },
+      {
+        "title": "v2",
+        "items": [
+          {"var": "$dark", "hex": "#071f32", "rgb": "7,31,50"},
+          {"var": "$light", "hex": "#fff", "rgb": "255,255,255"},
+          {"var": "$gray-v2", "hex": "#f0f0f0", "rgb": "240,240,240"}
+        ]
       }
     ]
   },
@@ -131,7 +139,9 @@
       "text",
       "tramway",
       "twitter",
-      "velib"
+      "velib",
+      "search-v2",
+      "marker-v2"
     ]
   }
 }

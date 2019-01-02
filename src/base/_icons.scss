@@ -84,7 +84,9 @@ $icons: (
   text: "\e901",
   tramway: "\e925",
   twitter: "\e60a",
-  velib: "\e91a"
+  velib: "\e91c",
+  search-v2: "\e91a",
+  marker-v2: "\e91b",
 );
 
 @mixin icon($name) {

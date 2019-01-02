@@ -38,6 +38,52 @@
   }
 }
 
+.home .treize-list {
+  min-height: 350px;
+  ul {
+    border:0;
+    padding:0;
+    margin:0;
+    li.treize-list-card-item {
+      min-height: 350px;
+      &:first-child {
+        position:relative;
+        &:after {
+          text-transform:uppercase;
+          color:$black;
+          position:absolute;
+          top: 2rem;
+          left:0rem;
+          width: auto;
+          padding: 1rem 2rem 1rem 1rem;
+          z-index: 2;
+          border:2px solid $black;
+          border-left:0;
+          content:"photos";
+          letter-spacing: .4rem;
+          font-weight: bold;
+          font-family: 'Poppins',sans-serif;
+        }
+        &:before {
+          text-transform: uppercase;
+          color: #000;
+          position: absolute;
+          top: 2rem;
+          left: -5.8rem;
+          width: auto;
+          padding: 1rem 1rem 1rem 2rem;
+          z-index: 2;
+          border: 2px solid #000;
+          content: "13";
+          letter-spacing: .4rem;
+          font-weight: bold;
+          font-family: 'Poppins',sans-serif;
+        }
+      }
+    }
+  }
+}
+
 
 @include small {
   .treize-list {
@@ -45,7 +91,14 @@
       li.treize-list-card-item {
         width: 100%;
         float:none;
-        display: block;
+        display: none;
+        &:first-child {
+          display:block;
+          &:after,
+          &:before {
+            display:none;
+          }
+        }
       }
     }
   }

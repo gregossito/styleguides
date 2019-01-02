@@ -10,7 +10,7 @@
   width: 100%;
 
   .layout-wrapper.jumbotron-content {
-    border-left: 6px solid $color-tertiary;
+    border-left: 0;
     color: $white;
     padding: 5px 24px 3px 24px;
     @include large-and-medium {
@@ -20,15 +20,7 @@
 
   &:not(.no-overlay) {
     .jumbotron-wrapper:after {
-      background: $color-primary; /* Old browsers */
-      background: -moz-linear-gradient(left, $color-primary 0%, transparent 100%); /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, right top, color-stop(0%,$color-primary), color-stop(100%,transparent)); /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(left, $color-primary 0%,transparent 100%); /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(left, $color-primary 0%,transparent 100%); /* Opera 11.10+ */
-      background: -ms-linear-gradient(left, $color-primary 0%,transparent 100%); /* IE10+ */
-      background: linear-gradient(to right, $color-primary 0%,transparent 100%); /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-primary', endColorstr='transparent',GradientType=1 ); /* IE6-8 */
-
+      background: $secondary-v2; 
       content: "";
       display: block;
       height: 100%;

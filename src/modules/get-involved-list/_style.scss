@@ -89,37 +89,50 @@
 
   // modifiers
   &.red {
-    background-color: $get-involved-red;
+    // background-color: $get-involved-red;
+    background-color: $primary-v2;
     color: $white;
     &.hand:after {
       background-image: url('../modules/get-involved-list/yellow-hand.svg');
     }
   }
   &.yellow {
-    background-color: $get-involved-yellow;
+    // background-color: $get-involved-yellow;
+    background-color: $yellow-v2;
+    color: $white;
     &.hand:after {
       background-image: url('../modules/get-involved-list/blue-hand.svg');
     }
   }
   &.green {
-    background-color: $get-involved-green;
+    // background-color: $get-involved-green;
+    background-color: $green-v2;
     color: $white;
     &.hand:after {
       background-image: url('../modules/get-involved-list/yellow-hand.svg');
     }
   }
   &.blue {
-    background-color: $get-involved-blue1;
+    // background-color: $get-involved-blue1;
+    background-color: $secondary-v2;
     color: $white;
     &.hand:after {
       background-image: url('../modules/get-involved-list/red-hand.svg');
     }
   }
   &.light-blue {
-    background-color: $get-involved-blue2;
+    background-color: $teal-v2;
+    color: $white;
     &.hand:after {
       background-image: url('../modules/get-involved-list/green-hand.svg');
     }
+  }
+
+  .button {
+    background-color: $white;
+    color: $dark;
+    font-weight: 700;
+    &:after {background-color: darken($white, 6%);}
   }
 
   .get-involved-list-item-category {

@@ -78,17 +78,29 @@
     }
   }
 
-  @include large {
+  @include large-and-medium {
     .layout-wrapper {
-      padding-left: 0;
-      padding-right: 0;
-      width: $large-grid-width;
 
       .heading,
       &.layout-outside {
         left: -$offset-heading;
         position: relative;
       }
+    }
+  }
+
+
+  @include large {
+    .layout-wrapper {
+      padding-left: 0;
+      padding-right: 0;
+      width: $large-grid-width;
+
+      // .heading,
+      // &.layout-outside {
+      //   left: -$offset-heading;
+      //   position: relative;
+      // }
     }
   }
 

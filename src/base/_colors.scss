@@ -1,4 +1,3 @@
-
 $color-primary   : #DF225A;
 $color-secondary : #0C518A;
 $color-tertiary  : #F8E273;
@@ -72,3 +71,23 @@ $home-cat-blue1   : #3EC2DE;
 $home-cat-blue2   : #D7EDF2;
 $home-cat-green   : #42A769;
 $home-cat-yellow  : #F8C243;
+
+// v2
+$dark         : #071F32;
+$light        : #FFF;
+$gray-v2      : #F0F0F0;
+$primary-v2   : #DC3545;
+$secondary-v2 : #354BCF;
+$green-v2     : #30E77D;
+$orange-v2    : #FF3300;
+$teal-v2      : #25DCCC;
+$yellow-v2    : #FFCD00;
+// $red-v2       : #FB394A;
+
+.color-v2-primary-background   { background-color: $primary-v2; }
+.color-v2-secondary-background { background-color: $secondary-v2; }
+.color-v2-green-background     { background-color: $green-v2; }
+.color-v2-orange-background    { background-color: $orange-v2; }
+.color-v2-teal-background      { background-color: $teal-v2; }
+.color-v2-yellow-background    { background-color: $yellow-v2; }
+// .color-v2-red-background       { background-color: $red-v2; }

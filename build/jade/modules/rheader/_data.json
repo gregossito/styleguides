@@ -19,12 +19,12 @@
         "buttons": {
           "search": {
             "href": "#",
-            "icon": "search",
+            "icon": "search-v2",
             "text": "Recherche"
           },
           "around": {
             "href": "/equipements/",
-            "icon": "marker",
+            "icon": "marker-v2",
             "text": "Autour de moi"
           },
           "menu": {
@@ -34,7 +34,7 @@
         },
         "navigation_label": "navigation principale",
         "items": [
-          {"href": "#", "text": "Services et infos pratiques", "onclick": "return tag.click.send({elem:this, name:'services-et-infos-pratiques', level2:'services-et-infos-pratiques', chapter1: 'Home', type:'navigation'});"},
+          {"href": "#", "text": "Services et infos pratiques", "onclick": "return tag.click.send({elem:this, name:'services-et-infos-pratiques', level2:'services-et-infos-pratiques', chapter1: 'Home', type:'navigation'});"},
           {"href": "#", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
           {"href": "#", "text": "Municipalité"},

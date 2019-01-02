@@ -25,6 +25,7 @@ Paris.rheader = (function(){
         scrollMonitor,
         lastScrollY = 0,
         mobileNavOpen = false,
+        $fixedTopNotice,
         hasFixedTopNotice = false
       ;
 
@@ -35,7 +36,8 @@ Paris.rheader = (function(){
       $buttonSearch = $el.find('.rheader-button-search');
       $mainSearch = $('#main-search');
 
-      hasFixedTopNotice = Boolean($('.notice.top.fixed').length);
+      $fixedTopNotice = $('.notice.top.fixed');
+      hasFixedTopNotice = Boolean($fixedTopNotice.length);
 
       PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableMobileNav);
       PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableMobileNav);
@@ -102,11 +104,21 @@ Paris.rheader = (function(){
           return;
         }
         $el.toggleClass('folded', down);
+
+        if (hasFixedTopNotice) {
+          $fixedTopNotice.toggleClass('folded', down);
+        }
       }
       lastScrollY = data.scrollTop;
     }
 
-    function unfold(){$el.removeClass('folded');}
+    function unfold(){
+      $el.removeClass('folded');
+
+      if (hasFixedTopNotice) {
+        $fixedTopNotice.removeClass('folded');
+      }
+    }
 
     // fix or unfix
     function fix() {$el.addClass('fixed');}
