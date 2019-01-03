@@ -2288,7 +2288,7 @@ body {
   background-clip: padding-box; }
 
 .marker-cluster div {
-  background-color: #0924fa;
+  background-color: #354BCF;
   color: #FFF;
   width: 40px;
   height: 40px;
@@ -2298,7 +2298,7 @@ body {
   -webkit-transform: background-color 0.2s ease;
           transform: background-color 0.2s ease; }
   .marker-cluster div:hover, .marker-cluster div:focus {
-    background-color: #0A4770; }
+    background-color: #354BCF; }
 
 .marker-cluster span {
   line-height: 40px; }
@@ -3034,9 +3034,9 @@ http://flickity.metafizzy.co
   overflow: hidden;
   position: relative; }
   .is-open-true .card-image {
-    background-color: #43B57E; }
+    background-color: #3ECD2E; }
   .is-open-false .card-image {
-    background-color: #AF2258; }
+    background-color: #DC3545; }
   .card-image.no-img:before {
     content: "";
     position: absolute;
@@ -3060,9 +3060,9 @@ http://flickity.metafizzy.co
   position: relative;
   padding: 20px; }
   .card-content .open {
-    color: #43B57E; }
+    color: #3ECD2E; }
   .card-content .close {
-    color: #AF2258; }
+    color: #DC3545; }
 
 .card-category {
   color: #0924fa;
@@ -11325,6 +11325,8 @@ http://flickity.metafizzy.co
       padding-bottom: 40px;
       border-bottom: 1px solid #CCC;
       position: relative; }
+      .layout-stack .layout-main > .layout-content.layout-separate-after.color-v2-secondary-background {
+        border-bottom: 0; }
     .layout-stack .layout-main > .layout-content.layout-small-padding {
       padding-top: 17px; }
       .layout-stack .layout-main > .layout-content.layout-small-padding.layout-separate-after {

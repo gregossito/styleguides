@@ -101,10 +101,10 @@
   position: relative;
 
   .is-open-true & {
-    background-color: $green1;
+    background-color: $green-v2;
   }
   .is-open-false & {
-    background-color: $color-primary-variant;
+    background-color: $primary-v2;
   }
 
   &.no-img {
@@ -137,8 +137,8 @@
   position: relative;
   padding: 20px;
 
-  .open {color: $green1;}
-  .close {color: $color-primary-variant;}
+  .open {color: $green-v2;}
+  .close {color: $primary-v2;}
 }
 
 .card-category {

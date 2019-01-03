@@ -24,6 +24,9 @@
       padding-bottom: 40px;
       border-bottom: 1px solid $grayCC;
       position: relative;
+      &.color-v2-secondary-background {
+        border-bottom:0;
+      }
     }
 
     &.layout-small-padding {

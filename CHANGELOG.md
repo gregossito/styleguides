@@ -9,6 +9,11 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.15.2 (2019-01-03)
+* modules `block-map` : fix colors ico
+* layout `stack` : remove border-bottom layout-separate-after with secondary-v2
+* modules `card`: fix colors
+
 ## 1.15.1 (2019-01-03)
 * colors scss : add blue
 * modules `rheader` : height top notice

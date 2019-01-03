@@ -100,7 +100,7 @@
   background-clip: padding-box;
 }
 .marker-cluster div {
-  background-color: $color-secondary;
+  background-color: $secondary-v2;
   color: $white;
   width: 40px;
   height: 40px;
@@ -112,7 +112,7 @@
 
   &:hover,
   &:focus {
-    background-color: $color-secondary-variant;
+    background-color: $secondary-v2;
   }
 }
 .marker-cluster span {
