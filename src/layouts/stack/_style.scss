@@ -27,8 +27,12 @@
     }
 
     &.layout-small-padding {
-      padding-top: 25px;
-      &.layout-separate-after {padding-bottom: 25px;}
+      // padding-top: 25px;
+      padding-top: 17px;
+      &.layout-separate-after {
+        // padding-bottom: 25px;
+        padding-bottom: 17px;
+      }
     }
 
     &.layout-padding-after {
