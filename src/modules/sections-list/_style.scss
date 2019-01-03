@@ -242,7 +242,7 @@
     .sections-list-item {
 
       &:nth-child(1),
-      &:nth-child(8),
+      &:nth-child(4),
       &:nth-child(10),
       &:nth-child(11),
       &:nth-child(13) {
@@ -260,15 +260,15 @@
           }
 
           &:hover {
-            .sections-list-button-text {
-              color: $dark;
+            .sections-list-button-text,
+            .sections-list-button-title {
+              color: $light;
             }
           }
         }
       }
 
       &:nth-child(2),
-      &:nth-child(4),
       &:nth-child(7),
       &:nth-child(16) {
 
@@ -277,7 +277,7 @@
           html.no-js &,
           html.no-touchevents & {
             &:before {
-              background-color: $teal-v2;
+              background-color: $blue-v2;
             }
           }
 
@@ -294,6 +294,7 @@
       }
 
       &:nth-child(5),
+      &:nth-child(8),
       &:nth-child(12),
       &:nth-child(14) {
 
@@ -406,7 +407,7 @@
 
       .sections-list-button {
         &:before {
-          background-color: $teal-v2;
+          background-color: $blue-v2;
         }
 
        .sections-list-button-wrapper {

@@ -22,7 +22,7 @@
     top: 20px;
     transition: .3s ease transform;
     &:before{
-      color: $color-secondary;
+      color: $secondary-v2;
       font-size: 2rem;
     }
   }
@@ -33,7 +33,7 @@
   }
 
   .accordion-item-title {
-    color: $color-secondary;
+    color: $secondary-v2;
     display: block;
     font-size: 1.6rem;
     font-weight: 500;

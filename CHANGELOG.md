@@ -9,8 +9,11 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
-## 1.15.1 (coming soon)
-
+## 1.15.1 (2019-01-03)
+* colors scss : add blue
+* modules `rheader` : height top notice
+* modules `sections-list` : fix colors 
+* component `accordion` : fix color 
 * updates for v2 in modules : `breadcrumb`,
 
 ## 1.15.0 (2019-01-02)
