@@ -18,7 +18,6 @@
 
   & + .breadcrumbs-item:before {
     @include icon(arrow-light-right);
-    color: $light;
     font-size: 1.7rem;
     margin-right: 10px;
     position: relative;
@@ -27,8 +26,8 @@
   }
 
   > a {
-    border-bottom: 1px solid $light;
-    color: $light;
+    border-bottom: 1px solid $dark;
+    color: $dark;
     display: inline-block;
     line-height: 2rem;
     padding: 2px 0;
@@ -37,7 +36,7 @@
     transition: all 0.35s ease;
 
     &:after {
-      background-color: $dark;
+      background-color: $primary-v2;
       bottom: -1px;
       content: "";
       display: block;
@@ -49,7 +48,7 @@
     }
 
     &:hover {
-      color: $dark;
+      color: $primary-v2;
       &:after {
         width: 100%;
       }
