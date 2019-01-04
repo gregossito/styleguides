@@ -883,7 +883,7 @@ body.rheader-mobile-nav-open {
   .notice.top.fixed {
     & + .rheader.fixed + .layout-main > .layout-content:first-child,
     & + .rheader + .quick-access + .layout-main > .layout-content:first-child {
-      padding-top: $rheader-height-medium;
+      padding-top: $rheader-height-medium + $notice-height;
     }
   }
 }
