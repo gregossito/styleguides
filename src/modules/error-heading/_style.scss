@@ -33,20 +33,13 @@
   position: relative;
   top: 40px;
   width: 144px;
+  display: none;
 }
 .error-heading-logo-nef {
-  background: url('../modules/error-heading/nef.svg') center center no-repeat;
-  background-size: contain;
-  display: block;
-  height: 80px;
-  right: 0;
-  margin-right: 25px;
-  position: absolute;
-  top: 0;
-  width: 45px;
+  display: none
 }
 .error-heading-logo-paris {
-  border-left: 4px solid $yellow1;
+  border-left: 0;
   display: block;
   font-size: 4rem;
   line-height: 8rem;

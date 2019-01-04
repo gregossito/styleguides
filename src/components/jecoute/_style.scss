@@ -1,5 +1,5 @@
 .component-jecoute {
-  border: 5px solid $color-secondary;
+  border: 5px solid $secondary-v2;
   border-top: none;
   clear: both;
 
@@ -14,17 +14,17 @@
     font-weight: 300;
 
     &.thanks {
-      color: $color-secondary;
+      color: $secondary-v2;
       font-weight: 500;
     }
     &.error {
-      color: $color-primary;
+      color: $primary-v2;
       font-weight: 500;
     }
   }
 
   .text-error {
-    color: $color-primary;
+    color: $primary-v2;
   }
 
   .jecoute-title {
@@ -36,7 +36,7 @@
       &:before {
         content: "";
         display: flex;
-        border-top: 5px solid $color-secondary;
+        border-top: 5px solid $secondary-v2;
         padding-bottom: 30px;
       }
 
@@ -50,7 +50,7 @@
     }
 
     > h2 {
-      color: $color-secondary;
+      color: $secondary-v2;
       font-size: 1.7rem;
       font-weight: 500;
       margin: 0;
@@ -83,7 +83,7 @@
       line-height: 2.2rem;
 
       a:not(.button) {
-        color: $color-secondary;
+        color: $secondary-v2;
         text-decoration: underline;
 
         &:hover { text-decoration: none; }

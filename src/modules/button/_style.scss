@@ -90,10 +90,10 @@
   }
 
   &.tertiary {
-    background-color: $green-v2;
-    color: $gray1A;
+    background-color: $primary-v2;
+    color: $white;
     padding: 15px;
-    &:after {background-color: darken($green-v2, 10%);}
+    &:after {background-color: darken($primary-v2, 10%);}
   }
 
   &.white {
@@ -105,7 +105,7 @@
       &:hover, &:focus {color: $black;}
       &:after {background-color: $grayEE;}
       &.active {color: $white;}
-      &.active:after {background-color: $green1;}
+      &.active:after {background-color: $secondary-v2;}
     }
   }
 

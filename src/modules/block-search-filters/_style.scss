@@ -58,7 +58,7 @@
 
       &:hover,
       &:focus {
-        color: $color-primary;
+        color: $secondary-v2;
       }
 
       &.is-disabled {
@@ -72,7 +72,7 @@
   &-more {
     background: none;
     border: 0;
-    color: $color-secondary;
+    color: $secondary-v2;
     cursor: pointer;
     display: inline-block;
     font-size: 13px;
@@ -82,7 +82,7 @@
 
     &:hover,
     &:focus {
-      color: $color-primary;
+      color: $secondary-v2;
     }
   }
 
@@ -99,7 +99,7 @@
       .ais-header {
         display: block;
         margin-bottom: 10px;
-        color: $color-secondary;
+        color: $secondary-v2;
         font-weight: 400;
       }
 

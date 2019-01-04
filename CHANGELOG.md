@@ -9,6 +9,13 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.15.3 (2019-01-04)
+* modules `block-map` : fix ico conservatoires, jobs
+* component `jecoute`: fix colors border
+* modules `buttons` : fix colors
+* modules `error-heading` : remove title logo
+* modules `quick-access`, `search-field`, `search-push`, `share` : fix colors
+
 ## 1.15.2 (2019-01-03)
 * modules `block-map` : fix colors ico
 * layout `stack` : remove border-bottom layout-separate-after with secondary-v2

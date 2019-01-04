@@ -2466,7 +2466,7 @@ http://flickity.metafizzy.co
   text-align: center; }
 
 .block-search-title {
-  color: #0C518A;
+  color: #354BCF;
   float: left;
   font-size: 18px;
   margin: 0; }
@@ -2582,7 +2582,7 @@ http://flickity.metafizzy.co
   font-size: 1.3rem;
   padding: 5px; }
   .block-search-filters-autocomplete-item:hover, .block-search-filters-autocomplete-item:focus {
-    color: #DF225A; }
+    color: #354BCF; }
   .block-search-filters-autocomplete-item.is-disabled {
     color: #000;
     cursor: default;
@@ -2591,7 +2591,7 @@ http://flickity.metafizzy.co
 .block-search-filters-more {
   background: none;
   border: 0;
-  color: #0C518A;
+  color: #354BCF;
   cursor: pointer;
   display: inline-block;
   font-size: 13px;
@@ -2599,7 +2599,7 @@ http://flickity.metafizzy.co
   padding: 5px 0;
   text-decoration: underline; }
   .block-search-filters-more:hover, .block-search-filters-more:focus {
-    color: #DF225A; }
+    color: #354BCF; }
 
 .block-search-filters-secondary {
   display: -webkit-box;
@@ -2614,7 +2614,7 @@ http://flickity.metafizzy.co
     .block-search-filters-secondary-item .ais-header {
       display: block;
       margin-bottom: 10px;
-      color: #0C518A;
+      color: #354BCF;
       font-weight: 400; }
     .block-search-filters-secondary-item input[type="checkbox"] {
       display: inline-block;
@@ -2776,11 +2776,11 @@ http://flickity.metafizzy.co
   text-transform: uppercase; }
 
 .button.tertiary, .tertiary.expandmore__button {
-  background-color: #3ECD2E;
-  color: #1A1A1A;
+  background-color: #DC3545;
+  color: #FFF;
   padding: 15px; }
   .button.tertiary:after, .tertiary.expandmore__button:after {
-    background-color: #31a325; }
+    background-color: #bd2130; }
 
 .button.white, .white.expandmore__button {
   background-color: #FFF;
@@ -2794,7 +2794,7 @@ http://flickity.metafizzy.co
   .button.white.stateful.active, .white.stateful.active.expandmore__button {
     color: #FFF; }
   .button.white.stateful.active:after, .white.stateful.active.expandmore__button:after {
-    background-color: #43B57E; }
+    background-color: #354BCF; }
 
 .button.closable.small, .closable.small.expandmore__button {
   padding-right: 32px; }
@@ -3281,21 +3281,14 @@ http://flickity.metafizzy.co
   left: 70px;
   position: relative;
   top: 40px;
-  width: 144px; }
+  width: 144px;
+  display: none; }
 
 .error-heading-logo-nef {
-  background: url("../modules/error-heading/nef.svg") center center no-repeat;
-  background-size: contain;
-  display: block;
-  height: 80px;
-  right: 0;
-  margin-right: 25px;
-  position: absolute;
-  top: 0;
-  width: 45px; }
+  display: none; }
 
 .error-heading-logo-paris {
-  border-left: 4px solid #FAE46A;
+  border-left: 0;
   display: block;
   font-size: 4rem;
   line-height: 8rem;
@@ -6055,7 +6048,7 @@ html.no-touchevents .news-card-counter {
       position: fixed;
       z-index: 1200; }
       .rheader + .quick-access.searching:after {
-        background-color: #d1e0e5; }
+        background-color: #eeeeee; }
     .quick-access:after {
       transition: background-color 0.5s ease;
       content: "";
@@ -6070,7 +6063,7 @@ html.no-touchevents .news-card-counter {
               transform: translate(0);
       height: 520px; }
       .quick-access.searching:after {
-        background-color: rgba(226, 233, 237, 0.9); }
+        background-color: rgba(238, 238, 238, 0.9); }
       .quick-access.searching .quick-access-wrapper {
         -webkit-transform: translateY(-115px);
                 transform: translateY(-115px); }
@@ -6078,7 +6071,7 @@ html.no-touchevents .news-card-counter {
         opacity: 1;
         -webkit-transform: translateY(0);
                 transform: translateY(0);
-        background-color: #E5EBEF; }
+        background-color: #FFF; }
     .quick-access .notice {
       z-index: 1; }
   .quick-access-background {
@@ -6115,7 +6108,7 @@ html.no-touchevents .news-card-counter {
     margin: 10px 0 35px;
     padding: 0; }
     .quick-access-results > ul > li {
-      border-bottom: 1px solid rgba(12, 81, 138, 0.2); }
+      border-bottom: 1px solid rgba(238, 238, 238, 0.2); }
       .quick-access-results > ul > li a {
         color: #333;
         display: block;
@@ -6123,7 +6116,8 @@ html.no-touchevents .news-card-counter {
         position: relative;
         text-decoration: none; }
         .quick-access-results > ul > li a:hover {
-          background-color: #F8E273; }
+          background-color: transparent;
+          font-weight: bold; }
         .quick-access-results > ul > li a > .title,
         .quick-access-results > ul > li a > .section {
           display: block;
@@ -7444,7 +7438,7 @@ body.rheader-mobile-nav-open {
     padding: 0 10px;
     width: calc(100% - 105px); }
   .search-field.block .search-field-submit {
-    background-color: #0C518A;
+    background-color: #354BCF;
     color: #FFF;
     text-transform: uppercase;
     width: 95px; }
@@ -7540,7 +7534,7 @@ body.rheader-mobile-nav-open {
   border-bottom: 0; }
 
 .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-  color: #DF225A; }
+  color: #DC3545; }
 
 .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
   font-style: normal;
@@ -7551,7 +7545,7 @@ body.rheader-mobile-nav-open {
 
 .algolia-autocomplete .ad-example-header {
   background-color: #F2F2F2;
-  color: #0C518A;
+  color: #354BCF;
   font-weight: 400;
   padding: 10px; }
 
@@ -7687,7 +7681,7 @@ body.rheader-mobile-nav-open {
       padding: 10px; } }
 
 .search-push {
-  background-color: #FFCD00;
+  background-color: #F2F2F2;
   background-position: 92% 100%;
   min-height: 160px;
   overflow: hidden;
@@ -8448,8 +8442,8 @@ body.rheader-mobile-nav-open {
   transition: all 0.1s ease;
   width: 40px; }
   .share.circles a:hover {
-    background-color: #0A4770;
-    border-color: #0A4770;
+    background-color: #354BCF;
+    border-color: #354BCF;
     color: #FFF; }
   .share.circles a .icon-facebook {
     position: relative;
@@ -9863,7 +9857,7 @@ http://flickity.metafizzy.co
     max-height: none; }
 
 .component-jecoute {
-  border: 5px solid #0C518A;
+  border: 5px solid #354BCF;
   border-top: none;
   clear: both; }
   .component + .component-jecoute {
@@ -9875,14 +9869,14 @@ http://flickity.metafizzy.co
     font-weight: 300; }
     .component-jecoute p em.thanks,
     .component-jecoute .jecoute-message.thanks {
-      color: #0C518A;
+      color: #354BCF;
       font-weight: 500; }
     .component-jecoute p em.error,
     .component-jecoute .jecoute-message.error {
-      color: #DF225A;
+      color: #DC3545;
       font-weight: 500; }
   .component-jecoute .text-error {
-    color: #DF225A; }
+    color: #DC3545; }
   html.flexbox .component-jecoute .jecoute-title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9895,7 +9889,7 @@ http://flickity.metafizzy.co
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      border-top: 5px solid #0C518A;
+      border-top: 5px solid #354BCF;
       padding-bottom: 30px; }
     html.flexbox .component-jecoute .jecoute-title:before {
       width: 40px; }
@@ -9904,7 +9898,7 @@ http://flickity.metafizzy.co
           -ms-flex-positive: 1;
               flex-grow: 1; }
   .component-jecoute .jecoute-title > h2 {
-    color: #0C518A;
+    color: #354BCF;
     font-size: 1.7rem;
     font-weight: 500;
     margin: 0;
@@ -9929,7 +9923,7 @@ http://flickity.metafizzy.co
       font-size: 1.5rem;
       line-height: 2.2rem; }
       .component-jecoute .jecoute-form p a:not(.button):not(.expandmore__button) {
-        color: #0C518A;
+        color: #354BCF;
         text-decoration: underline; }
         .component-jecoute .jecoute-form p a:not(.button):not(.expandmore__button):hover {
           text-decoration: none; }
