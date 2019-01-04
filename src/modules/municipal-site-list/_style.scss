@@ -21,7 +21,7 @@
     display: inline-block;
 
     .button {
-      background: $grayF2;
+      background: $gray-v2;
       color: $secondary-v2;
       font-size: 1.6rem;
       line-height: 6.4rem;
@@ -38,7 +38,6 @@
 
       &:hover, &:focus {
         color: $white;
-        background-color:$secondary-v2;
       }
     }
   }

@@ -21,9 +21,9 @@
         border-radius: 5px;
         font-size: 1.8rem;
         text-align: center;
-        background: $grayF2;
+        background: $gray-v2;
         line-height: 4rem;
-        color: $black;
+        color: $dark;
       }
       &:first-child {
         > a,
@@ -41,7 +41,7 @@
       &.previous, &.next {
         > a,
         > span {
-          background: $orange-v2;
+          background: $primary-v2;
           color: $white;
         }
       }
@@ -68,7 +68,7 @@
       &:hover,
       &:focus {
         color: $white;
-        background-color: $dark;
+        background-color: $secondary-v2;
       }
     }
 
@@ -77,7 +77,7 @@
       &,
       &:hover,
       &:focus {
-        background: $dark;
+        background: $secondary-v2;
         color: $white;
         cursor: default;
         pointer-events: none;
@@ -92,7 +92,7 @@
       > a,
       > a:hover,
       > a:focus {
-        background-color: transparentize($grayF2, 0.8);
+        background-color: transparentize($gray-v2, 0.8);
         color: $gray66;
         cursor: default;
         pointer-events: none;
