@@ -24,7 +24,7 @@
   }
 
   tr > th {
-    background-color: $color-secondary-variant;
+    background-color: $secondary-v2;
     color: white;
     font-size: 1.5rem;
     font-weight: 500;
@@ -47,7 +47,7 @@
 
     &.emphasis {
       border: none;
-      color: $color-secondary-variant;
+      color: $dark;
       font-size: 1.5rem;
       font-weight: 500;
       padding: 10px 30px;
@@ -65,7 +65,7 @@
   // modifiers
   &.header-primary-color {
     tr > th {
-      background-color: $color-primary;
+      background-color: $primary-v2;
     }
   }
   &.text-align-left {
@@ -79,7 +79,7 @@
   tbody {
     tr:nth-child(even) {background-color: $grayF2;}
     tr:nth-child(odd) {background-color: $grayEE;}
-    tr.info {background-color: $light-blue;}
+    tr.info {background-color: $dark;}
   }
 
   tfoot {
