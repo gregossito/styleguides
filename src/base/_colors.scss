@@ -85,16 +85,13 @@ $yellow-v2    : #FFCD00;
 $blue-v2      : #31EEF3;
 // $red-v2       : #FB394A;
 
-.color-v2-primary-background   { background-color: $primary-v2; }
-.color-v2-secondary-background { background-color: $secondary-v2; }
-.color-v2-secondary-background.block-content-newsletter,
-.color-v2-secondary-background.block-content-jecoute,
-.color-v2-secondary-background.block-content-social,
-.color-secondary-background.color-v2-secondary-background { background-color: $dark; }
-
-.color-v2-green-background     { background-color: $green-v2; }
-.color-v2-orange-background    { background-color: $orange-v2; }
-.color-v2-teal-background      { background-color: $teal-v2; }
-.color-v2-yellow-background    { background-color: $yellow-v2; }
-.color-v2-blue-background      { background-color: $blue-v2; }
-// .color-v2-red-background       { background-color: $red-v2; }
+.color-v2-dark-background       { background-color: $dark; }
+.color-v2-light-background      { background-color: $light; }
+.color-v2-primary-background    { background-color: $primary-v2; }
+.color-v2-secondary-background  { background-color: $secondary-v2; }
+.color-v2-green-background      { background-color: $green-v2; }
+.color-v2-orange-background     { background-color: $orange-v2; }
+.color-v2-teal-background       { background-color: $teal-v2; }
+.color-v2-yellow-background     { background-color: $yellow-v2; }
+.color-v2-blue-background       { background-color: $blue-v2; }
+// .color-v2-red-background        { background-color: $red-v2; }
