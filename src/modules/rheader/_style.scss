@@ -115,7 +115,8 @@
     &:hover,
     &.active {
       // background: $color-primary-variant;
-      background: $light;
+      background: $dark;
+      color: $light;
     }
   }
 }
@@ -139,7 +140,7 @@
     background-color: $dark;
     display: block;
     font-size: 0;
-    height: 1px;
+    height: 2px;
     position: absolute;
     left: 20px;
     top: 30px;
@@ -154,11 +155,11 @@
       background-color: $dark;
       content: "";
       display: block;
-      height: 1px;
+      height: 2px;
       left: 0;
       position: absolute;
       top: 0;
-      transition: transform 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.3s ease;
       width: 20px;
     }
 
@@ -166,19 +167,37 @@
     &:after {transform: translateY(6px);}
   }
 
-  body.rheader-mobile-nav-open & {
-    &:hover {
-      // background: $color-primary;
-      background: $light;
-    }
+
+  &:hover {
 
     .rheader-button-text {
-      background-color: transparent;
+      background-color: $light;
+
+      &:before,
+      &:after {
+        background-color: $light;
+      }
+    }
+  }
+
+  body.rheader-mobile-nav-open & {
+    background: $dark;
+
+    // &:hover {
+    //   background: $color-primary;
+    // }
+
+    .rheader-button-text {
+      // background-color: transparent;
+      background-color: $light;
+      height: 0;
 
       &:before {
+        background-color: $light;
         transform: translateY(0px) rotate(45deg);
       }
       &:after {
+        background-color: $light;
         transform: translateY(0px) rotate(-45deg);
       }
     }
@@ -197,12 +216,12 @@ body.rheader-mobile-nav-open {
 .rheader-nav {display: none;}
 
 .rheader-nav-item {
-  // transition: background-color 3s ease;
+  transition: background-color .3s ease;
 
   &:hover,
   &:focus,
   &.current {
-    transition: background-color .5s ease;
+    transition: background-color .3s ease;
     background-color: $dark;
 
     a {
@@ -361,32 +380,42 @@ body.rheader-mobile-nav-open {
         color:$light;
       }
 
-      // modifiers
-      &.get-involved,
-      &.around,
-      &.account {
-        min-height: 80px;
-        border-top: 0;
-        text-align: center;
+      &:hover,
+      &:focus,
+      &.current {
+        background-color: $light;
 
         a {
-          line-height: 8rem;
-          color:$dark;
-        }
-        &:hover {
-          a {
-            color:$light;
-          }
+          color: $dark;
         }
       }
 
-      &.around {
-        background-color: $green1;
-        &:hover {background-color: darken($green1, 8);}
-      }
-      &.get-involved {
-        &:hover {background-color: $dark; }
-      }
+      // modifiers
+      // &.get-involved,
+      // &.around,
+      // &.account {
+      //   min-height: 80px;
+      //   border-top: 0;
+      //   text-align: center;
+
+      //   a {
+      //     line-height: 8rem;
+      //     color:$dark;
+      //   }
+      //   &:hover {
+      //     a {
+      //       color:$light;
+      //     }
+      //   }
+      // }
+
+      // &.around {
+      //   background-color: $green1;
+      //   &:hover {background-color: darken($green1, 8);}
+      // }
+      // &.get-involved {
+      //   &:hover {background-color: $dark; }
+      // }
     }
 
     .rheader-button-text {
@@ -536,7 +565,7 @@ body.rheader-mobile-nav-open {
 
   .rheader-nav {
     display: inline-block;
-    padding: 0 0 0 5px;
+    // padding: 0 0 0 5px;
     vertical-align: top;
 
     > ul {
@@ -572,7 +601,7 @@ body.rheader-mobile-nav-open {
         vertical-align: middle;
         text-align: center;
         line-height: 1.3em;
-        max-width: 140px;
+        max-width: 120px;
       }
     }
 

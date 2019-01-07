@@ -166,7 +166,7 @@ Paris.rheader = (function(){
         var $parent = $mainSearch.closest('.layout-content');
         if ($mainSearch.length) {
           var offset = $el.height();
-          offset += hasFixedTopNotice ? $('.notice.top.fixed').height() : 0;
+          offset += hasFixedTopNotice ? $fixedTopNotice.height() : 0;
 
           $parent.velocity("scroll",
             {
@@ -214,8 +214,16 @@ Paris.rheader = (function(){
         display: 'block',
         complete: function(){
           if (shouldTranslateButtonMenu) {
+            var translateOffset = 0;
+            if (!$el.hasClass('fixed')) {
+              translateOffset += $(document).scrollTop();
+            }
+            if (hasFixedTopNotice) {
+              translateOffset += $fixedTopNotice.height();
+            }
+
             // $buttonMenu.css('transform', 'translateY(-' + (60 - $(document).scrollTop()) + 'px)').show();
-            $buttonMenu.css('transform', 'translateY(-60px)').show();
+            $buttonMenu.css('transform', 'translateY(-' + translateOffset + 'px)').show();
           }
         }
       });
