@@ -47,7 +47,7 @@
     }
 
     &.is-closed {
-      color: $color-primary;
+      color: $primary-v2;
     }
   }
 
@@ -65,7 +65,7 @@
       transition: all 0.35s ease;
 
       &:after {
-        background-color: $color-primary;
+        background-color: $primary-v2;
         bottom: -1px;
         content: "";
         display: block;
@@ -77,7 +77,7 @@
       }
 
       &:hover {
-        color: $color-primary;
+        color: $primary-v2;
         &:after {width: 100%;}
       }
     }
@@ -87,7 +87,7 @@
     line-height: 2.4rem;
 
     .icon {
-      color: $color-primary;
+      color: $primary-v2;
       font-size: 2rem;
       margin-right: 1rem;
     }
@@ -106,7 +106,7 @@
 
   .opening-hours-other {
     &-title {
-      color: $color-secondary;
+      color: $secondary-v2;
       margin-bottom: 2rem;
     }
   }

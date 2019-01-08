@@ -22,8 +22,10 @@
 
   /* modifier "more" */
   &.more {
-    background: $yellow1;
-    color: $black;
+    // background: $yellow1;
+    background: $gray-v2;
+    // color: $black;
+    color: $dark;
     display: table;
     padding: 12px 18px;
 
@@ -143,7 +145,7 @@
           }
 
           .sections-list-button-text {
-            color: $white;
+            // color: $white;
             color: $dark;
           }
         }
@@ -161,7 +163,7 @@
           }
 
           .sections-list-button-text {
-            color: $white;
+            // color: $white;
             color: $dark;
           }
         }
@@ -244,14 +246,36 @@
       &:nth-child(1),
       &:nth-child(4),
       &:nth-child(10),
-      &:nth-child(11),
-      &:nth-child(13) {
+      &:nth-child(11) {
         .sections-list-button {
 
           html.no-js &,
           html.no-touchevents & {
             &:before {
               background-color: $primary-v2;
+            }
+          }
+
+          .sections-list-button-text {
+            color: $dark;
+          }
+
+          &:hover {
+            .sections-list-button-text,
+            .sections-list-button-title {
+              color: $light;
+            }
+          }
+        }
+      }
+
+      &:nth-child(13) {
+        .sections-list-button {
+
+          html.no-js &,
+          html.no-touchevents & {
+            &:before {
+              background-color: $orange-v2;
             }
           }
 
@@ -460,7 +484,7 @@
       html.no-js,
       html.no-touchevents {
         &:hover:after {
-          color: $grayF2;
+          // color: $grayF2;
           color: $dark;
         }
       }

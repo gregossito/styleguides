@@ -14,10 +14,12 @@
 
   .block-aside-item {
     > a {
-      color: $black;
+      // color: $black;
+      color: $dark;
       text-decoration: none;
       &:hover {
-        color: $color-primary;
+        // color: $color-primary;
+        color: $primary-v2;
         text-decoration: underline;
       }
     }
@@ -33,7 +35,8 @@
     // modifiers
     &.has-icon {
       .icon {
-        color: $color-secondary;
+        // color: $color-secondary;
+        color: $secondary-v2;
         font-size: 2rem;
         margin-right: 8px;
         vertical-align: top;
@@ -45,7 +48,10 @@
 
         &:hover {
           text-decoration: none;
-          .icon {color: $color-primary;}
+          .icon {
+            // color: $color-primary;
+            color: $primary-v2;
+          }
         }
       }
 

@@ -25,7 +25,7 @@
   overflow: hidden;
 
   &:hover {
-    background-color: lighten($yellow-v2, 18%);
+    background-color: lighten($gray99, 18%);
   }
 
   // modifiers
@@ -81,7 +81,7 @@
   }
 
   .anchors-list-progress {
-    background-color: $yellow-v2;
+    background-color: $grayCC;
     display: block;
     height: 100%;
     position: absolute;

@@ -4,7 +4,7 @@
   padding-left: 22px;
 
   .sharelines-title {
-    color: $color-secondary-variant;
+    color: $secondary-v2;
     font-size: 2.6rem;
     font-weight: 700;
     line-height: 3.2rem;
@@ -29,7 +29,7 @@
     &:hover {
       .share a {
         border-color: $grayCC;
-        &:hover {border-color: $color-secondary-variant;}
+        &:hover {border-color: $secondary-v2;}
       }
     }
   }

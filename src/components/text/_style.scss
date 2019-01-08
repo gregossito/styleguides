@@ -41,7 +41,7 @@
   }
 
   h4 {
-    color: $color-secondary;
+    color: $dark;
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 2.8rem;
@@ -161,7 +161,7 @@
   }
 
   a:not(.button) {
-    color: $red1;
+    color: $primary-v2;
   }
 
   .component-postit + & > p:first-child,
@@ -184,7 +184,7 @@
     }
 
     p {
-      color: $color-primary;
+      color: $primary-v2;
       font-weight: 700;
       font-size: 2rem;
 
@@ -193,7 +193,7 @@
         content: " ";
         width: 7rem;
         height: 1rem;
-        background: $color-primary;
+        background: $primary-v2;
         position: relative;
         bottom: -2rem;
       }

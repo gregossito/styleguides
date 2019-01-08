@@ -53,25 +53,6 @@
   &:after {background-color: darken($secondary-v2, 10%);}
 }
 
-%button-black {
-  background-color: transparent;
-  padding:1rem 1.5rem;
-  border-radius:0;
-  letter-spacing:.5rem;
-  text-transform:uppercase;
-  font-size:1.1rem;
-  border:0.2rem solid black;
-  color:$black;
-  font-family: 'Poppins',sans-serif;
-  &:after {
-    background-color: darken(#333, 10%);
-    border-radius:0;
-  }
-  &:hover{
-    color:$white;
-  }
-}
-
 %button-action {
   font-size: 1.3rem;
   text-transform: uppercase;
@@ -85,15 +66,11 @@
     @extend %button-secondary;
   }
 
-  &.black {
-    @extend %button-black;
-  }
-
   &.tertiary {
-    background-color: $primary-v2;
-    color: $white;
+    background-color: $gray-v2;
+    color: $dark;
     padding: 15px;
-    &:after {background-color: darken($primary-v2, 10%);}
+    &:after {background-color: darken($gray-v2, 10%);}
   }
 
   &.white {
@@ -106,6 +83,25 @@
       &:after {background-color: $grayEE;}
       &.active {color: $white;}
       &.active:after {background-color: $secondary-v2;}
+    }
+  }
+
+  &.black {
+    background-color: transparent;
+    padding: 1rem 1.5rem;
+    border-radius: 0;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border: 0.2rem solid black;
+    color: $black;
+    font-family: 'Poppins',sans-serif;
+    &:after {
+      background-color: darken(#333, 10%);
+      border-radius: 0;
+    }
+    &:hover{
+      color: $white;
     }
   }
 
@@ -134,17 +130,17 @@
   }
 
   &.stateful {
-    background-color: $green-v2;
-    color: $secondary-v2;
+    background-color: $gray-v2;
+    color: $dark;
     padding: 15px;
     outline: 0;
-    &:after {background-color: $color-tertiary-variant;}
+    &:after {background-color: darken($gray-v2, 10%);}
     &.active:after {background-color: $secondary-v2;}
 
     &:hover, &:focus, &.active {
-      color: $white;
       &:after {width: 100%;}
     }
+    &.active { color: $white; }
     &[disabled], &.disabled {
       background-color: transparent;
       border: 1px solid $gray33;
@@ -175,11 +171,12 @@
   }
 
   &.marker {
-    background-color: $green1;
+    background-color: $green-v2;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 5rem;
-    &:after {background-color: darken($green1, 10%);}
+    color: $dark;
+    &:after {background-color: darken($green-v2, 10%);}
     .icon {
       font-size: 3rem;
       margin-right: 5px;
@@ -189,7 +186,7 @@
 
   &.white {
     background-color: $white;
-    color: $black;
+    color: $dark;
     &:after {background-color: $grayF2}
   }
 

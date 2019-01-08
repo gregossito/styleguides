@@ -20,7 +20,7 @@
   }
 
   .news-push-wrapper {
-    background: $color-primary;
+    background: $primary-v2;
     padding: 20px;
   }
 
@@ -36,7 +36,7 @@
       top: 0;
       right: -100px;
       bottom: 0;
-      background: $color-primary;
+      background: $primary-v2;
       width: 100px;
       height: 100%;
       position: absolute;
@@ -169,7 +169,7 @@
       }
 
       &:hover {
-        color: $color-primary;
+        color: $primary-v2;
         > span {
           left: 5px;
         }

@@ -125,12 +125,12 @@
 
     &.blue {
       .links-group-header a:after,
-      .links-group-item a:hover {background-color: $color-secondary-variant;}
+      .links-group-item a:hover {background-color: $gray99;}
     }
 
     &.red {
       .links-group-header a:after,
-      .links-group-item a:hover {background-color: $red1;}
+      .links-group-item a:hover {background-color: $gray99;}
     }
   }
 

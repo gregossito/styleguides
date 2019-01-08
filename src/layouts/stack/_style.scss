@@ -1,6 +1,8 @@
 .layout-stack {
-  background-color: $white;
-  color: $black;
+  // background-color: $white;
+  background-color: $light;
+  // color: $black;
+  color: $dark;
   width: 100%;
   overflow: hidden;
 
@@ -24,8 +26,11 @@
       padding-bottom: 40px;
       border-bottom: 1px solid $grayCC;
       position: relative;
+
+      &.color-secondary-background,
+      &.color-v2-dark-background,
       &.color-v2-secondary-background {
-        border-bottom:0;
+        border-bottom: none;
       }
     }
 

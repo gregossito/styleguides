@@ -26,7 +26,8 @@
       transition: all 0.35s ease;
 
       &:after {
-        background-color: $color-primary;
+        // background-color: $color-primary;
+        background-color: $primary-v2;
         bottom: -1px;
         content: "";
         display: block;
@@ -38,7 +39,8 @@
       }
 
       &:hover {
-        color: $color-primary;
+        // color: $color-primary;
+        color: $primary-v2;
         &:after {width: 100%;}
       }
     }
