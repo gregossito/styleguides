@@ -20,7 +20,7 @@
 
   &:not(.no-overlay) {
     .jumbotron-wrapper:after {
-      background: $secondary-v2; 
+      background: transparent; 
       content: "";
       display: block;
       height: 100%;

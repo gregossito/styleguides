@@ -802,7 +802,7 @@ body.rheader-mobile-nav-open {
 @media (min-width: $rheader-medium-min) {
   .rheader.fixed + .layout-main > .layout-content:first-child,
   .rheader + .quick-access + .layout-main > .layout-content:first-child {
-    background-color: $color-primary; // to prevent a white area below header (edge case)
+    background-color: $white; 
     padding-top: $rheader-height-medium;
   }
   .rheader.fixed + .layout-main > .layout-content.black-background:first-child {
