@@ -7,7 +7,7 @@
   }
 
   .form-item-label {
-    color: $color-secondary;
+    color: $secondary-v2;
     display: block;
     font-size: 1.6rem;
     font-weight: normal;
@@ -22,15 +22,15 @@
     margin-top: 5px;
     max-width: 385px;
 
-    &.error { color: $color-primary; }
+    &.error { color: $primary-v2; }
 
     td { text-align: left !important;  }
   }
 
   .form-message {
-    &.error {color: $color-primary;}
+    &.error {color: $primary-v2;}
     &.success {
-      background-color:$green1;
+      background-color:$green-v2;
       color: white;
       padding: 2rem 1rem;
       text-align: center;
@@ -43,7 +43,7 @@
   .form-item-matrix .matrix-item .matrix-item-text {
     &:after {
       @include icon(alert);
-      color: $color-primary;
+      color: $primary-v2;
       margin-left: 5px;
       opacity: 0;
       position: absolute;
@@ -57,7 +57,7 @@
 
   .form-item.error .form-item-label,
   .form-item-matrix .matrix-item.error .matrix-item-text {
-    color: $color-primary;
+    color: $primary-v2;
 
     &:after {
       opacity: 1;
@@ -67,7 +67,7 @@
   .form-item-text.form-item.error input,
   .form-item-textarea.form-item.error textarea,
   .form-item-select.form-item.error select {
-    border-color: $color-primary;
+    border-color: $primary-v2;
   }
   .form-item {
     input:invalid,
@@ -89,7 +89,7 @@
     transition: border 0.2s ease-in;
 
     &:focus {
-      border-color: $color-secondary;
+      border-color: $secondary-v2;
     }
   }
 
@@ -158,7 +158,7 @@
     }
 
     .matrix-item.error {
-      background-color: transparentize($color-primary, 0.9);
+      background-color: transparentize($primary-v2, 0.9);
     }
 
     table {

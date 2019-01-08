@@ -146,7 +146,7 @@ $sections-panel-subnav-offset: 200px;
     &:hover,
     &:focus,
     &.current {
-      color: $color-secondary;
+      color: $secondary-v2;
     }
 
     &.current {
@@ -250,7 +250,7 @@ $sections-panel-subnav-offset: 200px;
   }
   .sections-panel-back {
     box-shadow: inset -3px 0px 3px -2px transparentize($black, 0.9);
-    color: $color-secondary;
+    color: $secondary-v2;
     font-size: 2rem;
     height: 100%;
     position: absolute;

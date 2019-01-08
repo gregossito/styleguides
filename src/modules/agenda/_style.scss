@@ -22,7 +22,7 @@
   html.no-touchevents & {
     &:hover,
     &:focus {
-      background-color: $color-secondary;
+      background-color: $secondary-v2;
       transition: none;
       &,
       .news-item-category,
@@ -65,7 +65,7 @@
 }
 
 .news-item-category {
-  color: $color-secondary;
+  color: $secondary-v2;
 }
 
 .news-item-title {
@@ -114,14 +114,14 @@
         &.large {
           .news-card-image {
             &:after {
-              background: $color-secondary; /* Old browsers */
-              background: -moz-linear-gradient(left, $color-secondary 0%, transparent 100%); /* FF3.6+ */
-              background: -webkit-gradient(linear, left top, right top, color-stop(0%, $color-secondary), color-stop(100%, transparent)); /* Chrome,Safari4+ */
-              background: -webkit-linear-gradient(left, $color-secondary 0%, transparent 100%); /* Chrome10+,Safari5.1+ */
-              background: -o-linear-gradient(left, $color-secondary 0%, transparent 100%); /* Opera 11.10+ */
-              background: -ms-linear-gradient(left, $color-secondary 0%, transparent 100%); /* IE10+ */
-              background: linear-gradient(to right, $color-secondary 0%, transparent 100%); /* W3C */
-              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color-secondary', endColorstr='transparent', GradientType=1); /* IE6-8 */
+              background: $secondary-v2; /* Old browsers */
+              background: -moz-linear-gradient(left, $secondary-v2 0%, transparent 100%); /* FF3.6+ */
+              background: -webkit-gradient(linear, left top, right top, color-stop(0%, $secondary-v2), color-stop(100%, transparent)); /* Chrome,Safari4+ */
+              background: -webkit-linear-gradient(left, $secondary-v2 0%, transparent 100%); /* Chrome10+,Safari5.1+ */
+              background: -o-linear-gradient(left, $secondary-v2 0%, transparent 100%); /* Opera 11.10+ */
+              background: -ms-linear-gradient(left, $secondary-v2 0%, transparent 100%); /* IE10+ */
+              background: linear-gradient(to right, $secondary-v2 0%, transparent 100%); /* W3C */
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$secondary-v2', endColorstr='transparent', GradientType=1); /* IE6-8 */
             }
           }
         }
@@ -164,15 +164,15 @@
       height: 4rem;
       span {
         background:$grayF2;
-        color:$color-secondary-variant;
+        color:$secondary-v2;
         padding: 1.5rem 0rem 1.5rem 2.5rem;
         opacity:.2;
         &:hover {
-          background:$color-secondary-variant;
+          background:$secondary-v2;
           color:white;
         }
         &.active {
-          background:$color-secondary-variant;
+          background:$secondary-v2;
           color:white;
           font-weight:bold;
           border-radius:5px;
@@ -205,17 +205,17 @@
       display:none;
       .agenda-agenda-arrondissement-change {
         background:$grayF2;
-        color:$color-secondary-variant;
+        color:$secondary-v2;
         padding: 1.5rem;
         margin: 0rem .2rem;
         opacity:.2;
         border-radius:6px;
         &:hover {
-          background:$color-secondary-variant;
+          background:$secondary-v2;
           color:white;
         }
         &.active {
-          background:$color-secondary-variant;
+          background:$secondary-v2;
           color:white;
           font-weight:bold;
         }
