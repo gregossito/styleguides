@@ -16,7 +16,7 @@
     line-height: 3rem;
     margin: 0;
     text-align: left;
-    text-shadow: 2px 2px 10px $gray33;
+    text-shadow: 2px 2px 10px transparentize($black, 0.7);
   }
 
   &:before {
@@ -26,7 +26,7 @@
     bottom: 0;
     right: 0;
     position: absolute;
-    background: rgba(0,0,0,0.1);
+    background: transparentize($black, 0.9);
     z-index: -1;
   }
 }

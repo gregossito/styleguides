@@ -1,7 +1,7 @@
 .jumbotron {
   background-color: $white;
-  background-repeat:no-repeat;
-  background-position:50% 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-size: cover;
   display: table;
   height: 180px;
@@ -20,7 +20,7 @@
 
   &:not(.no-overlay) {
     .jumbotron-wrapper:after {
-      background: rgba(0,0,0,0.1);
+      background: transparentize($black, 0.9);
       content: "";
       display: block;
       height: 100%;
@@ -55,7 +55,7 @@
       padding: 30px;
 
       &:after {
-        background: black;
+        background: $black;
         opacity: 0.25;
         content: "";
         display: block;
@@ -113,7 +113,7 @@ html.no-touchevents {
   font-weight: 700;
   margin-bottom: 5px;
   max-width: 470px;
-  text-shadow: 2px 2px 10px $gray33;
+  text-shadow: 2px 2px 10px transparentize($black, 0.7);
 }
 
 .jumbotron-text {
@@ -122,6 +122,7 @@ html.no-touchevents {
   line-height: 2.8rem;
   margin: 0 0 8px;
   max-width: 470px;
+  text-shadow: 2px 2px 10px transparentize($black, 0.7);
 }
 
 .jumbotron-block {
