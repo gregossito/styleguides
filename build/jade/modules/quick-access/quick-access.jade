@@ -33,7 +33,7 @@ mixin quick-access(data)
       .quick-access-results
         ul
         - var button = JSON.parse(JSON.stringify(data.results.button)) // clone the data object
-        - button.modifiers = ["action", "tertiary", "quick-access-results-more"] // overwrite the modifiers
+        - button.modifiers = ["action", "primary", "quick-access-results-more"] // overwrite the modifiers
         +button(button)
     button.quick-access-close-search(type="button")
       if data.search.close_label

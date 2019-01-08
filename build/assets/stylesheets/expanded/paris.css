@@ -770,7 +770,7 @@ th {
   html.no-js .news-item:hover, html.no-js .news-item:focus,
   html.no-touchevents .news-item:hover,
   html.no-touchevents .news-item:focus {
-    background-color: #0C518A;
+    background-color: #354BCF;
     transition: none; }
     html.no-js .news-item:hover,
     html.no-js .news-item:hover .news-item-category,
@@ -819,7 +819,7 @@ th {
   margin: 0 5px; }
 
 .news-item-category {
-  color: #0C518A; }
+  color: #354BCF; }
 
 .news-item-title {
   color: #333;
@@ -876,16 +876,16 @@ th {
         float: right;
         margin-right: 0; }
     .agenda-block.secondary .news-card.large .news-card-image:after {
-      background: #0C518A;
+      background: #354BCF;
       /* Old browsers */
       /* FF3.6+ */
       /* Chrome,Safari4+ */
       /* Chrome10+,Safari5.1+ */
       /* Opera 11.10+ */
       /* IE10+ */
-      background: linear-gradient(to right, #0C518A 0%, transparent 100%);
+      background: linear-gradient(to right, #354BCF 0%, transparent 100%);
       /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color-secondary', endColorstr='transparent', GradientType=1);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$secondary-v2', endColorstr='transparent', GradientType=1);
       /* IE6-8 */ }
   .news-item {
     min-height: 140px;
@@ -911,14 +911,14 @@ th {
     height: 4rem; }
     .agenda-agenda .agenda-agenda-nav-month span {
       background: #F2F2F2;
-      color: #0A4770;
+      color: #354BCF;
       padding: 1.5rem 0rem 1.5rem 2.5rem;
       opacity: .2; }
       .agenda-agenda .agenda-agenda-nav-month span:hover {
-        background: #0A4770;
+        background: #354BCF;
         color: white; }
       .agenda-agenda .agenda-agenda-nav-month span.active {
-        background: #0A4770;
+        background: #354BCF;
         color: white;
         font-weight: bold;
         border-radius: 5px; }
@@ -943,16 +943,16 @@ th {
     display: none; }
     .agenda-agenda .agenda-agenda-arrondissement .agenda-agenda-arrondissement-change {
       background: #F2F2F2;
-      color: #0A4770;
+      color: #354BCF;
       padding: 1.5rem;
       margin: 0rem .2rem;
       opacity: .2;
       border-radius: 6px; }
       .agenda-agenda .agenda-agenda-arrondissement .agenda-agenda-arrondissement-change:hover {
-        background: #0A4770;
+        background: #354BCF;
         color: white; }
       .agenda-agenda .agenda-agenda-arrondissement .agenda-agenda-arrondissement-change.active {
-        background: #0A4770;
+        background: #354BCF;
         color: white;
         font-weight: bold; }
       .agenda-agenda .agenda-agenda-arrondissement .agenda-agenda-arrondissement-change.have-actus {
@@ -3846,7 +3846,8 @@ http://flickity.metafizzy.co
     font-weight: 700;
     line-height: 3rem;
     margin: 0;
-    text-align: left; }
+    text-align: left;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); }
   .hub-heading:before {
     content: "";
     top: 0;
@@ -4284,7 +4285,7 @@ http://flickity.metafizzy.co
     .jumbotron.home .jumbotron-wrapper {
       padding: 30px; }
       .jumbotron.home .jumbotron-wrapper:after {
-        background: black;
+        background: #000;
         opacity: 0.25;
         content: "";
         display: block;
@@ -4324,14 +4325,16 @@ html.no-touchevents .jumbotron:not(.no-overlay):not(.home):hover .jumbotron-wrap
   font-size: 1.5rem !important;
   font-weight: 700;
   margin-bottom: 5px;
-  max-width: 470px; }
+  max-width: 470px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); }
 
 .jumbotron-text {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 2.8rem;
   margin: 0 0 8px;
-  max-width: 470px; }
+  max-width: 470px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); }
 
 .jumbotron-block {
   float: left; }
@@ -7842,7 +7845,7 @@ body.rheader-mobile-nav-open {
   padding: 30px 0 0; }
 
 .sections-panel {
-  background-color: #F2F2F2;
+  background-color: #FFF;
   position: relative;
   width: 100%; }
   .sections-panel ul {
@@ -7857,7 +7860,7 @@ body.rheader-mobile-nav-open {
     color: #666; }
 
 .sections-panel-nav {
-  background-color: #FFF;
+  background-color: #F0F0F0;
   padding: 50px 0; }
 
 .sections-panel-nav-items {
@@ -7909,7 +7912,7 @@ body.rheader-mobile-nav-open {
   margin-top: 5px; }
 
 .sections-panel-subnav {
-  background-color: #F2F2F2; }
+  background-color: #FFF; }
   .sections-panel-subnav .block-aside:first-child {
     margin-top: 0; }
 
@@ -7933,14 +7936,16 @@ body.rheader-mobile-nav-open {
 
 .sections-panel-subnav-items a,
 .sections-panel-content-items a {
-  color: #333;
+  color: #071F32;
   display: block;
   text-decoration: none; }
-  .sections-panel-subnav-items a:hover, .sections-panel-subnav-items a:focus, .sections-panel-subnav-items a.current,
+  .sections-panel-subnav-items a:focus,
+  .sections-panel-content-items a:focus {
+    color: #354BCF; }
+  .sections-panel-subnav-items a:hover, .sections-panel-subnav-items a.current,
   .sections-panel-content-items a:hover,
-  .sections-panel-content-items a:focus,
   .sections-panel-content-items a.current {
-    color: #0C518A; }
+    color: #DC3545; }
   .sections-panel-subnav-items a.current,
   .sections-panel-content-items a.current {
     cursor: default;
@@ -8003,8 +8008,8 @@ body.rheader-mobile-nav-open {
   .sections-panel-nav-items a {
     padding-left: 10px; }
   .sections-panel-back {
-    box-shadow: inset -3px 0px 3px -2px rgba(0, 0, 0, 0.1);
-    color: #0C518A;
+    box-shadow: inset -3px 0px 4px -1px rgba(0, 0, 0, 0.1);
+    color: #354BCF;
     font-size: 2rem;
     height: 100%;
     position: absolute;
@@ -8056,7 +8061,7 @@ body.rheader-mobile-nav-open {
       position: absolute;
       top: 0; }
     .sections-panel:before {
-      background-color: #FFF;
+      background-color: #F0F0F0;
       bottom: 0;
       content: "";
       display: block;
@@ -8065,7 +8070,7 @@ body.rheader-mobile-nav-open {
       top: 0;
       width: 1000px; }
     .sections-panel:after {
-      background-color: #F2F2F2;
+      background-color: #FFF;
       bottom: 0;
       content: "";
       display: block;
@@ -8091,7 +8096,7 @@ body.rheader-mobile-nav-open {
     padding-left: 20px;
     padding-right: 40px; }
   .sections-panel-subnav {
-    box-shadow: -3px 0px 3px -2px rgba(0, 0, 0, 0.1);
+    box-shadow: -3px 0px 4px -1px rgba(0, 0, 0, 0.1);
     left: 300px;
     min-width: 350px;
     padding: 50px 30px;
@@ -9204,7 +9209,7 @@ a.treize-card {
   .component-form .form-item + .form-item {
     margin-top: 20px; }
   .component-form .form-item-label {
-    color: #0C518A;
+    color: #354BCF;
     display: block;
     font-size: 1.6rem;
     font-weight: normal;
@@ -9217,13 +9222,13 @@ a.treize-card {
     margin-top: 5px;
     max-width: 385px; }
     .component-form .form-item-help.error {
-      color: #DF225A; }
+      color: #DC3545; }
     .component-form .form-item-help td {
       text-align: left !important; }
   .component-form .form-message.error {
-    color: #DF225A; }
+    color: #DC3545; }
   .component-form .form-message.success {
-    background-color: #43B57E;
+    background-color: #3ECD2E;
     color: white;
     padding: 2rem 1rem;
     text-align: center;
@@ -9242,7 +9247,7 @@ a.treize-card {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     content: "";
-    color: #DF225A;
+    color: #DC3545;
     margin-left: 5px;
     opacity: 0;
     position: absolute;
@@ -9252,7 +9257,7 @@ a.treize-card {
     line-height: 2.3rem; }
   .component-form .form-item.error .form-item-label,
   .component-form .form-item-matrix .matrix-item.error .matrix-item-text {
-    color: #DF225A; }
+    color: #DC3545; }
     .component-form .form-item.error .form-item-label:after,
     .component-form .form-item-matrix .matrix-item.error .matrix-item-text:after {
       opacity: 1;
@@ -9260,7 +9265,7 @@ a.treize-card {
   .component-form .form-item-text.form-item.error input,
   .component-form .form-item-textarea.form-item.error textarea,
   .component-form .form-item-select.form-item.error select {
-    border-color: #DF225A; }
+    border-color: #DC3545; }
   .component-form .form-item input:invalid,
   .component-form .form-item textarea:invalid,
   .component-form .form-item select:invalid {
@@ -9276,7 +9281,7 @@ a.treize-card {
     .component-form .form-item-text input:focus,
     .component-form .form-item-textarea textarea:focus,
     .component-form .form-item-select select:focus {
-      border-color: #0C518A; }
+      border-color: #354BCF; }
   .component-form .form-item-text input {
     padding: 0 15px;
     width: 385px; }
@@ -9316,7 +9321,7 @@ a.treize-card {
   .component-form .form-item-matrix .matrix-item-text {
     text-align: left; }
   .component-form .form-item-matrix .matrix-item.error {
-    background-color: rgba(223, 34, 90, 0.1); }
+    background-color: rgba(220, 53, 69, 0.1); }
   .component-form .form-item-matrix table {
     font-size: 1.4rem;
     line-height: 2.4rem;
@@ -9487,7 +9492,7 @@ http://flickity.metafizzy.co
   clear: both;
   padding-bottom: 25px; }
   .component-gallery .gallery-wrapper {
-    background-color: #F2F2F2; }
+    background-color: #FFF; }
   .component-gallery .gallery-cell {
     width: 100%;
     /* full width */
@@ -9530,7 +9535,7 @@ http://flickity.metafizzy.co
         text-decoration: none; }
 
 .component-image {
-  background-color: #F2F2F2;
+  background-color: #FFF;
   clear: both; }
   .component-image img {
     display: block;
@@ -10748,7 +10753,7 @@ http://flickity.metafizzy.co
   margin: 3rem 0 2rem; }
 
 .image-text-wrapper h4, .component-demande h4, .component-expandable .expandable-content h4, .component-frame h4, .component-postit h4, .component-text h4 {
-  color: #071F32;
+  color: #354BCF;
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 2.8rem;

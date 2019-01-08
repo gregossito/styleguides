@@ -21,7 +21,7 @@ mixin sections-panel(data)
                 a(href=item.href onclick=item.onclick data-subnav-section=item.slug data-background=item.background data-page-title=item.pageTitle class=(item.current ? "current" : "") aria-expanded=(item.current ? "true" : "false") aria-controls="subnav-#{item.slug}" aria-owns="subnav-#{item.slug}" role="button")= item.text
         if data.nav.more
           - var more = JSON.parse(JSON.stringify(data.nav.more)) // clone the data object
-          - more.modifiers = ["action", "tertiary", "small", "sections-panel-nav-more"]
+          - more.modifiers = ["action", "secondary", "small", "sections-panel-nav-more"]
           +button(more)
       .sections-panel-subnav#sections-panel-subnav(class=(has_current_item ? "has-current-item" : ""))
         .sections-panel-subnav-default(data-background=data.default.background)
