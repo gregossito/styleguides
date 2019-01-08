@@ -9,6 +9,9 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.15.4 (2019-01-07)
+* v2 fix colors components and modules
+
 ## 1.15.3 (2019-01-04)
 * modules `block-map` : fix ico conservatoires, jobs
 * component `jecoute`: fix colors border
