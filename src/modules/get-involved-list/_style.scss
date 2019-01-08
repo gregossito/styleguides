@@ -17,9 +17,10 @@
 }
 
 .get-involved-nav {
-  background-color: $red3;
+  // background-color: $red3;
+  background-color: $gray-v2;
   border-radius: 5px;
-  color: $yellow1;
+  color: $dark;
   margin-bottom: 25px;
   padding: 0 20px;
 }
@@ -35,7 +36,8 @@
   text-align: center;
 
   & + .get-involved-nav-item {
-    border-top: 1px solid $red2;
+    // border-top: 1px solid $red2;
+    border-top: 1px solid $secondary-v2;
   }
 
   .get-involved-list-item-title {
@@ -47,10 +49,11 @@
   }
 
   .button {
-    background-color: $red2;
-    color: $yellow1;
+    // background-color: $red2;
+    background-color: $secondary-v2;
+    color: $light;
     font-weight: 700;
-    &:after {background-color: darken($red2, 6%);}
+    &:after {background-color: darken($secondary-v2, 6%);}
   }
 }
 
@@ -62,7 +65,7 @@
 
 .get-involved-list-item {
   border-radius: 5px;
-  color: $color-secondary-variant;
+  color: $dark;
   display: block;
   margin-bottom: 25px;
   overflow: hidden;
@@ -90,8 +93,7 @@
   // modifiers
   &.red {
     // background-color: $get-involved-red;
-    background-color: $primary-v2;
-    color: $white;
+    background-color: $orange-v2;
     &.hand:after {
       background-image: url('../modules/get-involved-list/yellow-hand.svg');
     }
@@ -99,7 +101,6 @@
   &.yellow {
     // background-color: $get-involved-yellow;
     background-color: $yellow-v2;
-    color: $white;
     &.hand:after {
       background-image: url('../modules/get-involved-list/blue-hand.svg');
     }
@@ -107,22 +108,20 @@
   &.green {
     // background-color: $get-involved-green;
     background-color: $green-v2;
-    color: $white;
     &.hand:after {
       background-image: url('../modules/get-involved-list/yellow-hand.svg');
     }
   }
   &.blue {
     // background-color: $get-involved-blue1;
-    background-color: $secondary-v2;
-    color: $white;
+    background-color: $blue-v2;
     &.hand:after {
       background-image: url('../modules/get-involved-list/red-hand.svg');
     }
   }
   &.light-blue {
+    // background-color: $get-involved-blue2;
     background-color: $teal-v2;
-    color: $white;
     &.hand:after {
       background-image: url('../modules/get-involved-list/green-hand.svg');
     }
@@ -179,7 +178,8 @@
     & + .get-involved-nav-item:before {
       content: '';
       display: block;
-      border-left: 1px solid $red2;
+      // border-left: 1px solid $red2;
+      border-left: 1px solid $secondary-v2;
       height: 130px;
       margin-top: -60px;
       left: -12px;
