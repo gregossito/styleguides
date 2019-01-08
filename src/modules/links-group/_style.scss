@@ -12,6 +12,9 @@
 
   @include small {
     // modifiers
+    &.white-buttons {
+      .links-group-item a:hover {background-color: $gray99;}
+    }
     &.blue {
       .links-group-header a {color: $color-secondary-variant;}
       .links-group-item-icon,
@@ -73,7 +76,8 @@
     background-color: $grayF2;
     border: none;
     border-radius: 5px;
-    color: $gray33;
+    // color: $gray33;
+    color: $dark;
     display: block;
     font-size: 1.5rem;
     font-weight: 300;
@@ -125,12 +129,12 @@
 
     &.blue {
       .links-group-header a:after,
-      .links-group-item a:hover {background-color: $gray99;}
+      .links-group-item a:hover {background-color: $secondary-v2;}
     }
 
     &.red {
       .links-group-header a:after,
-      .links-group-item a:hover {background-color: $gray99;}
+      .links-group-item a:hover {background-color: $primary-v2;}
     }
   }
 
@@ -192,7 +196,6 @@
         transition: all 0.2s ease;
       }
     }
-
   }
 
   .links-group-item-text {
