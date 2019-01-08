@@ -9,7 +9,7 @@ $sections-panel-subnav-offset: 200px;
 }
 
 .sections-panel {
-  background-color: $grayF2;
+  background-color: $light;
   position: relative;
   width: 100%;
 
@@ -30,7 +30,7 @@ $sections-panel-subnav-offset: 200px;
 }
 
 .sections-panel-nav {
-  background-color: $light;
+  background-color: $gray-v2;
   padding: 50px 0;
 }
 
@@ -90,7 +90,7 @@ $sections-panel-subnav-offset: 200px;
 }
 
 .sections-panel-subnav {
-  background-color: $grayF2;
+  background-color: $light;
 
   .block-aside:first-child {
     margin-top: 0;
@@ -139,14 +139,17 @@ $sections-panel-subnav-offset: 200px;
 .sections-panel-subnav-items,
 .sections-panel-content-items {
   a {
-    color: $gray33;
+    color: $dark;
     display: block;
     text-decoration: none;
 
-    &:hover,
-    &:focus,
-    &.current {
+    &:focus {
       color: $secondary-v2;
+    }
+
+    &:hover,
+    &.current {
+      color: $primary-v2;
     }
 
     &.current {
@@ -249,7 +252,7 @@ $sections-panel-subnav-offset: 200px;
     padding-left: 10px;
   }
   .sections-panel-back {
-    box-shadow: inset -3px 0px 3px -2px transparentize($black, 0.9);
+    box-shadow: inset -3px 0px 4px -1px transparentize($black, 0.9);
     color: $secondary-v2;
     font-size: 2rem;
     height: 100%;
@@ -300,7 +303,7 @@ $sections-panel-subnav-offset: 200px;
     }
 
     &:before {
-      background-color: $light;
+      background-color: $gray-v2;
       bottom: 0;
       content: "";
       display: block;
@@ -311,7 +314,7 @@ $sections-panel-subnav-offset: 200px;
     }
 
     &:after {
-      background-color: $grayF2;
+      background-color: $light;
       bottom: 0;
       content: "";
       display: block;
@@ -351,7 +354,7 @@ $sections-panel-subnav-offset: 200px;
   }
 
   .sections-panel-subnav {
-    box-shadow: -3px 0px 3px -2px transparentize($black, 0.9);
+    box-shadow: -3px 0px 4px -1px transparentize($black, 0.9);
     left: $sections-panel-nav-width;
     min-width: $sections-panel-subnav-width;
     padding: 50px 30px;
