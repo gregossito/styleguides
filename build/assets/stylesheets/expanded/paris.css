@@ -3441,9 +3441,9 @@ http://flickity.metafizzy.co
       clear: none; } }
 
 .get-involved-nav {
-  background-color: #BF2257;
+  background-color: #F0F0F0;
   border-radius: 5px;
-  color: #FAE46A;
+  color: #071F32;
   margin-bottom: 25px;
   padding: 0 20px; }
 
@@ -3456,7 +3456,7 @@ http://flickity.metafizzy.co
   padding: 35px 10px 25px;
   text-align: center; }
   .get-involved-nav-item + .get-involved-nav-item {
-    border-top: 1px solid #A51B50; }
+    border-top: 1px solid #354BCF; }
   .get-involved-nav-item .get-involved-list-item-title {
     font-size: 2.2rem;
     font-weight: 700;
@@ -3464,11 +3464,11 @@ http://flickity.metafizzy.co
     margin: 0 auto 15px;
     max-width: 260px; }
   .get-involved-nav-item .button, .get-involved-nav-item .expandmore__button {
-    background-color: #A51B50;
-    color: #FAE46A;
+    background-color: #354BCF;
+    color: #FFF;
     font-weight: 700; }
     .get-involved-nav-item .button:after, .get-involved-nav-item .expandmore__button:after {
-      background-color: #8b1743; }
+      background-color: #2c40b9; }
 
 .get-involved-list-items {
   list-style: none;
@@ -3477,7 +3477,7 @@ http://flickity.metafizzy.co
 
 .get-involved-list-item {
   border-radius: 5px;
-  color: #0A4770;
+  color: #071F32;
   display: block;
   margin-bottom: 25px;
   overflow: hidden;
@@ -3498,28 +3498,23 @@ http://flickity.metafizzy.co
     width: 100px;
     z-index: 0; }
   .get-involved-list-item.red, .get-involved-list .get-involved-list-item:nth-child(5n+1) {
-    background-color: #DC3545;
-    color: #FFF; }
+    background-color: #FF3300; }
     .get-involved-list-item.red.hand:after, .get-involved-list .hand.get-involved-list-item:nth-child(5n+1):after {
       background-image: url("../modules/get-involved-list/yellow-hand.svg"); }
   .get-involved-list-item.yellow, .get-involved-list .get-involved-list-item:nth-child(5n) {
-    background-color: #FFCD00;
-    color: #FFF; }
+    background-color: #FFCD00; }
     .get-involved-list-item.yellow.hand:after, .get-involved-list .hand.get-involved-list-item:nth-child(5n):after {
       background-image: url("../modules/get-involved-list/blue-hand.svg"); }
   .get-involved-list-item.green, .get-involved-list .get-involved-list-item:nth-child(5n+3) {
-    background-color: #3ECD2E;
-    color: #FFF; }
+    background-color: #3ECD2E; }
     .get-involved-list-item.green.hand:after, .get-involved-list .hand.get-involved-list-item:nth-child(5n+3):after {
       background-image: url("../modules/get-involved-list/yellow-hand.svg"); }
   .get-involved-list-item.blue, .get-involved-list .get-involved-list-item:nth-child(5n+2) {
-    background-color: #354BCF;
-    color: #FFF; }
+    background-color: #31EEF3; }
     .get-involved-list-item.blue.hand:after, .get-involved-list .hand.get-involved-list-item:nth-child(5n+2):after {
       background-image: url("../modules/get-involved-list/red-hand.svg"); }
   .get-involved-list-item.light-blue, .get-involved-list .get-involved-list-item:nth-child(5n+4) {
-    background-color: #25DCCC;
-    color: #FFF; }
+    background-color: #25DCCC; }
     .get-involved-list-item.light-blue.hand:after, .get-involved-list .hand.get-involved-list-item:nth-child(5n+4):after {
       background-image: url("../modules/get-involved-list/green-hand.svg"); }
   .get-involved-list-item .button, .get-involved-list-item .expandmore__button {
@@ -3574,7 +3569,7 @@ http://flickity.metafizzy.co
     .get-involved-nav-item + .get-involved-nav-item:before {
       content: '';
       display: block;
-      border-left: 1px solid #A51B50;
+      border-left: 1px solid #354BCF;
       height: 130px;
       margin-top: -60px;
       left: -12px;
@@ -4241,6 +4236,7 @@ http://flickity.metafizzy.co
     min-width: 300px; } }
 
 .intro-text {
+  color: #071F32;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 3rem;
@@ -4264,7 +4260,7 @@ http://flickity.metafizzy.co
       .jumbotron .layout-wrapper.jumbotron-content {
         padding-left: 35px; } }
   .jumbotron:not(.no-overlay) .jumbotron-wrapper:after {
-    background: transparent;
+    background: rgba(0, 0, 0, 0.1);
     content: "";
     display: block;
     height: 100%;
@@ -4561,6 +4557,8 @@ html.no-cssanimations .jumbotron-slider {
   background-color: #FFF; }
 
 @media (max-width: 767px) {
+  .links-group.white-buttons .links-group-item a:hover {
+    background-color: #999; }
   .links-group.blue .links-group-header a {
     color: #0A4770; }
   .links-group.blue .links-group-item-icon,
@@ -4609,7 +4607,7 @@ html.no-cssanimations .jumbotron-slider {
     background-color: #F2F2F2;
     border: none;
     border-radius: 5px;
-    color: #333;
+    color: #071F32;
     display: block;
     font-size: 1.5rem;
     font-weight: 300;
@@ -4657,10 +4655,10 @@ html.no-cssanimations .jumbotron-slider {
     background-color: #999; }
   .links-group.blue .links-group-header a:after,
   .links-group.blue .links-group-item a:hover {
-    background-color: #999; }
+    background-color: #354BCF; }
   .links-group.red .links-group-header a:after,
   .links-group.red .links-group-item a:hover {
-    background-color: #999; }
+    background-color: #DC3545; }
   .links-group-header a {
     background-position: 50% 50%;
     background-size: cover;

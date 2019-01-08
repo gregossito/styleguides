@@ -9,13 +9,11 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.15.6 (2019-01-08)
 ## 1.15.5 (2019-01-08)
-
-* the way to new charter
-
 ## 1.15.4 (2019-01-08)
 
-* v2 fix colors components and modules
+* the way to new charter
 
 ## 1.15.3 (2019-01-04)
 
