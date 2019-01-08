@@ -9,10 +9,16 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
-## 1.15.4 (2019-01-07)
+## 1.15.5 (2019-01-08)
+
+* the way to new charter
+
+## 1.15.4 (2019-01-08)
+
 * v2 fix colors components and modules
 
 ## 1.15.3 (2019-01-04)
+
 * modules `block-map` : fix ico conservatoires, jobs
 * component `jecoute`: fix colors border
 * modules `buttons` : fix colors
@@ -20,15 +26,17 @@ Let's take the `x.β.α` version number:
 * modules `quick-access`, `search-field`, `search-push`, `share` : fix colors
 
 ## 1.15.2 (2019-01-03)
+
 * modules `block-map` : fix colors ico
 * layout `stack` : remove border-bottom layout-separate-after with secondary-v2
 * modules `card`: fix colors
 
 ## 1.15.1 (2019-01-03)
+
 * colors scss : add blue
 * modules `rheader` : height top notice
-* modules `sections-list` : fix colors 
-* component `accordion` : fix color 
+* modules `sections-list` : fix colors
+* component `accordion` : fix color
 * updates for v2 in modules : `breadcrumb`,
 
 ## 1.15.0 (2019-01-02)
@@ -37,6 +45,7 @@ Let's take the `x.β.α` version number:
                               `sections-panel`, colors
 
 ## 1.14.2 (2018-12-12)
+
 * add component `other-hours`
 * add component `pills`
 * component `text`: add social network data in text

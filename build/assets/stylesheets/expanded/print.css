@@ -252,6 +252,12 @@ textarea {
 .red-background {
   background-color: #F94F4F; }
 
+.color-v2-dark-background {
+  background-color: #071F32; }
+
+.color-v2-light-background {
+  background-color: #FFF; }
+
 .color-v2-primary-background {
   background-color: #DC3545; }
 
@@ -354,8 +360,7 @@ img, video {
 
 .block-content-question,
 .block-content-answer {
-  -webkit-transform: none !important;
-          transform: none !important; }
+  transform: none !important; }
 
 canvas {
   display: none !important; }
