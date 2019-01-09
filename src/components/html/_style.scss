@@ -15,7 +15,7 @@
     text-align: center;
 
     a:not(.button) {
-      color: $color-primary;
+      color: $primary-v2;
       text-decoration: underline;
       &:hover {text-decoration: none;}
     }

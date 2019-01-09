@@ -18,7 +18,6 @@
       color: $dark;
       text-decoration: none;
       &:hover {
-        // color: $color-primary;
         color: $primary-v2;
         text-decoration: underline;
       }
@@ -35,7 +34,6 @@
     // modifiers
     &.has-icon {
       .icon {
-        // color: $color-secondary;
         color: $secondary-v2;
         font-size: 2rem;
         margin-right: 8px;
@@ -49,7 +47,6 @@
         &:hover {
           text-decoration: none;
           .icon {
-            // color: $color-primary;
             color: $primary-v2;
           }
         }

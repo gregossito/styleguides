@@ -20,9 +20,9 @@
     text-decoration: none;
 
     &:hover {
-      color: $yellow1;
+      color: $yellow-v2;
       strong {
-        background-color: $yellow1;
+        background-color: $yellow-v2;
       }
     }
   }
@@ -51,7 +51,7 @@
     text-decoration: none;
 
     &:hover strong {
-      background-color: $black;
+      background-color: $dark;
       color: $white;
     }
   }
@@ -76,7 +76,7 @@
   position: relative;
 
   &:after {
-    background-color: $color-primary;
+    background-color: $primary-v2;
     content: "";
     display: block;
     height: 100%;
@@ -98,7 +98,7 @@
 }
 
 .table-of-contents-sections-more {
-  background-color: $yellow1;
+  background-color: $yellow-v2;
   color: $black;
   padding: 4px 10px;
 

@@ -164,7 +164,7 @@ html.no-touchevents {
   .news-card-counter {
     border-radius: 5px 0 0 5px;
     display: inline-block;
-    background: $color-primary;
+    background: $primary-v2;
     color: $white;
     padding: 5px 10px;
     height: 40px;
@@ -173,7 +173,7 @@ html.no-touchevents {
     transition: opacity ease .3s;
 
     & + .news-card-counter {
-      border-left: 1px solid $color-primary-variant;
+      border-left: 1px solid $primary-v2;
       border-radius: 0 5px 5px 0;
     }
 

@@ -16,12 +16,12 @@
     margin-bottom: 5px;
 
     input {
-      color: $color-secondary;
+      color: $secondary-v2;
       font-size: 1.3rem;
       padding: 0 10px;
       width: 215px;
 
-      @include input-color-placeholder($color-secondary);
+      @include input-color-placeholder($secondary-v2);
     }
   }
 

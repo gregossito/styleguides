@@ -21,19 +21,19 @@
 }
 
 h1, h2 {
-  color: $color-primary;
+  color: $primary-v2;
 }
 
 h3 {
-  color : darken($color-tertiary, 25);
+  color : darken($dark, 25);
 }
 
 a {
-  color: $color-secondary;
+  color: $secondary-v2;
 }
 
 a:visited {
-  color: darken($color-secondary, 5);
+  color: darken($secondary-v2, 5);
 }
 
 img, video {
