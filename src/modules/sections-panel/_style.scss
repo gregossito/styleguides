@@ -143,13 +143,9 @@ $sections-panel-subnav-offset: 200px;
     display: block;
     text-decoration: none;
 
-    &:focus {
-      color: $secondary-v2;
-    }
-
     &:hover,
     &.current {
-      color: $primary-v2;
+      color: $secondary-v2;
     }
 
     &.current {
