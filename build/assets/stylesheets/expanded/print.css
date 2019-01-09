@@ -296,16 +296,16 @@ textarea {
   display: none; }
 
 h1, h2 {
-  color: #DF225A; }
+  color: #DC3545; }
 
 h3 {
-  color: #e0bd0b; }
+  color: black; }
 
 a {
-  color: #0C518A; }
+  color: #354BCF; }
 
 a:visited {
-  color: #0a4373; }
+  color: #2d42bd; }
 
 img, video {
   max-width: 100%; }

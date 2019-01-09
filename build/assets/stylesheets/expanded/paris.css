@@ -1375,24 +1375,24 @@ th {
   .block-content-newsletter form {
     margin-bottom: 5px; }
     .block-content-newsletter form input {
-      color: #0C518A;
+      color: #354BCF;
       font-size: 1.3rem;
       padding: 0 10px;
       width: 215px; }
       .block-content-newsletter form input::-webkit-input-placeholder {
         /* WebKit browsers */
-        color: #0C518A; }
+        color: #354BCF; }
       .block-content-newsletter form input:-moz-placeholder {
         /* Mozilla Firefox 4 to 18 */
-        color: #0C518A;
+        color: #354BCF;
         opacity: 1; }
       .block-content-newsletter form input::-moz-placeholder {
         /* Mozilla Firefox 19+ */
-        color: #0C518A;
+        color: #354BCF;
         opacity: 1; }
       .block-content-newsletter form input:-ms-input-placeholder {
         /* Internet Explorer 10+ */
-        color: #0C518A; }
+        color: #354BCF; }
   .block-content-newsletter .block-content-link a {
     display: inline-block;
     border-bottom: 1px solid;
@@ -2467,7 +2467,7 @@ http://flickity.metafizzy.co
   .block-search-top-link a:focus,
   .block-search-top-link a div:hover,
   .block-search-top-link a div:focus {
-    color: #DF225A; }
+    color: #DC3545; }
 
 .block-search-top-link {
   float: right; }
@@ -3022,7 +3022,7 @@ http://flickity.metafizzy.co
     color: #DC3545; }
 
 .card-category {
-  color: #0C518A;
+  color: #354BCF;
   font-weight: 500;
   font-size: 14px; }
 
@@ -3235,7 +3235,7 @@ http://flickity.metafizzy.co
     width: 1100px; } }
 
 .error-heading {
-  background-color: #0C518A;
+  background-color: #354BCF;
   color: #FFF;
   padding: 20px;
   position: relative;
@@ -3721,7 +3721,7 @@ http://flickity.metafizzy.co
     text-decoration: none;
     transition: all 0.35s ease; }
     .heading-links > a:after {
-      background-color: #DF225A;
+      background-color: #DC3545;
       bottom: -1px;
       content: "";
       display: block;
@@ -3731,7 +3731,7 @@ http://flickity.metafizzy.co
       transition: width 0.35s ease;
       width: 0; }
     .heading-links > a:hover {
-      color: #DF225A; }
+      color: #DC3545; }
       .heading-links > a:hover:after {
         width: 100%; }
 
@@ -3890,9 +3890,9 @@ http://flickity.metafizzy.co
     .icon-switch .icon-switch-off .icon {
       color: #333; }
     .icon-switch .icon-switch-off .icon-bell {
-      color: #0C518A; }
+      color: #354BCF; }
     .icon-switch .icon-switch-off .icon-favorites {
-      color: #F77F68; }
+      color: #FF3300; }
   .icon-switch.active .icon-switch-on {
     display: none; }
   .icon-switch.active .icon-switch-off {
@@ -4782,7 +4782,7 @@ html.no-cssanimations .jumbotron-slider {
     margin-left: 30%; } }
 
 .municipal-team {
-  background-color: #DF225A;
+  background-color: #DC3545;
   padding: 40px 0 50px; }
 
 .municipal-team-img {
@@ -4984,7 +4984,7 @@ html.no-js .news-card-counter,
 html.no-touchevents .news-card-counter {
   border-radius: 5px 0 0 5px;
   display: inline-block;
-  background: #DF225A;
+  background: #DC3545;
   color: #FFF;
   padding: 5px 10px;
   height: 40px;
@@ -4993,7 +4993,7 @@ html.no-touchevents .news-card-counter {
   transition: opacity ease .3s; }
   html.no-js .news-card-counter + .news-card-counter,
   html.no-touchevents .news-card-counter + .news-card-counter {
-    border-left: 1px solid #AF2258;
+    border-left: 1px solid #DC3545;
     border-radius: 0 5px 5px 0; }
   html.no-js .news-card-counter .counter-value,
   html.no-touchevents .news-card-counter .counter-value {
@@ -7939,13 +7939,10 @@ body.rheader-mobile-nav-open {
   color: #071F32;
   display: block;
   text-decoration: none; }
-  .sections-panel-subnav-items a:focus,
-  .sections-panel-content-items a:focus {
-    color: #354BCF; }
   .sections-panel-subnav-items a:hover, .sections-panel-subnav-items a.current,
   .sections-panel-content-items a:hover,
   .sections-panel-content-items a.current {
-    color: #DC3545; }
+    color: #354BCF; }
   .sections-panel-subnav-items a.current,
   .sections-panel-content-items a.current {
     cursor: default;
@@ -8202,7 +8199,7 @@ body.rheader-mobile-nav-open {
     width: 100%; }
   .skip-links a {
     background-color: #FFF;
-    color: #DF225A;
+    color: #DC3545;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 5px 10px;
@@ -8211,7 +8208,7 @@ body.rheader-mobile-nav-open {
     text-decoration: none; }
     .skip-links a:focus {
       left: 0;
-      outline-color: #0C518A; }
+      outline-color: #354BCF; }
 
 .table-of-contents {
   overflow: auto; }
@@ -8230,9 +8227,9 @@ body.rheader-mobile-nav-open {
     color: #FFF;
     text-decoration: none; }
     .table-of-contents-nav a:hover {
-      color: #FAE46A; }
+      color: #FFCD00; }
       .table-of-contents-nav a:hover strong {
-        background-color: #FAE46A; }
+        background-color: #FFCD00; }
   .table-of-contents-nav strong {
     background-color: #FFF;
     color: #000;
@@ -8250,7 +8247,7 @@ body.rheader-mobile-nav-open {
     color: #000;
     text-decoration: none; }
     .table-of-contents-sections a:hover strong {
-      background-color: #000;
+      background-color: #071F32;
       color: #FFF; }
   .table-of-contents-sections strong {
     background-color: #FFF;
@@ -8269,7 +8266,7 @@ body.rheader-mobile-nav-open {
   padding: 20px 30px 20px 20px;
   position: relative; }
   .table-of-contents-sections-items:after {
-    background-color: #DF225A;
+    background-color: #DC3545;
     content: "";
     display: block;
     height: 100%;
@@ -8286,7 +8283,7 @@ body.rheader-mobile-nav-open {
     margin-top: 8px; }
 
 .table-of-contents-sections-more {
-  background-color: #FAE46A;
+  background-color: #FFCD00;
   color: #000;
   padding: 4px 10px; }
   .table-of-contents-sections-more:hover {
@@ -8321,7 +8318,7 @@ body.rheader-mobile-nav-open {
   .tags a {
     color: inherit; }
     .tags a:hover {
-      color: #DF225A; }
+      color: #DC3545; }
 
 a.treize-card {
   text-decoration: none;
@@ -8471,7 +8468,7 @@ a.treize-card {
       padding: 20px;
       text-align: center; }
       .video-cover.with-block .video-cover-placeholder a:not(.button):not(.expandmore__button) {
-        color: #DF225A; }
+        color: #DC3545; }
       .video-cover.with-block .video-cover-placeholder .button, .video-cover.with-block .video-cover-placeholder .expandmore__button {
         padding: 15px 20px; }
   .video-cover .button, .video-cover .expandmore__button {
@@ -9529,7 +9526,7 @@ http://flickity.metafizzy.co
     padding: 20px;
     text-align: center; }
     .component-html .html-placeholder a:not(.button):not(.expandmore__button) {
-      color: #DF225A;
+      color: #DC3545;
       text-decoration: underline; }
       .component-html .html-placeholder a:not(.button):not(.expandmore__button):hover {
         text-decoration: none; }
@@ -10262,7 +10259,7 @@ http://flickity.metafizzy.co
 .component-pills {
   clear: both; }
   .component-pills h4.pills-heading {
-    color: #0C518A;
+    color: #354BCF;
     font-size: 1.6rem;
     font-weight: 500; }
   .component-pills ul.pills-items-wrapper {
@@ -10284,7 +10281,7 @@ http://flickity.metafizzy.co
     .component-pills .pills-panel.active {
       display: block; }
     .component-pills .pills-panel .pills-item-title {
-      color: #0C518A;
+      color: #354BCF;
       font-size: 1.6rem;
       font-weight: 500;
       line-height: 2rem;
@@ -10935,7 +10932,7 @@ http://flickity.metafizzy.co
     padding: 20px;
     text-align: center; }
     .component-video .video-placeholder a:not(.button):not(.expandmore__button) {
-      color: #DF225A; }
+      color: #DC3545; }
   .component-video .video-wrapper {
     display: inline-block;
     position: relative;
