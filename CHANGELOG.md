@@ -9,6 +9,9 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.15.11 (2019-01-10)
+* component `text`: remove font-weight:500 to first paragraph
+
 ## 1.15.10 (2019-01-10)
 * modules `municipal-site-list`: fix text align to left
 * component `accordion`: fix color link primary-v2

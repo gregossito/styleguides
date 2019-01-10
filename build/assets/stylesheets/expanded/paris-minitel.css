@@ -11051,10 +11051,6 @@ http://flickity.metafizzy.co
 .component-text a:not(.button):not(.expandmore__button) {
   color: #DC3545; }
 
-.component-postit + .component-text > p:first-child,
-.component-text:first-child > p:first-child {
-  font-weight: 500; }
-
 .component-text .anchor {
   clear: both;
   position: relative; }
