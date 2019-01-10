@@ -9,6 +9,12 @@ Let's take the `x.β.α` version number:
 
 ## α.β.x (coming soon)
 
+## 1.15.10 (2019-01-10)
+* modules `municipal-site-list`: fix text align to left
+* component `accordion`: fix color link primary-v2
+* component `frame`: fix color link primary-v2
+* component `text`: fix strong color
+
 ## 1.15.9 (2019-01-10)
 ## 1.15.8 (2019-01-09)
 ## 1.15.7 (2019-01-08)

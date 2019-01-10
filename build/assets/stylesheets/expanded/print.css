@@ -360,7 +360,8 @@ img, video {
 
 .block-content-question,
 .block-content-answer {
-  transform: none !important; }
+  -webkit-transform: none !important;
+          transform: none !important; }
 
 canvas {
   display: none !important; }
