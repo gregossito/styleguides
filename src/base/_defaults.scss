@@ -8,15 +8,15 @@ html {
 
 // Text selection
 ::selection {
-  background: transparentize($color-tertiary, 0.4);
+  background: transparentize($notice-blue, 0.4);
   color: inherit;
   text-shadow: inherit;
 }
 ::-moz-selection {
-  background: transparentize($color-tertiary, 0.4);
+  background: transparentize($notice-blue, 0.4);
   color: inherit;
   text-shadow: inherit;
 }
 img::selection {background: transparent;}
 img::-moz-selection {background: transparent;}
-body {-webkit-tap-highlight-color: transparentize($color-tertiary, 0.6);}
+body {-webkit-tap-highlight-color: transparentize($notice-blue, 0.6);}
