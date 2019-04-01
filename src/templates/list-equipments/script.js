@@ -299,15 +299,8 @@ Paris.listEquipments = (function(){
 
       var equipementDataset = {
         source: function(query, callback) {
-          var category_names = [];
-          if (mainSearch.helper.state.disjunctiveFacetsRefinements && mainSearch.helper.state.disjunctiveFacetsRefinements.category_names) {
-            $.each(mainSearch.helper.state.disjunctiveFacetsRefinements.category_names, function(index, category) {
-               category_names.push('category_names:' + category);
-            });
-          }
           index.search(query, {
             hitsPerPage: 8,
-            facetFilters: ((category_names && category_names.length > 0) ? [category_names] : '*'),
             attributesToRetrieve: "*"
           }).then(function(answer) {
             callback(answer.hits);
@@ -443,7 +436,7 @@ Paris.listEquipments = (function(){
 
 $(document).ready(function(){
   Paris.listEquipments('body.list-equipments');
-  // Piscines ouvertes 
+  // Piscines ouvertes
   if(window.location.href.split('?open=')[1]==="1"){
     setTimeout(function() {
       $('#js-facet-open input').attr('checked','checked');

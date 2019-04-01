@@ -7,7 +7,6 @@
   position: relative;
   width: 100%;
   z-index: 1300;
-  // border-bottom: 1px inset $dark;
   box-shadow: 0 8px 6px -10px $dark;
 
   &.static {
@@ -802,7 +801,7 @@ body.rheader-mobile-nav-open {
 @media (min-width: $rheader-medium-min) {
   .rheader.fixed + .layout-main > .layout-content:first-child,
   .rheader + .quick-access + .layout-main > .layout-content:first-child {
-    background-color: $white; 
+    background-color: $white;
     padding-top: $rheader-height-medium;
   }
   .rheader.fixed + .layout-main > .layout-content.black-background:first-child {
